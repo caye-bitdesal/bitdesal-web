@@ -1,0 +1,115 @@
+export type Language = 'en' | 'es' | 'fi';
+
+export const supportedLanguages: readonly Language[] = ['en', 'es', 'fi'] as const;
+export const defaultLanguage: Language = 'en';
+
+import { translations as makeTranslations } from './make-translations';
+
+export const translations: Record<Language, any> = {
+	es: {
+		...makeTranslations.es,
+		nav: {
+			home: 'Inicio',
+			services: 'Servicios',
+			methodology: 'Metodología',
+			prices: 'Precios',
+			about: 'Nosotros',
+			blog: 'Blog',
+			contact: 'Contacto',
+		},
+		footer: {
+			tagline: 'Desarrollo Android, IA y Consultoría de alto nivel',
+			servicesTitle: 'Servicios',
+			androidDev: 'Desarrollo Android',
+			ai: 'Inteligencia Artificial',
+			mentorship: 'Mentoría',
+			consulting: 'Consultoría',
+			companyTitle: 'Empresa',
+			aboutUs: 'Sobre nosotros',
+			methodology: 'Metodología',
+			blog: 'Blog',
+			contactTitle: 'Contacto',
+			contact: 'Contactar',
+			linkedin: 'LinkedIn',
+			rights: 'Todos los derechos reservados.',
+		},
+		notFound: {
+			code: '404',
+			title: 'Página no encontrada',
+			description: 'Lo sentimos, la página que buscas no existe o ha sido movida.',
+			home: 'Ir al inicio',
+			back: 'Volver atrás',
+		},
+	},
+	en: {
+		...makeTranslations.en,
+		nav: {
+			home: 'Home',
+			services: 'Services',
+			methodology: 'Methodology',
+			prices: 'Pricing',
+			about: 'About',
+			blog: 'Blog',
+			contact: 'Contact',
+		},
+		footer: {
+			tagline: 'Android Development, AI and High-Level Consulting',
+			servicesTitle: 'Services',
+			androidDev: 'Android Development',
+			ai: 'Artificial Intelligence',
+			mentorship: 'Mentorship',
+			consulting: 'Consulting',
+			companyTitle: 'Company',
+			aboutUs: 'About us',
+			methodology: 'Methodology',
+			blog: 'Blog',
+			contactTitle: 'Contact',
+			contact: 'Contact',
+			linkedin: 'LinkedIn',
+			rights: 'All rights reserved.',
+		},
+		notFound: {
+			code: '404',
+			title: 'Page not found',
+			description: "Sorry, the page you're looking for doesn't exist or has been moved.",
+			home: 'Go to home',
+			back: 'Go back',
+		},
+	},
+	fi: {
+		...makeTranslations.fi,
+		nav: {
+			home: 'Etusivu',
+			services: 'Palvelut',
+			methodology: 'Menetelmät',
+			prices: 'Hinnoittelu',
+			about: 'Tietoa',
+			blog: 'Blogi',
+			contact: 'Yhteystiedot',
+		},
+		footer: {
+			tagline: 'Android-kehitys, tekoäly ja korkean tason konsultointi',
+			servicesTitle: 'Palvelut',
+			androidDev: 'Android-kehitys',
+			ai: 'Tekoäly',
+			mentorship: 'Mentorointi',
+			consulting: 'Konsultointi',
+			companyTitle: 'Yritys',
+			aboutUs: 'Tietoa meistä',
+			methodology: 'Menetelmät',
+			blog: 'Blogi',
+			contactTitle: 'Yhteystiedot',
+			contact: 'Ota yhteyttä',
+			linkedin: 'LinkedIn',
+			rights: 'Kaikki oikeudet pidätetään.',
+		},
+		notFound: {
+			code: '404',
+			title: 'Sivua ei löytynyt',
+			description: 'Pahoittelemme, etsimääsi sivua ei ole tai se on siirretty.',
+			home: 'Etusivulle',
+			back: 'Takaisin',
+		},
+	},
+};
+

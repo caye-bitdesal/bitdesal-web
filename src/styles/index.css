@@ -1,0 +1,16 @@
+@import "tailwindcss" source(none);
+
+/* Astro pages + components */
+@source "../**/*.{astro,js,ts,jsx,tsx}";
+
+@import "./theme.css";
+
+/* Font: Figma Make referenced fonts.css but it isn't available via Make export.
+   Use Inter as the requested fallback. */
+@layer base {
+  body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+      "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  }
+}
+

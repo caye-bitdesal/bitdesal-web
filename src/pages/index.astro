@@ -1,23 +1,214 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome >Welcome to Bitdesal</Welcome>
-</Layout>
+	<section class="relative bg-gradient-to-br from-[#2d5f5d] to-[#1a3a38] text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+			<div class="max-w-3xl">
+				<h1 class="text-4xl md:text-6xl mb-6" data-i18n-key="home.hero.title">
+					Android Development, done right
+				</h1>
+				<p class="text-xl md:text-2xl text-white/90 mb-8">
+					<span data-i18n-key="home.hero.subtitle">
+						Modern Android development, AI solutions and strategic consulting with 20 years of international
+						experience
+					</span>
+				</p>
+				<div class="flex flex-wrap gap-4">
+					<a
+						href="/services"
+						class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
+						data-i18n-key="home.hero.viewServices"
+					>
+						View services
+					</a>
+					<a
+						href="/contact"
+						class="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors"
+						data-i18n-key="home.hero.contact"
+					>
+						Contact
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My site</title>
-	</head>
-	<body>
-		<h1>Hello there, this is my site!</h1>
-	</body>
-</html>
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="home.whyBitdesal.title">Why Bitdesal?</h2>
+				<p class="text-lg text-foreground/70 max-w-2xl mx-auto" data-i18n-key="home.whyBitdesal.subtitle">
+					We combine world-class technical expertise with internationally proven methodologies
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="text-center">
+					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
+						<span class="text-primary text-2xl font-semibold">K</span>
+					</div>
+					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.modernStack.title">Modern Stack</h3>
+					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.modernStack.description">
+						Kotlin, Jetpack Compose, modular architecture and the latest Android technologies
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
+						<span class="text-primary text-2xl font-semibold">AI</span>
+					</div>
+					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.practicalAI.title">Practical AI</h3>
+					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.practicalAI.description">
+						Intelligent agents and automations that generate real value for your business
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
+						<span class="text-primary text-2xl font-semibold">1:1</span>
+					</div>
+					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.mentorship.title">Mentorship</h3>
+					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.mentorship.description">
+						Personalized training to elevate your technical team's capabilities
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
+						<span class="text-primary text-2xl font-semibold">20</span>
+					</div>
+					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.experience.title">20 Years</h3>
+					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.experience.description">
+						International experience in Spain, Switzerland and Finland with high-impact projects
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div>
+					<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.android.title">
+						Next-Generation Android Development
+					</h2>
+					<p class="text-lg text-foreground/80 mb-6" data-i18n-key="home.android.description">
+						Specialists in Kotlin and Jetpack Compose with scalable modular architecture.
+					</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<div
+								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+							>
+								<span class="text-white text-sm">✓</span>
+							</div>
+							<span data-i18n-key="home.android.item1">MVVM/MVI Architecture with Clean Architecture</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<div
+								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+							>
+								<span class="text-white text-sm">✓</span>
+							</div>
+							<span data-i18n-key="home.android.item2">Comprehensive testing with JUnit, Espresso and Compose Testing</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<div
+								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+							>
+								<span class="text-white text-sm">✓</span>
+							</div>
+							<span data-i18n-key="home.android.item3">Automated CI/CD with GitHub Actions</span>
+						</li>
+					</ul>
+					<a href="/services" class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+						<span data-i18n-key="home.android.learnMore">Learn more</span>
+						<span aria-hidden="true">→</span>
+					</a>
+				</div>
+				<div class="bg-white rounded-lg p-8 shadow-lg">
+					<div
+						class="aspect-[4/3] bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center"
+					>
+						<span class="text-white/20 text-6xl font-semibold">⟡</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div class="order-2 lg:order-1">
+					<div class="bg-secondary rounded-lg p-8 shadow-lg">
+						<div
+							class="aspect-[4/3] bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center"
+						>
+							<span class="text-white/20 text-6xl font-semibold">◎</span>
+						</div>
+					</div>
+				</div>
+				<div class="order-1 lg:order-2">
+					<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.ai.title">
+						Artificial Intelligence that Works
+					</h2>
+					<p class="text-lg text-foreground/80 mb-6" data-i18n-key="home.ai.description">
+						We develop AI agents and intelligent automations that solve real problems and generate measurable ROI.
+					</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<div
+								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+							>
+								<span class="text-white text-sm">✓</span>
+							</div>
+							<span data-i18n-key="home.ai.item1">Conversational agents with Claude and Gemini</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<div
+								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+							>
+								<span class="text-white text-sm">✓</span>
+							</div>
+							<span data-i18n-key="home.ai.item2">AI assisted designs</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<div
+								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+							>
+								<span class="text-white text-sm">✓</span>
+							</div>
+							<span data-i18n-key="home.ai.item3">Process automation with AI</span>
+						</li>
+					</ul>
+					<a href="/services" class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+						<span data-i18n-key="home.ai.explore">Explore AI solutions</span>
+						<span aria-hidden="true">→</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-primary text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.cta.title">
+				Ready to take your project to the next level?
+			</h2>
+			<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n-key="home.cta.subtitle">
+				Let's talk about how we can help you achieve your goals with world-class technology
+			</p>
+			<a
+				href="/contact"
+				class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
+				data-i18n-key="home.cta.button"
+			>
+				Start conversation
+			</a>
+		</div>
+	</section>
+</Layout>

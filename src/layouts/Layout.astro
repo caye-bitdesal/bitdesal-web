@@ -1,3 +1,16 @@
+---
+import '../styles/index.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { defaultLanguage, supportedLanguages, translations } from '../i18n/translations';
+
+const i18nPayload = {
+	defaultLanguage,
+	supportedLanguages,
+	translations,
+};
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,18 +19,78 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Bitdesal</title>
 	</head>
-	<body>
-		<slot />
+	<body class="min-h-screen flex flex-col">
+		<Header />
+		<main class="flex-1">
+			<slot />
+		</main>
+		<Footer />
+
+		<script is:inline>
+			const I18N = /** @type {const} */ (JSON.parse({JSON.stringify(JSON.stringify(i18nPayload))}));
+
+			/** @type {(obj: any, key: string) => string} */
+			function t(obj, key) {
+				const keys = key.split('.');
+				let value = obj;
+				for (const k of keys) {
+					if (value && typeof value === 'object') value = value[k];
+					else return key;
+				}
+				return typeof value === 'string' ? value : key;
+			}
+
+			/** @type {(lang: string) => void} */
+			function applyLanguage(lang) {
+				if (!I18N.supportedLanguages.includes(lang)) lang = I18N.defaultLanguage;
+
+				localStorage.setItem('language', lang);
+				document.documentElement.lang = lang;
+
+				const dict = I18N.translations[lang] ?? I18N.translations[I18N.defaultLanguage];
+
+				// Update text nodes
+				document.querySelectorAll('[data-i18n-key]').forEach((el) => {
+					const key = el.getAttribute('data-i18n-key');
+					const attr = el.getAttribute('data-i18n-attr');
+					if (!key) return;
+					const value = t(dict, key);
+					if (attr) el.setAttribute(attr, value);
+					else el.textContent = value;
+				});
+
+				// Update active state on language controls
+				document.querySelectorAll('[data-lang]').forEach((el) => {
+					const isActive = el.getAttribute('data-lang') === lang;
+					el.classList.toggle('text-primary', isActive);
+					el.classList.toggle('text-foreground/70', !isActive);
+				});
+
+				window.dispatchEvent(new CustomEvent('bitdesal:language', { detail: { lang } }));
+			}
+
+			/** @type {() => string} */
+			function getInitialLanguage() {
+				const url = new URL(window.location.href);
+				const fromQuery = url.searchParams.get('lang');
+				if (fromQuery && I18N.supportedLanguages.includes(fromQuery)) return fromQuery;
+
+				const saved = localStorage.getItem('language');
+				if (saved && I18N.supportedLanguages.includes(saved)) return saved;
+
+				return I18N.defaultLanguage;
+			}
+
+			// Expose for header/footer handlers
+			window.bitdesalI18n = {
+				getLanguage: getInitialLanguage,
+				setLanguage: applyLanguage,
+			};
+
+			applyLanguage(getInitialLanguage());
+		</script>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

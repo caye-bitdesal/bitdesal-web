@@ -1,0 +1,171 @@
+---
+const navLinks = [
+	{ href: '/', labelKey: 'nav.home', fallback: 'Home' },
+	{ href: '/services', labelKey: 'nav.services', fallback: 'Services' },
+	{ href: '/methodology', labelKey: 'nav.methodology', fallback: 'Methodology' },
+	{ href: '/prices', labelKey: 'nav.prices', fallback: 'Pricing' },
+	{ href: '/about', labelKey: 'nav.about', fallback: 'About' },
+	{ href: '/blog', labelKey: 'nav.blog', fallback: 'Blog' },
+	{ href: '/contact', labelKey: 'nav.contact', fallback: 'Contact' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-border">
+	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
+		<div class="flex justify-between items-center h-16">
+			<a href="/" class="flex items-center gap-3">
+				<span class="text-xl text-primary">Bitdesal</span>
+			</a>
+
+			<div class="hidden md:flex items-center gap-8">
+				{navLinks.map((link) => (
+					<a
+						href={link.href}
+						class="transition-colors text-foreground/70 hover:text-primary"
+						data-i18n-key={link.labelKey}
+					>
+						{link.fallback}
+					</a>
+				))}
+
+				<div class="flex items-center gap-2 border-l border-border pl-6">
+					<a
+						href="?lang=en"
+						data-lang="en"
+						class="transition-colors text-foreground/70 hover:text-primary"
+					>
+						EN
+					</a>
+					<span class="text-foreground/30">/</span>
+					<a
+						href="?lang=es"
+						data-lang="es"
+						class="transition-colors text-foreground/70 hover:text-primary"
+					>
+						ES
+					</a>
+					<span class="text-foreground/30">/</span>
+					<a
+						href="?lang=fi"
+						data-lang="fi"
+						class="transition-colors text-foreground/70 hover:text-primary"
+					>
+						FI
+					</a>
+				</div>
+			</div>
+
+			<button
+				id="mobile-menu-button"
+				class="md:hidden p-2"
+				type="button"
+				aria-controls="mobile-menu"
+				aria-expanded="false"
+			>
+				<span class="sr-only">Open menu</span>
+				<svg
+					id="icon-menu"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="h-6 w-6"
+				>
+					<line x1="3" x2="21" y1="6" y2="6"></line>
+					<line x1="3" x2="21" y1="12" y2="12"></line>
+					<line x1="3" x2="21" y1="18" y2="18"></line>
+				</svg>
+				<svg
+					id="icon-close"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="h-6 w-6 hidden"
+				>
+					<path d="M18 6 6 18"></path>
+					<path d="m6 6 12 12"></path>
+				</svg>
+			</button>
+		</div>
+
+		<div id="mobile-menu" class="md:hidden py-4 border-t border-border hidden">
+			{navLinks.map((link) => (
+				<a
+					href={link.href}
+					class="block py-2 transition-colors text-foreground/70 hover:text-primary"
+					data-i18n-key={link.labelKey}
+				>
+					{link.fallback}
+				</a>
+			))}
+
+			<div class="flex items-center gap-3 pt-4 mt-4 border-t border-border">
+				<a
+					href="?lang=en"
+					data-lang="en"
+					class="transition-colors text-foreground/70 hover:text-primary"
+				>
+					English
+				</a>
+				<span class="text-foreground/30">|</span>
+				<a
+					href="?lang=es"
+					data-lang="es"
+					class="transition-colors text-foreground/70 hover:text-primary"
+				>
+					Español
+				</a>
+				<span class="text-foreground/30">|</span>
+				<a
+					href="?lang=fi"
+					data-lang="fi"
+					class="transition-colors text-foreground/70 hover:text-primary"
+				>
+					Suomi
+				</a>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<script>
+	const button = document.getElementById('mobile-menu-button');
+	const menu = document.getElementById('mobile-menu');
+	const iconMenu = document.getElementById('icon-menu');
+	const iconClose = document.getElementById('icon-close');
+
+	if (button && menu && iconMenu && iconClose) {
+		button.addEventListener('click', () => {
+			const isOpen = !menu.classList.contains('hidden');
+			menu.classList.toggle('hidden', isOpen);
+			iconMenu.classList.toggle('hidden', !isOpen);
+			iconClose.classList.toggle('hidden', isOpen);
+			button.setAttribute('aria-expanded', String(!isOpen));
+		});
+	}
+
+	const langLinks = document.querySelectorAll('[data-lang]');
+	langLinks.forEach((el) => {
+		el.addEventListener('click', (e) => {
+			e.preventDefault();
+			const lang = el.getAttribute('data-lang');
+			if (!lang) return;
+
+			// Mirror Make behavior (persist immediately), even if Layout hasn't initialized yet.
+			try {
+				localStorage.setItem('language', lang);
+			} catch {}
+
+			if (window.bitdesalI18n?.setLanguage) window.bitdesalI18n.setLanguage(lang);
+			else document.documentElement.lang = lang;
+		});
+	});
+</script>
+

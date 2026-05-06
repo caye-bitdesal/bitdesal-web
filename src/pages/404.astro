@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="min-h-[60vh] flex items-center justify-center bg-white">
+		<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<div class="mb-8">
+				<div class="text-8xl md:text-9xl text-primary/20 mb-4" data-i18n-key="notFound.code">404</div>
+				<h1 class="text-3xl md:text-4xl mb-4" data-i18n-key="notFound.title">Page not found</h1>
+				<p class="text-lg text-foreground/70 mb-8" data-i18n-key="notFound.description">
+					Sorry, the page you're looking for doesn't exist or has been moved.
+				</p>
+			</div>
+
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a
+					href="/"
+					class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+				>
+					<span aria-hidden="true">⌂</span>
+					<span data-i18n-key="notFound.home">Go to home</span>
+				</a>
+				<button
+					type="button"
+					id="go-back"
+					class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/5 transition-colors"
+				>
+					<span aria-hidden="true">←</span>
+					<span data-i18n-key="notFound.back">Go back</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<script>
+	const btn = document.getElementById('go-back');
+	if (btn) btn.addEventListener('click', () => window.history.back());
+</script>
+

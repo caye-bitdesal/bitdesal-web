@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Astro v6.2.2"><title>Bitdesal</title><link rel="stylesheet" href="/_astro/Layout.BXCfL4o4.css"></head> <body class="min-h-screen flex flex-col"> <header class="sticky top-0 z-50 bg-white border-b border-border"> <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary"> <div class="flex justify-between items-center h-16"> <a href="/" class="flex items-center gap-3"> <span class="text-xl text-primary">Bitdesal</span> </a> <div class="hidden md:flex items-center gap-8"> <a href="/" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.home"> Home </a><a href="/services" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.services"> Services </a><a href="/methodology" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.methodology"> Methodology </a><a href="/prices" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.prices"> Pricing </a><a href="/about" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.about"> About </a><a href="/blog" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.blog"> Blog </a><a href="/contact" class="transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.contact"> Contact </a> <div class="flex items-center gap-2 border-l border-border pl-6"> <a href="?lang=en" data-lang="en" class="transition-colors text-foreground/70 hover:text-primary">
+EN
+</a> <span class="text-foreground/30">/</span> <a href="?lang=es" data-lang="es" class="transition-colors text-foreground/70 hover:text-primary">
+ES
+</a> <span class="text-foreground/30">/</span> <a href="?lang=fi" data-lang="fi" class="transition-colors text-foreground/70 hover:text-primary">
+FI
+</a> </div> </div> <button id="mobile-menu-button" class="md:hidden p-2" type="button" aria-controls="mobile-menu" aria-expanded="false"> <span class="sr-only">Open menu</span> <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"> <line x1="3" x2="21" y1="6" y2="6"></line> <line x1="3" x2="21" y1="12" y2="12"></line> <line x1="3" x2="21" y1="18" y2="18"></line> </svg> <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 hidden"> <path d="M18 6 6 18"></path> <path d="m6 6 12 12"></path> </svg> </button> </div> <div id="mobile-menu" class="md:hidden py-4 border-t border-border hidden"> <a href="/" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.home"> Home </a><a href="/services" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.services"> Services </a><a href="/methodology" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.methodology"> Methodology </a><a href="/prices" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.prices"> Pricing </a><a href="/about" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.about"> About </a><a href="/blog" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.blog"> Blog </a><a href="/contact" class="block py-2 transition-colors text-foreground/70 hover:text-primary" data-i18n-key="nav.contact"> Contact </a> <div class="flex items-center gap-3 pt-4 mt-4 border-t border-border"> <a href="?lang=en" data-lang="en" class="transition-colors text-foreground/70 hover:text-primary">
+English
+</a> <span class="text-foreground/30">|</span> <a href="?lang=es" data-lang="es" class="transition-colors text-foreground/70 hover:text-primary">
+Español
+</a> <span class="text-foreground/30">|</span> <a href="?lang=fi" data-lang="fi" class="transition-colors text-foreground/70 hover:text-primary">
+Suomi
+</a> </div> </div> </nav> </header> <script type="module">const n=document.getElementById("mobile-menu-button"),o=document.getElementById("mobile-menu"),c=document.getElementById("icon-menu"),s=document.getElementById("icon-close");n&&o&&c&&s&&n.addEventListener("click",()=>{const e=!o.classList.contains("hidden");o.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),s.classList.toggle("hidden",e),n.setAttribute("aria-expanded",String(!e))});const i=document.querySelectorAll("[data-lang]");i.forEach(e=>{e.addEventListener("click",a=>{a.preventDefault();const t=e.getAttribute("data-lang");if(t){try{localStorage.setItem("language",t)}catch{}window.bitdesalI18n?.setLanguage?window.bitdesalI18n.setLanguage(t):document.documentElement.lang=t}})});</script> <main class="flex-1">  <section class="bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <h1 class="text-4xl md:text-5xl mb-6" data-i18n-key="blog.hero.title">Technical Blog</h1> <p class="text-xl text-white/90 max-w-3xl mx-auto" data-i18n-key="blog.hero.subtitle">
+Articles about Android development, AI, software architecture and remote work methodologies
+</p> </div> </section> <section class="py-16 md:py-24 bg-white"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex flex-wrap gap-3 mb-12 justify-center"> <button class="px-4 py-2 rounded-lg transition-colors bg-primary text-white" data-i18n-key="blog.categories.all">
+All
+</button> <button class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80" data-i18n-key="blog.categories.android">
+Android
+</button> <button class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80" data-i18n-key="blog.categories.ai">
+AI
+</button> <button class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80" data-i18n-key="blog.categories.architecture">
+Architecture
+</button> <button class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80" data-i18n-key="blog.categories.methodology">
+Methodology
+</button> </div> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group"> <div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center"> <span class="text-white/20 text-6xl">1</span> </div> <div class="p-6"> <div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap"> <span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full">Android</span> <span class="flex items-center gap-1">📅 2026-04-15</span> <span class="flex items-center gap-1">⏱ 8 min</span> </div> <h3 class="text-xl mb-3 group-hover:text-primary transition-colors">
+Migración de Java a Kotlin: Lecciones aprendidas
+</h3> <p class="text-foreground/70 mb-4">
+Después de migrar múltiples proyectos Android de Java a Kotlin, estas son las estrategias que mejor
+							funcionan.
+</p> <button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+Leer más <span aria-hidden="true">→</span> </button> </div> </article> <article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group"> <div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center"> <span class="text-white/20 text-6xl">2</span> </div> <div class="p-6"> <div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap"> <span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full">Android</span> <span class="flex items-center gap-1">📅 2026-04-01</span> <span class="flex items-center gap-1">⏱ 12 min</span> </div> <h3 class="text-xl mb-3 group-hover:text-primary transition-colors">
+Jetpack Compose: Arquitectura para apps escalables
+</h3> <p class="text-foreground/70 mb-4">
+Cómo estructurar aplicaciones Compose con MVVM y Clean Architecture para mantener la escalabilidad.
+</p> <button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+Leer más <span aria-hidden="true">→</span> </button> </div> </article> <article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group"> <div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center"> <span class="text-white/20 text-6xl">3</span> </div> <div class="p-6"> <div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap"> <span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full" data-i18n-key="blog.categories.ai">
+AI
+</span> <span class="flex items-center gap-1">📅 2026-03-20</span> <span class="flex items-center gap-1">⏱ 10 min</span> </div> <h3 class="text-xl mb-3 group-hover:text-primary transition-colors">Agentes de IA que realmente funcionan</h3> <p class="text-foreground/70 mb-4">
+Más allá del hype: cómo diseñar e implementar agentes conversacionales que generan ROI medible.
+</p> <button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+Leer más <span aria-hidden="true">→</span> </button> </div> </article> </div> </div> </section> <section class="py-16 md:py-24 bg-secondary"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="max-w-3xl mx-auto text-center"> <h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="blog.newsletter.title">Subscribe to Newsletter</h2> <p class="text-lg text-foreground/80 mb-8" data-i18n-key="blog.newsletter.description">
+Receive new technical articles directly in your email.
+</p> <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"> <input type="email" data-i18n-key="blog.newsletter.placeholder" data-i18n-attr="placeholder" placeholder="your@email.com" class="flex-1 px-4 py-3 rounded-lg border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"> <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap" data-i18n-key="blog.newsletter.button">
+Subscribe
+</button> </form> <p class="text-sm text-foreground/60 mt-4" data-i18n-key="blog.newsletter.frequency">
+We publish approximately 2 articles per month
+</p> </div> </div> </section> <section class="py-16 md:py-24 bg-white"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <h2 class="text-3xl md:text-4xl mb-12 text-center" data-i18n-key="blog.popularTopics.title">Popular Topics</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> <div class="border border-border rounded-lg p-6 hover:border-primary transition-colors"> <h3 class="mb-2" data-i18n-key="blog.popularTopics.kotlinAdvanced">Advanced Kotlin</h3> <p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.kotlinDescription">
+Coroutines, Flow, DSLs and advanced Kotlin techniques
+</p> <span class="text-primary text-sm">12 <span data-i18n-key="blog.popularTopics.articles">articles</span></span> </div> <div class="border border-border rounded-lg p-6 hover:border-primary transition-colors"> <h3 class="mb-2" data-i18n-key="blog.popularTopics.compose">Jetpack Compose</h3> <p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.composeDescription">
+Everything about declarative UI in Android with Compose
+</p> <span class="text-primary text-sm">18 <span data-i18n-key="blog.popularTopics.articles">articles</span></span> </div> <div class="border border-border rounded-lg p-6 hover:border-primary transition-colors"> <h3 class="mb-2" data-i18n-key="blog.popularTopics.architecture">Architecture</h3> <p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.architectureDescription">
+Patterns, Clean Architecture, MVVM, MVI and more
+</p> <span class="text-primary text-sm">15 <span data-i18n-key="blog.popularTopics.articles">articles</span></span> </div> <div class="border border-border rounded-lg p-6 hover:border-primary transition-colors"> <h3 class="mb-2" data-i18n-key="blog.popularTopics.practicalAI">Practical AI</h3> <p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.practicalAIDescription">
+Real implementation of LLMs, agents and automation
+</p> <span class="text-primary text-sm">8 <span data-i18n-key="blog.popularTopics.articles">articles</span></span> </div> </div> </div> </section> <section class="py-16 md:py-24 bg-primary text-white"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="blog.suggest.title">Want us to write about something specific?</h2> <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n-key="blog.suggest.subtitle">
+We're open to topic suggestions.
+</p> <a href="/contact" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors" data-i18n-key="blog.suggest.button">
+Suggest topic
+</a> </div> </section>  </main> <footer class="bg-[#1a1a1a] text-white"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div class="grid grid-cols-1 md:grid-cols-4 gap-8"> <div> <h3 class="mb-4">Bitdesal</h3> <p class="text-white/70 text-sm"> <span data-i18n-key="footer.tagline">Android Development, AI and High-Level Consulting</span> </p> </div> <div> <h4 class="mb-4" data-i18n-key="footer.servicesTitle">Services</h4> <ul class="space-y-2 text-sm text-white/70"> <li> <a href="/services" class="hover:text-white transition-colors" data-i18n-key="footer.androidDev">Android Development</a> </li> <li> <a href="/services" class="hover:text-white transition-colors" data-i18n-key="footer.ai">Artificial Intelligence</a> </li> <li> <a href="/services" class="hover:text-white transition-colors" data-i18n-key="footer.mentorship">Mentorship</a> </li> <li> <a href="/services" class="hover:text-white transition-colors" data-i18n-key="footer.consulting">Consulting</a> </li> </ul> </div> <div> <h4 class="mb-4" data-i18n-key="footer.companyTitle">Company</h4> <ul class="space-y-2 text-sm text-white/70"> <li> <a href="/about" class="hover:text-white transition-colors" data-i18n-key="footer.aboutUs">About us</a> </li> <li> <a href="/methodology" class="hover:text-white transition-colors" data-i18n-key="footer.methodology">Methodology</a> </li> <li> <a href="/blog" class="hover:text-white transition-colors" data-i18n-key="footer.blog">Blog</a> </li> </ul> </div> <div> <h4 class="mb-4" data-i18n-key="footer.contactTitle">Contact</h4> <ul class="space-y-2 text-sm text-white/70"> <li> <a href="/contact" class="hover:text-white transition-colors" data-i18n-key="footer.contact">Contact</a> </li> <li> <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" data-i18n-key="footer.linkedin">
+LinkedIn
+</a> </li> </ul> </div> </div> <div class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/70"> <p>
+&copy; 2026 Bitdesal.
+<span data-i18n-key="footer.rights">All rights reserved.</span> </p> </div> </div> </footer> <script>
+			const I18N = /** @type {const} */ (JSON.parse({JSON.stringify(JSON.stringify(i18nPayload))}));
+
+			/** @type {(obj: any, key: string) => string} */
+			function t(obj, key) {
+				const keys = key.split('.');
+				let value = obj;
+				for (const k of keys) {
+					if (value && typeof value === 'object') value = value[k];
+					else return key;
+				}
+				return typeof value === 'string' ? value : key;
+			}
+
+			/** @type {(lang: string) => void} */
+			function applyLanguage(lang) {
+				if (!I18N.supportedLanguages.includes(lang)) lang = I18N.defaultLanguage;
+
+				localStorage.setItem('language', lang);
+				document.documentElement.lang = lang;
+
+				const dict = I18N.translations[lang] ?? I18N.translations[I18N.defaultLanguage];
+
+				// Update text nodes
+				document.querySelectorAll('[data-i18n-key]').forEach((el) => {
+					const key = el.getAttribute('data-i18n-key');
+					const attr = el.getAttribute('data-i18n-attr');
+					if (!key) return;
+					const value = t(dict, key);
+					if (attr) el.setAttribute(attr, value);
+					else el.textContent = value;
+				});
+
+				// Update active state on language controls
+				document.querySelectorAll('[data-lang]').forEach((el) => {
+					const isActive = el.getAttribute('data-lang') === lang;
+					el.classList.toggle('text-primary', isActive);
+					el.classList.toggle('text-foreground/70', !isActive);
+				});
+
+				window.dispatchEvent(new CustomEvent('bitdesal:language', { detail: { lang } }));
+			}
+
+			/** @type {() => string} */
+			function getInitialLanguage() {
+				const url = new URL(window.location.href);
+				const fromQuery = url.searchParams.get('lang');
+				if (fromQuery && I18N.supportedLanguages.includes(fromQuery)) return fromQuery;
+
+				const saved = localStorage.getItem('language');
+				if (saved && I18N.supportedLanguages.includes(saved)) return saved;
+
+				return I18N.defaultLanguage;
+			}
+
+			// Expose for header/footer handlers
+			window.bitdesalI18n = {
+				getLanguage: getInitialLanguage,
+				setLanguage: applyLanguage,
+			};
+
+			applyLanguage(getInitialLanguage());
+		</script> </body> </html>
