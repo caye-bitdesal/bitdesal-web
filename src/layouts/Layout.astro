@@ -28,8 +28,9 @@ const i18nPayload = {
 		</main>
 		<Footer />
 
-		<script is:inline>
-			const I18N = /** @type {const} */ (JSON.parse({JSON.stringify(JSON.stringify(i18nPayload))}));
+		<script is:inline define:vars={{ i18nPayload }}>
+			// `define:vars` safely serializes server data into this script.
+			const I18N = /** @type {const} */ (i18nPayload);
 
 			/** @type {(obj: any, key: string) => string} */
 			function t(obj, key) {
