@@ -38,4 +38,4 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: "./dist/**"
-          remote_path: "lamp0/web/vhosts/bitdesal.com/htdocs/"
+          remote_path: ${{ secrets.SFTP_REMOTE_PATH }}

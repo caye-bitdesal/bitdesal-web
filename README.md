@@ -51,6 +51,13 @@ npm run build
 npm run preview
 ```
 
+## Deployment (Bitdesal)
+
+This repo deploys automatically to Bitdesal’s Gandi hosting via **SFTP** using a GitHub Action workflow: `.github/workflows/deploy-gandi-sftp.yml`.
+
+- **When it runs**: on every push to the `main` branch
+- **What it does**: installs dependencies, runs `npm run build`, then uploads the contents of `dist/`
+
 ## Repo hygiene
 
 Generated folders like `node_modules/`, `node_modules/.vite/`, `.astro/`, and `dist/` are ignored via `.gitignore` and should not be committed.
