@@ -252,7 +252,7 @@ export const translations = {
         international: {
           title: "Internacional",
           description:
-            "Experiencia en Suiza y Finlandia con clientes globales",
+            "Experiencia en España, Suiza y Finlandia con clientes globales",
         },
         education: {
           title: "Formación Sólida",
@@ -268,33 +268,28 @@ export const translations = {
       journey: {
         title: "Trayectoria Profesional",
         switzerland: {
-          period: "Suiza (2015-2020)",
+          period: "Suiza y España (2009-2013)",
           description:
-            "Desarrollo de aplicaciones financieras de alto rendimiento para banca privada y gestión de activos. Trabajo con equipos distribuidos en entornos altamente regulados.",
-          item1: "Arquitectura de microservicios en fintech",
-          item2:
-            "Apps móviles con requisitos de seguridad extremos",
-          item3: "Metodologías ágiles a escala (SAFe)",
+            "Ingeniería de sistemas críticos de Track & Trace para SICPA. Enfocado en asegurar el cumplimiento fiscal para gobiernos y la autenticidad de productos para marcas globales, previniendo el fraude y la falsificación.",
+          item1: "Frameworks estandarizados de Track & Trace global",
+          item2: "Soluciones antifraude y producción de alta velocidad",
+          item3: "Miembro fundador del hub de ingeniería internacional",
         },
         finland: {
-          period: "Finlandia (2020-2024)",
+          period: "Finlandia (2007-2009 | 2013-2025)",
           description:
-            "Tech lead en startups de alto crecimiento. Especialización en desarrollo Android moderno con Kotlin y Jetpack Compose. Mentoría de equipos y establecimiento de buenas prácticas.",
-          item1:
-            "Migración de bases de código legacy a arquitecturas modernas",
-          item2: "Implementación de CI/CD y cultura DevOps",
-          item3:
-            "Formación de equipos en Compose y Clean Architecture",
+            "Android Lead y Coach de Ingeniería. Desde el diseño de arquitecturas para grandes marcas en Frosmo hasta liderar la localización de productos core en Kivra, con un fuerte enfoque en el escalado de equipos y la excelencia técnica.",
+          item1: "Mentorización y escalado de equipos de +30 desarrolladores",
+          item2: "Liderazgo estratégico de Android y localización",
+          item3: "Coordinación arquitectónica transfronteriza",
         },
         bitdesal: {
-          period: "Bitdesal (2024-presente)",
+          period: "Bitdesal (2025-presente)",
           description:
-            "Fundación de Bitdesal para ofrecer servicios de desarrollo Android, IA y consultoría técnica de alto nivel. Foco en calidad, metodologías remote-first y resultados medibles.",
-          item1:
-            "Desarrollo Android con Modern Stack (Kotlin/Compose)",
-          item2:
-            "Implementación de agentes de IA y automatizaciones",
-          item3: "Mentoría técnica y consultoría estratégica",
+            "Ofreciendo ingeniería Android premium, integración de IA y consultoría estratégica. Ayudando a clientes internacionales a modernizar sus flujos de trabajo mediante Spec-Driven Development y calidad aumentada por IA.",
+          item1: "Desarrollo Android experto (Stack Moderno)",
+          item2: "Implementación de agentes de IA y automatizaciones",
+          item3: "Mentoría técnica para equipos de ingeniería",
         },
       },
       education: {
@@ -851,7 +846,7 @@ export const translations = {
       hero: {
         title: "About Bitdesal",
         subtitle:
-          "20 years of experience in high-level software development with international projects in Switzerland and Finland",
+          "20 years of experience in high-level software development with international projects in Spain, Switzerland and Finland",
       },
       intro:
         "Bitdesal was born from a passion for creating quality software and the experience accumulated over two decades working with world-class teams and projects.",
@@ -864,7 +859,7 @@ export const translations = {
         international: {
           title: "International",
           description:
-            "Experience in Switzerland and Finland with global clients",
+            "Experience in Spain, Switzerland and Finland with global clients",
         },
         education: {
           title: "Strong Foundation",
@@ -880,33 +875,28 @@ export const translations = {
       journey: {
         title: "Professional Journey",
         switzerland: {
-          period: "Switzerland (2015-2020)",
+          period: "Switzerland & Spain (2009-2013)",
           description:
-            "Development of high-performance financial applications for private banking and asset management. Work with distributed teams in highly regulated environments.",
-          item1: "Microservices architecture in fintech",
-          item2:
-            "Mobile apps with extreme security requirements",
-          item3: "Scaled agile methodologies (SAFe)",
+            "Engineering of mission-critical Track & Trace systems for SICPA. Focused on ensuring tax compliance for governments and product authenticity for global brands to prevent fraud and counterfeiting.",
+          item1: "Global Track & Trace standardized frameworks",
+          item2: "Anti-fraud and high-speed production solutions",
+          item3: "Founding member of the international engineering hub",
         },
         finland: {
-          period: "Finland (2020-2024)",
+          period: "Finland (2007-2009 | 2013-2025)",
           description:
-            "Tech lead at high-growth startups. Specialization in modern Android development with Kotlin and Jetpack Compose. Team mentorship and establishing best practices.",
-          item1:
-            "Migration from legacy codebases to modern architectures",
-          item2: "CI/CD implementation and DevOps culture",
-          item3:
-            "Team training in Compose and Clean Architecture",
+            "Android Lead and Engineering Coach. From architecting solutions for major brands at Frosmo to leading the localization of core products at Kivra, with a strong focus on team scaling and technical excellence.",
+          item1: "Mentoring and scaling teams of 30+ developers",
+          item2: "Strategic Android leadership and localization",
+          item3: "Cross-border architectural coordination",
         },
         bitdesal: {
-          period: "Bitdesal (2024-present)",
+          period: "Bitdesal (2025-present)",
           description:
-            "Founded Bitdesal to offer Android development, AI and high-level technical consulting services. Focus on quality, remote-first methodologies and measurable results.",
-          item1:
-            "Android development with Modern Stack (Kotlin/Compose)",
+            "Providing premium Android engineering, AI integration, and strategic consultancy. Helping international clients modernize their workflows through Spec-Driven Development and AI-augmented quality.",
+          item1: "Expert Android development (Modern Stack)",
           item2: "Implementation of AI agents and automations",
-          item3:
-            "Technical mentorship and strategic consulting",
+          item3: "Technical mentorship for engineering teams",
         },
       },
       education: {
@@ -1471,7 +1461,7 @@ export const translations = {
         },
         international: {
           title: "Kansainvälinen",
-          description: "Kokemusta Sveitsistä ja Suomesta maailmanlaajuisten asiakkaiden kanssa",
+          description: "Kokemusta Espanjasta, Sveitsistä ja Suomesta maailmanlaajuisten asiakkaiden kanssa",
         },
         education: {
           title: "Vahva perusta",
@@ -1483,30 +1473,30 @@ export const translations = {
         },
       },
       journey: {
-        title: "Ammatillinen matka",
+        title: "Ammatillinen polku",
         switzerland: {
-          period: "Sveitsi (2015-2020)",
+          period: "Sveitsi ja Espanja (2009-2013)",
           description:
-            "Korkean suorituskyvyn rahoitussovellusten kehitys yksityispankkitoimintaan ja varainhoitoon. Työskentelyä hajautettujen tiimien kanssa vahvasti säännellyssä ympäristössä.",
-          item1: "Mikropalveluarkkitehtuuri fintechissä",
-          item2: "Mobiilisovellukset äärimmäisten turvallisuusvaatimusten kanssa",
-          item3: "Skaalatut ketterät menetelmät (SAFe)",
+            "Kriittisten jäljitettävyysjärjestelmien (Track & Trace) suunnittelu SICPAlle. Keskiössä hallitusten verovelvoitteiden varmistaminen ja globaalien brändien tuoteryhmän aitouden suojaaminen petoksia ja väärennöksiä vastaan.",
+          item1: "Globaalit standardoidut jäljitettävyysjärjestelmät",
+          item2: "Petostentorjunta ja nopean tuotannon ratkaisut",
+          item3: "Kansainvälisen suunnittelukeskuksen perustajajäsen",
         },
         finland: {
-          period: "Suomi (2020-2024)",
+          period: "Suomi (2007-2009 | 2013-2025)",
           description:
-            "Tech lead nopeasti kasvavissa startupeissa. Erikoistuminen moderniin Android-kehitykseen Kotlinilla ja Jetpack Composella. Tiimien mentorointi ja parhaiden käytäntöjen luominen.",
-          item1: "Migraatio legacy-koodista moderneihin arkkitehtuureihin",
-          item2: "CI/CD:n toteutus ja DevOps-kulttuurin luominen",
-          item3: "Tiimien koulutus Composessa ja Clean Architecturessa",
+            "Android-tiiminvetäjä ja tekninen valmentaja. Frosmon ratkaisuarkkitehtuurista Kivran ydintuotteiden lokalisoinnin johtamiseen, painottaen tiimien kasvattamista ja teknistä erinomaisuutta.",
+          item1: "Yli 30 kehittäjän mentorointi ja tiimien skaalaaminen",
+          item2: "Strateginen Android-johtajuus ja lokalisointi",
+          item3: "Maiden välinen arkkitehtuurikoordinaatio",
         },
         bitdesal: {
-          period: "Bitdesal (2024-nykyhetki)",
+          period: "Bitdesal (2025-nykyhetki)",
           description:
-            "Bitdesalin perustaminen tarjoamaan Android-kehitystä, tekoälyä ja korkean tason teknistä konsultointia. Keskitytään laatuun, remote-first-menetelmiin ja mitattaviin tuloksiin.",
-          item1: "Android-kehitys modernilla stackilla (Kotlin/Compose)",
-          item2: "Tekoälyagenttien ja automaatioiden toteutus",
-          item3: "Tekninen mentorointi ja strateginen konsultointi",
+            "Korkealaatuista Android-suunnittelua, tekoälyn integrointia ja strategista konsultointia. Autamme kansainvälisiä asiakkaita modernisoimaan työvaiheet Spec-Driven Development -mallin ja tekoälyavusteisen laadunhallinnan avulla.",
+          item1: "Asiantunteva Android-kehitys (Moderni teknologiapino)",
+          item2: "Tekoälyagenttien ja automaation toteutus",
+          item3: "Tekninen mentorointi ohjelmistotiimeille",
         },
       },
       education: {
