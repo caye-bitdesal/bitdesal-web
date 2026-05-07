@@ -138,8 +138,8 @@ export const translations = {
           "Tarifas claras por hora con descuentos por volumen. Todos los servicios incluyen código de producción y documentación completa.",
       },
       basePricing: {
-        title: "Tarifas Base",
-        subtitle: "Precios por hora según el tipo de servicio",
+        title: "Tarifa Única",
+        subtitle: "Una tarifa clara para todos los servicios",
         android: {
           title: "Desarrollo Android",
           price: "120",

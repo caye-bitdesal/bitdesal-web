@@ -55,36 +55,6 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 
 						<div>
-							<label for="company" class="block mb-2" data-i18n-key="contact.form.company">Company</label>
-							<input
-								type="text"
-								id="company"
-								name="company"
-								class="w-full px-4 py-3 rounded-lg border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-								data-i18n-key="contact.form.companyPlaceholder"
-								data-i18n-attr="placeholder"
-								placeholder="Your company name (optional)"
-							/>
-						</div>
-
-						<div>
-							<label for="service" class="block mb-2"><span data-i18n-key="contact.form.service">Service of interest</span> *</label>
-							<select
-								id="service"
-								name="service"
-								required
-								class="w-full px-4 py-3 rounded-lg border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-							>
-								<option value="" data-i18n-key="contact.form.selectService">Select a service</option>
-								<option value="android" data-i18n-key="contact.form.android">Android Development</option>
-								<option value="ai" data-i18n-key="contact.form.ai">Artificial Intelligence</option>
-								<option value="mentorship" data-i18n-key="contact.form.mentorship">Mentorship</option>
-								<option value="consulting" data-i18n-key="contact.form.consulting">Strategic Consulting</option>
-								<option value="other" data-i18n-key="contact.form.other">Other</option>
-							</select>
-						</div>
-
-						<div>
 							<label for="message" class="block mb-2"><span data-i18n-key="contact.form.message">Message</span> *</label>
 							<textarea
 								id="message"
@@ -140,37 +110,6 @@ import Layout from '../layouts/Layout.astro';
 								</a>
 								<p class="text-sm text-foreground/70 mt-1" data-i18n-key="contact.info.linkedin.description">Follow us for technical content</p>
 							</div>
-						</div>
-
-						<div class="flex items-start gap-4">
-							<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-								<span class="text-primary font-semibold">⟡</span>
-							</div>
-							<div>
-								<h3 class="mb-1" data-i18n-key="contact.info.location.title">Location</h3>
-								<p class="text-foreground/80" data-i18n-key="contact.info.location.value">Remote-first</p>
-								<p class="text-sm text-foreground/70 mt-1" data-i18n-key="contact.info.location.description">We work with clients worldwide</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="bg-secondary rounded-lg p-8">
-						<h3 class="text-xl mb-4" data-i18n-key="contact.schedule.title">Response schedule</h3>
-						<p class="text-foreground/80 mb-4" data-i18n-key="contact.schedule.description">
-							We respond to emails and messages Monday through Friday.
-						</p>
-						<div class="space-y-2 text-sm text-foreground/70">
-							<p>
-								<strong data-i18n-key="contact.schedule.weekdays">Monday - Friday</strong>:
-								<span data-i18n-key="contact.schedule.weekdaysTime">9:00 AM - 6:00 PM CET</span>
-							</p>
-							<p>
-								<strong data-i18n-key="contact.schedule.weekend">Saturday - Sunday</strong>:
-								<span data-i18n-key="contact.schedule.weekendTime">Closed</span>
-							</p>
-							<p class="pt-2" data-i18n-key="contact.schedule.emergency">
-								For emergencies on active projects, we provide a direct communication channel.
-							</p>
 						</div>
 					</div>
 				</div>

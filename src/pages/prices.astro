@@ -15,57 +15,19 @@ import Layout from '../layouts/Layout.astro';
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="prices.basePricing.title">Base Rates</h2>
+				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="prices.basePricing.title">Single Rates</h2>
 				<p class="text-lg text-foreground/70" data-i18n-key="prices.basePricing.subtitle">Hourly pricing by service type</p>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+			<div class="max-w-2xl mx-auto mb-16">
 				<div class="border-2 border-border rounded-lg p-8 hover:border-primary transition-colors">
-					<div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-lg mb-4">
-						<span class="text-primary font-semibold">⌁</span>
-					</div>
-					<h3 class="text-xl mb-2" data-i18n-key="prices.basePricing.android.title">Android Development</h3>
 					<div class="mb-4">
-						<span class="text-4xl text-primary">
-							<span data-i18n-key="prices.basePricing.android.price">120</span>€
-						</span>
+						<span class="text-4xl text-primary"><span data-i18n-key="prices.basePricing.price">120</span>€</span>
 						<span class="text-foreground/70" data-i18n-key="prices.basePricing.perHour">/hour</span>
 					</div>
-					<p class="text-foreground/70" data-i18n-key="prices.basePricing.android.description">
-						Kotlin, Jetpack Compose, modern architecture
+					<p class="text-foreground/70" data-i18n-key="prices.basePricing.description">
+						Applies to Android development, strategic consulting, and mentorship.
 					</p>
-				</div>
-
-				<div class="border-2 border-border rounded-lg p-8 hover:border-primary transition-colors">
-					<div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-lg mb-4">
-						<span class="text-primary font-semibold">⋄</span>
-					</div>
-					<h3 class="text-xl mb-2" data-i18n-key="prices.basePricing.consulting.title">
-						Strategic Consulting | Mentorship
-					</h3>
-					<div class="mb-4">
-						<span class="text-4xl text-primary">
-							<span data-i18n-key="prices.basePricing.consulting.price">130</span>€
-						</span>
-						<span class="text-foreground/70" data-i18n-key="prices.basePricing.perHour">/hour</span>
-					</div>
-					<p class="text-foreground/70" data-i18n-key="prices.basePricing.consulting.description">
-						Technical advice, architectural decisions and mentorship
-					</p>
-				</div>
-
-				<div class="border-2 border-border rounded-lg p-8 hover:border-primary transition-colors">
-					<div class="inline-flex items-center justify-center w-12 h-12 bg-secondary rounded-lg mb-4">
-						<span class="text-primary font-semibold">AI</span>
-					</div>
-					<h3 class="text-xl mb-2" data-i18n-key="prices.basePricing.ai.title">AI & Agents</h3>
-					<div class="mb-4">
-						<span class="text-4xl text-primary">
-							<span data-i18n-key="prices.basePricing.ai.price">140</span>€
-						</span>
-						<span class="text-foreground/70" data-i18n-key="prices.basePricing.perHour">/hour</span>
-					</div>
-					<p class="text-foreground/70" data-i18n-key="prices.basePricing.ai.description">AI solutions, agents and automation</p>
 				</div>
 			</div>
 		</div>
@@ -160,9 +122,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="flex justify-between items-center py-3 border-b border-border">
 						<span class="text-foreground/80" data-i18n-key="prices.examples.consulting40">Consulting example</span>
 					</div>
-					<div class="flex justify-between items-center py-3">
-						<span class="text-foreground/80" data-i18n-key="prices.examples.ai30">AI example</span>
-					</div>
+					<!-- Removed AI pricing example (AI-assisted work is not a standalone service offering). -->
 				</div>
 			</div>
 		</div>
@@ -179,31 +139,6 @@ import Layout from '../layouts/Layout.astro';
 				<div class="flex items-start gap-3"><span class="text-primary flex-shrink-0 mt-1">✓</span><span data-i18n-key="prices.features.feature4">Async communication via Slack/Email</span></div>
 				<div class="flex items-start gap-3"><span class="text-primary flex-shrink-0 mt-1">✓</span><span data-i18n-key="prices.features.feature5">Complete technical documentation</span></div>
 				<div class="flex items-start gap-3"><span class="text-primary flex-shrink-0 mt-1">✓</span><span data-i18n-key="prices.features.feature6">Handoff for continuity</span></div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl md:text-4xl mb-12 text-center" data-i18n-key="prices.faq.title">Frequently Asked Questions</h2>
-
-			<div class="max-w-3xl mx-auto space-y-6">
-				<div class="bg-white rounded-lg p-6">
-					<h3 class="mb-2" data-i18n-key="prices.faq.q1.question">Question</h3>
-					<p class="text-foreground/70" data-i18n-key="prices.faq.q1.answer">Answer</p>
-				</div>
-				<div class="bg-white rounded-lg p-6">
-					<h3 class="mb-2" data-i18n-key="prices.faq.q2.question">Question</h3>
-					<p class="text-foreground/70" data-i18n-key="prices.faq.q2.answer">Answer</p>
-				</div>
-				<div class="bg-white rounded-lg p-6">
-					<h3 class="mb-2" data-i18n-key="prices.faq.q3.question">Question</h3>
-					<p class="text-foreground/70" data-i18n-key="prices.faq.q3.answer">Answer</p>
-				</div>
-				<div class="bg-white rounded-lg p-6">
-					<h3 class="mb-2" data-i18n-key="prices.faq.q4.question">Question</h3>
-					<p class="text-foreground/70" data-i18n-key="prices.faq.q4.answer">Answer</p>
-				</div>
 			</div>
 		</div>
 	</section>
