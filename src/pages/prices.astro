@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
 <Layout>
@@ -143,20 +144,6 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<section class="py-16 md:py-24 bg-primary text-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="prices.cta.title">Ready to start?</h2>
-			<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n-key="prices.cta.subtitle">
-				Let's talk about your project and calculate the retainer that best fits your needs
-			</p>
-			<a
-				href="/contact"
-				class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
-				data-i18n-key="prices.cta.button"
-			>
-				Request quote
-			</a>
-		</div>
-	</section>
+	<CtaSection />
 </Layout>
 

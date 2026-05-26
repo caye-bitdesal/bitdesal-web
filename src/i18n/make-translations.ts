@@ -47,7 +47,7 @@ export const translations = {
         title: "Inteligencia Artificial que Funciona",
         description:
           "Desarrollamos agentes de IA y automatizaciones inteligentes que resuelven problemas reales y generan ROI medible. Sin hype, solo resultados.",
-        item1: "Agentes conversacionales con Claude y Gemini",
+        item1: "Agentes basados en Claude, Gemini y OpenAI",
         item2: "Diseño de aplicaciones con asistencia de la IA",
         item3: "Automatización de procesos con IA",
         explore: "Explorar soluciones IA",
@@ -656,7 +656,7 @@ export const translations = {
         title: "Artificial Intelligence that Works",
         description:
           "We develop AI agents and intelligent automations that solve real problems and generate measurable ROI. No hype, just results.",
-        item1: "Conversational agents with Claude and Gemini",
+        item1: "Agents based on Claude, Gemini and OpenAI",
         item2: "AI assisted designs",
         item3: "Process automation with AI",
         explore: "Explore AI solutions",
@@ -1218,41 +1218,41 @@ export const translations = {
   fi: {
     home: {
       hero: {
-        title: "Android-kehitys, oikein tehtynä",
+        title: "Modernia Android-kehitystä ilman kompromisseja",
         subtitle:
-          "Moderni Android-kehitys, tekoälyratkaisut ja strateginen konsultointi 20 vuoden kansainvälisellä kokemuksella",
+          "Rakennamme laadukkaita Android-sovelluksia, tekoälyratkaisuja ja digitaalisia palveluita yli 20 vuoden kansainvälisellä kokemuksella.",
         viewServices: "Näytä palvelut",
         contact: "Ota yhteyttä",
       },
       whyBitdesal: {
-        title: "Miksi Bitdesal?",
+        title: "Miksi valita Bitdesal?",
         subtitle:
-          "Yhdistämme maailmanluokan teknisen osaamisen kansainvälisesti todistettuihin menetelmiin",
+          "Tekninen kumppani, joka vie Android-, AI- ja arkkitehtuurihankkeet suunnittelusta laadukkaaseen toteutukseen.",
         modernStack: {
-          title: "Moderni Stack",
+          title: "Moderni Android-osaaminen",
           description:
-            "Kotlin, Jetpack Compose, modulaarinen arkkitehtuuri ja uusimmat Android-teknologiat",
+            "Kotlin, Jetpack Compose, modulaarinen arkkitehtuuri ja parhaat käytännöt tuotantokelpoisiin sovelluksiin.",
         },
         practicalAI: {
-          title: "Käytännön tekoäly",
+          title: "AI käytännön hyödyksi",
           description:
-            "Älykkäät agentit ja automaatiot, jotka tuottavat todellista arvoa liiketoiminnallesi",
+            "Älykkäät agentit ja automaatiot, jotka tehostavat työtä ja tukevat liiketoimintaa",
         },
         mentorship: {
-          title: "Mentorointi",
+          title: "Tiimin osaaminen kasvuun",
           description:
-            "Yksilöllinen koulutus teknisen tiimisi osaamisen kehittämiseen",
+            "Mentorointia ja koulutusta, joka auttaa teknistä tiimiäsi kehittymään myös projektin päättymisen jälkeen.",
         },
         experience: {
-          title: "20 vuotta",
+          title: "20 vuotta kokemusta",
           description:
-            "Kansainvälistä kokemusta Sveitsistä ja Suomesta vaikuttavissa projekteissa",
+            "Kansainvälistä kokemusta vaativista projekteista Suomessa ja Sveitsissä.",
         },
       },
       android: {
         title: "Uuden sukupolven Android-kehitys",
         description:
-          "Kotlin- ja Jetpack Compose -asiantuntijoita skaalautuvalla modulaarisella arkkitehtuurilla. Luomme vankkoja, ylläpidettäviä Android-sovelluksia alan parhain käytännöin.",
+          "Suunnittelemme ja toteutamme skaalautuvia Android-sovelluksia Kotlinilla, Jetpack Composella ja modulaarisella arkkitehtuurilla. Lopputuloksena on laadukas, ylläpidettävä ja pitkäikäinen sovellus.",
         item1: "MVVM/MVI-arkkitehtuuri Clean Architecturen kanssa",
         item2:
           "Kattava testaus JUnitilla, Espressolla ja Compose Testingillä",
@@ -1260,31 +1260,31 @@ export const translations = {
         learnMore: "Lue lisää",
       },
       ai: {
-        title: "Tekoäly, joka toimii",
+        title: "Käytännönläheisiä tekoälyratkaisuja",
         description:
-          "Kehitämme tekoälyagentteja ja älykkäitä automaatioita, jotka ratkaisevat todellisia ongelmia ja tuottavat mitattavaa ROI:ta. Ei hypetystä, vain tuloksia.",
-        item1: "Keskusteluagentit Claudella ja GPT:llä",
-        item2: "Prosessien automaatio tekoälyllä",
+          "Kehitämme tekoälyagentteja ja älykkäitä automaatioita, jotka ratkaisevat todellisia ongelmia ja tuovat mitattavaa hyötyä. Ei hypeä, vaan toimivia ratkaisuja.",
+        item1: "✓ Keskusteluagentit Claudella ja Gemini:llä",
+        item2: "Prosessien automaatio tekoälyn avulla",
         item3: "Data-analyysi ja sovellettu koneoppiminen",
         explore: "Tutustu tekoälyratkaisuihin",
       },
       cta: {
-        title: "Valmis viemään projektisi seuraavalle tasolle?",
+        title: "Tarvitsetko kokeneen teknisen kumppanin projektiisi?",
         subtitle:
-          "Keskustellaan siitä, miten voimme auttaa sinua saavuttamaan tavoitteesi maailmanluokan teknologialla",
+          "Android-kehitys, AI-ratkaisut ja tekninen arkkitehtuuri vaativat selkeää suuntaa ja kokeneen tekijän. Viedään yhdessä projektisi seuraavaan vaiheeseen.",
         button: "Aloita keskustelu",
       },
     },
     services: {
       hero: {
-        title: "Palvelumme",
+        title: "Palvelut",
         subtitle:
-          "Korkean tason teknisiä ratkaisuja yrityksesi tarpeisiin räätälöitynä",
+          "Tarjoamme Android-kehitystä, AI-ratkaisuja ja teknistä konsultointia moderneihin ohjelmistoprojekteihin. Autamme suunnittelemaan, rakentamaan ja kehittämään ratkaisuja, joissa korostuvat laatu, skaalautuvuus ja pitkäikäinen arkkitehtuuri.",
       },
       android: {
         title: "Android-kehitys (moderni stack)",
         description:
-          "Natiivien Android-sovellusten kehitystä uusimmilla teknologioilla ja alan parhailla käytännöillä.",
+          "Natiiveja Android-sovelluksia moderneilla teknologioilla, kestävällä arkkitehtuurilla ja alan parhailla käytännöillä.",
         techTitle: "Teknologiat",
         tech1: "100% Kotlin Coroutinesilla ja Flow'lla",
         tech2: "Jetpack Compose deklaratiiviseen käyttöliittymään",
@@ -1317,22 +1317,22 @@ export const translations = {
       mentorship: {
         title: "Tekninen mentorointi",
         description:
-          "Yksilöllistä koulutusta kehittäjille ja tiimeille, jotka haluavat viedä taitonsa seuraavalle tasolle.",
-        programsTitle: "Saatavilla olevat ohjelmat",
+          "Käytännönläheistä mentorointia ja koulutusta kehittäjille sekä tiimeille, jotka haluavat syventää osaamistaan ja kehittää tekemisen laatua.",
+        programsTitle: "Mentorointi ja koulutus",
         program1: "Yksilöllinen 1:1-mentorointi",
         program2: "Android-tiimien koulutus",
         program3: "Koodikatselmukset ja pair programming",
-        program4: "Erikoistuneet tekniset workshopit",
+        program4: "Tekniset workshopit",
         topicsTitle: "Käsiteltävät aiheet",
-        topic1: "Edistynyt Kotlin ja Compose",
+        topic1: "Edistynyt Kotlin ja Jetpack Compose",
         topic2: "Ohjelmistoarkkitehtuuri",
         topic3: "Testaus ja parhaat käytännöt",
         topic4: "Suorituskyky ja optimointi",
       },
       consulting: {
-        title: "Strateginen konsultointi",
+        title: "Strateginen tekninen konsultointi",
         description:
-          "Korkean tason teknistä neuvontaa parhaiden teknologiapäätösten tekemiseen organisaatiossasi.",
+          "Kokeneen asiantuntijan tukea teknisiin päätöksiin, arkkitehtuurivalintoihin ja kehityksen suunnan kirkastamiseen.",
         servicesTitle: "Konsultointipalvelut",
         service1: "Arkkitehtuurin ja koodin auditointi",
         service2: "Teknologiastackin määrittely",
@@ -1340,14 +1340,14 @@ export const translations = {
         service4: "Tiimien ja prosessien arviointi",
         expertiseTitle: "Osaamisalueet",
         expertise1: "Mobile-first-strategia",
-        expertise2: "Migraatio cloud-nativeen",
+        expertise2: "Cloud-native-migraatiot",
         expertise3: "Tekoälyn käyttöönotto yrityksessä",
         expertise4: "Ketterät prosessit ja DevOps",
       },
       cta: {
-        title: "Tarvitsetko jotain erityisempää?",
+        title: "Onko mielessäsi jokin muu tekninen tarve?",
         subtitle:
-          "Jokainen projekti on ainutlaatuinen. Ota yhteyttä keskustellaksesi tarpeistasi ja luodaksemme räätälöidyn ratkaisun.",
+          "Kaikki projektit eivät mahdu valmiisiin kategorioihin. Kerro tilanteestasi, niin katsotaan, millainen ratkaisu palvelisi tavoitteitasi parhaiten.",
         button: "Keskustele kanssamme",
       },
     },
@@ -1700,7 +1700,7 @@ export const translations = {
         android: "Android",
         ai: "Tekoäly",
         architecture: "Arkkitehtuuri",
-        methodology: "Menetelmät",
+        methodology: "Työtapa",
       },
       newsletter: {
         title: "Tilaa uutiskirje",

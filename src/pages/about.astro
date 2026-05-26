@@ -1,61 +1,95 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
 <Layout>
-	<section class="bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl md:text-5xl mb-6" data-i18n-key="about.hero.title">About Bitdesal</h1>
-			<p class="text-xl text-white/90 max-w-3xl mx-auto" data-i18n-key="about.hero.subtitle">
-				20 years of experience in high-level software development with international projects in Spain, Switzerland and Finland
-			</p>
-		</div>
-	</section>
-
 	<section class="py-16 md:py-24 bg-white">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="prose prose-lg max-w-none">
-				<p class="text-xl text-foreground/90 mb-8" data-i18n-key="about.intro">
-					Bitdesal was born from a passion for creating quality software and the experience accumulated over two decades.
-				</p>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-2" data-i18n-key="about.bio.name">Cayetano Ruiz Corraliza</h2>
+			<p class="text-lg text-primary font-medium mb-6" data-i18n-key="about.bio.title">Founder</p>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-					<div class="bg-secondary rounded-lg p-6">
-						<div class="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-lg mb-4">
-							<span class="text-white font-semibold">⏳</span>
+			<div class="flex flex-col lg:flex-row gap-10 lg:gap-12 items-start mb-16">
+				<div class="flex-1 min-w-0">
+					<article class="space-y-4 text-base text-foreground/80 leading-relaxed">
+						<p data-i18n-key="about.bio.p1"></p>
+						<p data-i18n-key="about.bio.p2"></p>
+						<p data-i18n-key="about.bio.p3"></p>
+						<p data-i18n-key="about.bio.p4"></p>
+						<p data-i18n-key="about.bio.p5"></p>
+					</article>
+
+					<p class="mt-8 text-sm text-foreground/70">
+						<span data-i18n-key="about.bio.psPrefix"></span>
+						<a href="#" class="text-primary hover:underline" data-i18n-key="about.bio.psLink">
+							Beyond &quot;Vibe Coding&quot;
+						</a>
+					</p>
+				</div>
+
+				<div class="w-full max-w-[240px] sm:max-w-[280px] mx-auto lg:mx-0 lg:shrink-0">
+					<img
+						src="/caye-ruiz-portrait.png"
+						alt="Caye Ruiz, Founder of Bitdesal"
+						class="w-full rounded-lg object-cover aspect-[3/4] shadow-lg"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+			</div>
+
+			<div class="max-w-3xl mx-auto">
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+					<div class="bg-secondary rounded-lg p-4">
+						<div class="flex items-center gap-3 mb-2">
+							<div class="flex shrink-0 items-center justify-center w-9 h-9 bg-primary rounded-md">
+								<span class="text-white text-sm font-semibold">⏳</span>
+							</div>
+							<h3 class="text-base font-medium leading-tight" data-i18n-key="about.highlights.years.title">20 Years</h3>
 						</div>
-						<h3 class="mb-2" data-i18n-key="about.highlights.years.title">20 Years</h3>
-						<p class="text-foreground/70" data-i18n-key="about.highlights.years.description">
+						<p class="text-sm text-foreground/70 pl-12" data-i18n-key="about.highlights.years.description">
 							Of experience in professional software development
 						</p>
 					</div>
 
-					<div class="bg-secondary rounded-lg p-6">
-						<div class="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-lg mb-4">
-							<span class="text-white font-semibold">📍</span>
+					<div class="bg-secondary rounded-lg p-4">
+						<div class="flex items-center gap-3 mb-2">
+							<div class="flex shrink-0 items-center justify-center w-9 h-9 bg-primary rounded-md">
+								<span class="text-white text-sm font-semibold">📍</span>
+							</div>
+							<h3 class="text-base font-medium leading-tight" data-i18n-key="about.highlights.international.title">
+								International
+							</h3>
 						</div>
-						<h3 class="mb-2" data-i18n-key="about.highlights.international.title">International</h3>
-						<p class="text-foreground/70" data-i18n-key="about.highlights.international.description">
+						<p class="text-sm text-foreground/70 pl-12" data-i18n-key="about.highlights.international.description">
 							Experience in Spain, Switzerland and Finland with global clients
 						</p>
 					</div>
 
-					<div class="bg-secondary rounded-lg p-6">
-						<div class="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-lg mb-4">
-							<span class="text-white font-semibold">🎓</span>
+					<div class="bg-secondary rounded-lg p-4">
+						<div class="flex items-center gap-3 mb-2">
+							<div class="flex shrink-0 items-center justify-center w-9 h-9 bg-primary rounded-md">
+								<span class="text-white text-sm font-semibold">🎓</span>
+							</div>
+							<h3 class="text-base font-medium leading-tight" data-i18n-key="about.highlights.education.title">
+								Strong Foundation
+							</h3>
 						</div>
-						<h3 class="mb-2" data-i18n-key="about.highlights.education.title">Strong Foundation</h3>
-						<p class="text-foreground/70" data-i18n-key="about.highlights.education.description">
+						<p class="text-sm text-foreground/70 pl-12" data-i18n-key="about.highlights.education.description">
 							Academic background in Computer Engineering
 						</p>
 					</div>
 
-					<div class="bg-secondary rounded-lg p-6">
-						<div class="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-lg mb-4">
-							<span class="text-white font-semibold">🏅</span>
+					<div class="bg-secondary rounded-lg p-4">
+						<div class="flex items-center gap-3 mb-2">
+							<div class="flex shrink-0 items-center justify-center w-9 h-9 bg-primary rounded-md">
+								<span class="text-white text-sm font-semibold">🏅</span>
+							</div>
+							<h3 class="text-base font-medium leading-tight" data-i18n-key="about.highlights.specialization.title">
+								Specialization
+							</h3>
 						</div>
-						<h3 class="mb-2" data-i18n-key="about.highlights.specialization.title">Specialization</h3>
-						<p class="text-foreground/70" data-i18n-key="about.highlights.specialization.description">
+						<p class="text-sm text-foreground/70 pl-12" data-i18n-key="about.highlights.specialization.description">
 							Android, AI and modern software architectures
 						</p>
 					</div>
@@ -161,100 +195,6 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl md:text-4xl mb-12 text-center" data-i18n-key="about.stack.title">Technical Stack</h2>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<div>
-					<h3 class="mb-4" data-i18n-key="about.stack.android.title">Android / Mobile</h3>
-					<ul class="space-y-2 text-foreground/70">
-						<li data-i18n-key="about.stack.android.items.0">• Kotlin</li>
-						<li data-i18n-key="about.stack.android.items.1">• Jetpack Compose</li>
-						<li data-i18n-key="about.stack.android.items.2">• Coroutines & Flow</li>
-						<li data-i18n-key="about.stack.android.items.3">• Hilt / Dagger</li>
-						<li data-i18n-key="about.stack.android.items.4">• Room, Retrofit, Coil</li>
-						<li data-i18n-key="about.stack.android.items.5">• Material Design 3</li>
-					</ul>
-				</div>
-
-				<div>
-					<h3 class="mb-4" data-i18n-key="about.stack.architecture.title">Architecture</h3>
-					<ul class="space-y-2 text-foreground/70">
-						<li data-i18n-key="about.stack.architecture.items.0">• Clean Architecture</li>
-						<li data-i18n-key="about.stack.architecture.items.1">• MVVM / MVI</li>
-						<li data-i18n-key="about.stack.architecture.items.2">• Multi-module apps</li>
-						<li data-i18n-key="about.stack.architecture.items.3">• Microservices</li>
-						<li data-i18n-key="about.stack.architecture.items.4">• Event-driven systems</li>
-						<li data-i18n-key="about.stack.architecture.items.5">• Domain-driven design</li>
-					</ul>
-				</div>
-
-				<div>
-					<h3 class="mb-4" data-i18n-key="about.stack.ai.title">AI & Data</h3>
-					<ul class="space-y-2 text-foreground/70">
-						<li data-i18n-key="about.stack.ai.items.0">• Claude / GPT APIs</li>
-						<li data-i18n-key="about.stack.ai.items.1">• LangChain / LlamaIndex</li>
-						<li data-i18n-key="about.stack.ai.items.2">• Python / Pandas</li>
-						<li data-i18n-key="about.stack.ai.items.3">• TensorFlow / PyTorch</li>
-						<li data-i18n-key="about.stack.ai.items.4">• RAG systems</li>
-						<li data-i18n-key="about.stack.ai.items.5">• Agent frameworks</li>
-					</ul>
-				</div>
-
-				<div>
-					<h3 class="mb-4" data-i18n-key="about.stack.backend.title">Backend</h3>
-					<ul class="space-y-2 text-foreground/70">
-						<li data-i18n-key="about.stack.backend.items.0">• Kotlin / Ktor</li>
-						<li data-i18n-key="about.stack.backend.items.1">• Node.js / Express</li>
-						<li data-i18n-key="about.stack.backend.items.2">• PostgreSQL / MongoDB</li>
-						<li data-i18n-key="about.stack.backend.items.3">• Redis / RabbitMQ</li>
-						<li data-i18n-key="about.stack.backend.items.4">• GraphQL / REST</li>
-						<li data-i18n-key="about.stack.backend.items.5">• gRPC</li>
-					</ul>
-				</div>
-
-				<div>
-					<h3 class="mb-4" data-i18n-key="about.stack.devops.title">DevOps & Cloud</h3>
-					<ul class="space-y-2 text-foreground/70">
-						<li data-i18n-key="about.stack.devops.items.0">• GitHub Actions / GitLab CI</li>
-						<li data-i18n-key="about.stack.devops.items.1">• Docker / Kubernetes</li>
-						<li data-i18n-key="about.stack.devops.items.2">• AWS / GCP</li>
-						<li data-i18n-key="about.stack.devops.items.3">• Terraform</li>
-						<li data-i18n-key="about.stack.devops.items.4">• Monitoring</li>
-						<li data-i18n-key="about.stack.devops.items.5">• Firebase</li>
-					</ul>
-				</div>
-
-				<div>
-					<h3 class="mb-4" data-i18n-key="about.stack.testing.title">Testing & Quality</h3>
-					<ul class="space-y-2 text-foreground/70">
-						<li data-i18n-key="about.stack.testing.items.0">• JUnit / Mockito</li>
-						<li data-i18n-key="about.stack.testing.items.1">• Espresso / UI Automator</li>
-						<li data-i18n-key="about.stack.testing.items.2">• Compose Testing</li>
-						<li data-i18n-key="about.stack.testing.items.3">• Detekt / Ktlint</li>
-						<li data-i18n-key="about.stack.testing.items.4">• SonarQube</li>
-						<li data-i18n-key="about.stack.testing.items.5">• Test-driven development</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-primary text-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="about.cta.title">Let's work together</h2>
-			<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n-key="about.cta.subtitle">
-				If you're looking for international experience, technical quality and measurable results, let's talk.
-			</p>
-			<a
-				href="/contact"
-				class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
-				data-i18n-key="about.cta.button"
-			>
-				Contact
-			</a>
-		</div>
-	</section>
+	<CtaSection />
 </Layout>
 

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
 <Layout>
@@ -164,20 +165,6 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="services.cta.title">Need something more specific?</h2>
-			<p class="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto" data-i18n-key="services.cta.subtitle">
-				Every project is unique.
-			</p>
-			<a
-				href="/contact"
-				class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-				data-i18n-key="services.cta.button"
-			>
-				Talk to us
-			</a>
-		</div>
-	</section>
+	<CtaSection />
 </Layout>
 
