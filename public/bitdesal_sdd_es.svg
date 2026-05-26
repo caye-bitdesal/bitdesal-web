@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="900" viewBox="0 0 680 900">
+<title>SDD — Spec-Driven Development · Bitdesal (Español)</title>
+<desc>Esquema del flujo Spec-Driven Development de Bitdesal con los principios del Manifiesto de Ingeniería con IA, en español.</desc>
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <style>
+    text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+  </style>
+</defs>
+
+<!-- Background -->
+<rect width="680" height="900" fill="#F5F2EB"/>
+
+<!-- Header -->
+<rect x="0" y="0" width="680" height="62" fill="#2E6E63"/>
+<text x="340" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="#F0EDE3">Spec-Driven Development</text>
+<text x="340" y="46" text-anchor="middle" font-size="11" fill="#5DCAA5">Manifiesto de Ingeniería con IA · Bitdesal</text>
+
+<!-- Flow boxes -->
+<rect x="195" y="78" width="290" height="48" rx="8" fill="#2E6E63"/>
+<text x="340" y="99" text-anchor="middle" font-size="13" font-weight="600" fill="#F0EDE3">01 · User Story</text>
+<text x="340" y="117" text-anchor="middle" font-size="11" fill="#9FE1CB">Definir y refinar el requisito</text>
+
+<line x1="340" y1="126" x2="340" y2="144" stroke="#2E6E63" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="195" y="144" width="290" height="48" rx="8" fill="#2E6E63"/>
+<text x="340" y="165" text-anchor="middle" font-size="13" font-weight="600" fill="#F0EDE3">02 · Architecture Plan</text>
+<text x="340" y="183" text-anchor="middle" font-size="11" fill="#9FE1CB">Tú decides la estructura</text>
+
+<line x1="340" y1="192" x2="340" y2="210" stroke="#2E6E63" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="195" y="210" width="290" height="48" rx="8" fill="#2E6E63"/>
+<text x="340" y="231" text-anchor="middle" font-size="13" font-weight="600" fill="#F0EDE3">03 · Task Breakdown</text>
+<text x="340" y="249" text-anchor="middle" font-size="11" fill="#9FE1CB">Partir en piezas simples y concretas</text>
+
+<line x1="340" y1="258" x2="340" y2="276" stroke="#2E6E63" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<!-- Spec highlighted -->
+<rect x="160" y="276" width="360" height="70" rx="10" fill="#1B4A43" stroke="#2E6E63" stroke-width="1.5"/>
+<text x="340" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#F0EDE3">04 · Specification</text>
+<text x="340" y="320" text-anchor="middle" font-size="11" fill="#9FE1CB">El producto real · Blueprint ejecutable</text>
+<text x="340" y="337" text-anchor="middle" font-size="10" fill="#5DCAA5">Completa · Sin ambigüedad · Sin alucinaciones</text>
+
+<line x1="340" y1="346" x2="340" y2="364" stroke="#2E6E63" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="195" y="364" width="290" height="48" rx="8" fill="#2E6E63"/>
+<text x="340" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#F0EDE3">05 · Implementation Plan</text>
+<text x="340" y="403" text-anchor="middle" font-size="11" fill="#9FE1CB">Paso a paso para el agente</text>
+
+<line x1="340" y1="412" x2="340" y2="430" stroke="#2E6E63" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="195" y="430" width="290" height="48" rx="8" fill="#0F6E56" stroke="#1D9E75" stroke-width="1"/>
+<text x="340" y="451" text-anchor="middle" font-size="13" font-weight="600" fill="#F0EDE3">06 · Implement</text>
+<text x="340" y="469" text-anchor="middle" font-size="11" fill="#9FE1CB">El agente ejecuta · Tú supervisas</text>
+
+<!-- Feedback loop -->
+<path d="M195 454 L148 454 L148 168 L195 168" fill="none" stroke="#5DCAA5" stroke-width="0.8" stroke-dasharray="4 4" marker-end="url(#arr)" opacity="0.75"/>
+<text x="136" y="316" text-anchor="middle" font-size="10" fill="#5DCAA5" transform="rotate(-90,136,316)">Refinar si hay cambios</text>
+
+<!-- Separator -->
+<line x1="40" y1="498" x2="640" y2="498" stroke="#2E6E63" stroke-width="0.5" opacity="0.3"/>
+<text x="340" y="518" text-anchor="middle" font-size="11" font-weight="600" fill="#5F5E5A">Principios del Manifiesto</text>
+
+<!-- Principle boxes 2x2 -->
+<rect x="40" y="528" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#2E6E63" stroke-width="0.5"/>
+<text x="56" y="548" font-size="11" font-weight="600" fill="#2E6E63">I · La confianza se gana</text>
+<text x="56" y="565" font-size="10.5" fill="#444441">Entiende el código. Si no puedes</text>
+<text x="56" y="581" font-size="10.5" fill="#444441">debugarlo a las 5am, no lo commits.</text>
+
+<rect x="350" y="528" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#2E6E63" stroke-width="0.5"/>
+<text x="366" y="548" font-size="11" font-weight="600" fill="#2E6E63">II · La Spec es el producto</text>
+<text x="366" y="565" font-size="10.5" fill="#444441">La Spec, no el código, es el entregable</text>
+<text x="366" y="581" font-size="10.5" fill="#444441">real en la era de la IA.</text>
+
+<rect x="40" y="606" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#2E6E63" stroke-width="0.5"/>
+<text x="56" y="626" font-size="11" font-weight="600" fill="#2E6E63">III · Rigor de ingeniería</text>
+<text x="56" y="643" font-size="10.5" fill="#444441">Arregla la causa raíz. Nunca ajustes</text>
+<text x="56" y="659" font-size="10.5" fill="#444441">un test a un código roto.</text>
+
+<rect x="350" y="606" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#2E6E63" stroke-width="0.5"/>
+<text x="366" y="626" font-size="11" font-weight="600" fill="#2E6E63">IV · Tú eres el ingeniero</text>
+<text x="366" y="643" font-size="10.5" fill="#444441">Tú defines la arquitectura.</text>
+<text x="366" y="659" font-size="10.5" fill="#444441">El agente ejecuta.</text>
+
+<rect x="195" y="684" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#2E6E63" stroke-width="0.5"/>
+<text x="340" y="704" text-anchor="middle" font-size="11" font-weight="600" fill="#2E6E63">V · Economía de tokens</text>
+<text x="340" y="721" text-anchor="middle" font-size="10.5" fill="#444441">Specs precisas = menos iteraciones</text>
+<text x="340" y="737" text-anchor="middle" font-size="10.5" fill="#444441">= mayor ROAI.</text>
+
+<!-- ROAI bar -->
+<rect x="40" y="764" width="600" height="46" rx="8" fill="#1B4A43"/>
+<text x="340" y="783" text-anchor="middle" font-size="12" font-weight="600" fill="#F0EDE3">Métrica clave: ROAI — Return on AI Investment</text>
+<text x="340" y="801" text-anchor="middle" font-size="10" fill="#5DCAA5">Valor entregado · Sistema seguro · Arquitectura sana</text>
+
+<!-- Hashtags -->
+<text x="40" y="830" font-size="9.5" fill="#888780">#SDD #AIEngineering #CleanArchitecture #SpecDrivenDevelopment #ROAI #Bitdesal</text>
+
+<!-- Logo -->
+<image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCAGkAaQDACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwDj6KKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAPq+iiisT1gooooA+UKKKK2PJCiiigAq5ZaVqGpK7WNjcXIQgMYYy23PTOKp16n8Iv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KAMrUfDOi6sD9s06CRj/ABhdrf8AfQwa5DUvhPZS7n02+lgbqI5hvX6ZGCP1r0SiqU5LYzlRhLdHhGqeAfEOmbmNmbmIfx2x3/p979K5t0aNyjqVZTgqwwRX03VDUtE0zV0239jDPxjcy/MPow5H51oqvc5p4P8AlZ840V6zqvwos5svpV5Jbt/zzm+dfz6j9a4XVvBmu6Nua4smkhX/AJbQfOuPU45H4gVopp7HLOjOG6MCiiiqMz6vooorE9YKKKKAPEdH+FWoXO2TVblLSPvFHh3+meg/Wu/0fwdoeibWtrJXnX/lvN8759QTwPwArdoqHUkxQw9OHS4UUUVBsFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAGFq/g/Q9a3Nc2SJMf+W0PyPn1JHX8c1wGsfCu/tt0mlXK3adopMI/59D+leuUVSnJGU6EJ7o0qKKK0AKKKKAM2iiisTUKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA0qKKK2MgooooAzaKKKxNQooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDSooorYyCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=" x="566" y="846" width="72" height="52" preserveAspectRatio="xMidYMid meet"/>
+
+</svg>
