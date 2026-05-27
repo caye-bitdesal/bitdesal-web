@@ -1460,16 +1460,17 @@ export const translations = {
           description: "Kokemusta ammattimaisesta ohjelmistokehityksestä",
         },
         international: {
-          title: "Kansainvälinen",
-          description: "Kokemusta Espanjasta, Sveitsistä ja Suomesta maailmanlaajuisten asiakkaiden kanssa",
+          title: "Kansainvälinen kokemus",
+          description: "Projektikokemusta Suomesta, Sveitsistä ja Espanjasta",
         },
         education: {
-          title: "Vahva perusta",
-          description: "Akateeminen tausta tietotekniikan insinöörinä",
+          title: "Vahva tekninen perusta",
+          description:
+            "Tietotekniikan insinöörin koulutus ja laaja ohjelmistoarkkitehtuurin osaaminen",
         },
         specialization: {
           title: "Erikoistuminen",
-          description: "Android, tekoäly ja modernit ohjelmistoarkkitehtuurit",
+          description: "Android-kehitys, AI-ratkaisut ja modernit ohjelmistoarkkitehtuurit",
         },
       },
       journey: {
@@ -1737,7 +1738,7 @@ export const translations = {
       hero: {
         title: "Yhteystiedot",
         subtitle:
-          "Keskustellaan projektistasi. Vastaan henkilökohtaisesti kaikkiin viesteihin alle 24 tunnissa",
+          "Tarvitsetko tukea Android-kehitykseen, AI-ratkaisuihin tai ohjelmistoarkkitehtuuriin? Varaa maksuton kartoitus, niin käydään läpi projektisi tarpeet ja paras tapa edetä.",
       },
       form: {
         title: "Lähetä meille viesti",
@@ -1766,11 +1767,11 @@ export const translations = {
         email: {
           title: "Sähköposti",
           address: "contact@bitdesal.com",
-          description: "Vastaus alle 24h",
+          description: "Vastaamme yhteydenottoihin viimeistään seuraavana arkipäivänä.",
         },
         linkedin: {
           title: "LinkedIn",
-          description: "Seuraa meitä teknisestä sisällöstä",
+          description: "Seuraa sisältöä Android-kehityksestä, AI-ratkaisuista ja ohjelmistoarkkitehtuurista.",
         },
         location: {
           title: "Sijainti",
@@ -1794,22 +1795,22 @@ export const translations = {
         q1: {
           question: "Mikä on tyypillinen vastausaika?",
           answer:
-            "Vastaamme kaikkiin kyselyihin alle 24 tunnissa (arkipäivät). Aktiivisille projekteille ylläpidämme jatkuvaa viestintää Slackin tai haluamasi työkalun kautta.",
+            "Vastaamme yhteydenottoihin viimeistään seuraavana arkipäivänä. Aktiivisissa projekteissa sovimme selkeän viestintärytmin ja käytämme asiakkaalle sopivia työkaluja, kuten Slackia tai Teamsia.",
         },
         q2: {
-          question: "Tarjoatteko ilmaisia konsultaatioita?",
+          question: "Tarjoatteko maksuttoman kartoituksen?",
           answer:
-            "Kyllä, ensimmäinen kartoituspuhelu on ilmainen. Keskustelemme projektistasi, tarpeistasi ja siitä, miten voimme auttaa. Ei sitoumuksia.",
+            "Kyllä. Ensimmäinen keskustelu on maksuton ja tarkoitettu projektin tavoitteiden, tarpeiden ja mahdollisten ratkaisujen läpikäyntiin.",
         },
         q3: {
           question: "Työskenttelettekö salassapitosopimuksilla?",
           answer:
-            "Tietenkin. Allekirjoitamme NDA:t ennen projektisi luottamuksellisten yksityiskohtien käsittelyä. Asiakkaiden luottamuksellisuus on ensisijaista.",
+            "Kyllä. Allekirjoitamme tarvittaessa NDA:n ennen luottamuksellisten projektitietojen käsittelyä.",
         },
         q4: {
-          question: "Mitä tietoja tarvitsette tarjouksen antamiseen?",
+          question: "Mitä tietoja tarvitsette tarjouksen tekemiseen?",
           answer:
-            "Tarkkoja tarjouksia varten meidän on ymmärrettävä: projektin tavoitteet, pääominaisuudet, odotettu aikataulu ja onko olemassa olevaa koodia/infrastruktuuria. Mitä enemmän yksityiskohtia, sitä parempi tarjous.",
+            "Tarjousta varten tarvitsemme yleiskuvan projektin tavoitteista, keskeisistä ominaisuuksista, aikataulusta sekä mahdollisesta olemassa olevasta koodista tai teknisestä ympäristöstä. Mitä tarkempi kuva projektista on, sitä paremmin pystymme arvioimaan työn laajuuden ja toteutuksen.",
         },
       },
     },

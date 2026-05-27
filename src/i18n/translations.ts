@@ -17,8 +17,12 @@ export const translations: Record<Language, any> = {
 				agentsTitle: 'Agentes y automatización para desarrollo',
 				agent1: 'Code reviews asistidos por agentes',
 				agent2: 'Generación de unit tests y UI tests',
-				agent3: 'Diseño→código con Figma Make + Cursor (iteración rápida)',
+				agent3: 'Spec Driven Development desde la planificación hasta el diseño, implementación, testing y release',
 				agent4: 'Refactors guiados, documentación y QA asistidos',
+			},
+			mentorship: {
+				...makeTranslations.es.services.mentorship,
+				topic5: 'Desarrollo asistido por IA',
 			},
 		},
 		prices: {
@@ -106,8 +110,12 @@ export const translations: Record<Language, any> = {
 				agentsTitle: 'Agents & automation for delivery',
 				agent1: 'Agent-assisted code reviews',
 				agent2: 'Unit + UI test generation',
-				agent3: 'Design → code iteration with Figma Make + Cursor',
+				agent3: 'Spec Driven Development from planning to design, implementation, testing and release',
 				agent4: 'Guided refactors, docs and QA assistance',
+			},
+			mentorship: {
+				...makeTranslations.en.services.mentorship,
+				topic5: 'AI assisted development',
 			},
 		},
 		prices: {
@@ -195,8 +203,12 @@ export const translations: Record<Language, any> = {
 				agentsTitle: 'Agentit ja automaatio kehityksen tukena',
 				agent1: 'Agenttien tukemat code reviewt',
 				agent2: 'Unit- ja UI-testien generointi',
-				agent3: 'Design → code -iterointi Figma Make + Cursor',
+				agent3: 'Spec Driven Development suunnittelusta designiin, toteutukseen, testaukseen ja julkaisuun',
 				agent4: 'Ohjatut refaktoroinnit, dokumentaatio ja QA-avustus',
+			},
+			mentorship: {
+				...makeTranslations.fi.services.mentorship,
+				topic5: 'Tekoälyavusteinen kehitys',
 			},
 		},
 		prices: {
