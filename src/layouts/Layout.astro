@@ -59,7 +59,10 @@ const i18nPayload = {
 					if (!key) return;
 					const value = t(dict, key);
 					if (attr) el.setAttribute(attr, value);
-					else el.textContent = value;
+					else {
+						el.textContent = value;
+						el.hidden = !value;
+					}
 				});
 
 				// Update active state on language controls
