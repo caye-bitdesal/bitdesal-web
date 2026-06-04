@@ -1,0 +1,155 @@
+---
+interface Post {
+	url: string;
+	titleKey: string;
+	excerptKey: string;
+	dateKey: string;
+	image?: string;
+	imageAltKey?: string;
+}
+
+interface Props {
+	posts: Post[];
+}
+
+const { posts } = Astro.props;
+const carouselId = `linkedin-carousel-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<div>
+	<div
+		class="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth linkedin-carousel -mx-4 px-4 sm:mx-0 sm:px-0"
+		id={carouselId}
+	>
+		{
+			posts.map((post, i) => (
+				<article
+					class:list={[
+						'snap-center shrink-0 w-[min(100%,340px)] sm:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] max-w-md flex flex-col',
+						i === 0 ? 'linkedin-carousel-slide is-active' : 'linkedin-carousel-slide',
+					]}
+					data-slide={i}
+				>
+					<a
+						href={post.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="group flex flex-col h-full bg-white border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all"
+					>
+						{post.image ? (
+							<div class="aspect-[16/9] overflow-hidden bg-foreground/5">
+								<img
+									src={post.image}
+									alt=""
+									class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+									data-i18n-key={post.imageAltKey}
+									data-i18n-attr="alt"
+									loading="lazy"
+									decoding="async"
+								/>
+							</div>
+						) : (
+							<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-6">
+								<span class="text-white/90 text-sm font-medium tracking-wide uppercase">LinkedIn</span>
+							</div>
+						)}
+						<div class="p-6 flex flex-col flex-1">
+							<p class="text-sm text-foreground/60 mb-2" data-i18n-key={post.dateKey}>
+								Date
+							</p>
+							<h3
+								class="text-xl mb-3 group-hover:text-primary transition-colors leading-snug"
+								data-i18n-key={post.titleKey}
+							>
+								Title
+							</h3>
+							<p class="text-foreground/70 text-sm leading-relaxed flex-1 mb-4" data-i18n-key={post.excerptKey}>
+								Excerpt
+							</p>
+							<span class="inline-flex items-center gap-2 text-primary text-sm group-hover:gap-3 transition-all">
+								<span data-i18n-key="home.blog.readOnLinkedIn">Read on LinkedIn</span>
+								<span aria-hidden="true">↗</span>
+							</span>
+						</div>
+					</a>
+				</article>
+			))
+		}
+	</div>
+
+	<div class="flex justify-center gap-2 mt-2 linkedin-carousel-dots" data-carousel={carouselId} role="tablist" aria-label="Blog posts">
+		{
+			posts.map((_, i) => (
+				<button
+					type="button"
+					class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-primary' : 'bg-foreground/25']}
+					data-dot={i}
+					data-carousel={carouselId}
+					aria-label={`Post ${i + 1}`}
+					aria-selected={i === 0 ? 'true' : 'false'}
+				/>
+			))
+		}
+	</div>
+</div>
+
+<script>
+	function initLinkedInCarousel(carouselId: string) {
+		const carousel = document.getElementById(carouselId);
+		if (!carousel) return;
+
+		const slides = carousel.querySelectorAll('.linkedin-carousel-slide');
+		const dots = document.querySelectorAll<HTMLButtonElement>(`[data-carousel="${carouselId}"][data-dot]`);
+
+		function setActive(index: number) {
+			slides.forEach((slide, i) => {
+				slide.classList.toggle('is-active', i === index);
+			});
+			dots.forEach((dot, i) => {
+				dot.classList.toggle('bg-primary', i === index);
+				dot.classList.toggle('bg-foreground/25', i !== index);
+				dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+			});
+		}
+
+		dots.forEach((dot) => {
+			dot.addEventListener('click', () => {
+				const index = Number(dot.getAttribute('data-dot'));
+				const slide = slides[index];
+				if (slide) {
+					slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+					setActive(index);
+				}
+			});
+		});
+
+		carousel.addEventListener(
+			'scroll',
+			() => {
+				let closest = 0;
+				let minDist = Infinity;
+				slides.forEach((slide, i) => {
+					const rect = slide.getBoundingClientRect();
+					const carouselRect = carousel.getBoundingClientRect();
+					const dist = Math.abs(rect.left + rect.width / 2 - (carouselRect.left + carouselRect.width / 2));
+					if (dist < minDist) {
+						minDist = dist;
+						closest = i;
+					}
+				});
+				setActive(closest);
+			},
+			{ passive: true }
+		);
+	}
+
+	document.querySelectorAll<HTMLElement>('.linkedin-carousel').forEach((el) => {
+		if (el.id) initLinkedInCarousel(el.id);
+	});
+</script>
+
+<style>
+	.linkedin-carousel-slide.is-active a {
+		border-color: var(--color-primary);
+	}
+</style>

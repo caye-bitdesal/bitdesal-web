@@ -1,6 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
+import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
+
+const linkedInPosts = [
+	{
+		url: 'https://www.linkedin.com/pulse/can-you-afford-your-ai-assisted-development-bitdesal-ubtpe',
+		titleKey: 'home.blog.posts.afford.title',
+		excerptKey: 'home.blog.posts.afford.excerpt',
+		dateKey: 'home.blog.posts.afford.date',
+		image: '/blog/can-you-afford-ai-assisted-development.png',
+		imageAltKey: 'home.blog.posts.afford.imageAlt',
+	},
+	{
+		url: 'https://www.linkedin.com/pulse/beyond-vibe-coding-manifesto-sustainable-ai-engineering-bitdesal-x5bxe',
+		titleKey: 'home.blog.posts.manifesto.title',
+		excerptKey: 'home.blog.posts.manifesto.excerpt',
+		dateKey: 'home.blog.posts.manifesto.date',
+		image: '/blog/beyond-vibe-coding-manifesto.png',
+		imageAltKey: 'home.blog.posts.manifesto.imageAlt',
+	},
+];
 ---
 
 <Layout>
@@ -22,7 +42,7 @@ import CtaSection from '../components/CtaSection.astro';
 						class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
 						data-i18n-key="home.hero.viewServices"
 					>
-						View services
+						View methodology
 					</a>
 					<a
 						href="/contact"
@@ -259,6 +279,19 @@ import CtaSection from '../components/CtaSection.astro';
 					<span aria-hidden="true">→</span>
 				</a>
 			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="home.blog.title">Blog</h2>
+				<p class="text-lg text-foreground/70 max-w-2xl mx-auto" data-i18n-key="home.blog.subtitle">
+					Latest articles from Bitdesal on LinkedIn
+				</p>
+			</div>
+
+			<LinkedInPostsCarousel posts={linkedInPosts} />
 		</div>
 	</section>
 

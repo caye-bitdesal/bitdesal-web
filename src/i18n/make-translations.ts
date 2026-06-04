@@ -5,7 +5,7 @@ export const translations = {
         title: "Desarrollo Android, hecho correctamente",
         subtitle:
           "Desarrollo Android moderno, soluciones de IA y consultoría estratégica con 20 años de experiencia internacional",
-        viewServices: "Ver servicios",
+        viewServices: "Ver metodología",
         contact: "Contactar",
       },
       whyBitdesal: {
@@ -614,7 +614,7 @@ export const translations = {
         title: "Android Development, done right",
         subtitle:
           "Modern Android development, AI solutions and strategic consulting with 20 years of international experience",
-        viewServices: "View services",
+        viewServices: "View methodology",
         contact: "Contact",
       },
       whyBitdesal: {
@@ -1221,7 +1221,7 @@ export const translations = {
         title: "Modernia Android-kehitystä ilman kompromisseja",
         subtitle:
           "Rakennamme laadukkaita Android-sovelluksia, tekoälyratkaisuja ja digitaalisia palveluita yli 20 vuoden kansainvälisellä kokemuksella.",
-        viewServices: "Näytä palvelut",
+        viewServices: "Näytä työtapa",
         contact: "Ota yhteyttä",
       },
       whyBitdesal: {

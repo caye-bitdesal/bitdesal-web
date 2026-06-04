@@ -78,6 +78,27 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Destacados de nuestro trabajo con clientes y productos',
 				viewAll: 'Ver todos los proyectos',
 			},
+			blog: {
+				title: 'Blog',
+				subtitle: 'Últimos artículos de Bitdesal en LinkedIn',
+				readOnLinkedIn: 'Leer en LinkedIn',
+				posts: {
+					afford: {
+						title: '¿Puedes permitirte tu desarrollo asistido por IA?',
+						imageAlt: 'Manos abriendo una cartera vacía',
+						date: '1 jun 2026',
+						excerpt:
+							'Menos gente habla con honestidad de lo que cuesta hacer que la IA funcione sin quemar presupuesto ni paciencia. Un repaso práctico del flujo de trabajo en Bitdesal.',
+					},
+					manifesto: {
+						title: 'Más allá del "Vibe Coding": manifiesto para una ingeniería de IA sostenible',
+						imageAlt: 'Meme de Darth Vader: «encuentro perturbadora tu falta de fe»',
+						date: '21 may 2026',
+						excerpt:
+							'La IA es una herramienta increíble, pero sin metodología rigurosa lleva al caos. Los cinco principios con los que trabajamos en Bitdesal.',
+					},
+				},
+			},
 		},
 		projects: {
 			hero: {
@@ -356,6 +377,27 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Highlights from our client and product work',
 				viewAll: 'View all projects',
 			},
+			blog: {
+				title: 'Blog',
+				subtitle: 'Latest articles from Bitdesal on LinkedIn',
+				readOnLinkedIn: 'Read on LinkedIn',
+				posts: {
+					afford: {
+						title: 'Can you afford your AI assisted development?',
+						imageAlt: 'Hands opening an empty wallet',
+						date: 'June 1, 2026',
+						excerpt:
+							'Everyone talks about building with AI. Fewer talk honestly about making it work without burning through your budget or patience — and what our workflow looks like in practice.',
+					},
+					manifesto: {
+						title: 'Beyond "Vibe Coding": A Manifesto for Sustainable AI Engineering',
+						imageAlt: 'Darth Vader meme: "I find your lack of faith disturbing"',
+						date: 'May 21, 2026',
+						excerpt:
+							'AI is a powerful tool, but without rigorous methodology it leads to chaos. The engineering principles we follow at Bitdesal.',
+					},
+				},
+			},
 		},
 		projects: {
 			hero: {
@@ -633,6 +675,27 @@ export const translations: Record<Language, any> = {
 				title: 'Projektit',
 				subtitle: 'Valikoima asiakas- ja tuotetyöstämme',
 				viewAll: 'Näytä kaikki projektit',
+			},
+			blog: {
+				title: 'Blogi',
+				subtitle: 'Uusimmat artikkelit Bitdesalilta LinkedInissä',
+				readOnLinkedIn: 'Lue LinkedInissä',
+				posts: {
+					afford: {
+						title: 'Voitko sallia tekoälyavusteisen kehityksesi?',
+						imageAlt: 'Kädet avaavat tyhjää lompakkoa',
+						date: '1.6.2026',
+						excerpt:
+							'Kaikki puhuvat tekoälyllä rakentamisesta. Harvemmat puhuvat rehellisesti siitä, mitä se oikeasti vaatii ilman budjetin tai kärsivällisyyden loppumista — ja miltä työnkulku Bitdesalilla näyttää.',
+					},
+					manifesto: {
+						title: 'Beyond "Vibe Coding": manifesti kestävälle tekoälyinsinöörityölle',
+						imageAlt: 'Darth Vader -meemi: «häiritsee minua uskosi puute»',
+						date: '21.5.2026',
+						excerpt:
+							'Tekoäly on mahtava työkalu, mutta ilman kurinalaista menetelmää se johtaa kaaokseen. Viisi periaatetta, joilla työskentelemme Bitdesalilla.',
+					},
+				},
 			},
 		},
 		projects: {
