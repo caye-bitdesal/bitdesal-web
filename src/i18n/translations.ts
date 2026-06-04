@@ -89,7 +89,7 @@ export const translations: Record<Language, any> = {
 				tag: 'Android · Productividad',
 				updated: '2026',
 				description:
-					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura. Bitdesal contribuyó al desarrollo del producto core y a la localización de la experiencia Android.',
+					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura.',
 			},
 			yossa: {
 				name: 'Yössä',
@@ -367,7 +367,7 @@ export const translations: Record<Language, any> = {
 				tag: 'Android · Productivity',
 				updated: '2026',
 				description:
-					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely. Bitdesal contributed to core product development and localization of the Android experience.',
+					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely.',
 			},
 			yossa: {
 				name: 'Yössä',
@@ -645,7 +645,7 @@ export const translations: Record<Language, any> = {
 				tag: 'Android · Tuottavuus',
 				updated: '2026',
 				description:
-					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen. Bitdesal osallistui ydintuotteen kehitykseen ja Android-kokemuksen lokalisointiin.',
+					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen.',
 			},
 			yossa: {
 				name: 'Yössä',
