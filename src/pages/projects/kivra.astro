@@ -1,0 +1,456 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.kivra.KivraFi';
+const websiteUrl = 'https://www.kivra.fi';
+
+const heroPhones = [
+	{ src: '/projects/kivra/screen-login.png', alt: 'Kivra login screen' },
+	{ src: '/projects/kivra/screen-home.png', alt: 'Kivra home screen' },
+	{ src: '/projects/kivra/screen-profile.png', alt: 'Kivra profile screen' },
+];
+
+const carouselScreens = [
+	{ src: '/projects/kivra/screen-login.png', key: 'projects.kivraDetail.screens.login', label: 'Login' },
+	{ src: '/projects/kivra/screen-home.png', key: 'projects.kivraDetail.screens.home', label: 'Home' },
+	{ src: '/projects/kivra/screen-invoices.png', key: 'projects.kivraDetail.screens.invoices', label: 'Invoices' },
+	{ src: '/projects/kivra/screen-documents.png', key: 'projects.kivraDetail.screens.documents', label: 'My documents' },
+	{ src: '/projects/kivra/screen-shared.png', key: 'projects.kivraDetail.screens.shared', label: 'Shared mailbox' },
+];
+
+const features = [
+	{ icon: 'mailbox', titleKey: 'projects.kivraDetail.features.mailbox.title', descKey: 'projects.kivraDetail.features.mailbox.description' },
+	{ icon: 'payment', titleKey: 'projects.kivraDetail.features.invoices.title', descKey: 'projects.kivraDetail.features.invoices.description' },
+	{ icon: 'document', titleKey: 'projects.kivraDetail.features.documents.title', descKey: 'projects.kivraDetail.features.documents.description' },
+	{ icon: 'folder', titleKey: 'projects.kivraDetail.features.categories.title', descKey: 'projects.kivraDetail.features.categories.description' },
+	{ icon: 'users', titleKey: 'projects.kivraDetail.features.shared.title', descKey: 'projects.kivraDetail.features.shared.description' },
+	{ icon: 'bell', titleKey: 'projects.kivraDetail.features.notifications.title', descKey: 'projects.kivraDetail.features.notifications.description' },
+];
+
+const playDetails = [
+	{ labelKey: 'projects.kivraDetail.playSection.categoryLabel', valueKey: 'projects.kivraDetail.playSection.category' },
+	{ labelKey: 'projects.kivraDetail.playSection.updatedLabel', valueKey: 'projects.kivraDetail.playSection.updated' },
+	{ labelKey: 'projects.kivraDetail.playSection.companyLabel', valueKey: 'projects.kivraDetail.playSection.company' },
+	{ labelKey: 'projects.kivraDetail.playSection.countryLabel', valueKey: 'projects.kivraDetail.playSection.country' },
+];
+---
+
+<Layout>
+	<div class="kivra-case bg-[#0a0a0a] text-white">
+		<section class="relative overflow-hidden pt-8 pb-16 md:pb-24">
+			<div
+				class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(61,204,88,0.18),transparent)]"
+				aria-hidden="true"
+			>
+			</div>
+
+			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<a
+					href="/projects"
+					class="inline-flex items-center gap-2 text-white/70 hover:text-[#3dcc58] transition-colors mb-10 text-sm"
+				>
+					<span aria-hidden="true">←</span>
+					<span data-i18n-key="projects.kivraDetail.back">Back to projects</span>
+				</a>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<div>
+						<p
+							class="inline-block text-xs font-semibold tracking-widest text-[#3dcc58] border border-[#3dcc58]/40 rounded-full px-3 py-1 mb-6"
+							data-i18n-key="projects.kivraDetail.tag"
+						>
+							MOBILE APPLICATION
+						</p>
+						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+							<span data-i18n-key="projects.kivraDetail.title">Kivra</span>
+							<span class="block text-[#3dcc58]" data-i18n-key="projects.kivraDetail.titleAccent">Digital Mail</span>
+						</h1>
+						<p
+							class="text-lg text-white/70 leading-relaxed mb-8 max-w-xl"
+							data-i18n-key="projects.kivraDetail.heroDescription"
+						>
+							Kivra is a free mobile app that collects your invoices and documents from hundreds of companies and
+							public organizations in one safe and easy place.
+						</p>
+						<div class="flex flex-wrap gap-4">
+							<a
+								href={websiteUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center gap-2 border border-white/30 text-white px-6 py-3 rounded-full hover:border-[#3dcc58] hover:text-[#3dcc58] transition-colors"
+							>
+								<span data-i18n-key="projects.kivraDetail.website">Visit website</span>
+								<span aria-hidden="true">↗</span>
+							</a>
+							<a
+								href={playStoreUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center gap-2 bg-white text-[#0a0a0a] px-6 py-3 rounded-full hover:bg-white/90 transition-colors font-medium"
+							>
+								<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path
+										d="M3.609 1.814L13.792 12 3.61 22.186a1.004 1.004 0 0 1-.569-.306 1.01 1.01 0 0 1-.218-.671V2.977c0-.25.078-.49.218-.671a1.004 1.004 0 0 1 .569-.306zm10.89 10.893l2.303 2.303-10.937 6.333a1.01 1.01 0 0 1-.445-.105l8.079-8.53zm3.686-1.28l2.868 1.657c.448.26.448.89 0 1.15l-2.868 1.657-2.514-2.514 2.514-1.95zM5.864 2.658L16.8 9.99l-2.303 2.303L5.864 2.658z"
+									></path>
+								</svg>
+								<span data-i18n-key="projects.kivraDetail.playStore">View on Google Play</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="flex justify-center items-end gap-3 md:gap-4 min-h-[280px] md:min-h-[360px]">
+						{
+							heroPhones.map((phone, i) => (
+								<div
+									class:list={[
+										'relative shrink-0 w-[28%] max-w-[140px] md:max-w-[180px] transition-transform',
+										i === 0 && '-rotate-6 translate-y-4',
+										i === 1 && 'z-10 scale-105',
+										i === 2 && 'rotate-6 translate-y-4',
+									]}
+								>
+									<img
+										src={phone.src}
+										alt={phone.alt}
+										class="w-full rounded-[1.75rem] shadow-2xl shadow-black/60 ring-1 ring-white/10"
+										loading={i === 1 ? 'eager' : 'lazy'}
+										decoding="async"
+									/>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="border-y border-white/10 py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.users">
+							100K+
+						</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.usersLabel">Active users</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.rating">
+							4.3★
+						</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.ratingLabel">App Store rating</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.reviews">
+							5.1K+
+						</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.reviewsLabel">Reviews on Play Store</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.years">7+</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.yearsLabel">Years in production</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.kivraDetail.screensTitle">
+					Sample screens from the app
+				</h2>
+
+				<div
+					class="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth kivra-carousel"
+					id="kivra-carousel"
+				>
+					{
+						carouselScreens.map((screen, i) => (
+							<figure
+								class:list={[
+									'snap-center shrink-0 flex flex-col items-center',
+									i === 0 ? 'kivra-carousel-slide is-active' : 'kivra-carousel-slide',
+								]}
+								data-slide={i}
+							>
+								<div class="rounded-[1.75rem] p-1 transition-colors kivra-slide-frame">
+									<img
+										src={screen.src}
+										alt=""
+										class="w-[140px] md:w-[180px] rounded-[1.5rem] shadow-xl"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<figcaption class="mt-4 text-sm text-white/60" data-i18n-key={screen.key}>
+									{screen.label}
+								</figcaption>
+							</figure>
+						))
+					}
+				</div>
+
+				<div class="flex justify-center gap-2 mt-4" id="kivra-carousel-dots" role="tablist" aria-label="Screens">
+					{
+						carouselScreens.map((_, i) => (
+							<button
+								type="button"
+								class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-[#3dcc58]' : 'bg-white/25']}
+								data-dot={i}
+								aria-label={`Screen ${i + 1}`}
+								aria-selected={i === 0 ? 'true' : 'false'}
+							/>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.kivraDetail.featuresTitle">
+					What's included
+				</h2>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+					{
+						features.map((feature) => (
+							<div class="bg-[#141414] border border-white/10 rounded-xl p-6 hover:border-[#3dcc58]/30 transition-colors">
+								<div class="w-10 h-10 rounded-lg bg-[#3dcc58]/15 flex items-center justify-center mb-4 text-[#3dcc58]">
+									{feature.icon === 'mailbox' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'payment' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'document' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'folder' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'users' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'bell' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+											/>
+										</svg>
+									)}
+								</div>
+								<h3 class="font-semibold mb-2" data-i18n-key={feature.titleKey}>Feature</h3>
+								<p class="text-sm text-white/60 leading-relaxed" data-i18n-key={feature.descKey}>Description</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold mb-4" data-i18n-key="projects.kivraDetail.playSection.title">
+							Published on Google Play Store
+						</h2>
+						<p class="text-white/70 leading-relaxed mb-8" data-i18n-key="projects.kivraDetail.playSection.description">
+							Available for Android with strong authentication, verified senders and a focus on privacy — no spam, only
+							mail meant for you.
+						</p>
+						<dl class="space-y-0">
+							{
+								playDetails.map((row, i) => (
+									<div
+										class:list={[
+											'flex justify-between items-center py-4 text-sm',
+											i < playDetails.length - 1 && 'border-b border-white/10',
+										]}
+									>
+										<dt class="text-white/60" data-i18n-key={row.labelKey}>
+											Label
+										</dt>
+										<dd class="text-[#3dcc58] font-medium" data-i18n-key={row.valueKey}>
+											Value
+										</dd>
+									</div>
+								))
+							}
+						</dl>
+					</div>
+					<div class="flex justify-center gap-4 md:gap-6">
+						<img
+							src="/projects/kivra/screen-categories.png"
+							alt="Kivra categories screen"
+							class="w-[42%] max-w-[200px] rounded-[1.75rem] shadow-2xl ring-1 ring-white/10"
+							loading="lazy"
+							decoding="async"
+						/>
+						<img
+							src="/projects/kivra/screen-senders.png"
+							alt="Kivra senders screen"
+							class="w-[42%] max-w-[200px] rounded-[1.75rem] shadow-2xl ring-1 ring-white/10 translate-y-6"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-28 border-t border-white/10">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<img
+					src="/kivra-app-icon.png"
+					alt=""
+					width="48"
+					height="48"
+					class="w-12 h-12 rounded-xl mx-auto mb-6"
+					aria-hidden="true"
+				/>
+				<h2 class="text-2xl md:text-4xl font-bold mb-4">
+					<span data-i18n-key="projects.kivraDetail.cta.title">Project delivered.</span>
+					<span class="block text-[#3dcc58]" data-i18n-key="projects.kivraDetail.cta.titleAccent">Ready for production.</span>
+				</h2>
+				<p class="text-white/70 mb-8 leading-relaxed" data-i18n-key="projects.kivraDetail.cta.subtitle">
+					Bitdesal contributed with development from inception to maintenance for 7 years in a product used by hundreds of
+					thousands in Finland.
+				</p>
+				<a
+					href="/contact"
+					class="inline-flex items-center justify-center bg-[#3dcc58] text-[#0a0a0a] font-semibold px-10 py-4 rounded-full hover:bg-[#35b84f] transition-colors"
+					data-i18n-key="projects.kivraDetail.cta.button"
+				>
+					Work with us
+				</a>
+				<p class="text-xs text-white/40 mt-16" data-i18n-key="projects.kivraDetail.copyright">
+					© 2026 Bitdesal. All rights reserved.
+				</p>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style is:global>
+	body:has(.kivra-case) header {
+		background-color: #0a0a0a;
+		border-color: rgba(255, 255, 255, 0.1);
+	}
+
+	body:has(.kivra-case) header a,
+	body:has(.kivra-case) header button,
+	body:has(.kivra-case) header .text-foreground\/70 {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	body:has(.kivra-case) header a:hover,
+	body:has(.kivra-case) header [data-lang].text-primary {
+		color: #3dcc58;
+	}
+
+	body:has(.kivra-case) header .text-primary,
+	body:has(.kivra-case) header [data-lang].text-primary {
+		color: #3dcc58;
+	}
+
+	body:has(.kivra-case) footer {
+		display: none;
+	}
+
+	body:has(.kivra-case) {
+		background-color: #0a0a0a;
+	}
+
+	.kivra-carousel-slide.is-active .kivra-slide-frame {
+		box-shadow: 0 0 0 2px #3dcc58;
+		border-radius: 1.85rem;
+	}
+</style>
+
+<script>
+	const carousel = document.getElementById('kivra-carousel');
+	const dots = document.querySelectorAll('#kivra-carousel-dots [data-dot]');
+	const slides = document.querySelectorAll('.kivra-carousel-slide');
+
+	function setActive(index: number) {
+		slides.forEach((slide, i) => {
+			slide.classList.toggle('is-active', i === index);
+		});
+		dots.forEach((dot, i) => {
+			dot.classList.toggle('bg-[#3dcc58]', i === index);
+			dot.classList.toggle('bg-white/25', i !== index);
+			dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+		});
+	}
+
+	dots.forEach((dot) => {
+		dot.addEventListener('click', () => {
+			const index = Number(dot.getAttribute('data-dot'));
+			const slide = slides[index];
+			if (carousel && slide) {
+				slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+				setActive(index);
+			}
+		});
+	});
+
+	if (carousel) {
+		carousel.addEventListener(
+			'scroll',
+			() => {
+				let closest = 0;
+				let minDist = Infinity;
+				slides.forEach((slide, i) => {
+					const rect = slide.getBoundingClientRect();
+					const carouselRect = carousel.getBoundingClientRect();
+					const dist = Math.abs(rect.left + rect.width / 2 - (carouselRect.left + carouselRect.width / 2));
+					if (dist < minDist) {
+						minDist = dist;
+						closest = i;
+					}
+				});
+				setActive(closest);
+			},
+			{ passive: true }
+		);
+	}
+</script>

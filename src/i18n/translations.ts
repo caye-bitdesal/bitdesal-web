@@ -47,11 +47,11 @@ export const translations: Record<Language, any> = {
 		},
 		nav: {
 			home: 'Inicio',
-			services: 'Servicios',
 			methodology: 'Metodología',
 			prices: 'Precios',
 			about: 'Nosotros',
 			blog: 'Blog',
+			projects: 'Proyectos',
 			contact: 'Contacto',
 		},
 		footer: {
@@ -65,10 +65,109 @@ export const translations: Record<Language, any> = {
 			aboutUs: 'Sobre nosotros',
 			methodology: 'Metodología',
 			blog: 'Blog',
+			projects: 'Proyectos',
 			contactTitle: 'Contacto',
 			contact: 'Contactar',
 			linkedin: 'LinkedIn',
 			rights: 'Todos los derechos reservados.',
+		},
+		home: {
+			...makeTranslations.es.home,
+			projects: {
+				title: 'Proyectos',
+				subtitle: 'Destacados de nuestro trabajo con clientes y productos',
+				viewAll: 'Ver todos los proyectos',
+			},
+		},
+		projects: {
+			hero: {
+				title: 'Proyectos',
+				subtitle: 'Una selección de trabajo Android y de software realizado por Bitdesal',
+			},
+			kivra: {
+				name: 'Kivra Finland',
+				tag: 'Android · Productividad',
+				description:
+					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura. Bitdesal contribuyó al desarrollo del producto core y a la localización de la experiencia Android.',
+			},
+			viewProject: 'Ver proyecto',
+			playStore: 'Ver en Google Play',
+			kivraDetail: {
+				back: 'Volver a proyectos',
+				tag: 'APLICACIÓN MÓVIL',
+				title: 'Kivra',
+				titleAccent: 'Correo digital',
+				heroDescription:
+					'Kivra es una app móvil gratuita que reúne facturas, cartas y documentos de cientos de empresas y organismos públicos en un solo lugar seguro y cómodo.',
+				website: 'Visitar web',
+				playStore: 'Ver en Google Play',
+				metrics: {
+					users: '100K+',
+					usersLabel: 'Usuarios activos',
+					rating: '4,3★',
+					ratingLabel: 'Valoración en Play Store',
+					reviews: '5,1K+',
+					reviewsLabel: 'Reseñas en Play Store',
+					years: '7+',
+					yearsLabel: 'Años en producción',
+				},
+				screensTitle: 'Pantallas de la app',
+				screens: {
+					login: 'Inicio de sesión',
+					home: 'Pantalla principal',
+					invoices: 'Facturas',
+					documents: 'Mis documentos',
+					shared: 'Buzón compartido',
+				},
+				featuresTitle: 'Qué incluye',
+				features: {
+					mailbox: {
+						title: 'Buzón digital',
+						description: 'Recibe cartas, facturas y entradas como correo digital de emisores verificados.',
+					},
+					invoices: {
+						title: 'Facturas y pagos',
+						description: 'Consulta y paga facturas con credenciales bancarias, al momento o programadas.',
+					},
+					documents: {
+						title: 'Mis documentos',
+						description: 'Sube, organiza y archiva documentos importantes en un solo lugar.',
+					},
+					categories: {
+						title: 'Categorías',
+						description: 'Clasifica y encuentra documentos por temas: viajes, conciertos, mudanzas y más.',
+					},
+					shared: {
+						title: 'Uso compartido',
+						description: 'Comparte el acceso al buzón con otra persona de confianza.',
+					},
+					notifications: {
+						title: 'Notificaciones',
+						description: 'Avisos cuando llega correo nuevo o se acercan fechas de vencimiento.',
+					},
+				},
+				playSection: {
+					title: 'Publicada en Google Play Store',
+					description:
+						'Disponible en Android con identificación fuerte, emisores verificados y enfoque en privacidad: sin spam, solo correo para ti.',
+					categoryLabel: 'Categoría',
+					category: 'Productividad',
+					updatedLabel: 'Actualizada',
+					updated: '2026',
+					companyLabel: 'Empresa',
+					company: 'Kivra Oy',
+					countryLabel: 'País',
+					country: 'Finlandia / Suecia',
+				},
+				cta: {
+					title: 'Proyecto entregado.',
+					titleAccent: 'Listo para producción.',
+					subtitle:
+						'Bitdesal contribuyó con el desarrollo desde el inicio hasta el mantenimiento durante 7 años en un producto usado por cientos de miles de personas en Finlandia.',
+					button: 'Trabaja con nosotros',
+				},
+				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
+			},
 		},
 		notFound: {
 			code: '404',
@@ -142,11 +241,11 @@ export const translations: Record<Language, any> = {
 		},
 		nav: {
 			home: 'Home',
-			services: 'Services',
 			methodology: 'Methodology',
 			prices: 'Pricing',
 			about: 'About',
 			blog: 'Blog',
+			projects: 'Projects',
 			contact: 'Contact',
 		},
 		footer: {
@@ -160,10 +259,109 @@ export const translations: Record<Language, any> = {
 			aboutUs: 'About us',
 			methodology: 'Methodology',
 			blog: 'Blog',
+			projects: 'Projects',
 			contactTitle: 'Contact',
 			contact: 'Contact',
 			linkedin: 'LinkedIn',
 			rights: 'All rights reserved.',
+		},
+		home: {
+			...makeTranslations.en.home,
+			projects: {
+				title: 'Projects',
+				subtitle: 'Highlights from our client and product work',
+				viewAll: 'View all projects',
+			},
+		},
+		projects: {
+			hero: {
+				title: 'Projects',
+				subtitle: 'A selection of Android and software work delivered by Bitdesal',
+			},
+			kivra: {
+				name: 'Kivra Finland',
+				tag: 'Android · Productivity',
+				description:
+					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely. Bitdesal contributed to core product development and localization of the Android experience.',
+			},
+			viewProject: 'View project',
+			playStore: 'View on Google Play',
+			kivraDetail: {
+				back: 'Back to projects',
+				tag: 'MOBILE APPLICATION',
+				title: 'Kivra',
+				titleAccent: 'Digital Mail',
+				heroDescription:
+					'Kivra is a free mobile app that collects your invoices and documents from hundreds of companies and public organizations in one safe and easy place.',
+				website: 'Visit website',
+				playStore: 'View on Google Play',
+				metrics: {
+					users: '100K+',
+					usersLabel: 'Active users',
+					rating: '4.3★',
+					ratingLabel: 'Play Store rating',
+					reviews: '5.1K+',
+					reviewsLabel: 'Reviews on Play Store',
+					years: '7+',
+					yearsLabel: 'Years in production',
+				},
+				screensTitle: 'Sample screens from the app',
+				screens: {
+					login: 'Login',
+					home: 'Home',
+					invoices: 'Invoices',
+					documents: 'My documents',
+					shared: 'Shared mailbox',
+				},
+				featuresTitle: "What's included",
+				features: {
+					mailbox: {
+						title: 'Digital mailbox',
+						description: 'Receive letters, invoices and tickets as digital mail from verified senders.',
+					},
+					invoices: {
+						title: 'Invoices and payments',
+						description: 'View and pay bills with online banking, immediately or scheduled for the due date.',
+					},
+					documents: {
+						title: 'My documents',
+						description: 'Upload, organize and archive important documents in one place.',
+					},
+					categories: {
+						title: 'Categories',
+						description: 'Sort and find documents by topic: travel, concerts, moving and more.',
+					},
+					shared: {
+						title: 'Shared use',
+						description: 'Share mailbox access with another trusted Kivra user.',
+					},
+					notifications: {
+						title: 'Notifications',
+						description: 'Alerts when new mail arrives or due dates are approaching.',
+					},
+				},
+				playSection: {
+					title: 'Published on Google Play Store',
+					description:
+						'Available on Android with strong authentication, verified senders and a privacy-first approach — no spam, only mail meant for you.',
+					categoryLabel: 'Category',
+					category: 'Productivity',
+					updatedLabel: 'Updated',
+					updated: '2026',
+					companyLabel: 'Company',
+					company: 'Kivra Oy',
+					countryLabel: 'Country',
+					country: 'Finland / Sweden',
+				},
+				cta: {
+					title: 'Project delivered.',
+					titleAccent: 'Ready for production.',
+					subtitle:
+						'Bitdesal contributed with development from inception to maintenance for 7 years in a product used by hundreds of thousands in Finland.',
+					button: 'Work with us',
+				},
+				copyright: '© 2026 Bitdesal. All rights reserved.',
+			},
 		},
 		notFound: {
 			code: '404',
@@ -237,11 +435,11 @@ export const translations: Record<Language, any> = {
 		},
 		nav: {
 			home: 'Etusivu',
-			services: 'Palvelut',
 			methodology: 'Työtapa',
 			prices: 'Hinnoittelu',
 			about: 'Tietoa',
 			blog: 'Blogi',
+			projects: 'Projektit',
 			contact: 'Yhteystiedot',
 		},
 		footer: {
@@ -255,10 +453,109 @@ export const translations: Record<Language, any> = {
 			aboutUs: 'Tietoa meistä',
 			methodology: 'Työtapa',
 			blog: 'Blogi',
+			projects: 'Projektit',
 			contactTitle: 'Yhteystiedot',
 			contact: 'Ota yhteyttä',
 			linkedin: 'LinkedIn',
 			rights: 'Kaikki oikeudet pidätetään.',
+		},
+		home: {
+			...makeTranslations.fi.home,
+			projects: {
+				title: 'Projektit',
+				subtitle: 'Valikoima asiakas- ja tuotetyöstämme',
+				viewAll: 'Näytä kaikki projektit',
+			},
+		},
+		projects: {
+			hero: {
+				title: 'Projektit',
+				subtitle: 'Valikoima Bitdesalin Android- ja ohjelmistotyöstä',
+			},
+			kivra: {
+				name: 'Kivra Finland',
+				tag: 'Android · Tuottavuus',
+				description:
+					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen. Bitdesal osallistui ydintuotteen kehitykseen ja Android-kokemuksen lokalisointiin.',
+			},
+			viewProject: 'Näytä projekti',
+			playStore: 'Näytä Google Playssa',
+			kivraDetail: {
+				back: 'Takaisin projekteihin',
+				tag: 'MOBIILISOVELLUS',
+				title: 'Kivra',
+				titleAccent: 'Digitaalinen posti',
+				heroDescription:
+					'Kivra on ilmainen mobiilisovellus, joka kokoaa laskut ja asiakirjat satojen yritysten ja viranomaisten lähettämänä yhteen turvalliseen paikkaan.',
+				website: 'Vieraile verkkosivulla',
+				playStore: 'Näytä Google Playssa',
+				metrics: {
+					users: '100K+',
+					usersLabel: 'Aktiivista käyttäjää',
+					rating: '4,3★',
+					ratingLabel: 'Play Store -arvio',
+					reviews: '5,1K+',
+					reviewsLabel: 'Arviota Play Storessa',
+					years: '7+',
+					yearsLabel: 'Vuotta tuotannossa',
+				},
+				screensTitle: 'Esimerkkinäyttöjä sovelluksesta',
+				screens: {
+					login: 'Kirjautuminen',
+					home: 'Etusivu',
+					invoices: 'Laskut',
+					documents: 'Omat asiakirjat',
+					shared: 'Jaettu postilaatikko',
+				},
+				featuresTitle: 'Mitä sovellus sisältää',
+				features: {
+					mailbox: {
+						title: 'Digitaalinen postilaatikko',
+						description: 'Vastaanota kirjeitä, laskuja ja lippuja digitaalisena postina varmennetuilta lähettäjiltä.',
+					},
+					invoices: {
+						title: 'Laskut ja maksut',
+						description: 'Tarkastele ja maksa laskuja verkkopankkitunnuksilla heti tai eräpäivänä.',
+					},
+					documents: {
+						title: 'Omat asiakirjat',
+						description: 'Lataa, järjestä ja arkistoi tärkeitä asiakirjoja yhteen paikkaan.',
+					},
+					categories: {
+						title: 'Kategoriat',
+						description: 'Lajittele ja löydä asiakirjat aiheittain: matkat, konsertit, muutot ja muut.',
+					},
+					shared: {
+						title: 'Jaettu käyttö',
+						description: 'Jaa postilaatikon käyttöoikeus toiselle luotetulle Kivra-käyttäjälle.',
+					},
+					notifications: {
+						title: 'Ilmoitukset',
+						description: 'Hälytykset uudesta postista ja lähestyvistä eräpäivistä.',
+					},
+				},
+				playSection: {
+					title: 'Julkaistu Google Play Storessa',
+					description:
+						'Saatavilla Androidille vahvalla tunnistautumisella, varmennetuilla lähettäjillä ja yksityisyyteen keskittyen — ei roskapostia, vain sinulle tarkoitettu posti.',
+					categoryLabel: 'Kategoria',
+					category: 'Tuottavuus',
+					updatedLabel: 'Päivitetty',
+					updated: '2026',
+					companyLabel: 'Yritys',
+					company: 'Kivra Oy',
+					countryLabel: 'Maa',
+					country: 'Suomi / Ruotsi',
+				},
+				cta: {
+					title: 'Projekti toimitettu.',
+					titleAccent: 'Valmis tuotantoon.',
+					subtitle:
+						'Bitdesal osallistui kehitykseen alusta ylläpitoon seitsemän vuoden ajan tuotteessa, jota satoja tuhansia suomalaisia käyttää.',
+					button: 'Tee yhteistyötä kanssamme',
+				},
+				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',
+			},
 		},
 		notFound: {
 			code: '404',

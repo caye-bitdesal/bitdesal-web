@@ -14,8 +14,8 @@ Production website implementation based on the **Figma Make** source of truth. T
   - `src/components/Footer.astro`
 - **Pages**: `src/pages/`
   - `index.astro` (Home)
-  - `services.astro`
   - `methodology.astro`
+  - `projects.astro`, `projects/kivra.astro`
   - `prices.astro`
   - `about.astro`
   - `blog.astro`
