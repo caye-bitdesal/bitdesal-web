@@ -87,8 +87,16 @@ export const translations: Record<Language, any> = {
 			kivra: {
 				name: 'Kivra Finland',
 				tag: 'Android · Productividad',
+				updated: '2026',
 				description:
 					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura. Bitdesal contribuyó al desarrollo del producto core y a la localización de la experiencia Android.',
+			},
+			yossa: {
+				name: 'Yössä',
+				tag: 'Android · Ocio nocturno',
+				updated: '2015',
+				description:
+					'App para salir de noche: bares, conciertos y eventos a tu alrededor, con ofertas de bebidas que se activan cuando estás lo bastante cerca para usarlas.',
 			},
 			viewProject: 'Ver proyecto',
 			playStore: 'Ver en Google Play',
@@ -164,6 +172,82 @@ export const translations: Record<Language, any> = {
 					titleAccent: 'Listo para producción.',
 					subtitle:
 						'Bitdesal contribuyó con el desarrollo desde el inicio hasta el mantenimiento durante 7 años en un producto usado por cientos de miles de personas en Finlandia.',
+					button: 'Trabaja con nosotros',
+				},
+				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
+			},
+			yossaDetail: {
+				back: 'Volver a proyectos',
+				tag: 'APLICACIÓN MÓVIL',
+				title: 'Yössä',
+				titleAccent: 'Tu guía en la noche',
+				heroDescription:
+					'App de ocio nocturno para descubrir bares, conciertos y eventos especiales a tu alrededor, con ofertas de bebidas que se activan cuando estás lo bastante cerca para canjearlas.',
+				discontinued:
+					'La app ya no está disponible en Google Play. Esta página conserva el producto como caso de estudio.',
+				metrics: {
+					rating: '4★',
+					ratingLabel: 'Valoración en Play Store',
+					city: 'Helsinki',
+					cityLabel: 'Mercado de lanzamiento',
+					offers: 'GPS',
+					offersLabel: 'Ofertas por proximidad',
+					platform: 'Android',
+					platformLabel: 'Plataforma',
+				},
+				screensTitle: 'Pantallas de la app',
+				screens: {
+					onboarding: 'Bienvenida',
+					timeline: 'Timeline',
+					filters: 'Filtros',
+					offer: 'Ofertas',
+					map: 'Mapa de locales',
+				},
+				featuresTitle: 'Qué incluía',
+				features: {
+					nearby: {
+						title: 'Bares y locales cercanos',
+						description: 'Lista y mapa de venues a tu alrededor con distancia y estado.',
+					},
+					events: {
+						title: 'Eventos y conciertos',
+						description: 'Fiestas, DJ sets y eventos especiales en la timeline.',
+					},
+					offers: {
+						title: 'Ofertas de bebidas',
+						description: 'Promociones de bares visibles en el feed de ofertas.',
+					},
+					proximity: {
+						title: 'Activación por proximidad',
+						description: 'La oferta se desbloquea al acercarte lo suficiente al local.',
+					},
+					filters: {
+						title: 'Filtros de preferencias',
+						description: 'Filtra por género musical y tipo de experiencia.',
+					},
+					timeline: {
+						title: 'Timeline unificada',
+						description: 'Ofertas, eventos y novedades en un solo flujo.',
+					},
+				},
+				playSection: {
+					title: 'Legado del producto',
+					description:
+						'Lanzada en Helsinki para conectar la vida nocturna con personas cercanas. Ofertas y eventos en timeline y mapa, con canje ligado a la ubicación.',
+					categoryLabel: 'Categoría',
+					category: 'Entretenimiento',
+					updatedLabel: 'Actualizada',
+					updated: '2015',
+					companyLabel: 'Empresa',
+					company: 'Sankarimedia Oy',
+					countryLabel: 'País',
+					country: 'Finlandia',
+				},
+				cta: {
+					title: 'Producto de ocio nocturno,',
+					titleAccent: 'pensado para el mundo real.',
+					subtitle:
+						'Bitdesal ayudó a dar forma a la experiencia Android para descubrir locales, eventos y ofertas por ubicación en Helsinki.',
 					button: 'Trabaja con nosotros',
 				},
 				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
@@ -281,8 +365,16 @@ export const translations: Record<Language, any> = {
 			kivra: {
 				name: 'Kivra Finland',
 				tag: 'Android · Productivity',
+				updated: '2026',
 				description:
 					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely. Bitdesal contributed to core product development and localization of the Android experience.',
+			},
+			yossa: {
+				name: 'Yössä',
+				tag: 'Android · Nightlife',
+				updated: '2015',
+				description:
+					'Nightlife app to find bars, events and drink offers around you — offers unlock when you are close enough to redeem them.',
 			},
 			viewProject: 'View project',
 			playStore: 'View on Google Play',
@@ -358,6 +450,82 @@ export const translations: Record<Language, any> = {
 					titleAccent: 'Ready for production.',
 					subtitle:
 						'Bitdesal contributed with development from inception to maintenance for 7 years in a product used by hundreds of thousands in Finland.',
+					button: 'Work with us',
+				},
+				copyright: '© 2026 Bitdesal. All rights reserved.',
+			},
+			yossaDetail: {
+				back: 'Back to projects',
+				tag: 'MOBILE APPLICATION',
+				title: 'Yössä',
+				titleAccent: 'Your guide in the night',
+				heroDescription:
+					'A nightlife app to discover bars, concerts and special events around you — with drink offers that unlock when you are close enough to use them.',
+				discontinued:
+					'The app is no longer available on Google Play. This page preserves the product as a case study.',
+				metrics: {
+					rating: '4★',
+					ratingLabel: 'Play Store rating',
+					city: 'Helsinki',
+					cityLabel: 'Launch market',
+					offers: 'GPS',
+					offersLabel: 'Proximity offers',
+					platform: 'Android',
+					platformLabel: 'Platform',
+				},
+				screensTitle: 'Sample screens from the app',
+				screens: {
+					onboarding: 'Welcome',
+					timeline: 'Timeline',
+					filters: 'Filters',
+					offer: 'Offers',
+					map: 'Venues map',
+				},
+				featuresTitle: "What's included",
+				features: {
+					nearby: {
+						title: 'Nearby bars and venues',
+						description: 'List and map of venues around you with distance and status.',
+					},
+					events: {
+						title: 'Events and concerts',
+						description: 'Parties, DJ sets and special events on the timeline.',
+					},
+					offers: {
+						title: 'Drink offers',
+						description: 'Bar promotions surfaced in the offers feed.',
+					},
+					proximity: {
+						title: 'Proximity activation',
+						description: 'Offers unlock when you are close enough to the venue.',
+					},
+					filters: {
+						title: 'Preference filters',
+						description: 'Filter by music genre and the kind of night you want.',
+					},
+					timeline: {
+						title: 'Unified timeline',
+						description: 'Offers, events and updates in one scrollable feed.',
+					},
+				},
+				playSection: {
+					title: 'Product legacy',
+					description:
+						'Launched in Helsinki to connect nightlife venues with people nearby. Offers and events on a timeline and map, with redemption tied to your location.',
+					categoryLabel: 'Category',
+					category: 'Entertainment',
+					updatedLabel: 'Updated',
+					updated: '2015',
+					companyLabel: 'Company',
+					company: 'Sankarimedia Oy',
+					countryLabel: 'Country',
+					country: 'Finland',
+				},
+				cta: {
+					title: 'Nightlife product,',
+					titleAccent: 'built for the real world.',
+					subtitle:
+						'Bitdesal helped shape the Android experience for discovering venues, events and location-based offers in Helsinki.',
 					button: 'Work with us',
 				},
 				copyright: '© 2026 Bitdesal. All rights reserved.',
@@ -475,8 +643,16 @@ export const translations: Record<Language, any> = {
 			kivra: {
 				name: 'Kivra Finland',
 				tag: 'Android · Tuottavuus',
+				updated: '2026',
 				description:
 					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen. Bitdesal osallistui ydintuotteen kehitykseen ja Android-kokemuksen lokalisointiin.',
+			},
+			yossa: {
+				name: 'Yössä',
+				tag: 'Android · Yöelämä',
+				updated: '2015',
+				description:
+					'Yöelämäsovellus baarien, tapahtumien ja juomatarjousten löytämiseen lähelläsi — tarjoukset aktivoituvat, kun olet tarpeeksi lähellä lunastaaksesi ne.',
 			},
 			viewProject: 'Näytä projekti',
 			playStore: 'Näytä Google Playssa',
@@ -552,6 +728,82 @@ export const translations: Record<Language, any> = {
 					titleAccent: 'Valmis tuotantoon.',
 					subtitle:
 						'Bitdesal osallistui kehitykseen alusta ylläpitoon seitsemän vuoden ajan tuotteessa, jota satoja tuhansia suomalaisia käyttää.',
+					button: 'Tee yhteistyötä kanssamme',
+				},
+				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',
+			},
+			yossaDetail: {
+				back: 'Takaisin projekteihin',
+				tag: 'MOBIILISOVELLUS',
+				title: 'Yössä',
+				titleAccent: 'Opas yöhön',
+				heroDescription:
+					'Yöelämäsovellus baarien, konserttien ja erityistapahtumien löytämiseen lähelläsi — juomatarjoukset aktivoituvat, kun olet tarpeeksi lähellä käyttääksesi ne.',
+				discontinued:
+					'Sovellus ei ole enää saatavilla Google Playssa. Tämä sivu säilyttää tuotteen case studyna.',
+				metrics: {
+					rating: '4★',
+					ratingLabel: 'Play Store -arvio',
+					city: 'Helsinki',
+					cityLabel: 'Julkaisumarkkina',
+					offers: 'GPS',
+					offersLabel: 'Läheisyystarjoukset',
+					platform: 'Android',
+					platformLabel: 'Alusta',
+				},
+				screensTitle: 'Esimerkkinäyttöjä sovelluksesta',
+				screens: {
+					onboarding: 'Tervetuloa',
+					timeline: 'Timeline',
+					filters: 'Suodattimet',
+					offer: 'Tarjoukset',
+					map: 'Paikkakartta',
+				},
+				featuresTitle: 'Mitä sovellus sisälsi',
+				features: {
+					nearby: {
+						title: 'Lähellä olevat baarit',
+						description: 'Lista ja kartta paikoista ympärilläsi etäisyydellä ja tilalla.',
+					},
+					events: {
+						title: 'Tapahtumat ja konsertit',
+						description: 'Bileet, DJ-setit ja erikoistapahtumat timelinessä.',
+					},
+					offers: {
+						title: 'Juomatarjoukset',
+						description: 'Baarien kampanjat tarjousfeedissä.',
+					},
+					proximity: {
+						title: 'Läheisyysaktivointi',
+						description: 'Tarjous avautuu, kun olet tarpeeksi lähellä paikkaa.',
+					},
+					filters: {
+						title: 'Suodattimet',
+						description: 'Suodata musiikkigenren ja illan tyypin mukaan.',
+					},
+					timeline: {
+						title: 'Yhtenäinen timeline',
+						description: 'Tarjoukset, tapahtumat ja uutiset yhdessä feedissä.',
+					},
+				},
+				playSection: {
+					title: 'Tuotteen perintö',
+					description:
+						'Julkaistu Helsingissä yhdistämään yöelämä ja lähellä olevat käyttäjät. Tarjoukset ja tapahtumat timelinessä ja kartalla, lunastus sidottu sijaintiin.',
+					categoryLabel: 'Kategoria',
+					category: 'Viihde',
+					updatedLabel: 'Päivitetty',
+					updated: '2015',
+					companyLabel: 'Yritys',
+					company: 'Sankarimedia Oy',
+					countryLabel: 'Maa',
+					country: 'Suomi',
+				},
+				cta: {
+					title: 'Yöelämätuote,',
+					titleAccent: 'rakennettu arkeen.',
+					subtitle:
+						'Bitdesal auttoi muotoilemaan Android-kokemuksen paikkojen, tapahtumien ja sijaintiperusteisten tarjousten löytämiseen Helsingissä.',
 					button: 'Tee yhteistyötä kanssamme',
 				},
 				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',

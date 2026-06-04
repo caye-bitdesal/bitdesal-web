@@ -1,0 +1,393 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const heroPhones = [
+	{ src: '/projects/yossa/screen-timeline.png', alt: 'Yössä timeline with offers' },
+	{ src: '/projects/yossa/screen-offer.png', alt: 'Yössä bar offer' },
+	{ src: '/projects/yossa/screen-map.png', alt: 'Yössä venues map' },
+];
+
+const carouselScreens = [
+	{ src: '/projects/yossa/screen-onboarding.png', key: 'projects.yossaDetail.screens.onboarding', label: 'Welcome' },
+	{ src: '/projects/yossa/screen-timeline-es.png', key: 'projects.yossaDetail.screens.timeline', label: 'Timeline' },
+	{ src: '/projects/yossa/screen-filters.png', key: 'projects.yossaDetail.screens.filters', label: 'Filters' },
+	{ src: '/projects/yossa/screen-offer.png', key: 'projects.yossaDetail.screens.offer', label: 'Offers' },
+	{ src: '/projects/yossa/screen-map.png', key: 'projects.yossaDetail.screens.map', label: 'Venues map' },
+];
+
+const features = [
+	{ icon: 'map', titleKey: 'projects.yossaDetail.features.nearby.title', descKey: 'projects.yossaDetail.features.nearby.description' },
+	{ icon: 'ticket', titleKey: 'projects.yossaDetail.features.events.title', descKey: 'projects.yossaDetail.features.events.description' },
+	{ icon: 'star', titleKey: 'projects.yossaDetail.features.offers.title', descKey: 'projects.yossaDetail.features.offers.description' },
+	{ icon: 'location', titleKey: 'projects.yossaDetail.features.proximity.title', descKey: 'projects.yossaDetail.features.proximity.description' },
+	{ icon: 'filter', titleKey: 'projects.yossaDetail.features.filters.title', descKey: 'projects.yossaDetail.features.filters.description' },
+	{ icon: 'feed', titleKey: 'projects.yossaDetail.features.timeline.title', descKey: 'projects.yossaDetail.features.timeline.description' },
+];
+
+const playDetails = [
+	{ labelKey: 'projects.yossaDetail.playSection.categoryLabel', valueKey: 'projects.yossaDetail.playSection.category' },
+	{ labelKey: 'projects.yossaDetail.playSection.updatedLabel', valueKey: 'projects.yossaDetail.playSection.updated' },
+	{ labelKey: 'projects.yossaDetail.playSection.companyLabel', valueKey: 'projects.yossaDetail.playSection.company' },
+	{ labelKey: 'projects.yossaDetail.playSection.countryLabel', valueKey: 'projects.yossaDetail.playSection.country' },
+];
+---
+
+<Layout>
+	<div class="yossa-case bg-[#0a0a0a] text-white">
+		<section class="relative overflow-hidden pt-8 pb-16 md:pb-24">
+			<div
+				class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(110,181,255,0.2),transparent)]"
+				aria-hidden="true"
+			>
+			</div>
+
+			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<a
+					href="/projects"
+					class="inline-flex items-center gap-2 text-white/70 hover:text-[#6eb5ff] transition-colors mb-10 text-sm"
+				>
+					<span aria-hidden="true">←</span>
+					<span data-i18n-key="projects.yossaDetail.back">Back to projects</span>
+				</a>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<div>
+						<p
+							class="inline-block text-xs font-semibold tracking-widest text-[#6eb5ff] border border-[#6eb5ff]/40 rounded-full px-3 py-1 mb-6"
+							data-i18n-key="projects.yossaDetail.tag"
+						>
+							MOBILE APPLICATION
+						</p>
+						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+							<span data-i18n-key="projects.yossaDetail.title">Yössä</span>
+							<span class="block text-[#6eb5ff]" data-i18n-key="projects.yossaDetail.titleAccent">Your guide in the night</span>
+						</h1>
+						<p
+							class="text-lg text-white/70 leading-relaxed mb-4 max-w-xl"
+							data-i18n-key="projects.yossaDetail.heroDescription"
+						>
+							A nightlife app to discover bars, concerts and special events around you — with drink offers that unlock when
+							you are close enough to use them.
+						</p>
+						<p class="text-sm text-white/50 max-w-xl" data-i18n-key="projects.yossaDetail.discontinued">
+							The app is no longer available on Google Play. This page preserves the product as a case study.
+						</p>
+					</div>
+
+					<div class="flex justify-center items-end gap-3 md:gap-4 min-h-[280px] md:min-h-[360px]">
+						{
+							heroPhones.map((phone, i) => (
+								<div
+									class:list={[
+										'relative shrink-0 w-[28%] max-w-[140px] md:max-w-[180px] transition-transform',
+										i === 0 && '-rotate-6 translate-y-4',
+										i === 1 && 'z-10 scale-105',
+										i === 2 && 'rotate-6 translate-y-4',
+									]}
+								>
+									<img
+										src={phone.src}
+										alt={phone.alt}
+										class="w-full rounded-[1.75rem] shadow-2xl shadow-black/60 ring-1 ring-white/10"
+										loading={i === 1 ? 'eager' : 'lazy'}
+										decoding="async"
+									/>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="border-y border-white/10 py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.rating">4★</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.ratingLabel">Play Store rating</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.city">Helsinki</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.cityLabel">Launch market</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.offers">GPS</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.offersLabel">Proximity offers</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.platform">Android</p>
+						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.platformLabel">Platform</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.yossaDetail.screensTitle">
+					Sample screens from the app
+				</h2>
+
+				<div
+					class="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth yossa-carousel"
+					id="yossa-carousel"
+				>
+					{
+						carouselScreens.map((screen, i) => (
+							<figure
+								class:list={[
+									'snap-center shrink-0 flex flex-col items-center',
+									i === 0 ? 'yossa-carousel-slide is-active' : 'yossa-carousel-slide',
+								]}
+								data-slide={i}
+							>
+								<div class="rounded-[1.75rem] p-1 transition-colors yossa-slide-frame">
+									<img
+										src={screen.src}
+										alt=""
+										class="w-[140px] md:w-[180px] rounded-[1.5rem] shadow-xl"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<figcaption class="mt-4 text-sm text-white/60" data-i18n-key={screen.key}>
+									{screen.label}
+								</figcaption>
+							</figure>
+						))
+					}
+				</div>
+
+				<div class="flex justify-center gap-2 mt-4" id="yossa-carousel-dots" role="tablist" aria-label="Screens">
+					{
+						carouselScreens.map((_, i) => (
+							<button
+								type="button"
+								class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-[#6eb5ff]' : 'bg-white/25']}
+								data-dot={i}
+								aria-label={`Screen ${i + 1}`}
+								aria-selected={i === 0 ? 'true' : 'false'}
+							/>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.yossaDetail.featuresTitle">
+					What's included
+				</h2>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+					{
+						features.map((feature) => (
+							<div class="bg-[#141414] border border-white/10 rounded-xl p-6 hover:border-[#6eb5ff]/30 transition-colors">
+								<div class="w-10 h-10 rounded-lg bg-[#6eb5ff]/15 flex items-center justify-center mb-4 text-[#6eb5ff]">
+									{feature.icon === 'map' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+										</svg>
+									)}
+									{feature.icon === 'ticket' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+										</svg>
+									)}
+									{feature.icon === 'star' && (
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+										</svg>
+									)}
+									{feature.icon === 'location' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+										</svg>
+									)}
+									{feature.icon === 'filter' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+										</svg>
+									)}
+									{feature.icon === 'feed' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+										</svg>
+									)}
+								</div>
+								<h3 class="font-semibold mb-2" data-i18n-key={feature.titleKey}>Feature</h3>
+								<p class="text-sm text-white/60 leading-relaxed" data-i18n-key={feature.descKey}>Description</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold mb-4" data-i18n-key="projects.yossaDetail.playSection.title">
+							Product legacy
+						</h2>
+						<p class="text-white/70 leading-relaxed mb-8" data-i18n-key="projects.yossaDetail.playSection.description">
+							Launched in Helsinki to connect nightlife venues with people nearby. Offers and events were surfaced on a
+							timeline and map, with redemption tied to your location.
+						</p>
+						<dl class="space-y-0">
+							{
+								playDetails.map((row, i) => (
+									<div
+										class:list={[
+											'flex justify-between items-center py-4 text-sm',
+											i < playDetails.length - 1 && 'border-b border-white/10',
+										]}
+									>
+										<dt class="text-white/60" data-i18n-key={row.labelKey}>Label</dt>
+										<dd class="text-[#6eb5ff] font-medium" data-i18n-key={row.valueKey}>Value</dd>
+									</div>
+								))
+							}
+						</dl>
+					</div>
+					<div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 items-center">
+						<img
+							src="/projects/yossa/screen-venues-stack.png"
+							alt="Yössä venues and events"
+							class="w-full max-w-[280px] rounded-2xl shadow-2xl ring-1 ring-white/10"
+							loading="lazy"
+							decoding="async"
+						/>
+						<img
+							src="/projects/yossa/hero-banner.png"
+							alt="Yössä nightlife"
+							class="w-full max-w-[200px] rounded-2xl shadow-2xl ring-1 ring-white/10 sm:translate-y-6"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-28 border-t border-white/10">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<img
+					src="/projects/yossa/yossa-app-icon.png"
+					alt=""
+					width="48"
+					height="48"
+					class="w-12 h-12 rounded-xl mx-auto mb-6"
+					aria-hidden="true"
+				/>
+				<h2 class="text-2xl md:text-4xl font-bold mb-4">
+					<span data-i18n-key="projects.yossaDetail.cta.title">Nightlife product,</span>
+					<span class="block text-[#6eb5ff]" data-i18n-key="projects.yossaDetail.cta.titleAccent">built for the real world.</span>
+				</h2>
+				<p class="text-white/70 mb-8 leading-relaxed" data-i18n-key="projects.yossaDetail.cta.subtitle">
+					Bitdesal helped shape the Android experience for discovering venues, events and location-based offers in
+					Helsinki.
+				</p>
+				<a
+					href="/contact"
+					class="inline-flex items-center justify-center bg-[#6eb5ff] text-[#0a0a0a] font-semibold px-10 py-4 rounded-full hover:bg-[#5aa8f5] transition-colors"
+					data-i18n-key="projects.yossaDetail.cta.button"
+				>
+					Work with us
+				</a>
+				<p class="text-xs text-white/40 mt-16" data-i18n-key="projects.yossaDetail.copyright">
+					© 2026 Bitdesal. All rights reserved.
+				</p>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style is:global>
+	body:has(.yossa-case) header {
+		background-color: #0a0a0a;
+		border-color: rgba(255, 255, 255, 0.1);
+	}
+
+	body:has(.yossa-case) header a,
+	body:has(.yossa-case) header button,
+	body:has(.yossa-case) header .text-foreground\/70 {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	body:has(.yossa-case) header a:hover,
+	body:has(.yossa-case) header [data-lang].text-primary {
+		color: #6eb5ff;
+	}
+
+	body:has(.yossa-case) header .text-primary,
+	body:has(.yossa-case) header [data-lang].text-primary {
+		color: #6eb5ff;
+	}
+
+	body:has(.yossa-case) footer {
+		display: none;
+	}
+
+	body:has(.yossa-case) {
+		background-color: #0a0a0a;
+	}
+
+	.yossa-carousel-slide.is-active .yossa-slide-frame {
+		box-shadow: 0 0 0 2px #6eb5ff;
+		border-radius: 1.85rem;
+	}
+</style>
+
+<script>
+	const carousel = document.getElementById('yossa-carousel');
+	const dots = document.querySelectorAll('#yossa-carousel-dots [data-dot]');
+	const slides = document.querySelectorAll('.yossa-carousel-slide');
+
+	function setActive(index: number) {
+		slides.forEach((slide, i) => {
+			slide.classList.toggle('is-active', i === index);
+		});
+		dots.forEach((dot, i) => {
+			dot.classList.toggle('bg-[#6eb5ff]', i === index);
+			dot.classList.toggle('bg-white/25', i !== index);
+			dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+		});
+	}
+
+	dots.forEach((dot) => {
+		dot.addEventListener('click', () => {
+			const index = Number(dot.getAttribute('data-dot'));
+			const slide = slides[index];
+			if (carousel && slide) {
+				slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+				setActive(index);
+			}
+		});
+	});
+
+	if (carousel) {
+		carousel.addEventListener(
+			'scroll',
+			() => {
+				let closest = 0;
+				let minDist = Infinity;
+				slides.forEach((slide, i) => {
+					const rect = slide.getBoundingClientRect();
+					const carouselRect = carousel.getBoundingClientRect();
+					const dist = Math.abs(rect.left + rect.width / 2 - (carouselRect.left + carouselRect.width / 2));
+					if (dist < minDist) {
+						minDist = dist;
+						closest = i;
+					}
+				});
+				setActive(closest);
+			},
+			{ passive: true }
+		);
+	}
+</script>

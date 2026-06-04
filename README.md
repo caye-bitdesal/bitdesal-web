@@ -15,7 +15,7 @@ Production website implementation based on the **Figma Make** source of truth. T
 - **Pages**: `src/pages/`
   - `index.astro` (Home)
   - `methodology.astro`
-  - `projects.astro`, `projects/kivra.astro`
+  - `projects.astro`, `projects/kivra.astro`, `projects/yossa.astro`
   - `prices.astro`
   - `about.astro`
   - `blog.astro`
