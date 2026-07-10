@@ -1,191 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
+import LinkedInPostCard from '../components/LinkedInPostCard.astro';
+import { linkedInPosts } from '../data/linkedInPosts';
 ---
 
 <Layout>
 	<section class="bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl md:text-5xl mb-6" data-i18n-key="blog.hero.title">Technical Blog</h1>
+			<h1 class="text-4xl md:text-5xl mb-6" data-i18n-key="blog.hero.title">Blog</h1>
 			<p class="text-xl text-white/90 max-w-3xl mx-auto" data-i18n-key="blog.hero.subtitle">
-				Articles about Android development, AI, software architecture and remote work methodologies
+				Articles from Bitdesal on LinkedIn about Android, AI and engineering
 			</p>
 		</div>
 	</section>
 
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex flex-wrap gap-3 mb-12 justify-center">
-				<button class="px-4 py-2 rounded-lg transition-colors bg-primary text-white" data-i18n-key="blog.categories.all">
-					All
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.android"
-				>
-					Android
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.ai"
-				>
-					AI
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.architecture"
-				>
-					Architecture
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.methodology"
-				>
-					Methodology
-				</button>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group">
-					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-						<span class="text-white/20 text-6xl">1</span>
-					</div>
-					<div class="p-6">
-						<div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap">
-							<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full">Android</span>
-							<span class="flex items-center gap-1">📅 2026-04-15</span>
-							<span class="flex items-center gap-1">⏱ 8 min</span>
-						</div>
-						<h3 class="text-xl mb-3 group-hover:text-primary transition-colors">
-							Migración de Java a Kotlin: Lecciones aprendidas
-						</h3>
-						<p class="text-foreground/70 mb-4">
-							Después de migrar múltiples proyectos Android de Java a Kotlin, estas son las estrategias que mejor
-							funcionan.
-						</p>
-						<button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-							Leer más <span aria-hidden="true">→</span>
-						</button>
-					</div>
-				</article>
-
-				<article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group">
-					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-						<span class="text-white/20 text-6xl">2</span>
-					</div>
-					<div class="p-6">
-						<div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap">
-							<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full">Android</span>
-							<span class="flex items-center gap-1">📅 2026-04-01</span>
-							<span class="flex items-center gap-1">⏱ 12 min</span>
-						</div>
-						<h3 class="text-xl mb-3 group-hover:text-primary transition-colors">
-							Jetpack Compose: Arquitectura para apps escalables
-						</h3>
-						<p class="text-foreground/70 mb-4">
-							Cómo estructurar aplicaciones Compose con MVVM y Clean Architecture para mantener la escalabilidad.
-						</p>
-						<button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-							Leer más <span aria-hidden="true">→</span>
-						</button>
-					</div>
-				</article>
-
-				<article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group">
-					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-						<span class="text-white/20 text-6xl">3</span>
-					</div>
-					<div class="p-6">
-						<div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap">
-							<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full" data-i18n-key="blog.categories.ai">
-								AI
-							</span>
-							<span class="flex items-center gap-1">📅 2026-03-20</span>
-							<span class="flex items-center gap-1">⏱ 10 min</span>
-						</div>
-						<h3 class="text-xl mb-3 group-hover:text-primary transition-colors">Agentes de IA que realmente funcionan</h3>
-						<p class="text-foreground/70 mb-4">
-							Más allá del hype: cómo diseñar e implementar agentes conversacionales que generan ROI medible.
-						</p>
-						<button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-							Leer más <span aria-hidden="true">→</span>
-						</button>
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="max-w-3xl mx-auto text-center">
-				<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="blog.newsletter.title">Subscribe to Newsletter</h2>
-				<p class="text-lg text-foreground/80 mb-8" data-i18n-key="blog.newsletter.description">
-					Receive new technical articles directly in your email.
-				</p>
-				<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-					<input
-						type="email"
-						data-i18n-key="blog.newsletter.placeholder"
-						data-i18n-attr="placeholder"
-						placeholder="your@email.com"
-						class="flex-1 px-4 py-3 rounded-lg border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-					/>
-					<button
-						type="submit"
-						class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
-						data-i18n-key="blog.newsletter.button"
-					>
-						Subscribe
-					</button>
-				</form>
-				<p class="text-sm text-foreground/60 mt-4" data-i18n-key="blog.newsletter.frequency">
-					We publish approximately 2 articles per month
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl md:text-4xl mb-12 text-center" data-i18n-key="blog.popularTopics.title">Popular Topics</h2>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.kotlinAdvanced">Advanced Kotlin</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.kotlinDescription">
-						Coroutines, Flow, DSLs and advanced Kotlin techniques
-					</p>
-					<span class="text-primary text-sm">12 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
-
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.compose">Jetpack Compose</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.composeDescription">
-						Everything about declarative UI in Android with Compose
-					</p>
-					<span class="text-primary text-sm">18 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
-
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.architecture">Architecture</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.architectureDescription">
-						Patterns, Clean Architecture, MVVM, MVI and more
-					</p>
-					<span class="text-primary text-sm">15 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
-
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.practicalAI">Practical AI</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.practicalAIDescription">
-						Real implementation of LLMs, agents and automation
-					</p>
-					<span class="text-primary text-sm">8 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				{linkedInPosts.map((post) => <LinkedInPostCard post={post} />)}
 			</div>
 		</div>
 	</section>
 
 	<CtaSection />
 </Layout>
-

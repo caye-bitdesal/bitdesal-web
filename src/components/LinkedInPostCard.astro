@@ -1,0 +1,55 @@
+---
+import type { LinkedInPost } from '../data/linkedInPosts';
+
+interface Props {
+	post: LinkedInPost;
+	class?: string;
+}
+
+const { post, class: className } = Astro.props;
+---
+
+<article class:list={['flex flex-col h-full', className]}>
+	<a
+		href={post.url}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="group flex flex-col h-full bg-white border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all"
+	>
+		{post.image ? (
+			<div class="aspect-[16/9] overflow-hidden bg-foreground/5">
+				<img
+					src={post.image}
+					alt=""
+					class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+					data-i18n-key={post.imageAltKey}
+					data-i18n-attr="alt"
+					loading="lazy"
+					decoding="async"
+				/>
+			</div>
+		) : (
+			<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-6">
+				<span class="text-white/90 text-sm font-medium tracking-wide uppercase">LinkedIn</span>
+			</div>
+		)}
+		<div class="p-6 flex flex-col flex-1">
+			<p class="text-sm text-foreground/60 mb-2" data-i18n-key={post.dateKey}>
+				Date
+			</p>
+			<h3
+				class="text-xl mb-3 group-hover:text-primary transition-colors leading-snug"
+				data-i18n-key={post.titleKey}
+			>
+				Title
+			</h3>
+			<p class="text-foreground/70 text-sm leading-relaxed flex-1 mb-4" data-i18n-key={post.excerptKey}>
+				Excerpt
+			</p>
+			<span class="inline-flex items-center gap-2 text-primary text-sm group-hover:gap-3 transition-all">
+				<span data-i18n-key="home.blog.readOnLinkedIn">Read on LinkedIn</span>
+				<span aria-hidden="true">↗</span>
+			</span>
+		</div>
+	</a>
+</article>

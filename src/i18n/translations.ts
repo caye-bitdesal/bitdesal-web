@@ -71,6 +71,13 @@ export const translations: Record<Language, any> = {
 			linkedin: 'LinkedIn',
 			rights: 'Todos los derechos reservados.',
 		},
+		blog: {
+			...makeTranslations.es.blog,
+			hero: {
+				title: 'Blog',
+				subtitle: 'Artículos de Bitdesal en LinkedIn sobre Android, IA e ingeniería',
+			},
+		},
 		home: {
 			...makeTranslations.es.home,
 			projects: {
@@ -81,6 +88,7 @@ export const translations: Record<Language, any> = {
 			blog: {
 				title: 'Blog',
 				subtitle: 'Últimos artículos de Bitdesal en LinkedIn',
+				viewAll: 'Ver todos los artículos',
 				readOnLinkedIn: 'Leer en LinkedIn',
 				posts: {
 					cicd: {
@@ -384,6 +392,13 @@ export const translations: Record<Language, any> = {
 			linkedin: 'LinkedIn',
 			rights: 'All rights reserved.',
 		},
+		blog: {
+			...makeTranslations.en.blog,
+			hero: {
+				title: 'Blog',
+				subtitle: 'Articles from Bitdesal on LinkedIn about Android, AI and engineering',
+			},
+		},
 		home: {
 			...makeTranslations.en.home,
 			projects: {
@@ -394,6 +409,7 @@ export const translations: Record<Language, any> = {
 			blog: {
 				title: 'Blog',
 				subtitle: 'Latest articles from Bitdesal on LinkedIn',
+				viewAll: 'View all articles',
 				readOnLinkedIn: 'Read on LinkedIn',
 				posts: {
 					cicd: {
@@ -697,6 +713,13 @@ export const translations: Record<Language, any> = {
 			linkedin: 'LinkedIn',
 			rights: 'Kaikki oikeudet pidätetään.',
 		},
+		blog: {
+			...makeTranslations.fi.blog,
+			hero: {
+				title: 'Blogi',
+				subtitle: 'Bitdesalin artikkelit LinkedInissä Androidista, tekoälystä ja insinöörityöstä',
+			},
+		},
 		home: {
 			...makeTranslations.fi.home,
 			projects: {
@@ -707,6 +730,7 @@ export const translations: Record<Language, any> = {
 			blog: {
 				title: 'Blogi',
 				subtitle: 'Uusimmat artikkelit Bitdesalilta LinkedInissä',
+				viewAll: 'Näytä kaikki artikkelit',
 				readOnLinkedIn: 'Lue LinkedInissä',
 				posts: {
 					cicd: {
