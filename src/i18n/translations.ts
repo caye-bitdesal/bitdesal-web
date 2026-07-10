@@ -85,12 +85,14 @@ export const translations: Record<Language, any> = {
 				posts: {
 					cicd: {
 						title: 'Guía para implementar CI/CD en Android con GitHub Actions',
+						imageAlt: 'Infografía de un pipeline CI/CD razonable para Android',
 						date: '10 jul 2026',
 						excerpt:
 							'Separar «¿podemos hacer merge?» de «¿pueden los testers instalarlo?» — tres workflows en GitHub Actions para PRs rápidos y release candidates automáticos.',
 					},
 					insomnia: {
 						title: 'Insomnio, agentes de IA y la función «sencilla» de 8 horas',
+						imageAlt: 'Desarrollador dormido sobre el teclado tras una larga sesión de código',
 						date: '11 jun 2026',
 						excerpt:
 							'Un selector de idioma de «dos horas» se convirtió en una maratón de 12 horas con IA. Lecciones sobre criterios de aceptación, confiar pero verificar y cuestionar tus propios prompts.',
@@ -396,12 +398,14 @@ export const translations: Record<Language, any> = {
 				posts: {
 					cicd: {
 						title: 'A guide on how to implement CI/CD for Android using Github Actions',
+						imageAlt: 'Infographic of a reasonable CI/CD pipeline for Android',
 						date: 'July 10, 2026',
 						excerpt:
 							'Split "Can we merge this?" from "Can testers install it?" — three GitHub Actions workflows for fast PRs and automated release candidates to Play internal track.',
 					},
 					insomnia: {
 						title: '☕ Insomnia, AI Agents, and the 8-Hour "Simple Feature"',
+						imageAlt: 'Developer asleep on keyboard after a long coding session',
 						date: 'June 11, 2026',
 						excerpt:
 							'A "two-hour" language switcher turned into a 12-hour saga with AI. Lessons on acceptance criteria, trust-but-verify, and questioning your own prompts.',
@@ -707,12 +711,14 @@ export const translations: Record<Language, any> = {
 				posts: {
 					cicd: {
 						title: 'Opas CI/CD:n toteuttamiseen Androidissa GitHub Actionsilla',
+						imageAlt: 'Infografiikka kohtuullisesta Android CI/CD -putkesta',
 						date: '10.7.2026',
 						excerpt:
 							'Erotetaan «voimmeko mergata?» ja «voivatko testaajat asentaa?» — kolme GitHub Actions -workflowta nopeisiin PR:ään ja automaattisiin release candidate -buildiin.',
 					},
 					insomnia: {
 						title: 'Unettomuus, tekoälyagentit ja 8 tunnin «yksinkertainen» ominaisuus',
+						imageAlt: 'Kehittäjä nukkuu näppäimistöllä pitkän koodausmaratonin jälkeen',
 						date: '11.6.2026',
 						excerpt:
 							'«Kahden tunnin» kielivalitsin muuttui 12 tunnin maratoniksi tekoälyn kanssa. Oppia hyväksymiskriteereistä, luota mutta varmista -periaatteesta ja omien promptien kyseenalaistamisesta.',
