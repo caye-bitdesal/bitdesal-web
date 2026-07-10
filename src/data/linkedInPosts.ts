@@ -5,6 +5,7 @@ export interface LinkedInPost {
 	dateKey: string;
 	image?: string;
 	imageAltKey?: string;
+	mediumUrl?: string;
 }
 
 export const linkedInPosts: LinkedInPost[] = [
@@ -15,6 +16,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		dateKey: 'home.blog.posts.cicd.date',
 		image: '/blog/cicd-android-github-actions.png',
 		imageAltKey: 'home.blog.posts.cicd.imageAlt',
+		mediumUrl: 'https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd',
 	},
 	{
 		url: 'https://www.linkedin.com/pulse/insomnia-ai-agents-8-hour-simple-feature-bitdesal-ytkke/',

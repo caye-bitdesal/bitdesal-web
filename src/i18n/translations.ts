@@ -90,6 +90,7 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Últimos artículos de Bitdesal en LinkedIn',
 				viewAll: 'Ver todos los artículos',
 				readOnLinkedIn: 'Leer en LinkedIn',
+				readOnMedium: 'Leer el artículo completo en Medium',
 				posts: {
 					cicd: {
 						title: 'Guía para implementar CI/CD en Android con GitHub Actions',
@@ -411,6 +412,7 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Latest articles from Bitdesal on LinkedIn',
 				viewAll: 'View all articles',
 				readOnLinkedIn: 'Read on LinkedIn',
+				readOnMedium: 'Read the full article on Medium',
 				posts: {
 					cicd: {
 						title: 'A guide on how to implement CI/CD for Android using Github Actions',
@@ -732,6 +734,7 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Uusimmat artikkelit Bitdesalilta LinkedInissä',
 				viewAll: 'Näytä kaikki artikkelit',
 				readOnLinkedIn: 'Lue LinkedInissä',
+				readOnMedium: 'Lue koko artikkeli Mediumissa',
 				posts: {
 					cicd: {
 						title: 'Opas CI/CD:n toteuttamiseen Androidissa GitHub Actionsilla',
