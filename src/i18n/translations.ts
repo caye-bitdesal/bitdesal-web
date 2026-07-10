@@ -75,7 +75,7 @@ export const translations: Record<Language, any> = {
 			...makeTranslations.es.blog,
 			hero: {
 				title: 'Blog',
-				subtitle: 'Artículos de Bitdesal en LinkedIn sobre Android, IA e ingeniería',
+				subtitle: 'Artículos de Bitdesal en LinkedIn y Medium sobre Android, IA e ingeniería',
 			},
 		},
 		home: {
@@ -397,7 +397,7 @@ export const translations: Record<Language, any> = {
 			...makeTranslations.en.blog,
 			hero: {
 				title: 'Blog',
-				subtitle: 'Articles from Bitdesal on LinkedIn about Android, AI and engineering',
+				subtitle: 'Articles from Bitdesal on LinkedIn and Medium about Android, AI and engineering',
 			},
 		},
 		home: {
@@ -719,7 +719,7 @@ export const translations: Record<Language, any> = {
 			...makeTranslations.fi.blog,
 			hero: {
 				title: 'Blogi',
-				subtitle: 'Bitdesalin artikkelit LinkedInissä Androidista, tekoälystä ja insinöörityöstä',
+				subtitle: 'Bitdesalin artikkelit LinkedInissä ja Mediumissa Androidista, tekoälystä ja insinöörityöstä',
 			},
 		},
 		home: {
