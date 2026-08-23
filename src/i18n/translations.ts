@@ -337,7 +337,7 @@ export const translations: Record<Language, any> = {
 		},
 		about: {
 			bio: {
-				name: 'Cayetano Ruiz Corraliza',
+				name: 'Caye Ruiz',
 				title: 'Fundador',
 				p1: 'Ingeniero Android senior y lead, con casi 20 años construyendo apps de producción, SDKs y frameworks, y mentorizando y escalando equipos de más de 30 desarrolladores.',
 				p2: 'Experto en Kotlin, Java, Jetpack Compose y Clean Architecture. Tras 13 años en Finlandia, volví a España para dirigir Bitdesal: arquitectura, calidad de código y entrega asistida por IA para clientes como Kivra.',
@@ -789,7 +789,7 @@ export const translations: Record<Language, any> = {
 		},
 		about: {
 			bio: {
-				name: 'Cayetano Ruiz Corraliza',
+				name: 'Caye Ruiz',
 				title: 'Founder',
 				p1: 'Senior and lead Android engineer with nearly 20 years building production apps, SDKs and frameworks, and a track record of mentoring and scaling teams of 30+ developers.',
 				p2: 'Deep Kotlin and Java expertise with Jetpack Compose and Clean Architecture. After 13 years in Finland, I am back in Spain running Bitdesal — architecture, code quality and AI-integrated delivery for clients such as Kivra.',
@@ -1241,7 +1241,7 @@ export const translations: Record<Language, any> = {
 		},
 		about: {
 			bio: {
-				name: 'Cayetano Ruiz Corraliza',
+				name: 'Caye Ruiz',
 				title: 'Perustaja',
 				p1: 'Senior- ja lead-tason Android-insinööri, jolla on lähes 20 vuoden kokemus tuotantosovelluksista, SDK:ista ja kehyksistä sekä yli 30 kehittäjän tiimien mentoroinnista ja skaalaamisesta.',
 				p2: 'Vahva Kotlin- ja Java-osaaminen, Jetpack Compose ja Clean Architecture. 13 vuoden jälkeen Suomessa palasin Espanjaan johtamaan Bitdesalia: arkkitehtuuria, koodin laatua ja tekoälyavusteista toimitusta asiakkaille kuten Kivralle.',

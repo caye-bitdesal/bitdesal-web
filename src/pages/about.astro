@@ -31,7 +31,7 @@ const skills = ['kotlin', 'compose', 'architecture', 'testing', 'ai', 'mentoring
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 				<div class="flex-1 min-w-0">
-					<h1 class="text-3xl md:text-4xl mb-2" data-i18n-key="about.bio.name">Cayetano Ruiz Corraliza</h1>
+					<h1 class="text-3xl md:text-4xl mb-2" data-i18n-key="about.bio.name">Caye Ruiz</h1>
 					<p class="text-lg text-primary font-medium mb-6" data-i18n-key="about.bio.title">Founder</p>
 
 					<article class="space-y-4 text-lg text-foreground/80 leading-relaxed">
@@ -118,6 +118,7 @@ const skills = ['kotlin', 'compose', 'architecture', 'testing', 'ai', 'mentoring
 								set:html={roleIcons[role.icon]}
 							/>
 						</span>
+						<div class="relative rounded-lg p-4 -mx-2 transition-all duration-300 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl hover:bg-white hover:z-10">
 						<h3 class="text-xl mb-1 pt-0.5" data-i18n-key={`about.journey.${role.id}.role`}></h3>
 						<p class="text-foreground/70 mb-1">
 							<span data-i18n-key={`about.journey.${role.id}.company`}></span>
@@ -130,6 +131,7 @@ const skills = ['kotlin', 'compose', 'architecture', 'testing', 'ai', 'mentoring
 								<li data-i18n-key={`about.journey.${role.id}.item${i + 1}`}></li>
 							))}
 						</ul>
+						</div>
 					</li>
 				))}
 			</ol>
