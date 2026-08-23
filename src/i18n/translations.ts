@@ -59,9 +59,9 @@ export const translations: Record<Language, any> = {
 		home: {
 			...makeTranslations.es.home,
 			hero: {
-				title: 'Android que se publica y se puede mantener',
+				title: 'Software que funciona. Luego crece.',
 				subtitle:
-					'Ingeniería Android senior, entrega asistida por IA y desarrollo basado en especificaciones — 20 años en España, Suiza y Finlandia.',
+					'Consultoría en Android, web y APIs. Cuidamos que haga lo que se diseñó para hacer, y que el producto pueda ir más allá.',
 				viewProjects: 'Ver proyectos',
 				contact: 'Contactar',
 			},
@@ -511,9 +511,9 @@ export const translations: Record<Language, any> = {
 		home: {
 			...makeTranslations.en.home,
 			hero: {
-				title: 'Android that ships, and stays maintainable',
+				title: 'Software that works. Then it grows.',
 				subtitle:
-					'Senior Android engineering, AI-assisted delivery and Spec-Driven Development — 20 years across Spain, Switzerland and Finland.',
+					'Consulting for Android, web and APIs. We take care that it does what it was designed to do — and that the product can go further.',
 				viewProjects: 'View projects',
 				contact: 'Contact',
 			},
@@ -963,9 +963,9 @@ export const translations: Record<Language, any> = {
 		home: {
 			...makeTranslations.fi.home,
 			hero: {
-				title: 'Android, joka julkaistaan ja jota voi ylläpitää',
+				title: 'Ohjelmisto, joka toimii. Sitten se kasvaa.',
 				subtitle:
-					'Senior-tason Android-insinöörityö, tekoälyavusteinen toimitus ja Spec-Driven Development — 20 vuotta Espanjassa, Sveitsissä ja Suomessa.',
+					'Konsultointia Androidiin, webiin ja API-rajapintoihin. Pidämme huolen, että se tekee sen mihin se on suunniteltu — ja että tuote voi mennä pidemmälle.',
 				viewProjects: 'Katso projektit',
 				contact: 'Ota yhteyttä',
 			},

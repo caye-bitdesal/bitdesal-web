@@ -6,16 +6,27 @@ import { linkedInPosts } from '../data/linkedInPosts';
 ---
 
 <Layout>
-	<section class="relative bg-gradient-to-br from-[#2d5f5d] to-[#1a3a38] text-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+	<section class="relative overflow-hidden text-white">
+		<img
+			src="/hero-home.jpg"
+			alt=""
+			class="absolute inset-0 h-full w-full object-cover object-[70%_center]"
+			width="1024"
+			height="480"
+		/>
+		<div
+			class="absolute inset-0 bg-gradient-to-r from-[#1a3a38]/92 via-[#1a3a38]/70 to-[#1a3a38]/20"
+			aria-hidden="true"
+		></div>
+		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
 			<div class="max-w-3xl">
 				<h1 class="text-4xl md:text-6xl mb-6" data-i18n-key="home.hero.title">
-					Android that ships, and stays maintainable
+					Software that works. Then it grows.
 				</h1>
 				<p class="text-xl md:text-2xl text-white/90 mb-8">
 					<span data-i18n-key="home.hero.subtitle">
-						Senior Android engineering, AI-assisted delivery and Spec-Driven Development — 20 years across Spain,
-						Switzerland and Finland.
+						Consulting for Android, web and APIs. We take care that it does what it was designed to do — and that the
+						product can go further.
 					</span>
 				</p>
 				<div class="flex flex-wrap gap-4">
@@ -86,112 +97,6 @@ import { linkedInPosts } from '../data/linkedInPosts';
 					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.experience.description">
 						Apps, SDKs and teams shipped in Spain, Switzerland and Finland.
 					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.android.title">
-						Android you can release every month
-					</h2>
-					<p class="text-lg text-foreground/80 mb-6" data-i18n-key="home.android.description">
-						From architecture to Play Store cadence: Kotlin, Compose, tests and CI that keep crash-free rates high.
-					</p>
-					<ul class="space-y-3">
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.android.item1">MVVM/MVI Architecture with Clean Architecture</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.android.item2">Comprehensive testing with JUnit, Espresso and Compose Testing</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.android.item3">Automated CI/CD with GitHub Actions</span>
-						</li>
-					</ul>
-				</div>
-				<div class="bg-white rounded-lg p-8 shadow-lg">
-					<div class="aspect-[4/3] rounded-lg flex items-center justify-center bg-white">
-						<img
-							src="/logos_android.png"
-							alt="Android technology logos"
-							class="max-h-full max-w-full object-contain"
-							loading="lazy"
-							decoding="async"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div class="order-2 lg:order-1">
-					<div class="bg-secondary rounded-lg p-8 shadow-lg">
-						<div class="aspect-[4/3] rounded-lg flex items-center justify-center bg-white">
-							<img
-								src="/logos_ai.png"
-								alt="AI technology logos"
-								class="max-h-full max-w-full object-contain"
-								loading="lazy"
-								decoding="async"
-							/>
-						</div>
-					</div>
-				</div>
-				<div class="order-1 lg:order-2">
-					<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.ai.title">
-						AI that shortens the path to a spec
-					</h2>
-					<p class="text-lg text-foreground/80 mb-6" data-i18n-key="home.ai.description">
-						Review, scaffolding and documentation agents wired into a spec-driven workflow — not vibe coding.
-					</p>
-					<ul class="space-y-3">
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.ai.item1">Conversational agents with Claude and Gemini</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.ai.item2">AI assisted designs</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.ai.item3">Process automation with AI</span>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>

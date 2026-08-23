@@ -1,9 +1,9 @@
 ---
 const navLinks = [
 	{ href: '/', labelKey: 'nav.home', fallback: 'Home' },
+	{ href: '/about', labelKey: 'nav.about', fallback: 'About' },
 	{ href: '/projects', labelKey: 'nav.projects', fallback: 'Projects' },
 	{ href: '/blog', labelKey: 'nav.blog', fallback: 'Blog' },
-	{ href: '/about', labelKey: 'nav.about', fallback: 'About' },
 ];
 
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
