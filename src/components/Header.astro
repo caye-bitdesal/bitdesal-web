@@ -1,11 +1,9 @@
 ---
 const navLinks = [
 	{ href: '/', labelKey: 'nav.home', fallback: 'Home' },
-	{ href: '/methodology', labelKey: 'nav.methodology', fallback: 'Methodology' },
 	{ href: '/projects', labelKey: 'nav.projects', fallback: 'Projects' },
 	{ href: '/blog', labelKey: 'nav.blog', fallback: 'Blog' },
 	{ href: '/about', labelKey: 'nav.about', fallback: 'About' },
-	{ href: '/contact', labelKey: 'nav.contact', fallback: 'Contact' },
 ];
 
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -15,6 +13,12 @@ function isNavActive(href: string) {
 	if (href === '/') return pathname === '/';
 	return pathname === href || pathname.startsWith(`${href}/`);
 }
+
+const languages = [
+	{ code: 'en', label: 'EN' },
+	{ code: 'es', label: 'ES' },
+	{ code: 'fi', label: 'FI' },
+] as const;
 ---
 
 <header class="sticky top-0 z-50 bg-white border-b border-border">
@@ -39,30 +43,48 @@ function isNavActive(href: string) {
 					</a>
 				))}
 
-				<div class="flex items-center gap-2 border-l border-border pl-6">
-					<a
-						href="?lang=en"
-						data-lang="en"
-						class="transition-colors text-foreground/70 hover:text-primary"
+				<a
+					href="mailto:caye@bitdesal.com"
+					class="contact-btn inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm"
+					data-i18n-key="nav.contact"
+				>
+					Contact
+				</a>
+
+				<div class="relative" data-lang-dropdown>
+					<button
+						type="button"
+						class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80"
+						data-lang-trigger
+						aria-expanded="false"
+						aria-haspopup="listbox"
+						aria-controls="lang-menu-desktop"
 					>
-						EN
-					</a>
-					<span class="text-foreground/30">/</span>
-					<a
-						href="?lang=es"
-						data-lang="es"
-						class="transition-colors text-foreground/70 hover:text-primary"
+						<span data-lang-label>EN</span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+							<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+						</svg>
+						<span class="sr-only" data-i18n-key="nav.language">Language</span>
+					</button>
+					<ul
+						id="lang-menu-desktop"
+						class="absolute right-0 mt-2 min-w-[4.5rem] rounded-lg border border-border bg-white py-1 shadow-lg hidden"
+						data-lang-menu
+						role="listbox"
 					>
-						ES
-					</a>
-					<span class="text-foreground/30">/</span>
-					<a
-						href="?lang=fi"
-						data-lang="fi"
-						class="transition-colors text-foreground/70 hover:text-primary"
-					>
-						FI
-					</a>
+						{languages.map((lang) => (
+							<li>
+								<a
+									href={`?lang=${lang.code}`}
+									data-lang={lang.code}
+									class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
+									role="option"
+								>
+									{lang.label}
+								</a>
+							</li>
+						))}
+					</ul>
 				</div>
 			</div>
 
@@ -121,30 +143,48 @@ function isNavActive(href: string) {
 				</a>
 			))}
 
-			<div class="flex items-center gap-3 pt-4 mt-4 border-t border-border">
-				<a
-					href="?lang=en"
-					data-lang="en"
-					class="transition-colors text-foreground/70 hover:text-primary"
+			<a
+				href="mailto:caye@bitdesal.com"
+				class="contact-btn inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm mt-3"
+				data-i18n-key="nav.contact"
+			>
+				Contact
+			</a>
+
+			<div class="relative mt-4 pt-4 border-t border-border" data-lang-dropdown>
+				<button
+					type="button"
+					class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80"
+					data-lang-trigger
+					aria-expanded="false"
+					aria-haspopup="listbox"
+					aria-controls="lang-menu-mobile"
 				>
-					English
-				</a>
-				<span class="text-foreground/30">|</span>
-				<a
-					href="?lang=es"
-					data-lang="es"
-					class="transition-colors text-foreground/70 hover:text-primary"
+					<span data-lang-label>EN</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+					</svg>
+					<span class="sr-only" data-i18n-key="nav.language">Language</span>
+				</button>
+				<ul
+					id="lang-menu-mobile"
+					class="mt-2 min-w-[4.5rem] rounded-lg border border-border bg-white py-1 shadow-lg hidden"
+					data-lang-menu
+					role="listbox"
 				>
-					Español
-				</a>
-				<span class="text-foreground/30">|</span>
-				<a
-					href="?lang=fi"
-					data-lang="fi"
-					class="transition-colors text-foreground/70 hover:text-primary"
-				>
-					Suomi
-				</a>
+					{languages.map((lang) => (
+						<li>
+							<a
+								href={`?lang=${lang.code}`}
+								data-lang={lang.code}
+								class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
+								role="option"
+							>
+								{lang.label}
+							</a>
+						</li>
+					))}
+				</ul>
 			</div>
 		</div>
 	</nav>
@@ -166,6 +206,50 @@ function isNavActive(href: string) {
 		});
 	}
 
+	const langLabels: Record<string, string> = { en: 'EN', es: 'ES', fi: 'FI' };
+
+	function closeLangMenus(except?: HTMLElement) {
+		document.querySelectorAll('[data-lang-dropdown]').forEach((dropdown) => {
+			if (except && dropdown === except) return;
+			const trigger = dropdown.querySelector('[data-lang-trigger]');
+			const panel = dropdown.querySelector('[data-lang-menu]');
+			panel?.classList.add('hidden');
+			trigger?.setAttribute('aria-expanded', 'false');
+		});
+	}
+
+	function applyLangDropdown(lang: string) {
+		document.querySelectorAll('[data-lang-label]').forEach((el) => {
+			el.textContent = langLabels[lang] ?? lang.toUpperCase();
+		});
+		document.querySelectorAll('[data-lang]').forEach((el) => {
+			const isCurrent = el.getAttribute('data-lang') === lang;
+			const item = el.closest('li');
+			if (item) item.classList.toggle('hidden', isCurrent);
+			el.setAttribute('aria-selected', String(isCurrent));
+		});
+	}
+
+	document.querySelectorAll('[data-lang-dropdown]').forEach((dropdown) => {
+		const trigger = dropdown.querySelector('[data-lang-trigger]');
+		const panel = dropdown.querySelector('[data-lang-menu]');
+		if (!trigger || !panel) return;
+
+		trigger.addEventListener('click', (e) => {
+			e.stopPropagation();
+			const isOpen = !panel.classList.contains('hidden');
+			closeLangMenus(isOpen ? undefined : dropdown);
+			panel.classList.toggle('hidden', isOpen);
+			trigger.setAttribute('aria-expanded', String(!isOpen));
+		});
+	});
+
+	document.addEventListener('click', () => closeLangMenus());
+
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') closeLangMenus();
+	});
+
 	const langLinks = document.querySelectorAll('[data-lang]');
 	langLinks.forEach((el) => {
 		el.addEventListener('click', (e) => {
@@ -173,14 +257,23 @@ function isNavActive(href: string) {
 			const lang = el.getAttribute('data-lang');
 			if (!lang) return;
 
-			// Mirror Make behavior (persist immediately), even if Layout hasn't initialized yet.
 			try {
 				localStorage.setItem('language', lang);
 			} catch {}
 
 			if (window.bitdesalI18n?.setLanguage) window.bitdesalI18n.setLanguage(lang);
-			else document.documentElement.lang = lang;
+			else {
+				document.documentElement.lang = lang;
+				applyLangDropdown(lang);
+			}
+			closeLangMenus();
 		});
 	});
-</script>
 
+	window.addEventListener('bitdesal:language', (e) => {
+		const lang = (e as CustomEvent<{ lang?: string }>).detail?.lang;
+		if (lang) applyLangDropdown(lang);
+	});
+
+	applyLangDropdown(window.bitdesalI18n?.getLanguage?.() || document.documentElement.lang || 'en');
+</script>

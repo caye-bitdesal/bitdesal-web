@@ -13,14 +13,12 @@ Production website implementation based on the **Figma Make** source of truth. T
   - `src/components/Header.astro` (nav + language switcher)
   - `src/components/Footer.astro`
 - **Pages**: `src/pages/`
-  - `index.astro` (Home)
-  - `methodology.astro`
+  - `index.astro` (Home, includes how-we-work / SDD)
   - `projects.astro`, `projects/kivra.astro`, `projects/yossa.astro`
-  - `prices.astro`
   - `about.astro`
   - `blog.astro`
-  - `contact.astro`
   - `404.astro`
+  - Redirects: `/contact`, `/prices`, `/methodology`, `/services` → `/`
 
 ## Styling & tokens
 

@@ -65,11 +65,15 @@ const i18nPayload = {
 					}
 				});
 
-				// Update active state on language controls
+				const langLabels = { en: 'EN', es: 'ES', fi: 'FI' };
+				document.querySelectorAll('[data-lang-label]').forEach((el) => {
+					el.textContent = langLabels[lang] ?? lang.toUpperCase();
+				});
 				document.querySelectorAll('[data-lang]').forEach((el) => {
-					const isActive = el.getAttribute('data-lang') === lang;
-					el.classList.toggle('text-primary', isActive);
-					el.classList.toggle('text-foreground/70', !isActive);
+					const isCurrent = el.getAttribute('data-lang') === lang;
+					const item = el.closest('li');
+					if (item) item.classList.toggle('hidden', isCurrent);
+					el.setAttribute('aria-selected', String(isCurrent));
 				});
 
 				window.dispatchEvent(new CustomEvent('bitdesal:language', { detail: { lang } }));

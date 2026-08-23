@@ -293,7 +293,7 @@ const playDetails = [
 					Helsinki.
 				</p>
 				<a
-					href="/contact"
+					href="mailto:caye@bitdesal.com"
 					class="inline-flex items-center justify-center bg-[#6eb5ff] text-[#0a0a0a] font-semibold px-10 py-4 rounded-full hover:bg-[#5aa8f5] transition-colors"
 					data-i18n-key="projects.yossaDetail.cta.button"
 				>
@@ -313,13 +313,18 @@ const playDetails = [
 		border-color: rgba(255, 255, 255, 0.1);
 	}
 
-	body:has(.yossa-case) header a,
-	body:has(.yossa-case) header button,
+	body:has(.yossa-case) header a:not(.contact-btn),
+	body:has(.yossa-case) header button:not(.contact-btn),
 	body:has(.yossa-case) header .text-foreground\/70 {
 		color: rgba(255, 255, 255, 0.75);
 	}
 
-	body:has(.yossa-case) header a:hover,
+	body:has(.yossa-case) header .contact-btn {
+		background-color: #6eb5ff;
+		color: #0a0a0a;
+	}
+
+	body:has(.yossa-case) header a:not(.contact-btn):hover,
 	body:has(.yossa-case) header [data-lang].text-primary {
 		color: #6eb5ff;
 	}
