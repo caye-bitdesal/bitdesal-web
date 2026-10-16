@@ -2,6 +2,7 @@
 const navLinks = [
 	{ href: '/', labelKey: 'nav.home', fallback: 'Home' },
 	{ href: '/about', labelKey: 'nav.about', fallback: 'About' },
+	{ href: '/pricing', labelKey: 'nav.pricing', fallback: 'Pricing' },
 	{ href: '/projects', labelKey: 'nav.projects', fallback: 'Projects' },
 	{ href: '/blog', labelKey: 'nav.blog', fallback: 'Blog' },
 ];
@@ -28,7 +29,7 @@ const languages = [
 				<span class="text-xl text-primary">Bitdesal</span>
 			</a>
 
-			<div class="hidden md:flex items-center gap-8">
+			<div class="hidden md:flex items-center gap-5 lg:gap-8">
 				{navLinks.map((link) => (
 					<a
 						href={link.href}
@@ -277,3 +278,4 @@ const languages = [
 
 	applyLangDropdown(window.bitdesalI18n?.getLanguage?.() || document.documentElement.lang || 'en');
 </script>
+

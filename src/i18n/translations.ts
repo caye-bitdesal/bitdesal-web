@@ -28,6 +28,7 @@ export const translations: Record<Language, any> = {
 		nav: {
 			home: 'Inicio',
 			about: 'Nosotros',
+			pricing: 'Precios',
 			blog: 'Blog',
 			projects: 'Proyectos',
 			contact: 'Contacto',
@@ -42,6 +43,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Consultoría',
 			companyTitle: 'Empresa',
 			aboutUs: 'Sobre nosotros',
+			pricing: 'Precios',
 			blog: 'Blog',
 			projects: 'Proyectos',
 			contactTitle: 'Contacto',
@@ -56,10 +58,116 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Artículos de Bitdesal en LinkedIn y Medium sobre Android, IA e ingeniería',
 			},
 		},
+		pricing: {
+			hero: {
+				badge: 'Precio transparente',
+				title: 'Software e IA sin sorpresas',
+				lead: 'Consultoría para digitalizar el funcionamiento de la empresa e integrar la IA donde aligera la burocracia.',
+				subtitle:
+					'Trabajamos por fases para que sepas qué resolvemos, cuánto tarda y qué costará antes de que empiece el desarrollo.',
+				cta: 'Solicitar una valoración inicial',
+				details: 'Ver el enfoque',
+			},
+			rate: {
+				unit: '/hora',
+				note: 'Tarifa única. IVA no incluido.',
+			},
+			included: {
+				estimate: 'Estimación inicial desde el primer día',
+				time: 'Solo se factura el tiempo dedicado',
+				training: 'Formación en las herramientas implementadas incluida',
+				handoff: 'Código y documentación listos para continuar',
+				support: 'Soporte tras el lanzamiento con bolsas de horas mensuales',
+			},
+			approach: {
+				eyebrow: 'El enfoque',
+				title: 'Tres principios del proceso',
+				subtitle:
+					'Un método para que la inversión se note en el día a día, no solo en una presentación.',
+				strategy:
+					'Consultoría para digitalizar el funcionamiento de la empresa e integrar la IA donde aligera la burocracia: aprobaciones, documentos, reporting y el trabajo que todavía se mueve a mano.',
+			},
+			principles: {
+				find: {
+					title: 'Encontrar la burocracia',
+					description:
+						'Revisamos aprobaciones, documentos y traspasos que frenan a la empresa, y estimamos el trabajo antes de empezar a desarrollar.',
+				},
+				connect: {
+					title: 'Digitalizar y conectar la IA',
+					description:
+						'Convertimos ese proceso en software y colocamos la IA donde quita repetición, dentro de las herramientas que el equipo ya usa.',
+				},
+				operate: {
+					title: 'Dejarlo en el día a día',
+					description:
+						'La formación, el código y la documentación se quedan en tu equipo. Después del lanzamiento, el soporte sigue con bolsas de horas mensuales.',
+				},
+			},
+			phases: {
+				eyebrow: 'El proceso',
+				title: 'Fases del servicio',
+				subtitle:
+					'Las horas son orientativas; el alcance final y el presupuesto cerrado se confirman tras la valoración inicial.',
+				coreLabel: 'Idea central:',
+				core: 'diagnosticar y rediseñar antes de construir evita que la tecnología solo acelere un proceso ineficiente.',
+				items: {
+					assessment: {
+						title: 'Evaluación y requisitos',
+						description: 'Objetivos, restricciones y el problema de fondo que hay que resolver.',
+						short: 'Evaluación',
+					},
+					study: {
+						title: 'Estudio de procesos y sistemas',
+						description: 'Entrevistas, flujos reales, excepciones e integraciones existentes.',
+						short: 'Estudio del proceso',
+					},
+					redesign: {
+						title: 'Rediseño de la solución',
+						description: 'Definimos cómo debe funcionar el proceso antes de automatizarlo.',
+						short: 'Rediseño',
+					},
+					technology: {
+						title: 'Selección tecnológica',
+						description: 'Arquitectura, herramientas, integraciones y criterios de seguridad.',
+						short: 'Tecnología',
+					},
+					plan: {
+						title: 'Plan de implementación por fases',
+						description: 'Una hoja de ruta priorizada que empieza por el trabajo de más valor.',
+						short: 'Plan por fases',
+					},
+					delivery: {
+						title: 'Implementación, formación y entrega',
+						description: 'Desarrollo, pruebas, lanzamiento y formación práctica del equipo.',
+						short: 'Implementación',
+					},
+				},
+			},
+			investment: {
+				eyebrow: 'Inversión',
+				title: 'Tarifas claras, sin sorpresas',
+				subtitle:
+					'Todo se calcula a 35 €/hora. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
+				phase: 'Fase',
+				hours: 'Horas',
+				amount: 'Importe',
+				total: 'Proyecto completo',
+			},
+			bundles: {
+				title: 'Bolsas de horas de soporte',
+				subtitle:
+					'Para incidencias, ajustes y mejoras después del lanzamiento. Solo se factura el tiempo consumido.',
+				h5: '5 h / mes',
+				h10: '10 h / mes',
+				h20: '20 h / mes',
+				note: 'Sin permanencia. Ajusta la bolsa a lo que realmente necesitas.',
+			},
+		},
 		home: {
 			...makeTranslations.es.home,
 			hero: {
-				title: 'Software que funciona. Luego crece.',
+				title: 'Software e IA sin sorpresas',
 				subtitle:
 					'Consultoría en Android, web y APIs. Cuidamos que haga lo que se diseñó para hacer, y que el producto pueda ir más allá.',
 				viewProjects: 'Ver proyectos',
@@ -70,11 +178,13 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Especificaciones claras, Android de producción y un handoff que tu equipo puede continuar.',
 				modernStack: {
 					title: 'Stack moderno',
-					description: 'Kotlin, Jetpack Compose y arquitectura modular que tu equipo puede asumir tras la entrega.',
+					description:
+						'Kotlin, KMP, Jetpack Compose y Astro, con una arquitectura que tu equipo puede asumir tras la entrega.',
 				},
 				practicalAI: {
 					title: 'IA práctica',
-					description: 'Agentes para review, scaffolding y docs: más rápido, sin perder calidad.',
+					description:
+						'IA donde aligera la burocracia de la empresa, y en la entrega sin perder calidad.',
 				},
 				mentorship: {
 					title: 'Mentoría',
@@ -480,6 +590,7 @@ export const translations: Record<Language, any> = {
 		nav: {
 			home: 'Home',
 			about: 'About',
+			pricing: 'Pricing',
 			blog: 'Blog',
 			projects: 'Projects',
 			contact: 'Contact',
@@ -494,6 +605,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Consulting',
 			companyTitle: 'Company',
 			aboutUs: 'About us',
+			pricing: 'Pricing',
 			blog: 'Blog',
 			projects: 'Projects',
 			contactTitle: 'Contact',
@@ -508,10 +620,115 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Articles from Bitdesal on LinkedIn and Medium about Android, AI and engineering',
 			},
 		},
+		pricing: {
+			hero: {
+				badge: 'Transparent pricing',
+				title: 'Software and AI without surprises',
+				lead: 'Consulting to digitize how a company works and integrate AI where it cuts bureaucracy.',
+				subtitle:
+					'We work in phases so you know what we are solving, how long it takes and what it will cost before development begins.',
+				cta: 'Request an initial assessment',
+				details: 'See the approach',
+			},
+			rate: {
+				unit: '/hour',
+				note: 'Single rate. VAT not included.',
+			},
+			included: {
+				estimate: 'Initial estimate from day one',
+				time: 'Only dedicated time is billed',
+				training: 'Training on implemented tools included',
+				handoff: 'Code and documentation ready for continuity',
+				support: 'Post-launch support through monthly hour bundles',
+			},
+			approach: {
+				eyebrow: 'The approach',
+				title: 'Three principles behind the process',
+				subtitle:
+					'A method designed to make the investment visible in daily operations, not only in a presentation.',
+				strategy:
+					'Consulting to digitize how a company works and integrate AI where it cuts bureaucracy: approvals, documents, reporting and the tasks that still move by hand.',
+			},
+			principles: {
+				find: {
+					title: 'Find the bureaucracy',
+					description:
+						'We map the approvals, documents and handoffs that slow the company down, and estimate the work before development starts.',
+				},
+				connect: {
+					title: 'Digitize and connect AI',
+					description:
+						'We turn that process into software and place AI where it removes repetition, inside the tools the team already uses.',
+				},
+				operate: {
+					title: 'Leave it in daily use',
+					description:
+						'Training, code and documentation stay with your team. After launch, support continues through monthly hour bundles.',
+				},
+			},
+			phases: {
+				eyebrow: 'The process',
+				title: 'Service phases',
+				subtitle:
+					'Hours are indicative; the final scope and fixed estimate are confirmed after the initial assessment.',
+				coreLabel: 'Core idea:',
+				core: 'diagnosing and redesigning before building prevents technology from merely accelerating an inefficient process.',
+				items: {
+					assessment: {
+						title: 'Assessment and requirements',
+						description: 'Goals, constraints and the underlying problem we need to solve.',
+						short: 'Assessment',
+					},
+					study: {
+						title: 'Process and systems study',
+						description: 'Interviews, real workflows, exceptions and existing integrations.',
+						short: 'Process study',
+					},
+					redesign: {
+						title: 'Solution redesign',
+						description: 'We define how the process should work before automating it.',
+						short: 'Redesign',
+					},
+					technology: {
+						title: 'Technology selection',
+						description: 'Architecture, tools, integrations and security criteria.',
+						short: 'Technology',
+					},
+					plan: {
+						title: 'Phased implementation plan',
+						description: 'A prioritized roadmap that starts with the highest-value work.',
+						short: 'Phased plan',
+					},
+					delivery: {
+						title: 'Implementation, training and delivery',
+						description: 'Development, testing, launch and hands-on team training.',
+						short: 'Implementation',
+					},
+				},
+			},
+			investment: {
+				eyebrow: 'Investment',
+				title: 'Clear rates, no surprises',
+				subtitle:
+					'Everything is calculated at €35/hour. This table shows an indicative project for a small or medium-sized company.',
+				phase: 'Phase',
+				hours: 'Hours',
+				amount: 'Amount',
+				total: 'Complete project',
+			},
+			bundles: {
+				title: 'Support hour bundles',
+				subtitle: 'For incidents, adjustments and improvements after launch. Only consumed time is billed.',
+				h5: '5 h / month',
+				h10: '10 h / month',
+				h20: '20 h / month',
+				note: 'No long-term commitment. Adjust the bundle to your actual needs.',
+			},
+		},
 		home: {
 			...makeTranslations.en.home,
 			hero: {
-				title: 'Software that works. Then it grows.',
+				title: 'Software and AI without surprises',
 				subtitle:
 					'Consulting for Android, web and APIs. We take care that it does what it was designed to do — and that the product can go further.',
 				viewProjects: 'View projects',
@@ -522,11 +739,12 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Clear specs, production-quality Android, and a handover your team can keep.',
 				modernStack: {
 					title: 'Modern stack',
-					description: 'Kotlin, Jetpack Compose and modular architecture that your team can own after handoff.',
+					description:
+						'Kotlin, KMP, Jetpack Compose and Astro, in an architecture your team can own after handoff.',
 				},
 				practicalAI: {
 					title: 'Practical AI',
-					description: 'Agents for review, scaffolding and docs — faster delivery without sacrificing quality.',
+					description: 'AI where it cuts company bureaucracy, and in delivery without sacrificing quality.',
 				},
 				mentorship: {
 					title: 'Mentorship',
@@ -932,6 +1150,7 @@ export const translations: Record<Language, any> = {
 		nav: {
 			home: 'Etusivu',
 			about: 'Tietoa',
+			pricing: 'Hinnat',
 			blog: 'Blogi',
 			projects: 'Projektit',
 			contact: 'Ota yhteyttä',
@@ -946,6 +1165,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Konsultointi',
 			companyTitle: 'Yritys',
 			aboutUs: 'Tietoa meistä',
+			pricing: 'Hinnat',
 			blog: 'Blogi',
 			projects: 'Projektit',
 			contactTitle: 'Yhteystiedot',
@@ -960,10 +1180,114 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Bitdesalin artikkelit LinkedInissä ja Mediumissa Androidista, tekoälystä ja insinöörityöstä',
 			},
 		},
+		pricing: {
+			hero: {
+				badge: 'Läpinäkyvä hinnoittelu',
+				title: 'Ohjelmisto ja tekoäly ilman yllätyksiä',
+				lead: 'Konsultointia, jolla digitalisoidaan yrityksen toiminta ja tuodaan tekoäly sinne, missä se keventää byrokratiaa.',
+				subtitle:
+					'Työskentelemme vaiheittain, jotta tiedät mitä ratkaisemme, kauanko se kestää ja mitä se maksaa ennen kehityksen alkua.',
+				cta: 'Pyydä alustava arvio',
+				details: 'Katso lähestymistapa',
+			},
+			rate: {
+				unit: '/tunti',
+				note: 'Yksi hinta. ALV ei sisälly.',
+			},
+			included: {
+				estimate: 'Alustava arvio ensimmäisestä päivästä',
+				time: 'Laskutamme vain käytetyn ajan',
+				training: 'Koulutus käyttöön otetuista työkaluista sisältyy',
+				handoff: 'Koodi ja dokumentaatio valmiina jatkamaan',
+				support: 'Julkaisun jälkeinen tuki kuukausittaisina tuntipaketteina',
+			},
+			approach: {
+				eyebrow: 'Lähestymistapa',
+				title: 'Kolme periaatetta prosessin takana',
+				subtitle: 'Menetelmä, jolla investointi näkyy arjen työssä, ei vain esityksessä.',
+				strategy:
+					'Konsultointia, jolla digitalisoidaan yrityksen toiminta ja tuodaan tekoäly sinne, missä se keventää byrokratiaa: hyväksynnät, asiakirjat, raportointi ja työ, joka liikkuu yhä käsin.',
+			},
+			principles: {
+				find: {
+					title: 'Löydä byrokratia',
+					description:
+						'Käymme läpi hyväksynnät, asiakirjat ja siirrot, jotka hidastavat yritystä, ja arvioimme työn ennen kehityksen alkua.',
+				},
+				connect: {
+					title: 'Digitalisoi ja kytke tekoäly',
+					description:
+						'Muutamme prosessin ohjelmistoksi ja viemme tekoälyn sinne, missä se poistaa toistoa — työkaluihin, joita tiimi jo käyttää.',
+				},
+				operate: {
+					title: 'Jätä se arkeen',
+					description:
+						'Koulutus, koodi ja dokumentaatio jäävät tiimillesi. Julkaisun jälkeen tuki jatkuu kuukausittaisina tuntipaketteina.',
+				},
+			},
+			phases: {
+				eyebrow: 'Prosessi',
+				title: 'Palvelun vaiheet',
+				subtitle:
+					'Tunnit ovat suuntaa antavia; lopullinen laajuus ja kiinteä arvio vahvistetaan alustavan arvion jälkeen.',
+				coreLabel: 'Ydinajatus:',
+				core: 'diagnosointi ja uudelleensuunnittelu ennen rakentamista estää teknologiaa vain nopeuttamasta tehotonta prosessia.',
+				items: {
+					assessment: {
+						title: 'Arviointi ja vaatimukset',
+						description: 'Tavoitteet, reunaehdot ja varsinainen ongelma, joka pitää ratkaista.',
+						short: 'Arviointi',
+					},
+					study: {
+						title: 'Prosessien ja järjestelmien kartoitus',
+						description: 'Haastattelut, todelliset työnkulut, poikkeukset ja nykyiset integraatiot.',
+						short: 'Prosessikartoitus',
+					},
+					redesign: {
+						title: 'Ratkaisun uudelleensuunnittelu',
+						description: 'Määritämme, miten prosessin pitäisi toimia, ennen kuin sitä automatisoidaan.',
+						short: 'Uudelleensuunnittelu',
+					},
+					technology: {
+						title: 'Teknologian valinta',
+						description: 'Arkkitehtuuri, työkalut, integraatiot ja tietoturvakriteerit.',
+						short: 'Teknologia',
+					},
+					plan: {
+						title: 'Vaiheittainen toteutussuunnitelma',
+						description: 'Priorisoitu tiekartta, joka alkaa arvokkaimmasta työstä.',
+						short: 'Vaiheittainen suunnitelma',
+					},
+					delivery: {
+						title: 'Toteutus, koulutus ja luovutus',
+						description: 'Kehitys, testaus, julkaisu ja käytännön koulutus tiimille.',
+						short: 'Toteutus',
+					},
+				},
+			},
+			investment: {
+				eyebrow: 'Investointi',
+				title: 'Selkeät hinnat, ei yllätyksiä',
+				subtitle:
+					'Kaikki lasketaan hintaan 35 €/tunti. Taulukko näyttää suuntaa antavan projektin pienelle tai keskisuurelle yritykselle.',
+				phase: 'Vaihe',
+				hours: 'Tunnit',
+				amount: 'Summa',
+				total: 'Koko projekti',
+			},
+			bundles: {
+				title: 'Tukituntipaketit',
+				subtitle: 'Häiriöihin, säätöihin ja parannuksiin julkaisun jälkeen. Laskutamme vain käytetyn ajan.',
+				h5: '5 h / kk',
+				h10: '10 h / kk',
+				h20: '20 h / kk',
+				note: 'Ei pitkää sitoumusta. Sovita paketti todelliseen tarpeeseen.',
+			},
+		},
 		home: {
 			...makeTranslations.fi.home,
 			hero: {
-				title: 'Ohjelmisto, joka toimii. Sitten se kasvaa.',
+				title: 'Ohjelmisto ja tekoäly ilman yllätyksiä',
 				subtitle:
 					'Konsultointia Androidiin, webiin ja API-rajapintoihin. Pidämme huolen, että se tekee sen mihin se on suunniteltu — ja että tuote voi mennä pidemmälle.',
 				viewProjects: 'Katso projektit',
@@ -974,11 +1298,13 @@ export const translations: Record<Language, any> = {
 				subtitle: 'Selkeät speksit, tuotantolaatuinen Android ja luovutus, jonka tiimisi voi jatkaa.',
 				modernStack: {
 					title: 'Moderni stack',
-					description: 'Kotlin, Jetpack Compose ja modulaarinen arkkitehtuuri, jonka tiimisi omistaa luovutuksen jälkeen.',
+					description:
+						'Kotlin, KMP, Jetpack Compose ja Astro arkkitehtuurissa, jonka tiimisi omistaa luovutuksen jälkeen.',
 				},
 				practicalAI: {
 					title: 'Käytännön tekoäly',
-					description: 'Agentit katselmukseen, scaffoldingiin ja dokumentaatioon — nopeammin ilman laatutappiota.',
+					description:
+						'Tekoälyä sinne, missä se keventää yrityksen byrokratiaa, ja kehitykseen ilman laatutappiota.',
 				},
 				mentorship: {
 					title: 'Mentorointi',

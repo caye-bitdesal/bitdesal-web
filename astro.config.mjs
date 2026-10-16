@@ -7,7 +7,7 @@ export default defineConfig({
 	redirects: {
 		'/services': '/',
 		'/contact': '/',
-		'/prices': '/',
+		'/prices': '/pricing',
 		'/methodology': '/',
 	},
 	vite: {

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
 import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
+import PricingOffer from '../components/PricingOffer.astro';
 import { linkedInPosts } from '../data/linkedInPosts';
 ---
 
@@ -21,7 +22,7 @@ import { linkedInPosts } from '../data/linkedInPosts';
 		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
 			<div class="max-w-3xl">
 				<h1 class="text-4xl md:text-6xl mb-6" data-i18n-key="home.hero.title">
-					Software that works. Then it grows.
+					Software and AI without surprises
 				</h1>
 				<p class="text-xl md:text-2xl text-white/90 mb-8">
 					<span data-i18n-key="home.hero.subtitle">
@@ -49,6 +50,8 @@ import { linkedInPosts } from '../data/linkedInPosts';
 		</div>
 	</section>
 
+	<PricingOffer compact showLead hideTitle detailsHref="/pricing#approach" />
+
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
@@ -65,7 +68,7 @@ import { linkedInPosts } from '../data/linkedInPosts';
 					</div>
 					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.modernStack.title">Modern Stack</h3>
 					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.modernStack.description">
-						Kotlin, Jetpack Compose and modular architecture that your team can own after handoff.
+						Kotlin, KMP, Jetpack Compose and Astro, in an architecture your team can own after handoff.
 					</p>
 				</div>
 
@@ -75,7 +78,7 @@ import { linkedInPosts } from '../data/linkedInPosts';
 					</div>
 					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.practicalAI.title">Practical AI</h3>
 					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.practicalAI.description">
-						Agents for review, scaffolding and docs — faster delivery without sacrificing quality.
+						AI where it cuts company bureaucracy, and in delivery without sacrificing quality.
 					</p>
 				</div>
 
