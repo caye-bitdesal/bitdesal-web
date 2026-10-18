@@ -1,0 +1,23 @@
+---
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+
+const skills = ['kotlin', 'compose', 'architecture', 'testing', 'ai', 'mentoring'] as const;
+---
+
+<section class="py-16 md:py-24 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl md:text-4xl mb-12 text-center">{t('about.skills.title')}</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+			{
+				skills.map((skill) => (
+					<div class="bg-secondary rounded-lg p-6">
+						<h3 class="mb-2">{t(`about.skills.${skill}.title`)}</h3>
+						<p class="text-sm text-foreground/70">{t(`about.skills.${skill}.description`)}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

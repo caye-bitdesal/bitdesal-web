@@ -1,0 +1,17 @@
+---
+import { useI18n } from '../i18n/useI18n';
+
+interface Props {
+	memberId: string;
+}
+
+const { memberId } = Astro.props;
+const { t } = useI18n(Astro);
+---
+
+<section class="py-16 md:py-24 bg-white">
+	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl md:text-4xl mb-6">{t(`about.${memberId}.languages.title`)}</h2>
+		<p class="text-foreground/80 leading-relaxed">{t(`about.${memberId}.languages.body`)}</p>
+	</div>
+</section>
