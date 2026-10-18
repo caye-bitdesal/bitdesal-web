@@ -840,6 +840,12 @@ export const translations: Record<Language, any> = {
 				title: 'Equipo',
 				cayeBio:
 					'Ingeniero de software con 20 años de experiencia. Caye lideró el desarrollo Android de Kivra Finlandia durante 7 años y fundó Bitdesal en 2025.',
+				ramiro: {
+					name: 'Ramiro Santamaría',
+					title: 'Automatización con IA e IT — TODO(caye): confirmar rol',
+					bio: 'Ramiro es ingeniero informático con experiencia en desarrollo de apps móviles y web y en operaciones IT y seguridad. Gestiona la infraestructura IT de un grupo multinacional con presencia en España, EE. UU., Latinoamérica y Asia, y desarrolla extensiones para el ERP Microsoft Dynamics 365 Business Central. Hoy diseña sistemas de automatización con agentes de IA que quitan trabajo repetitivo a las empresas.',
+					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
+				},
 			},
 			hero: {
 				role: 'Caye Ruiz · Fundador de Bitdesal',
@@ -857,7 +863,110 @@ export const translations: Record<Language, any> = {
 			profiles: {
 				linkedin: 'LinkedIn',
 				github: 'GitHub',
+				website: 'Web',
 				shakers: 'Shakers',
+			},
+			ramiro: {
+				journey: {
+					title: 'Trayectoria de Ramiro',
+					aiAgents: {
+						role: 'Orquestador de agentes de IA',
+						company: 'Freelance',
+						location: '',
+						dates: '2026 – actualidad',
+						item1:
+							'Diseña sistemas multiagente y flujos de automatización de operaciones IT para clientes.',
+					},
+					ininin: {
+						role: 'Operaciones IT y seguridad',
+						company: 'INININ Group',
+						location: '',
+						dates: '2021 – actualidad',
+						item1:
+							'Gestiona Microsoft 365, dispositivos, red, soporte de segundo nivel e implantaciones ERP en España, EE. UU., Latinoamérica y Asia.',
+						item2: 'Desarrolla extensiones en AL para Microsoft Dynamics 365 Business Central.',
+					},
+					mobileFreelance: {
+						role: 'Desarrollador de apps móviles',
+						company: 'Freelance',
+						location: '',
+						dates: '2018 – actualidad',
+						item1: 'Desarrolla apps Android e iOS con React Native y backend Node.js, MongoDB y GraphQL.',
+					},
+					webFreelance: {
+						role: 'Desarrollador de aplicaciones web',
+						company: 'Freelance',
+						location: '',
+						dates: '2017 – actualidad',
+						item1:
+							'Desarrolla aplicaciones web a medida con React, Firebase y WordPress, incluida una tienda online.',
+					},
+					alphaBiosciences: {
+						role: 'Consultor IT',
+						company: 'Alpha Biosciences',
+						location: 'EE. UU.',
+						dates: '2018 – 2021',
+						item1:
+							'Administra Windows Server y dominio, red y web corporativa.',
+					},
+					bilbaoShopping: {
+						role: 'Fundador',
+						company: 'Bilbao Shopping on Foot',
+						location: '',
+						dates: '2012 – 2015',
+						item1: 'Fundó una startup con app móvil para encontrar comercios locales.',
+					},
+					awimbaweJava: {
+						role: 'Desarrollador Java',
+						company: 'Awimbawe LLC',
+						location: '',
+						dates: '2010',
+						item1: 'Desarrolló software Java en producción.',
+					},
+					citef: {
+						role: 'Desarrollador C++',
+						company: 'CITEF',
+						location: '',
+						dates: '2006 – 2008',
+						item1:
+							'Desarrolló la interfaz de un simulador de tren para formar a conductores del Metro de Madrid.',
+					},
+					otherExperiences: {
+						role: 'Otras experiencias',
+						company: '',
+						location: '',
+						dates: '',
+						summary:
+							'Técnico de trabajos verticales en Asaken (2014–2016, jefe de equipo), profesor de inglés para empresas (2009–2012) y route setter en gimnasios de escalada en EE. UU. (2018–2021).',
+					},
+				},
+				education: {
+					title: 'Formación',
+					licenciatura: {
+						degree: 'Licenciatura en Informática',
+						institution: 'Universidad Alfonso X el Sabio (Madrid)',
+						dates: '2000 – 2005',
+					},
+					windowsServer: {
+						degree: 'Administración de Windows Server 2016',
+						institution: '',
+						dates: '2018',
+					},
+					androidSelf: {
+						degree: 'Desarrollo Android (autodidacta)',
+						institution: '',
+						dates: '2013 – 2014',
+					},
+					irata: {
+						degree: 'Certificaciones IRATA nivel 2 y GWO',
+						institution: 'Trabajos verticales y aerogeneradores',
+						dates: '2014 – 2016',
+					},
+				},
+				languages: {
+					title: 'Idiomas',
+					body: 'TODO(caye): completar idiomas de Ramiro',
+				},
 			},
 			journey: {
 				title: 'Trayectoria de Caye',
@@ -1568,10 +1677,121 @@ export const translations: Record<Language, any> = {
 			profiles: {
 				linkedin: 'LinkedIn',
 				github: 'GitHub',
+				website: 'Website',
 				shakers: 'Shakers',
 			},
+			team: {
+				title: 'Team',
+				cayeBio:
+					'Software engineer with 20 years of experience. Caye led Android development for Kivra Finland for seven years and founded Bitdesal in 2025.',
+				ramiro: {
+					name: 'Ramiro Santamaría',
+					title: 'AI automation and IT — TODO(caye): confirm role',
+					bio: 'Ramiro is a computer engineer with experience in mobile and web app development and in IT operations and security. He manages IT infrastructure for a multinational group across Spain, the US, Latin America and Asia, and builds extensions for Microsoft Dynamics 365 Business Central. He now designs AI agent automation systems that remove repetitive work for businesses.',
+					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
+				},
+			},
+			ramiro: {
+				journey: {
+					title: "Ramiro's work experience",
+					aiAgents: {
+						role: 'AI agent orchestrator',
+						company: 'Freelance',
+						location: '',
+						dates: '2026 – Present',
+						item1: 'Designs multi-agent systems and IT operations automation flows for clients.',
+					},
+					ininin: {
+						role: 'IT operations and security',
+						company: 'INININ Group',
+						location: '',
+						dates: '2021 – Present',
+						item1:
+							'Manages Microsoft 365, devices, networking, second-line support and ERP rollouts across Spain, the US, Latin America and Asia.',
+						item2: 'Builds AL extensions for Microsoft Dynamics 365 Business Central.',
+					},
+					mobileFreelance: {
+						role: 'Mobile app developer',
+						company: 'Freelance',
+						location: '',
+						dates: '2018 – Present',
+						item1: 'Builds Android and iOS apps with React Native and Node.js, MongoDB and GraphQL backends.',
+					},
+					webFreelance: {
+						role: 'Web application developer',
+						company: 'Freelance',
+						location: '',
+						dates: '2017 – Present',
+						item1: 'Delivers custom web apps with React, Firebase and WordPress, including an online store.',
+					},
+					alphaBiosciences: {
+						role: 'IT consultant',
+						company: 'Alpha Biosciences',
+						location: 'United States',
+						dates: '2018 – 2021',
+						item1: 'Administered Windows Server and domain, network and corporate web.',
+					},
+					bilbaoShopping: {
+						role: 'Founder',
+						company: 'Bilbao Shopping on Foot',
+						location: '',
+						dates: '2012 – 2015',
+						item1: 'Founded a startup with a mobile app to find local shops.',
+					},
+					awimbaweJava: {
+						role: 'Java developer',
+						company: 'Awimbawe LLC',
+						location: '',
+						dates: '2010',
+						item1: 'Delivered production Java software.',
+					},
+					citef: {
+						role: 'C++ developer',
+						company: 'CITEF',
+						location: '',
+						dates: '2006 – 2008',
+						item1:
+							'Built the interface for a train simulator used to train Madrid Metro drivers.',
+					},
+					otherExperiences: {
+						role: 'Other experience',
+						company: '',
+						location: '',
+						dates: '',
+						summary:
+							'Rope-access technician at Asaken (2014–2016, team lead), corporate English teacher (2009–2012) and route setter at climbing gyms in the US (2018–2021).',
+					},
+				},
+				education: {
+					title: 'Education',
+					licenciatura: {
+						degree: 'Bachelor’s degree in Computer Science',
+						institution: 'Universidad Alfonso X el Sabio (Madrid)',
+						dates: '2000 – 2005',
+					},
+					windowsServer: {
+						degree: 'Windows Server 2016 administration',
+						institution: '',
+						dates: '2018',
+					},
+					androidSelf: {
+						degree: 'Android development (self-taught)',
+						institution: '',
+						dates: '2013 – 2014',
+					},
+					irata: {
+						degree: 'IRATA level 2 and GWO certifications',
+						institution: 'Rope access and wind turbines',
+						dates: '2014 – 2016',
+					},
+				},
+				languages: {
+					title: 'Languages',
+					body: 'TODO(caye): complete Ramiro’s languages',
+				},
+			},
 			journey: {
-				title: 'Work experience',
+				title: "Caye's work experience",
 				bitdesal: {
 					role: 'Independent Android Consultant',
 					company: 'Bitdesal',
@@ -2135,7 +2355,115 @@ export const translations: Record<Language, any> = {
 			profiles: {
 				linkedin: 'LinkedIn',
 				github: 'GitHub',
+				website: 'Verkkosivu',
 				shakers: 'Shakers',
+			},
+			team: {
+				title: 'Tiimi',
+				cayeBio:
+					'Ohjelmistoinsinööri, 20 vuoden kokemus. Caye johti Kivra Suomen Android-kehitystä seitsemän vuotta ja perusti Bitdesalin vuonna 2025.',
+				ramiro: {
+					name: 'Ramiro Santamaría',
+					title: 'TODO(caye): traducir perfil Ramiro',
+					bio: 'TODO(caye): traducir perfil Ramiro',
+					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
+				},
+			},
+			ramiro: {
+				journey: {
+					title: 'TODO(caye): traducir perfil Ramiro',
+					aiAgents: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					ininin: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+						item2: 'TODO(caye): traducir perfil Ramiro',
+					},
+					mobileFreelance: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					webFreelance: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					alphaBiosciences: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					bilbaoShopping: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					awimbaweJava: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					citef: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						item1: 'TODO(caye): traducir perfil Ramiro',
+					},
+					otherExperiences: {
+						role: 'TODO(caye): traducir perfil Ramiro',
+						company: '',
+						location: '',
+						dates: '',
+						summary: 'TODO(caye): traducir perfil Ramiro',
+					},
+				},
+				education: {
+					title: 'TODO(caye): traducir perfil Ramiro',
+					licenciatura: {
+						degree: 'TODO(caye): traducir perfil Ramiro',
+						institution: '',
+						dates: '',
+					},
+					windowsServer: {
+						degree: 'TODO(caye): traducir perfil Ramiro',
+						institution: '',
+						dates: '',
+					},
+					androidSelf: {
+						degree: 'TODO(caye): traducir perfil Ramiro',
+						institution: '',
+						dates: '',
+					},
+					irata: {
+						degree: 'TODO(caye): traducir perfil Ramiro',
+						institution: '',
+						dates: '',
+					},
+				},
+				languages: {
+					title: 'TODO(caye): traducir perfil Ramiro',
+					body: 'TODO(caye): traducir perfil Ramiro',
+				},
 			},
 			journey: {
 				title: 'Työkokemus',
