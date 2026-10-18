@@ -37,12 +37,12 @@ const languages = [
 				<span class="text-xl text-primary">Bitdesal</span>
 			</a>
 
-			<div class="hidden md:flex items-center gap-5 lg:gap-8">
+			<div class="hidden md:flex flex-wrap items-center justify-end gap-x-4 gap-y-1 lg:gap-x-8 min-w-0">
 				{navLinks.map((link) => (
 					<a
 						href={navHref(link.href)}
 						class:list={[
-							'transition-colors hover:text-primary',
+							'shrink-0 whitespace-nowrap transition-colors hover:text-primary',
 							isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
 						]}
 						aria-current={isNavActive(link.href) ? 'page' : undefined}
@@ -54,13 +54,13 @@ const languages = [
 
 				<a
 					href="mailto:caye@bitdesal.com"
-					class="contact-btn inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm"
+					class="contact-btn shrink-0 inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm"
 					data-i18n-key="nav.contact"
 				>
 					Contact
 				</a>
 
-				<div class="relative" data-lang-dropdown>
+				<div class="relative shrink-0" data-lang-dropdown>
 					<button
 						type="button"
 						class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80"
@@ -184,7 +184,7 @@ const languages = [
 					{languages.map((lang) => (
 						<li>
 							<a
-								href={`?lang=${lang.code}`}
+								href={langHref(lang.code)}
 								data-lang={lang.code}
 								class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
 								role="option"

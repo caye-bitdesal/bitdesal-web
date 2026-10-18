@@ -61,7 +61,11 @@ const i18nPayload = {
 					if (attr) el.setAttribute(attr, value);
 					else {
 						el.textContent = value;
-						el.hidden = !value;
+						const isPrimaryNavLink = el.matches(
+							'header a[data-i18n-key^="nav."], footer a[data-i18n-key^="footer."]',
+						);
+						// Never hide main nav links — empty/missing copy should not remove menu items.
+						el.hidden = isPrimaryNavLink ? false : !value;
 					}
 				});
 
