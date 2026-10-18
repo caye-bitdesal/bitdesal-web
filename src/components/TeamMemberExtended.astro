@@ -17,6 +17,6 @@ const { memberId, sections, hidden = false } = Astro.props;
 <div data-member-extended={memberId} hidden={hidden}>
 	{sections.includes('journey') && <TeamJourneySection memberId={memberId} />}
 	{sections.includes('education') && <TeamEducationSection memberId={memberId} />}
-	{sections.includes('skills') && <TeamSkillsSection />}
+	{sections.includes('skills') && <TeamSkillsSection memberId={memberId} />}
 	{sections.includes('languages') && <TeamLanguagesSection memberId={memberId} />}
 </div>

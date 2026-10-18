@@ -1,5 +1,6 @@
 ---
 import CtaSection from '../components/CtaSection.astro';
+import TeamMemberCard from '../components/TeamMemberCard.astro';
 import TeamMemberExtended from '../components/TeamMemberExtended.astro';
 import Layout from '../layouts/Layout.astro';
 import { teamMembers } from '../data/teamMembers';
@@ -35,77 +36,19 @@ const extendedMemberIds = teamMembers.filter((m) => m.showExtendedProfile).map((
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl md:text-4xl mb-8">{t('about.team.title')}</h2>
 
-			<div class="flex flex-wrap items-stretch gap-6" role="group" aria-label={t('about.team.title')}>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch w-full max-w-5xl mx-auto"
+				role="group"
+				aria-label={t('about.team.title')}
+			>
 				{
 					teamMembers.map((member) => (
-						<article
-							class="team-member-card flex-1 min-w-[min(100%,18rem)] max-w-xl h-full rounded-xl p-8 shadow-sm border-2 bg-white flex flex-col sm:flex-row gap-6 text-left cursor-pointer transition-all hover:border-primary/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border data-[selected=true]:border-primary data-[selected=true]:shadow-md"
-							data-team-member={member.id}
-							data-selected={member.id === defaultMemberId ? 'true' : 'false'}
-							data-extended-profile={member.showExtendedProfile ? 'true' : 'false'}
-							tabindex={member.id === defaultMemberId ? 0 : -1}
-							role="button"
-							aria-pressed={member.id === defaultMemberId}
-						>
-							<img
-								src={member.portrait}
-								alt={member.portraitAlt}
-								class="w-32 h-32 rounded-lg object-cover shrink-0 pointer-events-none bg-secondary"
-								loading="lazy"
-							/>
-							<div class="min-w-0 flex flex-col flex-1">
-								<h3 class="text-xl mb-1 pointer-events-none">
-									{t(member.nameKey)} · {t(member.titleKey)}
-								</h3>
-								<p class="text-foreground/75 text-sm mb-4 pointer-events-none flex-1">{t(member.bioKey)}</p>
-								<div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-									{
-										member.website && (
-											<a
-												href={member.website}
-												target="_blank"
-												rel="noopener noreferrer"
-												class="text-primary hover:underline relative z-10"
-												data-team-link
-											>
-												{t('about.profiles.website')}
-											</a>
-										)
-									}
-									{
-										member.linkedin && (
-											<a
-												href={member.linkedin}
-												target="_blank"
-												rel="noopener noreferrer"
-												class="text-primary hover:underline relative z-10"
-												data-team-link
-											>
-												{t('about.profiles.linkedin')}
-											</a>
-										)
-									}
-									{
-										member.linkedinPending && (
-											<span class="text-foreground/55 relative z-10">{t('about.team.ramiro.linkedinPending')}</span>
-										)
-									}
-									{
-										member.github && (
-											<a
-												href={member.github}
-												target="_blank"
-												rel="noopener noreferrer"
-												class="text-primary hover:underline relative z-10"
-												data-team-link
-											>
-												{t('about.profiles.github')}
-											</a>
-										)
-									}
-								</div>
-							</div>
-						</article>
+						<TeamMemberCard
+							member={member}
+							variant="team"
+							selected={member.id === defaultMemberId}
+							tabIndex={member.id === defaultMemberId ? 0 : -1}
+						/>
 					))
 				}
 			</div>

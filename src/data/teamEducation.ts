@@ -7,7 +7,6 @@ export const teamEducationByMember: Record<string, EducationEntry[]> = {
 	ramiro: [
 		{ id: 'licenciatura' },
 		{ id: 'windowsServer' },
-		{ id: 'androidSelf' },
 		{ id: 'irata' },
 	],
 };

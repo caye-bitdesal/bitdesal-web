@@ -1,0 +1,90 @@
+---
+import type { TeamMember } from '../data/teamMembers';
+import { useI18n } from '../i18n/useI18n';
+
+interface Props {
+	member: TeamMember;
+	variant?: 'team' | 'profile';
+	selected?: boolean;
+	tabIndex?: number;
+}
+
+const { member, variant = 'team', selected = false, tabIndex = -1 } = Astro.props;
+const { t } = useI18n(Astro);
+const interactive = variant === 'team';
+const HeadingTag = variant === 'profile' ? 'h1' : 'h3';
+---
+
+<article
+	class:list={[
+		'w-full rounded-xl p-8 shadow-sm border-2 bg-white flex flex-col sm:flex-row gap-6 text-left',
+		interactive &&
+			'team-member-card h-full min-h-[17.5rem] md:min-h-[16rem] cursor-pointer transition-all hover:border-primary/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border data-[selected=true]:border-primary data-[selected=true]:shadow-md',
+		!interactive && 'border-border max-w-3xl mx-auto',
+	]}
+	data-team-member={interactive ? member.id : undefined}
+	data-selected={interactive ? (selected ? 'true' : 'false') : undefined}
+	data-extended-profile={interactive ? (member.showExtendedProfile ? 'true' : 'false') : undefined}
+	tabindex={interactive ? tabIndex : undefined}
+	role={interactive ? 'button' : undefined}
+	aria-pressed={interactive ? selected : undefined}
+>
+	<img
+		src={member.portrait}
+		alt={member.portraitAlt}
+		class="w-32 h-32 rounded-lg object-cover shrink-0 pointer-events-none bg-secondary"
+		loading={variant === 'profile' ? 'eager' : 'lazy'}
+	/>
+	<div class="min-w-0 flex flex-col flex-1 min-h-0">
+		<HeadingTag class="text-xl mb-1 pointer-events-none">
+			{t(member.nameKey)} · {t(member.titleKey)}
+		</HeadingTag>
+		<p class="text-foreground/75 text-sm mb-4 pointer-events-none flex-1 min-h-0">{t(member.bioKey)}</p>
+		<div class="flex flex-wrap gap-x-4 gap-y-2 text-sm mt-auto shrink-0">
+			{
+				member.website && (
+					<a
+						href={member.website}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-primary hover:underline relative z-10"
+						{...(interactive ? { 'data-team-link': '' } : {})}
+					>
+						{t('about.profiles.website')}
+					</a>
+				)
+			}
+			{
+				member.linkedin && (
+					<a
+						href={member.linkedin}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-primary hover:underline relative z-10"
+						{...(interactive ? { 'data-team-link': '' } : {})}
+					>
+						{t('about.profiles.linkedin')}
+					</a>
+				)
+			}
+			{
+				member.linkedinPending && (
+					<span class="text-foreground/55 relative z-10">{t('about.team.ramiro.linkedinPending')}</span>
+				)
+			}
+			{
+				member.github && (
+					<a
+						href={member.github}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-primary hover:underline relative z-10"
+						{...(interactive ? { 'data-team-link': '' } : {})}
+					>
+						{t('about.profiles.github')}
+					</a>
+				)
+			}
+		</div>
+	</div>
+</article>

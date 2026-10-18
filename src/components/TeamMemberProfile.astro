@@ -1,0 +1,36 @@
+---
+import CtaSection from './CtaSection.astro';
+import TeamMemberCard from './TeamMemberCard.astro';
+import TeamMemberExtended from './TeamMemberExtended.astro';
+import Layout from '../layouts/Layout.astro';
+import { getTeamMember, type TeamMemberId } from '../data/teamMembers';
+import { useI18n } from '../i18n/useI18n';
+
+interface Props {
+	memberId: TeamMemberId;
+}
+
+const { memberId } = Astro.props;
+const member = getTeamMember(memberId);
+if (!member) {
+	return Astro.redirect('/404');
+}
+
+const { t } = useI18n(Astro);
+const pageTitle = `${t(member.nameKey)} · Bitdesal`;
+const pageDescription = t(member.bioKey);
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<TeamMemberCard member={member} variant="profile" />
+		</div>
+	</section>
+	{
+		member.showExtendedProfile && (
+			<TeamMemberExtended memberId={member.id} sections={member.extendedSections} />
+		)
+	}
+	<CtaSection />
+</Layout>

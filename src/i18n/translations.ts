@@ -842,8 +842,8 @@ export const translations: Record<Language, any> = {
 					'Ingeniero de software con 20 años de experiencia. Caye lideró el desarrollo Android de Kivra Finlandia durante 7 años y fundó Bitdesal en 2025.',
 				ramiro: {
 					name: 'Ramiro Santamaría',
-					title: 'Automatización con IA e IT — TODO(caye): confirmar rol',
-					bio: 'Ramiro es ingeniero informático con experiencia en desarrollo de apps móviles y web y en operaciones IT y seguridad. Gestiona la infraestructura IT de un grupo multinacional con presencia en España, EE. UU., Latinoamérica y Asia, y desarrolla extensiones para el ERP Microsoft Dynamics 365 Business Central. Hoy diseña sistemas de automatización con agentes de IA que quitan trabajo repetitivo a las empresas.',
+					title: 'Automatización con IA e IT',
+					bio: 'Informático con experiencia en desarrollo de apps móviles, web y en operaciones de IT y seguridad de redes. Se ha especializado en la orquestación de agentes de IA.',
 					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
 				},
 			},
@@ -952,20 +952,46 @@ export const translations: Record<Language, any> = {
 						institution: '',
 						dates: '2018',
 					},
-					androidSelf: {
-						degree: 'Desarrollo Android (autodidacta)',
-						institution: '',
-						dates: '2013 – 2014',
-					},
 					irata: {
 						degree: 'Certificaciones IRATA nivel 2 y GWO',
 						institution: 'Trabajos verticales y aerogeneradores',
 						dates: '2014 – 2016',
 					},
 				},
+				skills: {
+					title: 'Competencias',
+					aiAutomation: {
+						title: 'Automatización con IA',
+						description:
+							'Sistemas multiagente y flujos que automatizan operaciones IT y tareas repetitivas.',
+					},
+					businessCentral: {
+						title: 'Business Central y AL',
+						description:
+							'Extensiones para Dynamics 365 Business Central: tablas, informes, flujos e integraciones.',
+					},
+					webDev: {
+						title: 'Desarrollo web',
+						description: 'Aplicaciones con React, Node.js, GraphQL y WordPress para tiendas online.',
+					},
+					mobileApps: {
+						title: 'Apps móviles',
+						description: 'Apps Android e iOS con React Native y Firebase.',
+					},
+					itOps: {
+						title: 'Operaciones IT',
+						description: 'Microsoft 365, gestión de dispositivos, parches, DNS y soporte a usuarios.',
+					},
+					security: {
+						title: 'Seguridad',
+						description:
+							'Firewalls, antivirus, políticas de red y protección del correo (DMARC, DKIM, SPF).',
+					},
+				},
 				languages: {
 					title: 'Idiomas',
-					body: 'TODO(caye): completar idiomas de Ramiro',
+					spanish: { label: 'Castellano (nativo)' },
+					english: { label: 'Inglés (C2)' },
 				},
 			},
 			journey: {
@@ -1075,6 +1101,13 @@ export const translations: Record<Language, any> = {
 					title: 'Mentoría y liderazgo',
 					description: 'Escalado de equipos y coaching de más de 30 desarrolladores.',
 				},
+			},
+			languages: {
+				title: 'Idiomas',
+				spanish: { label: 'Castellano (nativo)' },
+				english: { label: 'Inglés (C1)' },
+				valencian: { label: 'Valenciano/Catalán (B1)' },
+				finnish: { label: 'Finés (B2)' },
 			},
 		},
 	},
@@ -1686,8 +1719,8 @@ export const translations: Record<Language, any> = {
 					'Software engineer with 20 years of experience. Caye led Android development for Kivra Finland for seven years and founded Bitdesal in 2025.',
 				ramiro: {
 					name: 'Ramiro Santamaría',
-					title: 'AI automation and IT — TODO(caye): confirm role',
-					bio: 'Ramiro is a computer engineer with experience in mobile and web app development and in IT operations and security. He manages IT infrastructure for a multinational group across Spain, the US, Latin America and Asia, and builds extensions for Microsoft Dynamics 365 Business Central. He now designs AI agent automation systems that remove repetitive work for businesses.',
+					title: 'AI automation and IT',
+					bio: 'IT professional with experience in mobile and web app development and in IT and network security operations. He specializes in AI agent orchestration.',
 					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
 				},
 			},
@@ -1774,20 +1807,44 @@ export const translations: Record<Language, any> = {
 						institution: '',
 						dates: '2018',
 					},
-					androidSelf: {
-						degree: 'Android development (self-taught)',
-						institution: '',
-						dates: '2013 – 2014',
-					},
 					irata: {
 						degree: 'IRATA level 2 and GWO certifications',
 						institution: 'Rope access and wind turbines',
 						dates: '2014 – 2016',
 					},
 				},
+				skills: {
+					title: 'Skills',
+					aiAutomation: {
+						title: 'AI automation',
+						description: 'Multi-agent systems and workflows that automate IT operations and repetitive tasks.',
+					},
+					businessCentral: {
+						title: 'Business Central & AL',
+						description:
+							'Extensions for Dynamics 365 Business Central: tables, reports, workflows and integrations.',
+					},
+					webDev: {
+						title: 'Web development',
+						description: 'Applications with React, Node.js, GraphQL and WordPress for online stores.',
+					},
+					mobileApps: {
+						title: 'Mobile apps',
+						description: 'Android and iOS apps with React Native and Firebase.',
+					},
+					itOps: {
+						title: 'IT operations',
+						description: 'Microsoft 365, device management, patching, DNS and user support.',
+					},
+					security: {
+						title: 'Security',
+						description: 'Firewalls, antivirus, network policies and email protection (DMARC, DKIM, SPF).',
+					},
+				},
 				languages: {
 					title: 'Languages',
-					body: 'TODO(caye): complete Ramiro’s languages',
+					spanish: { label: 'Spanish (native)' },
+					english: { label: 'English (C2)' },
 				},
 			},
 			journey: {
@@ -1897,6 +1954,13 @@ export const translations: Record<Language, any> = {
 					title: 'Mentoring & leadership',
 					description: 'Team scaling and coaching of 30+ developers.',
 				},
+			},
+			languages: {
+				title: 'Languages',
+				spanish: { label: 'Spanish (native)' },
+				english: { label: 'English (C1)' },
+				valencian: { label: 'Valencian/Catalan (B1)' },
+				finnish: { label: 'Finnish (B2)' },
 			},
 		},
 	},
@@ -2449,20 +2513,45 @@ export const translations: Record<Language, any> = {
 						institution: '',
 						dates: '',
 					},
-					androidSelf: {
-						degree: 'TODO(caye): traducir perfil Ramiro',
-						institution: '',
-						dates: '',
-					},
 					irata: {
 						degree: 'TODO(caye): traducir perfil Ramiro',
 						institution: '',
 						dates: '',
 					},
 				},
+				skills: {
+					title: 'Osaaminen',
+					aiAutomation: {
+						title: 'Tekoälyautomaatio',
+						description:
+							'Moniagenttijärjestelmät ja työnkulut, jotka automatisoivat IT-toimintoja ja toistuvia tehtäviä.',
+					},
+					businessCentral: {
+						title: 'Business Central ja AL',
+						description:
+							'Laajennukset Dynamics 365 Business Centraliin: taulut, raportit, työnkulut ja integraatiot.',
+					},
+					webDev: {
+						title: 'Web-kehitys',
+						description: 'Sovelluksia Reactilla, Node.js:llä, GraphQL:llä ja WordPressillä verkkokaupoille.',
+					},
+					mobileApps: {
+						title: 'Mobiilisovellukset',
+						description: 'Android- ja iOS-sovelluksia React Nativella ja Firebasella.',
+					},
+					itOps: {
+						title: 'IT-operaatiot',
+						description: 'Microsoft 365, laitehallinta, päivitykset, DNS ja käyttäjätuki.',
+					},
+					security: {
+						title: 'Tietoturva',
+						description: 'Palomuurit, virustorjunta, verkkokäytännöt ja sähköpostisuojaus (DMARC, DKIM, SPF).',
+					},
+				},
 				languages: {
-					title: 'TODO(caye): traducir perfil Ramiro',
-					body: 'TODO(caye): traducir perfil Ramiro',
+					title: 'Kielet',
+					spanish: { label: 'Espanja (äidinkieli)' },
+					english: { label: 'Englanti (C2)' },
 				},
 			},
 			journey: {
@@ -2572,6 +2661,13 @@ export const translations: Record<Language, any> = {
 					title: 'Mentorointi ja johtaminen',
 					description: 'Tiimien skaalaus ja yli 30 kehittäjän valmennus.',
 				},
+			},
+			languages: {
+				title: 'Kielet',
+				spanish: { label: 'Espanja (äidinkieli)' },
+				english: { label: 'Englanti (C1)' },
+				valencian: { label: 'Valencia/Katalaani (B1)' },
+				finnish: { label: 'Suomi (B2)' },
 			},
 		},
 	},
