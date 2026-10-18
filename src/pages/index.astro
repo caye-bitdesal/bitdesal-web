@@ -7,6 +7,7 @@ import { BOOKING_URL, SHOW_CLIENT_LOGOS, SHOW_TESTIMONIAL } from '../data/siteCo
 import { projectCards } from '../data/projectCards';
 import { sitePath } from '../data/siteNav';
 import { linkedInPosts } from '../data/linkedInPosts';
+import { teamMembers } from '../data/teamMembers';
 import { useI18n } from '../i18n/useI18n';
 
 const { lang, t } = useI18n(Astro);
@@ -145,13 +146,27 @@ const whyCards = [
 					</a>
 				</div>
 				<div class="order-1 lg:order-2 flex justify-center">
-					<img
-						src="/caye-ruiz-portrait.jpg"
-						alt="Caye Ruiz, fundador de Bitdesal"
-						class="w-full max-w-sm rounded-xl object-cover aspect-[3/4] shadow-lg"
-						loading="lazy"
-						decoding="async"
-					/>
+					<div class="grid grid-cols-2 gap-4 w-full max-w-md">
+						{
+							teamMembers.map((member) => (
+								<a
+									href={`${sitePath('/nosotros', lang)}#equipo`}
+									class="group block rounded-xl overflow-hidden border border-border bg-white shadow-sm hover:border-primary transition-colors"
+								>
+									<img
+										src={member.portrait}
+										alt={member.portraitAlt}
+										class="w-full aspect-square object-cover group-hover:opacity-95 transition-opacity bg-secondary"
+										loading="lazy"
+										decoding="async"
+									/>
+									<p class="px-3 py-2.5 text-sm font-medium text-center text-foreground group-hover:text-primary transition-colors">
+										{t(member.nameKey)}
+									</p>
+								</a>
+							))
+						}
+					</div>
 				</div>
 			</div>
 		</div>
