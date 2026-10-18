@@ -1,4 +1,6 @@
 ---
+import { HOURLY_RATE_EUR } from '../data/pricing';
+
 interface Props {
 	level?: 'h1' | 'h2';
 	compact?: boolean;
@@ -68,7 +70,7 @@ const included = [
 
 			<aside class="rounded-2xl border border-white/25 bg-white/10 p-6 sm:p-7">
 				<p class="flex items-baseline gap-1.5 text-white mb-1">
-					<span class="text-5xl tracking-tight">35€</span>
+					<span class="text-5xl tracking-tight">{HOURLY_RATE_EUR}€</span>
 					<span class="text-lg text-white/80" data-i18n-key="pricing.rate.unit">/hour</span>
 				</p>
 				<p class="text-sm text-white/70 mb-6" data-i18n-key="pricing.rate.note">Single rate. VAT not included.</p>

@@ -8,6 +8,7 @@ export default defineConfig({
 		'/services': '/',
 		'/contact': '/',
 		'/prices': '/pricing',
+		'/precios': '/pricing',
 		'/methodology': '/',
 	},
 	vite: {

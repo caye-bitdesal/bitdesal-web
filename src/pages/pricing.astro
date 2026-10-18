@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
 import PricingOffer from '../components/PricingOffer.astro';
+import { projectTotal, servicePhases, supportBundleRows } from '../data/pricingPhases';
 
 const principles = [
 	{
@@ -33,74 +34,8 @@ const principles = [
 	},
 ] as const;
 
-const phases = [
-	{
-		titleKey: 'pricing.phases.items.assessment.title',
-		title: 'Assessment and requirements',
-		descKey: 'pricing.phases.items.assessment.description',
-		description: 'Goals, constraints and the underlying problem we need to solve.',
-		shortKey: 'pricing.phases.items.assessment.short',
-		short: 'Assessment',
-		hours: '6–10 h',
-		amount: '€210–350',
-	},
-	{
-		titleKey: 'pricing.phases.items.study.title',
-		title: 'Process and systems study',
-		descKey: 'pricing.phases.items.study.description',
-		description: 'Interviews, real workflows, exceptions and existing integrations.',
-		shortKey: 'pricing.phases.items.study.short',
-		short: 'Process study',
-		hours: '10–20 h',
-		amount: '€350–700',
-	},
-	{
-		titleKey: 'pricing.phases.items.redesign.title',
-		title: 'Solution redesign',
-		descKey: 'pricing.phases.items.redesign.description',
-		description: 'We define how the process should work before automating it.',
-		shortKey: 'pricing.phases.items.redesign.short',
-		short: 'Redesign',
-		hours: '8–15 h',
-		amount: '€280–525',
-	},
-	{
-		titleKey: 'pricing.phases.items.technology.title',
-		title: 'Technology selection',
-		descKey: 'pricing.phases.items.technology.description',
-		description: 'Architecture, tools, integrations and security criteria.',
-		shortKey: 'pricing.phases.items.technology.short',
-		short: 'Technology',
-		hours: '6–12 h',
-		amount: '€210–420',
-	},
-	{
-		titleKey: 'pricing.phases.items.plan.title',
-		title: 'Phased implementation plan',
-		descKey: 'pricing.phases.items.plan.description',
-		description: 'A prioritized roadmap that starts with the highest-value work.',
-		shortKey: 'pricing.phases.items.plan.short',
-		short: 'Phased plan',
-		hours: '5–8 h',
-		amount: '€175–280',
-	},
-	{
-		titleKey: 'pricing.phases.items.delivery.title',
-		title: 'Implementation, training and delivery',
-		descKey: 'pricing.phases.items.delivery.description',
-		description: 'Development, testing, launch and hands-on team training.',
-		shortKey: 'pricing.phases.items.delivery.short',
-		short: 'Implementation',
-		hours: '15–30 h',
-		amount: '€525–1,050',
-	},
-] as const;
-
-const bundles = [
-	{ labelKey: 'pricing.bundles.h5', label: '5 h / month', amount: '€175' },
-	{ labelKey: 'pricing.bundles.h10', label: '10 h / month', amount: '€350' },
-	{ labelKey: 'pricing.bundles.h20', label: '20 h / month', amount: '€700' },
-] as const;
+const phases = servicePhases;
+const bundles = supportBundleRows;
 ---
 
 <Layout>
@@ -228,7 +163,7 @@ const bundles = [
 				</p>
 				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="pricing.investment.title">Clear rates, no surprises</h2>
 				<p class="text-lg text-foreground/70" data-i18n-key="pricing.investment.subtitle">
-					Everything is calculated at €35/hour. This table shows an indicative project for a small or medium-sized
+					Everything is calculated at €45/hour. This table shows an indicative project for a small or medium-sized
 					company.
 				</p>
 			</div>
@@ -257,8 +192,8 @@ const bundles = [
 							}
 							<tr class="border-t border-border font-medium">
 								<td class="px-4 py-3" data-i18n-key="pricing.investment.total">Complete project</td>
-								<td class="px-4 py-3 text-right">50–95 h</td>
-								<td class="px-4 py-3 text-right text-primary">€1,750–3,325</td>
+								<td class="px-4 py-3 text-right">{projectTotal.hours}</td>
+								<td class="px-4 py-3 text-right text-primary">{projectTotal.amount}</td>
 							</tr>
 						</tbody>
 					</table>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
 import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
 import PricingOffer from '../components/PricingOffer.astro';
+import { pricingApproachHref } from '../data/siteNav';
 import { linkedInPosts } from '../data/linkedInPosts';
 ---
 
@@ -50,7 +51,7 @@ import { linkedInPosts } from '../data/linkedInPosts';
 		</div>
 	</section>
 
-	<PricingOffer compact showLead hideTitle detailsHref="/pricing#approach" />
+	<PricingOffer compact showLead hideTitle detailsHref={pricingApproachHref} />
 
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

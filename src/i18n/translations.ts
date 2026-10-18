@@ -148,7 +148,7 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Inversión',
 				title: 'Tarifas claras, sin sorpresas',
 				subtitle:
-					'Todo se calcula a 35 €/hora. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
+					'Todo se calcula a 45 €/hora. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
 				phase: 'Fase',
 				hours: 'Horas',
 				amount: 'Importe',
@@ -710,7 +710,7 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Investment',
 				title: 'Clear rates, no surprises',
 				subtitle:
-					'Everything is calculated at €35/hour. This table shows an indicative project for a small or medium-sized company.',
+					'Everything is calculated at €45/hour. This table shows an indicative project for a small or medium-sized company.',
 				phase: 'Phase',
 				hours: 'Hours',
 				amount: 'Amount',
@@ -1269,7 +1269,7 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Investointi',
 				title: 'Selkeät hinnat, ei yllätyksiä',
 				subtitle:
-					'Kaikki lasketaan hintaan 35 €/tunti. Taulukko näyttää suuntaa antavan projektin pienelle tai keskisuurelle yritykselle.',
+					'Kaikki lasketaan hintaan 45 €/tunti. Taulukko näyttää suuntaa antavan projektin pienelle tai keskisuurelle yritykselle.',
 				phase: 'Vaihe',
 				hours: 'Tunnit',
 				amount: 'Summa',
