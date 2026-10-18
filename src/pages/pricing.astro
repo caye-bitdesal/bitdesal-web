@@ -1,96 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
 import PricingOffer from '../components/PricingOffer.astro';
-import { projectTotal, servicePhases, supportBundleRows } from '../data/pricingPhases';
+import Layout from '../layouts/Layout.astro';
+import { getProjectTotal, getServicePhases, getSupportBundleRows } from '../data/pricingPhases';
+import { useI18n } from '../i18n/useI18n';
+
+const { t, lang } = useI18n(Astro);
+const phases = getServicePhases(lang);
+const projectTotal = getProjectTotal(lang);
+const bundles = getSupportBundleRows(lang);
 
 const principles = [
-	{
-		id: 'find',
-		icon: 'search',
-		titleKey: 'pricing.principles.find.title',
-		title: 'Find the bureaucracy',
-		descKey: 'pricing.principles.find.description',
-		description:
-			'We map the approvals, documents and handoffs that slow the company down, and estimate the work before development starts.',
-	},
-	{
-		id: 'connect',
-		icon: 'link',
-		titleKey: 'pricing.principles.connect.title',
-		title: 'Digitize and connect AI',
-		descKey: 'pricing.principles.connect.description',
-		description:
-			'We turn that process into software and place AI where it removes repetition, inside the tools the team already uses.',
-	},
-	{
-		id: 'operate',
-		icon: 'rocket',
-		titleKey: 'pricing.principles.operate.title',
-		title: 'Leave it in daily use',
-		descKey: 'pricing.principles.operate.description',
-		description:
-			'Training, code and documentation stay with your team. After launch, support continues through monthly hour bundles.',
-	},
+	{ icon: 'search', titleKey: 'pricing.principles.find.title', descKey: 'pricing.principles.find.description' },
+	{ icon: 'link', titleKey: 'pricing.principles.connect.title', descKey: 'pricing.principles.connect.description' },
+	{ icon: 'rocket', titleKey: 'pricing.principles.operate.title', descKey: 'pricing.principles.operate.description' },
 ] as const;
 
-const phases = servicePhases;
-const bundles = supportBundleRows;
+const pricingFaq = [
+	{ qKey: 'pricing.faq.overrun.q', aKey: 'pricing.faq.overrun.a' },
+	{ qKey: 'pricing.faq.payment.q', aKey: 'pricing.faq.payment.a' },
+	{ qKey: 'pricing.faq.commitment.q', aKey: 'pricing.faq.commitment.a' },
+];
 ---
 
-<Layout>
-	<PricingOffer />
+<Layout seo="pricing">
+	<PricingOffer showLead />
 
 	<section id="approach" class="scroll-mt-20 py-20 md:py-28 bg-secondary">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center max-w-2xl mx-auto mb-14">
-				<p class="text-xs tracking-[0.18em] uppercase text-primary/80 mb-3" data-i18n-key="pricing.approach.eyebrow">
-					The approach
-				</p>
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="pricing.approach.title">
-					Three principles behind the process
-				</h2>
-				<p class="text-lg text-foreground/70" data-i18n-key="pricing.approach.subtitle">
-					A method designed to make the investment visible in daily operations, not only in a presentation.
-				</p>
-				<p class="text-base text-foreground/80 mt-4" data-i18n-key="pricing.approach.strategy">
-					Consulting to digitize how a company works and integrate AI where it cuts bureaucracy: approvals,
-					documents, reporting and the tasks that still move by hand.
-				</p>
+				<p class="text-xs tracking-[0.18em] uppercase text-primary/80 mb-3">{t('pricing.approach.eyebrow')}</p>
+				<h2 class="text-3xl md:text-4xl mb-4">{t('pricing.approach.title')}</h2>
+				<p class="text-lg text-foreground/70">{t('pricing.approach.subtitle')}</p>
+				<p class="text-base text-foreground/80 mt-4">{t('pricing.approach.strategy')}</p>
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				{
 					principles.map((principle) => (
 						<article class="bg-white rounded-2xl p-8 shadow-sm">
-							<div class="inline-flex items-center justify-center w-11 h-11 rounded-lg bg-secondary text-primary mb-5">
-								{principle.icon === 'search' && (
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5" aria-hidden="true">
-										<circle cx="11" cy="11" r="7" />
-										<path d="m20 20-3.5-3.5" stroke-linecap="round" />
-									</svg>
-								)}
-								{principle.icon === 'link' && (
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5" aria-hidden="true">
-										<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke-linecap="round" stroke-linejoin="round" />
-										<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								)}
-								{principle.icon === 'rocket' && (
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5" aria-hidden="true">
-										<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z" stroke-linecap="round" stroke-linejoin="round" />
-										<path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z" stroke-linecap="round" stroke-linejoin="round" />
-										<path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" stroke-linecap="round" stroke-linejoin="round" />
-										<path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								)}
-							</div>
-							<h3 class="text-xl mb-2" data-i18n-key={principle.titleKey}>
-								{principle.title}
-							</h3>
-							<p class="text-foreground/70 leading-relaxed" data-i18n-key={principle.descKey}>
-								{principle.description}
-							</p>
+							<h3 class="text-xl mb-2">{t(principle.titleKey)}</h3>
+							<p class="text-foreground/70 leading-relaxed">{t(principle.descKey)}</p>
 						</article>
 					))
 				}
@@ -99,128 +50,134 @@ const bundles = supportBundleRows;
 	</section>
 
 	<section class="py-20 md:py-28 bg-white">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+			<article class="rounded-2xl border border-border p-8 bg-secondary/30">
+				<h3 class="text-2xl mb-2">{t('pricing.blocks.study.title')} — {t('pricing.blocks.study.price')}</h3>
+				<p class="text-foreground/70 mb-4">{t('pricing.blocks.study.note')}</p>
+				<p class="text-foreground/80 mb-4">{t('pricing.blocks.study.description')}</p>
+				<p class="text-primary font-medium">{t('pricing.blocks.study.discount')}</p>
+			</article>
+			<article class="rounded-2xl border border-border p-8">
+				<h3 class="text-2xl mb-2">{t('pricing.blocks.implementation.title')} — {t('pricing.blocks.implementation.price')}</h3>
+				<p class="text-foreground/80">{t('pricing.blocks.implementation.description')}</p>
+			</article>
+			<article class="rounded-2xl border border-border p-8 bg-secondary/30">
+				<h3 class="text-2xl mb-2">{t('pricing.blocks.support.title')} — {t('pricing.blocks.support.price')}</h3>
+				<p class="text-foreground/80">{t('pricing.blocks.support.description')}</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-20 bg-secondary">
 		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center max-w-2xl mx-auto mb-12">
-				<p class="text-xs tracking-[0.18em] uppercase text-primary/80 mb-3" data-i18n-key="pricing.phases.eyebrow">
-					The process
-				</p>
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="pricing.phases.title">Service phases</h2>
-				<p class="text-lg text-foreground/70" data-i18n-key="pricing.phases.subtitle">
-					Hours are indicative; the final scope and fixed estimate are confirmed after the initial assessment.
-				</p>
-			</div>
-
-			<ol>
-				{
-					phases.map((phase, index) => (
-						<li class="flex items-start justify-between gap-6 py-5 border-b border-border">
-							<div class="flex items-start gap-4 min-w-0">
-								<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm text-white">
-									{index + 1}
-								</span>
-								<div class="min-w-0 pt-0.5">
-									<h3 class="text-base" data-i18n-key={phase.titleKey}>
-										{phase.title}
-									</h3>
-									<p class="text-sm text-foreground/60 mt-0.5" data-i18n-key={phase.descKey}>
-										{phase.description}
-									</p>
-								</div>
-							</div>
-							<div class="text-right shrink-0 pt-0.5">
-								<p class="text-sm">{phase.hours}</p>
-								<p class="text-sm text-primary">{phase.amount}</p>
-							</div>
-						</li>
-					))
-				}
-			</ol>
-
-			<div class="mt-8 flex items-start gap-3 rounded-xl bg-[#f3f4f6] px-5 py-4 text-sm text-foreground/80">
-				<span
-					class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-foreground/40 text-[11px] text-foreground/70"
-					aria-hidden="true"
-				>
-					i
-				</span>
-				<p>
-					<span class="font-medium text-foreground" data-i18n-key="pricing.phases.coreLabel">Core idea:</span>
-					{' '}
-					<span data-i18n-key="pricing.phases.core">
-						diagnosing and redesigning before building prevents technology from merely accelerating an inefficient
-						process.
-					</span>
-				</p>
+			<h2 class="text-3xl md:text-4xl mb-8 text-center">{t('pricing.packages.title')}</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<article class="bg-white rounded-xl p-6 shadow-sm">
+					<h3 class="text-xl mb-2">{t('pricing.packages.express.title')}</h3>
+					<p class="text-primary font-medium mb-1">{t('pricing.packages.express.price')}</p>
+					<p class="text-sm text-foreground/60 mb-4">{t('pricing.packages.express.time')}</p>
+					<p class="text-foreground/75 text-sm">{t('pricing.packages.express.description')}</p>
+				</article>
+				<article class="bg-white rounded-xl p-6 shadow-sm">
+					<h3 class="text-xl mb-2">{t('pricing.packages.custom.title')}</h3>
+					<p class="text-primary font-medium mb-4">{t('pricing.packages.custom.price')}</p>
+					<p class="text-foreground/75 text-sm">{t('pricing.packages.custom.description')}</p>
+				</article>
+				<article class="bg-white rounded-xl p-6 shadow-sm">
+					<h3 class="text-xl mb-2">{t('pricing.packages.maintenance.title')}</h3>
+					<p class="text-primary font-medium mb-4">{t('pricing.packages.maintenance.price')}</p>
+					<p class="text-foreground/75 text-sm">{t('pricing.packages.maintenance.description')}</p>
+				</article>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-20 md:py-28 bg-secondary">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center max-w-2xl mx-auto mb-12">
-				<p class="text-xs tracking-[0.18em] uppercase text-primary/80 mb-3" data-i18n-key="pricing.investment.eyebrow">
-					Investment
-				</p>
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="pricing.investment.title">Clear rates, no surprises</h2>
-				<p class="text-lg text-foreground/70" data-i18n-key="pricing.investment.subtitle">
-					Everything is calculated at €45/hour. This table shows an indicative project for a small or medium-sized
-					company.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-6 items-stretch">
-				<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-black/5">
-					<table class="w-full text-sm">
-						<thead class="bg-[#f4f7f6] text-foreground/70">
-							<tr>
-								<th class="text-left font-medium px-4 py-3" data-i18n-key="pricing.investment.phase">Phase</th>
-								<th class="text-right font-medium px-4 py-3" data-i18n-key="pricing.investment.hours">Hours</th>
-								<th class="text-right font-medium px-4 py-3" data-i18n-key="pricing.investment.amount">Amount</th>
-							</tr>
-						</thead>
-						<tbody>
-							{
-								phases.map((phase, index) => (
-									<tr class="border-t border-border">
-										<td class="px-4 py-3">
-											{index + 1}. <span data-i18n-key={phase.shortKey}>{phase.short}</span>
-										</td>
-										<td class="px-4 py-3 text-right text-foreground/70">{phase.hours}</td>
-										<td class="px-4 py-3 text-right text-primary">{phase.amount}</td>
-									</tr>
-								))
-							}
-							<tr class="border-t border-border font-medium">
-								<td class="px-4 py-3" data-i18n-key="pricing.investment.total">Complete project</td>
-								<td class="px-4 py-3 text-right">{projectTotal.hours}</td>
-								<td class="px-4 py-3 text-right text-primary">{projectTotal.amount}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<aside class="bg-primary text-white rounded-2xl p-6 sm:p-7 flex flex-col">
-					<h3 class="text-xl mb-2" data-i18n-key="pricing.bundles.title">Support hour bundles</h3>
-					<p class="text-sm text-white/80" data-i18n-key="pricing.bundles.subtitle">
-						For incidents, adjustments and improvements after launch. Only consumed time is billed.
-					</p>
-					<ul class="mt-4">
+	<section class="py-16 md:py-20 bg-white">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<details class="group rounded-xl border border-border">
+				<summary class="cursor-pointer list-none px-5 py-4 font-medium">{t('pricing.breakdownToggle')}</summary>
+				<div class="px-5 pb-6">
+					<div class="text-center max-w-2xl mx-auto mb-8 pt-4">
+						<p class="text-xs tracking-[0.18em] uppercase text-primary/80 mb-3">{t('pricing.phases.eyebrow')}</p>
+						<p class="text-foreground/70">{t('pricing.phases.subtitle')}</p>
+					</div>
+					<ol>
 						{
-							bundles.map((bundle) => (
-								<li class="flex items-center justify-between gap-4 border-b border-white/20 py-3 text-sm">
-									<span data-i18n-key={bundle.labelKey}>{bundle.label}</span>
-									<span class="font-medium">{bundle.amount}</span>
+							phases.map((phase, index) => (
+								<li class="flex items-start justify-between gap-6 py-5 border-b border-border">
+									<div class="flex items-start gap-4 min-w-0">
+										<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm text-white">{index + 1}</span>
+										<div class="min-w-0 pt-0.5">
+											<h3 class="text-base">{t(phase.titleKey, phase.title)}</h3>
+											<p class="text-sm text-foreground/60 mt-0.5">{t(phase.descKey, phase.description)}</p>
+										</div>
+									</div>
+									<div class="text-right shrink-0 pt-0.5">
+										<p class="text-sm">{phase.hours}</p>
+										<p class="text-sm text-primary">{phase.amount}</p>
+									</div>
 								</li>
 							))
 						}
-					</ul>
-					<p class="text-sm text-white/75 mt-auto pt-5" data-i18n-key="pricing.bundles.note">
-						No long-term commitment. Adjust the bundle to your actual needs.
-					</p>
-				</aside>
-			</div>
+					</ol>
+					<div class="mt-8 flex items-start gap-3 rounded-xl bg-[#f3f4f6] px-5 py-4 text-sm text-foreground/80">
+						<p>
+							<span class="font-medium text-foreground">{t('pricing.phases.coreLabel')}</span>{' '}
+							{t('pricing.phases.core')}
+						</p>
+					</div>
+
+					<div class="mt-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-6 items-stretch">
+						<div class="bg-white rounded-xl overflow-hidden shadow-sm border border-black/5">
+							<table class="w-full text-sm">
+								<thead class="bg-[#f4f7f6] text-foreground/70">
+									<tr>
+										<th class="text-left font-medium px-4 py-3">{t('pricing.investment.phase')}</th>
+										<th class="text-right font-medium px-4 py-3">{t('pricing.investment.hours')}</th>
+										<th class="text-right font-medium px-4 py-3">{t('pricing.investment.amount')}</th>
+									</tr>
+								</thead>
+								<tbody>
+									{
+										phases.map((phase, index) => (
+											<tr class="border-t border-border">
+												<td class="px-4 py-3">
+													{index + 1}. {t(phase.shortKey, phase.short)}
+												</td>
+												<td class="px-4 py-3 text-right text-foreground/70">{phase.hours}</td>
+												<td class="px-4 py-3 text-right text-primary">{phase.amount}</td>
+											</tr>
+										))
+									}
+									<tr class="border-t border-border font-medium">
+										<td class="px-4 py-3">{t('pricing.investment.total')}</td>
+										<td class="px-4 py-3 text-right">{projectTotal.hours}</td>
+										<td class="px-4 py-3 text-right text-primary">{projectTotal.amount}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<aside class="bg-primary text-white rounded-2xl p-6 sm:p-7 flex flex-col">
+							<h3 class="text-xl mb-2">{t('pricing.bundles.title')}</h3>
+							<p class="text-sm text-white/80">{t('pricing.bundles.subtitle')}</p>
+							<ul class="mt-4">
+								{
+									bundles.map((bundle) => (
+										<li class="flex items-center justify-between gap-4 border-b border-white/20 py-3 text-sm">
+											<span>{t(bundle.labelKey, bundle.label)}</span>
+											<span class="font-medium">{bundle.amount}</span>
+										</li>
+									))
+								}
+							</ul>
+							<p class="text-sm text-white/75 mt-auto pt-5">{t('pricing.bundles.note')}</p>
+						</aside>
+					</div>
+				</div>
+			</details>
 		</div>
 	</section>
 
+	<FaqSection titleKey="pricing.faq.title" items={pricingFaq} />
 	<CtaSection />
 </Layout>

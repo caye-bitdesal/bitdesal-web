@@ -1,4 +1,6 @@
-import { phaseEstimates, projectTotal, supportBundles } from './pricing';
+import { formatEur, formatEurRange } from '../i18n/formatCurrency';
+import type { Language } from '../i18n/translations';
+import { phaseEstimatesRaw, projectTotalRaw, supportBundles } from './pricing';
 
 const phaseCopy = {
 	assessment: {
@@ -51,13 +53,20 @@ const phaseCopy = {
 	},
 } as const;
 
-export const servicePhases = phaseEstimates.map((estimate) => ({
-	...phaseCopy[estimate.id as keyof typeof phaseCopy],
-	hours: estimate.hours,
-	amount: estimate.amount,
-}));
+export function getServicePhases(lang: Language) {
+	return phaseEstimatesRaw.map((estimate) => ({
+		...phaseCopy[estimate.id as keyof typeof phaseCopy],
+		hours: estimate.hours,
+		amount: formatEurRange(estimate.minEur, estimate.maxEur, lang),
+	}));
+}
 
-export { projectTotal, supportBundles };
+export function getProjectTotal(lang: Language) {
+	return {
+		hours: projectTotalRaw.hours,
+		amount: formatEurRange(projectTotalRaw.minEur, projectTotalRaw.maxEur, lang),
+	};
+}
 
 const bundleLabelKeys = {
 	h5: 'pricing.bundles.h5',
@@ -71,8 +80,17 @@ const bundleLabels = {
 	h20: '20 h / month',
 } as const;
 
-export const supportBundleRows = supportBundles.map((bundle) => ({
-	labelKey: bundleLabelKeys[bundle.id],
-	label: bundleLabels[bundle.id],
-	amount: bundle.amount,
-}));
+export function getSupportBundleRows(lang: Language) {
+	return supportBundles.map((bundle) => ({
+		labelKey: bundleLabelKeys[bundle.id],
+		label: bundleLabels[bundle.id],
+		amount: formatEur(bundle.amountEur, lang),
+	}));
+}
+
+/** @deprecated use getServicePhases */
+export const servicePhases = getServicePhases('en');
+/** @deprecated use getProjectTotal */
+export const projectTotal = getProjectTotal('en');
+/** @deprecated use getSupportBundleRows */
+export const supportBundleRows = getSupportBundleRows('en');

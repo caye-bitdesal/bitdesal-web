@@ -1,5 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { BOOKING_URL } from '../../data/siteConstants';
+import { sitePath } from '../../data/siteNav';
+import { useI18n } from '../../i18n/useI18n';
+
+const { lang, t } = useI18n(Astro);
 
 const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.kivra.KivraFi';
 const websiteUrl = 'https://www.kivra.fi';
@@ -35,7 +40,7 @@ const playDetails = [
 ];
 ---
 
-<Layout>
+<Layout seo="projects">
 	<div class="kivra-case bg-[#0a0a0a] text-white">
 		<section class="relative overflow-hidden pt-8 pb-16 md:pb-24">
 			<div
@@ -46,32 +51,23 @@ const playDetails = [
 
 			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<a
-					href="/projects"
+					href={sitePath('/projects', lang)}
 					class="inline-flex items-center gap-2 text-white/70 hover:text-[#3dcc58] transition-colors mb-10 text-sm"
 				>
 					<span aria-hidden="true">←</span>
-					<span data-i18n-key="projects.kivraDetail.back">Back to projects</span>
+					<span>{t('projects.kivraDetail.back')}</span>
 				</a>
 
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					<div>
-						<p
-							class="inline-block text-xs font-semibold tracking-widest text-[#3dcc58] border border-[#3dcc58]/40 rounded-full px-3 py-1 mb-6"
-							data-i18n-key="projects.kivraDetail.tag"
-						>
-							MOBILE APPLICATION
+						<p class="inline-block text-xs font-semibold tracking-widest text-[#3dcc58] border border-[#3dcc58]/40 rounded-full px-3 py-1 mb-6">
+							{t('projects.kivraDetail.tag')}
 						</p>
 						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-							<span data-i18n-key="projects.kivraDetail.title">Kivra</span>
-							<span class="block text-[#3dcc58]" data-i18n-key="projects.kivraDetail.titleAccent">Digital Mail</span>
+							<span>{t('projects.kivraDetail.title')}</span>
+							<span class="block text-[#3dcc58]">{t('projects.kivraDetail.titleAccent')}</span>
 						</h1>
-						<p
-							class="text-lg text-white/70 leading-relaxed mb-8 max-w-xl"
-							data-i18n-key="projects.kivraDetail.heroDescription"
-						>
-							Kivra is a free mobile app that collects your invoices and documents from hundreds of companies and
-							public organizations in one safe and easy place.
-						</p>
+						<p class="text-lg text-white/70 leading-relaxed mb-8 max-w-xl">{t('projects.kivraDetail.heroDescription')}</p>
 						<div class="flex flex-wrap gap-4">
 							<a
 								href={websiteUrl}
@@ -79,7 +75,7 @@ const playDetails = [
 								rel="noopener noreferrer"
 								class="inline-flex items-center gap-2 border border-white/30 text-white px-6 py-3 rounded-full hover:border-[#3dcc58] hover:text-[#3dcc58] transition-colors"
 							>
-								<span data-i18n-key="projects.kivraDetail.website">Visit website</span>
+								<span>{t('projects.kivraDetail.website')}</span>
 								<span aria-hidden="true">↗</span>
 							</a>
 							<a
@@ -93,7 +89,7 @@ const playDetails = [
 										d="M3.609 1.814L13.792 12 3.61 22.186a1.004 1.004 0 0 1-.569-.306 1.01 1.01 0 0 1-.218-.671V2.977c0-.25.078-.49.218-.671a1.004 1.004 0 0 1 .569-.306zm10.89 10.893l2.303 2.303-10.937 6.333a1.01 1.01 0 0 1-.445-.105l8.079-8.53zm3.686-1.28l2.868 1.657c.448.26.448.89 0 1.15l-2.868 1.657-2.514-2.514 2.514-1.95zM5.864 2.658L16.8 9.99l-2.303 2.303L5.864 2.658z"
 									></path>
 								</svg>
-								<span data-i18n-key="projects.kivraDetail.playStore">View on Google Play</span>
+								<span>{t('projects.kivraDetail.playStore')}</span>
 							</a>
 						</div>
 					</div>
@@ -128,36 +124,45 @@ const playDetails = [
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.users">
-							100K+
-						</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.usersLabel">Active users</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1">{t('projects.kivraDetail.metrics.users')}</p>
+						<p class="text-sm text-white/60">{t('projects.kivraDetail.metrics.usersLabel')}</p>
 					</div>
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.rating">
-							4.3★
-						</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.ratingLabel">App Store rating</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1">{t('projects.kivraDetail.metrics.rating')}</p>
+						<p class="text-sm text-white/60">{t('projects.kivraDetail.metrics.ratingLabel')}</p>
 					</div>
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.reviews">
-							5.1K+
-						</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.reviewsLabel">Reviews on Play Store</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1">{t('projects.kivraDetail.metrics.reviews')}</p>
+						<p class="text-sm text-white/60">{t('projects.kivraDetail.metrics.reviewsLabel')}</p>
 					</div>
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1" data-i18n-key="projects.kivraDetail.metrics.years">7+</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.kivraDetail.metrics.yearsLabel">Years in production</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#3dcc58] mb-1">{t('projects.kivraDetail.metrics.years')}</p>
+						<p class="text-sm text-white/60">{t('projects.kivraDetail.metrics.yearsLabel')}</p>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-20 border-b border-white/10">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+				<div>
+					<h2 class="text-xl font-semibold text-[#3dcc58] mb-3">{t('projects.kivraDetail.case.challenge')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.kivraDetail.case.challengeText')}</p>
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-[#3dcc58] mb-3">{t('projects.kivraDetail.case.role')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.kivraDetail.case.roleText')}</p>
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-[#3dcc58] mb-3">{t('projects.kivraDetail.case.result')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.kivraDetail.case.resultText')}</p>
 				</div>
 			</div>
 		</section>
 
 		<section class="py-16 md:py-24">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.kivraDetail.screensTitle">
-					Sample screens from the app
-				</h2>
+				<h2 class="text-2xl md:text-3xl font-bold mb-10">{t('projects.kivraDetail.screensTitle')}</h2>
 
 				<div
 					class="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth kivra-carousel"
@@ -181,9 +186,7 @@ const playDetails = [
 										decoding="async"
 									/>
 								</div>
-								<figcaption class="mt-4 text-sm text-white/60" data-i18n-key={screen.key}>
-									{screen.label}
-								</figcaption>
+								<figcaption class="mt-4 text-sm text-white/60">{t(screen.key, screen.label)}</figcaption>
 							</figure>
 						))
 					}
@@ -207,9 +210,7 @@ const playDetails = [
 
 		<section class="py-16 md:py-24 border-t border-white/10">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.kivraDetail.featuresTitle">
-					What's included
-				</h2>
+				<h2 class="text-2xl md:text-3xl font-bold mb-10">{t('projects.kivraDetail.featuresTitle')}</h2>
 
 				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
 					{
@@ -277,8 +278,8 @@ const playDetails = [
 										</svg>
 									)}
 								</div>
-								<h3 class="font-semibold mb-2" data-i18n-key={feature.titleKey}>Feature</h3>
-								<p class="text-sm text-white/60 leading-relaxed" data-i18n-key={feature.descKey}>Description</p>
+								<h3 class="font-semibold mb-2">{t(feature.titleKey)}</h3>
+								<p class="text-sm text-white/60 leading-relaxed">{t(feature.descKey)}</p>
 							</div>
 						))
 					}
@@ -290,13 +291,8 @@ const playDetails = [
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					<div>
-						<h2 class="text-2xl md:text-3xl font-bold mb-4" data-i18n-key="projects.kivraDetail.playSection.title">
-							Published on Google Play Store
-						</h2>
-						<p class="text-white/70 leading-relaxed mb-8" data-i18n-key="projects.kivraDetail.playSection.description">
-							Available for Android with strong authentication, verified senders and a focus on privacy — no spam, only
-							mail meant for you.
-						</p>
+						<h2 class="text-2xl md:text-3xl font-bold mb-4">{t('projects.kivraDetail.playSection.title')}</h2>
+						<p class="text-white/70 leading-relaxed mb-8">{t('projects.kivraDetail.playSection.description')}</p>
 						<dl class="space-y-0">
 							{
 								playDetails.map((row, i) => (
@@ -306,12 +302,8 @@ const playDetails = [
 											i < playDetails.length - 1 && 'border-b border-white/10',
 										]}
 									>
-										<dt class="text-white/60" data-i18n-key={row.labelKey}>
-											Label
-										</dt>
-										<dd class="text-[#3dcc58] font-medium" data-i18n-key={row.valueKey}>
-											Value
-										</dd>
+										<dt class="text-white/60">{t(row.labelKey)}</dt>
+										<dd class="text-[#3dcc58] font-medium">{t(row.valueKey)}</dd>
 									</div>
 								))
 							}
@@ -347,24 +339,15 @@ const playDetails = [
 					class="w-12 h-12 rounded-xl mx-auto mb-6"
 					aria-hidden="true"
 				/>
-				<h2 class="text-2xl md:text-4xl font-bold mb-4">
-					<span data-i18n-key="projects.kivraDetail.cta.title">Project delivered.</span>
-					<span class="block text-[#3dcc58]" data-i18n-key="projects.kivraDetail.cta.titleAccent">Ready for production.</span>
-				</h2>
-				<p class="text-white/70 mb-8 leading-relaxed" data-i18n-key="projects.kivraDetail.cta.subtitle">
-					Bitdesal contributed with development from inception to maintenance for 7 years in a product used by hundreds of
-					thousands in Finland.
-				</p>
+				<h2 class="text-2xl md:text-4xl font-bold mb-4">{t('projects.kivraDetail.cta.title')}</h2>
+				<p class="text-white/70 mb-8 leading-relaxed">{t('projects.kivraDetail.cta.subtitle')}</p>
 				<a
-					href="mailto:caye@bitdesal.com"
+					href={BOOKING_URL}
 					class="inline-flex items-center justify-center bg-[#3dcc58] text-[#0a0a0a] font-semibold px-10 py-4 rounded-full hover:bg-[#35b84f] transition-colors"
-					data-i18n-key="projects.kivraDetail.cta.button"
 				>
-					Work with us
+					{t('projects.kivraDetail.cta.button')}
 				</a>
-				<p class="text-xs text-white/40 mt-16" data-i18n-key="projects.kivraDetail.copyright">
-					© 2026 Bitdesal. All rights reserved.
-				</p>
+				<p class="text-xs text-white/40 mt-16">{t('projects.kivraDetail.copyright')}</p>
 			</div>
 		</section>
 	</div>

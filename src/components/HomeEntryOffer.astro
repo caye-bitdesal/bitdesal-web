@@ -1,0 +1,28 @@
+---
+import { sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
+
+const { lang, t } = useI18n(Astro);
+---
+
+<section class="py-14 md:py-16 bg-primary text-white">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl mx-auto text-center lg:text-left lg:max-w-none lg:grid lg:grid-cols-[1fr_auto] lg:gap-12 lg:items-center">
+			<div>
+				<p class="inline-flex items-center rounded-full border border-white/35 px-3 py-1 text-sm text-white/90 mb-4">
+					{t('home.entryOffer.badge')}
+				</p>
+				<p class="text-lg md:text-xl text-white/95 leading-relaxed mb-4">{t('home.entryOffer.text')}</p>
+				<p class="text-white/80">{t('home.entryOffer.line')}</p>
+			</div>
+			<div class="mt-8 lg:mt-0 flex justify-center lg:justify-end">
+				<a
+					href={sitePath('/pricing', lang)}
+					class="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg hover:bg-white/90 transition-colors"
+				>
+					{t('common.seePrices', 'Ver precios')}
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,66 +1,70 @@
 ---
+import { BOOKING_URL } from '../data/siteConstants';
 import { HOURLY_RATE_EUR } from '../data/pricing';
+import { pricingApproachHref } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
 
 interface Props {
 	level?: 'h1' | 'h2';
 	compact?: boolean;
 	showLead?: boolean;
 	hideTitle?: boolean;
+	hideRateCard?: boolean;
 	detailsHref?: string;
 }
 
-const { level = 'h1', compact = false, showLead = false, hideTitle = false, detailsHref } = Astro.props;
+const {
+	level = 'h1',
+	compact = false,
+	showLead = false,
+	hideTitle = false,
+	hideRateCard = false,
+	detailsHref,
+} = Astro.props;
 const Heading = level;
+const { lang, t } = useI18n(Astro);
+const approachHref = detailsHref ?? pricingApproachHref(lang);
 
 const included = [
-	{ key: 'pricing.included.estimate', text: 'Initial estimate from day one' },
-	{ key: 'pricing.included.time', text: 'Only dedicated time is billed' },
-	{ key: 'pricing.included.training', text: 'Training on implemented tools included' },
-	{ key: 'pricing.included.handoff', text: 'Code and documentation ready for continuity' },
-	{ key: 'pricing.included.support', text: 'Post-launch support through monthly hour bundles' },
+	'pricing.included.estimate',
+	'pricing.included.time',
+	'pricing.included.training',
+	'pricing.included.handoff',
+	'pricing.included.support',
 ] as const;
 ---
 
 <section class:list={['bg-primary text-white', compact ? 'py-14 md:py-16' : 'py-20 md:py-28']}>
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 lg:gap-16 items-center">
+		<div
+			class:list={[
+				'grid grid-cols-1 gap-10 items-center',
+				!hideRateCard && 'lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16',
+			]}
+		>
 			<div class="max-w-xl">
-				<p
-					class="inline-flex items-center rounded-full border border-white/35 px-3 py-1 text-sm text-white/90 mb-6"
-					data-i18n-key="pricing.hero.badge"
-				>
-					Transparent pricing
+				<p class="inline-flex items-center rounded-full border border-white/35 px-3 py-1 text-sm text-white/90 mb-6">
+					{t('pricing.hero.badge')}
 				</p>
 				{
 					!hideTitle && (
-						<Heading class="text-4xl md:text-5xl leading-tight mb-5" data-i18n-key="pricing.hero.title">
-							Software and AI without surprises
-						</Heading>
+						<Heading class="text-4xl md:text-5xl leading-tight mb-5">{t('pricing.hero.title')}</Heading>
 					)
 				}
-				{
-					showLead && (
-						<p class="text-lg md:text-xl text-white/95 mb-4" data-i18n-key="pricing.hero.lead">
-							Consulting to digitize how a company works and integrate AI where it cuts bureaucracy.
-						</p>
-					)
-				}
-				<p class="text-lg text-white/80 mb-8" data-i18n-key="pricing.hero.subtitle">
-					We work in phases so you know what we are solving, how long it takes and what it will cost before
-					development begins.
-				</p>
+				{showLead && <p class="text-lg md:text-xl text-white/95 mb-4">{t('pricing.hero.lead')}</p>}
+				<p class="text-lg text-white/80 mb-8">{t('pricing.hero.subtitle')}</p>
 				<div class="flex flex-wrap items-center gap-x-6 gap-y-3">
 					<a
-						href="mailto:caye@bitdesal.com"
+						href={BOOKING_URL}
 						class="inline-flex items-center gap-2 bg-white text-primary px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors"
 					>
-						<span data-i18n-key="pricing.hero.cta">Request an initial assessment</span>
+						{t('pricing.hero.cta')}
 						<span aria-hidden="true">→</span>
 					</a>
 					{
-						detailsHref && (
-							<a href={detailsHref} class="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors">
-								<span data-i18n-key="pricing.hero.details">See the approach</span>
+						approachHref && (
+							<a href={approachHref} class="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors">
+								{t('pricing.hero.details')}
 								<span aria-hidden="true">→</span>
 							</a>
 						)
@@ -68,35 +72,29 @@ const included = [
 				</div>
 			</div>
 
-			<aside class="rounded-2xl border border-white/25 bg-white/10 p-6 sm:p-7">
-				<p class="flex items-baseline gap-1.5 text-white mb-1">
-					<span class="text-5xl tracking-tight">{HOURLY_RATE_EUR}€</span>
-					<span class="text-lg text-white/80" data-i18n-key="pricing.rate.unit">/hour</span>
-				</p>
-				<p class="text-sm text-white/70 mb-6" data-i18n-key="pricing.rate.note">Single rate. VAT not included.</p>
-				<ul class="space-y-3">
-					{
-						included.map((item) => (
-							<li class="flex items-start gap-2.5 text-sm text-white/90 leading-snug">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-									class="h-4 w-4 mt-0.5 shrink-0 text-white"
-									aria-hidden="true"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.3a1 1 0 0 1-1.42.002l-3.25-3.25a1 1 0 1 1 1.414-1.414l2.54 2.54 6.54-6.586a1 1 0 0 1 1.42-.006Z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span data-i18n-key={item.key}>{item.text}</span>
-							</li>
-						))
-					}
-				</ul>
-			</aside>
+			{
+				!hideRateCard && (
+					<aside class="rounded-2xl border border-white/25 bg-white/10 p-6 sm:p-7">
+						<p class="flex items-baseline gap-1.5 text-white mb-1">
+							<span class="text-5xl tracking-tight">{HOURLY_RATE_EUR} €</span>
+							<span class="text-lg text-white/80">{t('pricing.rate.unit')}</span>
+						</p>
+						<p class="text-sm text-white/70 mb-6">{t('pricing.rate.note')}</p>
+						<ul class="space-y-3">
+							{
+								included.map((key) => (
+									<li class="flex items-start gap-2.5 text-sm text-white/90 leading-snug">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 mt-0.5 shrink-0 text-white" aria-hidden="true">
+											<path fill-rule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.25 7.3a1 1 0 0 1-1.42.002l-3.25-3.25a1 1 0 1 1 1.414-1.414l2.54 2.54 6.54-6.586a1 1 0 0 1 1.42-.006Z" clip-rule="evenodd" />
+										</svg>
+										<span>{t(key)}</span>
+									</li>
+								))
+							}
+						</ul>
+					</aside>
+				)
+			}
 		</div>
 	</div>
 </section>

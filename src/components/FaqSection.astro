@@ -1,0 +1,37 @@
+---
+import { useI18n } from '../i18n/useI18n';
+
+interface FaqItem {
+	qKey: string;
+	aKey: string;
+}
+
+interface Props {
+	titleKey: string;
+	items: FaqItem[];
+}
+
+const { titleKey, items } = Astro.props;
+const { t } = useI18n(Astro);
+---
+
+<section class="py-16 md:py-24 bg-white">
+	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl md:text-4xl mb-10 text-center">{t(titleKey)}</h2>
+		<div class="space-y-3">
+			{
+				items.map((item, index) => (
+					<details class="group rounded-xl border border-border bg-secondary/40 open:bg-white open:shadow-sm">
+						<summary class="cursor-pointer list-none px-5 py-4 font-medium flex items-center justify-between gap-4">
+							<span>{t(item.qKey)}</span>
+							<span class="text-primary shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">
+								+
+							</span>
+						</summary>
+						<div class="px-5 pb-4 text-foreground/75 leading-relaxed">{t(item.aKey)}</div>
+					</details>
+				))
+			}
+		</div>
+	</div>
+</section>

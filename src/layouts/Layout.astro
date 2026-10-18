@@ -2,107 +2,99 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { defaultLanguage, supportedLanguages, translations } from '../i18n/translations';
+import Analytics from '../components/Analytics.astro';
+import { CONTACT_EMAIL, DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
+import { getPageSeo, type PageSeoId } from '../i18n/seo';
+import { useI18n } from '../i18n/useI18n';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { supportedLanguages, type Language } from '../i18n/translations';
 
-const i18nPayload = {
-	defaultLanguage,
-	supportedLanguages,
-	translations,
+interface Props {
+	seo?: PageSeoId;
+	title?: string;
+	description?: string;
+	ogImage?: string;
+}
+
+const { seo = 'home', title: titleOverride, description: descOverride, ogImage = DEFAULT_OG_IMAGE } = Astro.props;
+const { lang } = useI18n(Astro);
+const seoMeta = getPageSeo(seo, lang);
+const title = titleOverride ?? seoMeta.title;
+const description = descOverride ?? seoMeta.description;
+
+const canonicalPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
+
+const pathWithoutLocale =
+	canonicalPath.replace(/^\/(en|fi)(?=\/|$)/, '').replace(/^\//, '') || '';
+
+function hreflangPath(locale: Language): string {
+	const relative = getRelativeLocaleUrl(locale, pathWithoutLocale);
+	return new URL(relative, SITE_ORIGIN).href;
+}
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'ProfessionalService',
+			name: 'Bitdesal',
+			url: SITE_ORIGIN,
+			email: CONTACT_EMAIL,
+			areaServed: 'ES',
+			address: {
+				'@type': 'PostalAddress',
+				addressLocality: 'Elche',
+				addressRegion: 'Comunidad Valenciana',
+				addressCountry: 'ES',
+			},
+		},
+		{
+			'@type': 'Person',
+			name: 'Caye Ruiz',
+			jobTitle: 'Fundador de Bitdesal',
+			email: CONTACT_EMAIL,
+			url: `${SITE_ORIGIN}/about`,
+			worksFor: { '@type': 'Organization', name: 'Bitdesal' },
+		},
+	],
 };
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Bitdesal</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		{
+			supportedLanguages.map((locale) => (
+				<link rel="alternate" hreflang={locale} href={hreflangPath(locale)} />
+			))
+		}
+		<link rel="alternate" hreflang="x-default" href={hreflangPath('es')} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={new URL(ogImage, SITE_ORIGIN).href} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(ogImage, SITE_ORIGIN).href} />
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+		<Analytics />
 	</head>
-	<body class="min-h-screen flex flex-col">
+	<body class="min-h-screen flex flex-col overflow-x-hidden">
 		<Header />
 		<main class="flex-1">
 			<slot />
 		</main>
 		<Footer />
-
-		<script is:inline define:vars={{ i18nPayload }}>
-			// `define:vars` safely serializes server data into this script.
-			const I18N = /** @type {const} */ (i18nPayload);
-
-			/** @type {(obj: any, key: string) => string} */
-			function t(obj, key) {
-				const keys = key.split('.');
-				let value = obj;
-				for (const k of keys) {
-					if (value && typeof value === 'object') value = value[k];
-					else return key;
-				}
-				return typeof value === 'string' ? value : key;
-			}
-
-			/** @type {(lang: string) => void} */
-			function applyLanguage(lang) {
-				if (!I18N.supportedLanguages.includes(lang)) lang = I18N.defaultLanguage;
-
-				localStorage.setItem('language', lang);
-				document.documentElement.lang = lang;
-
-				const dict = I18N.translations[lang] ?? I18N.translations[I18N.defaultLanguage];
-
-				// Update text nodes
-				document.querySelectorAll('[data-i18n-key]').forEach((el) => {
-					const key = el.getAttribute('data-i18n-key');
-					const attr = el.getAttribute('data-i18n-attr');
-					if (!key) return;
-					const value = t(dict, key);
-					if (attr) el.setAttribute(attr, value);
-					else {
-						el.textContent = value;
-						const isPrimaryNavLink = el.matches(
-							'header a[data-i18n-key^="nav."], footer a[data-i18n-key^="footer."]',
-						);
-						// Never hide main nav links — empty/missing copy should not remove menu items.
-						el.hidden = isPrimaryNavLink ? false : !value;
-					}
-				});
-
-				const langLabels = { en: 'EN', es: 'ES', fi: 'FI' };
-				document.querySelectorAll('[data-lang-label]').forEach((el) => {
-					el.textContent = langLabels[lang] ?? lang.toUpperCase();
-				});
-				document.querySelectorAll('[data-lang]').forEach((el) => {
-					const isCurrent = el.getAttribute('data-lang') === lang;
-					const item = el.closest('li');
-					if (item) item.classList.toggle('hidden', isCurrent);
-					el.setAttribute('aria-selected', String(isCurrent));
-				});
-
-				window.dispatchEvent(new CustomEvent('bitdesal:language', { detail: { lang } }));
-			}
-
-			/** @type {() => string} */
-			function getInitialLanguage() {
-				const url = new URL(window.location.href);
-				const fromQuery = url.searchParams.get('lang');
-				if (fromQuery && I18N.supportedLanguages.includes(fromQuery)) return fromQuery;
-
-				const saved = localStorage.getItem('language');
-				if (saved && I18N.supportedLanguages.includes(saved)) return saved;
-
-				return I18N.defaultLanguage;
-			}
-
-			// Expose for header/footer handlers
-			window.bitdesalI18n = {
-				getLanguage: getInitialLanguage,
-				setLanguage: applyLanguage,
-			};
-
-			applyLanguage(getInitialLanguage());
-		</script>
 	</body>
 </html>
-

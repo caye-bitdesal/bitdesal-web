@@ -1,7 +1,10 @@
 ---
+import { CONTACT_EMAIL } from '../data/siteConstants';
 import { footerCompanyLinks, sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
 
 const year = new Date().getFullYear();
+const { lang, t } = useI18n(Astro);
 ---
 
 <footer class="bg-[#1a1a1a] text-white">
@@ -9,19 +12,18 @@ const year = new Date().getFullYear();
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<div>
 				<h3 class="mb-4">Bitdesal</h3>
-				<p class="text-white/70 text-sm">
-					<span data-i18n-key="footer.tagline">Android Development, AI and High-Level Consulting</span>
-				</p>
+				<p class="text-white/70 text-sm">{t('footer.tagline')}</p>
+				<p class="text-white/60 text-sm mt-3">{t('footer.location')}</p>
 			</div>
 
 			<div>
-				<h4 class="mb-4" data-i18n-key="footer.companyTitle">Company</h4>
+				<h4 class="mb-4">{t('footer.companyTitle')}</h4>
 				<ul class="space-y-2 text-sm text-white/70">
 					{
 						footerCompanyLinks.map((link) => (
 							<li>
-								<a href={sitePath(link.href)} class="hover:text-white transition-colors" data-i18n-key={link.labelKey}>
-									{link.fallback}
+								<a href={sitePath(link.href, lang)} class="hover:text-white transition-colors">
+									{t(link.labelKey, link.fallback)}
 								</a>
 							</li>
 						))
@@ -30,15 +32,11 @@ const year = new Date().getFullYear();
 			</div>
 
 			<div>
-				<h4 class="mb-4" data-i18n-key="footer.contactTitle">Contact</h4>
+				<h4 class="mb-4">{t('footer.contactTitle')}</h4>
 				<ul class="space-y-2 text-sm text-white/70">
 					<li>
-						<a
-							href="mailto:caye@bitdesal.com"
-							class="hover:text-white transition-colors"
-							data-i18n-key="footer.contact"
-						>
-							Contact
+						<a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-white transition-colors">
+							{CONTACT_EMAIL}
 						</a>
 					</li>
 					<li>
@@ -47,9 +45,8 @@ const year = new Date().getFullYear();
 							target="_blank"
 							rel="noopener noreferrer"
 							class="hover:text-white transition-colors"
-							data-i18n-key="footer.linkedin"
 						>
-							LinkedIn
+							{t('footer.linkedin')}
 						</a>
 					</li>
 				</ul>
@@ -58,8 +55,7 @@ const year = new Date().getFullYear();
 
 		<div class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/70">
 			<p>
-				&copy; {year} Bitdesal.
-				<span data-i18n-key="footer.rights">All rights reserved.</span>
+				&copy; {year} Bitdesal. {t('footer.rights')}
 			</p>
 		</div>
 	</div>

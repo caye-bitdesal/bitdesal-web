@@ -1,3 +1,6 @@
+import { localePath } from '../i18n/paths';
+import type { Language } from '../i18n/translations';
+
 export type NavLink = {
 	href: string;
 	labelKey: string;
@@ -21,13 +24,11 @@ export const footerCompanyLinks: NavLink[] = [
 	{ href: '/blog', labelKey: 'footer.blog', fallback: 'Blog' },
 ];
 
-/** Absolute path from site root (respects Astro base URL). */
-export function sitePath(path: string): string {
-	const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-	if (!path || path === '/') return base || '/';
-	const normalized = path.startsWith('/') ? path : `/${path}`;
-	return `${base}${normalized}`;
+export function sitePath(path: string, lang: Language = 'es'): string {
+	return localePath(path, lang);
 }
 
 /** Pricing page — approach section. */
-export const pricingApproachHref = sitePath('/pricing#approach');
+export function pricingApproachHref(lang: Language): string {
+	return `${sitePath('/pricing', lang)}#approach`;
+}
