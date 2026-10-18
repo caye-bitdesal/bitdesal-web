@@ -1,11 +1,10 @@
 ---
 import CtaSection from '../components/CtaSection.astro';
-import FaqSection from '../components/FaqSection.astro';
-import HomeEntryOffer from '../components/HomeEntryOffer.astro';
 import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
 import StatsStrip from '../components/StatsStrip.astro';
 import Layout from '../layouts/Layout.astro';
 import { BOOKING_URL, SHOW_CLIENT_LOGOS, SHOW_TESTIMONIAL } from '../data/siteConstants';
+import { projectCards } from '../data/projectCards';
 import { sitePath } from '../data/siteNav';
 import { linkedInPosts } from '../data/linkedInPosts';
 import { useI18n } from '../i18n/useI18n';
@@ -18,21 +17,6 @@ const whyCards = [
 	{ icon: 'unlock', titleKey: 'home.whyBitdesal.independence.title', descKey: 'home.whyBitdesal.independence.description' },
 	{ icon: 'spark', titleKey: 'home.whyBitdesal.ai.title', descKey: 'home.whyBitdesal.ai.description' },
 ] as const;
-
-const workSteps = [
-	'home.howIWork.steps.call',
-	'home.howIWork.steps.study',
-	'home.howIWork.steps.build',
-	'home.howIWork.steps.handoff',
-] as const;
-
-const faqItems = [
-	{ qKey: 'home.faq.items.duration.q', aKey: 'home.faq.items.duration.a' },
-	{ qKey: 'home.faq.items.tools.q', aKey: 'home.faq.items.tools.a' },
-	{ qKey: 'home.faq.items.worth.q', aKey: 'home.faq.items.worth.a' },
-	{ qKey: 'home.faq.items.after.q', aKey: 'home.faq.items.after.a' },
-	{ qKey: 'home.faq.items.remote.q', aKey: 'home.faq.items.remote.a' },
-];
 ---
 
 <Layout seo="home">
@@ -44,7 +28,7 @@ const faqItems = [
 			width="1024"
 			height="480"
 		/>
-		<div class="absolute inset-0 bg-gradient-to-r from-[#1a3a38]/78 via-[#1a3a38]/55 to-[#1a3a38]/15" aria-hidden="true"></div>
+		<div class="absolute inset-0 bg-gradient-to-r from-[#1a3a38]/65 via-[#1a3a38]/45 to-[#1a3a38]/10" aria-hidden="true"></div>
 		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
 			<div class="max-w-3xl">
 				<h1 class="text-4xl md:text-6xl mb-6">{t('home.hero.title')}</h1>
@@ -57,18 +41,52 @@ const faqItems = [
 						{t('common.bookCta', 'Agenda 30 min gratis')}
 					</a>
 					<a
-						href="#como-trabajo"
+						href="#servicios"
 						class="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors"
 					>
-						{t('common.seeHowIWork', 'Ver cómo trabajo')}
+						{t('common.seeHowIWork', 'Ver qué hacemos')}
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<section id="servicios" class="py-16 md:py-20 bg-white scroll-mt-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<a
+					href={sitePath('/consultoria-ia', lang)}
+					class="group flex flex-col rounded-2xl border-2 border-border bg-secondary/40 p-8 md:p-10 hover:border-primary hover:shadow-lg transition-all"
+				>
+					<h2 class="text-2xl md:text-3xl mb-4 group-hover:text-primary transition-colors">
+						{t('home.serviceCards.ia.title')}
+					</h2>
+					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.ia.description')}</p>
+					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.ia.priceHint')}</p>
+					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+						{t('home.serviceCards.ia.cta')}
+						<span aria-hidden="true">→</span>
+					</span>
+				</a>
+				<a
+					href={sitePath('/consultoria-software', lang)}
+					class="group flex flex-col rounded-2xl border-2 border-border bg-secondary/40 p-8 md:p-10 hover:border-primary hover:shadow-lg transition-all"
+				>
+					<h2 class="text-2xl md:text-3xl mb-4 group-hover:text-primary transition-colors">
+						{t('home.serviceCards.software.title')}
+					</h2>
+					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.software.description')}</p>
+					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.software.priceHint')}</p>
+					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+						{t('home.serviceCards.software.cta')}
+						<span aria-hidden="true">→</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
 	<StatsStrip />
-	<HomeEntryOffer />
 
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,38 +133,14 @@ const faqItems = [
 		</div>
 	</section>
 
-	<section id="como-trabajo" class="py-16 md:py-24 bg-secondary scroll-mt-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl mb-4">{t('home.howIWork.title')}</h2>
-				<p class="text-lg text-[#3d4543] max-w-2xl mx-auto">{t('home.howIWork.subtitle')}</p>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-				{
-					workSteps.map((stepKey, index) => (
-						<div class="relative bg-white rounded-lg p-6 shadow-sm">
-							<div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4">
-								<span>{index + 1}</span>
-							</div>
-							<h3 class="mb-2">{t(`${stepKey}.title`)}</h3>
-							<p class="text-[#3d4543]">{t(`${stepKey}.description`)}</p>
-						</div>
-					))
-				}
-			</div>
-			<p class="text-center text-[#3d4543] max-w-3xl mx-auto">{t('home.howIWork.core')}</p>
-		</div>
-	</section>
-
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 				<div class="order-2 lg:order-1">
 					<h2 class="text-3xl md:text-4xl mb-6">{t('home.behind.title')}</h2>
 					<p class="text-lg text-foreground/80 leading-relaxed mb-8">{t('home.behind.text')}</p>
-					<a href={sitePath('/about', lang)} class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-						{t('common.meetMe', 'Conóceme')}
+					<a href={sitePath('/nosotros', lang)} class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+						{t('common.meetUs', 'Conócenos')}
 						<span aria-hidden="true">→</span>
 					</a>
 				</div>
@@ -189,26 +183,26 @@ const faqItems = [
 				<p class="text-lg text-foreground/70 max-w-2xl mx-auto">{t('home.projects.subtitle')}</p>
 			</div>
 
-			<div class="max-w-3xl mx-auto mb-10">
-				<a
-					href={sitePath('/projects/kivra', lang)}
-					class="group block bg-white rounded-xl p-8 md:p-10 shadow-sm border border-border hover:border-primary hover:shadow-md transition-all text-left"
-				>
-					<div class="flex items-start gap-6 mb-8">
-						<img src="/kivra-app-icon.png" alt="Icono de la app Kivra Finland" width="96" height="96" class="w-24 h-24 rounded-2xl shadow-lg shrink-0" loading="lazy" />
-						<div class="min-w-0 pt-1">
-							<h3 class="text-3xl md:text-4xl mb-2 group-hover:text-primary transition-colors">{t('projects.kivra.name')}</h3>
-							<p class="text-foreground/60">
-								{t('projects.kivra.tag')} · {t('projects.kivra.updated')}
-							</p>
-						</div>
-					</div>
-					<p class="text-lg text-foreground/80 leading-relaxed mb-8">{t('projects.kivra.description')}</p>
-					<span class="inline-flex items-center gap-2 text-primary text-lg group-hover:gap-3 transition-all">
-						{t('projects.viewProject')}
-						<span aria-hidden="true">→</span>
-					</span>
-				</a>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-10">
+				{
+					projectCards.map((project) => (
+						<a
+							href={sitePath(project.href, lang)}
+							class="group block bg-white rounded-xl p-8 shadow-sm border border-border hover:border-primary hover:shadow-md transition-all text-left"
+						>
+							<div class="flex items-start gap-6 mb-6">
+								<img src={project.iconSrc} alt={project.iconAlt} width="80" height="80" class="w-20 h-20 rounded-2xl shadow-lg shrink-0" loading="lazy" />
+								<div class="min-w-0 pt-1">
+									<h3 class="text-2xl mb-2 group-hover:text-primary transition-colors">{t(project.nameKey)}</h3>
+									<p class="text-foreground/60 text-sm">
+										{t(project.tagKey)} · {t(project.updatedKey)}
+									</p>
+								</div>
+							</div>
+							<p class="text-foreground/80 leading-relaxed">{t(project.descriptionKey)}</p>
+						</a>
+					))
+				}
 			</div>
 
 			<div class="text-center">
@@ -220,15 +214,13 @@ const faqItems = [
 		</div>
 	</section>
 
-	<FaqSection titleKey="home.faq.title" items={faqItems} />
-
 	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-12">
 				<h2 class="text-3xl md:text-4xl mb-4">{t('home.blog.title')}</h2>
 				<p class="text-lg text-foreground/70 max-w-2xl mx-auto">{t('home.blog.subtitle')}</p>
 			</div>
-			<LinkedInPostsCarousel posts={linkedInPosts} />
+			<LinkedInPostsCarousel posts={linkedInPosts.slice(0, 3)} />
 			<div class="text-center mt-10">
 				<a href={sitePath('/blog', lang)} class="inline-flex items-center gap-2 text-primary text-lg hover:gap-3 transition-all">
 					{t('home.blog.viewAll')}

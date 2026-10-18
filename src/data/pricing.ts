@@ -1,28 +1,31 @@
-/** Hourly rate (EUR, VAT excluded). Update amounts here only. */
+/** Hourly rate for Spain / domestic (EUR, + IVA). */
 export const HOURLY_RATE_EUR = 45;
+
+/** Software consulting — international EU clients (VAT reverse charge / client-side). */
+export const HOURLY_RATE_INTERNATIONAL_EU_EUR = 60;
+
+/** Software consulting — clients outside the EU. */
+export const HOURLY_RATE_INTERNATIONAL_NON_EU_EUR = 75;
 
 export type PhaseEstimateRaw = {
 	id: string;
-	hours: string;
-	minEur: number;
-	maxEur: number;
+	/** Indicative hours (single midpoint) for tables and totals. */
+	hoursApprox: number;
 };
 
-/** Indicative phase hours and amounts at {@link HOURLY_RATE_EUR}/h. */
+/** Indicative phase hours at {@link HOURLY_RATE_EUR}/h (+ IVA). */
 export const phaseEstimatesRaw: PhaseEstimateRaw[] = [
-	{ id: 'assessment', hours: '6–10 h', minEur: 270, maxEur: 450 },
-	{ id: 'study', hours: '10–20 h', minEur: 450, maxEur: 900 },
-	{ id: 'redesign', hours: '8–15 h', minEur: 360, maxEur: 675 },
-	{ id: 'technology', hours: '6–12 h', minEur: 270, maxEur: 540 },
-	{ id: 'plan', hours: '5–8 h', minEur: 225, maxEur: 360 },
-	{ id: 'delivery', hours: '15–30 h', minEur: 675, maxEur: 1350 },
+	{ id: 'assessment', hoursApprox: 8 },
+	{ id: 'study', hoursApprox: 16 },
+	{ id: 'redesign', hoursApprox: 10 },
+	{ id: 'technology', hoursApprox: 9 },
+	{ id: 'plan', hoursApprox: 6 },
+	{ id: 'delivery', hoursApprox: 24 },
 ];
 
-export const projectTotalRaw = {
-	hours: '50–95 h',
-	minEur: 2250,
-	maxEur: 4275,
-};
+export function getProjectTotalHoursApprox(): number {
+	return phaseEstimatesRaw.reduce((sum, phase) => sum + phase.hoursApprox, 0);
+}
 
 export const supportBundles = [
 	{ id: 'h5', hours: 5, amountEur: 225 },

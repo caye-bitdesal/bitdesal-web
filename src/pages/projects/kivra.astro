@@ -360,9 +360,18 @@ const playDetails = [
 	}
 
 	body:has(.kivra-case) header a:not(.contact-btn),
-	body:has(.kivra-case) header button:not(.contact-btn),
+	body:has(.kivra-case) header button:not(.contact-btn):not([data-theme-toggle]),
 	body:has(.kivra-case) header .text-foreground\/70 {
 		color: rgba(255, 255, 255, 0.75);
+	}
+
+	body:has(.kivra-case) header [data-theme-toggle] {
+		border-color: rgba(255, 255, 255, 0.25);
+		color: rgba(255, 255, 255, 0.85);
+	}
+
+	body:has(.kivra-case) header .header-utilities {
+		border-color: rgba(255, 255, 255, 0.15);
 	}
 
 	body:has(.kivra-case) header .contact-btn {

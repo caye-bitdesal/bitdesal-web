@@ -1,6 +1,11 @@
-import { formatEur, formatEurRange } from '../i18n/formatCurrency';
+import { formatEur } from '../i18n/formatCurrency';
 import type { Language } from '../i18n/translations';
-import { phaseEstimatesRaw, projectTotalRaw, supportBundles } from './pricing';
+import {
+	getProjectTotalHoursApprox,
+	HOURLY_RATE_EUR,
+	phaseEstimatesRaw,
+	supportBundles,
+} from './pricing';
 
 const phaseCopy = {
 	assessment: {
@@ -56,15 +61,16 @@ const phaseCopy = {
 export function getServicePhases(lang: Language) {
 	return phaseEstimatesRaw.map((estimate) => ({
 		...phaseCopy[estimate.id as keyof typeof phaseCopy],
-		hours: estimate.hours,
-		amount: formatEurRange(estimate.minEur, estimate.maxEur, lang),
+		hours: `${estimate.hoursApprox} h`,
+		amount: formatEur(estimate.hoursApprox * HOURLY_RATE_EUR, lang),
 	}));
 }
 
 export function getProjectTotal(lang: Language) {
+	const totalHours = getProjectTotalHoursApprox();
 	return {
-		hours: projectTotalRaw.hours,
-		amount: formatEurRange(projectTotalRaw.minEur, projectTotalRaw.maxEur, lang),
+		hours: `${totalHours} h`,
+		amount: formatEur(totalHours * HOURLY_RATE_EUR, lang),
 	};
 }
 

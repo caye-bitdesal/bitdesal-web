@@ -1,10 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { BOOKING_URL } from '../../data/siteConstants';
+import { sitePath } from '../../data/siteNav';
+import { useI18n } from '../../i18n/useI18n';
+
+const { lang, t } = useI18n(Astro);
 
 const heroPhones = [
-	{ src: '/projects/yossa/screen-timeline.png', alt: 'Yössä timeline with offers' },
-	{ src: '/projects/yossa/screen-offer.png', alt: 'Yössä bar offer' },
-	{ src: '/projects/yossa/screen-map.png', alt: 'Yössä venues map' },
+	{ src: '/projects/yossa/screen-timeline.png', altKey: 'projects.yossaDetail.screens.timeline' },
+	{ src: '/projects/yossa/screen-offer.png', altKey: 'projects.yossaDetail.screens.offer' },
+	{ src: '/projects/yossa/screen-map.png', altKey: 'projects.yossaDetail.screens.map' },
 ];
 
 const carouselScreens = [
@@ -32,7 +37,7 @@ const playDetails = [
 ];
 ---
 
-<Layout>
+<Layout seo="projects">
 	<div class="yossa-case bg-[#0a0a0a] text-white">
 		<section class="relative overflow-hidden pt-8 pb-16 md:pb-24">
 			<div
@@ -43,35 +48,24 @@ const playDetails = [
 
 			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<a
-					href="/projects"
+					href={sitePath('/projects', lang)}
 					class="inline-flex items-center gap-2 text-white/70 hover:text-[#6eb5ff] transition-colors mb-10 text-sm"
 				>
 					<span aria-hidden="true">←</span>
-					<span data-i18n-key="projects.yossaDetail.back">Back to projects</span>
+					<span>{t('projects.yossaDetail.back')}</span>
 				</a>
 
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					<div>
-						<p
-							class="inline-block text-xs font-semibold tracking-widest text-[#6eb5ff] border border-[#6eb5ff]/40 rounded-full px-3 py-1 mb-6"
-							data-i18n-key="projects.yossaDetail.tag"
-						>
-							MOBILE APPLICATION
+						<p class="inline-block text-xs font-semibold tracking-widest text-[#6eb5ff] border border-[#6eb5ff]/40 rounded-full px-3 py-1 mb-6">
+							{t('projects.yossaDetail.tag')}
 						</p>
 						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-							<span data-i18n-key="projects.yossaDetail.title">Yössä</span>
-							<span class="block text-[#6eb5ff]" data-i18n-key="projects.yossaDetail.titleAccent">Your guide in the night</span>
+							<span>{t('projects.yossaDetail.title')}</span>
+							<span class="block text-[#6eb5ff]">{t('projects.yossaDetail.titleAccent')}</span>
 						</h1>
-						<p
-							class="text-lg text-white/70 leading-relaxed mb-4 max-w-xl"
-							data-i18n-key="projects.yossaDetail.heroDescription"
-						>
-							A nightlife app to discover bars, concerts and special events around you — with drink offers that unlock when
-							you are close enough to use them.
-						</p>
-						<p class="text-sm text-white/50 max-w-xl" data-i18n-key="projects.yossaDetail.discontinued">
-							The app is no longer available on Google Play. This page preserves the product as a case study.
-						</p>
+						<p class="text-lg text-white/70 leading-relaxed mb-4 max-w-xl">{t('projects.yossaDetail.heroDescription')}</p>
+						<p class="text-sm text-white/50 max-w-xl">{t('projects.yossaDetail.discontinued')}</p>
 					</div>
 
 					<div class="flex justify-center items-end gap-3 md:gap-4 min-h-[280px] md:min-h-[360px]">
@@ -87,7 +81,7 @@ const playDetails = [
 								>
 									<img
 										src={phone.src}
-										alt={phone.alt}
+										alt={t(phone.altKey)}
 										class="w-full rounded-[1.75rem] shadow-2xl shadow-black/60 ring-1 ring-white/10"
 										loading={i === 1 ? 'eager' : 'lazy'}
 										decoding="async"
@@ -104,20 +98,20 @@ const playDetails = [
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.rating">4★</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.ratingLabel">Play Store rating</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1">{t('projects.yossaDetail.metrics.rating')}</p>
+						<p class="text-sm text-white/60">{t('projects.yossaDetail.metrics.ratingLabel')}</p>
 					</div>
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.city">Helsinki</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.cityLabel">Launch market</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1">{t('projects.yossaDetail.metrics.city')}</p>
+						<p class="text-sm text-white/60">{t('projects.yossaDetail.metrics.cityLabel')}</p>
 					</div>
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.offers">GPS</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.offersLabel">Proximity offers</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1">{t('projects.yossaDetail.metrics.offers')}</p>
+						<p class="text-sm text-white/60">{t('projects.yossaDetail.metrics.offersLabel')}</p>
 					</div>
 					<div>
-						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1" data-i18n-key="projects.yossaDetail.metrics.platform">Android</p>
-						<p class="text-sm text-white/60" data-i18n-key="projects.yossaDetail.metrics.platformLabel">Platform</p>
+						<p class="text-3xl md:text-4xl font-bold text-[#6eb5ff] mb-1">{t('projects.yossaDetail.metrics.platform')}</p>
+						<p class="text-sm text-white/60">{t('projects.yossaDetail.metrics.platformLabel')}</p>
 					</div>
 				</div>
 			</div>
@@ -125,9 +119,7 @@ const playDetails = [
 
 		<section class="py-16 md:py-24">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.yossaDetail.screensTitle">
-					Sample screens from the app
-				</h2>
+				<h2 class="text-2xl md:text-3xl font-bold mb-10">{t('projects.yossaDetail.screensTitle')}</h2>
 
 				<div
 					class="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth yossa-carousel"
@@ -145,15 +137,13 @@ const playDetails = [
 								<div class="rounded-[1.75rem] p-1 transition-colors yossa-slide-frame">
 									<img
 										src={screen.src}
-										alt=""
+										alt={t(screen.key, screen.label)}
 										class="w-[140px] md:w-[180px] rounded-[1.5rem] shadow-xl"
 										loading="lazy"
 										decoding="async"
 									/>
 								</div>
-								<figcaption class="mt-4 text-sm text-white/60" data-i18n-key={screen.key}>
-									{screen.label}
-								</figcaption>
+								<figcaption class="mt-4 text-sm text-white/60">{t(screen.key, screen.label)}</figcaption>
 							</figure>
 						))
 					}
@@ -177,9 +167,7 @@ const playDetails = [
 
 		<section class="py-16 md:py-24 border-t border-white/10">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-2xl md:text-3xl font-bold mb-10" data-i18n-key="projects.yossaDetail.featuresTitle">
-					What's included
-				</h2>
+				<h2 class="text-2xl md:text-3xl font-bold mb-10">{t('projects.yossaDetail.featuresTitle')}</h2>
 
 				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
 					{
@@ -218,8 +206,8 @@ const playDetails = [
 										</svg>
 									)}
 								</div>
-								<h3 class="font-semibold mb-2" data-i18n-key={feature.titleKey}>Feature</h3>
-								<p class="text-sm text-white/60 leading-relaxed" data-i18n-key={feature.descKey}>Description</p>
+								<h3 class="font-semibold mb-2">{t(feature.titleKey)}</h3>
+								<p class="text-sm text-white/60 leading-relaxed">{t(feature.descKey)}</p>
 							</div>
 						))
 					}
@@ -231,13 +219,8 @@ const playDetails = [
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					<div>
-						<h2 class="text-2xl md:text-3xl font-bold mb-4" data-i18n-key="projects.yossaDetail.playSection.title">
-							Product legacy
-						</h2>
-						<p class="text-white/70 leading-relaxed mb-8" data-i18n-key="projects.yossaDetail.playSection.description">
-							Launched in Helsinki to connect nightlife venues with people nearby. Offers and events were surfaced on a
-							timeline and map, with redemption tied to your location.
-						</p>
+						<h2 class="text-2xl md:text-3xl font-bold mb-4">{t('projects.yossaDetail.playSection.title')}</h2>
+						<p class="text-white/70 leading-relaxed mb-8">{t('projects.yossaDetail.playSection.description')}</p>
 						<dl class="space-y-0">
 							{
 								playDetails.map((row, i) => (
@@ -247,8 +230,8 @@ const playDetails = [
 											i < playDetails.length - 1 && 'border-b border-white/10',
 										]}
 									>
-										<dt class="text-white/60" data-i18n-key={row.labelKey}>Label</dt>
-										<dd class="text-[#6eb5ff] font-medium" data-i18n-key={row.valueKey}>Value</dd>
+										<dt class="text-white/60">{t(row.labelKey)}</dt>
+										<dd class="text-[#6eb5ff] font-medium">{t(row.valueKey)}</dd>
 									</div>
 								))
 							}
@@ -257,14 +240,14 @@ const playDetails = [
 					<div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 items-center">
 						<img
 							src="/projects/yossa/screen-venues-stack.png"
-							alt="Yössä venues and events"
+							alt="Pantallas de locales y eventos en Yössä"
 							class="w-full max-w-[280px] rounded-2xl shadow-2xl ring-1 ring-white/10"
 							loading="lazy"
 							decoding="async"
 						/>
 						<img
 							src="/projects/yossa/hero-banner.png"
-							alt="Yössä nightlife"
+							alt="Banner de la app Yössä"
 							class="w-full max-w-[200px] rounded-2xl shadow-2xl ring-1 ring-white/10 sm:translate-y-6"
 							loading="lazy"
 							decoding="async"
@@ -278,30 +261,24 @@ const playDetails = [
 			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 				<img
 					src="/projects/yossa/yossa-app-icon.png"
-					alt=""
+					alt="Icono de la app Yössä"
 					width="48"
 					height="48"
 					class="w-12 h-12 rounded-xl mx-auto mb-6"
-					aria-hidden="true"
+					loading="lazy"
 				/>
 				<h2 class="text-2xl md:text-4xl font-bold mb-4">
-					<span data-i18n-key="projects.yossaDetail.cta.title">Nightlife product,</span>
-					<span class="block text-[#6eb5ff]" data-i18n-key="projects.yossaDetail.cta.titleAccent">built for the real world.</span>
+					<span>{t('projects.yossaDetail.cta.title')}</span>
+					<span class="block text-[#6eb5ff]">{t('projects.yossaDetail.cta.titleAccent')}</span>
 				</h2>
-				<p class="text-white/70 mb-8 leading-relaxed" data-i18n-key="projects.yossaDetail.cta.subtitle">
-					Bitdesal helped shape the Android experience for discovering venues, events and location-based offers in
-					Helsinki.
-				</p>
+				<p class="text-white/70 mb-8 leading-relaxed">{t('projects.yossaDetail.cta.subtitle')}</p>
 				<a
-					href="mailto:caye@bitdesal.com"
+					href={BOOKING_URL}
 					class="inline-flex items-center justify-center bg-[#6eb5ff] text-[#0a0a0a] font-semibold px-10 py-4 rounded-full hover:bg-[#5aa8f5] transition-colors"
-					data-i18n-key="projects.yossaDetail.cta.button"
 				>
-					Work with us
+					{t('projects.yossaDetail.cta.button')}
 				</a>
-				<p class="text-xs text-white/40 mt-16" data-i18n-key="projects.yossaDetail.copyright">
-					© 2026 Bitdesal. All rights reserved.
-				</p>
+				<p class="text-xs text-white/40 mt-16">{t('projects.yossaDetail.copyright')}</p>
 			</div>
 		</section>
 	</div>
@@ -314,9 +291,18 @@ const playDetails = [
 	}
 
 	body:has(.yossa-case) header a:not(.contact-btn),
-	body:has(.yossa-case) header button:not(.contact-btn),
+	body:has(.yossa-case) header button:not(.contact-btn):not([data-theme-toggle]),
 	body:has(.yossa-case) header .text-foreground\/70 {
 		color: rgba(255, 255, 255, 0.75);
+	}
+
+	body:has(.yossa-case) header [data-theme-toggle] {
+		border-color: rgba(255, 255, 255, 0.25);
+		color: rgba(255, 255, 255, 0.85);
+	}
+
+	body:has(.yossa-case) header .header-utilities {
+		border-color: rgba(255, 255, 255, 0.15);
 	}
 
 	body:has(.yossa-case) header .contact-btn {

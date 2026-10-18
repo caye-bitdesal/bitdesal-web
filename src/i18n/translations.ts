@@ -44,7 +44,9 @@ export const translations: Record<Language, any> = {
 		},
 		nav: {
 			home: 'Inicio',
-			about: 'Sobre mí',
+			iaService: 'Consultoría de IA',
+			softwareService: 'Desarrollo de software',
+			about: 'Nosotros',
 			pricing: 'Precios',
 			blog: 'Blog',
 			projects: 'Proyectos',
@@ -54,12 +56,14 @@ export const translations: Record<Language, any> = {
 		footer: {
 			tagline: 'Desarrollo Android, IA y consultoría de alto nivel',
 			servicesTitle: 'Servicios',
+			iaService: 'Consultoría de IA para empresas',
+			softwareService: 'Desarrollo y consultoría de software',
 			androidDev: 'Desarrollo Android',
 			ai: 'Inteligencia Artificial',
 			mentorship: 'Mentoría',
 			consulting: 'Consultoría',
 			companyTitle: 'Empresa',
-			aboutUs: 'Sobre mí',
+			aboutUs: 'Nosotros',
 			pricing: 'Precios',
 			blog: 'Blog',
 			projects: 'Proyectos',
@@ -70,24 +74,33 @@ export const translations: Record<Language, any> = {
 		},
 		contact: {
 			title: 'Hablemos de tu proyecto',
-			lead: 'Cuéntame qué tarea te roba más horas cada semana. Te respondo en menos de 24 horas laborables.',
+			lead: 'Cuéntanos qué necesitas. Te respondemos en menos de 24 horas laborables.',
 			name: 'Nombre',
 			company: 'Empresa',
-			message: '¿Qué quieres automatizar o mejorar?',
+			topicLabel: '¿En qué podemos ayudarte?',
+			topicIa: 'Consultoría de IA — automatizar procesos',
+			topicSoftware: 'Desarrollo o consultoría de software',
+			topicOther: 'Otro',
+			message: 'Mensaje',
 			emailOrPhone: 'Email o teléfono',
 			submit: 'Enviar',
-			success: 'Mensaje enviado. Te responderé pronto.',
-			error: 'No se pudo enviar. Escríbeme a caye@bitdesal.com.',
+			success: 'Mensaje enviado. Te responderemos pronto.',
+			error: 'No se pudo enviar. Escríbenos a caye@bitdesal.com.',
 			alternatives: 'O si prefieres:',
 			book: 'Agenda 30 min gratis',
-			whatsapp: 'WhatsApp',
-			location: 'Elche · Comunidad Valenciana · Trabajo en remoto con toda España',
+			location:
+				'Elche · Comunidad Valenciana · Trabajamos en remoto con toda España y con clientes internacionales',
 		},
 		common: {
 			bookCta: 'Agenda 30 min gratis',
-			seeHowIWork: 'Ver cómo trabajo',
+			seeHowIWork: 'Ver qué hacemos',
 			seePrices: 'Ver precios',
-			meetMe: 'Conóceme',
+			meetUs: 'Conócenos',
+			meetMe: 'Conócenos',
+		},
+		theme: {
+			switchToLight: 'Modo claro',
+			switchToDark: 'Modo oscuro',
 		},
 		blog: {
 			...makeTranslations.es.blog,
@@ -102,15 +115,15 @@ export const translations: Record<Language, any> = {
 				title: 'Sabes lo que vas a pagar antes de empezar',
 				lead: 'Consultoría para digitalizar el funcionamiento de la empresa e integrar la IA donde aligera la burocracia.',
 				subtitle:
-					'Trabajo por fases para que sepas qué resolvemos, cuánto tarda y qué costará antes de que empiece el desarrollo.',
+					'Trabajamos por fases para que sepas qué resolvemos, cuánto tarda y qué costará antes de que empiece el desarrollo.',
 				cta: 'Agenda 30 min gratis',
 				details: 'Ver el enfoque',
 			},
 			blocks: {
 				study: {
 					title: 'Estudio de procesos',
-					price: '450 € precio cerrado',
-					note: '≈10 h; 675 € si hay varios departamentos o sistemas.',
+					price: '450 € + IVA (precio cerrado)',
+					note: '≈10 h; 675 € + IVA si hay varios departamentos o sistemas.',
 					description:
 						'Incluye evaluación de requisitos y estudio de procesos y sistemas. Entregable: diagnóstico, solución propuesta, plan por fases y presupuesto cerrado.',
 					discount: '100 % descontable si contratas la implementación en los 30 días siguientes.',
@@ -124,49 +137,60 @@ export const translations: Record<Language, any> = {
 				support: {
 					title: 'Soporte',
 					price: 'Bolsas mensuales',
-					description: '225 € / 450 € / 900 € (5/10/20 h). Solo se factura lo consumido. Sin permanencia.',
+					description: '225 € / 450 € / 900 € + IVA (5/10/20 h). Solo se factura lo consumido. Sin permanencia.',
 				},
+			},
+			sections: {
+				ia: 'Consultoría de IA para empresas',
+				software: 'Desarrollo y consultoría de software',
+			},
+			softwareBlock: {
+				title: 'Desarrollo y consultoría de software',
+				hourly: '45 €/h + IVA. Tarifa de referencia para desarrollo, arquitectura y mentoría.',
+				bundles: 'Bolsas mensuales: 225 € / 450 € / 900 € + IVA (5/10/20 h), sin permanencia.',
+				fixed: 'Proyecto a precio cerrado tras especificación y plan por fases.',
+				international:
+					'Desarrollo y consultoría de software para empresas internacionales: 60 €/h para empresas de la UE (el IVA lo gestiona el cliente). 75 €/h para empresas fuera de la UE.',
 			},
 			breakdownToggle: 'Ver el desglose por fases',
 			packages: {
 				title: 'Paquetes orientativos',
 				express: {
 					title: 'Automatización exprés',
-					price: '1.800–2.900 €',
+					price: '1.800–2.900 € + IVA',
 					time: '2–3 semanas',
 					description:
 						'Un proceso concreto: presupuestos, facturas, citas, partes de trabajo o documentos con IA.',
 				},
 				custom: {
 					title: 'Herramienta a medida / app',
-					price: 'Desde 4.500 €',
+					price: 'Desde 4.500 € + IVA',
 					description: 'Software adaptado a tu forma de trabajar, con integraciones y formación.',
 				},
 				maintenance: {
 					title: 'Mantenimiento',
-					price: 'Desde 225 €/mes',
+					price: 'Desde 225 €/mes + IVA',
 					description: 'Bolsas de horas para incidencias, ajustes y mejoras.',
 				},
 			},
 			faq: {
 				title: 'Preguntas sobre precios',
-				/* keys used by FaqSection */
 				overrun: {
 					q: '¿Qué pasa si el proyecto se alarga?',
 					a: 'El precio cerrado no cambia salvo que cambiemos el alcance, y eso siempre lo acordamos antes por escrito.',
 				},
 				payment: {
 					q: '¿Cómo se paga?',
-					a: 'TODO(caye): condiciones de pago',
+					a: 'Por transferencia bancaria, PayPal o Bizum, como te resulte más cómodo. Siempre recibes factura con IVA desglosado.',
 				},
 				commitment: {
 					q: '¿Hay permanencia?',
-					a: 'No.',
+					a: 'Ninguna. Te quedas con nosotros porque te compensa, no porque te obligue un contrato. Puedes dejar el soporte cuando quieras, sin penalizaciones y sin dar explicaciones.',
 				},
 			},
 			rate: {
-				unit: '/hora',
-				note: 'Tarifa única. IVA no incluido.',
+				unit: '/hora + IVA',
+				note: 'Todos los importes indicados son + IVA.',
 			},
 			included: {
 				estimate: 'Estimación inicial desde el primer día',
@@ -244,9 +268,9 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Inversión',
 				title: 'Tarifas claras, sin sorpresas',
 				subtitle:
-					'Todo se calcula a 45 €/hora. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
+					'Todo se calcula a 45 €/hora + IVA. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
 				phase: 'Fase',
-				hours: 'Horas',
+				hours: 'Horas (aproximado)',
 				amount: 'Importe',
 				total: 'Proyecto completo',
 			},
@@ -263,34 +287,49 @@ export const translations: Record<Language, any> = {
 		home: {
 			...makeTranslations.es.home,
 			hero: {
-				title: 'Deja de perder horas en papeleo',
+				title: 'Tú céntrate en tu negocio. La tecnología la ponemos nosotros.',
 				subtitle:
-					'Automatizo los procesos de tu pyme con software e IA: presupuestos, facturas, citas o partes de trabajo. Sabrás el precio exacto antes de empezar.',
+					'Consultoría de IA y desarrollo de software. Con precio cerrado y sin sorpresas.',
 				viewProjects: 'Ver proyectos',
 				contact: 'Agenda 30 min gratis',
 			},
+			serviceCards: {
+				ia: {
+					title: 'Consultoría de IA para empresas',
+					description:
+						'¿Presupuestos a mano, notas en papel o en WhatsApp, citas que se pierden? Estudiamos cómo trabajáis y automatizamos lo que os quita horas.',
+					priceHint: 'Desde 1.800 € + IVA',
+					cta: 'Ver consultoría de IA',
+				},
+				software: {
+					title: 'Desarrollo y consultoría de software',
+					description:
+						'Desarrollo Android, arquitectura y calidad para equipos técnicos. Apps en producción con cientos de miles de usuarios.',
+					priceHint: '45 €/h + IVA',
+					cta: 'Ver desarrollo de software',
+				},
+			},
 			stats: {
-				years: { value: '20 años', label: 'desarrollando software' },
-				downloads: { value: '100K+', label: 'descargas en apps que he liderado' },
+				years: { value: '20 años', label: 'de experiencia en software' },
+				downloads: { value: '100K+', label: 'descargas en apps que hemos liderado' },
 				uptime: { value: '99,9 %', label: 'sesiones sin fallos en producción' },
 				countries: { value: '3 países', label: 'España, Suiza y Finlandia' },
 			},
 			entryOffer: {
 				badge: 'Precio cerrado, sin sorpresas',
-				text: 'Empezamos con un Estudio de procesos de 450 € que te descuento íntegramente si hacemos el proyecto juntos. Te llevas un diagnóstico, la solución propuesta y un presupuesto cerrado.',
-				line: 'Proyectos desde 1.800 € · Tarifa de referencia: 45 €/h + IVA',
+				text: 'Empezamos con un Estudio de procesos de 450 € + IVA que te descuento íntegramente si hacemos el proyecto juntos. Te llevas un diagnóstico, la solución propuesta y un presupuesto cerrado.',
+				line: 'Proyectos desde 1.800 € + IVA · Tarifa de referencia: 45 €/h + IVA',
 			},
 			whyBitdesal: {
 				title: '¿Por qué Bitdesal?',
-				subtitle: 'Un ingeniero senior que te habla claro.',
+				subtitle: 'Te hablamos claro y cumplimos lo que acordamos.',
 				fixedPrice: {
 					title: 'Precio cerrado',
-					description:
-						'Primero un estudio que te descuento si seguimos. Después, un presupuesto que no cambia.',
+					description: 'Sabes lo que vas a pagar antes de empezar.',
 				},
 				direct: {
-					title: 'Hablas con quien lo construye',
-					description: 'Sin intermediarios ni juniors aprendiendo con tu proyecto.',
+					title: 'Trato directo con quien lo construye',
+					description: 'Sin intermediarios ni capas comerciales.',
 				},
 				independence: {
 					title: 'Sin dependencia',
@@ -318,35 +357,35 @@ export const translations: Record<Language, any> = {
 				item3: 'Automatización de procesos con IA',
 			},
 			howIWork: {
-				title: 'Cómo trabajo',
+				title: 'Cómo trabajamos',
 				subtitle: 'Primero lo entendemos. Después lo construimos bien.',
-				core: 'Diagnosticar y rediseñar antes de construir evita que la tecnología solo acelere un proceso ineficiente.',
+				core: 'Diagnosticar antes de construir evita que la tecnología solo acelere un proceso ineficiente.',
 				steps: {
 					call: {
 						title: 'Conversación gratuita',
-						description: '30 minutos para entender tu problema y ver si te puedo ayudar.',
+						description: '30 minutos para entender tu problema y ver si podemos ayudarte.',
 					},
 					study: {
-						title: 'Estudio de procesos',
+						title: 'Estudio',
 						description:
-							'Analizo cómo trabajáis hoy y te entrego la solución, el plan y un presupuesto cerrado.',
+							'Analizamos cómo trabajáis hoy y te entregamos la solución, el plan y un presupuesto cerrado.',
 					},
 					build: {
 						title: 'Construcción',
-						description: 'Desarrollo por fases con una demo cada semana para que veas el avance.',
+						description: 'Desarrollamos por fases con una demo cada semana para que veas el avance.',
 					},
 					handoff: {
 						title: 'Formación y soporte',
-						description: 'Formo a tu equipo y, si quieres, sigo con bolsas de horas mensuales.',
+						description: 'Formamos a tu equipo y, si quieres, seguimos con bolsas de horas mensuales.',
 					},
 				},
 			},
 			behind: {
 				title: 'Quién está detrás',
-				text: 'Soy Caye Ruiz. Llevo 20 años construyendo software en España, Suiza y Finlandia; los últimos 7, liderando la app Android de Kivra, usada por cientos de miles de personas. Volví a España para ayudar a empresas de aquí a trabajar con menos papeleo.',
+				text: 'Bitdesal nace de 20 años construyendo software en España, Suiza y Finlandia. Su fundador, Caye Ruiz, lideró durante 7 años la app Android de Kivra, usada por cientos de miles de personas. Hoy trabajamos con empresas que quieren tecnología que funcione, sin complicaciones.',
 			},
 			logos: {
-				title: 'He trabajado con',
+				title: 'Experiencia en empresas como',
 			},
 			faq: {
 				title: 'Preguntas frecuentes',
@@ -361,21 +400,21 @@ export const translations: Record<Language, any> = {
 					},
 					worth: {
 						q: '¿Y si al final no me compensa?',
-						a: 'Te lo digo en el estudio. Si no tiene sentido invertir, no te lo voy a vender.',
+						a: 'Te lo decimos en el estudio. Si no tiene sentido invertir, no te lo vamos a vender.',
 					},
 					after: {
 						q: '¿Qué pasa después de la entrega?',
 						a: 'Te quedas con el código y la formación. Si necesitas soporte, hay bolsas de horas sin permanencia.',
 					},
 					remote: {
-						q: '¿Trabajas solo en remoto?',
-						a: 'Sí, con toda España. Si estás cerca de Elche o Valencia, podemos vernos en persona.',
+						q: '¿Trabajáis solo en remoto?',
+						a: 'Con toda España en remoto. Si estás cerca de Elche o Valencia, podemos vernos en persona.',
 					},
 				},
 			},
 			projects: {
-				title: 'Proyectos',
-				subtitle: 'Algunos proyectos en los que he trabajado',
+				title: 'Proyectos destacados',
+				subtitle: 'Algunos proyectos en los que hemos participado',
 				viewAll: 'Ver todos los proyectos',
 			},
 			blog: {
@@ -416,10 +455,172 @@ export const translations: Record<Language, any> = {
 				},
 			},
 		},
+		iaPage: {
+			hero: {
+				badge: 'Consultoría de IA para empresas',
+				title: 'Deja de perder horas en papeleo',
+				subtitle:
+					'Automatizamos los procesos de tu empresa con IA: presupuestos, citas, partes de trabajo, pedidos o facturas. Sabrás el precio exacto antes de empezar.',
+			},
+			painPoints: {
+				title: '¿Te suena?',
+				closing: 'Si te has reconocido en alguna, tu empresa puede ganar horas cada semana.',
+				items: {
+					budgets: {
+						problem: 'Hago los presupuestos a mano o en Excel, por la noche',
+						solution: 'Los generamos en minutos desde el móvil, con tus precios y tu formato.',
+					},
+					orders: {
+						problem: 'Apunto los encargos en una libreta o en WhatsApp',
+						solution: 'Todo queda registrado en un solo sitio, y lo encuentras cuando lo necesitas.',
+					},
+					appointments: {
+						problem: 'Se me olvidan citas o no devuelvo llamadas',
+						solution: 'Agenda con recordatorios automáticos y aviso de cada llamada perdida.',
+					},
+					quotes: {
+						problem: 'Mando presupuestos y no sé quién ha contestado',
+						solution: 'Seguimiento automático: el sistema les recuerda y te avisa.',
+					},
+					forms: {
+						problem: 'Los partes de trabajo llegan en papel, o no llegan',
+						solution: 'El parte se rellena en el móvil, con fotos y firma, y llega directo a la oficina.',
+					},
+					copy: {
+						problem: 'Copio los mismos datos de un programa a otro',
+						solution: 'Conectamos tus herramientas para que se pasen los datos solas.',
+					},
+					docs: {
+						problem: 'Reviso albaranes, facturas y documentos uno a uno',
+						solution: 'La IA los lee, extrae los datos y te avisa de lo importante.',
+					},
+				},
+			},
+			pricingSummary: {
+				title: 'Precios orientativos',
+				study: 'Estudio de procesos — 450 € + IVA (675 € + IVA si hay varios departamentos o sistemas). 100 % descontable si contratas la implementación en los 30 días siguientes.',
+				express: 'Automatización exprés — 1.800–2.900 € + IVA · 2–3 semanas.',
+				custom: 'Herramienta a medida — desde 4.500 € + IVA.',
+				support: 'Soporte — desde 225 €/mes + IVA, sin permanencia.',
+				details: 'Ver precios en detalle',
+			},
+			faq: {
+				security: {
+					q: '¿Es seguro meter IA con los datos de mi empresa?',
+					a: 'Elegimos herramientas que cumplen el RGPD y te explicamos dónde van tus datos antes de empezar.',
+				},
+				tech: {
+					q: '¿Necesito saber de informática?',
+					a: 'No hace falta. Nos amoldamos a lo que ya usáis para que el cambio sea lo mínimo posible, y os enseñamos lo nuevo paso a paso.',
+				},
+			},
+		},
+		consultoriaPage: {
+			hero: {
+				title: 'Desarrollo y consultoría de software para equipos que no pueden fallar',
+				subtitle:
+					'Desarrollo Android, arquitectura y calidad de código. 20 años de experiencia y apps en producción con cientos de miles de usuarios.',
+				kivraCase: 'Ver el caso Kivra',
+			},
+			services: {
+				title: 'Servicios',
+				android: {
+					title: 'Desarrollo Android',
+					description:
+						'Kotlin, Jetpack Compose, KMP. Apps de producción, de la primera versión al mantenimiento.',
+				},
+				architecture: {
+					title: 'Arquitectura y calidad',
+					description: 'Clean Architecture, revisión de código, pruebas automáticas, CI/CD.',
+				},
+				ai: {
+					title: 'Ingeniería asistida por IA',
+					description:
+						'Flujos de especificación, scaffolding, revisión y documentación con IA, sin perder calidad.',
+				},
+				mentoring: {
+					title: 'Mentoría y equipos',
+					description: 'Acompañamiento técnico que deja al equipo más fuerte, no dependiente.',
+				},
+			},
+			kivraHighlight: {
+				title: 'Caso Kivra Finlandia',
+				text: 'Caye lideró el desarrollo Android de Kivra Finlandia de 2019 a 2025. Hoy Bitdesal da continuidad al producto.',
+				stats: '100K+ descargas · 4,3★ · 5,1K reseñas · 7 años en producción · 99,9 % sin fallos',
+				cta: 'Ver la ficha del caso',
+			},
+			pricing: {
+				title: 'Modalidades y precio',
+				hourly: 'Por horas: 45 €/h + IVA',
+				bundles: 'Bolsas mensuales: 225 € / 450 € / 900 € + IVA (5/10/20 h).',
+				fixed: 'Proyecto cerrado tras especificación.',
+				international:
+					'Empresas internacionales: 60 €/h (UE; el IVA lo gestiona el cliente) · 75 €/h (fuera de la UE).',
+				details: 'Ver precios',
+			},
+		},
+		methodology: {
+			...makeTranslations.es.methodology,
+			remoteFirst: {
+				...makeTranslations.es.methodology.remoteFirst,
+				title: '100 % en remoto',
+				description:
+					'Trabajamos en remoto con documentación clara, revisiones contigo cada semana y las herramientas que ya usa tu equipo.',
+			},
+			specDriven: {
+				...makeTranslations.es.methodology.specDriven,
+				title: 'Primero definimos, después construimos',
+				description:
+					'Empezamos con especificaciones claras que guían el desarrollo, las pruebas automáticas y la entrega.',
+				requirements: {
+					title: 'Requisitos claros',
+					description: 'Documentamos funcionalidad, casos de uso y criterios de aceptación antes de programar.',
+				},
+				noSurprises: {
+					title: 'Sin sorpresas',
+					description: 'Sabes qué recibirás, cuándo y cómo funcionará.',
+				},
+				testing: {
+					title: 'Base para pruebas',
+					description: 'La especificación se convierte en pruebas automáticas que validan el comportamiento.',
+				},
+			},
+			quality: {
+				...makeTranslations.es.methodology.quality,
+				title: 'Calidad técnica',
+				description:
+					'Primero definimos con especificaciones claras; después construimos con revisiones de código, pruebas automáticas y buenas prácticas en cada entrega.',
+				codeReview: {
+					title: 'Revisión de código obligatoria',
+					description: 'Todo el código pasa por revisión antes de integrarse.',
+				},
+				comprehensiveTesting: {
+					title: 'Pruebas automáticas',
+					description: 'Unitarias, de integración y de interfaz con cobertura útil.',
+				},
+				cicd: {
+					title: 'CI/CD automatizado',
+					description: 'Pipeline que ejecuta pruebas y análisis en cada cambio.',
+				},
+				cleanCode: {
+					title: 'Código mantenible',
+					description: 'Arquitectura clara y convenciones alineadas con el ecosistema Android.',
+				},
+			},
+		},
 		projects: {
 			hero: {
 				title: 'Proyectos',
-				subtitle: 'Algunos proyectos en los que he trabajado',
+				subtitle: 'Algunos proyectos en los que hemos participado',
+			},
+			filter: {
+				all: 'Todos',
+				automation: 'IA y automatización',
+				software: 'Software',
+			},
+			lineLabel: {
+				automation: 'IA y automatización',
+				software: 'Software',
 			},
 			kivra: {
 				name: 'Kivra Finland',
@@ -448,13 +649,13 @@ export const translations: Record<Language, any> = {
 				playStore: 'Ver en Google Play',
 				case: {
 					challenge: 'El reto',
-					role: 'Mi papel',
+					role: 'El papel de Bitdesal',
 					result: 'El resultado',
 					testimonial: 'Testimonio',
 					challengeText:
-						'Digitalizar el correo oficial y las facturas para cientos de miles de personas en Finlandia, con seguridad bancaria y releases mensuales estables.',
+						'Digitalizar el correo oficial y las facturas para cientos de miles de personas en Finlandia, con seguridad bancaria y versiones mensuales estables.',
 					roleText:
-						'Lideré el desarrollo Android de Kivra Finlandia durante 7 años, de 2019 a 2025, como Lead Android Developer. Hoy Bitdesal sigue dando continuidad al producto.',
+						'Caye lideró el desarrollo Android de Kivra Finlandia durante 7 años, de 2019 a 2025, como Lead Android Developer. Hoy Bitdesal sigue dando continuidad al producto.',
 					resultText:
 						'Más de 100.000 descargas, 4,3★ en Play Store, más del 99,9 % de sesiones sin fallos y versiones mensuales durante 7 años.',
 					nextCase: 'Siguiente caso →',
@@ -520,7 +721,7 @@ export const translations: Record<Language, any> = {
 				cta: {
 					title: '¿Hablamos de tu proyecto?',
 					subtitle:
-						'Si tienes un proceso repetitivo o una idea de producto, cuéntamelo en 30 minutos y vemos si encaja.',
+						'Si tienes un proceso repetitivo o una idea de producto, cuéntanoslo en 30 minutos y vemos si encaja.',
 					button: 'Agenda 30 min gratis',
 				},
 				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
@@ -597,7 +798,7 @@ export const translations: Record<Language, any> = {
 					titleAccent: 'pensado para el mundo real.',
 					subtitle:
 						'Bitdesal ayudó a dar forma a la experiencia Android para descubrir locales, eventos y ofertas por ubicación en Helsinki.',
-					button: 'Trabaja con nosotros',
+					button: 'Agenda 30 min gratis',
 				},
 				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
 			},
@@ -610,11 +811,36 @@ export const translations: Record<Language, any> = {
 			back: 'Volver atrás',
 		},
 		cta: {
-			title: '¿Qué tarea te roba más horas cada semana?',
-			subtitle: 'Cuéntamela en 30 minutos y te digo si se puede automatizar y cuánto costaría.',
+			title: '¿Hablamos?',
+			subtitle:
+				'Cuéntanos qué te quita tiempo o qué quieres construir. En 30 minutos te decimos si podemos ayudarte y cuánto costaría.',
 			button: 'Agenda 30 min gratis',
+			ia: {
+				title: '¿Qué tarea te roba más horas cada semana?',
+				subtitle:
+					'Cuéntanosla en 30 minutos y te decimos si se puede automatizar y cuánto costaría.',
+				button: 'Agenda 30 min gratis',
+			},
+			software: {
+				title: '¿Necesitas reforzar tu equipo o sacar adelante un desarrollo?',
+				subtitle: 'Hablemos.',
+				button: 'Agenda 30 min gratis',
+			},
 		},
 		about: {
+			pageTitle: 'Nosotros',
+			company: {
+				p1: 'Bitdesal nace de una idea sencilla: la buena ingeniería no debería estar reservada a las grandes empresas.',
+				p2: 'Empezamos desarrollando software y formando a equipos de desarrollo. Por el camino vimos algo que se repetía: empresas con un buen oficio y buenos clientes, pero que pierden cada semana horas en presupuestos a mano, papeles que van y vienen y tareas que nadie debería hacer dos veces. No les falta voluntad, les falta alguien que entienda su forma de trabajar y les dé una solución a su medida, a un precio que puedan asumir.',
+				p3: 'Para eso existimos: para quitar burocracia y devolver ese tiempo a lo que de verdad hace crecer un negocio.',
+				p4: 'Somos ingenieros informáticos superiores, y abordamos cada proyecto como un problema de ingeniería: primero entendemos el proceso, después diseñamos la solución y solo entonces la construimos, con pruebas y con documentación que tu equipo pueda seguir.',
+				p5: 'La IA es una de nuestras herramientas, y muy potente, pero no es el fin. El fin es que tu empresa funcione mejor.',
+			},
+			team: {
+				title: 'Equipo',
+				cayeBio:
+					'Ingeniero de software con 20 años de experiencia. Caye lideró el desarrollo Android de Kivra Finlandia durante 7 años y fundó Bitdesal en 2025.',
+			},
 			hero: {
 				role: 'Caye Ruiz · Fundador de Bitdesal',
 			},
@@ -625,8 +851,8 @@ export const translations: Record<Language, any> = {
 				name: 'Caye Ruiz',
 				title: 'Fundador de Bitdesal',
 				p1: 'TODO(caye): revisar historia — Ingeniero de software con 20 años de experiencia en España, Suiza y Finlandia. Siete años como Lead Android en Kivra, la app de correo digital líder en Finlandia.',
-				p2: 'Tras 13 años en el norte de Europa volví a Elche para fundar Bitdesal: ayudo a pymes españolas a quitar papeleo con automatización, software a medida e IA donde de verdad ahorra tiempo.',
-				p3: 'Trabajo en primera persona contigo: especificaciones claras, precio cerrado y entrega que tu equipo puede continuar.',
+				p2: 'Tras 13 años en el norte de Europa, Caye volvió a Elche para fundar Bitdesal: ayudamos a empresas a quitar papeleo con automatización, software a medida e IA donde de verdad ahorra tiempo.',
+				p3: 'Especificaciones claras, precio cerrado y entrega que tu equipo puede continuar.',
 			},
 			profiles: {
 				linkedin: 'LinkedIn',
@@ -634,7 +860,7 @@ export const translations: Record<Language, any> = {
 				shakers: 'Shakers',
 			},
 			journey: {
-				title: 'Experiencia profesional',
+				title: 'Trayectoria de Caye',
 				bitdesal: {
 					role: 'Consultor Android independiente',
 					company: 'Bitdesal',
@@ -764,6 +990,8 @@ export const translations: Record<Language, any> = {
 		},
 		nav: {
 			home: 'Home',
+			iaService: 'AI consulting',
+			softwareService: 'Software development',
 			about: 'About',
 			pricing: 'Pricing',
 			blog: 'Blog',
@@ -809,8 +1037,8 @@ export const translations: Record<Language, any> = {
 			blocks: {
 				study: {
 					title: 'Process study',
-					price: 'Fixed price from €450',
-					note: '≈10 h; €675 if multiple departments or systems.',
+					price: 'Fixed price from €450 + VAT',
+					note: '≈10 h; €675 + VAT if multiple departments or systems.',
 					description: 'Requirements review, process mapping, proposed solution, phased plan and fixed estimate.',
 					discount: 'Fully credited if you hire implementation within 30 days.',
 				},
@@ -822,26 +1050,38 @@ export const translations: Record<Language, any> = {
 				support: {
 					title: 'Support',
 					price: 'Monthly bundles',
-					description: '€225 / €450 / €900 (5/10/20 h). Billed for time used. No lock-in.',
+					description: '€225 / €450 / €900 + VAT (5/10/20 h). Billed for time used. No lock-in.',
 				},
+			},
+			sections: {
+				ia: 'AI consulting for business',
+				software: 'Software development and consulting',
+			},
+			softwareBlock: {
+				title: 'Software development and consulting',
+				hourly: '€45/h + VAT. Reference rate for development, architecture and mentoring.',
+				bundles: 'Monthly bundles: €225 / €450 / €900 + VAT (5/10/20 h). No lock-in.',
+				fixed: 'Fixed-price project after specification and phased plan.',
+				international:
+					'International clients (software development and consulting): €60/h for EU companies (VAT handled by the client). €75/h for companies outside the EU.',
 			},
 			breakdownToggle: 'See phase breakdown',
 			packages: {
 				title: 'Indicative packages',
 				express: {
 					title: 'Focused automation',
-					price: '€1,800–2,900',
+					price: '€1,800–2,900 + VAT',
 					time: '2–3 weeks',
 					description: 'One concrete workflow: documents, approvals, reporting or similar.',
 				},
 				custom: {
 					title: 'Custom tool / app',
-					price: 'From €4,500',
+					price: 'From €4,500 + VAT',
 					description: 'Software tailored to your workflow with integrations and training.',
 				},
 				maintenance: {
 					title: 'Maintenance',
-					price: 'From €225/month',
+					price: 'From €225/month + VAT',
 					description: 'Support bundles for fixes and improvements.',
 				},
 			},
@@ -853,16 +1093,16 @@ export const translations: Record<Language, any> = {
 				},
 				payment: {
 					q: 'How do you invoice?',
-					a: 'TODO(caye): condiciones de pago',
+					a: 'By bank transfer, PayPal or Bizum — whichever suits you. You always receive an invoice with VAT itemised.',
 				},
 				commitment: {
 					q: 'Any lock-in?',
-					a: 'No.',
+					a: 'None. You stay with us because it pays off, not because a contract forces you to. You can stop support whenever you want — no penalties and no explanations required.',
 				},
 			},
 			rate: {
-				unit: '/hour',
-				note: 'Single rate. VAT not included.',
+				unit: '/hour + VAT',
+				note: 'All amounts shown are + VAT.',
 			},
 			included: {
 				estimate: 'Initial estimate from day one',
@@ -940,9 +1180,9 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Investment',
 				title: 'Clear rates, no surprises',
 				subtitle:
-					'Everything is calculated at €45/hour. This table shows an indicative project for a small or medium-sized company.',
+					'Everything is calculated at €45/hour + VAT. This table shows an indicative project for a small or medium-sized company.',
 				phase: 'Phase',
-				hours: 'Hours',
+				hours: 'Hours (approx.)',
 				amount: 'Amount',
 				total: 'Complete project',
 			},
@@ -961,6 +1201,10 @@ export const translations: Record<Language, any> = {
 			seePrices: 'See pricing',
 			meetMe: 'About me',
 		},
+		theme: {
+			switchToLight: 'Light mode',
+			switchToDark: 'Dark mode',
+		},
 		contact: {
 			title: "Let's talk about your project",
 			lead: 'Tell me what task eats most of your week. I reply within one business day.',
@@ -973,7 +1217,6 @@ export const translations: Record<Language, any> = {
 			error: 'Could not send. Email me at caye@bitdesal.com.',
 			alternatives: 'Or:',
 			book: 'Book a free 30-minute call',
-			whatsapp: 'WhatsApp',
 			location: 'Elche · Valencian Community · Remote across Spain',
 		},
 		home: {
@@ -1456,8 +1699,14 @@ export const translations: Record<Language, any> = {
 				topic5: 'Tekoälyavusteinen kehitys',
 			},
 		},
+		theme: {
+			switchToLight: 'Vaalea tila',
+			switchToDark: 'Tumma tila',
+		},
 		nav: {
 			home: 'Etusivu',
+			iaService: 'Tekoälykonsultointi',
+			softwareService: 'Ohjelmistokehitys',
 			about: 'Tietoa',
 			pricing: 'Hinnat',
 			blog: 'Blogi',
@@ -1581,7 +1830,7 @@ export const translations: Record<Language, any> = {
 				subtitle:
 					'Kaikki lasketaan hintaan 45 €/tunti. Taulukko näyttää suuntaa antavan projektin pienelle tai keskisuurelle yritykselle.',
 				phase: 'Vaihe',
-				hours: 'Tunnit',
+				hours: 'Tunnit (noin)',
 				amount: 'Summa',
 				total: 'Koko projekti',
 			},

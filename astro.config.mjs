@@ -29,7 +29,12 @@ export default defineConfig({
 		'/contact': '/contacto',
 		'/prices': '/pricing',
 		'/precios': '/pricing',
-		'/methodology': '/',
+		'/methodology': '/consultoria-software',
+		'/about': '/nosotros',
+		'/automatizacion-pymes': '/consultoria-ia',
+		'/en/automatizacion-pymes': '/en/consultoria-ia',
+		'/fi/automatizacion-pymes': '/fi/consultoria-ia',
+		'/blog/precio-cerrado-automatizacion-pyme': '/blog/precio-cerrado-automatizacion-empresa',
 	},
 	vite: {
 		plugins: [tailwindcss()],

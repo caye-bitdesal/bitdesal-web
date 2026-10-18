@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { BOOKING_URL, CONTACT_EMAIL, CONTACT_FORM_ENDPOINT, WHATSAPP_URL } from '../data/siteConstants';
+import { BOOKING_URL, CONTACT_EMAIL, CONTACT_FORM_ENDPOINT } from '../data/siteConstants';
 import { useI18n } from '../i18n/useI18n';
 
 const { t } = useI18n(Astro);
 const successMsg = t('contact.success');
 const errorMsg = t('contact.error');
+
+const tipo = Astro.url.searchParams.get('tipo');
+const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' : 'ia';
 ---
 
 <Layout seo="contact">
@@ -22,6 +25,14 @@ const errorMsg = t('contact.error');
 				<div>
 					<label for="company" class="block text-sm font-medium mb-1">{t('contact.company')}</label>
 					<input id="company" name="company" class="w-full rounded-lg border border-border px-4 py-2.5 bg-input-background" />
+				</div>
+				<div>
+					<label for="topic" class="block text-sm font-medium mb-1">{t('contact.topicLabel')}</label>
+					<select id="topic" name="topic" required class="w-full rounded-lg border border-border px-4 py-2.5 bg-input-background">
+						<option value="ia" selected={defaultTopic === 'ia'}>{t('contact.topicIa')}</option>
+						<option value="software" selected={defaultTopic === 'software'}>{t('contact.topicSoftware')}</option>
+						<option value="other">{t('contact.topicOther')}</option>
+					</select>
 				</div>
 				<div>
 					<label for="message" class="block text-sm font-medium mb-1">{t('contact.message')}</label>
@@ -42,9 +53,6 @@ const errorMsg = t('contact.error');
 				<ul class="space-y-3 text-sm">
 					<li>
 						<a href={BOOKING_URL} class="text-primary hover:underline">{t('contact.book')}</a>
-					</li>
-					<li>
-						<a href={WHATSAPP_URL} class="text-primary hover:underline">{t('contact.whatsapp')}</a>
 					</li>
 					<li>
 						<a href={`mailto:${CONTACT_EMAIL}`} class="text-primary hover:underline">{CONTACT_EMAIL}</a>

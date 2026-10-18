@@ -6,11 +6,21 @@ const localeByLang: Record<Language, string> = {
 	fi: 'fi-FI',
 };
 
+const vatSuffixByLang: Record<Language, string> = {
+	es: ' + IVA',
+	en: ' + VAT',
+	fi: ' + ALV',
+};
+
 export function currencyLocale(lang: Language): string {
 	return localeByLang[lang] ?? 'es-ES';
 }
 
-export function formatEur(amount: number, lang: Language): string {
+export function vatSuffix(lang: Language): string {
+	return vatSuffixByLang[lang] ?? vatSuffixByLang.es;
+}
+
+function formatEurAmount(amount: number, lang: Language): string {
 	return new Intl.NumberFormat(currencyLocale(lang), {
 		style: 'currency',
 		currency: 'EUR',
@@ -18,6 +28,11 @@ export function formatEur(amount: number, lang: Language): string {
 	}).format(amount);
 }
 
+/** Formatted EUR amount with locale-appropriate VAT suffix (e.g. « + IVA »). */
+export function formatEur(amount: number, lang: Language): string {
+	return `${formatEurAmount(amount, lang)}${vatSuffix(lang)}`;
+}
+
 export function formatEurRange(min: number, max: number, lang: Language): string {
-	return `${formatEur(min, lang)}–${formatEur(max, lang)}`;
+	return `${formatEurAmount(min, lang)}–${formatEurAmount(max, lang)}${vatSuffix(lang)}`;
 }

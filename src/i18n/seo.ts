@@ -2,6 +2,8 @@ import type { Language } from './translations';
 
 export type PageSeoId =
 	| 'home'
+	| 'iaConsulting'
+	| 'consultoria'
 	| 'pricing'
 	| 'about'
 	| 'projects'
@@ -14,9 +16,9 @@ type SeoEntry = { title: string; description: string };
 const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	home: {
 		es: {
-			title: 'Automatización e IA para pymes · Bitdesal',
+			title: 'Bitdesal · Consultoría de IA y desarrollo de software',
 			description:
-				'Automatizo procesos de tu pyme con software e IA a precio cerrado. Agenda 30 minutos gratis y te digo si compensa y cuánto costaría.',
+				'Consultoría de IA para automatizar presupuestos, citas y papeleo, y desarrollo de software con precio cerrado. Agenda 30 minutos gratis.',
 		},
 		en: {
 			title: 'Android, AI and software consulting · Bitdesal',
@@ -29,11 +31,42 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 				'Senior-tason Android- ja tekoälykonsultointia selkeillä spekseillä. Varaa ilmainen 30 minuutin kartoitus.',
 		},
 	},
+	iaConsulting: {
+		es: {
+			title: 'Consultoría de IA para empresas: automatiza presupuestos, citas y papeleo · Bitdesal',
+			description:
+				'¿Presupuestos a mano, citas perdidas o partes en papel? Automatizamos los procesos de tu empresa con IA. Precio cerrado desde el estudio.',
+		},
+		en: {
+			title: 'AI consulting for business · Bitdesal',
+			description:
+				'Automate quotes, appointments and paperwork with AI. Fixed pricing from a process study.',
+		},
+		fi: {
+			title: 'Tekoälykonsultointi yrityksille · Bitdesal',
+			description: 'Prosessien automatisointi tekoälyllä. Kiinteä hinta prosessitutkimuksesta.',
+		},
+	},
+	consultoria: {
+		es: {
+			title: 'Consultoría de software y desarrollo Android · Bitdesal',
+			description:
+				'Desarrollo Android, arquitectura y calidad para equipos técnicos. Apps en producción con cientos de miles de usuarios.',
+		},
+		en: {
+			title: 'Software consulting and Android · Bitdesal',
+			description: 'Senior Android development, architecture and quality for product teams.',
+		},
+		fi: {
+			title: 'Ohjelmistokonsultointi ja Android · Bitdesal',
+			description: 'Senior Android -kehitys ja arkkitehtuuri tuotetiimeille.',
+		},
+	},
 	pricing: {
 		es: {
 			title: 'Precios: estudio de procesos y proyectos a precio cerrado · Bitdesal',
 			description:
-				'Estudio de procesos desde 450 €, proyectos a precio cerrado y bolsas de soporte sin permanencia. Sabes lo que pagas antes de empezar.',
+				'Estudio de procesos desde 450 € + IVA, proyectos a precio cerrado y bolsas de soporte sin permanencia. Sabes lo que pagas antes de empezar.',
 		},
 		en: {
 			title: 'Pricing · Bitdesal',
@@ -46,9 +79,9 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	about: {
 		es: {
-			title: 'Caye Ruiz, ingeniero de software con 20 años de experiencia · Bitdesal',
+			title: 'Nosotros · Bitdesal',
 			description:
-				'Fundador de Bitdesal. 20 años construyendo software en España, Suiza y Finlandia. Te ayudo a quitar papeleo con automatización e IA.',
+				'Bitdesal ayuda a empresas con automatización, software a medida y consultoría Android. Conoce al equipo y nuestra forma de trabajar.',
 		},
 		en: {
 			title: 'About Caye Ruiz · Bitdesal',
@@ -91,7 +124,7 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Contacto · Bitdesal',
 			description:
-				'Cuéntame qué tarea te roba más horas. Te respondo en menos de 24 horas laborables. Elche · remoto en toda España.',
+				'Cuéntanos qué necesitas. Te respondemos en menos de 24 horas laborables. Elche · remoto en toda España e internacional.',
 		},
 		en: {
 			title: 'Contact · Bitdesal',

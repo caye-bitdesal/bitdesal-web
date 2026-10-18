@@ -1,8 +1,8 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { BOOKING_URL } from '../data/siteConstants';
 import { primaryNavLinks, sitePath } from '../data/siteNav';
 import { useI18n } from '../i18n/useI18n';
+import ThemeToggle from './ThemeToggle.astro';
 import { supportedLanguages } from '../i18n/translations';
 
 const { lang, t } = useI18n(Astro);
@@ -32,92 +32,99 @@ const languages = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-white border-b border-border">
+<header class="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
 	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
-		<div class="flex justify-between items-center h-16">
-			<a href={navHref('/')} class="flex items-center gap-3">
-				<span class="text-xl font-semibold text-[#1a3a38]">Bitdesal</span>
+		<div class="flex justify-between items-center gap-3 min-h-16 py-2 md:py-0 md:h-16">
+			<a href={navHref('/')} class="flex items-center gap-3 shrink-0">
+				<span class="text-xl font-semibold text-[#1a3a38] dark:text-[#f5f5f4]">Bitdesal</span>
 			</a>
 
-			<div class="hidden md:flex flex-wrap items-center justify-end gap-x-4 gap-y-1 lg:gap-x-8 min-w-0">
-				{
-					navLinks.map((link) => (
-						<a
-							href={navHref(link.href)}
-							class:list={[
-								'shrink-0 whitespace-nowrap transition-colors hover:text-primary',
-								isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
-							]}
-							aria-current={isNavActive(link.href) ? 'page' : undefined}
+			<div class="hidden md:flex items-center gap-3 min-w-0 flex-1 justify-end">
+				<div class="flex flex-wrap items-center justify-end gap-x-3 lg:gap-x-5 gap-y-1 min-w-0">
+					{
+						navLinks.map((link) => (
+							<a
+								href={navHref(link.href)}
+								class:list={[
+									'shrink-0 whitespace-nowrap text-sm lg:text-base transition-colors hover:text-primary',
+									isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
+								]}
+								aria-current={isNavActive(link.href) ? 'page' : undefined}
+							>
+								{t(link.labelKey, link.fallback)}
+							</a>
+						))
+					}
+				</div>
+
+				<div class="header-utilities flex items-center gap-2 shrink-0 pl-3 ml-1 border-l border-border">
+					<a
+						href={navHref('/contacto')}
+						class="contact-btn inline-flex items-center justify-center bg-primary text-white px-3 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm whitespace-nowrap"
+					>
+						{t('nav.contact', 'Contact')}
+					</a>
+					<ThemeToggle />
+					<div class="relative shrink-0" data-lang-dropdown>
+						<button
+							type="button"
+							class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80 px-1"
+							data-lang-trigger
+							aria-expanded="false"
+							aria-haspopup="listbox"
+							aria-controls="lang-menu-desktop"
 						>
-							{t(link.labelKey, link.fallback)}
-						</a>
-					))
-				}
-
-				<a
-					href={navHref('/contacto')}
-					class="contact-btn shrink-0 inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm"
-				>
-					{t('nav.contact', 'Contact')}
-				</a>
-
-				<div class="relative shrink-0" data-lang-dropdown>
-					<button
-						type="button"
-						class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80"
-						data-lang-trigger
-						aria-expanded="false"
-						aria-haspopup="listbox"
-						aria-controls="lang-menu-desktop"
-					>
-						<span data-lang-label>{lang.toUpperCase()}</span>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
-							<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
-						</svg>
-						<span class="sr-only">{t('nav.language', 'Language')}</span>
-					</button>
-					<ul
-						id="lang-menu-desktop"
-						class="absolute right-0 mt-2 min-w-[4.5rem] rounded-lg border border-border bg-white py-1 shadow-lg hidden"
-						data-lang-menu
-						role="listbox"
-					>
-						{
-							languages.map((item) => (
-								<li class:list={[item.code === lang && 'hidden']}>
-									<a
-										href={langHref(item.code)}
-										class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
-										role="option"
-									>
-										{item.label}
-									</a>
-								</li>
-							))
-						}
-					</ul>
+							<span data-lang-label>{lang.toUpperCase()}</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+								<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+							</svg>
+							<span class="sr-only">{t('nav.language', 'Language')}</span>
+						</button>
+						<ul
+							id="lang-menu-desktop"
+							class="absolute right-0 mt-2 min-w-[4.5rem] rounded-lg border border-border bg-background py-1 shadow-lg hidden z-50"
+							data-lang-menu
+							role="listbox"
+						>
+							{
+								languages.map((item) => (
+									<li class:list={[item.code === lang && 'hidden']}>
+										<a
+											href={langHref(item.code)}
+											class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
+											role="option"
+										>
+											{item.label}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</div>
 				</div>
 			</div>
 
-			<button
-				id="mobile-menu-button"
-				class="md:hidden p-2"
-				type="button"
-				aria-controls="mobile-menu"
-				aria-expanded="false"
-			>
-				<span class="sr-only">Open menu</span>
-				<svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6">
-					<line x1="3" x2="21" y1="6" y2="6"></line>
-					<line x1="3" x2="21" y1="12" y2="12"></line>
-					<line x1="3" x2="21" y1="18" y2="18"></line>
-				</svg>
-				<svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 hidden">
-					<path d="M18 6 6 18"></path>
-					<path d="m6 6 12 12"></path>
-				</svg>
-			</button>
+			<div class="md:hidden flex items-center gap-2 shrink-0">
+				<ThemeToggle />
+				<button
+					id="mobile-menu-button"
+					class="p-2"
+					type="button"
+					aria-controls="mobile-menu"
+					aria-expanded="false"
+				>
+					<span class="sr-only">Open menu</span>
+					<svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6">
+						<line x1="3" x2="21" y1="6" y2="6"></line>
+						<line x1="3" x2="21" y1="12" y2="12"></line>
+						<line x1="3" x2="21" y1="18" y2="18"></line>
+					</svg>
+					<svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 hidden">
+						<path d="M18 6 6 18"></path>
+						<path d="m6 6 12 12"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div id="mobile-menu" class="md:hidden py-4 border-t border-border hidden">

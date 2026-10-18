@@ -1,13 +1,10 @@
 /** Primary CTA — replace when Cal.com / Calendly URL is ready. */
-export const BOOKING_URL = '#TODO(caye): URL agenda';
+export const BOOKING_URL = 'https://cal.com/bitdesal/30min';
 
 export const CONTACT_EMAIL = 'caye@bitdesal.com';
 
 /** Form endpoint — replace when Formspree / Web3Forms is configured. */
-export const CONTACT_FORM_ENDPOINT = '#TODO(caye): endpoint formulario';
-
-/** WhatsApp Business link — replace with wa.me URL. */
-export const WHATSAPP_URL = '#TODO(caye): WhatsApp';
+export const CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/xjygzogw';
 
 export const SHOW_CLIENT_LOGOS = false; // TODO(caye): permiso logos
 

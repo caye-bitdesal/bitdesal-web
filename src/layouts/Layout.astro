@@ -17,7 +17,9 @@ interface Props {
 }
 
 const { seo = 'home', title: titleOverride, description: descOverride, ogImage = DEFAULT_OG_IMAGE } = Astro.props;
-const { lang } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
+const themeLabelLight = t('theme.switchToLight', 'Modo claro');
+const themeLabelDark = t('theme.switchToDark', 'Modo oscuro');
 const seoMeta = getPageSeo(seo, lang);
 const title = titleOverride ?? seoMeta.title;
 const description = descOverride ?? seoMeta.description;
@@ -48,13 +50,35 @@ const jsonLd = {
 				addressRegion: 'Comunidad Valenciana',
 				addressCountry: 'ES',
 			},
+			hasOfferCatalog: {
+				'@type': 'OfferCatalog',
+				name: 'Servicios Bitdesal',
+				itemListElement: [
+					{
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: 'Consultoría de IA para empresas',
+							url: `${SITE_ORIGIN}/consultoria-ia`,
+						},
+					},
+					{
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: 'Desarrollo y consultoría de software',
+							url: `${SITE_ORIGIN}/consultoria-software`,
+						},
+					},
+				],
+			},
 		},
 		{
 			'@type': 'Person',
 			name: 'Caye Ruiz',
 			jobTitle: 'Fundador de Bitdesal',
 			email: CONTACT_EMAIL,
-			url: `${SITE_ORIGIN}/about`,
+			url: `${SITE_ORIGIN}/nosotros`,
 			worksFor: { '@type': 'Organization', name: 'Bitdesal' },
 		},
 	],
@@ -64,6 +88,18 @@ const jsonLd = {
 <!doctype html>
 <html lang={lang}>
 	<head>
+		<script is:inline>
+			(function () {
+				try {
+					var key = 'bitdesal-theme';
+					var stored = localStorage.getItem(key);
+					var dark =
+						stored === 'dark' ||
+						(stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+					if (dark) document.documentElement.classList.add('dark');
+				} catch (_) {}
+			})();
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -96,5 +132,42 @@ const jsonLd = {
 			<slot />
 		</main>
 		<Footer />
+		<script is:inline define:vars={{ themeLabelLight, themeLabelDark }}>
+			(function () {
+				var KEY = 'bitdesal-theme';
+				var labels = { light: themeLabelLight, dark: themeLabelDark };
+
+				function apply(theme) {
+					document.documentElement.classList.toggle('dark', theme === 'dark');
+					document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+						btn.setAttribute('aria-label', theme === 'dark' ? labels.light : labels.dark);
+						var sun = btn.querySelector('.theme-icon-sun');
+						var moon = btn.querySelector('.theme-icon-moon');
+						if (sun) sun.classList.toggle('hidden', theme !== 'dark');
+						if (moon) moon.classList.toggle('hidden', theme === 'dark');
+					});
+				}
+
+				function preferred() {
+					try {
+						var stored = localStorage.getItem(KEY);
+						if (stored === 'light' || stored === 'dark') return stored;
+					} catch (_) {}
+					return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
+
+				apply(document.documentElement.classList.contains('dark') ? 'dark' : preferred());
+
+				document.addEventListener('click', function (e) {
+					var btn = e.target.closest('[data-theme-toggle]');
+					if (!btn) return;
+					var next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+					try {
+						localStorage.setItem(KEY, next);
+					} catch (_) {}
+					apply(next);
+				});
+			})();
+		</script>
 	</body>
 </html>

@@ -3,23 +3,21 @@ import CtaSection from '../components/CtaSection.astro';
 import LinkedInPostCard from '../components/LinkedInPostCard.astro';
 import Layout from '../layouts/Layout.astro';
 import { linkedInPosts } from '../data/linkedInPosts';
+import { sitePath } from '../data/siteNav';
 import { useI18n } from '../i18n/useI18n';
 import { getCollection } from 'astro:content';
 
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 
-let localPosts: Awaited<ReturnType<typeof getCollection<'blog'>>> = [];
-try {
-	localPosts = await getCollection('blog');
-} catch {
-	/* collection optional until content exists */
-}
+const localPosts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 
 const audienceFilter = Astro.url.searchParams.get('audience');
 ---
 
 <Layout seo="blog">
-	<section class="bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 			<h1 class="text-4xl md:text-5xl mb-6">{t('blog.hero.title')}</h1>
 			<p class="text-xl text-white/90 max-w-3xl mx-auto">{t('blog.hero.subtitle')}</p>
@@ -42,9 +40,11 @@ const audienceFilter = Astro.url.searchParams.get('audience');
 								.filter((p) => !audienceFilter || p.data.audience === audienceFilter)
 								.map((post) => (
 									<article class="border border-border rounded-xl p-6 hover:border-primary transition-colors">
-										<p class="text-xs uppercase tracking-wide text-foreground/50 mb-2">{post.data.audience}</p>
+										<p class="text-xs uppercase tracking-wide text-foreground/50 mb-2">
+											{post.data.audience === 'business' ? 'Para empresas' : 'Técnico'}
+										</p>
 										<h3 class="text-xl mb-2">
-											<a href={`/blog/${post.id}`} class="hover:text-primary">
+											<a href={sitePath(`/blog/${post.id}`, lang)} class="hover:text-primary">
 												{post.data.title}
 											</a>
 										</h3>
