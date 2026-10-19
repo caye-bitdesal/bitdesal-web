@@ -108,6 +108,14 @@ export const translations: Record<Language, any> = {
 				title: 'Blog',
 				subtitle: 'Artículos de Bitdesal en LinkedIn y Medium sobre Android, IA e ingeniería',
 			},
+			filters: {
+				all: 'Todos',
+				business: 'Para empresas',
+				technical: 'Técnico',
+			},
+			onSite: 'En bitdesal.com',
+			external: 'LinkedIn y Medium',
+			back: '← Blog',
 		},
 		pricing: {
 			hero: {
@@ -290,6 +298,8 @@ export const translations: Record<Language, any> = {
 				title: 'Tú céntrate en tu negocio. La tecnología la ponemos nosotros.',
 				subtitle:
 					'Consultoría de IA y desarrollo de software. Con precio cerrado y sin sorpresas.',
+				imageAlt:
+					'Imagen que refleja la serenidad que queremos transmitir en Bitdesal a nuestros clientes',
 				viewProjects: 'Ver proyectos',
 				contact: 'Agenda 30 min gratis',
 			},
@@ -313,7 +323,7 @@ export const translations: Record<Language, any> = {
 				years: { value: '20 años', label: 'de experiencia en software' },
 				downloads: { value: '100K+', label: 'descargas en apps que hemos liderado' },
 				uptime: { value: '99,9 %', label: 'sesiones sin fallos en producción' },
-				countries: { value: '3 países', label: 'España, Suiza y Finlandia' },
+				countries: { value: '5 países', label: 'España, Suiza, Finlandia, Estados Unidos y Australia' },
 			},
 			entryOffer: {
 				badge: 'Precio cerrado, sin sorpresas',
@@ -436,7 +446,7 @@ export const translations: Record<Language, any> = {
 						imageAlt: 'Desarrollador dormido sobre el teclado tras una larga sesión de código',
 						date: '11 jun 2026',
 						excerpt:
-							'TODO(caye): confirmar cifra correcta — Un selector de idioma de «dos horas» se convirtió en una maratón de 12 horas con IA. Lecciones sobre criterios de aceptación, confiar pero verificar y cuestionar tus propios prompts.',
+							'Un selector de idioma de «dos horas» se convirtió en una maratón de 12 horas con IA. Lecciones sobre criterios de aceptación, confiar pero verificar y cuestionar tus propios prompts.',
 					},
 					afford: {
 						title: '¿Puedes permitirte tu desarrollo asistido por IA?',
@@ -844,21 +854,17 @@ export const translations: Record<Language, any> = {
 					name: 'Ramiro Santamaría',
 					title: 'Automatización con IA e IT',
 					bio: 'Informático con experiencia en desarrollo de apps móviles, web y en operaciones de IT y seguridad de redes. Se ha especializado en la orquestación de agentes de IA.',
-					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
 				},
 			},
 			hero: {
 				role: 'Caye Ruiz · Fundador de Bitdesal',
 			},
 			stats: {
-				line: '20 años · 99,9 % sin fallos · versiones mensuales durante 7 años · 30+ desarrolladores formados · 3 países',
+				line: '20 años · 99,9 % sin fallos · versiones mensuales durante 7 años · 30+ desarrolladores formados · 5 países',
 			},
 			bio: {
 				name: 'Caye Ruiz',
 				title: 'Fundador de Bitdesal',
-				p1: 'TODO(caye): revisar historia — Ingeniero de software con 20 años de experiencia en España, Suiza y Finlandia. Siete años como Lead Android en Kivra, la app de correo digital líder en Finlandia.',
-				p2: 'Tras 13 años en el norte de Europa, Caye volvió a Elche para fundar Bitdesal: ayudamos a empresas a quitar papeleo con automatización, software a medida e IA donde de verdad ahorra tiempo.',
-				p3: 'Especificaciones claras, precio cerrado y entrega que tu equipo puede continuar.',
 			},
 			profiles: {
 				linkedin: 'LinkedIn',
@@ -1144,6 +1150,8 @@ export const translations: Record<Language, any> = {
 		footer: {
 			tagline: 'Android Development, AI and High-Level Consulting',
 			servicesTitle: 'Services',
+			iaService: 'AI consulting for business',
+			softwareService: 'Software development and consulting',
 			androidDev: 'Android Development',
 			ai: 'Artificial Intelligence',
 			mentorship: 'Mentorship',
@@ -1165,6 +1173,14 @@ export const translations: Record<Language, any> = {
 				title: 'Blog',
 				subtitle: 'Articles from Bitdesal on LinkedIn and Medium about Android, AI and engineering',
 			},
+			filters: {
+				all: 'All',
+				business: 'For business',
+				technical: 'Technical',
+			},
+			onSite: 'On bitdesal.com',
+			external: 'LinkedIn and Medium',
+			back: '← Blog',
 		},
 		pricing: {
 			hero: {
@@ -1341,6 +1357,7 @@ export const translations: Record<Language, any> = {
 			bookCta: 'Book a free 30-minute call',
 			seeHowIWork: 'See how I work',
 			seePrices: 'See pricing',
+			meetUs: 'Meet us',
 			meetMe: 'About me',
 		},
 		theme: {
@@ -1352,6 +1369,10 @@ export const translations: Record<Language, any> = {
 			lead: 'Tell me what task eats most of your week. I reply within one business day.',
 			name: 'Name',
 			company: 'Company',
+			topicLabel: 'How can we help?',
+			topicIa: 'AI consulting — automate processes',
+			topicSoftware: 'Software development or consulting',
+			topicOther: 'Other',
 			message: 'What do you want to automate or improve?',
 			emailOrPhone: 'Email or phone',
 			submit: 'Send',
@@ -1367,19 +1388,37 @@ export const translations: Record<Language, any> = {
 				title: 'Software and AI without surprises',
 				subtitle:
 					'Senior Android and AI consulting: clear specs, production quality, and measurable delivery for international teams.',
+				imageAlt:
+					'An image that reflects the serenity we want to convey to our clients at Bitdesal',
 				viewProjects: 'View projects',
 				contact: 'Book a free 30-minute call',
+			},
+			serviceCards: {
+				ia: {
+					title: 'AI consulting for business',
+					description:
+						'Quotes by hand, notes on paper or WhatsApp, appointments that slip? We study how you work and automate what eats your hours.',
+					priceHint: 'From €1,800 + VAT',
+					cta: 'See AI consulting',
+				},
+				software: {
+					title: 'Software development and consulting',
+					description:
+						'Android development, architecture and quality for technical teams. Production apps with hundreds of thousands of users.',
+					priceHint: '€45/h + VAT',
+					cta: 'See software development',
+				},
 			},
 			stats: {
 				years: { value: '20 years', label: 'building software' },
 				downloads: { value: '100K+', label: 'downloads on apps I led' },
 				uptime: { value: '99.9%', label: 'crash-free sessions in production' },
-				countries: { value: '3 countries', label: 'Spain, Switzerland and Finland' },
+				countries: { value: '5 countries', label: 'Spain, Switzerland, Finland, the United States and Australia' },
 			},
 			entryOffer: {
-				badge: 'Transparent pricing',
-				text: 'TODO(caye): mensaje EN/FI — Process study and fixed-price projects tailored to your context.',
-				line: 'Reference rate: €45/h + VAT',
+				badge: 'Fixed price, no surprises',
+				text: 'We start with a €450 + VAT process study, fully credited if we do the project together. You get a diagnosis, the proposed solution and a fixed quote.',
+				line: 'Projects from €1,800 + VAT · Reference rate: €45/h + VAT',
 			},
 			whyBitdesal: {
 				title: 'Why Bitdesal?',
@@ -1442,7 +1481,10 @@ export const translations: Record<Language, any> = {
 			},
 			behind: {
 				title: 'Who is behind Bitdesal',
-				text: 'TODO(caye): mensaje EN/FI — Caye Ruiz, senior Android engineer. Seven years leading Kivra Finland; now consulting for teams that need production-grade mobile and AI-assisted delivery.',
+				text: 'Bitdesal comes from 20 years of building software in Spain, Switzerland and Finland. Its founder, Caye Ruiz, led Kivra’s Android app for seven years, used by hundreds of thousands of people. Today we work with businesses that want technology that works, without unnecessary complexity.',
+			},
+			logos: {
+				title: 'Experience at companies such as',
 			},
 			faq: {
 				title: 'FAQ',
@@ -1517,6 +1559,15 @@ export const translations: Record<Language, any> = {
 				title: 'Projects',
 				subtitle: 'A selection of Android and software work delivered by Bitdesal',
 			},
+			filter: {
+				all: 'All',
+				automation: 'AI and automation',
+				software: 'Software',
+			},
+			lineLabel: {
+				automation: 'AI and automation',
+				software: 'Software',
+			},
 			kivra: {
 				name: 'Kivra Finland',
 				tag: 'Android · Productivity',
@@ -1542,6 +1593,19 @@ export const translations: Record<Language, any> = {
 					'Kivra is a free mobile app that collects your invoices and documents from hundreds of companies and public organizations in one safe and easy place.',
 				website: 'Visit website',
 				playStore: 'View on Google Play',
+				case: {
+					challenge: 'The challenge',
+					role: 'Bitdesal’s role',
+					result: 'The result',
+					testimonial: 'Testimonial',
+					challengeText:
+						'Digitise official mail and invoices for hundreds of thousands of people in Finland, with bank-grade security and stable monthly releases.',
+					roleText:
+						'Caye led Android development for Kivra Finland for seven years, from 2019 to 2025, as Lead Android Developer. Bitdesal continues the product today.',
+					resultText:
+						'More than 100,000 downloads, 4.3★ on the Play Store, over 99.9% crash-free sessions and monthly releases for seven years.',
+					nextCase: 'Next case →',
+				},
 				metrics: {
 					users: '100K+',
 					usersLabel: 'Active users',
@@ -1698,14 +1762,137 @@ export const translations: Record<Language, any> = {
 			subtitle:
 				"If you're looking for international experience, technical quality and measurable results, let's talk about your project",
 			button: 'Book a free consultation',
+			ia: {
+				title: 'Which task steals the most hours every week?',
+				subtitle: 'Tell us in 30 minutes and we will say whether it can be automated and what it would cost.',
+				button: 'Book a free 30-minute call',
+			},
+			software: {
+				title: 'Need to strengthen your team or ship a build?',
+				subtitle: "Let's talk.",
+				button: 'Book a free 30-minute call',
+			},
+		},
+		iaPage: {
+			hero: {
+				badge: 'AI consulting for business',
+				title: 'Stop losing hours to paperwork',
+				subtitle:
+					'We automate your company’s processes with AI: quotes, appointments, job sheets, orders or invoices. You know the exact price before we start.',
+			},
+			painPoints: {
+				title: 'Sound familiar?',
+				closing: 'If you recognised yourself in any of these, your company can win back hours every week.',
+				items: {
+					budgets: {
+						problem: 'I do quotes by hand or in Excel, at night',
+						solution: 'We generate them in minutes from your phone, with your prices and your format.',
+					},
+					orders: {
+						problem: 'I jot orders in a notebook or on WhatsApp',
+						solution: 'Everything is recorded in one place, and you can find it when you need it.',
+					},
+					appointments: {
+						problem: 'I forget appointments or don’t return calls',
+						solution: 'A calendar with automatic reminders and an alert for every missed call.',
+					},
+					quotes: {
+						problem: 'I send quotes and don’t know who replied',
+						solution: 'Automatic follow-up: the system reminds them and lets you know.',
+					},
+					forms: {
+						problem: 'Job sheets arrive on paper, or they don’t arrive',
+						solution: 'The sheet is filled in on the phone, with photos and a signature, and goes straight to the office.',
+					},
+					copy: {
+						problem: 'I copy the same data from one program to another',
+						solution: 'We connect your tools so the data moves on its own.',
+					},
+					docs: {
+						problem: 'I review delivery notes, invoices and documents one by one',
+						solution: 'AI reads them, extracts the data and flags what matters.',
+					},
+				},
+			},
+			pricingSummary: {
+				title: 'Indicative prices',
+				study: 'Process study — €450 + VAT (€675 + VAT if several departments or systems are involved). 100% credited if you hire the implementation within the next 30 days.',
+				express: 'Express automation — €1,800–2,900 + VAT · 2–3 weeks.',
+				custom: 'Custom tool — from €4,500 + VAT.',
+				support: 'Support — from €225/month + VAT, no lock-in.',
+				details: 'See pricing in detail',
+			},
+			faq: {
+				security: {
+					q: 'Is it safe to use AI with my company’s data?',
+					a: 'We choose tools that comply with the GDPR and explain where your data goes before we start.',
+				},
+				tech: {
+					q: 'Do I need to know about computers?',
+					a: 'No. We fit what you already use so the change stays small, and we teach you the new parts step by step.',
+				},
+			},
+		},
+		consultoriaPage: {
+			hero: {
+				title: 'Software development and consulting for teams that cannot afford to fail',
+				subtitle:
+					'Android development, architecture and code quality. 20 years of experience and production apps with hundreds of thousands of users.',
+				kivraCase: 'See the Kivra case',
+			},
+			services: {
+				title: 'Services',
+				android: {
+					title: 'Android development',
+					description: 'Kotlin, Jetpack Compose, KMP. Production apps, from the first release to maintenance.',
+				},
+				architecture: {
+					title: 'Architecture and quality',
+					description: 'Clean Architecture, code review, automated tests, CI/CD.',
+				},
+				ai: {
+					title: 'AI-assisted engineering',
+					description: 'Specification, scaffolding, review and documentation workflows with AI, without losing quality.',
+				},
+				mentoring: {
+					title: 'Mentoring and teams',
+					description: 'Technical coaching that leaves the team stronger, not dependent.',
+				},
+			},
+			kivraHighlight: {
+				title: 'Kivra Finland case',
+				text: 'Caye led Android development for Kivra Finland from 2019 to 2025. Bitdesal continues the product today.',
+				stats: '100K+ downloads · 4.3★ · 5.1K reviews · 7 years in production · 99.9% crash-free',
+				cta: 'See the case study',
+			},
+			pricing: {
+				title: 'Ways of working and price',
+				hourly: 'Hourly: €45/h + VAT',
+				bundles: 'Monthly bundles: €225 / €450 / €900 + VAT (5/10/20 h).',
+				fixed: 'Fixed-price project after specification.',
+				international:
+					'International companies: €60/h (EU; the client handles VAT) · €75/h (outside the EU).',
+				details: 'See pricing',
+			},
 		},
 		about: {
+			pageTitle: 'About us',
+			hero: {
+				role: 'Caye Ruiz · Founder of Bitdesal',
+			},
+			stats: {
+				line: '20 years · 99.9% crash-free · monthly releases for 7 years · 30+ developers trained · 5 countries',
+			},
+			company: {
+				p1: 'Bitdesal was born from a simple idea: good engineering shouldn’t be reserved for big companies.',
+				p2: 'We started out building software and training development teams. Along the way, we kept seeing the same thing: businesses that are great at what they do and have good clients, yet lose hours every week to hand-made quotes, paperwork going back and forth, and tasks nobody should have to do twice. They don’t lack the will. What they lack is someone who understands how they work and gives them a tailored solution, at a price they can afford.',
+				p3: 'That’s why we exist: to cut the red tape and give that time back to what really makes a business grow.',
+				p4: 'We are qualified computer engineers, and we approach every project as an engineering problem: first we understand the process, then we design the solution, and only then do we build it, with tests and with documentation your team can follow.',
+				p5: 'AI is one of our tools, and a very powerful one, but it isn’t the goal. The goal is for your business to work better.',
+			},
 			bio: {
 				name: 'Caye Ruiz',
 				title: 'Founder',
-				p1: 'Senior and lead Android engineer with nearly 20 years building production apps, SDKs and frameworks, and a track record of mentoring and scaling teams of 30+ developers.',
-				p2: 'Deep Kotlin and Java expertise with Jetpack Compose and Clean Architecture. After 13 years in Finland, I am back in Spain running Bitdesal — architecture, code quality and AI-integrated delivery for clients such as Kivra.',
-				p3: 'If you want to talk about a project, write to caye@bitdesal.com.',
 			},
 			profiles: {
 				linkedin: 'LinkedIn',
@@ -1721,7 +1908,6 @@ export const translations: Record<Language, any> = {
 					name: 'Ramiro Santamaría',
 					title: 'AI automation and IT',
 					bio: 'IT professional with experience in mobile and web app development and in IT and network security operations. He specializes in AI agent orchestration.',
-					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
 				},
 			},
 			ramiro: {
@@ -2001,6 +2187,8 @@ export const translations: Record<Language, any> = {
 		footer: {
 			tagline: 'Android-kehitys, tekoäly ja korkean tason konsultointi',
 			servicesTitle: 'Palvelut',
+			iaService: 'Tekoälykonsultointi yrityksille',
+			softwareService: 'Ohjelmistokehitys ja konsultointi',
 			androidDev: 'Android-kehitys',
 			ai: 'Tekoäly',
 			mentorship: 'Mentorointi',
@@ -2022,6 +2210,14 @@ export const translations: Record<Language, any> = {
 				title: 'Blogi',
 				subtitle: 'Bitdesalin artikkelit LinkedInissä ja Mediumissa Androidista, tekoälystä ja insinöörityöstä',
 			},
+			filters: {
+				all: 'Kaikki',
+				business: 'Yrityksille',
+				technical: 'Tekninen',
+			},
+			onSite: 'Bitdesal.comissa',
+			external: 'LinkedIn ja Medium',
+			back: '← Blogi',
 		},
 		pricing: {
 			hero: {
@@ -2126,6 +2322,98 @@ export const translations: Record<Language, any> = {
 				h20: '20 h / kk',
 				note: 'Ei pitkää sitoumusta. Sovita paketti todelliseen tarpeeseen.',
 			},
+			blocks: {
+				study: {
+					title: 'Prosessitutkimus',
+					price: '450 € + ALV (kiinteä hinta)',
+					note: '≈10 h; 675 € + ALV, jos osastoja tai järjestelmiä on useita.',
+					description:
+						'Sisältää vaatimusten arvioinnin sekä prosessien ja järjestelmien tutkimuksen. Toimitus: diagnoosi, ehdotettu ratkaisu, vaiheittainen suunnitelma ja kiinteä tarjous.',
+					discount: '100 % hyvitetään, jos tilaat toteutuksen seuraavien 30 päivän aikana.',
+				},
+				implementation: {
+					title: 'Toteutus',
+					price: 'Kiinteä hinta',
+					description: 'Tutkimuksen mukaan: uudelleensuunnittelu, teknologia, suunnitelma, kehitys, testit ja koulutus.',
+				},
+				support: {
+					title: 'Tuki',
+					price: 'Kuukausipaketit',
+					description: '225 € / 450 € / 900 € + ALV (5/10/20 h). Laskutetaan vain käytetty aika. Ei sitoutumista.',
+				},
+			},
+			sections: {
+				ia: 'Tekoälykonsultointi yrityksille',
+				software: 'Ohjelmistokehitys ja konsultointi',
+			},
+			softwareBlock: {
+				title: 'Ohjelmistokehitys ja konsultointi',
+				hourly: '45 €/h + ALV. Vertailuhinta kehitykselle, arkkitehtuurille ja mentoroinnille.',
+				bundles: 'Kuukausipaketit: 225 € / 450 € / 900 € + ALV (5/10/20 h), ilman sitoutumista.',
+				fixed: 'Kiinteähintainen projekti spesifikaation ja vaiheittaisen suunnitelman jälkeen.',
+				international:
+					'Ohjelmistokehitys ja konsultointi kansainvälisille yrityksille: 60 €/h EU-yrityksille (asiakas hoitaa ALV:n). 75 €/h EU:n ulkopuolisille yrityksille.',
+			},
+			breakdownToggle: 'Näytä vaiheittainen erittely',
+			packages: {
+				title: 'Suuntaa antavat paketit',
+				express: {
+					title: 'Pika-automaatio',
+					price: '1 800–2 900 € + ALV',
+					time: '2–3 viikkoa',
+					description: 'Yksi konkreettinen prosessi: tarjoukset, laskut, tapaamiset, työselosteet tai asiakirjat tekoälyllä.',
+				},
+				custom: {
+					title: 'Räätälöity työkalu / sovellus',
+					price: 'Alkaen 4 500 € + ALV',
+					description: 'Ohjelmisto, joka sopii tapaasi työskennellä, integraatioineen ja koulutuksineen.',
+				},
+				maintenance: {
+					title: 'Ylläpito',
+					price: 'Alkaen 225 €/kk + ALV',
+					description: 'Tuntipaketteja häiriöihin, säätöihin ja parannuksiin.',
+				},
+			},
+			faq: {
+				title: 'Kysymyksiä hinnoista',
+				overrun: {
+					q: 'Mitä jos projekti venyy?',
+					a: 'Kiinteä hinta ei muutu, ellei laajuus muutu, ja siitä sovitaan aina kirjallisesti etukäteen.',
+				},
+				payment: {
+					q: 'Miten maksetaan?',
+					a: 'Tilisiirrolla, PayPalilla tai Bizumilla, kumpi sinulle sopii. Saat aina laskun, jossa ALV on eritelty.',
+				},
+				commitment: {
+					q: 'Onko sitoutumisaikaa?',
+					a: 'Ei. Jäät asiakkaaksi, koska se kannattaa, ei siksi että sopimus pakottaisi. Voit lopettaa tuen milloin tahansa ilman sanktioita ja ilman selityksiä.',
+				},
+			},
+		},
+		common: {
+			bookCta: 'Varaa 30 min ilmaiseksi',
+			seeHowIWork: 'Katso mitä teemme',
+			seePrices: 'Katso hinnat',
+			meetUs: 'Tutustu meihin',
+			meetMe: 'Tutustu meihin',
+		},
+		contact: {
+			title: 'Puhutaan projektistasi',
+			lead: 'Kerro mitä tarvitset. Vastaamme alle 24 työtunnin kuluessa.',
+			name: 'Nimi',
+			company: 'Yritys',
+			topicLabel: 'Miten voimme auttaa?',
+			topicIa: 'Tekoälykonsultointi — prosessien automatisointi',
+			topicSoftware: 'Ohjelmistokehitys tai konsultointi',
+			topicOther: 'Muu',
+			message: 'Viesti',
+			emailOrPhone: 'Sähköposti tai puhelin',
+			submit: 'Lähetä',
+			success: 'Viesti lähetetty. Vastaamme pian.',
+			error: 'Lähetys epäonnistui. Kirjoita osoitteeseen caye@bitdesal.com.',
+			alternatives: 'Tai jos haluat:',
+			book: 'Varaa 30 min ilmaiseksi',
+			location: 'Elche · Valencia · Etätyö koko Espanjassa ja kansainvälisille asiakkaille',
 		},
 		home: {
 			...makeTranslations.fi.home,
@@ -2133,12 +2421,61 @@ export const translations: Record<Language, any> = {
 				title: 'Ohjelmisto ja tekoäly ilman yllätyksiä',
 				subtitle:
 					'Konsultointia Androidiin, webiin ja API-rajapintoihin. Pidämme huolen, että se tekee sen mihin se on suunniteltu — ja että tuote voi mennä pidemmälle.',
+				imageAlt:
+					'Kuva, joka heijastaa rauhallisuutta, jota haluamme välittää Bitdesalin asiakkaille',
 				viewProjects: 'Katso projektit',
 				contact: 'Ota yhteyttä',
 			},
+			serviceCards: {
+				ia: {
+					title: 'Tekoälykonsultointi yrityksille',
+					description:
+						'Tarjouksia käsin, muistiinpanoja paperilla tai WhatsAppissa, tapaamisia jotka unohtuvat? Tutkimme miten työskentelette ja automatisoimme sen, mikä vie tunteja.',
+					priceHint: 'Alkaen 1 800 € + ALV',
+					cta: 'Katso tekoälykonsultointi',
+				},
+				software: {
+					title: 'Ohjelmistokehitys ja konsultointi',
+					description:
+						'Android-kehitystä, arkkitehtuuria ja laatua teknisille tiimeille. Tuotantosovelluksia sadoilletuhansille käyttäjille.',
+					priceHint: '45 €/h + ALV',
+					cta: 'Katso ohjelmistokehitys',
+				},
+			},
+			stats: {
+				years: { value: '20 vuotta', label: 'kokemusta ohjelmistoista' },
+				downloads: { value: '100K+', label: 'latausta sovelluksissa, joita olemme johtaneet' },
+				uptime: { value: '99,9 %', label: 'istuntoja ilman kaatumisia tuotannossa' },
+				countries: { value: '5 maata', label: 'Espanja, Sveitsi, Suomi, Yhdysvallat ja Australia' },
+			},
+			entryOffer: {
+				badge: 'Kiinteä hinta, ei yllätyksiä',
+				text: 'Aloitamme 450 € + ALV prosessitutkimuksella, joka vähennetään kokonaisuudessaan, jos teemme projektin yhdessä. Saat diagnoosin, ehdotetun ratkaisun ja kiinteän tarjouksen.',
+				line: 'Projektit alkaen 1 800 € + ALV · Vertailuhinta: 45 €/h + ALV',
+			},
+			behind: {
+				title: 'Kuka on taustalla',
+				text: 'Bitdesal syntyy 20 vuodesta ohjelmistojen rakentamista Espanjassa, Sveitsissä ja Suomessa. Perustajamme Caye Ruiz johti seitsemän vuotta Kivran Android-sovellusta, jota käyttivät satojatuhannet ihmiset. Tänään autamme yrityksiä, jotka haluavat teknologian toimivan ilman turhaa monimutkaisuutta.',
+			},
 			whyBitdesal: {
 				title: 'Miksi Bitdesal?',
-				subtitle: 'Selkeät speksit, tuotantolaatuinen Android ja luovutus, jonka tiimisi voi jatkaa.',
+				subtitle: 'Puhumme selkeästi ja pidämme sen, mistä sovimme.',
+				fixedPrice: {
+					title: 'Kiinteä hinta',
+					description: 'Tiedät mitä maksat ennen kuin aloitamme.',
+				},
+				direct: {
+					title: 'Suora yhteys tekijään',
+					description: 'Ei välikäsiä eikä myyntikerroksia.',
+				},
+				independence: {
+					title: 'Ei riippuvuutta',
+					description: 'Jätämme koodin, dokumentaation ja koulutetun tiimin.',
+				},
+				ai: {
+					title: 'Tekoälyä siellä missä se säästää, ei siellä missä se näyttää',
+					description: 'Käytämme sitä vain, kun se poistaa toistuvaa työtä.',
+				},
 				modernStack: {
 					title: 'Moderni stack',
 					description:
@@ -2175,8 +2512,55 @@ export const translations: Record<Language, any> = {
 				item3: 'Prosessien automatisointi tekoälyllä',
 			},
 			howIWork: {
-				title: 'Miten työskentelen',
-				subtitle: 'Speksi ensin, laatu sisäänrakennettuna, täysin etänä.',
+				title: 'Miten työskentelemme',
+				subtitle: 'Ensin ymmärrämme. Sitten rakennamme kunnolla.',
+				core: 'Diagnosointi ennen rakentamista estää teknologiaa vain nopeuttamasta tehotonta prosessia.',
+				steps: {
+					call: {
+						title: 'Maksuton keskustelu',
+						description: '30 minuuttia, jotta ymmärrämme ongelmasi ja näemme voimmeko auttaa.',
+					},
+					study: {
+						title: 'Tutkimus',
+						description: 'Käymme läpi miten työskentelette nyt ja toimitamme ratkaisun, suunnitelman ja kiinteän tarjouksen.',
+					},
+					build: {
+						title: 'Rakentaminen',
+						description: 'Kehitämme vaiheittain ja näytämme demon joka viikko, jotta näet etenemisen.',
+					},
+					handoff: {
+						title: 'Koulutus ja tuki',
+						description: 'Koulutamme tiimisi ja, jos haluat, jatkamme kuukausittaisilla tuntipaketeilla.',
+					},
+				},
+			},
+			logos: {
+				title: 'Kokemusta yrityksistä kuten',
+			},
+			faq: {
+				title: 'Usein kysytyt kysymykset',
+				items: {
+					duration: {
+						q: 'Kuinka kauan projekti kestää?',
+						a: 'Yksi konkreettinen automaatio, 2–3 viikkoa. Räätälöity työkalu, 1–3 kuukautta.',
+					},
+					tools: {
+						q: 'Pitääkö minun vaihtaa ohjelmat, joita jo käytän?',
+						a: 'Ei välttämättä. Aina kun mahdollista, kytkemme uuden siihen mitä sinulla jo on.',
+					},
+					worth: {
+						q: 'Entä jos se ei loppujen lopuksi kannata?',
+						a: 'Sanomme sen tutkimuksessa. Jos investointi ei ole järkevä, emme yritä myydä sitä.',
+					},
+					after: {
+						q: 'Mitä tapahtuu luovutuksen jälkeen?',
+						a: 'Sinulle jää koodi ja koulutus. Jos tarvitset tukea, on tuntipaketteja ilman sitoutumista.',
+					},
+					remote: {
+						q: 'Työskentelettekö vain etänä?',
+						a: 'Koko Espanjassa etänä. Jos olet lähellä Elcheä tai Valenciaa, voimme tavata kasvotusten.',
+					},
+				},
 			},
 			projects: {
 				title: 'Projektit',
@@ -2226,6 +2610,15 @@ export const translations: Record<Language, any> = {
 				title: 'Projektit',
 				subtitle: 'Valikoima Bitdesalin Android- ja ohjelmistotyöstä',
 			},
+			filter: {
+				all: 'Kaikki',
+				automation: 'Tekoäly ja automaatio',
+				software: 'Ohjelmisto',
+			},
+			lineLabel: {
+				automation: 'Tekoäly ja automaatio',
+				software: 'Ohjelmisto',
+			},
 			kivra: {
 				name: 'Kivra Finland',
 				tag: 'Android · Tuottavuus',
@@ -2251,6 +2644,19 @@ export const translations: Record<Language, any> = {
 					'Kivra on ilmainen mobiilisovellus, joka kokoaa laskut ja asiakirjat satojen yritysten ja viranomaisten lähettämänä yhteen turvalliseen paikkaan.',
 				website: 'Vieraile verkkosivulla',
 				playStore: 'Näytä Google Playssa',
+				case: {
+					challenge: 'Haaste',
+					role: 'Bitdesalin rooli',
+					result: 'Tulos',
+					testimonial: 'Suositus',
+					challengeText:
+						'Virallisen postin ja laskujen digitalisointi sadoilletuhansille ihmisille Suomessa, pankkitason turvallisuudella ja vakailla kuukausijulkaisuilla.',
+					roleText:
+						'Caye johti Kivra Suomen Android-kehitystä seitsemän vuotta, 2019–2025, Lead Android Developerina. Bitdesal jatkaa tuotetta tänään.',
+					resultText:
+						'Yli 100 000 latausta, 4,3★ Play Storessa, yli 99,9 % istunnoista ilman kaatumisia ja kuukausijulkaisut seitsemän vuoden ajan.',
+					nextCase: 'Seuraava tapaus →',
+				},
 				metrics: {
 					users: '100K+',
 					usersLabel: 'Aktiivista käyttäjää',
@@ -2407,14 +2813,137 @@ export const translations: Record<Language, any> = {
 			subtitle:
 				'Jos etsit kansainvälistä kokemusta, teknistä laatua ja mitattavia tuloksia, keskustellaan projektistasi',
 			button: 'Varaa maksuton konsultaatio',
+			ia: {
+				title: 'Mikä tehtävä vie eniten tunteja joka viikko?',
+				subtitle: 'Kerro se 30 minuutissa, niin sanomme voidaanko se automatisoida ja mitä se maksaisi.',
+				button: 'Varaa 30 min ilmaiseksi',
+			},
+			software: {
+				title: 'Tarvitsetko vahvistusta tiimiin tai kehityksen maaliin?',
+				subtitle: 'Puhutaan.',
+				button: 'Varaa 30 min ilmaiseksi',
+			},
+		},
+		iaPage: {
+			hero: {
+				badge: 'Tekoälykonsultointi yrityksille',
+				title: 'Lopeta tuntien hukkaaminen paperityöhön',
+				subtitle:
+					'Automatisoimme yrityksesi prosessit tekoälyllä: tarjoukset, tapaamiset, työselosteet, tilaukset tai laskut. Tiedät tarkan hinnan ennen kuin aloitamme.',
+			},
+			painPoints: {
+				title: 'Kuulostaako tutulta?',
+				closing: 'Jos tunnistit itsesi jossakin, yrityksesi voi voittaa tunteja joka viikko.',
+				items: {
+					budgets: {
+						problem: 'Teen tarjoukset käsin tai Excelissä, illalla',
+						solution: 'Luomme ne minuuteissa puhelimesta, hinnoillasi ja muodollasi.',
+					},
+					orders: {
+						problem: 'Kirjaan tilaukset vihkoon tai WhatsAppiin',
+						solution: 'Kaikki tallentuu yhteen paikkaan, ja löydät sen kun tarvitset.',
+					},
+					appointments: {
+						problem: 'Unohdan tapaamisia enkä soita takaisin',
+						solution: 'Kalenteri automaattisilla muistutuksilla ja hälytys jokaisesta vastaamattomasta puhelusta.',
+					},
+					quotes: {
+						problem: 'Lähetän tarjouksia enkä tiedä kuka on vastannut',
+						solution: 'Automaattinen seuranta: järjestelmä muistuttaa heitä ja ilmoittaa sinulle.',
+					},
+					forms: {
+						problem: 'Työselosteet tulevat paperilla, tai eivät tule',
+						solution: 'Seloste täytetään puhelimessa, kuvineen ja allekirjoituksineen, ja menee suoraan toimistoon.',
+					},
+					copy: {
+						problem: 'Kopioin samat tiedot ohjelmasta toiseen',
+						solution: 'Kytkemme työkalusi niin, että tiedot siirtyvät itsestään.',
+					},
+					docs: {
+						problem: 'Tarkistan lähetteet, laskut ja asiakirjat yksi kerrallaan',
+						solution: 'Tekoäly lukee ne, poimii tiedot ja kertoo mikä on tärkeää.',
+					},
+				},
+			},
+			pricingSummary: {
+				title: 'Suuntaa antavat hinnat',
+				study: 'Prosessitutkimus — 450 € + ALV (675 € + ALV, jos osastoja tai järjestelmiä on useita). 100 % hyvitetään, jos tilaat toteutuksen seuraavien 30 päivän aikana.',
+				express: 'Pika-automaatio — 1 800–2 900 € + ALV · 2–3 viikkoa.',
+				custom: 'Räätälöity työkalu — alkaen 4 500 € + ALV.',
+				support: 'Tuki — alkaen 225 €/kk + ALV, ilman sitoutumista.',
+				details: 'Katso hinnat tarkemmin',
+			},
+			faq: {
+				security: {
+					q: 'Onko turvallista käyttää tekoälyä yritykseni tiedoilla?',
+					a: 'Valitsemme GDPR:n mukaisia työkaluja ja kerromme minne tietosi menevät ennen kuin aloitamme.',
+				},
+				tech: {
+					q: 'Pitääkö minun osata tietotekniikkaa?',
+					a: 'Ei. Sopeudumme siihen mitä jo käytätte, jotta muutos jää pieneksi, ja opetamme uuden askel askeleelta.',
+				},
+			},
+		},
+		consultoriaPage: {
+			hero: {
+				title: 'Ohjelmistokehitys ja konsultointi tiimeille, jotka eivät voi epäonnistua',
+				subtitle:
+					'Android-kehitystä, arkkitehtuuria ja koodin laatua. 20 vuoden kokemus ja tuotantosovelluksia sadoilletuhansille käyttäjille.',
+				kivraCase: 'Katso Kivra-tapaus',
+			},
+			services: {
+				title: 'Palvelut',
+				android: {
+					title: 'Android-kehitys',
+					description: 'Kotlin, Jetpack Compose, KMP. Tuotantosovelluksia ensimmäisestä versiosta ylläpitoon.',
+				},
+				architecture: {
+					title: 'Arkkitehtuuri ja laatu',
+					description: 'Clean Architecture, koodikatselmukset, automaattiset testit, CI/CD.',
+				},
+				ai: {
+					title: 'Tekoälyavusteinen insinöörityö',
+					description: 'Spesifikaatio-, scaffolding-, katselmus- ja dokumentaatiotyönkulut tekoälyllä, laatua menettämättä.',
+				},
+				mentoring: {
+					title: 'Mentorointi ja tiimit',
+					description: 'Teknistä tukea, joka jättää tiimin vahvemmaksi, ei riippuvaiseksi.',
+				},
+			},
+			kivraHighlight: {
+				title: 'Kivra Suomi -tapaus',
+				text: 'Caye johti Kivra Suomen Android-kehitystä 2019–2025. Bitdesal jatkaa tuotetta tänään.',
+				stats: '100K+ latausta · 4,3★ · 5,1K arviota · 7 vuotta tuotannossa · 99,9 % ilman kaatumisia',
+				cta: 'Katso tapaus',
+			},
+			pricing: {
+				title: 'Toimintatavat ja hinta',
+				hourly: 'Tuntihinta: 45 €/h + ALV',
+				bundles: 'Kuukausipaketit: 225 € / 450 € / 900 € + ALV (5/10/20 h).',
+				fixed: 'Kiinteähintainen projekti spesifikaation jälkeen.',
+				international:
+					'Kansainväliset yritykset: 60 €/h (EU; asiakas hoitaa ALV:n) · 75 €/h (EU:n ulkopuolella).',
+				details: 'Katso hinnat',
+			},
 		},
 		about: {
+			pageTitle: 'Tietoa meistä',
+			hero: {
+				role: 'Caye Ruiz · Bitdesalin perustaja',
+			},
+			stats: {
+				line: '20 vuotta · 99,9 % ilman kaatumisia · kuukausijulkaisut 7 vuoden ajan · yli 30 koulutettua kehittäjää · 5 maata',
+			},
+			company: {
+				p1: 'Bitdesal syntyi yksinkertaisesta ajatuksesta: hyvä insinöörityö ei saisi olla vain suurten yritysten etuoikeus.',
+				p2: 'Aloitimme kehittämällä ohjelmistoja ja kouluttamalla kehitystiimejä. Matkan varrella huomasimme saman asian yhä uudelleen: yrityksiä, jotka osaavat työnsä ja joilla on hyviä asiakkaita, mutta jotka menettävät joka viikko tunteja käsin tehtyihin tarjouksiin, edestakaisin kulkeviin papereihin ja tehtäviin, joita kenenkään ei pitäisi tehdä kahdesti. Tahdosta ei ole puutetta. Puuttuu joku, joka ymmärtää, miten ne toimivat, ja tarjoaa juuri niille sopivan ratkaisun hintaan, joka on niille realistinen.',
+				p3: 'Siksi olemme olemassa: karsimme byrokratiaa ja palautamme sen ajan siihen, mikä todella kasvattaa liiketoimintaa.',
+				p4: 'Olemme koulutukseltamme tietotekniikan insinöörejä (ylempi korkeakoulututkinto), ja lähestymme jokaista projektia insinööriongelmana: ensin ymmärrämme prosessin, sitten suunnittelemme ratkaisun ja vasta sen jälkeen rakennamme sen, testattuna ja dokumentoituna niin, että tiimisi pystyy jatkamaan siitä.',
+				p5: 'Tekoäly on yksi työkaluistamme, ja erittäin tehokas sellainen, mutta se ei ole itsetarkoitus. Tarkoitus on, että yrityksesi toimii paremmin.',
+			},
 			bio: {
 				name: 'Caye Ruiz',
 				title: 'Perustaja',
-				p1: 'Senior- ja lead-tason Android-insinööri, jolla on lähes 20 vuoden kokemus tuotantosovelluksista, SDK:ista ja kehyksistä sekä yli 30 kehittäjän tiimien mentoroinnista ja skaalaamisesta.',
-				p2: 'Vahva Kotlin- ja Java-osaaminen, Jetpack Compose ja Clean Architecture. 13 vuoden jälkeen Suomessa palasin Espanjaan johtamaan Bitdesalia: arkkitehtuuria, koodin laatua ja tekoälyavusteista toimitusta asiakkaille kuten Kivralle.',
-				p3: 'Jos haluat keskustella projektista, kirjoita osoitteeseen caye@bitdesal.com.',
 			},
 			profiles: {
 				linkedin: 'LinkedIn',
@@ -2428,95 +2957,100 @@ export const translations: Record<Language, any> = {
 					'Ohjelmistoinsinööri, 20 vuoden kokemus. Caye johti Kivra Suomen Android-kehitystä seitsemän vuotta ja perusti Bitdesalin vuonna 2025.',
 				ramiro: {
 					name: 'Ramiro Santamaría',
-					title: 'TODO(caye): traducir perfil Ramiro',
-					bio: 'TODO(caye): traducir perfil Ramiro',
-					linkedinPending: 'TODO(caye): LinkedIn Ramiro',
+					title: 'Tekoälyautomaatio ja IT',
+					bio: 'Tietotekniikan ammattilainen, jolla on kokemusta mobiili- ja web-sovelluskehityksestä sekä IT- ja verkkoturvallisuusoperaatioista. Hän on erikoistunut tekoälyagenttien orkestraatioon.',
 				},
 			},
 			ramiro: {
 				journey: {
-					title: 'TODO(caye): traducir perfil Ramiro',
+					title: 'Ramiron työkokemus',
 					aiAgents: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'Tekoälyagenttien orkestraattori',
+						company: 'Freelance',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2026 – nykyinen',
+						item1:
+							'Suunnittelee moniagenttijärjestelmiä ja IT-toimintojen automatisointityönkulkuja asiakkaille.',
 					},
 					ininin: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'IT-operaatiot ja tietoturva',
+						company: 'INININ Group',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
-						item2: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2021 – nykyinen',
+						item1:
+							'Hallinnoi Microsoft 365 -ympäristöä, laitteita, verkkoa, toisen tason tukea ja ERP-käyttöönottoja Espanjassa, Yhdysvalloissa, Latinalaisessa Amerikassa ja Aasiassa.',
+						item2: 'Kehittää AL-laajennuksia Microsoft Dynamics 365 Business Centraliin.',
 					},
 					mobileFreelance: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'Mobiilisovelluskehittäjä',
+						company: 'Freelance',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2018 – nykyinen',
+						item1:
+							'Rakentaa Android- ja iOS-sovelluksia React Nativella sekä Node.js-, MongoDB- ja GraphQL-taustoilla.',
 					},
 					webFreelance: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'Web-sovelluskehittäjä',
+						company: 'Freelance',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2017 – nykyinen',
+						item1:
+							'Toimittaa räätälöityjä web-sovelluksia Reactilla, Firebasella ja WordPressillä, mukaan lukien verkkokauppa.',
 					},
 					alphaBiosciences: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
-						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						role: 'IT-konsultti',
+						company: 'Alpha Biosciences',
+						location: 'Yhdysvallat',
+						dates: '2018 – 2021',
+						item1: 'Hallinnoi Windows Server -ympäristöä ja toimialuetta, verkkoa ja yrityksen verkkosivustoa.',
 					},
 					bilbaoShopping: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'Perustaja',
+						company: 'Bilbao Shopping on Foot',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2012 – 2015',
+						item1: 'Perusti startupin mobiilisovelluksella paikallisten kauppojen löytämiseen.',
 					},
 					awimbaweJava: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'Java-kehittäjä',
+						company: 'Awimbawe LLC',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2010',
+						item1: 'Toimitti tuotantovalmista Java-ohjelmistoa.',
 					},
 					citef: {
-						role: 'TODO(caye): traducir perfil Ramiro',
-						company: '',
+						role: 'C++-kehittäjä',
+						company: 'CITEF',
 						location: '',
-						dates: '',
-						item1: 'TODO(caye): traducir perfil Ramiro',
+						dates: '2006 – 2008',
+						item1:
+							'Rakensi käyttöliittymän junasimulaattoriin Madridin metron kuljettajien koulutukseen.',
 					},
 					otherExperiences: {
-						role: 'TODO(caye): traducir perfil Ramiro',
+						role: 'Muu kokemus',
 						company: '',
 						location: '',
 						dates: '',
-						summary: 'TODO(caye): traducir perfil Ramiro',
+						summary:
+							'Köysipääsyteknikko Asakenilla (2014–2016, tiiminvetäjä), yritysenglannin opettaja (2009–2012) ja reittien rakentaja kiipeilyhalleissa Yhdysvalloissa (2018–2021).',
 					},
 				},
 				education: {
-					title: 'TODO(caye): traducir perfil Ramiro',
+					title: 'Koulutus',
 					licenciatura: {
-						degree: 'TODO(caye): traducir perfil Ramiro',
-						institution: '',
-						dates: '',
+						degree: 'Tietojenkäsittelytieteen kandidaatin tutkinto',
+						institution: 'Universidad Alfonso X el Sabio (Madrid)',
+						dates: '2000 – 2005',
 					},
 					windowsServer: {
-						degree: 'TODO(caye): traducir perfil Ramiro',
+						degree: 'Windows Server 2016 -hallinta',
 						institution: '',
-						dates: '',
+						dates: '2018',
 					},
 					irata: {
-						degree: 'TODO(caye): traducir perfil Ramiro',
-						institution: '',
-						dates: '',
+						degree: 'IRATA tason 2 ja GWO -sertifioinnit',
+						institution: 'Köysipääsy ja tuulivoimalat',
+						dates: '2014 – 2016',
 					},
 				},
 				skills: {

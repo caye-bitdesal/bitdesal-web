@@ -3,7 +3,7 @@ import CtaSection from '../components/CtaSection.astro';
 import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
 import StatsStrip from '../components/StatsStrip.astro';
 import Layout from '../layouts/Layout.astro';
-import { BOOKING_URL, SHOW_CLIENT_LOGOS, SHOW_TESTIMONIAL } from '../data/siteConstants';
+import { BOOKING_URL } from '../data/siteConstants';
 import { projectCards } from '../data/projectCards';
 import { sitePath } from '../data/siteNav';
 import { linkedInPosts } from '../data/linkedInPosts';
@@ -24,7 +24,7 @@ const whyCards = [
 	<section class="relative overflow-hidden text-white">
 		<img
 			src="/hero-home.jpg"
-			alt="TODO(caye): foto — sustituir por foto profesional o captura de automatización"
+			alt={t('home.hero.imageAlt')}
 			class="absolute inset-0 h-full w-full object-cover object-[70%_center]"
 			width="1024"
 			height="480"
@@ -171,25 +171,6 @@ const whyCards = [
 			</div>
 		</div>
 	</section>
-
-	{
-		SHOW_CLIENT_LOGOS && (
-			<section class="py-12 bg-secondary">
-				<div class="max-w-7xl mx-auto px-4 text-center">
-					<p class="text-sm uppercase tracking-widest text-foreground/60 mb-6">{t('home.logos.title')}</p>
-					<!-- TODO(caye): permiso logos -->
-				</div>
-			</section>
-		)
-	}
-
-	{
-		SHOW_TESTIMONIAL && (
-			<section class="py-12 bg-white">
-				<!-- TODO(caye): testimonio -->
-			</section>
-		)
-	}
 
 	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -11,7 +11,6 @@ export type TeamMember = {
 	bioKey: string;
 	website?: string;
 	linkedin?: string;
-	linkedinPending?: boolean;
 	github?: string;
 	showExtendedProfile: boolean;
 	extendedSections: TeamExtendedSection[];

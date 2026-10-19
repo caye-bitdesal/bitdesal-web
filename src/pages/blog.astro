@@ -9,11 +9,16 @@ import { getCollection } from 'astro:content';
 
 const { lang, t } = useI18n(Astro);
 
-const localPosts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+const localPosts = allPosts
+	.filter((post) => !/^(en|fi)\//.test(post.id))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const audienceFilter = Astro.url.searchParams.get('audience');
+function localizedPost(post: (typeof localPosts)[number]) {
+	if (lang === 'es') return post;
+	return allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post;
+}
+
 ---
 
 <Layout seo="blog">
@@ -21,10 +26,10 @@ const audienceFilter = Astro.url.searchParams.get('audience');
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 			<h1 class="text-4xl md:text-5xl mb-6">{t('blog.hero.title')}</h1>
 			<p class="text-xl text-white/90 max-w-3xl mx-auto">{t('blog.hero.subtitle')}</p>
-			<div class="flex flex-wrap justify-center gap-3 mt-8">
-				<a href="?" class:list={['px-4 py-2 rounded-full text-sm border', !audienceFilter ? 'bg-white text-primary border-white' : 'border-white/40 text-white/90']}>Todos</a>
-				<a href="?audience=business" class:list={['px-4 py-2 rounded-full text-sm border', audienceFilter === 'business' ? 'bg-white text-primary border-white' : 'border-white/40 text-white/90']}>Para empresas</a>
-				<a href="?audience=technical" class:list={['px-4 py-2 rounded-full text-sm border', audienceFilter === 'technical' ? 'bg-white text-primary border-white' : 'border-white/40 text-white/90']}>Técnico</a>
+			<div class="flex flex-wrap justify-center gap-3 mt-8" data-blog-filters>
+				<a href="?" data-blog-filter="" class="blog-filter px-4 py-2 rounded-full text-sm border bg-white text-primary border-white">{t('blog.filters.all')}</a>
+				<a href="?audience=business" data-blog-filter="business" class="blog-filter px-4 py-2 rounded-full text-sm border border-white/40 text-white/90">{t('blog.filters.business')}</a>
+				<a href="?audience=technical" data-blog-filter="technical" class="blog-filter px-4 py-2 rounded-full text-sm border border-white/40 text-white/90">{t('blog.filters.technical')}</a>
 			</div>
 		</div>
 	</section>
@@ -33,34 +38,37 @@ const audienceFilter = Astro.url.searchParams.get('audience');
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 			{
 				localPosts.length > 0 && (
-					<div>
-						<h2 class="text-2xl mb-6">En bitdesal.com</h2>
+					<div data-blog-section>
+						<h2 class="text-2xl mb-6">{t('blog.onSite')}</h2>
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-							{localPosts
-								.filter((p) => !audienceFilter || p.data.audience === audienceFilter)
-								.map((post) => (
-									<article class="border border-border rounded-xl p-6 hover:border-primary transition-colors">
+							{localPosts.map((post) => {
+									const shown = localizedPost(post);
+									return (
+									<article data-blog-audience={post.data.audience} class="border border-border rounded-xl p-6 hover:border-primary transition-colors">
 										<p class="text-xs uppercase tracking-wide text-foreground/50 mb-2">
-											{post.data.audience === 'business' ? 'Para empresas' : 'Técnico'}
+											{post.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical')}
 										</p>
 										<h3 class="text-xl mb-2">
 											<a href={sitePath(`/blog/${post.id}`, lang)} class="hover:text-primary">
-												{post.data.title}
+												{shown.data.title}
 											</a>
 										</h3>
-										<p class="text-foreground/70 text-sm">{post.data.description}</p>
+										<p class="text-foreground/70 text-sm">{shown.data.description}</p>
 									</article>
-								))}
+									);
+								})}
 						</div>
 					</div>
 				)
 			}
 
-			<div>
-				<h2 class="text-2xl mb-6">LinkedIn y Medium</h2>
+			<div data-blog-section>
+				<h2 class="text-2xl mb-6">{t('blog.external')}</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					{linkedInPosts.map((post) => (
-						<LinkedInPostCard post={post} />
+						<div data-blog-audience={post.audience}>
+							<LinkedInPostCard post={post} />
+						</div>
 					))}
 				</div>
 			</div>
@@ -69,3 +77,45 @@ const audienceFilter = Astro.url.searchParams.get('audience');
 
 	<CtaSection />
 </Layout>
+
+<script>
+	const activeClasses = ['bg-white', 'text-primary', 'border-white'];
+	const idleClasses = ['border-white/40', 'text-white/90'];
+
+	function currentFilter(): string {
+		return new URLSearchParams(window.location.search).get('audience') ?? '';
+	}
+
+	function applyFilter(filter: string) {
+		document.querySelectorAll<HTMLElement>('[data-blog-audience]').forEach((card) => {
+			card.hidden = Boolean(filter) && card.dataset.blogAudience !== filter;
+		});
+		document.querySelectorAll<HTMLElement>('[data-blog-section]').forEach((section) => {
+			const visible = [...section.querySelectorAll<HTMLElement>('[data-blog-audience]')].some((card) => !card.hidden);
+			section.hidden = !visible;
+		});
+		document.querySelectorAll<HTMLAnchorElement>('[data-blog-filter]').forEach((link) => {
+			const selected = (link.dataset.blogFilter ?? '') === filter;
+			link.classList.remove(...activeClasses, ...idleClasses);
+			link.classList.add(...(selected ? activeClasses : idleClasses));
+			if (selected) link.setAttribute('aria-current', 'true');
+			else link.removeAttribute('aria-current');
+		});
+	}
+
+	applyFilter(currentFilter());
+
+	document.querySelectorAll<HTMLAnchorElement>('[data-blog-filter]').forEach((link) => {
+		link.addEventListener('click', (event) => {
+			event.preventDefault();
+			const filter = link.dataset.blogFilter ?? '';
+			const url = new URL(window.location.href);
+			if (filter) url.searchParams.set('audience', filter);
+			else url.searchParams.delete('audience');
+			history.pushState({}, '', url);
+			applyFilter(filter);
+		});
+	});
+
+	window.addEventListener('popstate', () => applyFilter(currentFilter()));
+</script>

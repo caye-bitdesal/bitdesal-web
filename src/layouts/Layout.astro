@@ -2,7 +2,6 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Analytics from '../components/Analytics.astro';
 import { CONTACT_EMAIL, DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
 import { getPageSeo, type PageSeoId } from '../i18n/seo';
 import { useI18n } from '../i18n/useI18n';
@@ -124,7 +123,6 @@ const jsonLd = {
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={new URL(ogImage, SITE_ORIGIN).href} />
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-		<Analytics />
 	</head>
 	<body class="min-h-screen flex flex-col overflow-x-hidden">
 		<Header />

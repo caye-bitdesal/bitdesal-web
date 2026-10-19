@@ -68,11 +68,6 @@ const HeadingTag = variant === 'profile' ? 'h1' : 'h3';
 				)
 			}
 			{
-				member.linkedinPending && (
-					<span class="text-foreground/55 relative z-10">{t('about.team.ramiro.linkedinPending')}</span>
-				)
-			}
-			{
 				member.github && (
 					<a
 						href={member.github}

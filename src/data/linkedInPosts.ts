@@ -3,6 +3,7 @@ export interface LinkedInPost {
 	titleKey: string;
 	excerptKey: string;
 	dateKey: string;
+	audience: 'business' | 'technical';
 	image?: string;
 	imageAltKey?: string;
 	mediumUrl?: string;
@@ -17,6 +18,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		image: '/blog/cicd-android-github-actions.png',
 		imageAltKey: 'home.blog.posts.cicd.imageAlt',
 		mediumUrl: 'https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd',
+		audience: 'technical',
 	},
 	{
 		url: 'https://www.linkedin.com/pulse/insomnia-ai-agents-8-hour-simple-feature-bitdesal-ytkke/',
@@ -25,6 +27,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		dateKey: 'home.blog.posts.insomnia.date',
 		image: '/blog/insomnia-ai-agents-simple-feature.png',
 		imageAltKey: 'home.blog.posts.insomnia.imageAlt',
+		audience: 'technical',
 	},
 	{
 		url: 'https://www.linkedin.com/pulse/can-you-afford-your-ai-assisted-development-bitdesal-ubtpe',
@@ -33,6 +36,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		dateKey: 'home.blog.posts.afford.date',
 		image: '/blog/can-you-afford-ai-assisted-development.png',
 		imageAltKey: 'home.blog.posts.afford.imageAlt',
+		audience: 'business',
 	},
 	{
 		url: 'https://www.linkedin.com/pulse/beyond-vibe-coding-manifesto-sustainable-ai-engineering-bitdesal-x5bxe',
@@ -41,5 +45,6 @@ export const linkedInPosts: LinkedInPost[] = [
 		dateKey: 'home.blog.posts.manifesto.date',
 		image: '/blog/beyond-vibe-coding-manifesto.png',
 		imageAltKey: 'home.blog.posts.manifesto.imageAlt',
+		audience: 'technical',
 	},
 ];

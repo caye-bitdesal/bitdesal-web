@@ -1,43 +1,12 @@
 ---
-import CtaSection from '../../components/CtaSection.astro';
-import Layout from '../../layouts/Layout.astro';
-import { sitePath } from '../../data/siteNav';
-import { currencyLocale } from '../../i18n/formatCurrency';
-import { useI18n } from '../../i18n/useI18n';
-import { getCollection, render } from 'astro:content';
+import BlogArticle from '../../components/BlogArticle.astro';
+import { blogStaticPaths } from '../../data/blogRoutes';
 
-export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+export function getStaticPaths() {
+	return blogStaticPaths();
 }
 
 const { post } = Astro.props;
-const { lang } = useI18n(Astro);
-const { Content } = await render(post);
-
-const dateLabel = post.data.pubDate.toLocaleDateString(currencyLocale(lang), {
-	year: 'numeric',
-	month: 'long',
-	day: 'numeric',
-});
 ---
 
-<Layout seo="blog" title={`${post.data.title} · Bitdesal`} description={post.data.description}>
-	<article class="py-16 md:py-24 bg-white">
-		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-			<p class="mb-6">
-				<a href={sitePath('/blog', lang)} class="text-sm text-primary hover:underline">← Blog</a>
-			</p>
-			<p class="text-sm text-foreground/60 mb-2">
-				{dateLabel}
-				<span aria-hidden="true"> · </span>
-				<span>{post.data.audience === 'business' ? 'Para empresas' : 'Técnico'}</span>
-			</p>
-			<h1 class="text-3xl md:text-4xl mb-8">{post.data.title}</h1>
-			<div class="prose prose-neutral max-w-none text-foreground/85">
-				<Content />
-			</div>
-		</div>
-	</article>
-	<CtaSection />
-</Layout>
+<BlogArticle post={post} />

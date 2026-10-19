@@ -12,9 +12,9 @@ export const primaryNavLinks: NavLink[] = [
 	{ href: '/', labelKey: 'nav.home', fallback: 'Home' },
 	{ href: '/consultoria-ia', labelKey: 'nav.iaService', fallback: 'AI consulting' },
 	{ href: '/consultoria-software', labelKey: 'nav.softwareService', fallback: 'Software development' },
-	{ href: '/projects', labelKey: 'nav.projects', fallback: 'Projects' },
 	{ href: '/pricing', labelKey: 'nav.pricing', fallback: 'Pricing' },
 	{ href: '/nosotros', labelKey: 'nav.about', fallback: 'About' },
+	{ href: '/projects', labelKey: 'nav.projects', fallback: 'Projects' },
 	{ href: '/blog', labelKey: 'nav.blog', fallback: 'Blog' },
 ];
 
@@ -23,8 +23,8 @@ export const footerCompanyLinks: NavLink[] = [
 	{ href: '/consultoria-ia', labelKey: 'footer.iaService', fallback: 'AI consulting for business' },
 	{ href: '/consultoria-software', labelKey: 'footer.softwareService', fallback: 'Software development' },
 	{ href: '/pricing', labelKey: 'footer.pricing', fallback: 'Pricing' },
-	{ href: '/projects', labelKey: 'footer.projects', fallback: 'Projects' },
 	{ href: '/nosotros', labelKey: 'footer.aboutUs', fallback: 'About us' },
+	{ href: '/projects', labelKey: 'footer.projects', fallback: 'Projects' },
 	{ href: '/blog', labelKey: 'footer.blog', fallback: 'Blog' },
 ];
 

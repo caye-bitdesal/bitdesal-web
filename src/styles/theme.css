@@ -194,6 +194,7 @@
   }
 
   html.dark article.bg-white,
+  html.dark details.bg-white,
   html.dark div.bg-white.rounded-lg,
   html.dark div.bg-white.rounded-xl,
   html.dark div.bg-white.rounded-2xl,
