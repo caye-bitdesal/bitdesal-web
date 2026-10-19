@@ -5,6 +5,7 @@ export type PageSeoId =
 	| 'iaConsulting'
 	| 'consultoria'
 	| 'pricing'
+	| 'workAndPricing'
 	| 'about'
 	| 'projects'
 	| 'projectKivra'
@@ -64,6 +65,23 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		fi: {
 			title: 'Ohjelmistokonsultointi ja Android · Bitdesal',
 			description: 'Senior Android -kehitys ja arkkitehtuuri tuotetiimeille.',
+		},
+	},
+	workAndPricing: {
+		es: {
+			title: 'Casos y precios: proyectos y tarifas a precio cerrado · Bitdesal',
+			description:
+				'Proyectos reales y tarifas a precio cerrado: estudio de procesos, implementación y bolsas de soporte. Sin letra pequeña, con IVA desglosado.',
+		},
+		en: {
+			title: 'Work & pricing: case studies and fixed rates · Bitdesal',
+			description:
+				'Real projects and fixed-price rates: process study, implementation and support bundles. No small print, VAT shown separately.',
+		},
+		fi: {
+			title: 'Referenssit ja hinnat: hankkeet ja kiinteät hinnat · Bitdesal',
+			description:
+				'Oikeita hankkeita ja kiinteitä hintoja: prosessitutkimus, toteutus ja tukipaketit. Ei pientä pränttiä, ALV eriteltynä.',
 		},
 	},
 	pricing: {

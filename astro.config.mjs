@@ -24,6 +24,10 @@ export default defineConfig({
 					fi: 'fi-FI',
 				},
 			},
+			filter(page) {
+				const path = new URL(page).pathname.replace(/\/$/, '') || '/';
+				return !/^(\/(en|fi))?\/(pricing|projects|prices|precios)$/.test(path);
+			},
 			serialize(item) {
 				return {
 					...item,
@@ -35,8 +39,8 @@ export default defineConfig({
 	redirects: {
 		'/services': '/',
 		'/contact': '/contacto',
-		'/prices': '/pricing',
-		'/precios': '/pricing',
+		'/prices': '/casos-y-precios/',
+		'/precios': '/casos-y-precios/',
 		'/methodology': '/consultoria-software',
 		'/about': '/nosotros',
 		'/automatizacion-pymes': '/consultoria-ia',

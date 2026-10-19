@@ -15,6 +15,9 @@ function navHref(href: string) {
 
 function isNavActive(href: string) {
 	const target = sitePath(href, lang).replace(/\/$/, '') || '/';
+	if (href === '/casos-y-precios') {
+		return pathname === target || /\/projects(\/|$)/.test(pathname);
+	}
 	if (target === '/' || target === `/${lang}`) return pathname === target || pathname === '/';
 	return pathname === target || pathname.startsWith(`${target}/`);
 }
@@ -32,19 +35,19 @@ const languages = [
 
 <header class="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
 	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
-		<div class="flex justify-between items-center gap-3 min-h-16 py-2 md:py-0 md:h-16">
+		<div class="flex justify-between items-center gap-3 min-h-16 py-2 lg:py-0 lg:h-16">
 			<a href={navHref('/')} class="flex items-center gap-3 shrink-0">
 				<span class="text-xl font-semibold text-[#1a3a38] dark:text-[#f5f5f4]">Bitdesal</span>
 			</a>
 
-			<div class="hidden md:flex items-center gap-3 min-w-0 flex-1 justify-end">
-				<div class="flex flex-wrap items-center justify-end gap-x-3 lg:gap-x-5 gap-y-1 min-w-0">
+			<div class="hidden lg:flex items-center gap-2 xl:gap-3 min-w-0 flex-1 justify-end">
+				<div class="flex items-center justify-end gap-x-2 xl:gap-x-4 min-w-0">
 					{
 						navLinks.map((link) => (
 							<a
 								href={navHref(link.href)}
 								class:list={[
-									'shrink-0 whitespace-nowrap text-sm lg:text-base transition-colors hover:text-primary',
+									'shrink-0 whitespace-nowrap text-sm xl:text-base transition-colors hover:text-primary',
 									isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
 								]}
 								aria-current={isNavActive(link.href) ? 'page' : undefined}
@@ -102,7 +105,7 @@ const languages = [
 				</div>
 			</div>
 
-			<div class="md:hidden flex items-center gap-2 shrink-0">
+			<div class="lg:hidden flex items-center gap-2 shrink-0">
 				<ThemeToggle />
 				<button
 					id="mobile-menu-button"
@@ -125,7 +128,7 @@ const languages = [
 			</div>
 		</div>
 
-		<div id="mobile-menu" class="md:hidden py-4 border-t border-border hidden">
+		<div id="mobile-menu" class="lg:hidden py-4 border-t border-border hidden">
 			{
 				navLinks.map((link) => (
 					<a

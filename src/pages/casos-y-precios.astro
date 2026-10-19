@@ -1,0 +1,42 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import Layout from '../layouts/Layout.astro';
+import PricingPageContent from '../components/PricingPageContent.astro';
+import ProjectListSection from '../components/ProjectListSection.astro';
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+---
+
+<Layout seo="workAndPricing">
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-5xl mb-6">{t('workAndPricing.title')}</h1>
+			<p class="text-xl text-white/90 max-w-3xl mx-auto">{t('workAndPricing.subtitle')}</p>
+			<nav class="mt-8 flex flex-wrap justify-center gap-3" aria-label={t('workAndPricing.title')}>
+				<a
+					href="#casos"
+					class="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-5 py-2 text-sm font-medium text-white hover:bg-white/20 transition-colors"
+				>
+					{t('workAndPricing.tabCases')}
+				</a>
+				<a
+					href="#precios"
+					class="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-5 py-2 text-sm font-medium text-white hover:bg-white/20 transition-colors"
+				>
+					{t('workAndPricing.tabPricing')}
+				</a>
+			</nav>
+		</div>
+	</section>
+
+	<section id="casos" class="scroll-mt-28 py-16 md:py-24 bg-white">
+		<ProjectListSection />
+	</section>
+
+	<section id="precios" class="scroll-mt-20">
+		<PricingPageContent />
+	</section>
+
+	<CtaSection />
+</Layout>

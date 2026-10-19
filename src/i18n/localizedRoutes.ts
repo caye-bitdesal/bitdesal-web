@@ -12,6 +12,11 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	privacidad: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
 	privacy: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
 	tietosuoja: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
+	'casos-y-precios': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
+	'work-and-pricing': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
+	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
+	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
+	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 };
 
 export function stripLocalePrefix(pathname: string): { lang: Language; slug: string } {
@@ -54,6 +59,13 @@ export function absoluteAlternateHrefs(pathname: string): Record<Language, strin
 
 export function localePathForSwitch(pathname: string, targetLang: Language): string {
 	return alternateHrefs(pathname)[targetLang];
+}
+
+/** Locale-aware path that keeps a `#fragment` if one is present in `path`. */
+export function localizedPath(path: string, lang: Language): string {
+	const [pathname, hash] = path.split('#');
+	const href = localePathForSwitch(pathname || '/', lang);
+	return hash ? `${href}#${hash}` : href;
 }
 
 export function legalPath(page: 'notice' | 'privacy', lang: Language): string {

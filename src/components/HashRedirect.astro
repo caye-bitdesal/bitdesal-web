@@ -1,0 +1,32 @@
+---
+import { SITE_ORIGIN } from '../data/siteConstants';
+
+interface Props {
+	to: string;
+	defaultHash?: string;
+}
+
+const { to, defaultHash = '' } = Astro.props;
+const canonical = new URL(to, SITE_ORIGIN).href;
+const fallback = `${to}${defaultHash}`;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="refresh" content={`0;url=${fallback}`} />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href={canonical} />
+		<title>Redirecting…</title>
+		<script is:inline define:vars={{ to, defaultHash }}>
+			var hash = location.hash || defaultHash;
+			location.replace(to + hash);
+		</script>
+	</head>
+	<body>
+		<p>
+			<a href={fallback}>Redirecting…</a>
+		</p>
+	</body>
+</html>
