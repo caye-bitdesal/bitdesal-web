@@ -1,0 +1,13 @@
+---
+import LegalDocument from '../components/LegalDocument.astro';
+import Layout from '../layouts/Layout.astro';
+import { getPrivacyPolicy } from '../data/legalContent';
+import { useI18n } from '../i18n/useI18n';
+
+const { lang } = useI18n(Astro);
+const doc = getPrivacyPolicy(lang);
+---
+
+<Layout seo="privacy">
+	<LegalDocument doc={doc} />
+</Layout>

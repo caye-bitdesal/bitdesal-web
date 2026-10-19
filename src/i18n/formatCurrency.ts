@@ -21,6 +21,13 @@ export function vatSuffix(lang: Language): string {
 }
 
 function formatEurAmount(amount: number, lang: Language): string {
+	// es-ES CLDR skips grouping below 10.000; the site requires "1.080 €".
+	if (lang === 'es') {
+		const grouped = Math.round(amount)
+			.toString()
+			.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+		return `${grouped} €`;
+	}
 	return new Intl.NumberFormat(currencyLocale(lang), {
 		style: 'currency',
 		currency: 'EUR',

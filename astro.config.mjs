@@ -2,9 +2,11 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { sitemapHreflangLinks } from './src/i18n/localizedRoutes.ts';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://bitdesal.com',
+	trailingSlash: 'always',
 	i18n: {
 		defaultLocale: 'es',
 		locales: ['es', 'en', 'fi'],
@@ -22,13 +24,23 @@ export default defineConfig({
 					fi: 'fi-FI',
 				},
 			},
+			filter(page) {
+				const path = new URL(page).pathname.replace(/\/$/, '') || '/';
+				return !/^(\/(en|fi))?\/(pricing|projects|prices|precios)$/.test(path);
+			},
+			serialize(item) {
+				return {
+					...item,
+					links: sitemapHreflangLinks(item.url),
+				};
+			},
 		}),
 	],
 	redirects: {
 		'/services': '/',
 		'/contact': '/contacto',
-		'/prices': '/pricing',
-		'/precios': '/pricing',
+		'/prices': '/casos-y-precios/',
+		'/precios': '/casos-y-precios/',
 		'/methodology': '/consultoria-software',
 		'/about': '/nosotros',
 		'/automatizacion-pymes': '/consultoria-ia',

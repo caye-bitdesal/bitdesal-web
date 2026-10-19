@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { BOOKING_URL, CONTACT_EMAIL, CONTACT_FORM_ENDPOINT } from '../data/siteConstants';
+import { legalPath } from '../i18n/localizedRoutes';
 import { useI18n } from '../i18n/useI18n';
 
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 const successMsg = t('contact.success');
 const errorMsg = t('contact.error');
+const privacyHref = legalPath('privacy', lang);
 
 const tipo = Astro.url.searchParams.get('tipo');
 const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' : 'ia';
@@ -42,9 +44,24 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 					<label for="contact" class="block text-sm font-medium mb-1">{t('contact.emailOrPhone')}</label>
 					<input id="contact" name="contact" required class="w-full rounded-lg border border-border px-4 py-2.5 bg-input-background" />
 				</div>
+				<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+				<div class="flex items-start gap-3">
+					<input
+						id="privacy-consent"
+						type="checkbox"
+						required
+						class="mt-1 h-4 w-4 shrink-0 rounded border-border"
+					/>
+					<label for="privacy-consent" class="text-sm text-foreground/80 leading-relaxed">
+						{t('contact.consentBefore')}
+						<a href={privacyHref} class="text-primary underline">{t('contact.privacyPolicy')}</a>
+						{t('contact.consentAfter')}
+					</label>
+				</div>
 				<button type="submit" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
 					{t('contact.submit')}
 				</button>
+				<p class="text-xs text-foreground/55 leading-relaxed">{t('contact.dataNotice')}</p>
 				<p id="form-status" class="text-sm hidden" role="status"></p>
 			</form>
 

@@ -11,20 +11,36 @@ export type PhaseEstimateRaw = {
 	id: string;
 	/** Indicative hours (single midpoint) for tables and totals. */
 	hoursApprox: number;
+	/** Override hours label (e.g. ≈10 h). */
+	hoursLabel?: string;
+	/** Override amount instead of hours × rate (closed-price phases). */
+	amountEur?: number;
+	/** Phase number shown in the table (e.g. "1–2", "3"). */
+	indexLabel: string;
+	closedPrice?: boolean;
 };
 
-/** Indicative phase hours at {@link HOURLY_RATE_EUR}/h (+ IVA). */
+/**
+ * Indicative phase hours at {@link HOURLY_RATE_EUR}/h (+ IVA).
+ * TODO(caye): confirmar estas horas e importes antes de publicar.
+ */
 export const phaseEstimatesRaw: PhaseEstimateRaw[] = [
-	{ id: 'assessment', hoursApprox: 8 },
-	{ id: 'study', hoursApprox: 16 },
-	{ id: 'redesign', hoursApprox: 10 },
-	{ id: 'technology', hoursApprox: 9 },
-	{ id: 'plan', hoursApprox: 6 },
-	{ id: 'delivery', hoursApprox: 24 },
+	{ id: 'processStudy', hoursApprox: 10, hoursLabel: '≈10 h', amountEur: 450, indexLabel: '1–2', closedPrice: true },
+	{ id: 'redesign', hoursApprox: 10, indexLabel: '3' },
+	{ id: 'technology', hoursApprox: 9, indexLabel: '4' },
+	{ id: 'plan', hoursApprox: 6, indexLabel: '5' },
+	{ id: 'delivery', hoursApprox: 24, indexLabel: '6' },
 ];
 
 export function getProjectTotalHoursApprox(): number {
 	return phaseEstimatesRaw.reduce((sum, phase) => sum + phase.hoursApprox, 0);
+}
+
+export function getProjectTotalAmountEur(): number {
+	return phaseEstimatesRaw.reduce(
+		(sum, phase) => sum + (phase.amountEur ?? phase.hoursApprox * HOURLY_RATE_EUR),
+		0,
+	);
 }
 
 export const supportBundles = [
