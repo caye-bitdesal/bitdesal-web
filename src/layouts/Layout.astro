@@ -5,8 +5,8 @@ import Footer from '../components/Footer.astro';
 import { CONTACT_EMAIL, DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
 import { getPageSeo, type PageSeoId } from '../i18n/seo';
 import { useI18n } from '../i18n/useI18n';
-import { getRelativeLocaleUrl } from 'astro:i18n';
-import { supportedLanguages, type Language } from '../i18n/translations';
+import { absoluteAlternateHrefs } from '../i18n/localizedRoutes';
+import { supportedLanguages } from '../i18n/translations';
 
 interface Props {
 	seo?: PageSeoId;
@@ -25,14 +25,7 @@ const description = descOverride ?? seoMeta.description;
 
 const canonicalPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
-
-const pathWithoutLocale =
-	canonicalPath.replace(/^\/(en|fi)(?=\/|$)/, '').replace(/^\//, '') || '';
-
-function hreflangPath(locale: Language): string {
-	const relative = getRelativeLocaleUrl(locale, pathWithoutLocale);
-	return new URL(relative, SITE_ORIGIN).href;
-}
+const hreflangs = absoluteAlternateHrefs(Astro.url.pathname);
 
 const jsonLd = {
 	'@context': 'https://schema.org',
@@ -109,10 +102,10 @@ const jsonLd = {
 		<link rel="canonical" href={canonical} />
 		{
 			supportedLanguages.map((locale) => (
-				<link rel="alternate" hreflang={locale} href={hreflangPath(locale)} />
+				<link rel="alternate" hreflang={locale} href={hreflangs[locale]} />
 			))
 		}
-		<link rel="alternate" hreflang="x-default" href={hreflangPath('es')} />
+		<link rel="alternate" hreflang="x-default" href={hreflangs.es} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />

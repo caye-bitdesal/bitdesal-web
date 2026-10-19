@@ -71,6 +71,8 @@ export const translations: Record<Language, any> = {
 			location: 'Elche · Comunidad Valenciana',
 			linkedin: 'LinkedIn',
 			rights: 'Todos los derechos reservados.',
+			legalNotice: 'Aviso legal',
+			privacy: 'Privacidad',
 		},
 		contact: {
 			title: 'Hablemos de tu proyecto',
@@ -90,6 +92,11 @@ export const translations: Record<Language, any> = {
 			book: 'Agenda 30 min gratis',
 			location:
 				'Elche · Comunidad Valenciana · Trabajamos en remoto con toda España y con clientes internacionales',
+			consentBefore: 'He leído la ',
+			privacyPolicy: 'política de privacidad',
+			consentAfter: ' y acepto que tratéis mis datos para responder a mi solicitud.',
+			dataNotice:
+				'Responsable: Bitdesal ([NOMBRE DEL TITULAR]). Finalidad: responder a tu solicitud de contacto. Legitimación: tu consentimiento y la aplicación de medidas precontractuales. Destinatarios: Formspree, proveedor del formulario (EE. UU.). Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.',
 		},
 		common: {
 			bookCta: 'Agenda 30 min gratis',
@@ -1166,6 +1173,8 @@ export const translations: Record<Language, any> = {
 			location: 'Elche · Valencian Community',
 			linkedin: 'LinkedIn',
 			rights: 'All rights reserved.',
+			legalNotice: 'Legal notice',
+			privacy: 'Privacy',
 		},
 		blog: {
 			...makeTranslations.en.blog,
@@ -1381,6 +1390,11 @@ export const translations: Record<Language, any> = {
 			alternatives: 'Or:',
 			book: 'Book a free 30-minute call',
 			location: 'Elche · Valencian Community · Remote across Spain',
+			consentBefore: 'I have read the ',
+			privacyPolicy: 'privacy policy',
+			consentAfter: ' and I agree that you may process my data to respond to my request.',
+			dataNotice:
+				'Controller: Bitdesal ([NOMBRE DEL TITULAR]). Purpose: to respond to your contact request. Legal basis: your consent and pre-contractual steps. Recipients: Formspree, form provider (United States). Rights: access, rectification, erasure and others, as explained in the privacy policy.',
 		},
 		home: {
 			...makeTranslations.en.home,
@@ -2203,6 +2217,8 @@ export const translations: Record<Language, any> = {
 			location: 'Elche · Valencia',
 			linkedin: 'LinkedIn',
 			rights: 'Kaikki oikeudet pidätetään.',
+			legalNotice: 'Oikeudellinen ilmoitus',
+			privacy: 'Tietosuoja',
 		},
 		blog: {
 			...makeTranslations.fi.blog,
@@ -2414,6 +2430,11 @@ export const translations: Record<Language, any> = {
 			alternatives: 'Tai jos haluat:',
 			book: 'Varaa 30 min ilmaiseksi',
 			location: 'Elche · Valencia · Etätyö koko Espanjassa ja kansainvälisille asiakkaille',
+			consentBefore: 'Olen lukenut ',
+			privacyPolicy: 'tietosuojakäytännön',
+			consentAfter: ' ja hyväksyn, että käsittelette tietojani vastataksenne pyyntööni.',
+			dataNotice:
+				'Rekisterinpitäjä: Bitdesal ([NOMBRE DEL TITULAR]). Tarkoitus: vastata yhteydenottopyyntöösi. Oikeusperuste: suostumuksesi ja esisopimukselliset toimenpiteet. Vastaanottajat: Formspree, lomakkeen palveluntarjoaja (Yhdysvallat). Oikeudet: pääsy, oikaisu, poisto ja muut, kuten tietosuojakäytännössä selitetään.',
 		},
 		home: {
 			...makeTranslations.fi.home,

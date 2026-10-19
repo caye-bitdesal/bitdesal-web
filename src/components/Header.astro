@@ -1,6 +1,6 @@
 ---
-import { getRelativeLocaleUrl } from 'astro:i18n';
 import { primaryNavLinks, sitePath } from '../data/siteNav';
+import { localePathForSwitch } from '../i18n/localizedRoutes';
 import { useI18n } from '../i18n/useI18n';
 import ThemeToggle from './ThemeToggle.astro';
 import { supportedLanguages } from '../i18n/translations';
@@ -20,9 +20,7 @@ function isNavActive(href: string) {
 }
 
 function langHref(code: (typeof supportedLanguages)[number]) {
-	const pathWithoutLocale = pathname.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
-	const segment = pathWithoutLocale === '/' ? '' : pathWithoutLocale.replace(/^\//, '');
-	return getRelativeLocaleUrl(code, segment);
+	return localePathForSwitch(pathname, code);
 }
 
 const languages = [

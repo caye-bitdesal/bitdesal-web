@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { sitemapHreflangLinks } from './src/i18n/localizedRoutes.ts';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://bitdesal.com',
@@ -21,6 +22,12 @@ export default defineConfig({
 					en: 'en-US',
 					fi: 'fi-FI',
 				},
+			},
+			serialize(item) {
+				return {
+					...item,
+					links: sitemapHreflangLinks(item.url),
+				};
 			},
 		}),
 	],

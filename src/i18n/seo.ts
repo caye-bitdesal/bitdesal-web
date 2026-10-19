@@ -9,6 +9,8 @@ export type PageSeoId =
 	| 'projects'
 	| 'blog'
 	| 'contact'
+	| 'legalNotice'
+	| 'privacy'
 	| 'notFound';
 
 type SeoEntry = { title: string; description: string };
@@ -133,6 +135,40 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		fi: {
 			title: 'Yhteystiedot · Bitdesal',
 			description: 'Ota yhteyttä projektistasi.',
+		},
+	},
+	legalNotice: {
+		es: {
+			title: 'Aviso legal · Bitdesal',
+			description:
+				'Datos identificativos, condiciones de uso, propiedad intelectual y jurisdicción de bitdesal.com, conforme a la LSSI-CE.',
+		},
+		en: {
+			title: 'Legal notice · Bitdesal',
+			description:
+				'Identification, terms of use, intellectual property and jurisdiction of bitdesal.com. Translation; the Spanish version prevails.',
+		},
+		fi: {
+			title: 'Oikeudellinen ilmoitus · Bitdesal',
+			description:
+				'Bitdesal.comin tunnistetiedot, käyttöehdot, immateriaalioikeudet ja tuomioistuin. Käännös; espanjankielinen versio on ensisijainen.',
+		},
+	},
+	privacy: {
+		es: {
+			title: 'Política de privacidad · Bitdesal',
+			description:
+				'Cómo tratamos tus datos en el formulario, las citas y como clientes: finalidades, plazos, destinatarios y tus derechos RGPD.',
+		},
+		en: {
+			title: 'Privacy policy · Bitdesal',
+			description:
+				'How we process your data from the contact form, bookings and as clients: purposes, retention, recipients and your GDPR rights.',
+		},
+		fi: {
+			title: 'Tietosuojakäytäntö · Bitdesal',
+			description:
+				'Miten käsittelemme tietojasi lomakkeesta, ajanvarauksesta ja asiakkuudesta: tarkoitukset, säilytys, vastaanottajat ja GDPR-oikeutesi.',
 		},
 	},
 	notFound: {

@@ -1,0 +1,14 @@
+---
+import LegalDocument from '../components/LegalDocument.astro';
+import Layout from '../layouts/Layout.astro';
+import { getLegalNotice } from '../data/legalContent';
+import { legalPath } from '../i18n/localizedRoutes';
+import { useI18n } from '../i18n/useI18n';
+
+const { lang } = useI18n(Astro);
+const doc = getLegalNotice(lang, legalPath('privacy', lang));
+---
+
+<Layout seo="legalNotice">
+	<LegalDocument doc={doc} />
+</Layout>
