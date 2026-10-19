@@ -26,10 +26,10 @@ export function stripLocalePrefix(pathname: string): { lang: Language; slug: str
 	return { lang: 'es', slug: clean.replace(/^\//, '') };
 }
 
-/** Site-root-relative path for a slug in a locale (no trailing slash). */
+/** Site-root-relative path for a slug in a locale (always with a trailing slash). */
 export function localeHref(slug: string, lang: Language): string {
-	if (!slug) return lang === 'es' ? '/' : `/${lang}`;
-	return lang === 'es' ? `/${slug}` : `/${lang}/${slug}`;
+	if (!slug) return lang === 'es' ? '/' : `/${lang}/`;
+	return lang === 'es' ? `/${slug}/` : `/${lang}/${slug}/`;
 }
 
 export function alternateHrefs(pathname: string): Record<Language, string> {

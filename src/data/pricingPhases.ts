@@ -1,28 +1,27 @@
 import { formatEur } from '../i18n/formatCurrency';
 import type { Language } from '../i18n/translations';
 import {
+	getProjectTotalAmountEur,
 	getProjectTotalHoursApprox,
 	HOURLY_RATE_EUR,
 	phaseEstimatesRaw,
 	supportBundles,
 } from './pricing';
 
+const closedSuffix: Record<Language, string> = {
+	es: ' (precio cerrado)',
+	en: ' (fixed price)',
+	fi: ' (kiinteä hinta)',
+};
+
 const phaseCopy = {
-	assessment: {
-		titleKey: 'pricing.phases.items.assessment.title',
-		title: 'Assessment and requirements',
-		descKey: 'pricing.phases.items.assessment.description',
-		description: 'Goals, constraints and the underlying problem we need to solve.',
-		shortKey: 'pricing.phases.items.assessment.short',
-		short: 'Assessment',
-	},
-	study: {
-		titleKey: 'pricing.phases.items.study.title',
-		title: 'Process and systems study',
-		descKey: 'pricing.phases.items.study.description',
-		description: 'Interviews, real workflows, exceptions and existing integrations.',
-		shortKey: 'pricing.phases.items.study.short',
-		short: 'Process study',
+	processStudy: {
+		titleKey: 'pricing.phases.items.processStudy.title',
+		title: 'Process study (assessment + study)',
+		descKey: 'pricing.phases.items.processStudy.description',
+		description: 'Requirements review plus process and systems study. Closed-price deliverable.',
+		shortKey: 'pricing.phases.items.processStudy.short',
+		short: 'Process study (assessment + study)',
 	},
 	redesign: {
 		titleKey: 'pricing.phases.items.redesign.title',
@@ -59,18 +58,23 @@ const phaseCopy = {
 } as const;
 
 export function getServicePhases(lang: Language) {
-	return phaseEstimatesRaw.map((estimate) => ({
-		...phaseCopy[estimate.id as keyof typeof phaseCopy],
-		hours: `${estimate.hoursApprox} h`,
-		amount: formatEur(estimate.hoursApprox * HOURLY_RATE_EUR, lang),
-	}));
+	return phaseEstimatesRaw.map((estimate) => {
+		const amountEur = estimate.amountEur ?? estimate.hoursApprox * HOURLY_RATE_EUR;
+		const amount = `${formatEur(amountEur, lang)}${estimate.closedPrice ? closedSuffix[lang] : ''}`;
+		return {
+			...phaseCopy[estimate.id as keyof typeof phaseCopy],
+			indexLabel: estimate.indexLabel,
+			hours: estimate.hoursLabel ?? `${estimate.hoursApprox} h`,
+			amount,
+		};
+	});
 }
 
 export function getProjectTotal(lang: Language) {
 	const totalHours = getProjectTotalHoursApprox();
 	return {
-		hours: `${totalHours} h`,
-		amount: formatEur(totalHours * HOURLY_RATE_EUR, lang),
+		hours: `≈${totalHours} h`,
+		amount: formatEur(getProjectTotalAmountEur(), lang),
 	};
 }
 

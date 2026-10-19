@@ -7,6 +7,8 @@ export type PageSeoId =
 	| 'pricing'
 	| 'about'
 	| 'projects'
+	| 'projectKivra'
+	| 'projectYossa'
 	| 'blog'
 	| 'contact'
 	| 'legalNotice'
@@ -97,15 +99,52 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	projects: {
 		es: {
 			title: 'Proyectos y casos · Bitdesal',
-			description: 'Casos reales: Kivra Finlandia y otros proyectos Android y de software.',
+			description:
+				'Casos reales de Bitdesal: la app Android de Kivra en Finlandia y Yössä, el buscador de ocio nocturno. Software en producción con resultados medibles.',
 		},
 		en: {
 			title: 'Projects · Bitdesal',
-			description: 'Selected Android and software projects delivered by Bitdesal.',
+			description:
+				'Real Bitdesal case studies: Kivra’s Android digital mail app in Finland and Yössä, the nightlife finder. Production software with measurable results.',
 		},
 		fi: {
 			title: 'Projektit · Bitdesal',
-			description: 'Valikoituja Android- ja ohjelmistoprojekteja.',
+			description:
+				'Bitdesalin oikeat tapaukset: Kivran Android-sovellus Suomessa ja Yössä, yöelämän hakusovellus. Tuotanto-ohjelmistoja mitattavin tuloksin joka päivä.',
+		},
+	},
+	projectKivra: {
+		es: {
+			title: 'Caso Kivra: app Android de correo digital en Finlandia · Bitdesal',
+			description:
+				'Cómo lideramos durante 7 años la app Android de Kivra Finlandia: más de 100.000 descargas, 4,3★ y 99,9 % de sesiones sin fallos.',
+		},
+		en: {
+			title: 'Kivra case study: digital mail Android app in Finland · Bitdesal',
+			description:
+				'How we led Kivra Finland’s Android app for seven years: over 100,000 downloads, 4.3★ on Play Store and 99.9% crash-free sessions.',
+		},
+		fi: {
+			title: 'Kivra-case: digitaalisen postin Android-sovellus Suomessa · Bitdesal',
+			description:
+				'Miten johdimme seitsemän vuotta Kivra Suomen Android-sovellusta: yli 100 000 latausta, 4,3★ ja 99,9 % istuntoja ilman kaatumisia.',
+		},
+	},
+	projectYossa: {
+		es: {
+			title: 'Yössä: app Android de ocio nocturno · Bitdesal',
+			description:
+				'App para salir de noche: bares, conciertos y eventos a tu alrededor, con ofertas de bebidas que se activan cuando estás lo bastante cerca para usarlas.',
+		},
+		en: {
+			title: 'Yössä: nightlife Android app · Bitdesal',
+			description:
+				'Android nightlife app for bars, concerts and nearby events, with drink deals that unlock when you are close enough to use them.',
+		},
+		fi: {
+			title: 'Yössä: yöelämän Android-sovellus · Bitdesal',
+			description:
+				'Yöelämän sovellus: baarit, konsertit ja tapahtumat ympärilläsi sekä juomatarjoukset, jotka aktivoituvat kun olet tarpeeksi lähellä käyttääksesi niitä.',
 		},
 	},
 	blog: {

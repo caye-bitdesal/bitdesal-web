@@ -128,7 +128,7 @@ export const translations: Record<Language, any> = {
 			hero: {
 				badge: 'Precio transparente',
 				title: 'Sabes lo que vas a pagar antes de empezar',
-				lead: 'Consultoría para digitalizar el funcionamiento de la empresa e integrar la IA donde aligera la burocracia.',
+				lead: 'Consultoría de IA y desarrollo de software con precio claro desde el principio.',
 				subtitle:
 					'Trabajamos por fases para que sepas qué resolvemos, cuánto tarda y qué costará antes de que empiece el desarrollo.',
 				cta: 'Agenda 30 min gratis',
@@ -247,6 +247,12 @@ export const translations: Record<Language, any> = {
 				coreLabel: 'Idea central:',
 				core: 'diagnosticar y rediseñar antes de construir evita que la tecnología solo acelere un proceso ineficiente.',
 				items: {
+					processStudy: {
+						title: 'Estudio de procesos (evaluación + estudio)',
+						description:
+							'Incluye la evaluación de requisitos y el estudio de procesos y sistemas. Precio cerrado.',
+						short: 'Estudio de procesos (evaluación + estudio)',
+					},
 					assessment: {
 						title: 'Evaluación y requisitos',
 						description: 'Objetivos, restricciones y el problema de fondo que hay que resolver.',
@@ -288,6 +294,8 @@ export const translations: Record<Language, any> = {
 				hours: 'Horas (aproximado)',
 				amount: 'Importe',
 				total: 'Proyecto completo',
+				footnote:
+					'Proyecto orientativo para una empresa pequeña o mediana. El estudio de procesos se descuenta al 100 % si contratas la implementación en los 30 días siguientes.',
 			},
 			bundles: {
 				title: 'Bolsas de horas de soporte',
@@ -330,11 +338,14 @@ export const translations: Record<Language, any> = {
 				years: { value: '20 años', label: 'de experiencia en software' },
 				downloads: { value: '100K+', label: 'descargas en apps que hemos liderado' },
 				uptime: { value: '99,9 %', label: 'sesiones sin fallos en producción' },
-				countries: { value: '5 países', label: 'España, Suiza, Finlandia, Estados Unidos y Australia' },
+				countries: {
+					value: '5 países',
+					label: 'en los que hemos vivido y trabajado: España, Suiza, Finlandia, Estados Unidos y Australia',
+				},
 			},
 			entryOffer: {
 				badge: 'Precio cerrado, sin sorpresas',
-				text: 'Empezamos con un Estudio de procesos de 450 € + IVA que te descuento íntegramente si hacemos el proyecto juntos. Te llevas un diagnóstico, la solución propuesta y un presupuesto cerrado.',
+				text: 'Empezamos con un Estudio de procesos de 450 € + IVA que te descontamos íntegramente si hacemos el proyecto juntos. Te llevas un diagnóstico, la solución propuesta y un presupuesto cerrado.',
 				line: 'Proyectos desde 1.800 € + IVA · Tarifa de referencia: 45 €/h + IVA',
 			},
 			whyBitdesal: {
@@ -350,11 +361,11 @@ export const translations: Record<Language, any> = {
 				},
 				independence: {
 					title: 'Sin dependencia',
-					description: 'Te dejo el código, la documentación y a tu equipo formado.',
+					description: 'Te dejamos el código, la documentación y a tu equipo formado.',
 				},
 				ai: {
 					title: 'IA donde ahorra, no donde luce',
-					description: 'Solo la uso donde quita trabajo repetitivo.',
+					description: 'Solo la usamos donde quita trabajo repetitivo.',
 				},
 			},
 			android: {
@@ -399,7 +410,7 @@ export const translations: Record<Language, any> = {
 			},
 			behind: {
 				title: 'Quién está detrás',
-				text: 'Bitdesal nace de 20 años construyendo software en España, Suiza y Finlandia. Su fundador, Caye Ruiz, lideró durante 7 años la app Android de Kivra, usada por cientos de miles de personas. Hoy trabajamos con empresas que quieren tecnología que funcione, sin complicaciones.',
+				text: 'Somos un equipo de ingenieros con experiencia en cinco países: España, Suiza, Finlandia, Estados Unidos y Australia. Caye Ruiz, fundador, lideró durante 7 años la app Android de Kivra, usada por cientos de miles de personas. Ramiro Santamaría combina desarrollo de apps, operaciones de IT y orquestación de agentes de IA. Hoy trabajamos con empresas que quieren tecnología que funcione, sin complicaciones.',
 			},
 			logos: {
 				title: 'Experiencia en empresas como',
@@ -413,7 +424,7 @@ export const translations: Record<Language, any> = {
 					},
 					tools: {
 						q: '¿Tengo que cambiar los programas que ya uso?',
-						a: 'No necesariamente. Siempre que se puede, conecto lo nuevo con lo que ya tienes.',
+						a: 'No necesariamente. Siempre que se puede, conectamos lo nuevo con lo que ya tienes.',
 					},
 					worth: {
 						q: '¿Y si al final no me compensa?',
@@ -452,6 +463,7 @@ export const translations: Record<Language, any> = {
 						title: 'Insomnio, agentes de IA y la función «sencilla» de 8 horas',
 						imageAlt: 'Desarrollador dormido sobre el teclado tras una larga sesión de código',
 						date: '11 jun 2026',
+						// TODO(caye): confirmar si la maratón fue de 8 o 12 horas y unificar título y entradilla
 						excerpt:
 							'Un selector de idioma de «dos horas» se convirtió en una maratón de 12 horas con IA. Lecciones sobre criterios de aceptación, confiar pero verificar y cuestionar tus propios prompts.',
 					},
@@ -856,11 +868,12 @@ export const translations: Record<Language, any> = {
 			team: {
 				title: 'Equipo',
 				cayeBio:
-					'Ingeniero de software con 20 años de experiencia. Caye lideró el desarrollo Android de Kivra Finlandia durante 7 años y fundó Bitdesal en 2025.',
+					'Ingeniero de software con 20 años de experiencia en España, Suiza y Finlandia. Caye lideró el desarrollo Android de Kivra Finlandia durante 7 años y fundó Bitdesal en 2025.',
 				ramiro: {
 					name: 'Ramiro Santamaría',
 					title: 'Automatización con IA e IT',
-					bio: 'Informático con experiencia en desarrollo de apps móviles, web y en operaciones de IT y seguridad de redes. Se ha especializado en la orquestación de agentes de IA.',
+					// TODO(caye): confirmar redacción con Ramiro
+					bio: 'Informático con experiencia en España, Estados Unidos y Australia, en desarrollo de apps móviles, web y en operaciones de IT y seguridad de redes. Se ha especializado en la orquestación de agentes de IA.',
 				},
 			},
 			hero: {
@@ -1195,7 +1208,7 @@ export const translations: Record<Language, any> = {
 			hero: {
 				badge: 'Transparent pricing',
 				title: 'Know what you will pay before we start',
-				lead: 'Consulting to digitize how a company works and integrate AI where it cuts bureaucracy.',
+				lead: 'AI consulting and software development with a clear price from the start.',
 				subtitle:
 					'We work in phases so you know what we are solving, how long it takes and what it will cost before development begins.',
 				cta: 'Book a free 30-minute call',
@@ -1311,6 +1324,11 @@ export const translations: Record<Language, any> = {
 				coreLabel: 'Core idea:',
 				core: 'diagnosing and redesigning before building prevents technology from merely accelerating an inefficient process.',
 				items: {
+					processStudy: {
+						title: 'Process study (assessment + study)',
+						description: 'Requirements review plus process and systems study. Closed price.',
+						short: 'Process study (assessment + study)',
+					},
 					assessment: {
 						title: 'Assessment and requirements',
 						description: 'Goals, constraints and the underlying problem we need to solve.',
@@ -1352,6 +1370,8 @@ export const translations: Record<Language, any> = {
 				hours: 'Hours (approx.)',
 				amount: 'Amount',
 				total: 'Complete project',
+				footnote:
+					'Indicative project for a small or medium-sized company. The process study is fully credited if you hire implementation within the following 30 days.',
 			},
 			bundles: {
 				title: 'Support hour bundles',
@@ -1364,10 +1384,10 @@ export const translations: Record<Language, any> = {
 		},
 		common: {
 			bookCta: 'Book a free 30-minute call',
-			seeHowIWork: 'See how I work',
+			seeHowIWork: 'See what we do',
 			seePrices: 'See pricing',
 			meetUs: 'Meet us',
-			meetMe: 'About me',
+			meetMe: 'Meet us',
 		},
 		theme: {
 			switchToLight: 'Light mode',
@@ -1375,7 +1395,7 @@ export const translations: Record<Language, any> = {
 		},
 		contact: {
 			title: "Let's talk about your project",
-			lead: 'Tell me what task eats most of your week. I reply within one business day.',
+			lead: 'Tell us what you need. We reply within one business day.',
 			name: 'Name',
 			company: 'Company',
 			topicLabel: 'How can we help?',
@@ -1385,8 +1405,8 @@ export const translations: Record<Language, any> = {
 			message: 'What do you want to automate or improve?',
 			emailOrPhone: 'Email or phone',
 			submit: 'Send',
-			success: 'Message sent. I will get back to you soon.',
-			error: 'Could not send. Email me at caye@bitdesal.com.',
+			success: 'Message sent. We will get back to you soon.',
+			error: 'Could not send. Email us at caye@bitdesal.com.',
 			alternatives: 'Or:',
 			book: 'Book a free 30-minute call',
 			location: 'Elche · Valencian Community · Remote across Spain',
@@ -1399,9 +1419,9 @@ export const translations: Record<Language, any> = {
 		home: {
 			...makeTranslations.en.home,
 			hero: {
-				title: 'Software and AI without surprises',
-				subtitle:
-					'Senior Android and AI consulting: clear specs, production quality, and measurable delivery for international teams.',
+				// TODO(caye): revisar traducciones
+				title: "You focus on your business. We'll take care of the technology.",
+				subtitle: 'AI consulting and software development. Fixed prices, no surprises.',
 				imageAlt:
 					'An image that reflects the serenity we want to convey to our clients at Bitdesal',
 				viewProjects: 'View projects',
@@ -1425,9 +1445,12 @@ export const translations: Record<Language, any> = {
 			},
 			stats: {
 				years: { value: '20 years', label: 'building software' },
-				downloads: { value: '100K+', label: 'downloads on apps I led' },
+				downloads: { value: '100K+', label: 'downloads on apps we have led' },
 				uptime: { value: '99.9%', label: 'crash-free sessions in production' },
-				countries: { value: '5 countries', label: 'Spain, Switzerland, Finland, the United States and Australia' },
+				countries: {
+					value: '5 countries',
+					label: 'where we have lived and worked: Spain, Switzerland, Finland, the United States and Australia',
+				},
 			},
 			entryOffer: {
 				badge: 'Fixed price, no surprises',
@@ -1471,7 +1494,7 @@ export const translations: Record<Language, any> = {
 				item3: 'Process automation with AI',
 			},
 			howIWork: {
-				title: 'How I work',
+				title: 'How we work',
 				subtitle: 'Specs first, quality built in, fully remote.',
 				core: 'Diagnose and redesign before building so technology does not only speed up a broken process.',
 				steps: {
@@ -1495,7 +1518,7 @@ export const translations: Record<Language, any> = {
 			},
 			behind: {
 				title: 'Who is behind Bitdesal',
-				text: 'Bitdesal comes from 20 years of building software in Spain, Switzerland and Finland. Its founder, Caye Ruiz, led Kivra’s Android app for seven years, used by hundreds of thousands of people. Today we work with businesses that want technology that works, without unnecessary complexity.',
+				text: 'We are a team of engineers with experience in five countries: Spain, Switzerland, Finland, the United States and Australia. Caye Ruiz, founder, led Kivra’s Android app for seven years, used by hundreds of thousands of people. Ramiro Santamaría combines app development, IT operations and AI agent orchestration. Today we work with businesses that want technology that works, without unnecessary complexity.',
 			},
 			logos: {
 				title: 'Experience at companies such as',
@@ -1513,7 +1536,7 @@ export const translations: Record<Language, any> = {
 					},
 					worth: {
 						q: 'What if it is not worth it?',
-						a: 'I will say so early — I only take work that makes technical and business sense.',
+						a: 'We will say so in the study. If it is not worth investing, we will not sell it to you.',
 					},
 					after: {
 						q: 'What happens after delivery?',
@@ -1548,6 +1571,7 @@ export const translations: Record<Language, any> = {
 						title: '☕ Insomnia, AI Agents, and the 8-Hour "Simple Feature"',
 						imageAlt: 'Developer asleep on keyboard after a long coding session',
 						date: 'June 11, 2026',
+						// TODO(caye): confirmar si la maratón fue de 8 o 12 horas y unificar título y entradilla
 						excerpt:
 							'A "two-hour" language switcher turned into a 12-hour saga with AI. Lessons on acceptance criteria, trust-but-verify, and questioning your own prompts.',
 					},
@@ -1917,11 +1941,12 @@ export const translations: Record<Language, any> = {
 			team: {
 				title: 'Team',
 				cayeBio:
-					'Software engineer with 20 years of experience. Caye led Android development for Kivra Finland for seven years and founded Bitdesal in 2025.',
+					'Software engineer with 20 years of experience in Spain, Switzerland and Finland. Caye led Android development for Kivra Finland for seven years and founded Bitdesal in 2025.',
 				ramiro: {
 					name: 'Ramiro Santamaría',
 					title: 'AI automation and IT',
-					bio: 'IT professional with experience in mobile and web app development and in IT and network security operations. He specializes in AI agent orchestration.',
+					// TODO(caye): confirmar redacción con Ramiro
+					bio: 'IT professional with experience in Spain, the United States and Australia, in mobile and web app development and in IT and network security operations. He specializes in AI agent orchestration.',
 				},
 			},
 			ramiro: {
@@ -2239,7 +2264,7 @@ export const translations: Record<Language, any> = {
 			hero: {
 				badge: 'Läpinäkyvä hinnoittelu',
 				title: 'Ohjelmisto ja tekoäly ilman yllätyksiä',
-				lead: 'Konsultointia, jolla digitalisoidaan yrityksen toiminta ja tuodaan tekoäly sinne, missä se keventää byrokratiaa.',
+				lead: 'Tekoälykonsultointia ja ohjelmistokehitystä selkeällä hinnalla alusta alkaen.',
 				subtitle:
 					'Työskentelemme vaiheittain, jotta tiedät mitä ratkaisemme, kauanko se kestää ja mitä se maksaa ennen kehityksen alkua.',
 				cta: 'Pyydä alustava arvio',
@@ -2288,6 +2313,11 @@ export const translations: Record<Language, any> = {
 				coreLabel: 'Ydinajatus:',
 				core: 'diagnosointi ja uudelleensuunnittelu ennen rakentamista estää teknologiaa vain nopeuttamasta tehotonta prosessia.',
 				items: {
+					processStudy: {
+						title: 'Prosessitutkimus (arviointi + kartoitus)',
+						description: 'Sisältää vaatimusten arvioinnin sekä prosessien ja järjestelmien kartoituksen. Kiinteä hinta.',
+						short: 'Prosessitutkimus (arviointi + kartoitus)',
+					},
 					assessment: {
 						title: 'Arviointi ja vaatimukset',
 						description: 'Tavoitteet, reunaehdot ja varsinainen ongelma, joka pitää ratkaista.',
@@ -2329,6 +2359,8 @@ export const translations: Record<Language, any> = {
 				hours: 'Tunnit (noin)',
 				amount: 'Summa',
 				total: 'Koko projekti',
+				footnote:
+					'Suuntaa antava projekti pienelle tai keskisuurelle yritykselle. Prosessitutkimus vähennetään 100 %, jos ostat toteutuksen seuraavien 30 päivän kuluessa.',
 			},
 			bundles: {
 				title: 'Tukituntipaketit',
@@ -2439,9 +2471,9 @@ export const translations: Record<Language, any> = {
 		home: {
 			...makeTranslations.fi.home,
 			hero: {
-				title: 'Ohjelmisto ja tekoäly ilman yllätyksiä',
-				subtitle:
-					'Konsultointia Androidiin, webiin ja API-rajapintoihin. Pidämme huolen, että se tekee sen mihin se on suunniteltu — ja että tuote voi mennä pidemmälle.',
+				// TODO(caye): revisar traducciones
+				title: 'Sinä keskityt liiketoimintaasi. Me hoidamme teknologian.',
+				subtitle: 'Tekoälykonsultointia ja ohjelmistokehitystä. Kiinteä hinta, ei yllätyksiä.',
 				imageAlt:
 					'Kuva, joka heijastaa rauhallisuutta, jota haluamme välittää Bitdesalin asiakkaille',
 				viewProjects: 'Katso projektit',
@@ -2467,7 +2499,10 @@ export const translations: Record<Language, any> = {
 				years: { value: '20 vuotta', label: 'kokemusta ohjelmistoista' },
 				downloads: { value: '100K+', label: 'latausta sovelluksissa, joita olemme johtaneet' },
 				uptime: { value: '99,9 %', label: 'istuntoja ilman kaatumisia tuotannossa' },
-				countries: { value: '5 maata', label: 'Espanja, Sveitsi, Suomi, Yhdysvallat ja Australia' },
+				countries: {
+					value: '5 maata',
+					label: 'joissa olemme asuneet ja työskennelleet: Espanja, Sveitsi, Suomi, Yhdysvallat ja Australia',
+				},
 			},
 			entryOffer: {
 				badge: 'Kiinteä hinta, ei yllätyksiä',
@@ -2476,7 +2511,7 @@ export const translations: Record<Language, any> = {
 			},
 			behind: {
 				title: 'Kuka on taustalla',
-				text: 'Bitdesal syntyy 20 vuodesta ohjelmistojen rakentamista Espanjassa, Sveitsissä ja Suomessa. Perustajamme Caye Ruiz johti seitsemän vuotta Kivran Android-sovellusta, jota käyttivät satojatuhannet ihmiset. Tänään autamme yrityksiä, jotka haluavat teknologian toimivan ilman turhaa monimutkaisuutta.',
+				text: 'Olemme insinööritiimi, jolla on kokemusta viidestä maasta: Espanja, Sveitsi, Suomi, Yhdysvallat ja Australia. Perustaja Caye Ruiz johti seitsemän vuotta Kivran Android-sovellusta, jota käyttivät satojatuhannet ihmiset. Ramiro Santamaría yhdistää sovelluskehityksen, IT-operaatiot ja tekoälyagenttien orkestraation. Tänään autamme yrityksiä, jotka haluavat teknologian toimivan ilman turhaa monimutkaisuutta.',
 			},
 			whyBitdesal: {
 				title: 'Miksi Bitdesal?',
@@ -2606,6 +2641,7 @@ export const translations: Record<Language, any> = {
 						title: 'Unettomuus, tekoälyagentit ja 8 tunnin «yksinkertainen» ominaisuus',
 						imageAlt: 'Kehittäjä nukkuu näppäimistöllä pitkän koodausmaratonin jälkeen',
 						date: '11.6.2026',
+						// TODO(caye): confirmar si la maratón fue de 8 o 12 horas y unificar título y entradilla
 						excerpt:
 							'«Kahden tunnin» kielivalitsin muuttui 12 tunnin maratoniksi tekoälyn kanssa. Oppia hyväksymiskriteereistä, luota mutta varmista -periaatteesta ja omien promptien kyseenalaistamisesta.',
 					},
@@ -2975,11 +3011,12 @@ export const translations: Record<Language, any> = {
 			team: {
 				title: 'Tiimi',
 				cayeBio:
-					'Ohjelmistoinsinööri, 20 vuoden kokemus. Caye johti Kivra Suomen Android-kehitystä seitsemän vuotta ja perusti Bitdesalin vuonna 2025.',
+					'Ohjelmistoinsinööri, 20 vuoden kokemus Espanjassa, Sveitsissä ja Suomessa. Caye johti Kivra Suomen Android-kehitystä seitsemän vuotta ja perusti Bitdesalin vuonna 2025.',
 				ramiro: {
 					name: 'Ramiro Santamaría',
 					title: 'Tekoälyautomaatio ja IT',
-					bio: 'Tietotekniikan ammattilainen, jolla on kokemusta mobiili- ja web-sovelluskehityksestä sekä IT- ja verkkoturvallisuusoperaatioista. Hän on erikoistunut tekoälyagenttien orkestraatioon.',
+					// TODO(caye): confirmar redacción con Ramiro
+					bio: 'Tietotekniikan ammattilainen, jolla on kokemusta Espanjassa, Yhdysvalloissa ja Australiassa mobiili- ja web-sovelluskehityksestä sekä IT- ja verkkoturvallisuusoperaatioista. Hän on erikoistunut tekoälyagenttien orkestraatioon.',
 				},
 			},
 			ramiro: {

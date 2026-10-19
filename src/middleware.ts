@@ -7,12 +7,15 @@ export const onRequest = defineMiddleware((context, next) => {
 
 	if (langParam && supportedLanguages.includes(langParam as (typeof supportedLanguages)[number])) {
 		const path = url.pathname.replace(/\/$/, '') || '/';
+		const without = path.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
 		const target =
 			langParam === 'es'
-				? path
-				: path === '/'
-					? `/${langParam}`
-					: `/${langParam}${path}`;
+				? without === '/'
+					? '/'
+					: `${without}/`
+				: without === '/'
+					? `/${langParam}/`
+					: `/${langParam}${without}/`;
 		const redirectUrl = new URL(target, url.origin);
 		url.searchParams.delete('lang');
 		redirectUrl.search = url.searchParams.toString();

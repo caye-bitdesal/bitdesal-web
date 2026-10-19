@@ -23,9 +23,12 @@ const seoMeta = getPageSeo(seo, lang);
 const title = titleOverride ?? seoMeta.title;
 const description = descOverride ?? seoMeta.description;
 
-const canonicalPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const canonicalPath =
+	Astro.url.pathname === '/' || Astro.url.pathname.endsWith('/')
+		? Astro.url.pathname
+		: `${Astro.url.pathname}/`;
 const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
-const hreflangs = absoluteAlternateHrefs(Astro.url.pathname);
+const hreflangs = absoluteAlternateHrefs(canonicalPath);
 
 const jsonLd = {
 	'@context': 'https://schema.org',
@@ -51,7 +54,7 @@ const jsonLd = {
 						itemOffered: {
 							'@type': 'Service',
 							name: 'Consultoría de IA para empresas',
-							url: `${SITE_ORIGIN}/consultoria-ia`,
+							url: `${SITE_ORIGIN}/consultoria-ia/`,
 						},
 					},
 					{
@@ -59,7 +62,7 @@ const jsonLd = {
 						itemOffered: {
 							'@type': 'Service',
 							name: 'Desarrollo y consultoría de software',
-							url: `${SITE_ORIGIN}/consultoria-software`,
+							url: `${SITE_ORIGIN}/consultoria-software/`,
 						},
 					},
 				],
@@ -70,7 +73,7 @@ const jsonLd = {
 			name: 'Caye Ruiz',
 			jobTitle: 'Fundador de Bitdesal',
 			email: CONTACT_EMAIL,
-			url: `${SITE_ORIGIN}/nosotros`,
+			url: `${SITE_ORIGIN}/nosotros/`,
 			worksFor: { '@type': 'Organization', name: 'Bitdesal' },
 		},
 	],
@@ -82,6 +85,31 @@ const jsonLd = {
 	<head>
 		<script is:inline>
 			(function () {
+				try {
+					var params = new URLSearchParams(location.search);
+					var lang = params.get('lang');
+					if (lang === 'es' || lang === 'en' || lang === 'fi') {
+						var path = location.pathname.replace(/\/$/, '') || '/';
+						var without = path.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
+						var target;
+						if (lang === 'es') {
+							target = without === '/' ? '/' : without.charAt(0) === '/' ? without + '/' : '/' + without + '/';
+						} else {
+							target =
+								without === '/'
+									? '/' + lang + '/'
+									: '/' + lang + (without.charAt(0) === '/' ? without : '/' + without) + '/';
+						}
+						target = target.replace(/\/{2,}/g, '/');
+						params.delete('lang');
+						var qs = params.toString();
+						var next = target + (qs ? '?' + qs : '') + location.hash;
+						if (next !== location.pathname + location.search + location.hash) {
+							location.replace(next);
+							return;
+						}
+					}
+				} catch (_) {}
 				try {
 					var key = 'bitdesal-theme';
 					var stored = localStorage.getItem(key);

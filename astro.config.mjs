@@ -6,6 +6,7 @@ import { sitemapHreflangLinks } from './src/i18n/localizedRoutes.ts';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://bitdesal.com',
+	trailingSlash: 'always',
 	i18n: {
 		defaultLocale: 'es',
 		locales: ['es', 'en', 'fi'],
