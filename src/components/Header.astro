@@ -1,199 +1,168 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { primaryNavLinks, sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
+import ThemeToggle from './ThemeToggle.astro';
+import { supportedLanguages } from '../i18n/translations';
 
+const { lang, t } = useI18n(Astro);
 const navLinks = primaryNavLinks;
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 
-/** @param {string} href */
 function navHref(href: string) {
-	return sitePath(href);
+	return sitePath(href, lang);
 }
 
-/** @param {string} href */
 function isNavActive(href: string) {
-	const target = sitePath(href).replace(/\/$/, '') || '/';
-	if (target === '/') return pathname === '/';
+	const target = sitePath(href, lang).replace(/\/$/, '') || '/';
+	if (target === '/' || target === `/${lang}`) return pathname === target || pathname === '/';
 	return pathname === target || pathname.startsWith(`${target}/`);
 }
 
-/** @param {string} code */
-function langHref(code: string) {
-	const url = new URL(Astro.url);
-	url.searchParams.set('lang', code);
-	return `${url.pathname}?${url.searchParams.toString()}`;
+function langHref(code: (typeof supportedLanguages)[number]) {
+	const pathWithoutLocale = pathname.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
+	const segment = pathWithoutLocale === '/' ? '' : pathWithoutLocale.replace(/^\//, '');
+	return getRelativeLocaleUrl(code, segment);
 }
 
 const languages = [
-	{ code: 'en', label: 'EN' },
-	{ code: 'es', label: 'ES' },
-	{ code: 'fi', label: 'FI' },
-] as const;
+	{ code: 'es' as const, label: 'ES' },
+	{ code: 'en' as const, label: 'EN' },
+	{ code: 'fi' as const, label: 'FI' },
+];
 ---
 
-<header class="sticky top-0 z-50 bg-white border-b border-border">
+<header class="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
 	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary">
-		<div class="flex justify-between items-center h-16">
-			<a href={navHref('/')} class="flex items-center gap-3">
-				<span class="text-xl text-primary">Bitdesal</span>
+		<div class="flex justify-between items-center gap-3 min-h-16 py-2 md:py-0 md:h-16">
+			<a href={navHref('/')} class="flex items-center gap-3 shrink-0">
+				<span class="text-xl font-semibold text-[#1a3a38] dark:text-[#f5f5f4]">Bitdesal</span>
 			</a>
 
-			<div class="hidden md:flex flex-wrap items-center justify-end gap-x-4 gap-y-1 lg:gap-x-8 min-w-0">
-				{navLinks.map((link) => (
+			<div class="hidden md:flex items-center gap-3 min-w-0 flex-1 justify-end">
+				<div class="flex flex-wrap items-center justify-end gap-x-3 lg:gap-x-5 gap-y-1 min-w-0">
+					{
+						navLinks.map((link) => (
+							<a
+								href={navHref(link.href)}
+								class:list={[
+									'shrink-0 whitespace-nowrap text-sm lg:text-base transition-colors hover:text-primary',
+									isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
+								]}
+								aria-current={isNavActive(link.href) ? 'page' : undefined}
+							>
+								{t(link.labelKey, link.fallback)}
+							</a>
+						))
+					}
+				</div>
+
+				<div class="header-utilities flex items-center gap-2 shrink-0 pl-3 ml-1 border-l border-border">
 					<a
-						href={navHref(link.href)}
-						class:list={[
-							'shrink-0 whitespace-nowrap transition-colors hover:text-primary',
-							isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
-						]}
-						aria-current={isNavActive(link.href) ? 'page' : undefined}
-						data-i18n-key={link.labelKey}
+						href={navHref('/contacto')}
+						class="contact-btn inline-flex items-center justify-center bg-primary text-white px-3 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm whitespace-nowrap"
 					>
-						{link.fallback}
+						{t('nav.contact', 'Contact')}
 					</a>
-				))}
-
-				<a
-					href="mailto:caye@bitdesal.com"
-					class="contact-btn shrink-0 inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm"
-					data-i18n-key="nav.contact"
-				>
-					Contact
-				</a>
-
-				<div class="relative shrink-0" data-lang-dropdown>
-					<button
-						type="button"
-						class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80"
-						data-lang-trigger
-						aria-expanded="false"
-						aria-haspopup="listbox"
-						aria-controls="lang-menu-desktop"
-					>
-						<span data-lang-label>EN</span>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
-							<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
-						</svg>
-						<span class="sr-only" data-i18n-key="nav.language">Language</span>
-					</button>
-					<ul
-						id="lang-menu-desktop"
-						class="absolute right-0 mt-2 min-w-[4.5rem] rounded-lg border border-border bg-white py-1 shadow-lg hidden"
-						data-lang-menu
-						role="listbox"
-					>
-						{languages.map((lang) => (
-							<li>
-								<a
-									href={langHref(lang.code)}
-									data-lang={lang.code}
-									class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
-									role="option"
-								>
-									{lang.label}
-								</a>
-							</li>
-						))}
-					</ul>
+					<ThemeToggle />
+					<div class="relative shrink-0" data-lang-dropdown>
+						<button
+							type="button"
+							class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80 px-1"
+							data-lang-trigger
+							aria-expanded="false"
+							aria-haspopup="listbox"
+							aria-controls="lang-menu-desktop"
+						>
+							<span data-lang-label>{lang.toUpperCase()}</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+								<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+							</svg>
+							<span class="sr-only">{t('nav.language', 'Language')}</span>
+						</button>
+						<ul
+							id="lang-menu-desktop"
+							class="absolute right-0 mt-2 min-w-[4.5rem] rounded-lg border border-border bg-background py-1 shadow-lg hidden z-50"
+							data-lang-menu
+							role="listbox"
+						>
+							{
+								languages.map((item) => (
+									<li class:list={[item.code === lang && 'hidden']}>
+										<a
+											href={langHref(item.code)}
+											class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
+											role="option"
+										>
+											{item.label}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</div>
 				</div>
 			</div>
 
-			<button
-				id="mobile-menu-button"
-				class="md:hidden p-2"
-				type="button"
-				aria-controls="mobile-menu"
-				aria-expanded="false"
-			>
-				<span class="sr-only">Open menu</span>
-				<svg
-					id="icon-menu"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					class="h-6 w-6"
+			<div class="md:hidden flex items-center gap-2 shrink-0">
+				<ThemeToggle />
+				<button
+					id="mobile-menu-button"
+					class="p-2"
+					type="button"
+					aria-controls="mobile-menu"
+					aria-expanded="false"
 				>
-					<line x1="3" x2="21" y1="6" y2="6"></line>
-					<line x1="3" x2="21" y1="12" y2="12"></line>
-					<line x1="3" x2="21" y1="18" y2="18"></line>
-				</svg>
-				<svg
-					id="icon-close"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					class="h-6 w-6 hidden"
-				>
-					<path d="M18 6 6 18"></path>
-					<path d="m6 6 12 12"></path>
-				</svg>
-			</button>
+					<span class="sr-only">Open menu</span>
+					<svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6">
+						<line x1="3" x2="21" y1="6" y2="6"></line>
+						<line x1="3" x2="21" y1="12" y2="12"></line>
+						<line x1="3" x2="21" y1="18" y2="18"></line>
+					</svg>
+					<svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6 hidden">
+						<path d="M18 6 6 18"></path>
+						<path d="m6 6 12 12"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<div id="mobile-menu" class="md:hidden py-4 border-t border-border hidden">
-			{navLinks.map((link) => (
-				<a
-					href={navHref(link.href)}
-					class:list={[
-						'block py-2 transition-colors hover:text-primary',
-						isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
-					]}
-					aria-current={isNavActive(link.href) ? 'page' : undefined}
-					data-i18n-key={link.labelKey}
-				>
-					{link.fallback}
-				</a>
-			))}
+			{
+				navLinks.map((link) => (
+					<a
+						href={navHref(link.href)}
+						class:list={[
+							'block py-2 transition-colors hover:text-primary',
+							isNavActive(link.href) ? 'text-primary' : 'text-foreground/70',
+						]}
+					>
+						{t(link.labelKey, link.fallback)}
+					</a>
+				))
+			}
 
 			<a
-				href="mailto:caye@bitdesal.com"
+				href={navHref('/contacto')}
 				class="contact-btn inline-flex items-center justify-center bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors text-sm mt-3"
-				data-i18n-key="nav.contact"
 			>
-				Contact
+				{t('nav.contact', 'Contact')}
 			</a>
 
-			<div class="relative mt-4 pt-4 border-t border-border" data-lang-dropdown>
-				<button
-					type="button"
-					class="lang-trigger inline-flex items-center gap-1 text-primary transition-colors hover:text-primary/80"
-					data-lang-trigger
-					aria-expanded="false"
-					aria-haspopup="listbox"
-					aria-controls="lang-menu-mobile"
-				>
-					<span data-lang-label>EN</span>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
-						<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
-					</svg>
-					<span class="sr-only" data-i18n-key="nav.language">Language</span>
-				</button>
-				<ul
-					id="lang-menu-mobile"
-					class="mt-2 min-w-[4.5rem] rounded-lg border border-border bg-white py-1 shadow-lg hidden"
-					data-lang-menu
-					role="listbox"
-				>
-					{languages.map((lang) => (
-						<li>
-							<a
-								href={langHref(lang.code)}
-								data-lang={lang.code}
-								class="block px-3 py-1.5 text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
-								role="option"
-							>
-								{lang.label}
-							</a>
-						</li>
-					))}
-				</ul>
+			<div class="relative mt-4 pt-4 border-t border-border flex gap-3">
+				{
+					languages.map((item) => (
+						<a
+							href={langHref(item.code)}
+							class:list={[
+								'text-sm px-2 py-1 rounded',
+								item.code === lang ? 'text-primary font-medium' : 'text-foreground/60 hover:text-primary',
+							]}
+						>
+							{item.label}
+						</a>
+					))
+				}
 			</div>
 		</div>
 	</nav>
@@ -215,30 +184,6 @@ const languages = [
 		});
 	}
 
-	const langLabels: Record<string, string> = { en: 'EN', es: 'ES', fi: 'FI' };
-
-	function closeLangMenus(except?: HTMLElement) {
-		document.querySelectorAll('[data-lang-dropdown]').forEach((dropdown) => {
-			if (except && dropdown === except) return;
-			const trigger = dropdown.querySelector('[data-lang-trigger]');
-			const panel = dropdown.querySelector('[data-lang-menu]');
-			panel?.classList.add('hidden');
-			trigger?.setAttribute('aria-expanded', 'false');
-		});
-	}
-
-	function applyLangDropdown(lang: string) {
-		document.querySelectorAll('[data-lang-label]').forEach((el) => {
-			el.textContent = langLabels[lang] ?? lang.toUpperCase();
-		});
-		document.querySelectorAll('[data-lang]').forEach((el) => {
-			const isCurrent = el.getAttribute('data-lang') === lang;
-			const item = el.closest('li');
-			if (item) item.classList.toggle('hidden', isCurrent);
-			el.setAttribute('aria-selected', String(isCurrent));
-		});
-	}
-
 	document.querySelectorAll('[data-lang-dropdown]').forEach((dropdown) => {
 		const trigger = dropdown.querySelector('[data-lang-trigger]');
 		const panel = dropdown.querySelector('[data-lang-menu]');
@@ -246,44 +191,12 @@ const languages = [
 
 		trigger.addEventListener('click', (e) => {
 			e.stopPropagation();
-			const isOpen = !panel.classList.contains('hidden');
-			closeLangMenus(isOpen ? undefined : dropdown);
-			panel.classList.toggle('hidden', isOpen);
-			trigger.setAttribute('aria-expanded', String(!isOpen));
+			panel.classList.toggle('hidden');
+			trigger.setAttribute('aria-expanded', String(!panel.classList.contains('hidden')));
 		});
 	});
 
-	document.addEventListener('click', () => closeLangMenus());
-
-	document.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape') closeLangMenus();
+	document.addEventListener('click', () => {
+		document.querySelectorAll('[data-lang-menu]').forEach((panel) => panel.classList.add('hidden'));
 	});
-
-	const langLinks = document.querySelectorAll('[data-lang]');
-	langLinks.forEach((el) => {
-		el.addEventListener('click', (e) => {
-			e.preventDefault();
-			const lang = el.getAttribute('data-lang');
-			if (!lang) return;
-
-			try {
-				localStorage.setItem('language', lang);
-			} catch {}
-
-			if (window.bitdesalI18n?.setLanguage) window.bitdesalI18n.setLanguage(lang);
-			else {
-				document.documentElement.lang = lang;
-				applyLangDropdown(lang);
-			}
-			closeLangMenus();
-		});
-	});
-
-	window.addEventListener('bitdesal:language', (e) => {
-		const lang = (e as CustomEvent<{ lang?: string }>).detail?.lang;
-		if (lang) applyLangDropdown(lang);
-	});
-
-	applyLangDropdown(window.bitdesalI18n?.getLanguage?.() || document.documentElement.lang || 'en');
 </script>
-

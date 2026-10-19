@@ -1,0 +1,112 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import TeamMemberCard from '../components/TeamMemberCard.astro';
+import TeamMemberExtended from '../components/TeamMemberExtended.astro';
+import Layout from '../layouts/Layout.astro';
+import { teamMembers } from '../data/teamMembers';
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+
+const defaultMemberId = teamMembers[0]?.id ?? 'caye';
+const extendedMemberIds = teamMembers.filter((m) => m.showExtendedProfile).map((m) => m.id);
+---
+
+<Layout seo="about">
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-5xl mb-6">{t('about.pageTitle', 'Nosotros')}</h1>
+			<p class="text-sm md:text-base text-white/85 max-w-2xl mx-auto">{t('about.stats.line')}</p>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<article class="space-y-4 text-lg text-foreground/80 leading-relaxed">
+				<p>{t('about.company.p1')}</p>
+				<p>{t('about.company.p2')}</p>
+				<p>{t('about.company.p3')}</p>
+				<p>{t('about.company.p4')}</p>
+				<p>{t('about.company.p5')}</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary" id="equipo">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-8">{t('about.team.title')}</h2>
+
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch w-full max-w-5xl mx-auto"
+				role="group"
+				aria-label={t('about.team.title')}
+			>
+				{
+					teamMembers.map((member) => (
+						<TeamMemberCard
+							member={member}
+							variant="team"
+							selected={member.id === defaultMemberId}
+							tabIndex={member.id === defaultMemberId ? 0 : -1}
+						/>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<div id="team-extended-sections" hidden={!extendedMemberIds.includes(defaultMemberId)}>
+		{
+			teamMembers
+				.filter((m) => m.showExtendedProfile)
+				.map((member) => (
+					<TeamMemberExtended
+						memberId={member.id}
+						sections={member.extendedSections}
+						hidden={member.id !== defaultMemberId}
+					/>
+				))
+		}
+	</div>
+
+	<CtaSection />
+</Layout>
+
+<script define:vars={{ extendedMemberIds }}>
+	const cards = document.querySelectorAll('.team-member-card');
+	const extendedPanels = document.querySelectorAll('[data-member-extended]');
+	const extendedWrapper = document.getElementById('team-extended-sections');
+
+	function selectMember(memberId) {
+		cards.forEach((card) => {
+			const isSelected = card.getAttribute('data-team-member') === memberId;
+			card.dataset.selected = isSelected ? 'true' : 'false';
+			card.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+			card.tabIndex = isSelected ? 0 : -1;
+		});
+
+		const showExtended = extendedMemberIds.includes(memberId);
+		if (extendedWrapper) {
+			extendedWrapper.hidden = !showExtended;
+		}
+
+		extendedPanels.forEach((panel) => {
+			panel.hidden = panel.getAttribute('data-member-extended') !== memberId;
+		});
+	}
+
+	cards.forEach((card) => {
+		card.addEventListener('click', (event) => {
+			if (event.target.closest('[data-team-link]')) return;
+			const memberId = card.getAttribute('data-team-member');
+			if (memberId) selectMember(memberId);
+		});
+
+		card.addEventListener('keydown', (event) => {
+			if (event.key !== 'Enter' && event.key !== ' ') return;
+			event.preventDefault();
+			const memberId = card.getAttribute('data-team-member');
+			if (memberId) selectMember(memberId);
+		});
+	});
+</script>

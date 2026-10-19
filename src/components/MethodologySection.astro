@@ -1,0 +1,41 @@
+---
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+
+const specItems = ['requirements', 'noSurprises', 'testing'] as const;
+const qualityItems = ['codeReview', 'comprehensiveTesting', 'cicd', 'cleanCode'] as const;
+---
+
+<section class="py-16 md:py-24 bg-secondary">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center max-w-3xl mx-auto mb-14">
+			<h2 class="text-3xl md:text-4xl mb-4">{t('methodology.quality.title')}</h2>
+			<p class="text-lg text-foreground/70">{t('methodology.quality.description')}</p>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+			{
+				specItems.map((key) => (
+					<article class="bg-white rounded-xl p-6 shadow-sm border border-border">
+						<h3 class="text-xl mb-2">{t(`methodology.specDriven.${key}.title`)}</h3>
+						<p class="text-foreground/70 text-sm leading-relaxed">{t(`methodology.specDriven.${key}.description`)}</p>
+					</article>
+				))
+			}
+			{
+				qualityItems.map((key) => (
+					<article class="bg-white rounded-xl p-6 shadow-sm border border-border">
+						<h3 class="text-lg mb-2">{t(`methodology.quality.${key}.title`)}</h3>
+						<p class="text-foreground/70 text-sm leading-relaxed">{t(`methodology.quality.${key}.description`)}</p>
+					</article>
+				))
+			}
+		</div>
+
+		<article class="max-w-3xl mx-auto bg-white rounded-2xl p-8 border border-border shadow-sm">
+			<h3 class="text-2xl mb-3">{t('methodology.remoteFirst.title')}</h3>
+			<p class="text-foreground/75 leading-relaxed">{t('methodology.remoteFirst.description')}</p>
+		</article>
+	</div>
+</section>

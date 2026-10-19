@@ -1,97 +1,92 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
+import Layout from '../layouts/Layout.astro';
+import { projectCards } from '../data/projectCards';
+import { sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
+
+const { lang, t } = useI18n(Astro);
 ---
 
-<Layout>
-	<section class="bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+<Layout seo="projects">
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl md:text-5xl mb-6" data-i18n-key="projects.hero.title">Projects</h1>
-			<p class="text-xl text-white/90 max-w-3xl mx-auto" data-i18n-key="projects.hero.subtitle">
-				A selection of Android and software work delivered by Bitdesal
-			</p>
+			<h1 class="text-4xl md:text-5xl mb-6">{t('projects.hero.title')}</h1>
+			<p class="text-xl text-white/90 max-w-3xl mx-auto">{t('projects.hero.subtitle')}</p>
 		</div>
 	</section>
 
 	<section class="py-16 md:py-24 bg-white">
-		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-			<a
-				href="/projects/kivra"
-				class="group block border border-border rounded-xl p-8 md:p-10 hover:border-primary transition-colors shadow-sm hover:shadow-md"
-			>
-				<div class="flex items-start gap-6 mb-8">
-					<img
-						src="/kivra-app-icon.png"
-						alt="Kivra Finland"
-						width="96"
-						height="96"
-						class="w-24 h-24 rounded-2xl shadow-lg shrink-0"
-						loading="lazy"
-						decoding="async"
-					/>
-					<div class="min-w-0 pt-1">
-						<h2
-							class="text-3xl md:text-4xl mb-2 group-hover:text-primary transition-colors"
-							data-i18n-key="projects.kivra.name"
-						>
-							Kivra Finland
-						</h2>
-						<p class="text-foreground/60">
-							<span data-i18n-key="projects.kivra.tag">Android · Productivity</span>
-							<span aria-hidden="true"> · </span>
-							<span data-i18n-key="projects.kivra.updated">2026</span>
-						</p>
-					</div>
-				</div>
-				<p class="text-lg text-foreground/80 leading-relaxed mb-8" data-i18n-key="projects.kivra.description">
-					Digital mail app used by hundreds of thousands in Finland to receive invoices, letters, tickets and
-					official documents securely.
-				</p>
-				<span class="inline-flex items-center gap-2 text-primary text-lg group-hover:gap-3 transition-all">
-					<span data-i18n-key="projects.viewProject">View project</span>
-					<span aria-hidden="true">→</span>
-				</span>
-			</a>
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex flex-wrap gap-2 mb-10" role="tablist" aria-label={t('projects.hero.title')}>
+				<button type="button" class="project-filter px-4 py-2 rounded-full text-sm border border-border bg-primary text-white" data-filter="all">
+					{t('projects.filter.all')}
+				</button>
+				<button type="button" class="project-filter px-4 py-2 rounded-full text-sm border border-border hover:border-primary" data-filter="automation">
+					{t('projects.filter.automation')}
+				</button>
+				<button type="button" class="project-filter px-4 py-2 rounded-full text-sm border border-border hover:border-primary" data-filter="software">
+					{t('projects.filter.software')}
+				</button>
+			</div>
 
-			<a
-				href="/projects/yossa"
-				class="group block border border-border rounded-xl p-8 md:p-10 hover:border-primary transition-colors shadow-sm hover:shadow-md"
-			>
-				<div class="flex items-start gap-6 mb-8">
-					<img
-						src="/projects/yossa/yossa-app-icon.png"
-						alt="Yössä"
-						width="96"
-						height="96"
-						class="w-24 h-24 rounded-2xl shadow-lg shrink-0"
-						loading="lazy"
-						decoding="async"
-					/>
-					<div class="min-w-0 pt-1">
-						<h2
-							class="text-3xl md:text-4xl mb-2 group-hover:text-primary transition-colors"
-							data-i18n-key="projects.yossa.name"
+			<div class="space-y-8" id="project-list">
+				{
+					projectCards.map((project) => (
+						<a
+							href={sitePath(project.href, lang)}
+							class="project-card group block border border-border rounded-xl p-8 md:p-10 hover:border-primary transition-colors shadow-sm hover:shadow-md"
+							data-line={project.line}
 						>
-							Yössä
-						</h2>
-						<p class="text-foreground/60">
-							<span data-i18n-key="projects.yossa.tag">Android · Nightlife</span>
-							<span aria-hidden="true"> · </span>
-							<span data-i18n-key="projects.yossa.updated">2015</span>
-						</p>
-					</div>
-				</div>
-				<p class="text-lg text-foreground/80 leading-relaxed mb-8" data-i18n-key="projects.yossa.description">
-					Nightlife app to find bars, events and drink offers around you — offers unlock when you are close enough to
-					redeem them.
-				</p>
-				<span class="inline-flex items-center gap-2 text-primary text-lg group-hover:gap-3 transition-all">
-					<span data-i18n-key="projects.viewProject">View project</span>
-					<span aria-hidden="true">→</span>
-				</span>
-			</a>
+							<div class="flex items-start gap-6 mb-8">
+								<img src={project.iconSrc} alt={project.iconAlt} width="96" height="96" class="w-24 h-24 rounded-2xl shadow-lg shrink-0" loading="lazy" />
+								<div class="min-w-0 pt-1">
+									<span class="inline-block text-xs font-medium uppercase tracking-wide text-primary mb-2">
+										{t(`projects.lineLabel.${project.line}`)}
+									</span>
+									<h2 class="text-3xl md:text-4xl mb-2 group-hover:text-primary transition-colors">{t(project.nameKey)}</h2>
+									<p class="text-foreground/60">
+										{t(project.tagKey)} · {t(project.updatedKey)}
+									</p>
+								</div>
+							</div>
+							<p class="text-lg text-foreground/80 leading-relaxed mb-8">{t(project.descriptionKey)}</p>
+							<span class="inline-flex items-center gap-2 text-primary text-lg group-hover:gap-3 transition-all">
+								{t('projects.viewProject')}
+								<span aria-hidden="true">→</span>
+							</span>
+						</a>
+					))
+				}
+			</div>
 		</div>
 	</section>
 
 	<CtaSection />
 </Layout>
+
+<script>
+	const filters = document.querySelectorAll('.project-filter');
+	const cards = document.querySelectorAll('.project-card');
+
+	function setActive(button) {
+		filters.forEach((btn) => {
+			btn.classList.remove('bg-primary', 'text-white');
+			btn.classList.add('hover:border-primary');
+		});
+		button.classList.add('bg-primary', 'text-white');
+		button.classList.remove('hover:border-primary');
+	}
+
+	filters.forEach((button) => {
+		button.addEventListener('click', () => {
+			const filter = button.getAttribute('data-filter');
+			setActive(button);
+			cards.forEach((card) => {
+				const line = card.getAttribute('data-line');
+				const show = filter === 'all' || line === filter;
+				card.classList.toggle('hidden', !show);
+			});
+		});
+	});
+</script>

@@ -1,0 +1,94 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
+import MethodologySection from '../components/MethodologySection.astro';
+import Layout from '../layouts/Layout.astro';
+import { BOOKING_URL } from '../data/siteConstants';
+import { sitePath } from '../data/siteNav';
+import { linkedInPosts } from '../data/linkedInPosts';
+import { useI18n } from '../i18n/useI18n';
+
+const { lang, t } = useI18n(Astro);
+
+const serviceKeys = ['android', 'architecture', 'ai', 'mentoring'] as const;
+---
+
+<Layout seo="consultoria">
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-5xl mb-6">{t('consultoriaPage.hero.title')}</h1>
+			<p class="text-xl text-white/90 mb-8">{t('consultoriaPage.hero.subtitle')}</p>
+			<div class="flex flex-wrap justify-center gap-4">
+				<a href={BOOKING_URL} class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
+					{t('common.bookCta')}
+				</a>
+				<a
+					href={sitePath('/projects/kivra', lang)}
+					class="inline-flex items-center gap-2 border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors"
+				>
+					{t('consultoriaPage.hero.kivraCase')}
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl text-center mb-12">{t('consultoriaPage.services.title')}</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				{
+					serviceKeys.map((key) => (
+						<article class="rounded-xl border border-border p-8 shadow-sm">
+							<h3 class="text-xl mb-3">{t(`consultoriaPage.services.${key}.title`)}</h3>
+							<p class="text-foreground/75">{t(`consultoriaPage.services.${key}.description`)}</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<MethodologySection />
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+				<img src="/kivra-app-icon.png" alt="Kivra Finland" width="160" height="160" class="w-40 h-40 rounded-3xl shadow-xl mx-auto lg:mx-0" loading="lazy" />
+				<div>
+					<h2 class="text-3xl md:text-4xl mb-4">{t('consultoriaPage.kivraHighlight.title')}</h2>
+					<p class="text-lg text-foreground/80 mb-4">{t('consultoriaPage.kivraHighlight.text')}</p>
+					<p class="text-sm text-primary font-medium mb-6">{t('consultoriaPage.kivraHighlight.stats')}</p>
+					<a href={sitePath('/projects/kivra', lang)} class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+						{t('consultoriaPage.kivraHighlight.cta')}
+						<span aria-hidden="true">→</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-20 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl mb-6">{t('consultoriaPage.pricing.title')}</h2>
+			<ul class="space-y-3 text-foreground/80">
+				<li>{t('consultoriaPage.pricing.hourly')}</li>
+				<li>{t('consultoriaPage.pricing.bundles')}</li>
+				<li>{t('consultoriaPage.pricing.fixed')}</li>
+				<li>{t('consultoriaPage.pricing.international')}</li>
+			</ul>
+			<a href={sitePath('/pricing#software', lang)} class="inline-flex items-center gap-2 text-primary mt-8 hover:gap-3 transition-all">
+				{t('consultoriaPage.pricing.details')}
+				<span aria-hidden="true">→</span>
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl text-center mb-10">{t('home.blog.title')}</h2>
+			<LinkedInPostsCarousel posts={linkedInPosts.slice(0, 3)} />
+		</div>
+	</section>
+
+	<CtaSection variant="software" />
+</Layout>

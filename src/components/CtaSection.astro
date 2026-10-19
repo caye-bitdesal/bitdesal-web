@@ -1,16 +1,27 @@
+---
+import { BOOKING_URL } from '../data/siteConstants';
+import { useI18n } from '../i18n/useI18n';
+
+interface Props {
+	variant?: 'default' | 'ia' | 'software';
+}
+
+const { variant = 'default' } = Astro.props;
+const { t } = useI18n(Astro);
+
+const prefix =
+	variant === 'ia' ? 'cta.ia' : variant === 'software' ? 'cta.software' : 'cta';
+---
+
 <section class="py-16 md:py-24 bg-primary text-white">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-		<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="cta.title">Let's work together</h2>
-		<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n-key="cta.subtitle">
-			If you're looking for international experience, technical quality and measurable results, let's talk
-			about your project
-		</p>
+		<h2 class="text-3xl md:text-4xl mb-6">{t(`${prefix}.title`, t('cta.title'))}</h2>
+		<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">{t(`${prefix}.subtitle`, t('cta.subtitle'))}</p>
 		<a
-			href="mailto:caye@bitdesal.com"
-			class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
-			data-i18n-key="cta.button"
+			href={BOOKING_URL}
+			class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors dark:bg-[var(--cta-cream)] dark:text-[#0b1111] dark:hover:bg-[#e8e4dc]"
 		>
-			Book a free consultation
+			{t(`${prefix}.button`, t('cta.button'))}
 		</a>
 	</div>
 </section>

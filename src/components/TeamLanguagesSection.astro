@@ -1,0 +1,33 @@
+---
+import { languagesTranslationPrefix, teamLanguagesByMember } from '../data/teamLanguages';
+import { useI18n } from '../i18n/useI18n';
+
+interface Props {
+	memberId: string;
+}
+
+const { memberId } = Astro.props;
+const { t } = useI18n(Astro);
+
+const entries = teamLanguagesByMember[memberId] ?? [];
+const prefix = languagesTranslationPrefix(memberId);
+const sectionBg = 'bg-secondary';
+---
+
+<section class={`py-16 md:py-24 ${sectionBg}`}>
+	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl md:text-4xl mb-6">{t(`${prefix}.title`)}</h2>
+		<ul class="space-y-3 text-foreground/80 leading-relaxed">
+			{
+				entries.map((entry) => (
+					<li class="flex gap-2">
+						<span class="text-primary shrink-0" aria-hidden="true">
+							·
+						</span>
+						<span>{t(`${prefix}.${entry.id}.label`)}</span>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</section>
