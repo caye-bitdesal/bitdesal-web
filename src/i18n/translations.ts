@@ -104,7 +104,7 @@ export const translations: Record<Language, any> = {
 			privacyPolicy: 'política de privacidad',
 			consentAfter: ' y acepto que tratéis mis datos para responder a mi solicitud.',
 			dataNotice:
-				'Responsable: Bitdesal ([NOMBRE DEL TITULAR]). Finalidad: responder a tu solicitud de contacto. Legitimación: tu consentimiento y la aplicación de medidas precontractuales. Destinatarios: Formspree, proveedor del formulario (EE. UU.). Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.',
+				'Responsable: Bitdesal S.L. (Bitdesal). Finalidad: responder a tu solicitud de contacto. Legitimación: tu consentimiento y la aplicación de medidas precontractuales. Destinatarios: Formspree, proveedor del formulario (EE. UU.). Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.',
 		},
 		common: {
 			bookCta: 'Agenda 30 min gratis',
@@ -1430,7 +1430,7 @@ export const translations: Record<Language, any> = {
 			privacyPolicy: 'privacy policy',
 			consentAfter: ' and I agree that you may process my data to respond to my request.',
 			dataNotice:
-				'Controller: Bitdesal ([NOMBRE DEL TITULAR]). Purpose: to respond to your contact request. Legal basis: your consent and pre-contractual steps. Recipients: Formspree, form provider (United States). Rights: access, rectification, erasure and others, as explained in the privacy policy.',
+				'Controller: Bitdesal S.L. (Bitdesal). Purpose: to respond to your contact request. Legal basis: your consent and pre-contractual steps. Recipients: Formspree, form provider (United States). Rights: access, rectification, erasure and others, as explained in the privacy policy.',
 		},
 		home: {
 			...makeTranslations.en.home,
@@ -2490,7 +2490,7 @@ export const translations: Record<Language, any> = {
 			privacyPolicy: 'tietosuojakäytännön',
 			consentAfter: ' ja hyväksyn, että käsittelette tietojani vastataksenne pyyntööni.',
 			dataNotice:
-				'Rekisterinpitäjä: Bitdesal ([NOMBRE DEL TITULAR]). Tarkoitus: vastata yhteydenottopyyntöösi. Oikeusperuste: suostumuksesi ja esisopimukselliset toimenpiteet. Vastaanottajat: Formspree, lomakkeen palveluntarjoaja (Yhdysvallat). Oikeudet: pääsy, oikaisu, poisto ja muut, kuten tietosuojakäytännössä selitetään.',
+				'Rekisterinpitäjä: Bitdesal S.L. (Bitdesal). Tarkoitus: vastata yhteydenottopyyntöösi. Oikeusperuste: suostumuksesi ja esisopimukselliset toimenpiteet. Vastaanottajat: Formspree, lomakkeen palveluntarjoaja (Yhdysvallat). Oikeudet: pääsy, oikaisu, poisto ja muut, kuten tietosuojakäytännössä selitetään.',
 		},
 		home: {
 			...makeTranslations.fi.home,

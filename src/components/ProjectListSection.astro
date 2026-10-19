@@ -3,10 +3,23 @@ import { projectCards } from '../data/projectCards';
 import { sitePath } from '../data/siteNav';
 import { useI18n } from '../i18n/useI18n';
 
+interface Props {
+	showSectionTitle?: boolean;
+}
+
+const { showSectionTitle = false } = Astro.props;
+
 const { lang, t } = useI18n(Astro);
 ---
 
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+	{
+		showSectionTitle && (
+			<h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-10">
+				{t('workAndPricing.tabCases')}
+			</h2>
+		)
+	}
 	<div class="flex flex-wrap gap-2 mb-10" role="tablist" aria-label={t('workAndPricing.tabCases')}>
 		<button type="button" class="project-filter px-4 py-2 rounded-full text-sm border border-border bg-primary text-white" data-filter="all">
 			{t('projects.filter.all')}

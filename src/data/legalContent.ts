@@ -1,10 +1,9 @@
 import type { Language } from '../i18n/translations';
 import {
 	CONTACT_EMAIL,
-	HOSTING_COUNTRY,
-	HOSTING_PROVIDER,
 	LEGAL_ADDRESS,
 	LEGAL_HOLDER_NAME,
+	LEGAL_REGISTRY_ES,
 	LEGAL_TAX_ID,
 	SITE_ORIGIN,
 } from './siteConstants';
@@ -35,42 +34,17 @@ const HOLDER = LEGAL_HOLDER_NAME;
 const NIF = LEGAL_TAX_ID;
 const ADDRESS = LEGAL_ADDRESS;
 
+const REGISTRY: Record<Language, string> = {
+	es: LEGAL_REGISTRY_ES,
+	en: 'Registered with the Commercial Registry of Alicante',
+	fi: 'Merkitty Alicanten kaupparekisteriin',
+};
+
 const updated: Record<Language, string> = {
 	es: '19 de octubre de 2026',
 	en: '19 October 2026',
 	fi: '19. lokakuuta 2026',
 };
-
-function holderTodo(lang: Language): LegalBlock {
-	const text =
-		lang === 'es'
-			? 'TODO(caye): confirmar nombre completo (persona física/autónomo) o razón social si es una sociedad'
-			: lang === 'en'
-				? 'TODO(caye): confirm full name (natural person / sole trader) or company name if it is a company'
-				: 'TODO(caye): vahvista koko nimi (luonnollinen henkilö / toiminimi) tai toiminimi, jos kyseessä on yhtiö';
-	return { type: 'comment', text };
-}
-
-function nifTodo(): LegalBlock {
-	return { type: 'comment', text: 'TODO(caye): NIF' };
-}
-
-function addressTodo(lang: Language): LegalBlock {
-	const text =
-		lang === 'es'
-			? 'TODO(caye): dirección completa en Elche (Alicante)'
-			: lang === 'en'
-				? 'TODO(caye): full street address in Elche (Alicante)'
-				: 'TODO(caye): täydellinen katuosoite Elchessä (Alicante)';
-	return { type: 'comment', text };
-}
-
-function registryTodo(): LegalBlock {
-	return {
-		type: 'comment',
-		text: 'TODO(caye): eliminar el punto del Registro Mercantil si eres autónomo; si es sociedad, completar provincia, tomo, folio y hoja',
-	};
-}
 
 function dpaTodo(): LegalBlock {
 	return {
@@ -94,10 +68,6 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 							type: 'p',
 							html: 'In accordance with Article 10 of Act 34/2002 of 11 July on Information Society Services and Electronic Commerce (LSSI-CE), we inform you that this website is owned by:',
 						},
-						holderTodo('en'),
-						nifTodo(),
-						addressTodo('en'),
-						registryTodo(),
 						{
 							type: 'ul',
 							items: [
@@ -107,7 +77,7 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 								`Address: ${ADDRESS}`,
 								`Email: ${EMAIL}`,
 								`Website: ${SITE}`,
-								'[Only if it is a company: Registered with the Commercial Registry of [PROVINCE], volume [ ], page [ ], sheet [ ].]',
+								REGISTRY.en,
 							],
 						},
 					],
@@ -201,10 +171,6 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 							type: 'p',
 							html: 'Tietoyhteiskunnan palveluista ja sähköisestä kaupankäynnistä annetun lain 34/2002 (LSSI-CE) 10 artiklan mukaisesti ilmoitamme, että tämän verkkosivuston omistaa:',
 						},
-						holderTodo('fi'),
-						nifTodo(),
-						addressTodo('fi'),
-						registryTodo(),
 						{
 							type: 'ul',
 							items: [
@@ -214,7 +180,7 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 								`Osoite: ${ADDRESS}`,
 								`Sähköposti: ${EMAIL}`,
 								`Verkkosivusto: ${SITE}`,
-								'[Vain jos kyseessä on yhtiö: Merkitty [MAAKUNTA]n kaupparekisteriin, nide [ ], folio [ ], lehti [ ].]',
+								REGISTRY.fi,
 							],
 						},
 					],
@@ -306,10 +272,6 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 						type: 'p',
 						html: 'En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), te informamos de que este sitio web es titularidad de:',
 					},
-					holderTodo('es'),
-					nifTodo(),
-					addressTodo('es'),
-					registryTodo(),
 					{
 						type: 'ul',
 						items: [
@@ -319,7 +281,7 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 							`Domicilio: ${ADDRESS}`,
 							`Correo electrónico: ${EMAIL}`,
 							`Sitio web: ${SITE}`,
-							'[Solo si es una sociedad: Inscrita en el Registro Mercantil de [PROVINCIA], tomo [ ], folio [ ], hoja [ ].]',
+							REGISTRY.es,
 						],
 					},
 				],
@@ -411,9 +373,6 @@ export function getPrivacyPolicy(lang: Language): LegalDoc {
 				{
 					heading: '1. Data controller',
 					blocks: [
-						holderTodo('en'),
-						nifTodo(),
-						addressTodo('en'),
 						{
 							type: 'ul',
 							items: [
@@ -503,8 +462,6 @@ export function getPrivacyPolicy(lang: Language): LegalDoc {
 							items: [
 								'<strong>Formspree, Inc.</strong> (United States): receipt of contact-form messages.',
 								'<strong>Cal.com, Inc.</strong> (United States): appointment booking.',
-								'<strong>Gandi SAS</strong> (France): email.',
-								`<strong>${HOSTING_PROVIDER}</strong> (${HOSTING_COUNTRY === 'Francia' ? 'France' : HOSTING_COUNTRY}): website hosting.`,
 							],
 						},
 					],
@@ -587,9 +544,6 @@ export function getPrivacyPolicy(lang: Language): LegalDoc {
 				{
 					heading: '1. Rekisterinpitäjä',
 					blocks: [
-						holderTodo('fi'),
-						nifTodo(),
-						addressTodo('fi'),
 						{
 							type: 'ul',
 							items: [
@@ -679,8 +633,6 @@ export function getPrivacyPolicy(lang: Language): LegalDoc {
 							items: [
 								'<strong>Formspree, Inc.</strong> (Yhdysvallat): yhteydenottolomakkeen viestien vastaanotto.',
 								'<strong>Cal.com, Inc.</strong> (Yhdysvallat): ajanvaraus.',
-								'<strong>Gandi SAS</strong> (Ranska): sähköposti.',
-								`<strong>${HOSTING_PROVIDER}</strong> (${HOSTING_COUNTRY === 'Francia' ? 'Ranska' : HOSTING_COUNTRY}): verkkosivuston ylläpito.`,
 							],
 						},
 					],
@@ -761,9 +713,6 @@ export function getPrivacyPolicy(lang: Language): LegalDoc {
 			{
 				heading: '1. Responsable del tratamiento',
 				blocks: [
-					holderTodo('es'),
-					nifTodo(),
-					addressTodo('es'),
 					{
 						type: 'ul',
 						items: [
@@ -853,8 +802,6 @@ export function getPrivacyPolicy(lang: Language): LegalDoc {
 						items: [
 							'<strong>Formspree, Inc.</strong> (Estados Unidos): recepción de los mensajes del formulario de contacto.',
 							'<strong>Cal.com, Inc.</strong> (Estados Unidos): reserva de citas.',
-							'<strong>Gandi SAS</strong> (Francia): correo electrónico.',
-							`<strong>${HOSTING_PROVIDER}</strong> (${HOSTING_COUNTRY}): alojamiento del sitio web.`,
 						],
 					},
 				],

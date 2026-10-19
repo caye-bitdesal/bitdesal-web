@@ -1,6 +1,7 @@
 ---
 import CtaSection from '../components/CtaSection.astro';
 import Layout from '../layouts/Layout.astro';
+import PricingOffer from '../components/PricingOffer.astro';
 import PricingPageContent from '../components/PricingPageContent.astro';
 import ProjectListSection from '../components/ProjectListSection.astro';
 import { useI18n } from '../i18n/useI18n';
@@ -9,33 +10,39 @@ const { t } = useI18n(Astro);
 ---
 
 <Layout seo="workAndPricing">
-	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
-		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl md:text-5xl mb-6">{t('workAndPricing.title')}</h1>
-			<p class="text-xl text-white/90 max-w-3xl mx-auto">{t('workAndPricing.subtitle')}</p>
-			<nav class="mt-8 flex flex-wrap justify-center gap-3" aria-label={t('workAndPricing.title')}>
-				<a
-					href="#casos"
-					class="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-5 py-2 text-sm font-medium text-white hover:bg-white/20 transition-colors"
-				>
-					{t('workAndPricing.tabCases')}
-				</a>
-				<a
-					href="#precios"
-					class="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-5 py-2 text-sm font-medium text-white hover:bg-white/20 transition-colors"
-				>
-					{t('workAndPricing.tabPricing')}
-				</a>
-			</nav>
+	<PricingOffer showLead />
+
+	<nav
+		class="border-b border-border bg-white py-4"
+		aria-label={t('workAndPricing.title')}
+	>
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-3">
+			<a
+				href="#precios"
+				class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-5 py-2 text-sm font-medium text-foreground hover:border-primary hover:bg-secondary transition-colors"
+			>
+				{t('workAndPricing.tabPricing')}
+			</a>
+			<a
+				href="#casos"
+				class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-5 py-2 text-sm font-medium text-foreground hover:border-primary hover:bg-secondary transition-colors"
+			>
+				{t('workAndPricing.tabCases')}
+			</a>
 		</div>
+	</nav>
+
+	<section id="precios" class="scroll-mt-20 bg-white">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-14 pb-2">
+			<h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+				{t('workAndPricing.tabPricing')}
+			</h2>
+		</div>
+		<PricingPageContent hideHero />
 	</section>
 
-	<section id="casos" class="scroll-mt-28 py-16 md:py-24 bg-white">
-		<ProjectListSection />
-	</section>
-
-	<section id="precios" class="scroll-mt-20">
-		<PricingPageContent />
+	<section id="casos" class="scroll-mt-28 border-t border-border bg-white pt-10 md:pt-14 pb-16 md:pb-24">
+		<ProjectListSection showSectionTitle />
 	</section>
 
 	<CtaSection />

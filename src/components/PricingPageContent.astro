@@ -4,6 +4,12 @@ import PricingOffer from './PricingOffer.astro';
 import { getProjectTotal, getServicePhases, getSupportBundleRows } from '../data/pricingPhases';
 import { useI18n } from '../i18n/useI18n';
 
+interface Props {
+	hideHero?: boolean;
+}
+
+const { hideHero = false } = Astro.props;
+
 const { t, lang } = useI18n(Astro);
 const phases = getServicePhases(lang);
 const projectTotal = getProjectTotal(lang);
@@ -16,16 +22,9 @@ const pricingFaq = [
 ];
 ---
 
-<PricingOffer showLead />
+{!hideHero && <PricingOffer showLead />}
 
-<nav class="sticky top-16 z-40 bg-background/95 backdrop-blur border-b border-border">
-	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-4 py-3">
-		<a href="#ia" class="text-sm font-medium text-primary hover:underline">{t('pricing.sections.ia')}</a>
-		<a href="#software" class="text-sm font-medium text-foreground/70 hover:text-primary">{t('pricing.sections.software')}</a>
-	</div>
-</nav>
-
-<section id="ia" class="scroll-mt-28 py-20 md:py-28 bg-white">
+<section id="ia" class:list={['scroll-mt-28 bg-white', hideHero ? 'pt-6 md:pt-8 pb-20 md:pb-28' : 'py-20 md:py-28']}>
 	<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 		<h2 class="text-3xl md:text-4xl mb-10">{t('pricing.sections.ia')}</h2>
 		<div class="space-y-8">
