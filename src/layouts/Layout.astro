@@ -2,7 +2,7 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { CONTACT_EMAIL, DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
+import { CONTACT_EMAIL, CONTACT_PHONE_E164, DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
 import { getPageSeo, type PageSeoId } from '../i18n/seo';
 import { useI18n } from '../i18n/useI18n';
 import { absoluteAlternateHrefs } from '../i18n/localizedRoutes';
@@ -38,6 +38,7 @@ const jsonLd = {
 			name: 'Bitdesal',
 			url: SITE_ORIGIN,
 			email: CONTACT_EMAIL,
+			telephone: CONTACT_PHONE_E164,
 			areaServed: 'ES',
 			address: {
 				'@type': 'PostalAddress',

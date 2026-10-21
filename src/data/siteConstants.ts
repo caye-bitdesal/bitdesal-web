@@ -3,6 +3,17 @@ export const BOOKING_URL = 'https://cal.com/bitdesal/30min';
 
 export const CONTACT_EMAIL = 'caye@bitdesal.com';
 
+/** WhatsApp Business (E.164 digits without +). */
+export const CONTACT_WHATSAPP_E164 = '34694931918';
+
+export const CONTACT_WHATSAPP_DISPLAY = '+34 694 931 918';
+
+export const CONTACT_PHONE_E164 = `+${CONTACT_WHATSAPP_E164}`;
+
+export const CONTACT_PHONE_HREF = `tel:${CONTACT_PHONE_E164}`;
+
+export const WHATSAPP_URL = `https://wa.me/${CONTACT_WHATSAPP_E164}`;
+
 /** Form endpoint — replace when Formspree / Web3Forms is configured. */
 export const CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/xjygzogw';
 

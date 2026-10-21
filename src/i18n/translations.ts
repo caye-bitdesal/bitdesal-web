@@ -94,12 +94,14 @@ export const translations: Record<Language, any> = {
 			message: 'Mensaje',
 			emailOrPhone: 'Email o teléfono',
 			submit: 'Enviar',
-			success: 'Mensaje enviado. Te responderemos pronto.',
+			successTitle: 'Mensaje enviado',
+			success: 'Gracias por escribirnos. Te responderemos en menos de 24 horas laborables.',
 			error: 'No se pudo enviar. Escríbenos a caye@bitdesal.com.',
 			alternatives: 'O si prefieres:',
 			book: 'Agenda 30 min gratis',
+			whatsapp: 'WhatsApp',
 			location:
-				'Elche · Comunidad Valenciana · Trabajamos en remoto con toda España y con clientes internacionales',
+				'Elche · Comunidad Valenciana · Principalmente en remoto; planificación presencial en Alicante y alrededores; desplazamientos puntuales al resto de España o la UE',
 			consentBefore: 'He leído la ',
 			privacyPolicy: 'política de privacidad',
 			consentAfter: ' y acepto que tratéis mis datos para responder a mi solicitud.',
@@ -444,7 +446,7 @@ export const translations: Record<Language, any> = {
 					},
 					remote: {
 						q: '¿Trabajáis solo en remoto?',
-						a: 'Con toda España en remoto. Si estás cerca de Elche o Valencia, podemos vernos en persona.',
+						a: 'Trabajamos principalmente en remoto con clientes en toda España e internacionalmente. Si estás en el entorno de Alicante, podemos acercarnos para la reunión de planificación. Para momentos importantes del proyecto, también nos desplazamos puntualmente al resto de España o a la UE.',
 					},
 				},
 			},
@@ -600,9 +602,9 @@ export const translations: Record<Language, any> = {
 			...makeTranslations.es.methodology,
 			remoteFirst: {
 				...makeTranslations.es.methodology.remoteFirst,
-				title: '100 % en remoto',
+				title: 'Principalmente en remoto',
 				description:
-					'Trabajamos en remoto con documentación clara, revisiones contigo cada semana y las herramientas que ya usa tu equipo.',
+					'Trabajamos principalmente en remoto, con documentación clara, revisiones contigo cada semana y las herramientas que ya usa tu equipo. Atendemos a clientes en toda España e internacionalmente. Si estás en el entorno de Alicante, podemos acercarnos para la reunión de planificación. Para momentos importantes del proyecto, también nos desplazamos puntualmente al resto de España o a la UE.',
 			},
 			specDriven: {
 				...makeTranslations.es.methodology.specDriven,
@@ -1421,11 +1423,14 @@ export const translations: Record<Language, any> = {
 			message: 'What do you want to automate or improve?',
 			emailOrPhone: 'Email or phone',
 			submit: 'Send',
-			success: 'Message sent. We will get back to you soon.',
+			successTitle: 'Message sent',
+			success: 'Thanks for reaching out. We will reply within one business day.',
 			error: 'Could not send. Email us at caye@bitdesal.com.',
 			alternatives: 'Or:',
 			book: 'Book a free 30-minute call',
-			location: 'Elche · Valencian Community · Remote across Spain',
+			whatsapp: 'WhatsApp',
+			location:
+				'Elche · Valencian Community · Mostly remote; planning meetings around Alicante; occasional travel elsewhere in Spain or the EU',
 			consentBefore: 'I have read the ',
 			privacyPolicy: 'privacy policy',
 			consentAfter: ' and I agree that you may process my data to respond to my request.',
@@ -1511,7 +1516,8 @@ export const translations: Record<Language, any> = {
 			},
 			howIWork: {
 				title: 'How we work',
-				subtitle: 'Specs first, quality built in, fully remote.',
+				subtitle:
+					'Specs first, quality built in, mostly remote with planning around Alicante and occasional travel in Spain or the EU.',
 				core: 'Diagnose and redesign before building so technology does not only speed up a broken process.',
 				steps: {
 					call: {
@@ -1560,7 +1566,7 @@ export const translations: Record<Language, any> = {
 					},
 					remote: {
 						q: 'Remote only?',
-						a: 'Yes, remote-first across Europe.',
+						a: 'We work mostly remotely with clients across Spain and internationally. If you are around Alicante, we can meet for the planning session. For important project milestones, we can also travel occasionally elsewhere in Spain or within the EU.',
 					},
 				},
 			},
@@ -2481,11 +2487,14 @@ export const translations: Record<Language, any> = {
 			message: 'Viesti',
 			emailOrPhone: 'Sähköposti tai puhelin',
 			submit: 'Lähetä',
-			success: 'Viesti lähetetty. Vastaamme pian.',
+			successTitle: 'Viesti lähetetty',
+			success: 'Kiitos yhteydenotosta. Vastaamme alle 24 työtunnin kuluessa.',
 			error: 'Lähetys epäonnistui. Kirjoita osoitteeseen caye@bitdesal.com.',
 			alternatives: 'Tai jos haluat:',
 			book: 'Varaa 30 min ilmaiseksi',
-			location: 'Elche · Valencia · Etätyö koko Espanjassa ja kansainvälisille asiakkaille',
+			whatsapp: 'WhatsApp',
+			location:
+				'Elche · Valencia · Pääasiassa etänä; suunnittelu Alicanten seudulla; satunnaiset matkat muualla Espanjassa tai EU:ssa',
 			consentBefore: 'Olen lukenut ',
 			privacyPolicy: 'tietosuojakäytännön',
 			consentAfter: ' ja hyväksyn, että käsittelette tietojani vastataksenne pyyntööni.',
@@ -2638,7 +2647,7 @@ export const translations: Record<Language, any> = {
 					},
 					remote: {
 						q: 'Työskentelettekö vain etänä?',
-						a: 'Koko Espanjassa etänä. Jos olet lähellä Elcheä tai Valenciaa, voimme tavata kasvotusten.',
+						a: 'Työskentelemme pääasiassa etänä asiakkaiden kanssa koko Espanjassa ja kansainvälisesti. Jos olet Alicanten seudulla, voimme tulla suunnittelutapaamiseen. Projektin tärkeissä vaiheissa voimme myös matkustaa satunnaisesti muualle Espanjassa tai EU:han.',
 					},
 				},
 			},

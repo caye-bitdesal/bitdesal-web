@@ -183,7 +183,7 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Contacto · Bitdesal',
 			description:
-				'Cuéntanos qué necesitas. Te respondemos en menos de 24 horas laborables. Elche · remoto en toda España e internacional.',
+				'Cuéntanos qué necesitas. Te respondemos en menos de 24 horas laborables. Elche · principalmente en remoto; planificación en Alicante; desplazamientos puntuales en España o la UE.',
 		},
 		en: {
 			title: 'Contact · Bitdesal',

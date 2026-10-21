@@ -1,5 +1,10 @@
 ---
-import { CONTACT_EMAIL } from '../data/siteConstants';
+import {
+	CONTACT_EMAIL,
+	CONTACT_PHONE_HREF,
+	CONTACT_WHATSAPP_DISPLAY,
+	WHATSAPP_URL,
+} from '../data/siteConstants';
 import { footerCompanyLinks, sitePath } from '../data/siteNav';
 import { legalPath } from '../i18n/localizedRoutes';
 import { useI18n } from '../i18n/useI18n';
@@ -40,6 +45,21 @@ const privacyHref = legalPath('privacy', lang);
 					<li>
 						<a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-white transition-colors">
 							{CONTACT_EMAIL}
+						</a>
+					</li>
+					<li>
+						<a href={CONTACT_PHONE_HREF} class="hover:text-white transition-colors">
+							{CONTACT_WHATSAPP_DISPLAY}
+						</a>
+					</li>
+					<li>
+						<a
+							href={WHATSAPP_URL}
+							class="hover:text-white transition-colors"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{t('contact.whatsapp')}
 						</a>
 					</li>
 					<li>

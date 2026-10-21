@@ -14,7 +14,7 @@ const qualityItems = ['codeReview', 'comprehensiveTesting', 'cicd', 'cleanCode']
 			<p class="text-lg text-foreground/70">{t('methodology.quality.description')}</p>
 		</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 			{
 				specItems.map((key) => (
 					<article class="bg-white rounded-xl p-6 shadow-sm border border-border">
@@ -32,10 +32,5 @@ const qualityItems = ['codeReview', 'comprehensiveTesting', 'cicd', 'cleanCode']
 				))
 			}
 		</div>
-
-		<article class="max-w-3xl mx-auto bg-white rounded-2xl p-8 border border-border shadow-sm">
-			<h3 class="text-2xl mb-3">{t('methodology.remoteFirst.title')}</h3>
-			<p class="text-foreground/75 leading-relaxed">{t('methodology.remoteFirst.description')}</p>
-		</article>
 	</div>
 </section>

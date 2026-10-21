@@ -1,0 +1,38 @@
+---
+interface Props {
+	href: string;
+	label: string;
+	icon: 'calendar' | 'phone' | 'whatsapp' | 'email';
+	external?: boolean;
+}
+
+const { href, label, icon, external = false } = Astro.props;
+
+const iconImages: Record<Props['icon'], string> = {
+	calendar: '/icons/contact-calendar.png',
+	email: '/icons/contact-email.png',
+	phone: '/icons/contact-phone.png',
+	whatsapp: '/icons/contact-whatsapp.png',
+};
+
+const linkClass =
+	'group flex items-center gap-4 rounded-xl border border-border bg-secondary/35 px-4 py-3.5 transition-colors hover:border-primary hover:bg-secondary/55';
+---
+
+<a
+	href={href}
+	class={linkClass}
+	target={external ? '_blank' : undefined}
+	rel={external ? 'noopener noreferrer' : undefined}
+>
+	<img
+		src={iconImages[icon]}
+		width={44}
+		height={44}
+		alt=""
+		class="h-11 w-11 shrink-0"
+		loading="lazy"
+		decoding="async"
+	/>
+	<span class="text-base text-foreground group-hover:text-primary transition-colors">{label}</span>
+</a>

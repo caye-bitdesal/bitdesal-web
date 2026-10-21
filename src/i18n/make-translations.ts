@@ -289,9 +289,9 @@ export const translations = {
           "Procesos probados internacionalmente que garantizan calidad, transparencia y resultados",
       },
       remoteFirst: {
-        title: "Remote-First",
+        title: "Principalmente en remoto",
         description:
-          "Trabajamos de forma totalmente remota con metodologías asíncronas que maximizan la productividad sin sacrificar la comunicación.",
+          "Trabajamos principalmente en remoto, con documentación clara, revisiones contigo cada semana y las herramientas que ya usa tu equipo. Atendemos a clientes en toda España e internacionalmente. Si estás en el entorno de Alicante, podemos acercarnos para la reunión de planificación. Para momentos importantes del proyecto, también nos desplazamos puntualmente al resto de España o a la UE.",
         async: {
           title: "Comunicación Asíncrona",
           description:
@@ -713,9 +713,9 @@ export const translations = {
           "Internationally proven processes that guarantee quality, transparency and results",
       },
       remoteFirst: {
-        title: "Remote-First",
+        title: "Mostly remote",
         description:
-          "We work fully remotely with asynchronous methodologies that maximize productivity without sacrificing communication.",
+          "We work mostly remotely, with clear documentation, weekly check-ins with you, and the tools your team already uses. We serve clients across Spain and internationally. If you are around Alicante, we can meet for the planning session. For important project milestones, we can also travel occasionally elsewhere in Spain or within the EU.",
         async: {
           title: "Asynchronous Communication",
           description:
@@ -1137,9 +1137,9 @@ export const translations = {
           "Kansainvälisesti todistetut prosessit, jotka takaavat laadun, läpinäkyvyyden ja tulokset",
       },
       remoteFirst: {
-        title: "Etätyö ensin",
+        title: "Pääasiassa etänä",
         description:
-          "Työskentelemme täysin etänä asynkronisilla menetelmillä, jotka maksimoivat tuottavuuden tinkimättä kommunikaatiosta.",
+          "Työskentelemme pääasiassa etänä selkeällä dokumentaatiolla, viikoittaisilla tarkistuksilla kanssasi ja työkaluilla, joita tiimisi jo käyttää. Palvelemme asiakkaita koko Espanjassa ja kansainvälisesti. Jos olet Alicanten seudulla, voimme tulla suunnittelutapaamiseen. Projektin tärkeissä vaiheissa voimme myös matkustaa satunnaisesti muualle Espanjassa tai EU:han.",
         async: {
           title: "Asynkroninen kommunikaatio",
           description:

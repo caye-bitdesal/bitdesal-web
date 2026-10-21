@@ -95,16 +95,12 @@ const faqItems = [
 		</div>
 	</section>
 
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl md:text-4xl mb-8">{t('iaPage.pricingSummary.title')}</h2>
-			<ul class="space-y-4 text-foreground/80">
-				<li>{t('iaPage.pricingSummary.study')}</li>
-				<li>{t('iaPage.pricingSummary.express')}</li>
-				<li>{t('iaPage.pricingSummary.custom')}</li>
-				<li>{t('iaPage.pricingSummary.support')}</li>
-			</ul>
-			<a href={`${sitePath('/casos-y-precios', lang)}#ia`} class="inline-flex items-center gap-2 text-primary mt-8 hover:gap-3 transition-all">
+	<section class="py-12 md:py-16 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<a
+				href={`${sitePath('/casos-y-precios', lang)}#precios`}
+				class="inline-flex items-center gap-2 text-primary text-lg font-medium hover:gap-3 transition-all"
+			>
 				{t('iaPage.pricingSummary.details')}
 				<span aria-hidden="true">→</span>
 			</a>
