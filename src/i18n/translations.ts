@@ -887,14 +887,14 @@ export const translations: Record<Language, any> = {
 				},
 			},
 			hero: {
-				role: 'Caye Ruiz · Fundador de Bitdesal',
+				role: 'Caye Ruiz · Software e Ingeniería con IA',
 			},
 			stats: {
 				line: '20 años · 99,9 % sin fallos · versiones mensuales durante 7 años · 30+ desarrolladores formados · 5 países',
 			},
 			bio: {
 				name: 'Caye Ruiz',
-				title: 'Fundador de Bitdesal',
+				title: 'Software e Ingeniería con IA',
 			},
 			profiles: {
 				linkedin: 'LinkedIn',
