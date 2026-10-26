@@ -97,6 +97,7 @@ export const translations: Record<Language, any> = {
 			successTitle: 'Mensaje enviado',
 			success: 'Gracias por escribirnos. Te responderemos en menos de 24 horas laborables.',
 			error: 'No se pudo enviar. Escríbenos a caye@bitdesal.com.',
+			captchaError: 'Completa la verificación antispam antes de enviar.',
 			alternatives: 'O si prefieres:',
 			book: 'Agenda 30 min gratis',
 			whatsapp: 'WhatsApp',
@@ -106,7 +107,7 @@ export const translations: Record<Language, any> = {
 			privacyPolicy: 'política de privacidad',
 			consentAfter: ' y acepto que tratéis mis datos para responder a mi solicitud.',
 			dataNotice:
-				'Responsable: Bitdesal S.L. (Bitdesal). Finalidad: responder a tu solicitud de contacto. Legitimación: tu consentimiento y la aplicación de medidas precontractuales. Destinatarios: Formspree, proveedor del formulario (EE. UU.). Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.',
+				'Responsable: Bitdesal S.L. (Bitdesal). Finalidad: responder a tu solicitud de contacto. Legitimación: tu consentimiento y la aplicación de medidas precontractuales. Destinatarios: Formspree, proveedor del formulario (EE. UU.), y Cloudflare Turnstile para la verificación antispam. Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.',
 		},
 		common: {
 			bookCta: 'Agenda 30 min gratis',
@@ -1426,6 +1427,7 @@ export const translations: Record<Language, any> = {
 			successTitle: 'Message sent',
 			success: 'Thanks for reaching out. We will reply within one business day.',
 			error: 'Could not send. Email us at caye@bitdesal.com.',
+			captchaError: 'Complete the anti-spam check before sending.',
 			alternatives: 'Or:',
 			book: 'Book a free 30-minute call',
 			whatsapp: 'WhatsApp',
@@ -1435,7 +1437,7 @@ export const translations: Record<Language, any> = {
 			privacyPolicy: 'privacy policy',
 			consentAfter: ' and I agree that you may process my data to respond to my request.',
 			dataNotice:
-				'Controller: Bitdesal S.L. (Bitdesal). Purpose: to respond to your contact request. Legal basis: your consent and pre-contractual steps. Recipients: Formspree, form provider (United States). Rights: access, rectification, erasure and others, as explained in the privacy policy.',
+				'Controller: Bitdesal S.L. (Bitdesal). Purpose: to respond to your contact request. Legal basis: your consent and pre-contractual steps. Recipients: Formspree, form provider (United States), and Cloudflare Turnstile for anti-spam verification. Rights: access, rectification, erasure and others, as explained in the privacy policy.',
 		},
 		home: {
 			...makeTranslations.en.home,
@@ -2490,6 +2492,7 @@ export const translations: Record<Language, any> = {
 			successTitle: 'Viesti lähetetty',
 			success: 'Kiitos yhteydenotosta. Vastaamme alle 24 työtunnin kuluessa.',
 			error: 'Lähetys epäonnistui. Kirjoita osoitteeseen caye@bitdesal.com.',
+			captchaError: 'Suorita roskapostin tarkistus ennen lähettämistä.',
 			alternatives: 'Tai jos haluat:',
 			book: 'Varaa 30 min ilmaiseksi',
 			whatsapp: 'WhatsApp',
@@ -2499,7 +2502,7 @@ export const translations: Record<Language, any> = {
 			privacyPolicy: 'tietosuojakäytännön',
 			consentAfter: ' ja hyväksyn, että käsittelette tietojani vastataksenne pyyntööni.',
 			dataNotice:
-				'Rekisterinpitäjä: Bitdesal S.L. (Bitdesal). Tarkoitus: vastata yhteydenottopyyntöösi. Oikeusperuste: suostumuksesi ja esisopimukselliset toimenpiteet. Vastaanottajat: Formspree, lomakkeen palveluntarjoaja (Yhdysvallat). Oikeudet: pääsy, oikaisu, poisto ja muut, kuten tietosuojakäytännössä selitetään.',
+				'Rekisterinpitäjä: Bitdesal S.L. (Bitdesal). Tarkoitus: vastata yhteydenottopyyntöösi. Oikeusperuste: suostumuksesi ja esisopimukselliset toimenpiteet. Vastaanottajat: Formspree, lomakkeen palveluntarjoaja (Yhdysvallat), ja Cloudflare Turnstile roskapostin tarkistukseen. Oikeudet: pääsy, oikaisu, poisto ja muut, kuten tietosuojakäytännössä selitetään.',
 		},
 		home: {
 			...makeTranslations.fi.home,

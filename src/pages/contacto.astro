@@ -17,6 +17,8 @@ const successTitle = t('contact.successTitle');
 const successMsg = t('contact.success');
 const errorMsg = t('contact.error');
 const privacyHref = legalPath('privacy', lang);
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+const captchaErrorMsg = t('contact.captchaError');
 
 const tipo = Astro.url.searchParams.get('tipo');
 const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' : 'ia';
@@ -54,7 +56,14 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 						<label for="contact" class="block text-sm font-medium mb-1">{t('contact.emailOrPhone')}</label>
 						<input id="contact" name="contact" required class="w-full rounded-lg border border-border px-4 py-2.5 bg-input-background" />
 					</div>
-					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+					<input
+						type="text"
+						name="_gotcha"
+						class="absolute -left-[5000px] w-px h-px overflow-hidden"
+						tabindex="-1"
+						autocomplete="off"
+						aria-hidden="true"
+					/>
 					<div class="flex items-start gap-3">
 						<input
 							id="privacy-consent"
@@ -68,6 +77,16 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 							{t('contact.consentAfter')}
 						</label>
 					</div>
+					{
+						turnstileSiteKey ? (
+							<div
+								id="contact-turnstile"
+								class="cf-turnstile min-h-[65px]"
+								data-sitekey={turnstileSiteKey}
+								data-theme="light"
+							/>
+						) : null
+					}
 					<button
 						id="contact-submit"
 						type="submit"
@@ -130,14 +149,23 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 			</div>
 		</div>
 	</section>
+	{turnstileSiteKey ? (
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
+	) : null}
 </Layout>
 
-<script define:vars={{ endpoint: CONTACT_FORM_ENDPOINT, errorMsg }}>
+<script define:vars={{ endpoint: CONTACT_FORM_ENDPOINT, errorMsg, captchaErrorMsg, turnstileSiteKey }}>
 	const form = document.getElementById('contact-form');
 	const formPanel = document.getElementById('contact-form-panel');
 	const successPanel = document.getElementById('contact-success-panel');
 	const status = document.getElementById('form-status');
 	const submitBtn = document.getElementById('contact-submit');
+	const turnstileEl = document.getElementById('contact-turnstile');
+
+	const resetTurnstile = () => {
+		if (!turnstileSiteKey || !turnstileEl || !window.turnstile) return;
+		window.turnstile.reset(turnstileEl);
+	};
 
 	form?.addEventListener('submit', async (e) => {
 		if (!endpoint || endpoint.startsWith('#TODO')) {
@@ -151,13 +179,27 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 		}
 
 		e.preventDefault();
+
+		if (turnstileSiteKey) {
+			const token = form.querySelector('[name="cf-turnstile-response"]')?.value?.trim();
+			if (!token) {
+				if (status) {
+					status.textContent = captchaErrorMsg;
+					status.classList.remove('hidden');
+					status.classList.add('text-destructive');
+				}
+				return;
+			}
+		}
+
 		submitBtn?.setAttribute('disabled', 'disabled');
 		if (status) status.classList.add('hidden');
 
 		const data = new FormData(form);
 		try {
 			const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
-			if (!res.ok) throw new Error('fail');
+			const payload = await res.json().catch(() => null);
+			if (!res.ok || payload?.ok === false) throw new Error('fail');
 			formPanel?.classList.add('hidden');
 			successPanel?.classList.remove('hidden');
 			successPanel?.focus();
@@ -168,6 +210,7 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 				status.classList.add('text-destructive');
 			}
 			submitBtn?.removeAttribute('disabled');
+			resetTurnstile();
 		}
 	});
 </script>

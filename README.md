@@ -56,6 +56,13 @@ This repo deploys automatically to Bitdesal’s Gandi hosting via **SFTP** using
 - **When it runs**: on every push to the `main` branch
 - **What it does**: installs dependencies, runs `npm run build`, then uploads the contents of `dist/`
 
+### Contact form spam protection (Cloudflare Turnstile + Formspree)
+
+1. Create a Turnstile widget in the [Cloudflare dashboard](https://dash.cloudflare.com/) for `bitdesal.com` (and `localhost` for local testing).
+2. Add the **site key** as GitHub Actions secret `PUBLIC_TURNSTILE_SITE_KEY` (used at build time). For local dev, copy `.env.example` to `.env`.
+3. In [Formspree](https://formspree.io/) → your form → **Settings** → enable **Cloudflare Turnstile** and paste the **secret key**.
+4. Optional: enable **Restrict to domain** in Formspree so submissions only come from your site.
+
 ## Repo hygiene
 
 Generated folders like `node_modules/`, `node_modules/.vite/`, `.astro/`, and `dist/` are ignored via `.gitignore` and should not be committed.
