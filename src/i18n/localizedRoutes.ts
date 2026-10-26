@@ -19,6 +19,18 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 };
 
+/** Old paths that map to a current slug in every locale (see astro redirects). Keep in sync with scripts/lang-redirect-core.mjs. */
+const LEGACY_SLUG_TARGETS: Record<string, string> = {
+	methodology: 'consultoria-software',
+};
+
+export function resolveLocalizedSlug(slug: string, lang: Language): string {
+	const canonical = LEGACY_SLUG_TARGETS[slug] ?? slug;
+	const aliases = SLUG_ALIASES[canonical] ?? SLUG_ALIASES[slug];
+	if (aliases) return aliases[lang];
+	return canonical;
+}
+
 export function stripLocalePrefix(pathname: string): { lang: Language; slug: string } {
 	const clean = pathname.replace(/\/$/, '') || '/';
 	const match = clean.match(/^\/(en|fi)(?=\/|$)/);

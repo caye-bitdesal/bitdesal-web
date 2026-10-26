@@ -47,6 +47,8 @@ export default defineConfig({
 		'/en/automatizacion-pymes': '/en/consultoria-ia',
 		'/fi/automatizacion-pymes': '/fi/consultoria-ia',
 		'/blog/precio-cerrado-automatizacion-pyme': '/blog/precio-cerrado-automatizacion-empresa',
+		'/post-1': '/blog/',
+		'/blog-2': '/blog/',
 	},
 	vite: {
 		plugins: [tailwindcss()],
