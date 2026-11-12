@@ -33,7 +33,9 @@ const { t } = useI18n(Astro);
 			}
 		</a>
 		<div class="p-6 flex flex-col flex-1">
-			<p class="text-sm text-foreground/60 mb-2">{t(post.dateKey)}</p>
+			<time class="text-sm text-foreground/60 mb-2 block" datetime={post.dateIso}>
+				{t(post.dateKey)}
+			</time>
 			<h3 class="text-xl mb-3 leading-snug">
 				<a href={post.url} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
 					{t(post.titleKey)}
