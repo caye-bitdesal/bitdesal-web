@@ -3,9 +3,12 @@ export const androidConsultingPage = {
 	hero: {
 		h1: 'Consultoría Android para apps que no pueden fallar',
 		lead:
-			'Somos consultor Android senior en Kotlin y Jetpack Compose para empresas y equipos de producto en España. Si tu app está en producción, no basta con «ir tirando»: hacemos desarrollo, rescate de código, arquitectura y calidad con el mismo rigor que exige una app con usuarios reales. Caye Ruiz lideró la app Android de Kivra en Finlandia siete años (más de 100.000 descargas y 99,9 % de sesiones sin fallos en producción); ese estándar es el que traemos a cada proyecto.',
-		p2: 'Trabajamos como desarrollador Android senior freelance integrado en tu equipo: mismos canales, mismas ceremonias, entregables cada semana. Cubrimos consultoría Android (decisiones de arquitectura, revisión de PRs, definición de pruebas) y desarrollo en manos cuando hace falta ejecutar.',
-		p3: 'El foco son productos B2B y B2C con usuarios en España y la UE: fintech, utilities, logística, retail y herramientas internas. Si buscas «consultor Android» o «consultoría Android» con alguien que haya llevado una app nacional en producción, este es nuestro terreno.',
+			'Somos consultores Android especializados en Kotlin y Jetpack Compose. Desarrollamos apps nuevas, mejoramos las que ya están en producción y reforzamos a equipos que necesitan un perfil senior. Hagamos lo que hagamos, lo hacemos con la máxima calidad.',
+		p2: 'Aplicamos los principios SOLID y una arquitectura limpia, con pruebas automáticas y revisión de todo el código. El resultado es software fácil de entender, de mantener y de ampliar. Y nos aseguramos de entregar lo que pediste desde el principio: antes de escribir código dejamos por escrito qué vamos a construir y cómo comprobaremos que funciona. Después te enseñamos el avance cada semana, para que no haya sorpresas al final.',
+		p3: 'Nuestro trabajo está terminado cuando ya no nos necesitas. Te dejamos código limpio, documentación clara y un equipo que entiende lo que hay construido y puede seguir sin nosotros. Si más adelante quieres que sigamos a tu lado, será porque tú lo decides, no porque dependas de nosotros.',
+		navSoftware: 'Consultoría de software',
+		navContact: 'Contacto',
+		navIa: 'Consultoría de IA',
 	},
 	pain: {
 		title: '¿Te suena?',
@@ -213,14 +216,15 @@ export const consultoriaPageExpanded = {
 		title: 'Desarrollo Android y consultoría de software para equipos que no pueden fallar',
 	},
 	intro: {
-		p1: 'En Bitdesal combinamos desarrollo Android en producción y consultoría de software para equipos que necesitan calidad medible, no prototipos bonitos. Trabajamos en Kotlin, Jetpack Compose, arquitectura modular, pruebas automáticas y CI/CD con el mismo estándar que exige una app con cientos de miles de usuarios.',
-		p2: 'Caye Ruiz aporta más de 20 años en software y siete años liderando la app Android de Kivra (más de 100.000 descargas, 99,9 % de sesiones sin fallos). Ramiro Santamaría refuerza operaciones, seguridad e integración de agentes de IA donde acorta el ciclo sin sustituir ingeniería.',
+		p1: 'En Bitdesal combinamos desarrollo Android en producción y consultoría de software para equipos que necesitan calidad medible, no prototipos bonitos. Trabajamos en Kotlin, Jetpack Compose, arquitectura modular, pruebas automáticas y CI/CD con estándares de apps que no pueden fallar en producción.',
+		p2: 'Somos un equipo pequeño con más de 20 años en software entre fundadores y colaboradores. Ramiro Santamaría refuerza operaciones, seguridad e integración de agentes de IA donde acorta el ciclo sin sustituir ingeniería.',
 	},
 	androidPromo: {
 		title: 'Consultoría Android senior',
-		p1: 'Si tu necesidad es sobre todo móvil —rescate de legado, releases mensuales, falta de senior en el equipo— tenemos una página dedicada de consultoría Android: servicios, caso Kivra, precios y preguntas frecuentes pensadas para CTOs y responsables de producto en España.',
+		p1: 'Si tu necesidad es sobre todo móvil —rescate de legado, releases mensuales, falta de senior en el equipo— tenemos una página dedicada de consultoría Android: servicios, precios y preguntas frecuentes pensadas para CTOs y responsables de producto en España.',
 		linkConsulting: 'consultoría Android',
 		linkAudit: 'auditoría de apps Android',
+		and: 'y',
 		p2: 'Cuando no estáis seguros de por dónde empezar, la auditoría os da un informe priorizado antes de comprometer un proyecto grande.',
 	},
 	body: {

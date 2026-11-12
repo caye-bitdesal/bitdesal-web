@@ -7,9 +7,12 @@ import { ORG_ID } from '../data/siteJsonLd';
 import { sitePath } from '../data/siteNav';
 import { useI18n } from '../i18n/useI18n';
 
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 
-const canonicalPath = '/consultoria-android/';
+const canonicalPath =
+	Astro.url.pathname === '/' || Astro.url.pathname.endsWith('/')
+		? Astro.url.pathname
+		: `${Astro.url.pathname}/`;
 const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
 
 const painKeys = ['crashes', 'legacy', 'releases', 'noSenior', 'apiLevel', 'slow'] as const;
@@ -31,26 +34,27 @@ const faqItems = [
 	{ qKey: 'androidConsultingPage.faq.items.english.q', aKey: 'androidConsultingPage.faq.items.english.a' },
 ];
 
+const serviceNames: Record<string, string> = {
+	es: 'Consultoría Android',
+	en: 'Android consulting',
+	fi: 'Android-konsultointi',
+};
+
 const serviceJsonLd = {
 	'@type': 'Service',
 	'@id': `${canonical}#service`,
-	name: 'Consultoría Android',
-	serviceType: 'Consultoría Android',
+	name: serviceNames[lang] ?? serviceNames.es,
+	serviceType: serviceNames[lang] ?? serviceNames.es,
 	provider: { '@id': ORG_ID },
 	areaServed: [
-		{ '@type': 'Country', name: 'España' },
-		{ '@type': 'AdministrativeArea', name: 'Unión Europea' },
+		{ '@type': 'Country', name: lang === 'es' ? 'España' : lang === 'fi' ? 'Suomi' : 'Spain' },
+		{ '@type': 'AdministrativeArea', name: lang === 'es' ? 'Unión Europea' : 'European Union' },
 	],
 	url: canonical,
 };
 ---
 
-<Layout
-	seo="androidConsulting"
-	alternates={['es']}
-	breadcrumbLabel={t('androidConsultingPage.hero.h1')}
-	jsonLd={[serviceJsonLd]}
->
+<Layout seo="androidConsulting" breadcrumbLabel={t('androidConsultingPage.hero.h1')} jsonLd={[serviceJsonLd]}>
 	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-4xl md:text-5xl mb-6">{t('androidConsultingPage.hero.h1')}</h1>
@@ -59,14 +63,25 @@ const serviceJsonLd = {
 				<p>{t('androidConsultingPage.hero.p2')}</p>
 				<p>{t('androidConsultingPage.hero.p3')}</p>
 				<p class="text-base text-white/80">
-					<a href="/consultoria-software/" class="text-white underline underline-offset-2 hover:text-white/90">
-						Consultoría de software
+					<a
+						href={sitePath('/consultoria-software', lang)}
+						class="text-white underline underline-offset-2 hover:text-white/90"
+					>
+						{t('androidConsultingPage.hero.navSoftware')}
 					</a>
 					{' · '}
-					<a href="/contacto/" class="text-white underline underline-offset-2 hover:text-white/90">Contacto</a>
+					<a
+						href={sitePath('/contacto', lang)}
+						class="text-white underline underline-offset-2 hover:text-white/90"
+					>
+						{t('androidConsultingPage.hero.navContact')}
+					</a>
 					{' · '}
-					<a href="/consultoria-ia/" class="text-white underline underline-offset-2 hover:text-white/90">
-						Consultoría de IA
+					<a
+						href={sitePath('/consultoria-ia', lang)}
+						class="text-white underline underline-offset-2 hover:text-white/90"
+					>
+						{t('androidConsultingPage.hero.navIa')}
 					</a>
 				</p>
 			</div>
@@ -109,10 +124,13 @@ const serviceJsonLd = {
 							<h3 class="text-xl font-semibold mb-2">{t(`androidConsultingPage.services.${key}.title`)}</h3>
 							<p class="text-foreground/75 leading-relaxed">
 								{t(`androidConsultingPage.services.${key}.body`)}
-								{key === 'audit' && (
+								{key === 'audit' && lang === 'es' && (
 									<>
 										{' '}
-										<a href="/auditoria-app-android/" class="text-primary font-medium hover:underline">
+										<a
+											href={sitePath('/auditoria-app-android', lang)}
+											class="text-primary font-medium hover:underline"
+										>
 											{t('androidConsultingPage.services.audit.linkLabel')}
 										</a>
 										.
@@ -131,7 +149,7 @@ const serviceJsonLd = {
 			<h2 class="text-3xl md:text-4xl mb-6">{t('androidConsultingPage.kivra.title')}</h2>
 			<p class="text-lg text-foreground/80 leading-relaxed mb-6">{t('androidConsultingPage.kivra.body')}</p>
 			<a
-				href={sitePath('/projects/kivra', 'es')}
+				href={sitePath('/projects/kivra', lang)}
 				class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
 			>
 				{t('androidConsultingPage.kivra.cta')}
@@ -169,7 +187,7 @@ const serviceJsonLd = {
 				<p>{t('androidConsultingPage.pricing.p3')}</p>
 			</div>
 			<a
-				href="/casos-y-precios/#software"
+				href={`${sitePath('/casos-y-precios', lang)}#software`}
 				class="inline-flex items-center gap-2 mt-8 text-primary font-medium hover:gap-3 transition-all"
 			>
 				{t('androidConsultingPage.pricing.link')}

@@ -24,30 +24,33 @@ const serviceKeys = ['android', 'architecture', 'ai', 'mentoring'] as const;
 		</div>
 	</section>
 
-	{
-		lang === 'es' && (
-			<section class="py-16 md:py-24 bg-white">
-				<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
-					<p>{t('consultoriaPageExpanded.intro.p1')}</p>
-					<p>{t('consultoriaPageExpanded.intro.p2')}</p>
-					<p>
-						{t('consultoriaPageExpanded.androidPromo.p1')}{' '}
-						<a href="/consultoria-android/" class="text-primary font-medium hover:underline">
-							{t('consultoriaPageExpanded.androidPromo.linkConsulting')}
-						</a>{' '}
-						y{' '}
-						<a href="/auditoria-app-android/" class="text-primary font-medium hover:underline">
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<p>{t('consultoriaPageExpanded.intro.p1')}</p>
+			<p>{t('consultoriaPageExpanded.intro.p2')}</p>
+			<p>
+				{t('consultoriaPageExpanded.androidPromo.p1')}{' '}
+				<a href={sitePath('/consultoria-android', lang)} class="text-primary font-medium hover:underline">
+					{t('consultoriaPageExpanded.androidPromo.linkConsulting')}
+				</a>
+				{' '}
+				{t('consultoriaPageExpanded.androidPromo.and')}{' '}
+				{
+					lang === 'es' ? (
+						<a href={sitePath('/auditoria-app-android', lang)} class="text-primary font-medium hover:underline">
 							{t('consultoriaPageExpanded.androidPromo.linkAudit')}
 						</a>
-						.
-					</p>
-					<p>{t('consultoriaPageExpanded.androidPromo.p2')}</p>
-					<p>{t('consultoriaPageExpanded.body.p1')}</p>
-					<p>{t('consultoriaPageExpanded.body.p2')}</p>
-				</div>
-			</section>
-		)
-	}
+					) : (
+						<span>{t('consultoriaPageExpanded.androidPromo.linkAudit')}</span>
+					)
+				}
+				.
+			</p>
+			<p>{t('consultoriaPageExpanded.androidPromo.p2')}</p>
+			<p>{t('consultoriaPageExpanded.body.p1')}</p>
+			<p>{t('consultoriaPageExpanded.body.p2')}</p>
+		</div>
+	</section>
 
 	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,10 +61,10 @@ const serviceKeys = ['android', 'architecture', 'ai', 'mentoring'] as const;
 						<article class="rounded-xl border border-border p-8 shadow-sm bg-card">
 							<h3 class="text-xl mb-3">{t(`consultoriaPage.services.${key}.title`)}</h3>
 							<p class="text-foreground/75">{t(`consultoriaPage.services.${key}.description`)}</p>
-							{lang === 'es' && key === 'android' && (
+							{key === 'android' && (
 								<p class="mt-4">
-									<a href="/consultoria-android/" class="text-primary font-medium hover:underline">
-										consultoría Android
+									<a href={sitePath('/consultoria-android', lang)} class="text-primary font-medium hover:underline">
+										{t('consultoriaPageExpanded.androidPromo.linkConsulting')}
 									</a>
 								</p>
 							)}

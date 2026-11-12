@@ -58,17 +58,17 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Consultor Android senior: Kotlin y Jetpack Compose · Bitdesal',
 			description:
-				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. 7 años liderando Kivra. Agenda 30 min gratis.',
+				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. Agenda 30 min gratis.',
 		},
 		en: {
-			title: 'Consultor Android senior: Kotlin y Jetpack Compose · Bitdesal',
+			title: 'Senior Android consultant: Kotlin and Jetpack Compose · Bitdesal',
 			description:
-				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. 7 años liderando Kivra. Agenda 30 min gratis.',
+				'Senior Android consulting for product teams: Kotlin, architecture, legacy rescue and quality. Production-grade delivery. Book a free 30-minute call.',
 		},
 		fi: {
-			title: 'Consultor Android senior: Kotlin y Jetpack Compose · Bitdesal',
+			title: 'Senior Android -konsultti: Kotlin ja Jetpack Compose · Bitdesal',
 			description:
-				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. 7 años liderando Kivra. Agenda 30 min gratis.',
+				'Senior Android -konsultointia tuotetiimeille: Kotlin, arkkitehtuuri, legacy ja laatu. Varaa ilmainen 30 minuutin puhelu.',
 		},
 	},
 	androidAudit: {

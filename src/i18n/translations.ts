@@ -26,6 +26,14 @@ import {
 	androidConsultingPage,
 	consultoriaPageExpanded,
 } from './content/android-pages.es';
+import {
+	androidConsultingPage as androidConsultingPageEn,
+	consultoriaPageExpanded as consultoriaPageExpandedEn,
+} from './content/android-pages.en';
+import {
+	androidConsultingPage as androidConsultingPageFi,
+	consultoriaPageExpanded as consultoriaPageExpandedFi,
+} from './content/android-pages.fi';
 
 export const translations: Record<Language, any> = {
 	es: {
@@ -568,7 +576,7 @@ export const translations: Record<Language, any> = {
 			hero: {
 				title: consultoriaPageExpanded.hero.title,
 				subtitle:
-					'Desarrollo Android, arquitectura y calidad de código. 20 años de experiencia y apps en producción con cientos de miles de usuarios.',
+					'Desarrollo Android, arquitectura y calidad de código. Especificación clara, pruebas automáticas y entregas semanales.',
 				kivraCase: 'Ver el caso Kivra',
 			},
 			services: {
@@ -1166,6 +1174,8 @@ export const translations: Record<Language, any> = {
 		},
 	},
 	en: {
+		androidConsultingPage: androidConsultingPageEn,
+		consultoriaPageExpanded: consultoriaPageExpandedEn,
 		...makeTranslations.en,
 		services: {
 			...makeTranslations.en.services,
@@ -1213,6 +1223,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Consulting',
 			companyTitle: 'Company',
 			aboutUs: 'About us',
+			androidConsulting: 'Android consulting',
 			pricing: 'Pricing',
 			workAndPricing: 'Work & pricing',
 			blog: 'Blog',
@@ -1914,9 +1925,9 @@ export const translations: Record<Language, any> = {
 		},
 		consultoriaPage: {
 			hero: {
-				title: 'Software development and consulting for teams that cannot afford to fail',
+				title: consultoriaPageExpandedEn.hero.title,
 				subtitle:
-					'Android development, architecture and code quality. 20 years of experience and production apps with hundreds of thousands of users.',
+					'Android development, architecture and code quality. Clear specs, automated tests and weekly delivery.',
 				kivraCase: 'See the Kivra case',
 			},
 			services: {
@@ -2231,6 +2242,8 @@ export const translations: Record<Language, any> = {
 		},
 	},
 	fi: {
+		androidConsultingPage: androidConsultingPageFi,
+		consultoriaPageExpanded: consultoriaPageExpandedFi,
 		...makeTranslations.fi,
 		services: {
 			...makeTranslations.fi.services,
@@ -2282,6 +2295,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Konsultointi',
 			companyTitle: 'Yritys',
 			aboutUs: 'Tietoa meistä',
+			androidConsulting: 'Android-konsultointi',
 			pricing: 'Hinnat',
 			workAndPricing: 'Referenssit ja hinnat',
 			blog: 'Blogi',
@@ -2996,9 +3010,9 @@ export const translations: Record<Language, any> = {
 		},
 		consultoriaPage: {
 			hero: {
-				title: 'Ohjelmistokehitys ja konsultointi tiimeille, jotka eivät voi epäonnistua',
+				title: consultoriaPageExpandedFi.hero.title,
 				subtitle:
-					'Android-kehitystä, arkkitehtuuria ja koodin laatua. 20 vuoden kokemus ja tuotantosovelluksia sadoilletuhansille käyttäjille.',
+					'Android-kehitystä, arkkitehtuuria ja koodin laatua. Selkeät speksit, automaattiset testit ja viikoittainen toimitus.',
 				kivraCase: 'Katso Kivra-tapaus',
 			},
 			services: {
