@@ -1,0 +1,196 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
+import Layout from '../layouts/Layout.astro';
+import { BOOKING_URL, SITE_ORIGIN } from '../data/siteConstants';
+import { ORG_ID } from '../data/siteJsonLd';
+import { sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+
+const canonicalPath = '/consultoria-android/';
+const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
+
+const painKeys = ['crashes', 'legacy', 'releases', 'noSenior', 'apiLevel', 'slow'] as const;
+const serviceKeys = ['kotlin', 'staff', 'audit', 'compose', 'kmp', 'cicd', 'ai'] as const;
+const workSteps = [
+	'home.howIWork.steps.call',
+	'home.howIWork.steps.study',
+	'home.howIWork.steps.build',
+	'home.howIWork.steps.handoff',
+] as const;
+
+const faqItems = [
+	{ qKey: 'androidConsultingPage.faq.items.cost.q', aKey: 'androidConsultingPage.faq.items.cost.a' },
+	{ qKey: 'androidConsultingPage.faq.items.remote.q', aKey: 'androidConsultingPage.faq.items.remote.a' },
+	{ qKey: 'androidConsultingPage.faq.items.java.q', aKey: 'androidConsultingPage.faq.items.java.a' },
+	{ qKey: 'androidConsultingPage.faq.items.outsource.q', aKey: 'androidConsultingPage.faq.items.outsource.a' },
+	{ qKey: 'androidConsultingPage.faq.items.start.q', aKey: 'androidConsultingPage.faq.items.start.a' },
+	{ qKey: 'androidConsultingPage.faq.items.nda.q', aKey: 'androidConsultingPage.faq.items.nda.a' },
+	{ qKey: 'androidConsultingPage.faq.items.english.q', aKey: 'androidConsultingPage.faq.items.english.a' },
+];
+
+const serviceJsonLd = {
+	'@type': 'Service',
+	'@id': `${canonical}#service`,
+	name: 'Consultoría Android',
+	serviceType: 'Consultoría Android',
+	provider: { '@id': ORG_ID },
+	areaServed: [
+		{ '@type': 'Country', name: 'España' },
+		{ '@type': 'AdministrativeArea', name: 'Unión Europea' },
+	],
+	url: canonical,
+};
+---
+
+<Layout
+	seo="androidConsulting"
+	alternates={['es']}
+	breadcrumbLabel={t('androidConsultingPage.hero.h1')}
+	jsonLd={[serviceJsonLd]}
+>
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-4xl md:text-5xl mb-6">{t('androidConsultingPage.hero.h1')}</h1>
+			<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+				<p>{t('androidConsultingPage.hero.lead')}</p>
+				<p>{t('androidConsultingPage.hero.p2')}</p>
+				<p>{t('androidConsultingPage.hero.p3')}</p>
+				<p class="text-base text-white/80">
+					<a href="/consultoria-software/" class="text-white underline underline-offset-2 hover:text-white/90">
+						Consultoría de software
+					</a>
+					{' · '}
+					<a href="/contacto/" class="text-white underline underline-offset-2 hover:text-white/90">Contacto</a>
+					{' · '}
+					<a href="/consultoria-ia/" class="text-white underline underline-offset-2 hover:text-white/90">
+						Consultoría de IA
+					</a>
+				</p>
+			</div>
+			<a
+				href={BOOKING_URL}
+				class="inline-flex items-center gap-2 mt-8 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
+			>
+				{t('common.bookCta')}
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl text-center mb-12">{t('androidConsultingPage.pain.title')}</h2>
+			<div class="space-y-8">
+				{
+					painKeys.map((key) => (
+						<article class="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm">
+							<h3 class="text-xl font-semibold mb-3">{t(`androidConsultingPage.pain.items.${key}.title`)}</h3>
+							<p class="text-foreground/75 leading-relaxed">{t(`androidConsultingPage.pain.items.${key}.body`)}</p>
+						</article>
+					))
+				}
+			</div>
+			<div class="mt-12 space-y-4 text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+				<p>{t('androidConsultingPage.mid.p1')}</p>
+				<p>{t('androidConsultingPage.mid.p2')}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-10">{t('androidConsultingPage.services.title')}</h2>
+			<div class="space-y-8">
+				{
+					serviceKeys.map((key) => (
+						<article>
+							<h3 class="text-xl font-semibold mb-2">{t(`androidConsultingPage.services.${key}.title`)}</h3>
+							<p class="text-foreground/75 leading-relaxed">
+								{t(`androidConsultingPage.services.${key}.body`)}
+								{key === 'audit' && (
+									<>
+										{' '}
+										<a href="/auditoria-app-android/" class="text-primary font-medium hover:underline">
+											{t('androidConsultingPage.services.audit.linkLabel')}
+										</a>
+										.
+									</>
+								)}
+							</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-6">{t('androidConsultingPage.kivra.title')}</h2>
+			<p class="text-lg text-foreground/80 leading-relaxed mb-6">{t('androidConsultingPage.kivra.body')}</p>
+			<a
+				href={sitePath('/projects/kivra', 'es')}
+				class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+			>
+				{t('androidConsultingPage.kivra.cta')}
+				<span aria-hidden="true">→</span>
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl text-center mb-12">{t('androidConsultingPage.how.title')}</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				{
+					workSteps.map((stepKey, index) => (
+						<div class="bg-card rounded-lg p-6 shadow-sm border border-border">
+							<div class="w-10 h-10 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-4">
+								{index + 1}
+							</div>
+							<h3 class="mb-2 font-medium">{t(`${stepKey}.title`)}</h3>
+							<p class="text-foreground/70 text-sm">{t(`${stepKey}.description`)}</p>
+						</div>
+					))
+				}
+			</div>
+			<p class="text-center text-foreground/70 mt-10 max-w-2xl mx-auto">{t('home.howIWork.core')}</p>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-6">{t('androidConsultingPage.pricing.title')}</h2>
+			<div class="space-y-4 text-foreground/80 leading-relaxed">
+				<p>{t('androidConsultingPage.pricing.p1')}</p>
+				<p>{t('androidConsultingPage.pricing.p2')}</p>
+				<p>{t('androidConsultingPage.pricing.p3')}</p>
+			</div>
+			<a
+				href="/casos-y-precios/#software"
+				class="inline-flex items-center gap-2 mt-8 text-primary font-medium hover:gap-3 transition-all"
+			>
+				{t('androidConsultingPage.pricing.link')}
+				<span aria-hidden="true">→</span>
+			</a>
+		</div>
+	</section>
+
+	<FaqSection titleKey="androidConsultingPage.faq.title" items={faqItems} />
+
+	<section class="py-12 md:py-16 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<p class="text-lg text-foreground/80 mb-6">{t('androidConsultingPage.closing')}</p>
+			<a
+				href={BOOKING_URL}
+				class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+			>
+				{t('common.bookCta')}
+			</a>
+		</div>
+	</section>
+
+	<CtaSection variant="software" />
+</Layout>

@@ -30,6 +30,8 @@ Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de K
 - https://bitdesal.com/ — Inicio: consultoría de IA y software con precio cerrado.
 - https://bitdesal.com/consultoria-ia/ — Automatización de procesos con IA para empresas.
 - https://bitdesal.com/consultoria-software/ — Desarrollo Android y consultoría técnica.
+- https://bitdesal.com/consultoria-android/ — Consultoría Android senior (Kotlin, Compose, rescate de apps).
+- https://bitdesal.com/auditoria-app-android/ — Auditoría de apps Android (informe priorizado).
 - https://bitdesal.com/casos-y-precios/ — Casos reales y tarifas transparentes.
 - https://bitdesal.com/nosotros/ — Equipo y trayectoria.
 - https://bitdesal.com/blog/ — Artículos en el sitio, LinkedIn y Medium.

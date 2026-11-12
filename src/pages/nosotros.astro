@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 import { teamMembers } from '../data/teamMembers';
 import { useI18n } from '../i18n/useI18n';
 
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 
 const defaultMemberId = teamMembers[0]?.id ?? 'caye';
 const extendedMemberIds = teamMembers.filter((m) => m.showExtendedProfile).map((m) => m.id);
@@ -28,6 +28,17 @@ const extendedMemberIds = teamMembers.filter((m) => m.showExtendedProfile).map((
 				<p>{t('about.company.p3')}</p>
 				<p>{t('about.company.p4')}</p>
 				<p>{t('about.company.p5')}</p>
+				{
+					lang === 'es' && (
+						<p>
+							{t('about.company.androidConsultingBefore')}
+							<a href="/consultoria-android/" class="text-primary font-medium hover:underline">
+								consultoría Android
+							</a>
+							{t('about.company.androidConsultingAfter')}
+						</p>
+					)
+				}
 			</article>
 		</div>
 	</section>

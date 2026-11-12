@@ -16,7 +16,7 @@ if (!member) {
 	return Astro.redirect('/404');
 }
 
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 const pageTitle = `${t(member.nameKey)} · Bitdesal`;
 const pageDescription = t(member.bioKey);
 ---
@@ -25,6 +25,17 @@ const pageDescription = t(member.bioKey);
 	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<TeamMemberCard member={member} variant="profile" />
+			{
+				memberId === 'caye' && lang === 'es' && (
+					<p class="mt-8 max-w-3xl mx-auto text-center text-foreground/80 leading-relaxed">
+						{t('about.caye.androidConsultingBefore')}
+						<a href="/consultoria-android/" class="text-primary font-medium hover:underline">
+							consultoría Android
+						</a>
+						{t('about.caye.androidConsultingAfter')}
+					</p>
+				)
+			}
 		</div>
 	</section>
 	{

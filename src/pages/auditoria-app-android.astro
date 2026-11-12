@@ -1,0 +1,110 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
+import Layout from '../layouts/Layout.astro';
+import { BOOKING_URL, SITE_ORIGIN } from '../data/siteConstants';
+import { ORG_ID } from '../data/siteJsonLd';
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+
+const canonicalPath = '/auditoria-app-android/';
+const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
+
+const scopeKeys = [
+	'architecture',
+	'stability',
+	'performance',
+	'security',
+	'deps',
+	'build',
+	'tests',
+	'a11y',
+] as const;
+
+const faqItems = [
+	{ qKey: 'androidAuditPage.faq.items.need.q', aKey: 'androidAuditPage.faq.items.need.a' },
+	{ qKey: 'androidAuditPage.faq.items.after.q', aKey: 'androidAuditPage.faq.items.after.a' },
+	{ qKey: 'androidAuditPage.faq.items.compose.q', aKey: 'androidAuditPage.faq.items.compose.a' },
+	{ qKey: 'androidAuditPage.faq.items.diff.q', aKey: 'androidAuditPage.faq.items.diff.a' },
+];
+
+const serviceJsonLd = {
+	'@type': 'Service',
+	'@id': `${canonical}#service`,
+	name: 'Auditoría de apps Android',
+	serviceType: 'Auditoría app Android',
+	provider: { '@id': ORG_ID },
+	areaServed: [
+		{ '@type': 'Country', name: 'España' },
+		{ '@type': 'AdministrativeArea', name: 'Unión Europea' },
+	],
+	url: canonical,
+};
+---
+
+<Layout
+	seo="androidAudit"
+	alternates={['es']}
+	breadcrumbLabel={t('androidAuditPage.hero.h1')}
+	jsonLd={[serviceJsonLd]}
+>
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-4xl md:text-5xl mb-6">{t('androidAuditPage.hero.h1')}</h1>
+			<p class="text-lg text-white/90 leading-relaxed">{t('androidAuditPage.hero.lead')}</p>
+			<a
+				href={BOOKING_URL}
+				class="inline-flex items-center gap-2 mt-8 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
+			>
+				{t('common.bookCta')}
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-10">{t('androidAuditPage.scope.title')}</h2>
+			<div class="space-y-8">
+				{
+					scopeKeys.map((key) => (
+						<article>
+							<h3 class="text-xl font-semibold mb-2">{t(`androidAuditPage.scope.items.${key}.title`)}</h3>
+							<p class="text-foreground/75 leading-relaxed">{t(`androidAuditPage.scope.items.${key}.body`)}</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+			<div>
+				<h2 class="text-3xl md:text-4xl mb-4">{t('androidAuditPage.deliverable.title')}</h2>
+				<p class="text-foreground/80 leading-relaxed">{t('androidAuditPage.deliverable.body')}</p>
+			</div>
+			<div>
+				<h2 class="text-3xl md:text-4xl mb-4">{t('androidAuditPage.pricing.title')}</h2>
+				<p class="text-foreground/80 leading-relaxed">{t('androidAuditPage.pricing.body')}</p>
+				<p class="text-sm text-foreground/55 mt-4 border-l-4 border-primary/40 pl-4">{t('androidAuditPage.pricing.note')}</p>
+			</div>
+			<div class="space-y-4 text-foreground/80 leading-relaxed">
+				<p>
+					{t('androidAuditPage.context')}
+					<a href="/consultoria-android/" class="text-primary font-medium hover:underline">
+						{t('androidAuditPage.androidConsultingLink')}
+					</a>
+					.
+				</p>
+				<p>{t('androidAuditPage.extra.p1')}</p>
+				<p>{t('androidAuditPage.extra.p2')}</p>
+				<p>{t('androidAuditPage.extra.p3')}</p>
+			</div>
+		</div>
+	</section>
+
+	<FaqSection titleKey="androidAuditPage.faq.title" items={faqItems} />
+
+	<CtaSection variant="software" />
+</Layout>

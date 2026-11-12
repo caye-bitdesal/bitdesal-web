@@ -13,6 +13,8 @@ const SECTION_PARENT: Record<string, { labelKey: string; slug: string }> = {
 const SLUG_LABEL: Record<string, string> = {
 	'consultoria-ia': 'nav.iaService',
 	'consultoria-software': 'nav.softwareService',
+	'consultoria-android': 'androidConsultingPage.hero.h1',
+	'auditoria-app-android': 'androidAuditPage.hero.h1',
 	'casos-y-precios': 'nav.workAndPricing',
 	'work-and-pricing': 'nav.workAndPricing',
 	'referenssit-ja-hinnat': 'nav.workAndPricing',

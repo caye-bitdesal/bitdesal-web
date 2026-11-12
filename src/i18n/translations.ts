@@ -21,6 +21,11 @@ export function createTranslator(lang: Language) {
 }
 
 import { translations as makeTranslations } from './make-translations';
+import {
+	androidAuditPage,
+	androidConsultingPage,
+	consultoriaPageExpanded,
+} from './content/android-pages.es';
 
 export const translations: Record<Language, any> = {
 	es: {
@@ -71,6 +76,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Consultoría',
 			companyTitle: 'Empresa',
 			aboutUs: 'Nosotros',
+			androidConsulting: 'Consultoría Android',
 			pricing: 'Precios',
 			workAndPricing: 'Casos y precios',
 			blog: 'Blog',
@@ -555,9 +561,12 @@ export const translations: Record<Language, any> = {
 				},
 			},
 		},
+		androidConsultingPage,
+		androidAuditPage,
+		consultoriaPageExpanded,
 		consultoriaPage: {
 			hero: {
-				title: 'Desarrollo y consultoría de software para equipos que no pueden fallar',
+				title: consultoriaPageExpanded.hero.title,
 				subtitle:
 					'Desarrollo Android, arquitectura y calidad de código. 20 años de experiencia y apps en producción con cientos de miles de usuarios.',
 				kivraCase: 'Ver el caso Kivra',
@@ -685,6 +694,8 @@ export const translations: Record<Language, any> = {
 				titleAccent: 'Correo digital',
 				heroDescription:
 					'Kivra es una app móvil gratuita que reúne facturas, cartas y documentos de cientos de empresas y organismos públicos en un solo lugar seguro y cómodo.',
+				androidConsultingBefore: 'Ese mismo enfoque de calidad en producción es lo que ofrecemos en ',
+				androidConsultingAfter: ' para tu equipo.',
 				website: 'Visitar web',
 				playStore: 'Ver en Google Play',
 				case: {
@@ -875,6 +886,8 @@ export const translations: Record<Language, any> = {
 				p3: 'Para eso existimos: para quitar burocracia y devolver ese tiempo a lo que de verdad hace crecer un negocio.',
 				p4: 'Somos ingenieros informáticos superiores, y abordamos cada proyecto como un problema de ingeniería: primero entendemos el proceso, después diseñamos la solución y solo entonces la construimos, con pruebas y con documentación que tu equipo pueda seguir.',
 				p5: 'La IA es una de nuestras herramientas, y muy potente, pero no es el fin. El fin es que tu empresa funcione mejor.',
+				androidConsultingBefore: 'Si te interesa el mismo nivel de exigencia en tu producto, mira nuestra ',
+				androidConsultingAfter: ' con servicios, precios y preguntas frecuentes.',
 			},
 			team: {
 				title: 'Equipo',
@@ -892,6 +905,10 @@ export const translations: Record<Language, any> = {
 			},
 			stats: {
 				line: '20 años · 99,9 % sin fallos · versiones mensuales durante 7 años · 30+ desarrolladores formados · 5 países',
+			},
+			caye: {
+				androidConsultingBefore: 'Hoy ofrezco ese criterio a empresas en España con la ',
+				androidConsultingAfter: ' de Bitdesal: Kotlin, releases y rescates con precio claro.',
 			},
 			bio: {
 				name: 'Caye Ruiz',

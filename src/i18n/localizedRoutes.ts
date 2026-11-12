@@ -22,8 +22,11 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 };
 
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
+const ES_ONLY_SLUGS = new Set(['consultoria-android', 'auditoria-app-android']);
+
 export function alternatesForPathname(pathname: string): Language[] {
 	const { slug } = stripLocalePrefix(pathname);
+	if (ES_ONLY_SLUGS.has(slug)) return ['es'];
 	if (slug === 'caye' || slug === 'ramiro') return supportedLanguages;
 	return supportedLanguages;
 }
@@ -85,8 +88,22 @@ export function absoluteAlternateHrefs(
 	return abs;
 }
 
+const ES_ONLY_FALLBACK_SLUG: Record<string, string> = {
+	'consultoria-android': 'consultoria-software',
+	'auditoria-app-android': 'consultoria-software',
+};
+
 export function localePathForSwitch(pathname: string, targetLang: Language): string {
-	return alternateHrefs(pathname)[targetLang];
+	const locales = alternatesForPathname(pathname);
+	if (locales.includes(targetLang)) {
+		return alternateHrefs(pathname, locales)[targetLang];
+	}
+	const { slug } = stripLocalePrefix(pathname);
+	const fallbackSlug = ES_ONLY_FALLBACK_SLUG[slug];
+	if (fallbackSlug) {
+		return localeHref(resolveLocalizedSlug(fallbackSlug, targetLang), targetLang);
+	}
+	return alternateHrefs(pathname, locales).es;
 }
 
 /** Locale-aware path that keeps a `#fragment` if one is present in `path`. */
