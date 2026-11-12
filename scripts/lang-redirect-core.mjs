@@ -14,6 +14,8 @@ const SLUG_ALIASES = {
 	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'nosotros' },
+	about: { es: 'nosotros', en: 'about', fi: 'nosotros' },
 };
 
 const LEGACY_SLUG_TARGETS = {

@@ -21,6 +21,7 @@ const SLUGS_FOR_LANG_RULES = [
 	'consultoria-ia',
 	'consultoria-software',
 	'nosotros',
+	'about',
 	'blog',
 	'caye',
 	'ramiro',
@@ -89,6 +90,15 @@ RewriteRule ^blog-2/?$ /blog/ [R=301,L]
 # 301 instead of Astro meta-refresh redirect pages (no ?lang=)
 RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
 RewriteRule ^methodology/?$ /consultoria-software/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+RewriteRule ^about/?$ /nosotros/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+RewriteRule ^en/nosotros/?$ /en/about/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L]
 </IfModule>
 `;
 

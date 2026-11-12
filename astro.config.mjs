@@ -26,7 +26,26 @@ export default defineConfig({
 			},
 			filter(page) {
 				const path = new URL(page).pathname.replace(/\/$/, '') || '/';
-				return !/^(\/(en|fi))?\/(pricing|projects|prices|precios)$/.test(path);
+				if (/^(\/(en|fi))?\/(pricing|projects|prices|precios)$/.test(path)) return false;
+				const exclude = new Set([
+					'/about',
+					'/en/nosotros',
+					'/fi/about',
+					'/contact',
+					'/services',
+					'/methodology',
+					'/prices',
+					'/precios',
+					'/pricing',
+					'/projects',
+					'/post-1',
+					'/blog-2',
+					'/blog/precio-cerrado-automatizacion-pyme',
+					'/automatizacion-pymes',
+					'/en/automatizacion-pymes',
+					'/fi/automatizacion-pymes',
+				]);
+				return !exclude.has(path);
 			},
 			serialize(item) {
 				return {
@@ -43,6 +62,7 @@ export default defineConfig({
 		'/precios': '/casos-y-precios/',
 		'/methodology': '/consultoria-software',
 		'/about': '/nosotros',
+		'/en/nosotros': '/en/about',
 		'/automatizacion-pymes': '/consultoria-ia',
 		'/en/automatizacion-pymes': '/en/consultoria-ia',
 		'/fi/automatizacion-pymes': '/fi/consultoria-ia',
