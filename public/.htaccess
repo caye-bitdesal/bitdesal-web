@@ -401,6 +401,54 @@ RewriteRule ^fi/consultoria-software/?$ /consultoria-software/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
+RewriteRule ^consultoria-android/?$ /en/consultoria-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^consultoria-android/?$ /fi/consultoria-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^en/consultoria-android/?$ /consultoria-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^en/consultoria-android/?$ /fi/consultoria-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^fi/consultoria-android/?$ /en/consultoria-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^fi/consultoria-android/?$ /consultoria-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^auditoria-app-android/?$ /en/auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^auditoria-app-android/?$ /fi/auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^en/auditoria-app-android/?$ /auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^en/auditoria-app-android/?$ /fi/auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^fi/auditoria-app-android/?$ /en/auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^fi/auditoria-app-android/?$ /auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
 RewriteRule ^nosotros/?$ /en/about/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]

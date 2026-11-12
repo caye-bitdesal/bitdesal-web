@@ -67,7 +67,20 @@ const playDetails = [
 							<span>{t('projects.kivraDetail.title')}</span>
 							<span class="block text-[#3dcc58]">{t('projects.kivraDetail.titleAccent')}</span>
 						</h1>
-						<p class="text-lg text-white/70 leading-relaxed mb-8 max-w-xl">{t('projects.kivraDetail.heroDescription')}</p>
+						<p class:list={['text-lg text-white/70 leading-relaxed max-w-xl', lang === 'es' ? 'mb-4' : 'mb-8']}>
+							{t('projects.kivraDetail.heroDescription')}
+						</p>
+						{
+							lang === 'es' && (
+								<p class="text-base text-white/65 leading-relaxed mb-8 max-w-xl">
+									{t('projects.kivraDetail.androidConsultingBefore')}
+									<a href="/consultoria-android/" class="text-[#3dcc58] font-medium hover:underline">
+										consultoría Android
+									</a>
+									{t('projects.kivraDetail.androidConsultingAfter')}
+								</p>
+							)
+						}
 						<div class="flex flex-wrap gap-4">
 							<a
 								href={websiteUrl}

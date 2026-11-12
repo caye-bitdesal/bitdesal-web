@@ -4,6 +4,8 @@ export type PageSeoId =
 	| 'home'
 	| 'iaConsulting'
 	| 'consultoria'
+	| 'androidConsulting'
+	| 'androidAudit'
 	| 'pricing'
 	| 'workAndPricing'
 	| 'about'
@@ -50,6 +52,40 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		fi: {
 			title: 'Tekoälykonsultointi yrityksille · Bitdesal',
 			description: 'Prosessien automatisointi tekoälyllä. Kiinteä hinta prosessitutkimuksesta.',
+		},
+	},
+	androidConsulting: {
+		es: {
+			title: 'Consultor Android senior: Kotlin y Jetpack Compose · Bitdesal',
+			description:
+				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. Agenda 30 min gratis.',
+		},
+		en: {
+			title: 'Senior Android consultant: Kotlin and Jetpack Compose · Bitdesal',
+			description:
+				'Senior Android consulting for product teams: Kotlin, architecture, legacy rescue and quality. Production-grade delivery. Book a free 30-minute call.',
+		},
+		fi: {
+			title: 'Senior Android -konsultti: Kotlin ja Jetpack Compose · Bitdesal',
+			description:
+				'Senior Android -konsultointia tuotetiimeille: Kotlin, arkkitehtuuri, legacy ja laatu. Varaa ilmainen 30 minuutin puhelu.',
+		},
+	},
+	androidAudit: {
+		es: {
+			title: 'Auditoría de apps Android: estabilidad, rendimiento y código · Bitdesal',
+			description:
+				'Auditoría app Android: arquitectura, crashes, rendimiento, seguridad y CI/CD. Informe priorizado y plan de mejora. Agenda 30 min.',
+		},
+		en: {
+			title: 'Auditoría de apps Android: estabilidad, rendimiento y código · Bitdesal',
+			description:
+				'Auditoría app Android: arquitectura, crashes, rendimiento, seguridad y CI/CD. Informe priorizado y plan de mejora. Agenda 30 min.',
+		},
+		fi: {
+			title: 'Auditoría de apps Android: estabilidad, rendimiento y código · Bitdesal',
+			description:
+				'Auditoría app Android: arquitectura, crashes, rendimiento, seguridad y CI/CD. Informe priorizado y plan de mejora. Agenda 30 min.',
 		},
 	},
 	consultoria: {

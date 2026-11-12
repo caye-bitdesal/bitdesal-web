@@ -81,6 +81,11 @@ const whyCards = [
 					</h2>
 					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.software.description')}</p>
 					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.software.priceHint')}</p>
+					<p class="text-sm text-foreground/70 mb-4">
+						<a href={sitePath('/consultoria-android', lang)} class="text-primary font-medium hover:underline">
+							{t('consultoriaPageExpanded.androidPromo.linkConsulting')}
+						</a>
+					</p>
 					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
 						{t('home.serviceCards.software.cta')}
 						<span aria-hidden="true">→</span>

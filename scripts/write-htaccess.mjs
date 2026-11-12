@@ -20,6 +20,8 @@ const SLUGS_FOR_LANG_RULES = [
 	'contacto',
 	'consultoria-ia',
 	'consultoria-software',
+	'consultoria-android',
+	'auditoria-app-android',
 	'nosotros',
 	'about',
 	'blog',
