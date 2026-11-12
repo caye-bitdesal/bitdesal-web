@@ -20,7 +20,7 @@ export const CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/xjygzogw';
 /** Real-work photo gallery on /consultoria-ia (workshop, site, van, mobile). */
 export const SHOW_IA_CONSULTING_PHOTOS = false;
 
-export const DEFAULT_OG_IMAGE = '/hero-home.jpg';
+export const DEFAULT_OG_IMAGE = '/og-default.jpg';
 
 export const SITE_ORIGIN = 'https://bitdesal.com';
 

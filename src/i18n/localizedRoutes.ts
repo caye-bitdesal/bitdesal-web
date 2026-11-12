@@ -17,7 +17,16 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'nosotros' },
+	about: { es: 'nosotros', en: 'about', fi: 'nosotros' },
 };
+
+/** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
+export function alternatesForPathname(pathname: string): Language[] {
+	const { slug } = stripLocalePrefix(pathname);
+	if (slug === 'caye' || slug === 'ramiro') return supportedLanguages;
+	return supportedLanguages;
+}
 
 /** Old paths that map to a current slug in every locale (see astro redirects). Keep in sync with scripts/lang-redirect-core.mjs. */
 const LEGACY_SLUG_TARGETS: Record<string, string> = {
@@ -49,24 +58,31 @@ export function localeHref(slug: string, lang: Language): string {
 	return lang === 'es' ? `/${slug}/` : `/${lang}/${slug}/`;
 }
 
-export function alternateHrefs(pathname: string): Record<Language, string> {
+export function alternateHrefs(pathname: string, locales: Language[] = supportedLanguages): Record<Language, string> {
 	const { slug } = stripLocalePrefix(pathname);
 	const aliases = SLUG_ALIASES[slug];
-	const result = {} as Record<Language, string>;
+	const full = {} as Record<Language, string>;
 	for (const lang of supportedLanguages) {
 		const targetSlug = aliases ? aliases[lang] : slug;
-		result[lang] = localeHref(targetSlug, lang);
+		full[lang] = localeHref(targetSlug, lang);
+	}
+	const result = {} as Record<Language, string>;
+	for (const lang of locales) {
+		result[lang] = full[lang];
 	}
 	return result;
 }
 
-export function absoluteAlternateHrefs(pathname: string): Record<Language, string> {
-	const rel = alternateHrefs(pathname);
-	return {
-		es: new URL(rel.es, SITE_ORIGIN).href,
-		en: new URL(rel.en, SITE_ORIGIN).href,
-		fi: new URL(rel.fi, SITE_ORIGIN).href,
-	};
+export function absoluteAlternateHrefs(
+	pathname: string,
+	locales: Language[] = supportedLanguages,
+): Record<Language, string> {
+	const rel = alternateHrefs(pathname, locales);
+	const abs = {} as Record<Language, string>;
+	for (const lang of locales) {
+		abs[lang] = new URL(rel[lang], SITE_ORIGIN).href;
+	}
+	return abs;
 }
 
 export function localePathForSwitch(pathname: string, targetLang: Language): string {
@@ -88,8 +104,15 @@ export function legalPath(page: 'notice' | 'privacy', lang: Language): string {
 	return localeHref(slugs[lang], lang);
 }
 
+const HREFLANG_BCP47: Record<Language, string> = {
+	es: 'es-ES',
+	en: 'en-US',
+	fi: 'fi-FI',
+};
+
 export function sitemapHreflangLinks(url: string): { url: string; lang: string }[] {
 	const path = new URL(url).pathname;
-	const abs = absoluteAlternateHrefs(path);
-	return supportedLanguages.map((lang) => ({ url: abs[lang], lang }));
+	const locales = alternatesForPathname(path);
+	const abs = absoluteAlternateHrefs(path, locales);
+	return locales.map((locale) => ({ url: abs[locale], lang: HREFLANG_BCP47[locale] }));
 }

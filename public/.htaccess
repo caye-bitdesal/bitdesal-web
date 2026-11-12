@@ -401,11 +401,15 @@ RewriteRule ^fi/consultoria-software/?$ /consultoria-software/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
-RewriteRule ^nosotros/?$ /en/nosotros/ [R=301,L,QSD]
+RewriteRule ^nosotros/?$ /en/about/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
 RewriteRule ^nosotros/?$ /fi/nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^en/nosotros/?$ /en/about/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
@@ -417,11 +421,43 @@ RewriteRule ^en/nosotros/?$ /fi/nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
-RewriteRule ^fi/nosotros/?$ /en/nosotros/ [R=301,L,QSD]
+RewriteRule ^fi/nosotros/?$ /en/about/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
 RewriteRule ^fi/nosotros/?$ /nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^about/?$ /en/about/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^about/?$ /nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^about/?$ /fi/nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^en/about/?$ /nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^en/about/?$ /fi/nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^fi/about/?$ /en/about/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^fi/about/?$ /nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -510,4 +546,13 @@ RewriteRule ^blog-2/?$ /blog/ [R=301,L]
 # 301 instead of Astro meta-refresh redirect pages (no ?lang=)
 RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
 RewriteRule ^methodology/?$ /consultoria-software/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+RewriteRule ^about/?$ /nosotros/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+RewriteRule ^en/nosotros/?$ /en/about/ [R=301,L]
+
+RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L]
 </IfModule>

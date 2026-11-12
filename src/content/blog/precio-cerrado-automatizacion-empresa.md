@@ -5,7 +5,7 @@ pubDate: 2026-10-01
 audience: business
 ---
 
-Si diriges tu empresa, lo último que quieres es un proyecto de software que se alarga, cambia de forma constante y termina costando el doble de lo previsto. Por eso en Bitdesal no empiezo directamente a programar: primero hacemos un **estudio de procesos** con precio cerrado.
+Si diriges tu empresa, lo último que quieres es un proyecto de software que se alarga, cambia de forma constante y termina costando el doble de lo previsto. Por eso en Bitdesal no empezamos directamente a programar: primero hacemos un **estudio de procesos** con precio cerrado.
 
 ## Qué incluye el estudio
 
@@ -20,10 +20,10 @@ El estudio cuesta **450 € + IVA**. Si contratas la implementación en los 30 d
 
 ## Por qué el precio cerrado importa
 
-Un presupuesto fijo obliga a definir el alcance antes de escribir código. Si durante el estudio vemos que no compensa invertir, te lo digo: no tiene sentido venderte algo que no va a ahorrarte horas de verdad.
+Un presupuesto fijo obliga a definir el alcance antes de escribir código. Si durante el estudio vemos que no compensa invertir, te lo decimos: no tiene sentido venderte algo que no va a ahorrarte horas de verdad.
 
-Cuando sí compensa, la implementación sigue el mismo principio: el precio acordado no cambia salvo que **tú y yo ampliemos el alcance por escrito**.
+Cuando sí compensa, la implementación sigue el mismo principio: el precio acordado no cambia salvo que **tú y nosotros ampliemos el alcance por escrito**.
 
 ## Siguiente paso
 
-Si tienes clara la tarea que te roba horas cada semana, [reserva 30 minutos](/contacto) y vemos si un estudio de procesos encaja. Sin compromiso de proyecto.
+Si tienes clara la tarea que te roba horas cada semana, [reserva 30 minutos](https://cal.com/bitdesal/30min) y vemos si un estudio de procesos encaja. Sin compromiso de proyecto.

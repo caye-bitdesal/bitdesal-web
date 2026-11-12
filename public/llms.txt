@@ -1,0 +1,58 @@
+# Bitdesal
+
+> Consultoría de IA y desarrollo de software en Elche (Alicante). Automatizamos presupuestos, citas, partes y papeleo; también desarrollo Android senior y arquitectura. Trabajamos en remoto en toda España y con clientes internacionales.
+
+## Quiénes somos
+
+Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de Kivra Finlandia) y socio Ramiro Santamaría. Sede en Elche; planificación presencial en Alicante y alrededores cuando encaja.
+
+## Servicios
+
+- Consultoría de IA para empresas: automatización de procesos con agentes de IA.
+- Desarrollo y consultoría de software: Android (Kotlin, Jetpack Compose), arquitectura y calidad.
+
+## Precios orientativos
+
+- Tarifa de referencia: 45 €/h + IVA.
+- Estudio de procesos: 450 € + IVA (100 % descontable si contratas implementación en 30 días).
+- Automatización exprés: 1.800–2.900 € + IVA.
+- Herramienta a medida: desde 4.500 € + IVA.
+- Soporte: desde 225 €/mes + IVA.
+
+## Contacto
+
+- Email: caye@bitdesal.com
+- Teléfono / WhatsApp: +34 694 931 918
+- Agenda 30 min: https://cal.com/bitdesal/30min
+
+## URLs clave
+
+- https://bitdesal.com/ — Inicio: consultoría de IA y software con precio cerrado.
+- https://bitdesal.com/consultoria-ia/ — Automatización de procesos con IA para empresas.
+- https://bitdesal.com/consultoria-software/ — Desarrollo Android y consultoría técnica.
+- https://bitdesal.com/casos-y-precios/ — Casos reales y tarifas transparentes.
+- https://bitdesal.com/nosotros/ — Equipo y trayectoria.
+- https://bitdesal.com/blog/ — Artículos en el sitio, LinkedIn y Medium.
+- https://bitdesal.com/contacto/ — Formulario, email, WhatsApp y agenda.
+
+---
+
+# Bitdesal (English)
+
+> AI consulting and software development based in Elche, Spain. We automate quotes, appointments, job reports and paperwork; senior Android engineering and architecture. Remote across Spain and international clients.
+
+## Contact
+
+- Email: caye@bitdesal.com
+- Phone / WhatsApp: +34 694 931 918
+- Book 30 min: https://cal.com/bitdesal/30min
+
+## Key URLs
+
+- https://bitdesal.com/en/ — Home.
+- https://bitdesal.com/en/consultoria-ia/ — AI consulting for business.
+- https://bitdesal.com/en/consultoria-software/ — Android and software consulting.
+- https://bitdesal.com/en/work-and-pricing/ — Case studies and pricing.
+- https://bitdesal.com/en/about/ — Team and background.
+- https://bitdesal.com/en/blog/ — Blog and LinkedIn articles.
+- https://bitdesal.com/en/contacto/ — Contact.

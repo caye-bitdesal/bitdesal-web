@@ -1,5 +1,7 @@
 ---
 import { useI18n } from '../i18n/useI18n';
+import { buildFaqPageJsonLd } from '../data/siteJsonLd';
+import { SITE_ORIGIN } from '../data/siteConstants';
 
 interface FaqItem {
 	qKey: string;
@@ -13,6 +15,18 @@ interface Props {
 
 const { titleKey, items } = Astro.props;
 const { t } = useI18n(Astro);
+
+const faqItems = items.map((item) => ({
+	question: t(item.qKey),
+	answer: t(item.aKey),
+}));
+
+const canonicalPath =
+	Astro.url.pathname === '/' || Astro.url.pathname.endsWith('/')
+		? Astro.url.pathname
+		: `${Astro.url.pathname}/`;
+const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
+const faqJsonLd = buildFaqPageJsonLd(canonical, faqItems);
 ---
 
 <section class="py-16 md:py-24 bg-white">
@@ -20,10 +34,10 @@ const { t } = useI18n(Astro);
 		<h2 class="text-3xl md:text-4xl mb-10 text-center">{t(titleKey)}</h2>
 		<div class="space-y-3">
 			{
-				items.map((item, index) => (
+				items.map((item) => (
 					<details class="group rounded-xl border border-border bg-secondary/40 open:bg-white open:shadow-sm">
-						<summary class="cursor-pointer list-none px-5 py-4 font-medium flex items-center justify-between gap-4">
-							<span>{t(item.qKey)}</span>
+						<summary class="cursor-pointer list-none px-5 py-4 flex items-center justify-between gap-4">
+							<h3 class="text-base font-medium m-0 text-left">{t(item.qKey)}</h3>
 							<span class="text-primary shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">
 								+
 							</span>
@@ -34,4 +48,5 @@ const { t } = useI18n(Astro);
 			}
 		</div>
 	</div>
+	<script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 </section>
