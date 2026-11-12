@@ -2,20 +2,42 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { CONTACT_EMAIL, CONTACT_PHONE_E164, DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
 import { getPageSeo, type PageSeoId } from '../i18n/seo';
 import { useI18n } from '../i18n/useI18n';
 import { absoluteAlternateHrefs } from '../i18n/localizedRoutes';
-import { supportedLanguages } from '../i18n/translations';
+import { defaultBreadcrumbs } from '../i18n/breadcrumbs';
+import { supportedLanguages, type Language } from '../i18n/translations';
+import {
+	buildBreadcrumbListJsonLd,
+	buildSiteGraph,
+	type BreadcrumbItem,
+	type JsonLdNode,
+} from '../data/siteJsonLd';
 
 interface Props {
 	seo?: PageSeoId;
 	title?: string;
 	description?: string;
 	ogImage?: string;
+	alternates?: Language[];
+	jsonLd?: JsonLdNode[];
+	breadcrumbs?: BreadcrumbItem[];
+	breadcrumbLabel?: string;
 }
 
-const { seo = 'home', title: titleOverride, description: descOverride, ogImage = DEFAULT_OG_IMAGE } = Astro.props;
+const {
+	seo = 'home',
+	title: titleOverride,
+	description: descOverride,
+	ogImage = DEFAULT_OG_IMAGE,
+	alternates = supportedLanguages,
+	jsonLd: extraJsonLd = [],
+	breadcrumbs: breadcrumbsOverride,
+	breadcrumbLabel,
+} = Astro.props;
+
 const { lang, t } = useI18n(Astro);
 const themeLabelLight = t('theme.switchToLight', 'Modo claro');
 const themeLabelDark = t('theme.switchToDark', 'Modo oscuro');
@@ -28,57 +50,26 @@ const canonicalPath =
 		? Astro.url.pathname
 		: `${Astro.url.pathname}/`;
 const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
-const hreflangs = absoluteAlternateHrefs(canonicalPath);
+const hreflangs = absoluteAlternateHrefs(canonicalPath, alternates);
 
-const jsonLd = {
-	'@context': 'https://schema.org',
-	'@graph': [
-		{
-			'@type': 'ProfessionalService',
-			name: 'Bitdesal',
-			url: SITE_ORIGIN,
-			email: CONTACT_EMAIL,
-			telephone: CONTACT_PHONE_E164,
-			areaServed: 'ES',
-			address: {
-				'@type': 'PostalAddress',
-				addressLocality: 'Elche',
-				addressRegion: 'Comunidad Valenciana',
-				addressCountry: 'ES',
-			},
-			hasOfferCatalog: {
-				'@type': 'OfferCatalog',
-				name: 'Servicios Bitdesal',
-				itemListElement: [
-					{
-						'@type': 'Offer',
-						itemOffered: {
-							'@type': 'Service',
-							name: 'Consultoría de IA para empresas',
-							url: `${SITE_ORIGIN}/consultoria-ia/`,
-						},
-					},
-					{
-						'@type': 'Offer',
-						itemOffered: {
-							'@type': 'Service',
-							name: 'Desarrollo y consultoría de software',
-							url: `${SITE_ORIGIN}/consultoria-software/`,
-						},
-					},
-				],
-			},
-		},
-		{
-			'@type': 'Person',
-			name: 'Caye Ruiz',
-			jobTitle: 'Fundador de Bitdesal',
-			email: CONTACT_EMAIL,
-			url: `${SITE_ORIGIN}/nosotros/`,
-			worksFor: { '@type': 'Organization', name: 'Bitdesal' },
-		},
-	],
+const OG_LOCALE: Record<Language, string> = {
+	es: 'es_ES',
+	en: 'en_US',
+	fi: 'fi_FI',
 };
+
+const breadcrumbItems =
+	breadcrumbsOverride ??
+	defaultBreadcrumbs(canonicalPath, lang, t, breadcrumbLabel ?? title.replace(/\s*·\s*Bitdesal\s*$/i, ''));
+
+const jsonLdNodes: JsonLdNode[] = [...extraJsonLd];
+if (breadcrumbItems.length >= 2) {
+	jsonLdNodes.push(buildBreadcrumbListJsonLd(canonical, breadcrumbItems));
+}
+
+const jsonLd = buildSiteGraph(lang, jsonLdNodes);
+
+const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 ---
 
 <!doctype html>
@@ -130,24 +121,39 @@ const jsonLd = {
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonical} />
 		{
-			supportedLanguages.map((locale) => (
+			alternates.map((locale) => (
 				<link rel="alternate" hreflang={locale} href={hreflangs[locale]} />
 			))
 		}
-		<link rel="alternate" hreflang="x-default" href={hreflangs.es} />
+		{
+			alternates.includes('es') && (
+				<link rel="alternate" hreflang="x-default" href={hreflangs.es} />
+			)
+		}
 		<meta property="og:type" content="website" />
+		<meta property="og:locale" content={OG_LOCALE[lang]} />
+		{
+			supportedLanguages
+				.filter((other) => other !== lang && alternates.includes(other))
+				.map((other) => (
+					<meta property="og:locale:alternate" content={OG_LOCALE[other]} />
+				))
+		}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonical} />
-		<meta property="og:image" content={new URL(ogImage, SITE_ORIGIN).href} />
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={new URL(ogImage, SITE_ORIGIN).href} />
+		<meta name="twitter:image" content={ogImageUrl} />
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	</head>
 	<body class="min-h-screen flex flex-col overflow-x-hidden">
 		<Header />
+		<Breadcrumbs items={breadcrumbItems} />
 		<main class="flex-1">
 			<slot />
 		</main>

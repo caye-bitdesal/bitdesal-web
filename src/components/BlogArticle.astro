@@ -2,6 +2,7 @@
 import CtaSection from './CtaSection.astro';
 import Layout from '../layouts/Layout.astro';
 import { sitePath } from '../data/siteNav';
+import { SITE_ORIGIN } from '../data/siteConstants';
 import { currencyLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
@@ -21,9 +22,29 @@ const dateLabel = post.data.pubDate.toLocaleDateString(currencyLocale(lang), {
 	month: 'long',
 	day: 'numeric',
 });
+
+const articlePath = sitePath(`/blog/${post.id}`, lang);
+const articleUrl = new URL(articlePath, SITE_ORIGIN).href;
+const blogPosting = {
+	'@type': 'BlogPosting',
+	'@id': `${articleUrl}#article`,
+	headline: localized.data.title,
+	description: localized.data.description,
+	datePublished: localized.data.pubDate.toISOString(),
+	author: { '@id': `${SITE_ORIGIN}/#caye` },
+	publisher: { '@id': `${SITE_ORIGIN}/#org` },
+	mainEntityOfPage: articleUrl,
+	inLanguage: lang === 'es' ? 'es-ES' : lang === 'fi' ? 'fi-FI' : 'en-US',
+};
 ---
 
-<Layout seo="blog" title={`${localized.data.title} · Bitdesal`} description={localized.data.description}>
+<Layout
+	seo="blog"
+	title={`${localized.data.title} · Bitdesal`}
+	description={localized.data.description}
+	breadcrumbLabel={localized.data.title}
+	jsonLd={[blogPosting]}
+>
 	<article class="py-16 md:py-24 bg-white">
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 			<p class="mb-6">
