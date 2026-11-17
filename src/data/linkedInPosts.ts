@@ -13,6 +13,16 @@ export interface LinkedInPost {
 
 export const linkedInPosts: LinkedInPost[] = [
 	{
+		url: 'https://www.linkedin.com/pulse/market-we-still-havent-built-towards-real-european-ruiz-corraliza-c7gze/',
+		titleKey: 'home.blog.posts.europeanLabour.title',
+		excerptKey: 'home.blog.posts.europeanLabour.excerpt',
+		dateKey: 'home.blog.posts.europeanLabour.date',
+		dateIso: '2026-09-07',
+		image: '/blog/european-labour-market.png',
+		imageAltKey: 'home.blog.posts.europeanLabour.imageAlt',
+		audience: 'business',
+	},
+	{
 		url: 'https://www.linkedin.com/pulse/guide-how-implement-cicd-android-using-github-actions-bitdesal-murze/',
 		titleKey: 'home.blog.posts.cicd.title',
 		excerptKey: 'home.blog.posts.cicd.excerpt',

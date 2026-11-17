@@ -477,6 +477,13 @@ export const translations: Record<Language, any> = {
 				readOnLinkedIn: 'Leer en LinkedIn',
 				readOnMedium: 'Leer el artículo completo en Medium',
 				posts: {
+					europeanLabour: {
+						title: 'El mercado que aún no hemos construido: hacia un verdadero mercado laboral europeo',
+						imageAlt: 'Ilustración del artículo sobre mercado laboral europeo en LinkedIn',
+						date: '7 sep 2026',
+						excerpt:
+							'Podemos vivir en cualquier país de la UE, pero contratar a alguien en otro Estado sigue siendo un laberinto. Por qué el mercado laboral europeo se quedó a medias y qué habría que cambiar.',
+					},
 					cicd: {
 						title: 'Guía para implementar CI/CD en Android con GitHub Actions',
 						imageAlt: 'Infografía de un pipeline CI/CD razonable para Android',
@@ -1612,6 +1619,13 @@ export const translations: Record<Language, any> = {
 				readOnLinkedIn: 'Read on LinkedIn',
 				readOnMedium: 'Read the full article on Medium',
 				posts: {
+					europeanLabour: {
+						title: "The market we still haven't built: towards a real European labour market",
+						imageAlt: 'Cover image for the European labour market article on LinkedIn',
+						date: 'September 7, 2026',
+						excerpt:
+							'Europeans can live in any member state — but hiring someone across a border is still a maze. Why the EU labour market stopped halfway and what a cross-border framework could fix.',
+					},
 					cicd: {
 						title: 'A guide on how to implement CI/CD for Android using Github Actions',
 						imageAlt: 'Infographic of a reasonable CI/CD pipeline for Android',
@@ -2697,6 +2711,13 @@ export const translations: Record<Language, any> = {
 				readOnLinkedIn: 'Lue LinkedInissä',
 				readOnMedium: 'Lue koko artikkeli Mediumissa',
 				posts: {
+					europeanLabour: {
+						title: 'Markkina, jota emme ole vielä rakentaneet: kohti aitoa eurooppalaista työmarkkinaa',
+						imageAlt: 'LinkedIn-artikkelin kansikuva eurooppalaisista työmarkkinoista',
+						date: '7.9.2026',
+						excerpt:
+							'EU-kansalainen voi asua missä tahansa jäsenmaassa, mutta työntekijän palkkaaminen toisesta maasta on yhä sokkelo. Miksi työmarkkinat jäivät kesken ja mitä rajat ylittävä kehys voisi korjata.',
+					},
 					cicd: {
 						title: 'Opas CI/CD:n toteuttamiseen Androidissa GitHub Actionsilla',
 						imageAlt: 'Infografiikka kohtuullisesta Android CI/CD -putkesta',
