@@ -15,6 +15,8 @@ const SLUG_LABEL: Record<string, string> = {
 	'consultoria-software': 'nav.softwareService',
 	'consultoria-android': 'androidConsultingPage.hero.h1',
 	'auditoria-app-android': 'androidAuditPage.hero.h1',
+	'automatizacion-procesos-ia': 'nav.iaService',
+	'agentes-ia-empresas': 'nav.iaService',
 	'casos-y-precios': 'nav.workAndPricing',
 	'work-and-pricing': 'nav.workAndPricing',
 	'referenssit-ja-hinnat': 'nav.workAndPricing',

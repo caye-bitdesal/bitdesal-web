@@ -23,7 +23,12 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 };
 
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
-const ES_ONLY_SLUGS = new Set(['auditoria-app-android', 'consultoria-android']);
+const ES_ONLY_SLUGS = new Set([
+	'auditoria-app-android',
+	'consultoria-android',
+	'automatizacion-procesos-ia',
+	'agentes-ia-empresas',
+]);
 
 export function alternatesForPathname(pathname: string): Language[] {
 	const { slug } = stripLocalePrefix(pathname);
@@ -91,6 +96,8 @@ export function absoluteAlternateHrefs(
 
 const ES_ONLY_FALLBACK_SLUG: Record<string, string> = {
 	'auditoria-app-android': 'consultoria-software',
+	'automatizacion-procesos-ia': 'consultoria-ia',
+	'agentes-ia-empresas': 'consultoria-ia',
 };
 
 export function localePathForSwitch(pathname: string, targetLang: Language): string {

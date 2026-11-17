@@ -1,0 +1,134 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
+import Layout from '../layouts/Layout.astro';
+import { automationPage as copy } from '../i18n/content/automation-page.es';
+import { BOOKING_URL, SITE_ORIGIN } from '../data/siteConstants';
+import { ORG_ID } from '../data/siteJsonLd';
+
+const canonical = new URL('/automatizacion-procesos-ia/', SITE_ORIGIN).href;
+
+const serviceJsonLd = {
+	'@type': 'Service',
+	'@id': `${canonical}#service`,
+	name: 'Automatización de procesos con IA',
+	serviceType: 'Automatización de procesos con IA',
+	description: copy.hero.lead,
+	provider: { '@id': ORG_ID },
+	areaServed: { '@type': 'Country', name: 'España' },
+	url: canonical,
+};
+
+const faqItems = [
+	{ question: copy.faq.what.q, answer: copy.faq.what.a },
+	{ question: copy.faq.time.q, answer: copy.faq.time.a },
+	{ question: copy.faq.replace.q, answer: copy.faq.replace.a },
+	{ question: copy.faq.remote.q, answer: copy.faq.remote.a },
+];
+
+const areas = [copy.areas.commercial, copy.areas.operations, copy.areas.admin, copy.areas.support];
+const steps = [copy.how.study, copy.how.build, copy.how.train];
+---
+
+<Layout
+	seo="processAutomation"
+	alternates={['es']}
+	breadcrumbLabel={copy.hero.h1}
+	jsonLd={[serviceJsonLd]}
+>
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-4xl md:text-5xl mb-6">{copy.hero.h1}</h1>
+			<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+				<p>{copy.hero.lead}</p>
+				<p>{copy.hero.p2}</p>
+			</div>
+			<a
+				href={BOOKING_URL}
+				class="inline-flex items-center gap-2 mt-8 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
+			>
+				Agenda 30 min gratis
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-4">{copy.areas.title}</h2>
+			<p class="text-lg text-foreground/80 leading-relaxed mb-10">{copy.areas.lead}</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				{
+					areas.map((area) => (
+						<article class="rounded-2xl border border-border bg-card p-6">
+							<h3 class="text-xl mb-3">{area.title}</h3>
+							<p class="text-foreground/80 leading-relaxed">{area.body}</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<h2 class="text-3xl md:text-4xl text-foreground">{copy.worth.title}</h2>
+			<p>{copy.worth.p1}</p>
+			<p>{copy.worth.p2}</p>
+			<h3 class="text-xl text-foreground">{copy.worth.exampleTitle}</h3>
+			<p>{copy.worth.example}</p>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl md:text-4xl mb-4">{copy.how.title}</h2>
+			<p class="text-lg text-foreground/80 leading-relaxed mb-10">{copy.how.lead}</p>
+			<ol class="space-y-8">
+				{
+					steps.map((step, index) => (
+						<li class="rounded-2xl border border-border p-6">
+							<h3 class="text-xl mb-3">
+								<span class="text-primary mr-2">{index + 1}.</span>
+								{step.title}
+							</h3>
+							<p class="text-foreground/80 leading-relaxed">{step.body}</p>
+						</li>
+					))
+				}
+			</ol>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<h2 class="text-3xl md:text-4xl text-foreground">{copy.fit.title}</h2>
+			<p>{copy.fit.p1}</p>
+			<p>{copy.fit.p2}</p>
+			{/* TODO(caye): lista real de integraciones (nombres de programas que sí conectamos). */}
+			<h2 class="text-3xl md:text-4xl text-foreground pt-4">{copy.tools.title}</h2>
+			<p>{copy.tools.p1}</p>
+			<p>{copy.tools.p2}</p>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-20 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<h2 class="text-3xl md:text-4xl text-foreground">{copy.price.title}</h2>
+			<p>{copy.price.p1}</p>
+			<p>{copy.price.p2}</p>
+			<p>
+				<a href="/casos-y-precios/#ia" class="text-primary font-medium hover:underline">{copy.price.link}</a>
+			</p>
+			<h2 class="text-2xl text-foreground pt-4">{copy.related.title}</h2>
+			<ul class="space-y-3 text-base">
+				<li><a class="text-primary font-medium hover:underline" href="/consultoria-ia/">{copy.related.ia}</a></li>
+				<li><a class="text-primary font-medium hover:underline" href="/agentes-ia-empresas/">{copy.related.agents}</a></li>
+				<li><a class="text-primary font-medium hover:underline" href="/consultoria-ia-alicante-elche/">{copy.related.local}</a></li>
+				<li><a class="text-primary font-medium hover:underline" href="/contacto/">{copy.related.contact}</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<FaqSection title={copy.faq.title} items={faqItems} />
+	<CtaSection variant="ia" />
+</Layout>

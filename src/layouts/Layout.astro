@@ -81,8 +81,15 @@ const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 					var params = new URLSearchParams(location.search);
 					var lang = params.get('lang');
 					if (lang === 'es' || lang === 'en' || lang === 'fi') {
-						var path = location.pathname.replace(/\/$/, '') || '/';
-						var without = path.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
+					var path = location.pathname.replace(/\/$/, '') || '/';
+					var without = path.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
+					var esOnly = {
+						'/automatizacion-procesos-ia': '/consultoria-ia',
+						'/agentes-ia-empresas': '/consultoria-ia',
+						'/consultoria-ia-alicante-elche': '/consultoria-ia',
+						'/auditoria-app-android': '/consultoria-software',
+					};
+					if (lang !== 'es' && esOnly[without]) without = esOnly[without];
 						var target;
 						if (lang === 'es') {
 							target = without === '/' ? '/' : without.charAt(0) === '/' ? without + '/' : '/' + without + '/';
