@@ -84,7 +84,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Consultoría',
 			companyTitle: 'Empresa',
 			aboutUs: 'Nosotros',
-			androidConsulting: 'Consultoría Android',
+			androidConsulting: 'desarrollo de apps Android',
 			pricing: 'Precios',
 			workAndPricing: 'Casos y precios',
 			blog: 'Blog',

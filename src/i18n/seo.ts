@@ -58,9 +58,9 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	androidConsulting: {
 		es: {
-			title: 'Consultor Android senior: Kotlin y Jetpack Compose · Bitdesal',
+			title: 'Desarrollo de apps Android con Kotlin para empresas · Bitdesal',
 			description:
-				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. Agenda 30 min gratis.',
+				'Desarrolladores de aplicaciones Android senior: Kotlin y Jetpack Compose, calidad SOLID, entregas semanales y sin dependencia. Agenda 30 min gratis.',
 		},
 		en: {
 			title: 'Senior Android consultant: Kotlin and Jetpack Compose · Bitdesal',

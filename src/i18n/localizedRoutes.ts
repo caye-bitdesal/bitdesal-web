@@ -22,7 +22,7 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 };
 
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
-const ES_ONLY_SLUGS = new Set(['auditoria-app-android']);
+const ES_ONLY_SLUGS = new Set(['auditoria-app-android', 'consultoria-android']);
 
 export function alternatesForPathname(pathname: string): Language[] {
 	const { slug } = stripLocalePrefix(pathname);

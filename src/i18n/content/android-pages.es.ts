@@ -1,7 +1,7 @@
 /** Spanish-only copy for /consultoria-android/ and /auditoria-app-android/. */
 export const androidConsultingPage = {
 	hero: {
-		h1: 'Consultoría Android para apps que no pueden fallar',
+		h1: 'Desarrollo de apps Android para empresas',
 		lead:
 			'Somos consultores Android especializados en Kotlin y Jetpack Compose. Desarrollamos apps nuevas, mejoramos las que ya están en producción y reforzamos a equipos que necesitan un perfil senior. Hagamos lo que hagamos, lo hacemos con la máxima calidad.',
 		p2: 'Aplicamos los principios SOLID y una arquitectura limpia, con pruebas automáticas y revisión de todo el código. El resultado es software fácil de entender, de mantener y de ampliar. Y nos aseguramos de entregar lo que pediste desde el principio: antes de escribir código dejamos por escrito qué vamos a construir y cómo comprobaremos que funciona. Después te enseñamos el avance cada semana, para que no haya sorpresas al final.',
@@ -42,12 +42,12 @@ export const androidConsultingPage = {
 	services: {
 		title: 'Qué hacemos',
 		kotlin: {
-			title: 'Desarrollo Android en Kotlin',
+			title: 'Desarrollo de aplicaciones Android en Kotlin',
 			body: 'Features nuevas, mantenimiento y publicación mensual con MVVM/MVI, modularización y buenas prácticas de Google.',
 		},
 		staff: {
-			title: 'Refuerzo de tu equipo (externalizar Android)',
-			body: 'Ingeniería senior a demanda: sprint a sprint, con tu backlog y tus herramientas (Jira, Linear, Slack, lo que ya uséis).',
+			title: 'Desarrollador Android freelance para tu equipo',
+			body: 'Externalizar Android con un perfil senior integrado en tu flujo: sprint a sprint, con tu backlog y tus herramientas (Jira, Linear, Slack, lo que ya uséis).',
 		},
 		audit: {
 			title: 'Auditoría de tu app',
@@ -76,6 +76,38 @@ export const androidConsultingPage = {
 		body: 'Caye fue Lead Android de Kivra Finlandia de 2019 a 2025: app nacional de buzón digital y pagos con más de 100.000 descargas, valoración 4,3★ y 99,9 % de sesiones sin fallos. Coordinó releases continuos, migración tecnológica y calidad con un equipo distribuido. En Bitdesal aplicamos esa misma disciplina a tu producto.',
 		cta: 'Ver el caso completo de Kivra',
 	},
+	quality: {
+		title: 'Cómo garantizamos la calidad',
+		items: {
+			solid: {
+				title: 'SOLID y arquitectura limpia',
+				body: 'Separación de responsabilidades, módulos acotados y dependencias explícitas para que el código aguante años sin reescrituras cada trimestre.',
+			},
+			spec: {
+				title: 'Especificación y criterios de aceptación',
+				body: 'Antes de codificar fijamos alcance, casos límite y cómo comprobamos que funciona. Sin sorpresas al final del proyecto.',
+			},
+			review: {
+				title: 'Revisión de código y pruebas automáticas',
+				body: 'Pull requests revisados, tests en lo crítico y pipelines que bloquean merges rotos.',
+			},
+			cicd: {
+				title: 'CI/CD y demo semanal',
+				body: 'Builds reproducibles, tracks de Play claros y avance visible cada semana para producto y negocio.',
+			},
+			handoff: {
+				title: 'Documentación y traspaso al equipo',
+				body: 'README operativo, decisiones de arquitectura documentadas y sesiones de traspaso hasta que vuestro equipo pueda seguir sin nosotros.',
+			},
+		},
+	},
+	compare: {
+		title: '¿Empresa de desarrollo de apps o desarrollador freelance?',
+		agency:
+			'Frente a una agencia grande: trato directo con ingeniería senior, sin capas de comercial ni equipos rotativos. Mismo interlocutor en la especificación, el código y la demo semanal. Precio cerrado cuando el alcance está claro.',
+		freelance:
+			'Frente a un freelance suelto: proceso repetible (spec, CI/CD, revisiones), continuidad si el proyecto dura meses y capacidad de sumar refuerzo sin perder el hilo. No sustituimos a tu equipo: lo elevamos.',
+	},
 	how: {
 		title: 'Cómo trabajamos',
 	},
@@ -89,13 +121,17 @@ export const androidConsultingPage = {
 	faq: {
 		title: 'Preguntas frecuentes',
 		items: {
-			cost: {
-				q: '¿Cuánto cuesta un consultor Android?',
-				a: 'La referencia es 45 €/h + IVA. Una bolsa de 10 h (450 € + IVA) suele bastar para un diagnóstico profundo; proyectos cerrados se cotizan tras especificación.',
+			appCost: {
+				q: '¿Cuánto cuesta desarrollar una app Android?',
+				a: 'Depende del alcance: bolsa de horas desde 450 € + IVA (10 h), proyectos cerrados tras especificación (suelen partir de unos miles de euros según complejidad) o refuerzo mensual. En la llamada de 30 minutos te damos un rango honesto antes de comprometerte.',
+			},
+			freelanceRate: {
+				q: '¿Cuánto cobra un desarrollador Android freelance?',
+				a: 'Nuestra tarifa de referencia es 45 €/h + IVA para perfil senior en España. Bolsas de 225 €, 450 € y 900 € + IVA al mes (5, 10 y 20 h). En la UE 60 €/h y fuera de la UE 75 €/h cuando la facturación lo requiere.',
 			},
 			remote: {
 				q: '¿Trabajáis en remoto con equipos de fuera de España?',
-				a: 'Sí. Principalmente en remoto en España y en la UE; para empresas internacionales aplicamos tarifas de 60 €/h (UE) o 75 €/h (fuera de la UE) según facturación.',
+				a: 'Sí. Principalmente en remoto en España y en la UE; dailies en inglés o español según el equipo. Nos adaptamos a vuestro huso y herramientas.',
 			},
 			java: {
 				q: '¿Os encargáis de código antiguo en Java?',
@@ -103,19 +139,15 @@ export const androidConsultingPage = {
 			},
 			outsource: {
 				q: '¿Compensa externalizar o contratar?',
-				a: 'Externalizar Android senior cubre picos y rescates sin proceso de contratación de seis meses; contratar encaja si hay roadmap largo. Te lo decimos en la primera conversación, sin agenda oculta.',
+				a: 'Externalizar Android senior cubre picos y rescates sin un proceso de contratación de meses; contratar en plantilla encaja si hay roadmap largo y presupuesto estable. Te lo decimos en la primera conversación, sin agenda oculta.',
 			},
-			start: {
-				q: '¿Cuánto se tarda en empezar?',
-				a: 'Tras la llamada de 30 minutos, si encajamos, solemos arrancar en 1–2 semanas según disponibilidad y accesos.',
+			ios: {
+				q: '¿Hacéis también iOS?',
+				a: 'TODO(caye): confirmar oferta iOS vía Kotlin Multiplatform o colaboración; ahora priorizamos Android en producción.',
 			},
 			nda: {
 				q: '¿Firmáis NDA?',
 				a: 'Sí. Trabajamos con acuerdos de confidencialidad habituales; podemos usar el vuestro o proponer uno estándar.',
-			},
-			english: {
-				q: '¿Trabajáis en inglés?',
-				a: 'Sí. Documentación, dailies y código en inglés son lo habitual en equipos internacionales; también atendemos en español y finés.',
 			},
 		},
 	},
@@ -137,8 +169,8 @@ export const androidAuditPage = {
 		title: 'Qué revisamos',
 		items: {
 			architecture: {
-				title: 'Arquitectura y modularización',
-				body: 'Capas, acoplamientos, deuda técnica y alineación con el tamaño de tu equipo.',
+				title: 'Arquitectura y principios SOLID',
+				body: 'Capas, acoplamientos, deuda técnica, modularización y alineación con el tamaño de tu equipo.',
 			},
 			stability: {
 				title: 'Estabilidad y cierres inesperados',
@@ -219,10 +251,10 @@ export const consultoriaPageExpanded = {
 		p1: 'En Bitdesal combinamos desarrollo Android en producción y consultoría de software para equipos que necesitan calidad medible, no prototipos bonitos. Trabajamos en Kotlin, Jetpack Compose, arquitectura modular, pruebas automáticas y CI/CD con estándares de apps que no pueden fallar en producción.',
 		p2: 'Somos un equipo pequeño con más de 20 años en software entre fundadores y colaboradores. Ramiro Santamaría refuerza operaciones, seguridad e integración de agentes de IA donde acorta el ciclo sin sustituir ingeniería.',
 	},
-	androidPromo: {
+		androidPromo: {
 		title: 'Consultoría Android senior',
 		p1: 'Si tu necesidad es sobre todo móvil —rescate de legado, releases mensuales, falta de senior en el equipo— tenemos una página dedicada de consultoría Android: servicios, precios y preguntas frecuentes pensadas para CTOs y responsables de producto en España.',
-		linkConsulting: 'consultoría Android',
+		linkConsulting: 'desarrollo de apps Android',
 		linkAudit: 'auditoría de apps Android',
 		and: 'y',
 		p2: 'Cuando no estáis seguros de por dónde empezar, la auditoría os da un informe priorizado antes de comprometer un proyecto grande.',
