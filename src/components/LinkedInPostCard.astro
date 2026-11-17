@@ -8,12 +8,15 @@ interface Props {
 }
 
 const { post, class: className } = Astro.props;
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
+const primaryHref = post.siteHref ?? post.url;
+const primaryExternal = !post.siteHref;
+const readOnSite = { es: 'Leer en bitdesal.com', en: 'Read on bitdesal.com', fi: 'Lue bitdesal.comissa' }[lang];
 ---
 
 <article class:list={['flex flex-col h-full', className]}>
 	<div class="group flex flex-col h-full bg-white border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all">
-		<a href={post.url} target="_blank" rel="noopener noreferrer" class="block">
+		<a href={primaryHref} target={primaryExternal ? '_blank' : undefined} rel={primaryExternal ? 'noopener noreferrer' : undefined} class="block">
 			{
 				post.image ? (
 					<div class="aspect-[16/9] overflow-hidden bg-foreground/5">
@@ -37,12 +40,20 @@ const { t } = useI18n(Astro);
 				{t(post.dateKey)}
 			</time>
 			<h3 class="text-xl mb-3 leading-snug">
-				<a href={post.url} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+				<a href={primaryHref} target={primaryExternal ? '_blank' : undefined} rel={primaryExternal ? 'noopener noreferrer' : undefined} class="hover:text-primary transition-colors">
 					{t(post.titleKey)}
 				</a>
 			</h3>
 			<p class="text-foreground/70 text-sm leading-relaxed flex-1 mb-4">{t(post.excerptKey)}</p>
 			<div class="flex flex-col gap-2">
+				{
+					post.siteHref && (
+						<a href={post.siteHref} class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit">
+							{readOnSite}
+							<span aria-hidden="true">→</span>
+						</a>
+					)
+				}
 				<a href={post.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit">
 					{t('home.blog.readOnLinkedIn')}
 					<span aria-hidden="true">↗</span>

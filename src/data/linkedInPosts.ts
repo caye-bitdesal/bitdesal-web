@@ -8,6 +8,8 @@ export interface LinkedInPost {
 	audience: 'business' | 'technical';
 	image?: string;
 	imageAltKey?: string;
+	/** On-site article. When set, the card links here instead of LinkedIn. */
+	siteHref?: string;
 	mediumUrl?: string;
 }
 
@@ -28,6 +30,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		excerptKey: 'home.blog.posts.cicd.excerpt',
 		dateKey: 'home.blog.posts.cicd.date',
 		dateIso: '2026-07-10',
+		siteHref: '/blog/guia-cicd-android-github-actions/',
 		image: '/blog/cicd-android-github-actions.png',
 		imageAltKey: 'home.blog.posts.cicd.imageAlt',
 		mediumUrl: 'https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd',
@@ -39,6 +42,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		excerptKey: 'home.blog.posts.insomnia.excerpt',
 		dateKey: 'home.blog.posts.insomnia.date',
 		dateIso: '2026-06-11',
+		siteHref: '/blog/insomnio-agentes-ia-funcion-sencilla/',
 		image: '/blog/insomnia-ai-agents-simple-feature.png',
 		imageAltKey: 'home.blog.posts.insomnia.imageAlt',
 		audience: 'technical',
@@ -49,6 +53,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		excerptKey: 'home.blog.posts.afford.excerpt',
 		dateKey: 'home.blog.posts.afford.date',
 		dateIso: '2026-06-01',
+		siteHref: '/blog/puedes-permitirte-desarrollo-asistido-ia/',
 		image: '/blog/can-you-afford-ai-assisted-development.png',
 		imageAltKey: 'home.blog.posts.afford.imageAlt',
 		audience: 'business',
@@ -59,6 +64,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		excerptKey: 'home.blog.posts.manifesto.excerpt',
 		dateKey: 'home.blog.posts.manifesto.date',
 		dateIso: '2026-05-21',
+		siteHref: '/blog/mas-alla-del-vibe-coding/',
 		image: '/blog/beyond-vibe-coding-manifesto.png',
 		imageAltKey: 'home.blog.posts.manifesto.imageAlt',
 		audience: 'technical',

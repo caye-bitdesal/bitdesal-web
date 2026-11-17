@@ -22,6 +22,14 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	meista: { es: 'nosotros', en: 'about', fi: 'meista' },
 };
 
+/** Spanish articles that have no EN/FI file. Hreflang must not point at missing URLs. */
+const ES_ONLY_BLOG_SLUGS = new Set([
+	'guia-cicd-android-github-actions',
+	'insomnio-agentes-ia-funcion-sencilla',
+	'puedes-permitirte-desarrollo-asistido-ia',
+	'mas-alla-del-vibe-coding',
+]);
+
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
 const ES_ONLY_SLUGS = new Set([
 	'auditoria-app-android',
@@ -33,6 +41,10 @@ const ES_ONLY_SLUGS = new Set([
 
 export function alternatesForPathname(pathname: string): Language[] {
 	const { slug } = stripLocalePrefix(pathname);
+	if (slug.startsWith('blog/')) {
+		const id = slug.slice('blog/'.length);
+		if (ES_ONLY_BLOG_SLUGS.has(id)) return ['es'];
+	}
 	if (ES_ONLY_SLUGS.has(slug)) return ['es'];
 	if (slug === 'caye' || slug === 'ramiro') return supportedLanguages;
 	return supportedLanguages;
@@ -108,6 +120,9 @@ export function localePathForSwitch(pathname: string, targetLang: Language): str
 		return alternateHrefs(pathname, locales)[targetLang];
 	}
 	const { slug } = stripLocalePrefix(pathname);
+	if (slug.startsWith('blog/') && !locales.includes(targetLang)) {
+		return localeHref('blog', targetLang);
+	}
 	const fallbackSlug = ES_ONLY_FALLBACK_SLUG[slug];
 	if (fallbackSlug) {
 		return localeHref(resolveLocalizedSlug(fallbackSlug, targetLang), targetLang);

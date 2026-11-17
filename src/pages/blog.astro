@@ -4,6 +4,7 @@ import LinkedInPostCard from '../components/LinkedInPostCard.astro';
 import Layout from '../layouts/Layout.astro';
 import { linkedInPosts } from '../data/linkedInPosts';
 import { sitePath } from '../data/siteNav';
+import { currencyLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 import { getCollection } from 'astro:content';
 
@@ -17,6 +18,11 @@ const localPosts = allPosts
 function localizedPost(post: (typeof localPosts)[number]) {
 	if (lang === 'es') return post;
 	return allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post;
+}
+
+function postHref(id: string) {
+	if (lang !== 'es' && !allPosts.some((item) => item.id === `${lang}/${id}`)) return `/blog/${id}/`;
+	return sitePath(`/blog/${id}`, lang);
 }
 
 ---
@@ -45,11 +51,19 @@ function localizedPost(post: (typeof localPosts)[number]) {
 									const shown = localizedPost(post);
 									return (
 									<article data-blog-audience={post.data.audience} class="border border-border rounded-xl p-6 hover:border-primary transition-colors">
-										<p class="text-xs uppercase tracking-wide text-foreground/50 mb-2">
+										<p class="text-xs uppercase tracking-wide text-muted-foreground mb-2">
+											<time datetime={post.data.pubDate.toISOString().slice(0, 10)}>
+												{post.data.pubDate.toLocaleDateString(currencyLocale(lang), {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric',
+												})}
+											</time>
+											<span aria-hidden="true"> · </span>
 											{post.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical')}
 										</p>
 										<h3 class="text-xl mb-2">
-											<a href={sitePath(`/blog/${post.id}`, lang)} class="hover:text-primary">
+											<a href={postHref(post.id)} class="hover:text-primary">
 												{shown.data.title}
 											</a>
 										</h3>

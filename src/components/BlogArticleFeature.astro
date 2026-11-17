@@ -1,9 +1,20 @@
 ---
-import CtaSection from './CtaSection.astro';
+import BlogEndMatter from './BlogEndMatter.astro';
 import Layout from '../layouts/Layout.astro';
 import { sitePath } from '../data/siteNav';
-import { SITE_ORIGIN } from '../data/siteConstants';
+import { DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
 import { getTeamMember } from '../data/teamMembers';
+import { buildFaqPageJsonLd } from '../data/siteJsonLd';
+import {
+	blogLocales,
+	buildBlogPosting,
+	extractH2,
+	readPostMarkdown,
+	readingMinutes,
+	relatedPosts,
+	wordCount,
+	type BlogAuthorId,
+} from '../data/blogPost';
 import { currencyLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
@@ -18,8 +29,11 @@ const { lang, t } = useI18n(Astro);
 const allPosts = await getCollection('blog');
 const localized = lang === 'es' ? post : (allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post);
 const { Content } = await render(localized);
-
-const author = getTeamMember('caye');
+const raw = readPostMarkdown(localized.id);
+const minutes = readingMinutes(raw);
+const toc = wordCount(raw) > 1000 ? extractH2(raw) : [];
+const authorId = (localized.data.author ?? 'caye') as BlogAuthorId;
+const author = getTeamMember(authorId);
 const highlight = localized.data.titleHighlight ?? '';
 const titleLead = highlight
 	? localized.data.title.replace(new RegExp(`:?\\s*${escapeRegExp(highlight)}\\s*$`), '').replace(/:\s*$/, '')
@@ -37,6 +51,13 @@ const dateLabel = localized.data.pubDate.toLocaleDateString(currencyLocale(lang)
 	month: 'long',
 	day: 'numeric',
 });
+const updatedLabel = localized.data.updatedDate
+	? localized.data.updatedDate.toLocaleDateString(currencyLocale(lang), {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		})
+	: '';
 
 const audienceLabel =
 	localized.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical');
@@ -51,18 +72,33 @@ const shareCopy = shareLabels[lang];
 
 const articlePath = sitePath(`/blog/${post.id}`, lang);
 const articleUrl = new URL(articlePath, SITE_ORIGIN).href;
-const blogPosting = {
-	'@type': 'BlogPosting',
-	'@id': `${articleUrl}#article`,
-	headline: localized.data.title,
+const ids = allPosts.map((item) => item.id);
+const image = ogImage ?? DEFAULT_OG_IMAGE;
+const blogPosting = buildBlogPosting({
+	url: articleUrl,
+	title: localized.data.title,
 	description: localized.data.description,
-	datePublished: localized.data.pubDate.toISOString(),
-	author: { '@id': `${SITE_ORIGIN}/#caye` },
-	publisher: { '@id': `${SITE_ORIGIN}/#org` },
-	mainEntityOfPage: articleUrl,
-	image: new URL(ogImage, SITE_ORIGIN).href,
-	inLanguage: lang === 'es' ? 'es-ES' : lang === 'fi' ? 'fi-FI' : 'en-US',
-};
+	published: localized.data.pubDate,
+	modified: localized.data.updatedDate,
+	author: authorId,
+	image,
+	lang,
+});
+const faq = localized.data.faq ?? [];
+const extraJsonLd = faq.length
+	? [blogPosting, buildFaqPageJsonLd(articleUrl, faq.map((item) => ({ question: item.q, answer: item.a })))]
+	: [blogPosting];
+const related = relatedPosts(post, allPosts).map((item) => {
+	const translated = lang === 'es' ? item : (allPosts.find((entry) => entry.id === `${lang}/${item.id}`) ?? item);
+	const href =
+		lang !== 'es' && !ids.includes(`${lang}/${item.id}`) ? `/blog/${item.id}/` : sitePath(`/blog/${item.id}`, lang);
+	return { id: item.id, title: translated.data.title, description: translated.data.description, href };
+});
+const ctaLabels = {
+	es: { business: 'Ver la consultoría de IA para empresas', technical: 'Ver el desarrollo de apps Android' },
+	en: { business: 'See AI consulting for companies', technical: 'See Android app development' },
+	fi: { business: 'Katso tekoälykonsultointi yrityksille', technical: 'Katso Android-sovelluskehitys' },
+} as const;
 ---
 
 <Layout
@@ -70,8 +106,9 @@ const blogPosting = {
 	title={`${localized.data.title} · Bitdesal`}
 	description={localized.data.description}
 	breadcrumbLabel={localized.data.title}
-	ogImage={ogImage}
-	jsonLd={[blogPosting]}
+	ogImage={image}
+	alternates={blogLocales(post.id, ids)}
+	jsonLd={extraJsonLd}
 >
 	<article class="bf-article bg-white">
 		<div class="bf-main">
@@ -94,15 +131,30 @@ const blogPosting = {
 				{subtitle && <p class="bf-subtitle">{subtitle}</p>}
 
 				<div class="bf-meta">
+					{
+						author && (
+							<a href={sitePath(`/${authorId}`, lang)} class="bf-author">
+								<img src={author.portrait} alt="" width="36" height="36" />
+								<span>{t('blog.by')} {author.portraitAlt}</span>
+							</a>
+						)
+					}
 					<time datetime={localized.data.pubDate.toISOString().slice(0, 10)}>{dateLabel}</time>
+					{
+						localized.data.updatedDate && (
+							<>
+								<span aria-hidden="true">·</span>
+								<span>
+									{t('blog.updated')}{' '}
+									<time datetime={localized.data.updatedDate.toISOString().slice(0, 10)}>{updatedLabel}</time>
+								</span>
+							</>
+						)
+					}
+					<span aria-hidden="true">·</span>
+					<span>{minutes} {t('blog.reading')}</span>
 					<span aria-hidden="true">·</span>
 					<span>{audienceLabel}</span>
-					{author && (
-						<a href={sitePath('/caye', lang)} class="bf-author">
-							<img src={author.portrait} alt="" width="36" height="36" />
-							<span>{t(author.nameKey, 'Caye Ruiz')}</span>
-						</a>
-					)}
 					<button type="button" class="bf-share" data-share data-share-url={articleUrl} data-share-done={shareCopy.copied}>
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 							<path
@@ -133,12 +185,33 @@ const blogPosting = {
 				}
 			</header>
 
+			{
+				toc.length > 0 && (
+					<nav class="bf-main mb-8" aria-label={t('blog.related')}>
+						<p class="font-medium mb-3">Índice</p>
+						<ol class="list-decimal pl-5 space-y-2">
+							{toc.map((item) => (
+								<li>
+									<a href={`#${item.id}`} class="text-primary hover:underline">{item.text}</a>
+								</li>
+							))}
+						</ol>
+					</nav>
+				)
+			}
+
 			<div class="bf-prose">
 				<Content />
+				<BlogEndMatter
+					lang={lang}
+					authorId={authorId}
+					audience={post.data.audience}
+					related={related}
+					labels={{ related: t('blog.related'), ...ctaLabels[lang] }}
+				/>
 			</div>
 		</div>
 	</article>
-	<CtaSection />
 </Layout>
 
 <script>

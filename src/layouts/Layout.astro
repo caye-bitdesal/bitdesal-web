@@ -90,6 +90,13 @@ const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 						'/auditoria-app-android': '/consultoria-software',
 					};
 					if (lang !== 'es' && esOnly[without]) without = esOnly[without];
+					if (lang !== 'es' && without.indexOf('/blog/') === 0) {
+						var translatedBlog = {
+							'/blog/precio-cerrado-automatizacion-empresa': 1,
+							'/blog/entrevistas-tecnicas-ia': 1,
+						};
+						if (!translatedBlog[without]) without = '/blog';
+					}
 						var target;
 						if (lang === 'es') {
 							target = without === '/' ? '/' : without.charAt(0) === '/' ? without + '/' : '/' + without + '/';
@@ -127,6 +134,7 @@ const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonical} />
+		<link rel="alternate" type="application/rss+xml" title="Bitdesal" href={new URL('/rss.xml', SITE_ORIGIN).href} />
 		{
 			alternates.map((locale) => (
 				<link rel="alternate" hreflang={locale} href={hreflangs[locale]} />

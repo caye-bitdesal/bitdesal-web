@@ -35,12 +35,18 @@ const carouselId = `linkedin-carousel-${Math.random().toString(36).slice(2, 9)}`
 			posts.map((_, i) => (
 				<button
 					type="button"
-					class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-primary' : 'bg-foreground/25']}
+					class="size-6 inline-flex items-center justify-center"
 					data-dot={i}
 					data-carousel={carouselId}
+					role="tab"
 					aria-label={`Post ${i + 1}`}
 					aria-selected={i === 0 ? 'true' : 'false'}
-				/>
+				>
+					<span
+						data-dot-mark
+						class:list={['block size-2 rounded-full transition-colors', i === 0 ? 'bg-primary' : 'bg-foreground/25']}
+					/>
+				</button>
 			))
 		}
 	</div>
@@ -59,8 +65,9 @@ const carouselId = `linkedin-carousel-${Math.random().toString(36).slice(2, 9)}`
 				slide.classList.toggle('is-active', i === index);
 			});
 			dots.forEach((dot, i) => {
-				dot.classList.toggle('bg-primary', i === index);
-				dot.classList.toggle('bg-foreground/25', i !== index);
+				const mark = dot.querySelector('[data-dot-mark]');
+				mark?.classList.toggle('bg-primary', i === index);
+				mark?.classList.toggle('bg-foreground/25', i !== index);
 				dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
 			});
 		}

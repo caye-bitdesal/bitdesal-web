@@ -1,0 +1,78 @@
+---
+import { getTeamMember } from '../data/teamMembers';
+import { authorBlurb, type BlogAuthorId } from '../data/blogPost';
+import { sitePath } from '../data/siteNav';
+import type { Language } from '../i18n/translations';
+
+interface Related {
+	id: string;
+	title: string;
+	description: string;
+	href: string;
+}
+
+interface Props {
+	lang: Language;
+	authorId: BlogAuthorId;
+	audience: 'business' | 'technical';
+	related: Related[];
+	labels: {
+		related: string;
+		business: string;
+		technical: string;
+	};
+}
+
+const { lang, authorId, audience, related, labels } = Astro.props;
+const author = getTeamMember(authorId);
+const profileHref = sitePath(`/${authorId}`, lang);
+const ctaHref =
+	audience === 'business' ? sitePath('/consultoria-ia', lang) : sitePath('/consultoria-android', lang);
+const ctaLabel = audience === 'business' ? labels.business : labels.technical;
+---
+
+<aside class="mt-12 rounded-2xl border border-border bg-secondary/40 p-6 flex gap-4 items-start">
+	{
+		author && (
+			<img
+				src={author.portrait}
+				alt={author.portraitAlt}
+				width="72"
+				height="72"
+				class="rounded-full object-cover shrink-0"
+				loading="lazy"
+			/>
+		)
+	}
+	<div>
+		<p class="font-medium mb-2">
+			<a href={profileHref} class="text-primary hover:underline">{author?.portraitAlt}</a>
+		</p>
+		<p class="text-foreground/80 leading-relaxed">{authorBlurb[lang][authorId]}</p>
+	</div>
+</aside>
+
+{
+	related.length > 0 && (
+		<section class="mt-12">
+			<h2 class="text-2xl mb-4">{labels.related}</h2>
+			<ul class="space-y-4">
+				{related.map((item) => (
+					<li>
+						<a href={item.href} class="text-primary font-medium hover:underline">
+							{item.title}
+						</a>
+						<p class="text-sm text-foreground/70 mt-1">{item.description}</p>
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}
+
+<p class="mt-10">
+	<a href={ctaHref} class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+		{ctaLabel}
+		<span aria-hidden="true">→</span>
+	</a>
+</p>

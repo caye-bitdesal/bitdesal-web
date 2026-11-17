@@ -37,7 +37,11 @@ Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de K
 - https://bitdesal.com/auditoria-app-android/ — Auditoría de apps Android (informe priorizado).
 - https://bitdesal.com/casos-y-precios/ — Casos reales y tarifas transparentes.
 - https://bitdesal.com/nosotros/ — Equipo y trayectoria.
-- https://bitdesal.com/blog/ — Artículos en el sitio, LinkedIn y Medium.
+- https://bitdesal.com/blog/ — Artículos en el sitio. Feed: https://bitdesal.com/rss.xml
+- https://bitdesal.com/blog/guia-cicd-android-github-actions/ — Guía de CI/CD para Android con GitHub Actions (borrador: falta el texto original).
+- https://bitdesal.com/blog/insomnio-agentes-ia-funcion-sencilla/ — Insomnio, agentes de IA y la función de 8 horas (borrador: falta el texto original).
+- https://bitdesal.com/blog/puedes-permitirte-desarrollo-asistido-ia/ — Desarrollo asistido por IA y lo que cuesta de verdad (borrador: falta el texto original).
+- https://bitdesal.com/blog/mas-alla-del-vibe-coding/ — Más allá del vibe coding (borrador: falta el texto original).
 - https://bitdesal.com/contacto/ — Formulario, email, WhatsApp y agenda.
 
 ---

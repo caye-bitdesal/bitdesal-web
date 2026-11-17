@@ -149,8 +149,13 @@ export const translations: Record<Language, any> = {
 				technical: 'Técnico',
 			},
 			onSite: 'En bitdesal.com',
-			external: 'LinkedIn y Medium',
+			external: 'También en LinkedIn',
 			back: '← Blog',
+			published: 'Publicado',
+			updated: 'Actualizado',
+			reading: 'min de lectura',
+			related: 'Artículos relacionados',
+			by: 'Por',
 		},
 		pricing: {
 			hero: {
@@ -1259,8 +1264,13 @@ export const translations: Record<Language, any> = {
 				technical: 'Technical',
 			},
 			onSite: 'On bitdesal.com',
-			external: 'LinkedIn and Medium',
+			external: 'Also on LinkedIn',
 			back: '← Blog',
+			published: 'Published',
+			updated: 'Updated',
+			reading: 'min read',
+			related: 'Related articles',
+			by: 'By',
 		},
 		pricing: {
 			hero: {
@@ -2339,8 +2349,13 @@ export const translations: Record<Language, any> = {
 				technical: 'Tekninen',
 			},
 			onSite: 'Bitdesal.comissa',
-			external: 'LinkedIn ja Medium',
+			external: 'Myös LinkedInissä',
 			back: '← Blogi',
+			published: 'Julkaistu',
+			updated: 'Päivitetty',
+			reading: 'min lukuaika',
+			related: 'Aiheeseen liittyvät artikkelit',
+			by: 'Kirjoittaja',
 		},
 		pricing: {
 			hero: {
