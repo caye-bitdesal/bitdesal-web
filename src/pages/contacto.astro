@@ -28,7 +28,12 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-3xl md:text-4xl mb-4">{t('contact.title')}</h1>
-			<p class="text-lg text-foreground/80 mb-10">{t('contact.lead')}</p>
+			<p class="text-lg text-foreground/80 mb-4">{t('contact.lead')}</p>
+			<p class="text-base text-foreground/80 mb-10">
+				<a href="/consultoria-ia-alicante-elche/" class="text-primary font-medium hover:underline">
+					Consultoría de IA en Elche y Alicante
+				</a>
+			</p>
 
 			<div id="contact-form-panel">
 				<form id="contact-form" class="space-y-5" action={CONTACT_FORM_ENDPOINT} method="POST">

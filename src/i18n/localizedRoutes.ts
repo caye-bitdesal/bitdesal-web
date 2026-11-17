@@ -28,6 +28,7 @@ const ES_ONLY_SLUGS = new Set([
 	'consultoria-android',
 	'automatizacion-procesos-ia',
 	'agentes-ia-empresas',
+	'consultoria-ia-alicante-elche',
 ]);
 
 export function alternatesForPathname(pathname: string): Language[] {
@@ -98,6 +99,7 @@ const ES_ONLY_FALLBACK_SLUG: Record<string, string> = {
 	'auditoria-app-android': 'consultoria-software',
 	'automatizacion-procesos-ia': 'consultoria-ia',
 	'agentes-ia-empresas': 'consultoria-ia',
+	'consultoria-ia-alicante-elche': 'consultoria-ia',
 };
 
 export function localePathForSwitch(pathname: string, targetLang: Language): string {

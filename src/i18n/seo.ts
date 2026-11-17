@@ -8,6 +8,7 @@ export type PageSeoId =
 	| 'androidAudit'
 	| 'processAutomation'
 	| 'aiAgents'
+	| 'localElche'
 	| 'pricing'
 	| 'workAndPricing'
 	| 'about'
@@ -124,6 +125,23 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 			title: 'Agentes de IA para empresas: qué son y casos reales · Bitdesal',
 			description:
 				'Un agente de IA lee, decide y actúa en WhatsApp, documentos y presupuestos. Una persona confirma lo que compromete. Agenda 30 minutos gratis.',
+		},
+	},
+	localElche: {
+		es: {
+			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			description:
+				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
+		},
+		en: {
+			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			description:
+				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
+		},
+		fi: {
+			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			description:
+				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
 		},
 	},
 	consultoria: {
