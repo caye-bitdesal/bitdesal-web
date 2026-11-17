@@ -60,7 +60,7 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Desarrollo de apps Android con Kotlin para empresas · Bitdesal',
 			description:
-				'Desarrolladores de aplicaciones Android senior: Kotlin y Jetpack Compose, calidad SOLID, entregas semanales y sin dependencia. Agenda 30 min gratis.',
+				'Desarrolladores de aplicaciones Android senior: apps en Kotlin y Jetpack Compose con calidad SOLID, entregas semanales y sin dependencia. Agenda 30 min gratis.',
 		},
 		en: {
 			title: 'Senior Android consultant: Kotlin and Jetpack Compose · Bitdesal',
