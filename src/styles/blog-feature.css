@@ -1,4 +1,11 @@
-/* Feature blog articles — scoped under .bf-article */
+/*
+ * Feature blog layout (`layout: feature` in frontmatter).
+ * Shell: BlogArticleFeature.astro + this file.
+ * Body blocks: see src/content/blog-feature.template.md and docs/blog-feature-layout.md
+ *
+ * Blocks: bf-pullquote | bf-section-heading | bf-bento | bf-figure | bf-split |
+ * bf-callout | bf-idea | bf-highlight | bf-steps | bf-triptych | bf-conclusion
+ */
 
 @import "@fontsource-variable/manrope";
 @import "@fontsource-variable/dm-sans";
