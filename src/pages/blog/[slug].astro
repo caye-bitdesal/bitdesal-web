@@ -1,0 +1,12 @@
+---
+import BlogArticle from '../../components/BlogArticle.astro';
+import { blogStaticPaths } from '../../data/blogRoutes';
+
+export function getStaticPaths() {
+	return blogStaticPaths();
+}
+
+const { post } = Astro.props;
+---
+
+<BlogArticle post={post} />

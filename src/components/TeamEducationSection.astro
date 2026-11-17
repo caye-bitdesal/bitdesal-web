@@ -1,0 +1,39 @@
+---
+import { educationTranslationPrefix, teamEducationByMember } from '../data/teamEducation';
+import { useI18n } from '../i18n/useI18n';
+
+interface Props {
+	memberId: string;
+}
+
+const { memberId } = Astro.props;
+const { t } = useI18n(Astro);
+
+const entries = teamEducationByMember[memberId] ?? [];
+const prefix = educationTranslationPrefix(memberId);
+const titleKey = memberId === 'caye' ? `${prefix}.title` : `${prefix}.title`;
+---
+
+<section class="py-16 md:py-24 bg-secondary">
+	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-3xl md:text-4xl mb-8">{t(titleKey)}</h2>
+		<div class="space-y-8">
+			{
+				entries.map((entry) => {
+					const base =
+						memberId === 'caye' && entry.id === 'main'
+							? prefix
+							: `${prefix}.${entry.id}`;
+					const institution = t(`${base}.institution`, '');
+					return (
+						<div>
+							<h3 class="text-xl mb-1">{t(`${base}.degree`)}</h3>
+							{institution && !institution.startsWith('about.') && <p class="text-foreground/70 mb-1">{institution}</p>}
+							<p class="text-sm text-primary font-medium">{t(`${base}.dates`)}</p>
+						</div>
+					);
+				})
+			}
+		</div>
+	</div>
+</section>

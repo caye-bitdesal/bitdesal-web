@@ -1,0 +1,9 @@
+---
+import HashRedirect from '../components/HashRedirect.astro';
+import { sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
+
+const { lang } = useI18n(Astro);
+---
+
+<HashRedirect to={sitePath('/casos-y-precios', lang)} defaultHash="#precios" />

@@ -1,0 +1,27 @@
+---
+import { useI18n } from '../i18n/useI18n';
+
+const { t } = useI18n(Astro);
+
+const stats = [
+	{ valueKey: 'home.stats.years.value', labelKey: 'home.stats.years.label' },
+	{ valueKey: 'home.stats.downloads.value', labelKey: 'home.stats.downloads.label' },
+	{ valueKey: 'home.stats.uptime.value', labelKey: 'home.stats.uptime.label' },
+	{ valueKey: 'home.stats.countries.value', labelKey: 'home.stats.countries.label' },
+];
+---
+
+<section class="py-12 md:py-16 bg-[#1a3a38] dark:bg-[#0f1615] dark:border-y dark:border-white/5 text-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+			{
+				stats.map((stat) => (
+					<div>
+						<p class="text-3xl md:text-4xl font-semibold mb-2">{t(stat.valueKey)}</p>
+						<p class="text-sm text-white/75">{t(stat.labelKey)}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

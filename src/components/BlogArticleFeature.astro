@@ -1,0 +1,167 @@
+---
+import CtaSection from './CtaSection.astro';
+import Layout from '../layouts/Layout.astro';
+import { sitePath } from '../data/siteNav';
+import { SITE_ORIGIN } from '../data/siteConstants';
+import { getTeamMember } from '../data/teamMembers';
+import { currencyLocale } from '../i18n/formatCurrency';
+import { useI18n } from '../i18n/useI18n';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import '../styles/blog-feature.css';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { lang, t } = useI18n(Astro);
+const allPosts = await getCollection('blog');
+const localized = lang === 'es' ? post : (allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post);
+const { Content } = await render(localized);
+
+const author = getTeamMember('caye');
+const highlight = localized.data.titleHighlight ?? '';
+const titleLead = highlight
+	? localized.data.title.replace(new RegExp(`:?\\s*${escapeRegExp(highlight)}\\s*$`), '').replace(/:\s*$/, '')
+	: localized.data.title;
+
+function escapeRegExp(value: string) {
+	return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+const heroImage = localized.data.heroImage ?? localized.data.ogImage;
+const ogImage = localized.data.ogImage ?? heroImage ?? undefined;
+
+const dateLabel = localized.data.pubDate.toLocaleDateString(currencyLocale(lang), {
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+});
+
+const audienceLabel =
+	localized.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical');
+
+const shareLabels = {
+	es: { share: 'Compartir artículo', copied: 'Enlace copiado' },
+	en: { share: 'Share article', copied: 'Link copied' },
+	fi: { share: 'Jaa artikkeli', copied: 'Linkki kopioitu' },
+} as const;
+const subtitle = localized.data.subtitle;
+const shareCopy = shareLabels[lang];
+
+const articlePath = sitePath(`/blog/${post.id}`, lang);
+const articleUrl = new URL(articlePath, SITE_ORIGIN).href;
+const blogPosting = {
+	'@type': 'BlogPosting',
+	'@id': `${articleUrl}#article`,
+	headline: localized.data.title,
+	description: localized.data.description,
+	datePublished: localized.data.pubDate.toISOString(),
+	author: { '@id': `${SITE_ORIGIN}/#caye` },
+	publisher: { '@id': `${SITE_ORIGIN}/#org` },
+	mainEntityOfPage: articleUrl,
+	image: new URL(ogImage, SITE_ORIGIN).href,
+	inLanguage: lang === 'es' ? 'es-ES' : lang === 'fi' ? 'fi-FI' : 'en-US',
+};
+---
+
+<Layout
+	seo="blog"
+	title={`${localized.data.title} · Bitdesal`}
+	description={localized.data.description}
+	breadcrumbLabel={localized.data.title}
+	ogImage={ogImage}
+	jsonLd={[blogPosting]}
+>
+	<article class="bf-article bg-white">
+		<div class="bf-main">
+			<header class="bf-header">
+				<p class="bf-back">
+					<a href={sitePath('/blog', lang)} class="text-sm text-primary hover:underline">{t('blog.back')}</a>
+				</p>
+
+				<h1 class="bf-title">
+					{highlight ? (
+						<>
+							<span class="bf-title-lead">{titleLead}:</span>{' '}
+							<span class="bf-title-accent">{highlight}</span>
+						</>
+					) : (
+						localized.data.title
+					)}
+				</h1>
+
+				{subtitle && <p class="bf-subtitle">{subtitle}</p>}
+
+				<div class="bf-meta">
+					<time datetime={localized.data.pubDate.toISOString().slice(0, 10)}>{dateLabel}</time>
+					<span aria-hidden="true">·</span>
+					<span>{audienceLabel}</span>
+					{author && (
+						<a href={sitePath('/caye', lang)} class="bf-author">
+							<img src={author.portrait} alt="" width="36" height="36" />
+							<span>{t(author.nameKey, 'Caye Ruiz')}</span>
+						</a>
+					)}
+					<button type="button" class="bf-share" data-share data-share-url={articleUrl} data-share-done={shareCopy.copied}>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path
+								d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v14"
+								stroke="currentColor"
+								stroke-width="1.75"
+								stroke-linecap="round"
+								stroke-linejoin="round"></path>
+						</svg>
+						<span data-share-label>{shareCopy.share}</span>
+					</button>
+				</div>
+
+				{
+					heroImage && (
+						<div class="bf-hero">
+							<img
+								src={heroImage}
+								alt=""
+								width="1600"
+								height="640"
+								loading="eager"
+								decoding="async"
+								fetchpriority="high"
+							/>
+						</div>
+					)
+				}
+			</header>
+
+			<div class="bf-prose">
+				<Content />
+			</div>
+		</div>
+	</article>
+	<CtaSection />
+</Layout>
+
+<script>
+	const button = document.querySelector<HTMLButtonElement>('[data-share]');
+	const label = document.querySelector<HTMLElement>('[data-share-label]');
+	if (button && label) {
+		const url = button.dataset.shareUrl ?? window.location.href;
+		const done = button.dataset.shareDone ?? 'OK';
+		button.addEventListener('click', async () => {
+			try {
+				if (navigator.share) {
+					await navigator.share({ url, title: document.title });
+					return;
+				}
+				await navigator.clipboard.writeText(url);
+				const prev = label.textContent;
+				label.textContent = done;
+				window.setTimeout(() => {
+					label.textContent = prev;
+				}, 2000);
+			} catch {
+				/* user cancelled share */
+			}
+		});
+	}
+</script>

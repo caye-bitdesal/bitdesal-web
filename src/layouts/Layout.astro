@@ -2,99 +2,198 @@
 import '../styles/index.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { defaultLanguage, supportedLanguages, translations } from '../i18n/translations';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
+import { getPageSeo, type PageSeoId } from '../i18n/seo';
+import { useI18n } from '../i18n/useI18n';
+import { absoluteAlternateHrefs } from '../i18n/localizedRoutes';
+import { defaultBreadcrumbs } from '../i18n/breadcrumbs';
+import { supportedLanguages, type Language } from '../i18n/translations';
+import {
+	buildBreadcrumbListJsonLd,
+	buildSiteGraph,
+	type BreadcrumbItem,
+	type JsonLdNode,
+} from '../data/siteJsonLd';
 
-const i18nPayload = {
-	defaultLanguage,
-	supportedLanguages,
-	translations,
+interface Props {
+	seo?: PageSeoId;
+	title?: string;
+	description?: string;
+	ogImage?: string;
+	alternates?: Language[];
+	jsonLd?: JsonLdNode[];
+	breadcrumbs?: BreadcrumbItem[];
+	breadcrumbLabel?: string;
+}
+
+const {
+	seo = 'home',
+	title: titleOverride,
+	description: descOverride,
+	ogImage = DEFAULT_OG_IMAGE,
+	alternates = supportedLanguages,
+	jsonLd: extraJsonLd = [],
+	breadcrumbs: breadcrumbsOverride,
+	breadcrumbLabel,
+} = Astro.props;
+
+const { lang, t } = useI18n(Astro);
+const themeLabelLight = t('theme.switchToLight', 'Modo claro');
+const themeLabelDark = t('theme.switchToDark', 'Modo oscuro');
+const seoMeta = getPageSeo(seo, lang);
+const title = titleOverride ?? seoMeta.title;
+const description = descOverride ?? seoMeta.description;
+
+const canonicalPath =
+	Astro.url.pathname === '/' || Astro.url.pathname.endsWith('/')
+		? Astro.url.pathname
+		: `${Astro.url.pathname}/`;
+const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
+const hreflangs = absoluteAlternateHrefs(canonicalPath, alternates);
+
+const OG_LOCALE: Record<Language, string> = {
+	es: 'es_ES',
+	en: 'en_US',
+	fi: 'fi_FI',
 };
+
+const breadcrumbItems =
+	breadcrumbsOverride ??
+	defaultBreadcrumbs(canonicalPath, lang, t, breadcrumbLabel ?? title.replace(/\s*·\s*Bitdesal\s*$/i, ''));
+
+const jsonLdNodes: JsonLdNode[] = [...extraJsonLd];
+if (breadcrumbItems.length >= 2) {
+	jsonLdNodes.push(buildBreadcrumbListJsonLd(canonical, breadcrumbItems));
+}
+
+const jsonLd = buildSiteGraph(lang, jsonLdNodes);
+
+const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
+		<script is:inline>
+			(function () {
+				try {
+					var params = new URLSearchParams(location.search);
+					var lang = params.get('lang');
+					if (lang === 'es' || lang === 'en' || lang === 'fi') {
+						var path = location.pathname.replace(/\/$/, '') || '/';
+						var without = path.replace(/^\/(en|fi)(?=\/|$)/, '') || '/';
+						var target;
+						if (lang === 'es') {
+							target = without === '/' ? '/' : without.charAt(0) === '/' ? without + '/' : '/' + without + '/';
+						} else {
+							target =
+								without === '/'
+									? '/' + lang + '/'
+									: '/' + lang + (without.charAt(0) === '/' ? without : '/' + without) + '/';
+						}
+						target = target.replace(/\/{2,}/g, '/');
+						params.delete('lang');
+						var qs = params.toString();
+						var next = target + (qs ? '?' + qs : '') + location.hash;
+						if (next !== location.pathname + location.search + location.hash) {
+							location.replace(next);
+							return;
+						}
+					}
+				} catch (_) {}
+				try {
+					var key = 'bitdesal-theme';
+					var stored = localStorage.getItem(key);
+					var dark =
+						stored === 'dark' ||
+						(stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+					if (dark) document.documentElement.classList.add('dark');
+				} catch (_) {}
+			})();
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Bitdesal</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		{
+			alternates.map((locale) => (
+				<link rel="alternate" hreflang={locale} href={hreflangs[locale]} />
+			))
+		}
+		{
+			alternates.includes('es') && (
+				<link rel="alternate" hreflang="x-default" href={hreflangs.es} />
+			)
+		}
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content={OG_LOCALE[lang]} />
+		{
+			supportedLanguages
+				.filter((other) => other !== lang && alternates.includes(other))
+				.map((other) => (
+					<meta property="og:locale:alternate" content={OG_LOCALE[other]} />
+				))
+		}
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	</head>
-	<body class="min-h-screen flex flex-col">
+	<body class="min-h-screen flex flex-col overflow-x-hidden">
 		<Header />
+		<Breadcrumbs items={breadcrumbItems} />
 		<main class="flex-1">
 			<slot />
 		</main>
 		<Footer />
+		<script is:inline define:vars={{ themeLabelLight, themeLabelDark }}>
+			(function () {
+				var KEY = 'bitdesal-theme';
+				var labels = { light: themeLabelLight, dark: themeLabelDark };
 
-		<script is:inline define:vars={{ i18nPayload }}>
-			// `define:vars` safely serializes server data into this script.
-			const I18N = /** @type {const} */ (i18nPayload);
-
-			/** @type {(obj: any, key: string) => string} */
-			function t(obj, key) {
-				const keys = key.split('.');
-				let value = obj;
-				for (const k of keys) {
-					if (value && typeof value === 'object') value = value[k];
-					else return key;
+				function apply(theme) {
+					document.documentElement.classList.toggle('dark', theme === 'dark');
+					document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+						btn.setAttribute('aria-label', theme === 'dark' ? labels.light : labels.dark);
+						var sun = btn.querySelector('.theme-icon-sun');
+						var moon = btn.querySelector('.theme-icon-moon');
+						if (sun) sun.classList.toggle('hidden', theme !== 'dark');
+						if (moon) moon.classList.toggle('hidden', theme === 'dark');
+					});
 				}
-				return typeof value === 'string' ? value : key;
-			}
 
-			/** @type {(lang: string) => void} */
-			function applyLanguage(lang) {
-				if (!I18N.supportedLanguages.includes(lang)) lang = I18N.defaultLanguage;
+				function preferred() {
+					try {
+						var stored = localStorage.getItem(KEY);
+						if (stored === 'light' || stored === 'dark') return stored;
+					} catch (_) {}
+					return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
 
-				localStorage.setItem('language', lang);
-				document.documentElement.lang = lang;
+				apply(document.documentElement.classList.contains('dark') ? 'dark' : preferred());
 
-				const dict = I18N.translations[lang] ?? I18N.translations[I18N.defaultLanguage];
-
-				// Update text nodes
-				document.querySelectorAll('[data-i18n-key]').forEach((el) => {
-					const key = el.getAttribute('data-i18n-key');
-					const attr = el.getAttribute('data-i18n-attr');
-					if (!key) return;
-					const value = t(dict, key);
-					if (attr) el.setAttribute(attr, value);
-					else {
-						el.textContent = value;
-						el.hidden = !value;
-					}
+				document.addEventListener('click', function (e) {
+					var btn = e.target.closest('[data-theme-toggle]');
+					if (!btn) return;
+					var next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+					try {
+						localStorage.setItem(KEY, next);
+					} catch (_) {}
+					apply(next);
 				});
-
-				// Update active state on language controls
-				document.querySelectorAll('[data-lang]').forEach((el) => {
-					const isActive = el.getAttribute('data-lang') === lang;
-					el.classList.toggle('text-primary', isActive);
-					el.classList.toggle('text-foreground/70', !isActive);
-				});
-
-				window.dispatchEvent(new CustomEvent('bitdesal:language', { detail: { lang } }));
-			}
-
-			/** @type {() => string} */
-			function getInitialLanguage() {
-				const url = new URL(window.location.href);
-				const fromQuery = url.searchParams.get('lang');
-				if (fromQuery && I18N.supportedLanguages.includes(fromQuery)) return fromQuery;
-
-				const saved = localStorage.getItem('language');
-				if (saved && I18N.supportedLanguages.includes(saved)) return saved;
-
-				return I18N.defaultLanguage;
-			}
-
-			// Expose for header/footer handlers
-			window.bitdesalI18n = {
-				getLanguage: getInitialLanguage,
-				setLanguage: applyLanguage,
-			};
-
-			applyLanguage(getInitialLanguage());
+			})();
 		</script>
 	</body>
 </html>
-

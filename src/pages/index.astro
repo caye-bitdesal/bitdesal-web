@@ -1,224 +1,180 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
 import LinkedInPostsCarousel from '../components/LinkedInPostsCarousel.astro';
+import StatsStrip from '../components/StatsStrip.astro';
+import Layout from '../layouts/Layout.astro';
+import { BOOKING_URL } from '../data/siteConstants';
+import { projectCards } from '../data/projectCards';
+import { sitePath } from '../data/siteNav';
+import { linkedInPosts } from '../data/linkedInPosts';
+import { teamMembers } from '../data/teamMembers';
+import { useI18n } from '../i18n/useI18n';
 
-const linkedInPosts = [
-	{
-		url: 'https://www.linkedin.com/pulse/can-you-afford-your-ai-assisted-development-bitdesal-ubtpe',
-		titleKey: 'home.blog.posts.afford.title',
-		excerptKey: 'home.blog.posts.afford.excerpt',
-		dateKey: 'home.blog.posts.afford.date',
-		image: '/blog/can-you-afford-ai-assisted-development.png',
-		imageAltKey: 'home.blog.posts.afford.imageAlt',
-	},
-	{
-		url: 'https://www.linkedin.com/pulse/beyond-vibe-coding-manifesto-sustainable-ai-engineering-bitdesal-x5bxe',
-		titleKey: 'home.blog.posts.manifesto.title',
-		excerptKey: 'home.blog.posts.manifesto.excerpt',
-		dateKey: 'home.blog.posts.manifesto.date',
-		image: '/blog/beyond-vibe-coding-manifesto.png',
-		imageAltKey: 'home.blog.posts.manifesto.imageAlt',
-	},
-];
+const { lang, t } = useI18n(Astro);
+
+const whyCards = [
+	{ icon: 'tag', titleKey: 'home.whyBitdesal.fixedPrice.title', descKey: 'home.whyBitdesal.fixedPrice.description' },
+	{ icon: 'user', titleKey: 'home.whyBitdesal.direct.title', descKey: 'home.whyBitdesal.direct.description' },
+	{ icon: 'unlock', titleKey: 'home.whyBitdesal.independence.title', descKey: 'home.whyBitdesal.independence.description' },
+	{ icon: 'spark', titleKey: 'home.whyBitdesal.ai.title', descKey: 'home.whyBitdesal.ai.description' },
+] as const;
 ---
 
-<Layout>
-	<section class="relative bg-gradient-to-br from-[#2d5f5d] to-[#1a3a38] text-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+<Layout seo="home">
+	<section class="relative overflow-hidden text-white">
+		<img
+			src="/hero-home.jpg"
+			alt={t('home.hero.imageAlt')}
+			class="absolute inset-0 h-full w-full object-cover object-[70%_center]"
+			width="1024"
+			height="480"
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+		/>
+		<div class="absolute inset-0 bg-gradient-to-r from-[#1a3a38]/65 via-[#1a3a38]/45 to-[#1a3a38]/10" aria-hidden="true"></div>
+		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
 			<div class="max-w-3xl">
-				<h1 class="text-4xl md:text-6xl mb-6" data-i18n-key="home.hero.title">
-					Android Development, done right
-				</h1>
-				<p class="text-xl md:text-2xl text-white/90 mb-8">
-					<span data-i18n-key="home.hero.subtitle">
-						Modern Android development, AI solutions and strategic consulting with 20 years of international
-						experience
-					</span>
-				</p>
+				<h1 class="text-4xl md:text-6xl mb-6">{t('home.hero.title')}</h1>
+				<p class="text-xl md:text-2xl text-white/90 mb-8">{t('home.hero.subtitle')}</p>
 				<div class="flex flex-wrap gap-4">
 					<a
-						href="/methodology"
+						href={BOOKING_URL}
 						class="inline-flex items-center gap-2 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
-						data-i18n-key="home.hero.viewServices"
 					>
-						View methodology
+						{t('common.bookCta', 'Agenda 30 min gratis')}
 					</a>
 					<a
-						href="/contact"
+						href="#servicios"
 						class="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors"
-						data-i18n-key="home.hero.contact"
 					>
-						Contact
+						{t('common.seeHowIWork', 'Ver qué hacemos')}
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section id="servicios" class="py-16 md:py-20 bg-white scroll-mt-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<a
+					href={sitePath('/consultoria-ia', lang)}
+					class="group flex flex-col rounded-2xl border-2 border-border bg-secondary/40 p-8 md:p-10 hover:border-primary hover:shadow-lg transition-all"
+				>
+					<h2 class="text-2xl md:text-3xl mb-4 group-hover:text-primary transition-colors">
+						{t('home.serviceCards.ia.title')}
+					</h2>
+					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.ia.description')}</p>
+					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.ia.priceHint')}</p>
+					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+						{t('home.serviceCards.ia.cta')}
+						<span aria-hidden="true">→</span>
+					</span>
+				</a>
+				<a
+					href={sitePath('/consultoria-software', lang)}
+					class="group flex flex-col rounded-2xl border-2 border-border bg-secondary/40 p-8 md:p-10 hover:border-primary hover:shadow-lg transition-all"
+				>
+					<h2 class="text-2xl md:text-3xl mb-4 group-hover:text-primary transition-colors">
+						{t('home.serviceCards.software.title')}
+					</h2>
+					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.software.description')}</p>
+					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.software.priceHint')}</p>
+					<p class="text-sm text-foreground/70 mb-4">
+						<a href={sitePath('/consultoria-android', lang)} class="text-primary font-medium hover:underline">
+							{t('consultoriaPageExpanded.androidPromo.linkConsulting')}
+						</a>
+					</p>
+					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+						{t('home.serviceCards.software.cta')}
+						<span aria-hidden="true">→</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<StatsStrip />
 
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-16">
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="home.whyBitdesal.title">Why Bitdesal?</h2>
-				<p class="text-lg text-foreground/70 max-w-2xl mx-auto" data-i18n-key="home.whyBitdesal.subtitle">
-					We combine world-class technical expertise with internationally proven methodologies
-				</p>
+				<h2 class="text-3xl md:text-4xl mb-4">{t('home.whyBitdesal.title')}</h2>
+				<p class="text-lg text-foreground/70 max-w-2xl mx-auto">{t('home.whyBitdesal.subtitle')}</p>
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-				<div class="text-center">
-					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
-						<span class="text-primary text-2xl font-semibold">K</span>
-					</div>
-					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.modernStack.title">Modern Stack</h3>
-					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.modernStack.description">
-						Kotlin, Jetpack Compose, modular architecture and the latest Android technologies
-					</p>
-				</div>
-
-				<div class="text-center">
-					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
-						<span class="text-primary text-2xl font-semibold">AI</span>
-					</div>
-					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.practicalAI.title">Practical AI</h3>
-					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.practicalAI.description">
-						Intelligent agents and automations that generate real value for your business
-					</p>
-				</div>
-
-				<div class="text-center">
-					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
-						<span class="text-primary text-2xl font-semibold">1:1</span>
-					</div>
-					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.mentorship.title">Mentorship</h3>
-					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.mentorship.description">
-						Personalized training to elevate your technical team's capabilities
-					</p>
-				</div>
-
-				<div class="text-center">
-					<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4">
-						<span class="text-primary text-2xl font-semibold">20</span>
-					</div>
-					<h3 class="mb-2" data-i18n-key="home.whyBitdesal.experience.title">20 Years</h3>
-					<p class="text-foreground/70" data-i18n-key="home.whyBitdesal.experience.description">
-						International experience in Spain, Switzerland and Finland with high-impact projects
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.android.title">
-						Next-Generation Android Development
-					</h2>
-					<p class="text-lg text-foreground/80 mb-6" data-i18n-key="home.android.description">
-						Specialists in Kotlin and Jetpack Compose with scalable modular architecture.
-					</p>
-					<ul class="space-y-3 mb-8">
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
+				{
+					whyCards.map((card) => (
+						<div class="text-center">
+							<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-lg mb-4 text-primary">
+								{card.icon === 'tag' && (
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-7 w-7" aria-hidden="true">
+										<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+										<circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none" />
+									</svg>
+								)}
+								{card.icon === 'user' && (
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-7 w-7" aria-hidden="true">
+										<circle cx="12" cy="8" r="4" />
+										<path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-linecap="round" />
+									</svg>
+								)}
+								{card.icon === 'unlock' && (
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-7 w-7" aria-hidden="true">
+										<rect x="5" y="11" width="14" height="10" rx="2" />
+										<path d="M8 11V8a4 4 0 0 1 8 0v3" stroke-linecap="round" />
+									</svg>
+								)}
+								{card.icon === 'spark' && (
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-7 w-7" aria-hidden="true">
+										<path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5L12 3z" stroke-linejoin="round" />
+									</svg>
+								)}
 							</div>
-							<span data-i18n-key="home.android.item1">MVVM/MVI Architecture with Clean Architecture</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.android.item2">Comprehensive testing with JUnit, Espresso and Compose Testing</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.android.item3">Automated CI/CD with GitHub Actions</span>
-						</li>
-					</ul>
-					<a href="/methodology" class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-						<span data-i18n-key="home.android.learnMore">Learn more</span>
-						<span aria-hidden="true">→</span>
-					</a>
-				</div>
-				<div class="bg-white rounded-lg p-8 shadow-lg">
-					<div class="aspect-[4/3] rounded-lg flex items-center justify-center bg-white">
-						<img
-							src="/logos_android.png"
-							alt="Android technology logos"
-							class="max-h-full max-w-full object-contain"
-							loading="lazy"
-							decoding="async"
-						/>
-					</div>
-				</div>
+							<h3 class="mb-2">{t(card.titleKey)}</h3>
+							<p class="text-foreground/70">{t(card.descKey)}</p>
+						</div>
+					))
+				}
 			</div>
 		</div>
 	</section>
 
 	<section class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 				<div class="order-2 lg:order-1">
-					<div class="bg-secondary rounded-lg p-8 shadow-lg">
-						<div class="aspect-[4/3] rounded-lg flex items-center justify-center bg-white">
-							<img
-								src="/logos_ai.png"
-								alt="Android technology logos"
-								class="max-h-full max-w-full object-contain"
-								loading="lazy"
-								decoding="async"
-							/>
-						</div>
-					</div>
-				</div>
-				<div class="order-1 lg:order-2">
-					<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="home.ai.title">
-						Artificial Intelligence that Works
-					</h2>
-					<p class="text-lg text-foreground/80 mb-6" data-i18n-key="home.ai.description">
-						We develop AI agents and intelligent automations that solve real problems and generate measurable ROI.
-					</p>
-					<ul class="space-y-3 mb-8">
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.ai.item1">Conversational agents with Claude and Gemini</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.ai.item2">AI assisted designs</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<div
-								class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-							>
-								<span class="text-white text-sm">✓</span>
-							</div>
-							<span data-i18n-key="home.ai.item3">Process automation with AI</span>
-						</li>
-					</ul>
-					<a href="/methodology" class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-						<span data-i18n-key="home.ai.explore">Explore AI solutions</span>
+					<h2 class="text-3xl md:text-4xl mb-6">{t('home.behind.title')}</h2>
+					<p class="text-lg text-foreground/80 leading-relaxed mb-8">{t('home.behind.text')}</p>
+					<a href={sitePath('/nosotros', lang)} class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+						{t('common.meetUs', 'Conócenos')}
 						<span aria-hidden="true">→</span>
 					</a>
-				
+				</div>
+				<div class="order-1 lg:order-2 flex justify-center">
+					<div class="grid grid-cols-2 gap-4 w-full max-w-md">
+						{
+							teamMembers.map((member) => (
+								<a
+									href={`${sitePath('/nosotros', lang)}#equipo`}
+									class="group block rounded-xl overflow-hidden border border-border bg-white shadow-sm hover:border-primary transition-colors"
+								>
+									<img
+										src={member.portrait}
+										alt={member.portraitAlt}
+										class="w-full aspect-square object-cover group-hover:opacity-95 transition-opacity bg-secondary"
+										loading="lazy"
+										decoding="async"
+									/>
+									<p class="px-3 py-2.5 text-sm font-medium text-center text-foreground group-hover:text-primary transition-colors">
+										{t(member.nameKey)}
+									</p>
+								</a>
+							))
+						}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -227,71 +183,54 @@ const linkedInPosts = [
 	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="home.projects.title">Projects</h2>
-				<p class="text-lg text-foreground/70 max-w-2xl mx-auto" data-i18n-key="home.projects.subtitle">
-					Highlights from our client and product work
-				</p>
+				<h2 class="text-3xl md:text-4xl mb-4">{t('home.projects.title')}</h2>
+				<p class="text-lg text-foreground/70 max-w-2xl mx-auto">{t('home.projects.subtitle')}</p>
 			</div>
 
-			<div class="max-w-3xl mx-auto mb-10">
-				<a
-					href="/projects/kivra"
-					class="group block bg-white rounded-xl p-8 md:p-10 shadow-sm border border-border hover:border-primary hover:shadow-md transition-all text-left"
-				>
-					<div class="flex items-start gap-6 mb-8">
-						<img
-							src="/kivra-app-icon.png"
-							alt="Kivra Finland"
-							width="96"
-							height="96"
-							class="w-24 h-24 rounded-2xl shadow-lg shrink-0"
-							loading="lazy"
-							decoding="async"
-						/>
-						<div class="min-w-0 pt-1">
-							<h3
-								class="text-3xl md:text-4xl mb-2 group-hover:text-primary transition-colors"
-								data-i18n-key="projects.kivra.name"
-							>
-								Kivra Finland
-							</h3>
-							<p class="text-foreground/60">
-								<span data-i18n-key="projects.kivra.tag">Android · Productivity</span>
-								<span aria-hidden="true"> · </span>
-								<span data-i18n-key="projects.kivra.updated">2026</span>
-							</p>
-						</div>
-					</div>
-					<p class="text-lg text-foreground/80 leading-relaxed mb-8" data-i18n-key="projects.kivra.description">
-						Digital mail app used by hundreds of thousands in Finland to receive invoices, letters, tickets and
-						official documents securely.
-					</p>
-					<span class="inline-flex items-center gap-2 text-primary text-lg group-hover:gap-3 transition-all">
-						<span data-i18n-key="projects.viewProject">View project</span>
-						<span aria-hidden="true">→</span>
-					</span>
-				</a>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-10">
+				{
+					projectCards.map((project) => (
+						<a
+							href={sitePath(project.href, lang)}
+							class="group block bg-white rounded-xl p-8 shadow-sm border border-border hover:border-primary hover:shadow-md transition-all text-left"
+						>
+							<div class="flex items-start gap-6 mb-6">
+								<img src={project.iconSrc} alt={project.iconAlt} width="80" height="80" class="w-20 h-20 rounded-2xl shadow-lg shrink-0" loading="lazy" />
+								<div class="min-w-0 pt-1">
+									<h3 class="text-2xl mb-2 group-hover:text-primary transition-colors">{t(project.nameKey)}</h3>
+									<p class="text-foreground/60 text-sm">
+										{t(project.tagKey)} · {t(project.updatedKey)}
+									</p>
+								</div>
+							</div>
+							<p class="text-foreground/80 leading-relaxed">{t(project.descriptionKey)}</p>
+						</a>
+					))
+				}
 			</div>
 
 			<div class="text-center">
-				<a href="/projects" class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-					<span data-i18n-key="home.projects.viewAll">View all projects</span>
+				<a href={`${sitePath('/casos-y-precios', lang)}#casos`} class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
+					{t('home.projects.viewAll')}
 					<span aria-hidden="true">→</span>
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-16 md:py-24 bg-white">
+	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl mb-4" data-i18n-key="home.blog.title">Blog</h2>
-				<p class="text-lg text-foreground/70 max-w-2xl mx-auto" data-i18n-key="home.blog.subtitle">
-					Latest articles from Bitdesal on LinkedIn
-				</p>
+				<h2 class="text-3xl md:text-4xl mb-4">{t('home.blog.title')}</h2>
+				<p class="text-lg text-foreground/70 max-w-2xl mx-auto">{t('home.blog.subtitle')}</p>
 			</div>
-
-			<LinkedInPostsCarousel posts={linkedInPosts} />
+			<LinkedInPostsCarousel posts={linkedInPosts.slice(0, 3)} />
+			<div class="text-center mt-10">
+				<a href={sitePath('/blog', lang)} class="inline-flex items-center gap-2 text-primary text-lg hover:gap-3 transition-all">
+					{t('home.blog.viewAll')}
+					<span aria-hidden="true">→</span>
+				</a>
+			</div>
 		</div>
 	</section>
 

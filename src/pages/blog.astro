@@ -1,186 +1,75 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import CtaSection from '../components/CtaSection.astro';
+import LinkedInPostCard from '../components/LinkedInPostCard.astro';
+import Layout from '../layouts/Layout.astro';
+import { linkedInPosts } from '../data/linkedInPosts';
+import { sitePath } from '../data/siteNav';
+import { useI18n } from '../i18n/useI18n';
+import { getCollection } from 'astro:content';
+
+const { lang, t } = useI18n(Astro);
+
+const allPosts = await getCollection('blog');
+const localPosts = allPosts
+	.filter((post) => !/^(en|fi)\//.test(post.id))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function localizedPost(post: (typeof localPosts)[number]) {
+	if (lang === 'es') return post;
+	return allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post;
+}
+
 ---
 
-<Layout>
-	<section class="bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+<Layout seo="blog">
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h1 class="text-4xl md:text-5xl mb-6" data-i18n-key="blog.hero.title">Technical Blog</h1>
-			<p class="text-xl text-white/90 max-w-3xl mx-auto" data-i18n-key="blog.hero.subtitle">
-				Articles about Android development, AI, software architecture and remote work methodologies
-			</p>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex flex-wrap gap-3 mb-12 justify-center">
-				<button class="px-4 py-2 rounded-lg transition-colors bg-primary text-white" data-i18n-key="blog.categories.all">
-					All
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.android"
-				>
-					Android
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.ai"
-				>
-					AI
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.architecture"
-				>
-					Architecture
-				</button>
-				<button
-					class="px-4 py-2 rounded-lg transition-colors bg-secondary text-foreground hover:bg-secondary/80"
-					data-i18n-key="blog.categories.methodology"
-				>
-					Methodology
-				</button>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				<article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group">
-					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-						<span class="text-white/20 text-6xl">1</span>
-					</div>
-					<div class="p-6">
-						<div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap">
-							<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full">Android</span>
-							<span class="flex items-center gap-1">📅 2026-04-15</span>
-							<span class="flex items-center gap-1">⏱ 8 min</span>
-						</div>
-						<h3 class="text-xl mb-3 group-hover:text-primary transition-colors">
-							Migración de Java a Kotlin: Lecciones aprendidas
-						</h3>
-						<p class="text-foreground/70 mb-4">
-							Después de migrar múltiples proyectos Android de Java a Kotlin, estas son las estrategias que mejor
-							funcionan.
-						</p>
-						<button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-							Leer más <span aria-hidden="true">→</span>
-						</button>
-					</div>
-				</article>
-
-				<article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group">
-					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-						<span class="text-white/20 text-6xl">2</span>
-					</div>
-					<div class="p-6">
-						<div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap">
-							<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full">Android</span>
-							<span class="flex items-center gap-1">📅 2026-04-01</span>
-							<span class="flex items-center gap-1">⏱ 12 min</span>
-						</div>
-						<h3 class="text-xl mb-3 group-hover:text-primary transition-colors">
-							Jetpack Compose: Arquitectura para apps escalables
-						</h3>
-						<p class="text-foreground/70 mb-4">
-							Cómo estructurar aplicaciones Compose con MVVM y Clean Architecture para mantener la escalabilidad.
-						</p>
-						<button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-							Leer más <span aria-hidden="true">→</span>
-						</button>
-					</div>
-				</article>
-
-				<article class="border border-border rounded-lg overflow-hidden hover:border-primary transition-colors group">
-					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-						<span class="text-white/20 text-6xl">3</span>
-					</div>
-					<div class="p-6">
-						<div class="flex items-center gap-4 text-sm text-foreground/70 mb-3 flex-wrap">
-							<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary rounded-full" data-i18n-key="blog.categories.ai">
-								AI
-							</span>
-							<span class="flex items-center gap-1">📅 2026-03-20</span>
-							<span class="flex items-center gap-1">⏱ 10 min</span>
-						</div>
-						<h3 class="text-xl mb-3 group-hover:text-primary transition-colors">Agentes de IA que realmente funcionan</h3>
-						<p class="text-foreground/70 mb-4">
-							Más allá del hype: cómo diseñar e implementar agentes conversacionales que generan ROI medible.
-						</p>
-						<button class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
-							Leer más <span aria-hidden="true">→</span>
-						</button>
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-16 md:py-24 bg-secondary">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="max-w-3xl mx-auto text-center">
-				<h2 class="text-3xl md:text-4xl mb-6" data-i18n-key="blog.newsletter.title">Subscribe to Newsletter</h2>
-				<p class="text-lg text-foreground/80 mb-8" data-i18n-key="blog.newsletter.description">
-					Receive new technical articles directly in your email.
-				</p>
-				<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-					<input
-						type="email"
-						data-i18n-key="blog.newsletter.placeholder"
-						data-i18n-attr="placeholder"
-						placeholder="your@email.com"
-						class="flex-1 px-4 py-3 rounded-lg border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-					/>
-					<button
-						type="submit"
-						class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
-						data-i18n-key="blog.newsletter.button"
-					>
-						Subscribe
-					</button>
-				</form>
-				<p class="text-sm text-foreground/60 mt-4" data-i18n-key="blog.newsletter.frequency">
-					We publish approximately 2 articles per month
-				</p>
+			<h1 class="text-4xl md:text-5xl mb-6">{t('blog.hero.title')}</h1>
+			<p class="text-xl text-white/90 max-w-3xl mx-auto">{t('blog.hero.subtitle')}</p>
+			<div class="flex flex-wrap justify-center gap-3 mt-8" data-blog-filters>
+				<a href="?" data-blog-filter="" class="blog-filter px-4 py-2 rounded-full text-sm border bg-white text-primary border-white">{t('blog.filters.all')}</a>
+				<a href="?audience=business" data-blog-filter="business" class="blog-filter px-4 py-2 rounded-full text-sm border border-white/40 text-white/90">{t('blog.filters.business')}</a>
+				<a href="?audience=technical" data-blog-filter="technical" class="blog-filter px-4 py-2 rounded-full text-sm border border-white/40 text-white/90">{t('blog.filters.technical')}</a>
 			</div>
 		</div>
 	</section>
 
 	<section class="py-16 md:py-24 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl md:text-4xl mb-12 text-center" data-i18n-key="blog.popularTopics.title">Popular Topics</h2>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+			{
+				localPosts.length > 0 && (
+					<div data-blog-section>
+						<h2 class="text-2xl mb-6">{t('blog.onSite')}</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+							{localPosts.map((post) => {
+									const shown = localizedPost(post);
+									return (
+									<article data-blog-audience={post.data.audience} class="border border-border rounded-xl p-6 hover:border-primary transition-colors">
+										<p class="text-xs uppercase tracking-wide text-foreground/50 mb-2">
+											{post.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical')}
+										</p>
+										<h3 class="text-xl mb-2">
+											<a href={sitePath(`/blog/${post.id}`, lang)} class="hover:text-primary">
+												{shown.data.title}
+											</a>
+										</h3>
+										<p class="text-foreground/70 text-sm">{shown.data.description}</p>
+									</article>
+									);
+								})}
+						</div>
+					</div>
+				)
+			}
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.kotlinAdvanced">Advanced Kotlin</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.kotlinDescription">
-						Coroutines, Flow, DSLs and advanced Kotlin techniques
-					</p>
-					<span class="text-primary text-sm">12 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
-
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.compose">Jetpack Compose</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.composeDescription">
-						Everything about declarative UI in Android with Compose
-					</p>
-					<span class="text-primary text-sm">18 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
-
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.architecture">Architecture</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.architectureDescription">
-						Patterns, Clean Architecture, MVVM, MVI and more
-					</p>
-					<span class="text-primary text-sm">15 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
-				</div>
-
-				<div class="border border-border rounded-lg p-6 hover:border-primary transition-colors">
-					<h3 class="mb-2" data-i18n-key="blog.popularTopics.practicalAI">Practical AI</h3>
-					<p class="text-foreground/70 text-sm mb-3" data-i18n-key="blog.popularTopics.practicalAIDescription">
-						Real implementation of LLMs, agents and automation
-					</p>
-					<span class="text-primary text-sm">8 <span data-i18n-key="blog.popularTopics.articles">articles</span></span>
+			<div data-blog-section>
+				<h2 class="text-2xl mb-6">{t('blog.external')}</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					{linkedInPosts.map((post) => (
+						<div data-blog-audience={post.audience}>
+							<LinkedInPostCard post={post} />
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
@@ -189,3 +78,44 @@ import CtaSection from '../components/CtaSection.astro';
 	<CtaSection />
 </Layout>
 
+<script>
+	const activeClasses = ['bg-white', 'text-primary', 'border-white'];
+	const idleClasses = ['border-white/40', 'text-white/90'];
+
+	function currentFilter(): string {
+		return new URLSearchParams(window.location.search).get('audience') ?? '';
+	}
+
+	function applyFilter(filter: string) {
+		document.querySelectorAll<HTMLElement>('[data-blog-audience]').forEach((card) => {
+			card.hidden = Boolean(filter) && card.dataset.blogAudience !== filter;
+		});
+		document.querySelectorAll<HTMLElement>('[data-blog-section]').forEach((section) => {
+			const visible = [...section.querySelectorAll<HTMLElement>('[data-blog-audience]')].some((card) => !card.hidden);
+			section.hidden = !visible;
+		});
+		document.querySelectorAll<HTMLAnchorElement>('[data-blog-filter]').forEach((link) => {
+			const selected = (link.dataset.blogFilter ?? '') === filter;
+			link.classList.remove(...activeClasses, ...idleClasses);
+			link.classList.add(...(selected ? activeClasses : idleClasses));
+			if (selected) link.setAttribute('aria-current', 'true');
+			else link.removeAttribute('aria-current');
+		});
+	}
+
+	applyFilter(currentFilter());
+
+	document.querySelectorAll<HTMLAnchorElement>('[data-blog-filter]').forEach((link) => {
+		link.addEventListener('click', (event) => {
+			event.preventDefault();
+			const filter = link.dataset.blogFilter ?? '';
+			const url = new URL(window.location.href);
+			if (filter) url.searchParams.set('audience', filter);
+			else url.searchParams.delete('audience');
+			history.pushState({}, '', url);
+			applyFilter(filter);
+		});
+	});
+
+	window.addEventListener('popstate', () => applyFilter(currentFilter()));
+</script>
