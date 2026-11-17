@@ -20,12 +20,12 @@ faq:
   - q: '¿Qué es el desarrollo guiado por especificación (SDD)?'
     a: 'Tratar la especificación escrita como el producto principal: historia de usuario, criterios de aceptación y plan antes de que el agente toque el repositorio.'
   - q: '¿Cómo medís el retorno de la IA?'
-    a: 'No por líneas generadas, sino por si ahorráis tiempo revisable en un encargo concreto — ROAI: return on AI investment — con límites de tokens y calidad igual que sin IA.'
+    a: 'No por líneas generadas, sino por si ahorráis tiempo revisable en un encargo concreto, ROAI: return on AI investment, con límites de tokens y calidad igual que sin IA.'
 ---
 
 El hype empuja a **generar más código en menos tiempo**. Nosotros trabajamos con una regla distinta: **ingeniería primero**. La IA es herramienta, no sustituto del criterio. Este manifiesto resume cómo la usamos en Bitdesal sin caer en el «vibe coding».
 
-<blockquote class="bf-pullquote">Si no puedes depurar el código cuando producción falla, no deberías haberlo mergeado — aunque lo haya escrito un agente.</blockquote>
+<blockquote class="bf-pullquote">Si no puedes depurar el código cuando producción falla, no deberías haberlo mergeado, aunque lo haya escrito un agente.</blockquote>
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">01</span>
@@ -47,7 +47,7 @@ En la era de la IA, el activo principal no es el último commit: es la **especif
   <li>Definir y refinar la historia de usuario.</li>
   <li>Planificar arquitectura y límites entre capas.</li>
   <li>Partir en tareas pequeñas con criterios de aceptación.</li>
-  <li>Solo entonces: implementar — a mano, con asistente o con agente.</li>
+  <li>Solo entonces: implementar, a mano, con asistente o con agente.</li>
 </ol>
 
 Eso es desarrollo guiado por especificación (SDD). Sin spec, el agente improvisa y tú pagas iteraciones. Lo vimos en carne viva en el relato del <a href="/blog/insomnio-agentes-ia-funcion-sencilla/">selector de idioma de «dos horas»</a>.
@@ -84,7 +84,7 @@ Los agentes ejecutan. **Tú** defines el modelo mental, los límites y qué entr
   <span class="bf-section-title"><span class="bf-section-lead">Economía del token</span> <span class="bf-section-accent">y sostenibilidad</span></span>
 </h2>
 
-Hoy muchos costes de API están **subvencionados** o son más bajos que mañana. Las especificaciones vagas provocan alucinaciones e iteraciones fallidas — es decir, tokens tirados. Con SDD construyes una biblioteca de **planos ejecutables** que siguen siendo baratos aunque el precio por token suba.
+Hoy muchos costes de API están **subvencionados** o son más bajos que mañana. Las especificaciones vagas provocan alucinaciones e iteraciones fallidas, es decir, tokens tirados. Con SDD construyes una biblioteca de **planos ejecutables** que siguen siendo baratos aunque el precio por token suba.
 
 Si te interesa el lado económico, encaja con <a href="/blog/puedes-permitirte-desarrollo-asistido-ia/">qué cuesta de verdad el desarrollo asistido por IA</a>.
 

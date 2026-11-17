@@ -507,7 +507,7 @@ export const translations: Record<Language, any> = {
 							'Un selector de idioma con IA que debía llevar dos horas acabó en una maratón nocturna. Tres lecciones sobre criterios de aceptación y revisión automática.',
 					},
 					afford: {
-						title: '¿Puedes permitirte el desarrollo asistido por IA?',
+						title: '¿Puedes permitirte el desarrollo asistido por IA? Sí, si lo haces con cabeza',
 						imageAlt: 'Manos abriendo una cartera vacía',
 						date: '1 jun 2026',
 						excerpt:
@@ -1654,7 +1654,7 @@ export const translations: Record<Language, any> = {
 							'A language switcher that should take two hours turned into an overnight AI marathon. Three lessons on acceptance criteria and automated review.',
 					},
 					afford: {
-						title: 'Can you afford your AI assisted development?',
+						title: 'Can you afford AI-assisted development? Yes, if you do it thoughtfully',
 						imageAlt: 'Hands opening an empty wallet',
 						date: 'June 1, 2026',
 						excerpt:
@@ -2751,7 +2751,7 @@ export const translations: Record<Language, any> = {
 							'Kielivalitsin, jonka piti viedä kaksi tuntia, venyi yön yli tekoälyn kanssa. Kolme oppituntia hyväksymiskriteereistä ja automaattisesta tarkastuksesta.',
 					},
 					afford: {
-						title: 'Voitko sallia tekoälyavusteisen kehityksesi?',
+						title: 'Voitko maksaa tekoälyavusteisen kehityksen? Kyllä, jos teet sen järkevästi',
 						imageAlt: 'Kädet avaavat tyhjää lompakkoa',
 						date: '1.6.2026',
 						excerpt:

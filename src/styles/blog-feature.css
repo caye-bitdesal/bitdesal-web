@@ -234,6 +234,11 @@ html.dark .bf-section-accent {
   color: var(--foreground);
 }
 
+.bf-prose .bf-bento-card--dark strong,
+.bf-prose .bf-callout strong {
+  color: inherit;
+}
+
 .bf-prose ol,
 .bf-prose ul {
   margin: 1.25rem 0 1.5rem;
@@ -300,10 +305,19 @@ html.dark .bf-section-accent {
 /* Fotos y assets con proporción propia (no forzar 16:9) */
 .bf-figure.bf-figure--natural img {
   aspect-ratio: auto;
-  height: auto;
+  width: auto;
   max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
   object-fit: scale-down;
   object-position: center;
+  border-radius: var(--bf-img-radius);
+}
+
+.bf-figure.bf-figure--natural:has(figcaption) img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .bf-figure figcaption {

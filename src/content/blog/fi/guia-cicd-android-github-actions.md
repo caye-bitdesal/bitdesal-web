@@ -24,7 +24,7 @@ faq:
     a: 'Kolme: main.yml (laatu PR:ssä ja pushissa mainiin), ai-code-review.yml (automaattinen toinen mielipide) ja release.yml (syvä validointi, allekirjoitus, Playn sisäinen kanava).'
 ---
 
-Tässä oppaassa käydään läpi oikea GitHub Actions -asetelma Android-sovelluksessa: **kolme workflowta**, jotka täydentävät toisiaan — nopeat tarkistukset pull requestissa, tekoälyavusteinen koodikatselmus ja hitaampi julkaisuautomaatio (visuaaliset testit, emulaattori, allekirjoitus, Google Play -lataus ja tiimille ilmoitus).
+Tässä oppaassa käydään läpi oikea GitHub Actions -asetelma Android-sovelluksessa: **kolme workflowta**, jotka täydentävät toisiaan, nopeat tarkistukset pull requestissa, tekoälyavusteinen koodikatselmus ja hitaampi julkaisuautomaatio (visuaaliset testit, emulaattori, allekirjoitus, Google Play -lataus ja tiimille ilmoitus).
 
 Sinun ei tarvitse tuntea sovellusta tai sen sisäisiä yksityiskohtia. Kuviot sopivat useimpiin Gradle-pohjaisiin Android-projekteihin.
 
@@ -37,8 +37,8 @@ Sinun ei tarvitse tuntea sovellusta tai sen sisäisiä yksityiskohtia. Kuviot so
 
 Ajattele **kahta ovea** ja ylimääräistä katselmoijaa ensimmäisellä:
 
-1. **Laatuportti** — voidaanko mergata? (build, testit, tyyli, lint, tekoälykatselmus, ihmiskatselmus)
-2. **Lähtölaituri** — voivatko testaajat asentaa sen? (syvemmät testit, allekirjoitettu bundle, Playn sisäinen kanava)
+1. **Laatuportti**, voidaanko mergata? (build, testit, tyyli, lint, tekoälykatselmus, ihmiskatselmus)
+2. **Lähtölaituri**, voivatko testaajat asentaa sen? (syvemmät testit, allekirjoitettu bundle, Playn sisäinen kanava)
 
 | | CI (`main.yml`) | Tekoälykatselmus (`ai-code-review.yml`) | Release (`release.yml`) |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ Ajattele **kahta ovea** ja ylimääräistä katselmoijaa ensimmäisellä:
 | **Emulaattori?** | Ei | Ei | Kyllä |
 | **Julkaisee Playhin?** | Ei | Ei | Kyllä (sisäinen kanava) |
 
-Mekaaniikkatarkistusten erottaminen releasesta pitää PR:t kevyinä. Tekoälykatselmus kulkee **rinnakkain** CI:n kanssa — kukaan ei odota emulaattoria typon korjaamisen takia, ja tekijä saa toisen mielipiteen diffistä samalla kun Gradle kääntää.
+Mekaaniikkatarkistusten erottaminen releasesta pitää PR:t kevyinä. Tekoälykatselmus kulkee **rinnakkain** CI:n kanssa, kukaan ei odota emulaattoria typon korjaamisen takia, ja tekijä saa toisen mielipiteen diffistä samalla kun Gradle kääntää.
 
 <blockquote class="bf-pullquote">Mergen pitää olla nopea ja mekaaninen. Releasen pitää olla hidas, allekirjoitettu ja toistettava.</blockquote>
 
@@ -57,11 +57,11 @@ Mekaaniikkatarkistusten erottaminen releasesta pitää PR:t kevyinä. Tekoälyka
   <span class="bf-section-title"><span class="bf-section-lead">Ennen CI:tä:</span> <span class="bf-section-accent">miten työ tulee putkeen</span></span>
 </h2>
 
-Automaatio ei ala «pushista». Se alkaa aiemmin — siitä, miten tiimi **järjestää työn**.
+Automaatio ei ala «pushista». Se alkaa aiemmin, siitä, miten tiimi **järjestää työn**.
 
 <h3 class="text-xl font-medium mt-8 mb-4">Haarautuminen ja merge-virta</h3>
 
-Kun otamme issue:n työn alle, haarautumme `main`ista. Jos issue on suuri, pilkomme sen **alikysymyksiin (sub-issue)** — jokaisella on oma haaransa, mutta se haarautuu feature-haaran vanhemmasta haarasta, ei suoraan `main`ista. Alikysymysten PR:t mergataan takaisin vanhempaan haaraukseen valmistuessaan. Vasta kun kaikki alikysymykset on integroitu ja feature on valmis, mergaamme vanhemman haaran `main`iin — ja **se** merge laukaisee uuden release candidate -version.
+Kun otamme issue:n työn alle, haarautumme `main`ista. Jos issue on suuri, pilkomme sen **alikysymyksiin (sub-issue)**, jokaisella on oma haaransa, mutta se haarautuu feature-haaran vanhemmasta haarasta, ei suoraan `main`ista. Alikysymysten PR:t mergataan takaisin vanhempaan haaraukseen valmistuessaan. Vasta kun kaikki alikysymykset on integroitu ja feature on valmis, mergaamme vanhemman haaran `main`iin, ja **se** merge laukaisee uuden release candidate -version.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/git-branches.webp" alt="Haaradiagrammi: main, feature-haaran vanhempi haara ja sub-issue -haarat pull requesteineen" width="1200" height="675" loading="lazy" />
@@ -93,14 +93,14 @@ Itse PR:t kantavat kontekstia: tavoitteet, ei-tavoitteet ja **testauschecklist**
   <figcaption>Tavoitteet, laajuus ja testit ennen ihmiskatselmusta.</figcaption>
 </figure>
 
-**Miksi tämä merkitsee CI:lle:** selkeä laajuus vähentää yllätyksiä. Jos lint tai testi kaatuu, tiedät mikä featuren siivu hajosi — et kokonaista monen viikon eeposta.
+**Miksi tämä merkitsee CI:lle:** selkeä laajuus vähentää yllätyksiä. Jos lint tai testi kaatuu, tiedät mikä featuren siivu hajosi, et kokonaista monen viikon eeposta.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">03</span>
   <span class="bf-section-title"><span class="bf-section-lead">Tekoälykatselmus</span> <span class="bf-section-accent">pull requesteissa</span></span>
 </h2>
 
-Kun PR avataan tai siihen tulee uusia commiteja, `ai-code-review.yml` käynnistyy **rinnakkain** CI:n kanssa — ei sen sisällä. Molemmilla on sama triggeri; kumpikaan ei odota toista.
+Kun PR avataan tai siihen tulee uusia commiteja, `ai-code-review.yml` käynnistyy **rinnakkain** CI:n kanssa, ei sen sisällä. Molemmilla on sama triggeri; kumpikaan ei odota toista.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/ai-review-sequence.webp" alt="Sekvenssi: push PR:ään, Gradlen CI-työt ja tekoälykatselmus kommentoimassa pull requestiin" width="1200" height="675" loading="lazy" />
@@ -122,9 +122,9 @@ Workflow ohittaa bottien (Dependabot, Renovate) PR:t ja peruu käynnissä olevat
 
 **Mitä pitää konfiguroida:** repositorion salaisuus `GEMINI_API_KEY` ja `pull-requests: write` -oikeus, jotta botti voi kommentoida. Sisäänrakennettu `GITHUB_TOKEN` riittää repo-oikeuksiin.
 
-**Mihin se sopii:** logiikkabuugit, tyypilliset Android-virheet ja luettavuusongelmat ennen kuin ihminen avaa tiedoston — etenkin pienillä tiimeillä, joilla on vähän katselmuksen kaistaa.
+**Mihin se sopii:** logiikkabuugit, tyypilliset Android-virheet ja luettavuusongelmat ennen kuin ihminen avaa tiedoston, etenkin pienillä tiimeillä, joilla on vähän katselmuksen kaistaa.
 
-**Mihin se ei sovellu:** se ei korvaa ihmiskatselmusta eikä ole pakollinen check. CI voi olla vihreä samalla kun tekoäly merkitsee oikean bugin kommenttiin — näin on tarkoitettu.
+**Mihin se ei sovellu:** se ei korvaa ihmiskatselmusta eikä ole pakollinen check. CI voi olla vihreä samalla kun tekoäly merkitsee oikean bugin kommenttiin, näin on tarkoitettu.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">04</span>
@@ -141,15 +141,15 @@ Kun avaat PR:n, GitHub Actions käynnistää **viisi CI-työtä rinnakkain** (lo
   <figcaption>Viisi selkeästi nimettyä checkiä PR-näkymässä.</figcaption>
 </figure>
 
-**Luonnos-PR:t** ohittavat raskaammat työt — unit-testit, Android Lintin ja release-buildin tarkistuksen — jotta kesken oleva työ ei kuluta CI-minuutteja.
+**Luonnos-PR:t** ohittavat raskaammat työt, unit-testit, Android Lintin ja release-buildin tarkistuksen, jotta kesken oleva työ ei kuluta CI-minuutteja.
 
 <h3 class="text-xl font-medium mt-8 mb-4">Mitä kukin työ tekee (ja miksi)</h3>
 
-- **Build app** — kääntää debug-APK:n ja lataa sen artefaktina.
-- **Unit tests** — JVM-testit ja Robolectric-pohjaiset Compose UI -testit.
-- **Kt lint check** — Kotlin-tyylisäännöt.
-- **Android lint check** — Androidin staattinen analyysi debug-variantille.
-- **Make sure release build work** — purkaa keystoren salatuista secretseistä ja kääntää **release-bundlen** julkaisematta mitään.
+- **Build app**, kääntää debug-APK:n ja lataa sen artefaktina.
+- **Unit tests**, JVM-testit ja Robolectric-pohjaiset Compose UI -testit.
+- **Kt lint check**, Kotlin-tyylisäännöt.
+- **Android lint check**, Androidin staattinen analyysi debug-variantille.
+- **Make sure release build work**, purkaa keystoren salatuista secretseistä ja kääntää **release-bundlen** julkaisematta mitään.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/pr-ci-sequence.webp" alt="Pull requestin CI-sekvenssikaavio Gradlen ja tekoälykatselmuksen kanssa" width="1200" height="675" loading="lazy" />
@@ -184,7 +184,7 @@ Mergen päivänä alkaa syvempi validointi. Release-workflowssa on **kolme ylät
 
 Compose-esikatselut renderöidään ja verrataan pikseli pikseliltä repoon tallennettuihin referenssikuviin.
 
-Jos referenssejä ei ole vielä, putki generoi ne, commitoi takaisin ja **ohittaa** validoinnin sillä ajolla — kertaluonteinen käynnistys.
+Jos referenssejä ei ole vielä, putki generoi ne, commitoi takaisin ja **ohittaa** validoinnin sillä ajolla, kertaluonteinen käynnistys.
 
 Normaalilla ajolla mikä tahansa visuaalinen poikkeama rikkoo buildin ja lataa ladattavan diff-raportin Actions-artifakteihin.
 
@@ -196,11 +196,11 @@ Normaalilla ajolla mikä tahansa visuaalinen poikkeama rikkoo buildin ja lataa l
 
 Tässä käynnistämme **oikean Android-emulaattorin** runnerilla (API 30, optimoitu testikuva) ja ajamme instrumentoidut testit päästä päähän.
 
-**Hyöty:** testaa oikeaa kehysympäristöä — elinkaari, SQLite, oikeudet, navigointi — tavoilla, joita JVM ei täysin replikoi.
+**Hyöty:** testaa oikeaa kehysympäristöä, elinkaari, SQLite, oikeudet, navigointi, tavoilla, joita JVM ei täysin replikoi.
 
 Raportit ladataan aina, menivät läpi tai eivät, jotta debuggaus ei vaadi emulaattorin toistamista paikallisesti.
 
-### Työ C: Build release AAB — pääesitys
+### Työ C: Build release AAB, pääesitys
 
 Kun visuaaliset ja integraatiotestit menevät läpi, **Build release AAB** -työ ottaa ohjat. Viimeisellä ajolla se kesti noin **kuusi ja puoli minuuttia** alusta loppuun:
 
@@ -211,7 +211,7 @@ Kun visuaaliset ja integraatiotestit menevät läpi, **Build release AAB** -työ
 
 **Mitä tapahtuu sisällä, järjestyksessä:**
 
-**1. Laske versio** — emme muokkaa build-tiedostoa käsin julkaisupäivänä. Putki lukee git-tagit `rc-*` ja kasvattaa version automaattisesti:
+**1. Laske versio**, emme muokkaa build-tiedostoa käsin julkaisupäivänä. Putki lukee git-tagit `rc-*` ja kasvattaa version automaattisesti:
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/version-tags.webp" alt="Päätöskaavio versionName- ja versionCode-arvoille rc-tageista mainissa" width="1200" height="675" loading="lazy" />
@@ -222,19 +222,19 @@ Kun visuaaliset ja integraatiotestit menevät läpi, **Build release AAB** -työ
 - Version nimi: `1.0.1`
 - Version koodi: `10005` (kaava: major×10000 + minor×100 + patch)
 
-**2. Valmistele ja varmenna allekirjoitus** — upload-keystore **ei koskaan** ole gitissä. Se on salattu secret, puretaan runnerilla ja varmennetaan tavallisilla Java-työkaluilla ennen Gradlea.
+**2. Valmistele ja varmenna allekirjoitus**, upload-keystore **ei koskaan** ole gitissä. Se on salattu secret, puretaan runnerilla ja varmennetaan tavallisilla Java-työkaluilla ennen Gradlea.
 
-**3. Build ja julkaisu — yksi Gradle-kutsu**
+**3. Build ja julkaisu, yksi Gradle-kutsu**
 
 Yksi komento rakentaa allekirjoitetun Android App Bundlen ja lataa sen Playhin:
 
 `bundleRelease` + `publishReleaseBundle`
 
-Julkaisu käyttää Gradle Play Publisher -pluginia (Triple-T) ja kohdistaa **sisäiselle kanavalle**. Ei «lataa AAB, avaa Play Console, klikkaa lataa». Toistettavaa, logitettua ja tylsää — paras release-prosessi.
+Julkaisu käyttää Gradle Play Publisher -pluginia (Triple-T) ja kohdistaa **sisäiselle kanavalle**. Ei «lataa AAB, avaa Play Console, klikkaa lataa». Toistettavaa, logitettua ja tylsää, paras release-prosessi.
 
 **4. Työn yhteenveto, artefakti ja git-tagi**
 
-Workflow kirjoittaa luettavan taulukon Actions-yhteenvetoon, lataa `.aab`-tiedoston artefaktina ja pushaa `rc-*`-tagin (ellei committia ole jo tagattu — turvallinen uudelleenajoille).
+Workflow kirjoittaa luettavan taulukon Actions-yhteenvetoon, lataa `.aab`-tiedoston artefaktina ja pushaa `rc-*`-tagin (ellei committia ole jo tagattu, turvallinen uudelleenajoille).
 
 **5. Ilmoitus tiimille**
 
@@ -261,11 +261,11 @@ Tässä esimerkissä käytämme Discordia; sama malli sopii Slackiin, sähköpos
 </figure>
 
 <ol class="bf-steps">
-  <li><strong>Suunnittele</strong> — jaa featuret sub-issueihin; dokumentoi tavoitteet ja testisuunnitelma PR:ään.</li>
-  <li><strong>Avaa PR</strong> — CI (pakollinen) ja tekoälykatselmus (ohjeellinen) rinnakkain; molemmat ruokkivat ihmiskatselmusta.</li>
-  <li><strong>Merge</strong> — CI ajaa uudelleen `main`issa ja release-putki käynnistyy.</li>
-  <li><strong>Release OK</strong> — allekirjoitettu build sisäiselle kanavalle; tiimi ilmoitettu Discordissa (tai muulla kanavalla).</li>
-  <li><strong>Promotoi kun valmista</strong> — tuotanto on edelleen tietoinen ihmispäätös.</li>
+  <li><strong>Suunnittele</strong>, jaa featuret sub-issueihin; dokumentoi tavoitteet ja testisuunnitelma PR:ään.</li>
+  <li><strong>Avaa PR</strong>, CI (pakollinen) ja tekoälykatselmus (ohjeellinen) rinnakkain; molemmat ruokkivat ihmiskatselmusta.</li>
+  <li><strong>Merge</strong>, CI ajaa uudelleen `main`issa ja release-putki käynnistyy.</li>
+  <li><strong>Release OK</strong>, allekirjoitettu build sisäiselle kanavalle; tiimi ilmoitettu Discordissa (tai muulla kanavalla).</li>
+  <li><strong>Promotoi kun valmista</strong>, tuotanto on edelleen tietoinen ihmispäätös.</li>
 </ol>
 
 Viimeinen askel on tarkoituksellinen. Automaatio poistaa toiston; sinä päätät mitä oikeat käyttäjät saavat.
@@ -313,10 +313,10 @@ Jos jotain vuotaa, **kierrätä heti**. Secretit pysyvät salaisina: mikään lo
 </div>
 
 <ul class="list-disc pl-6 my-6 space-y-2 text-foreground/85">
-  <li><strong>Tagipohjainen versionointi</strong> — vähemmän maanantaiaamun väittelyä; historia jää gittiin.</li>
-  <li><strong>Bundle + julkaisu yhdessä Gradle-askeleessa</strong> — vähemmän kutsuja, vähemmän allekirjoitusyllätyksiä.</li>
-  <li><strong>Ilmoita kanavassa, jota luetaan</strong> — vihreä check Actionsissa auttaa; tiimin pitää tietää mikä versio on sisäisellä kanavalla.</li>
-  <li><strong>Manuaalinen tuotantopromootio</strong> — päätät mitä oikeille käyttäjille menee.</li>
+  <li><strong>Tagipohjainen versionointi</strong>, vähemmän maanantaiaamun väittelyä; historia jää gittiin.</li>
+  <li><strong>Bundle + julkaisu yhdessä Gradle-askeleessa</strong>, vähemmän kutsuja, vähemmän allekirjoitusyllätyksiä.</li>
+  <li><strong>Ilmoita kanavassa, jota luetaan</strong>, vihreä check Actionsissa auttaa; tiimin pitää tietää mikä versio on sisäisellä kanavalla.</li>
+  <li><strong>Manuaalinen tuotantopromootio</strong>, päätät mitä oikeille käyttäjille menee.</li>
 </ul>
 
 <section class="bf-conclusion">
@@ -327,7 +327,7 @@ Jos jotain vuotaa, **kierrätä heti**. Secretit pysyvät salaisina: mikään lo
     </div>
     <div class="bf-conclusion-body">
       <p>Hyvä CI/CD ei ole yksi YAML, joka tekee kaiken. Se on ketju: jäsennellyt issuet, dokumentoidut PR:t, automaattinen tyyli ja testit, tekoälyavusteinen katselmus, ihmisen hyväksyntä, emulaattori- ja visuaalivalidointi, allekirjoitetut artefaktit ja tönäys tiimille, kun build menee sisäiselle kanavalle.</p>
-      <p>Kolme workflow-tiedostoa. Nolla manuaalista latausta. Jokainen PR saa mekaaniset checkit ja tekoälyn ensikatselmuksen; jokainen merge tuo allekirjoitetun buildin sisäiselle kanavalle — ja tiimi tietää aina mikä versio on kyseessä.</p>
+      <p>Kolme workflow-tiedostoa. Nolla manuaalista latausta. Jokainen PR saa mekaaniset checkit ja tekoälyn ensikatselmuksen; jokainen merge tuo allekirjoitetun buildin sisäiselle kanavalle, ja tiimi tietää aina mikä versio on kyseessä.</p>
       <p>Kuvakaappaukset ovat oikeasta GitHub Actions -asetelmasta. Jos haluat apua putken arviointiin tai rakentamiseen, katso <a href="/fi/consultoria-android/">Android-sovelluskehitys</a> tai <a href="https://cal.com/bitdesal/30min">varaa 30 minuuttia</a>. Myös <a href="https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd">alkuperäinen artikkeli Mediumissa</a>.</p>
     </div>
   </div>

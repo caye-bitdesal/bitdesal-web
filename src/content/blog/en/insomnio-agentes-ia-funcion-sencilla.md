@@ -12,7 +12,6 @@ tags:
 keyword: 'AI agents development'
 heroImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
 ogImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
-titleHighlight: 'the 8-hour simple feature'
 subtitle: 'Ever had a “five-minute” task eat your whole day? This one started at an indecent hour, sleepless, with a language switcher that was “sure” to go fast with AI.'
 updatedDate: 2026-11-17
 faq:
@@ -62,7 +61,7 @@ Every fix opened another hole because there was no closed list of “done when�
 
 When the code finally fit together, quality was still poor. I ran the diff through a GitHub workflow we set up for **AI review** (Gemini at the time; recent screenshots show 2.5 Pro).
 
-The bot found real issues — for example an unsafe `AppLanguage.valueOf` reading DataStore — and noise too. That day it weighed on me more than it helped, but the pattern still pays off on teams with little review bandwidth.
+The bot found real issues, for example an unsafe `AppLanguage.valueOf` reading DataStore, and noise too. That day it weighed on me more than it helped, but the pattern still pays off on teams with little review bandwidth.
 
 <figure class="bf-figure">
   <img src="/images/blog/insomnio-agentes-ia-funcion-sencilla/ai-code-review.png" alt="AI review comment on an Android pull request: summary, issues, and suggested Kotlin code" width="1200" height="800" loading="lazy" />

@@ -20,12 +20,12 @@ faq:
   - q: 'What is specification-driven development (SDD)?'
     a: 'Treating the written specification as the main product: user story, acceptance criteria, and plan before the agent touches the repository.'
   - q: 'How do you measure ROI from AI?'
-    a: 'Not by lines generated, but by whether you save reviewable time on a specific engagement — ROAI: return on AI investment — with token limits and the same quality bar as without AI.'
+    a: 'Not by lines generated, but by whether you save reviewable time on a specific engagement, ROAI: return on AI investment, with token limits and the same quality bar as without AI.'
 ---
 
 The hype pushes you to **generate more code in less time**. We work by a different rule: **engineering first**. AI is a tool, not a substitute for judgment. This manifesto sums up how we use it at Bitdesal without falling into "vibe coding."
 
-<blockquote class="bf-pullquote">If you cannot debug the code when production fails, you should not have merged it — even if an agent wrote it.</blockquote>
+<blockquote class="bf-pullquote">If you cannot debug the code when production fails, you should not have merged it, even if an agent wrote it.</blockquote>
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">01</span>
@@ -47,7 +47,7 @@ In the AI era, the main asset is not the latest commit: it is the **specificatio
   <li>Define and refine the user story.</li>
   <li>Plan architecture and boundaries between layers.</li>
   <li>Break into small tasks with acceptance criteria.</li>
-  <li>Only then: implement — by hand, with an assistant, or with an agent.</li>
+  <li>Only then: implement, by hand, with an assistant, or with an agent.</li>
 </ol>
 
 That is specification-driven development (SDD). Without a spec, the agent improvises and you pay in iterations. We saw it firsthand in the story of the <a href="/en/blog/insomnio-agentes-ia-funcion-sencilla/">"two-hour" language switcher</a>.
@@ -84,7 +84,7 @@ Agents execute. **You** define the mental model, boundaries, and what belongs in
   <span class="bf-section-title"><span class="bf-section-lead">Token economics</span> <span class="bf-section-accent">and sustainability</span></span>
 </h2>
 
-Today many API costs are **subsidised** or lower than they will be tomorrow. Vague specifications trigger hallucinations and failed iterations — that is, wasted tokens. With SDD you build a library of **executable blueprints** that stay cheap even when the price per token rises.
+Today many API costs are **subsidised** or lower than they will be tomorrow. Vague specifications trigger hallucinations and failed iterations, that is, wasted tokens. With SDD you build a library of **executable blueprints** that stay cheap even when the price per token rises.
 
 If the economic side interests you, it ties in with <a href="/en/blog/puedes-permitirte-desarrollo-asistido-ia/">what AI-assisted development really costs</a>.
 

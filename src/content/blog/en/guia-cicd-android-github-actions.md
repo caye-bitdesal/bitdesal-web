@@ -24,7 +24,7 @@ faq:
     a: 'Three files: main.yml (quality on PR and push to main), ai-code-review.yml (automated second opinion), and release.yml (deep validation, signing, Play internal track).'
 ---
 
-This guide walks through a real GitHub Actions setup on an Android app: **three workflows** that work together — fast pull-request checks, AI-assisted code review, and slower release automation (visual tests, emulator, signing, Google Play upload, and team notifications).
+This guide walks through a real GitHub Actions setup on an Android app: **three workflows** that work together, fast pull-request checks, AI-assisted code review, and slower release automation (visual tests, emulator, signing, Google Play upload, and team notifications).
 
 You do not need to know the app or its internals. The patterns apply to most Gradle-based Android projects.
 
@@ -37,8 +37,8 @@ You do not need to know the app or its internals. The patterns apply to most Gra
 
 Think of **two doors**, with an extra reviewer at the first one:
 
-1. **Quality gate** — Can we merge? (build, tests, style, lint, AI review, human review)
-2. **Shipping dock** — Can testers install it? (deeper tests, signed bundle, Play internal track)
+1. **Quality gate**, Can we merge? (build, tests, style, lint, AI review, human review)
+2. **Shipping dock**, Can testers install it? (deeper tests, signed bundle, Play internal track)
 
 | | CI (`main.yml`) | AI review (`ai-code-review.yml`) | Release (`release.yml`) |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ Think of **two doors**, with an extra reviewer at the first one:
 | **Emulator?** | No | No | Yes |
 | **Publishes to Play?** | No | No | Yes (internal track) |
 
-Splitting mechanical checks from release keeps pull requests snappy. The AI review runs **in parallel** with CI — nobody waits for an emulator because they fixed a typo, and authors get a second opinion on the diff while Gradle compiles.
+Splitting mechanical checks from release keeps pull requests snappy. The AI review runs **in parallel** with CI, nobody waits for an emulator because they fixed a typo, and authors get a second opinion on the diff while Gradle compiles.
 
 <blockquote class="bf-pullquote">Merging should be fast and mechanical. Release should be slow, signed, and repeatable.</blockquote>
 
@@ -57,11 +57,11 @@ Splitting mechanical checks from release keeps pull requests snappy. The AI revi
   <span class="bf-section-title"><span class="bf-section-lead">Before CI:</span> <span class="bf-section-accent">how work enters</span></span>
 </h2>
 
-Automation does not start at “push.” It starts earlier — with how the team **structures work**.
+Automation does not start at “push.” It starts earlier, with how the team **structures work**.
 
 <h3 class="text-xl font-medium mt-8 mb-4">Branching and merge flow</h3>
 
-When we pick up an issue, we branch from `main`. If the issue is large, we split it into **sub-issues** — each sub-issue gets its own branch, but branched from the parent feature branch, not from `main` directly. Sub-issue pull requests merge back into the parent branch as they complete. Only when every sub-issue is integrated and the feature is ready do we merge the parent branch into `main` — and **that** merge triggers a new release candidate.
+When we pick up an issue, we branch from `main`. If the issue is large, we split it into **sub-issues**, each sub-issue gets its own branch, but branched from the parent feature branch, not from `main` directly. Sub-issue pull requests merge back into the parent branch as they complete. Only when every sub-issue is integrated and the feature is ready do we merge the parent branch into `main`, and **that** merge triggers a new release candidate.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/git-branches.webp" alt="Branch diagram: main, parent feature branch, and sub-issue branches with pull requests between them" width="1200" height="675" loading="lazy" />
@@ -93,14 +93,14 @@ Pull requests carry context too: goals, non-goals, and a **testing checklist** t
   <figcaption>Goals, scope, and tests before human review.</figcaption>
 </figure>
 
-**Why this matters for CI:** clear scope reduces surprise failures. When lint or tests fail, you know which slice of the feature broke — not an entire multi-week epic.
+**Why this matters for CI:** clear scope reduces surprise failures. When lint or tests fail, you know which slice of the feature broke, not an entire multi-week epic.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">03</span>
   <span class="bf-section-title"><span class="bf-section-lead">AI review</span> <span class="bf-section-accent">on pull requests</span></span>
 </h2>
 
-When a PR opens or receives new commits, `ai-code-review.yml` runs **in parallel** with CI — not inside it. Both workflows share the same trigger; neither waits for the other.
+When a PR opens or receives new commits, `ai-code-review.yml` runs **in parallel** with CI, not inside it. Both workflows share the same trigger; neither waits for the other.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/ai-review-sequence.webp" alt="Sequence: push to PR, Gradle CI jobs and AI review commenting on the pull request" width="1200" height="675" loading="lazy" />
@@ -111,7 +111,7 @@ When a PR opens or receives new commits, `ai-code-review.yml` runs **in parallel
 
 1. GitHub Actions checks out the PR diff (base commit vs. head).
 2. A Python script (`ai_review.py`) sends the diff and PR title to an LLM via the Gemini API.
-3. The workflow posts the model’s response as a **comment on the PR** — issues found, things done well, and whether earlier feedback was addressed.
+3. The workflow posts the model’s response as a **comment on the PR**, issues found, things done well, and whether earlier feedback was addressed.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/ai-review-comment.webp" alt="AI review comment on a pull request: enum deserialization bug and good locale API usage" width="1200" height="675" loading="lazy" />
@@ -122,9 +122,9 @@ The workflow skips bot-authored PRs (Dependabot, Renovate) and cancels in-flight
 
 **What you need to set up:** a repository secret `GEMINI_API_KEY` and `pull-requests: write` permission so the bot can comment. The built-in `GITHUB_TOKEN` is enough for repo access.
 
-**What it is good for:** catching logic bugs, Android-specific mistakes, and readability problems before a human opens the file — especially on smaller teams with limited review bandwidth.
+**What it is good for:** catching logic bugs, Android-specific mistakes, and readability problems before a human opens the file, especially on smaller teams with limited review bandwidth.
 
-**What it is not:** a replacement for human review or a required check. CI can be green while the AI flags a real bug in a comment — that is working as designed.
+**What it is not:** a replacement for human review or a required check. CI can be green while the AI flags a real bug in a comment, that is working as designed.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">04</span>
@@ -141,15 +141,15 @@ When you open a PR, GitHub Actions starts **five CI jobs in parallel** (with one
   <figcaption>Five clearly named checks on the PR view.</figcaption>
 </figure>
 
-**Draft PRs** skip the heavier jobs — unit tests, Android Lint, and the release build check — so work in progress does not burn CI minutes.
+**Draft PRs** skip the heavier jobs, unit tests, Android Lint, and the release build check, so work in progress does not burn CI minutes.
 
 <h3 class="text-xl font-medium mt-8 mb-4">What each job does (and why)</h3>
 
-- **Build app** — compiles a debug APK and uploads it as an artifact.
-- **Unit tests** — JVM tests and Robolectric-based Compose UI tests.
-- **Kt lint check** — Kotlin style rules.
-- **Android lint check** — Android’s static analyzer on the debug variant.
-- **Make sure release build work** — decodes the keystore from encrypted secrets and compiles a **release bundle** without publishing anything.
+- **Build app**, compiles a debug APK and uploads it as an artifact.
+- **Unit tests**, JVM tests and Robolectric-based Compose UI tests.
+- **Kt lint check**, Kotlin style rules.
+- **Android lint check**, Android’s static analyzer on the debug variant.
+- **Make sure release build work**, decodes the keystore from encrypted secrets and compiles a **release bundle** without publishing anything.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/pr-ci-sequence.webp" alt="Pull request CI sequence diagram with Gradle and AI review" width="1200" height="675" loading="lazy" />
@@ -184,7 +184,7 @@ Merge day is when deeper validation starts. The release workflow has **three top
 
 Compose previews are rendered and compared pixel-by-pixel against reference images checked into the repo.
 
-If references do not exist yet, the pipeline generates them, commits them back, and **skips** validation that run — a one-time bootstrap.
+If references do not exist yet, the pipeline generates them, commits them back, and **skips** validation that run, a one-time bootstrap.
 
 On normal runs, any visual drift fails the build and uploads a diff report you can download from the Actions artifacts tab.
 
@@ -196,11 +196,11 @@ On normal runs, any visual drift fails the build and uploads a diff report you c
 
 Here we boot a **real Android emulator** on the runner (API 30, optimized test image) and run instrumented tests end-to-end.
 
-**Benefit:** exercises the real framework — lifecycle, SQLite, permissions, navigation — in ways the JVM cannot fully replicate.
+**Benefit:** exercises the real framework, lifecycle, SQLite, permissions, navigation, in ways the JVM cannot fully replicate.
 
 Reports are always uploaded, pass or fail, so debugging does not require reproducing the emulator locally.
 
-### Job C: Build release AAB — the main event
+### Job C: Build release AAB, the main event
 
 Once visual and integration tests pass, the **Build release AAB** job takes over. In a recent run it took about **six and a half minutes** end to end:
 
@@ -211,7 +211,7 @@ Once visual and integration tests pass, the **Build release AAB** job takes over
 
 **What happens inside, in order:**
 
-**1. Compute version** — we do not hand-edit the build file on release day. The pipeline reads `rc-*` git tags and increments automatically:
+**1. Compute version**, we do not hand-edit the build file on release day. The pipeline reads `rc-*` git tags and increments automatically:
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/version-tags.webp" alt="Decision flow for versionName and versionCode from rc tags on main" width="1200" height="675" loading="lazy" />
@@ -222,19 +222,19 @@ Once visual and integration tests pass, the **Build release AAB** job takes over
 - Version name: `1.0.1`
 - Version code: `10005` (formula: major×10000 + minor×100 + patch)
 
-**2. Prepare and verify signing** — the upload keystore **never** lives in git. It is stored as an encrypted secret, decoded on the runner, and verified with standard Java tooling before Gradle runs.
+**2. Prepare and verify signing**, the upload keystore **never** lives in git. It is stored as an encrypted secret, decoded on the runner, and verified with standard Java tooling before Gradle runs.
 
-**3. Build and publish — one Gradle invocation**
+**3. Build and publish, one Gradle invocation**
 
 A single command builds the signed Android App Bundle and uploads it to Play:
 
 `bundleRelease` + `publishReleaseBundle`
 
-Publishing uses the Gradle Play Publisher plugin (Triple-T), targeting the **internal track**. No “download AAB, open Play Console, click upload.” Repeatable, logged, and boring — the best kind of release.
+Publishing uses the Gradle Play Publisher plugin (Triple-T), targeting the **internal track**. No “download AAB, open Play Console, click upload.” Repeatable, logged, and boring, the best kind of release.
 
 **4. Job summary, artifact, and git tag**
 
-The workflow writes a readable table to the Actions summary, uploads the `.aab` as an artifact, and pushes an `rc-*` tag (unless the commit was already tagged — safe for re-runs).
+The workflow writes a readable table to the Actions summary, uploads the `.aab` as an artifact, and pushes an `rc-*` tag (unless the commit was already tagged, safe for re-runs).
 
 **5. Team notification**
 
@@ -261,11 +261,11 @@ In this example we use Discord; the same pattern fits Slack, email, or any chann
 </figure>
 
 <ol class="bf-steps">
-  <li><strong>Plan</strong> — break features into sub-issues; document goals and test plan in the PR.</li>
-  <li><strong>Open PR</strong> — CI (required) and AI review (advisory) in parallel; both feed human review.</li>
-  <li><strong>Merge</strong> — CI runs again on `main` and the release pipeline starts.</li>
-  <li><strong>Release OK</strong> — signed build on the internal track; team notified via Discord (or another channel).</li>
-  <li><strong>Promote when ready</strong> — production remains a deliberate human decision.</li>
+  <li><strong>Plan</strong>, break features into sub-issues; document goals and test plan in the PR.</li>
+  <li><strong>Open PR</strong>, CI (required) and AI review (advisory) in parallel; both feed human review.</li>
+  <li><strong>Merge</strong>, CI runs again on `main` and the release pipeline starts.</li>
+  <li><strong>Release OK</strong>, signed build on the internal track; team notified via Discord (or another channel).</li>
+  <li><strong>Promote when ready</strong>, production remains a deliberate human decision.</li>
 </ol>
 
 That last step is intentional. Automation removes repetition; you still control what real users receive.
@@ -313,10 +313,10 @@ If anything leaks, **rotate it immediately**. Secrets must stay secret: no log s
 </div>
 
 <ul class="list-disc pl-6 my-6 space-y-2 text-foreground/85">
-  <li><strong>Tag-driven versioning</strong> — fewer Monday-morning arguments; history lives in git.</li>
-  <li><strong>Bundle + publish in one Gradle step</strong> — fewer invocations, fewer signing surprises.</li>
-  <li><strong>Notify in the channel people read</strong> — a green check in Actions helps; the team needs to know which version is on the internal track.</li>
-  <li><strong>Manual production promotion</strong> — you control what reaches real users.</li>
+  <li><strong>Tag-driven versioning</strong>, fewer Monday-morning arguments; history lives in git.</li>
+  <li><strong>Bundle + publish in one Gradle step</strong>, fewer invocations, fewer signing surprises.</li>
+  <li><strong>Notify in the channel people read</strong>, a green check in Actions helps; the team needs to know which version is on the internal track.</li>
+  <li><strong>Manual production promotion</strong>, you control what reaches real users.</li>
 </ul>
 
 <section class="bf-conclusion">
@@ -327,7 +327,7 @@ If anything leaks, **rotate it immediately**. Secrets must stay secret: no log s
     </div>
     <div class="bf-conclusion-body">
       <p>Good CI/CD is not a single YAML that does everything. It is a sequence: structured issues, documented PRs, automated style and tests, AI-assisted review, human approval, emulator and visual validation, signed artifacts, and a nudge to the team when something ships to the internal track.</p>
-      <p>Three workflow files. Zero manual uploads. Every PR gets mechanical checks and an AI first pass; every merge delivers a signed build to the internal track — and the team always knows which version it is.</p>
+      <p>Three workflow files. Zero manual uploads. Every PR gets mechanical checks and an AI first pass; every merge delivers a signed build to the internal track, and the team always knows which version it is.</p>
       <p>Screenshots come from a real GitHub Actions setup. If you want help reviewing or building your pipeline, see <a href="/en/consultoria-android/">Android app development</a> or <a href="https://cal.com/bitdesal/30min">book 30 minutes</a>. You can also read the <a href="https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd">original article on Medium</a>.</p>
     </div>
   </div>

@@ -20,12 +20,12 @@ faq:
   - q: 'Mitä spesifikaatiovetoinen kehitys (SDD) on?'
     a: 'Kirjallinen spesifikaatio on päätuote: käyttäjätarina, hyväksymiskriteerit ja suunnitelma ennen kuin agentti koskee repositorioon.'
   - q: 'Miten mittaatte tekoälyn tuoton?'
-    a: 'Ei generoitujen rivien määrällä, vaan säästättekö tarkistettavaa aikaa tietyssä toimeksiannossa — ROAI: return on AI investment — token-rajojen ja saman laatutason kanssa kuin ilman tekoälyä.'
+    a: 'Ei generoitujen rivien määrällä, vaan säästättekö tarkistettavaa aikaa tietyssä toimeksiannossa, ROAI: return on AI investment, token-rajojen ja saman laatutason kanssa kuin ilman tekoälyä.'
 ---
 
 Hype työntää **tuottamaan enemmän koodia vähemmässä ajassa**. Me noudatamme toista sääntöä: **insinöörityö ensin**. Tekoäly on työkalu, ei arvostelukyvyn korvike. Tämä manifesti kiteyttää, miten käytämme sitä Bitdesalilla ilman «vibe codingia».
 
-<blockquote class="bf-pullquote">Jos et voi debugata koodia, kun tuotanto kaatuu, sinun ei pitäisi olla mergannut sitä — vaikka agentti olisi kirjoittanut sen.</blockquote>
+<blockquote class="bf-pullquote">Jos et voi debugata koodia, kun tuotanto kaatuu, sinun ei pitäisi olla mergannut sitä, vaikka agentti olisi kirjoittanut sen.</blockquote>
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">01</span>
@@ -47,7 +47,7 @@ Tekoälyaikakaudella pääomaa ei ole viimeisin commit: se on **spesifikaatio**.
   <li>Määritä ja tarkenna käyttäjätarina.</li>
   <li>Suunnittele arkkitehtuuri ja kerrosten rajat.</li>
   <li>Pilko pieniin tehtäviin hyväksymiskriteereineen.</li>
-  <li>Vasta sitten: toteutus — käsin, avustajalla tai agentilla.</li>
+  <li>Vasta sitten: toteutus, käsin, avustajalla tai agentilla.</li>
 </ol>
 
 Tätä kutsutaan spesifikaatiovetoiseksi kehitykseksi (SDD). Ilman speksiä agentti improvisoi ja maksat iteraatioista. Näimme sen käytännössä tarinassa <a href="/fi/blog/insomnio-agentes-ia-funcion-sencilla/">«kahden tunnin» kielivalitsimesta</a>.
@@ -63,7 +63,7 @@ Tätä kutsutaan spesifikaatiovetoiseksi kehitykseksi (SDD). Ilman speksiä agen
 - Kunnioita kerroksia: UI, domain ja data eivät sekoitu yhteen promptiin ilman selkeää tarkoitusta.
 
 <figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/mas-alla-del-vibe-coding/jar-jar.jpg" alt="Jar Jar Binks Tatooinen autiomaassa — metafora ideasta, joka näytti loistavalta ja päättyi huonosti" width="1024" height="797" loading="lazy" />
+  <img src="/images/blog/mas-alla-del-vibe-coding/jar-jar.jpg" alt="Jar Jar Binks Tatooinen autiomaassa, metafora ideasta, joka näytti loistavalta ja päättyi huonosti" width="1024" height="797" loading="lazy" />
   <figcaption>Monet pitivät tuolloin täysin tietokoneella generoitua hahmoa elokuvassa hyvänä ideana. Vibe coding tuotannossa haisee samalta.</figcaption>
 </figure>
 
@@ -84,7 +84,7 @@ Agentit toteuttavat. **Sinä** määrittelet mentaalimallin, rajat ja mitä kuul
   <span class="bf-section-title"><span class="bf-section-lead">Token-talous</span> <span class="bf-section-accent">ja kestävyys</span></span>
 </h2>
 
-Tänään monia API-kustannuksia **subventionoidaan** tai ne ovat huomista edullisempia. Epämääräiset spesifikaatiot aiheuttavat hallusinaatioita ja epäonnistuneita iteraatioita — eli hukattuja tokeneita. SDD:llä rakennat kirjaston **suoritettavia piirustuksia**, jotka pysyvät edullisina vaikka hinta per token nousee.
+Tänään monia API-kustannuksia **subventionoidaan** tai ne ovat huomista edullisempia. Epämääräiset spesifikaatiot aiheuttavat hallusinaatioita ja epäonnistuneita iteraatioita, eli hukattuja tokeneita. SDD:llä rakennat kirjaston **suoritettavia piirustuksia**, jotka pysyvät edullisina vaikka hinta per token nousee.
 
 Jos talouspuoli kiinnostaa, se liittyy <a href="/fi/blog/puedes-permitirte-desarrollo-asistido-ia/">siihen, mitä tekoälyavusteinen kehitys oikeasti maksaa</a>.
 

@@ -169,7 +169,7 @@ Jos suunnittelisin rekrytointiprosessin tänään, siinä olisi viisi osiota, ei
       <h2 class="bf-conclusion-heading">Mikä oikeasti merkitsee</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Haluan, että tuotantoon menevä on hyvin tehty—oli sen kirjoittanut ihminen tai tekoäly. Sen pitäisi olla minkä tahansa rekrytointiprosessin kysymys. Jos yrityksesi palkkaa yhä vuoden 2015 testeillä, kannattaa ehkä päivittää ne ennen kuin syytetään hakijoita.</p>
+      <p>Haluan, että tuotantoon menevä on hyvin tehty, oli sen kirjoittanut ihminen tai tekoäly. Sen pitäisi olla minkä tahansa rekrytointiprosessin kysymys. Jos yrityksesi palkkaa yhä vuoden 2015 testeillä, kannattaa ehkä päivittää ne ennen kuin syytetään hakijoita.</p>
       <p>Bitdesalilla työskentelemme näin päivittäin: autamme tiimejä integroimaan tekoälyavusteisen kehityksen menettämättä laatua.</p>
     </div>
   </div>

@@ -1,5 +1,5 @@
 ---
-title: 'Voitko maksaa tekoälyavusteisen kehityksen?'
+title: 'Voitko maksaa tekoälyavusteisen kehityksen? Kyllä, jos teet sen järkevästi'
 description: 'Tilaukset, tokenit ja agentit: mitä tekoälyavusteinen kehitys oikeasti maksaa ja milloin se kannattaa. Oikea työnkulku ilman keksittyjä asiakaslukuja.'
 pubDate: 2026-06-01
 audience: business
@@ -11,7 +11,7 @@ tags:
 keyword: 'tekoälyavusteinen kehitys'
 heroImage: /images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg
 ogImage: /images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg
-titleHighlight: 'tekoälyavusteinen kehitys'
+titleHighlight: 'Kyllä, jos teet sen järkevästi'
 subtitle: 'Tekoäly nopeuttaa näppäilyä, mutta ei poista laskua. Ennen kuin viet sen koko tiimille, kannattaa tietää mitä maksat ja mitä saat takaisin.'
 updatedDate: 2026-11-17
 faq:
@@ -23,7 +23,7 @@ faq:
     a: 'Kyllä: paikalliset mallit rutiinitehtäviin, kalliit mallit vain vaikeisiin kohtiin, kirjalliset hyväksymiskriteerit ja automaattinen katselmus CI:ssä, ettei maksa loputtomista iteraatioista.'
 ---
 
-Harva keskustelu on näin suoraa: **kyllä, tekoäly voi lyhentää aikatauluja**, mutta siitä voi tulla myös muuttuva kulu, jota kukaan ei budjetoinut. Kysymys ei ole «toimiiko se?», vaan **voitko maksaa** koko ketjun — työkalut, tokenit, katselmukset ja valvojan ajan.
+Harva keskustelu on näin suoraa: **kyllä, tekoäly voi lyhentää aikatauluja**, mutta siitä voi tulla myös muuttuva kulu, jota kukaan ei budjetoinut. Kysymys ei ole «toimiiko se?», vaan **voitko maksaa** koko ketjun: työkalut, tokenit, katselmukset ja valvojan ajan.
 
 <blockquote class="bf-pullquote">Se ei ole klassinen ohjelmistolisenssi: mitä enemmän kontekstia lähetät ja mitä enemmän jätät agentille, sitä enemmän maksat.</blockquote>
 
@@ -32,7 +32,7 @@ Harva keskustelu on näin suoraa: **kyllä, tekoäly voi lyhentää aikatauluja*
   <span class="bf-section-title"><span class="bf-section-lead">Paperista ja IDE:stä</span> <span class="bf-section-accent">tekoälyyn</span></span>
 </h2>
 
-Olemme vaihtaneet työkalua vuosikymmeniä: paperi, IDE, liitännäiset, copilotit. Jokainen hyppy **parantaa tuotosta** ja lisää **riippuvuutta ja kustannusta**. Tekoäly ei poikkea: se korvaa osan näppäilystä, mutta tuo uuden veron — tokenit ja käytön mukaan skaalautuvat tilaukset.
+Olemme vaihtaneet työkalua vuosikymmeniä: paperi, IDE, liitännäiset, copilotit. Jokainen hyppy **parantaa tuotosta** ja lisää **riippuvuutta ja kustannusta**. Tekoäly ei poikkea: se korvaa osan näppäilystä, mutta tuo uuden veron: tokenit ja käytön mukaan skaalautuvat tilaukset.
 
 Jos tiimisi laskuttaa kiinteähintaisia projekteja tai tunteja, vero nakertaa katetta, ellei sitä seurata.
 
@@ -41,7 +41,7 @@ Jos tiimisi laskuttaa kiinteähintaisia projekteja tai tunteja, vero nakertaa ka
   <span class="bf-section-title"><span class="bf-section-lead">Työnkulku</span> <span class="bf-section-accent">ja kolme tukitasoa</span></span>
 </h2>
 
-Bitdesalilla ketjutamme mockupin, spesifikaation, toteutuksen ja katselmuksen. Se ei ole taikuutta: ketju, jossa jokainen lenkki voi käyttää tekoälyä — tai olla käyttämättä — sen mukaan, kannattaako.
+Bitdesalilla ketjutamme mockupin, spesifikaation, toteutuksen ja katselmuksen. Se ei ole taikuutta: ketju, jossa jokainen lenkki voi käyttää tekoälyä, tai olla käyttämättä, sen mukaan, kannattaako.
 
 <figure class="bf-figure bf-figure--natural">
   <img src="/images/blog/puedes-permitirte-desarrollo-asistido-ia/workflow.png" alt="Työnkulun kaavio: mockup, spesifikaatio, toteutus ja tekoälykatselmus; tulevaisuus paikallisilla malleilla" width="1024" height="848" loading="lazy" />
@@ -70,7 +70,7 @@ Kolme tasoa, joita näemme lähes kaikissa tiimeissä:
 </div>
 
 <div class="bf-highlight">
-  <strong>Taso 3 — agentit:</strong> malli suunnittelee, muokkaa useita tiedostoja ja yrittää uudelleen. Siinä kulut kasvavat eniten ja siinä tarvitaan kirjallinen <a href="/fi/blog/insomnio-agentes-ia-funcion-sencilla/">«valmis»-määritelmä</a>.
+  <strong>Taso 3: agentit.</strong> malli suunnittelee, muokkaa useita tiedostoja ja yrittää uudelleen. Siinä kulut kasvavat eniten ja siinä tarvitaan kirjallinen <a href="/fi/blog/insomnio-agentes-ia-funcion-sencilla/">«valmis»-määritelmä</a>.
 </div>
 
 <h2 class="bf-section-heading">
@@ -78,7 +78,7 @@ Kolme tasoa, joita näemme lähes kaikissa tiimeissä:
   <span class="bf-section-title"><span class="bf-section-lead">Käytännön esimerkki:</span> <span class="bf-section-accent">katselmuksestakin maksetaan</span></span>
 </h2>
 
-Koodin generointi ei ole ainoa kulu. Maksat myös — ajassa tai API-kutsuissa — **katselmuksen**: GitHub Actions -workflow, joka kommentoi diffiä suurella mallilla.
+Koodin generointi ei ole ainoa kulu. Maksat myös, ajassa tai API-kutsuissa, **katselmuksen**: GitHub Actions -workflow, joka kommentoi diffiä suurella mallilla.
 
 <figure class="bf-figure">
   <img src="/images/blog/puedes-permitirte-desarrollo-asistido-ia/ai-code-review.png" alt="Tekoälykatselmus pull requestissä: ehdotus yksinkertaistaa synkronista StateFlow'ta Android-ViewModelissa" width="1200" height="800" loading="lazy" />
@@ -118,7 +118,7 @@ IDE:llä oli ennustettava kuukausihinta. API-avusteinen tekoäly on **muuttuvaa*
 
 Vastaus ei ole luopua tekoälystä, vaan **uudelleenajatella mixi**: paikalliset mallit (Ollama ja vastaavat) rutiinispecifikaatioon ja -toteutukseen; tehokkaat pilvimallit vain vaikeisiin tehtäviin tai kriittiseen katselmukseen. Työnkulun kaaviossa olemme jo siirtymässä siihen suuntaan.
 
-Se ei poista kustannusta — laitteisto, ylläpito, konfiguroijan aika — mutta **tekee kulut ennustettavammiksi** kuin API, joka laskuttaa miljoonasta tokenista.
+Se ei poista kustannusta, laitteisto, ylläpito, konfiguroijan aika, mutta **tekee kulut ennustettavammiksi** kuin API, joka laskuttaa miljoonasta tokenista.
 
 <section class="bf-conclusion">
   <div class="bf-conclusion-grid">

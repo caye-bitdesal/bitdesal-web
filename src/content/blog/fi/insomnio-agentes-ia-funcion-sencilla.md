@@ -12,7 +12,6 @@ tags:
 keyword: 'tekoälyagentit kehitys'
 heroImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
 ogImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
-titleHighlight: 'kahdeksan tunnin yksinkertainen ominaisuus'
 subtitle: 'Onko sinulle käynyt, että «viiden minuutin» tehtävä nielee koko päivän? Tämä alkoi sopimattomaan aikaan, unettomana, kielivalitsimella joka «varmasti» valmistuisi nopeasti tekoälyn avulla.'
 updatedDate: 2026-11-17
 faq:
@@ -62,7 +61,7 @@ Jokainen korjaus avasi uuden reiän, koska ei ollut suljettua listaa «valmis ku
 
 Kun koodi vihdoin istui yhteen, laatu oli yhä heikko. Ajoin diffin GitHub-workflow’n läpi, jonka olimme rakentaneet **tekoälykatselmukselle** (Gemini silloin; tuoreissa kuvakaappauksissa näkyy 2.5 Pro).
 
-Botti löysi oikeita ongelmia — esimerkiksi epäturvallisen `AppLanguage.valueOf`-kutsun DataStoresta lukevana — ja myös kohinaa. Sinä päivänä se painoi enemmän kuin helpotti, mutta malli toimii yhä tiimeillä, joilla on vähän katselmuksen kaistaa.
+Botti löysi oikeita ongelmia, esimerkiksi epäturvallisen `AppLanguage.valueOf`-kutsun DataStoresta lukevana, ja myös kohinaa. Sinä päivänä se painoi enemmän kuin helpotti, mutta malli toimii yhä tiimeillä, joilla on vähän katselmuksen kaistaa.
 
 <figure class="bf-figure">
   <img src="/images/blog/insomnio-agentes-ia-funcion-sencilla/ai-code-review.png" alt="Tekoälyn katselmuskommentti Android-pull requestissä: yhteenveto, havainnot ja ehdotettu Kotlin-koodi" width="1200" height="800" loading="lazy" />

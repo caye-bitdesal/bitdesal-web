@@ -12,7 +12,6 @@ tags:
 keyword: 'agentes de IA desarrollo'
 heroImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
 ogImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
-titleHighlight: 'la función de 8 horas'
 subtitle: '¿Te ha pasado que una tarea de «cinco minutos» se convierte en el día entero? Empezó a una hora indecente, sin poder dormir, con un selector de idioma que «seguro» iba rápido con IA.'
 updatedDate: 2026-11-17
 faq:
@@ -62,7 +61,7 @@ Cada arreglo abría otro agujero porque no había una lista cerrada de «listo c
 
 Cuando el código por fin encajó, la calidad dejaba mucho que desear. Pasé el diff por un workflow en GitHub que montamos para **revisión con IA** (Gemini en el modelo del momento; en capturas recientes sale 2.5 Pro).
 
-El bot encontró cosas reales — por ejemplo un `AppLanguage.valueOf` inseguro leyendo DataStore — y también ruido. Ese día me pesó más que me aliviara, pero el patrón sigue valiendo en equipos con poco ancho de revisión.
+El bot encontró cosas reales, por ejemplo un `AppLanguage.valueOf` inseguro leyendo DataStore, y también ruido. Ese día me pesó más que me aliviara, pero el patrón sigue valiendo en equipos con poco ancho de revisión.
 
 <figure class="bf-figure">
   <img src="/images/blog/insomnio-agentes-ia-funcion-sencilla/ai-code-review.png" alt="Comentario de revisión con IA en un pull request de Android: resumen, incidencias y código Kotlin sugerido" width="1200" height="800" loading="lazy" />

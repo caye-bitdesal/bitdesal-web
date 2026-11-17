@@ -24,7 +24,7 @@ faq:
     a: 'Tres archivos: main.yml (calidad en PR y push a main), ai-code-review.yml (opinión automática) y release.yml (validación profunda, firma y pista interna de Play).'
 ---
 
-Esta guía repasa una configuración real con GitHub Actions en una app Android: **tres workflows** que trabajan juntos — comprobaciones rápidas en pull request, revisión de código asistida por IA y automatización de release más lenta (tests visuales, emulador, firma, subida a Google Play y aviso al equipo).
+Esta guía repasa una configuración real con GitHub Actions en una app Android: **tres workflows** que trabajan juntos, comprobaciones rápidas en pull request, revisión de código asistida por IA y automatización de release más lenta (tests visuales, emulador, firma, subida a Google Play y aviso al equipo).
 
 No necesitas conocer la app ni sus detalles internos. Los patrones aplican a la mayoría de proyectos Android basados en Gradle.
 
@@ -37,8 +37,8 @@ No necesitas conocer la app ni sus detalles internos. Los patrones aplican a la 
 
 Piensa en **dos puertas**, con un revisor extra en la primera:
 
-1. **Puerta de calidad** — ¿Podemos hacer merge? (build, tests, estilo, lint, revisión con IA, revisión humana)
-2. **Muelle de envío** — ¿Pueden los testers instalarlo? (tests más profundos, bundle firmado, pista interna de Play)
+1. **Puerta de calidad**, ¿Podemos hacer merge? (build, tests, estilo, lint, revisión con IA, revisión humana)
+2. **Muelle de envío**, ¿Pueden los testers instalarlo? (tests más profundos, bundle firmado, pista interna de Play)
 
 | | CI (`main.yml`) | Revisión IA (`ai-code-review.yml`) | Release (`release.yml`) |
 | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ La automatización no empieza en el «push». Empieza antes, en cómo el equipo 
 
 <h3 class="text-xl font-medium mt-8 mb-4">Ramas y flujo de merge</h3>
 
-Cuando cogemos un issue, ramificamos desde `main`. Si el issue es grande, lo partimos en **sub-issues**: cada sub-issue tiene su rama, pero nacida de la rama padre de la feature, no de `main` directamente. Los PR de sub-issue vuelven a la rama padre al completarse. Solo cuando todas las sub-issues están integradas y la feature está lista mergeamos la rama padre en `main` — y **ese** merge dispara un nuevo release candidate.
+Cuando cogemos un issue, ramificamos desde `main`. Si el issue es grande, lo partimos en **sub-issues**: cada sub-issue tiene su rama, pero nacida de la rama padre de la feature, no de `main` directamente. Los PR de sub-issue vuelven a la rama padre al completarse. Solo cuando todas las sub-issues están integradas y la feature está lista mergeamos la rama padre en `main`, y **ese** merge dispara un nuevo release candidate.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/git-branches.webp" alt="Diagrama de ramas: main, rama padre de feature y ramas de sub-issues con pull requests entre ellas" width="1200" height="675" loading="lazy" />
@@ -100,7 +100,7 @@ Los propios PR llevan contexto: objetivos, no-objetivos y una **checklist de pru
   <span class="bf-section-title"><span class="bf-section-lead">Revisión con IA</span> <span class="bf-section-accent">en los pull requests</span></span>
 </h2>
 
-Cuando un PR se abre o recibe commits nuevos, `ai-code-review.yml` corre **en paralelo** con el CI — no dentro de él. Los dos workflows comparten el mismo disparador; ninguno espera al otro.
+Cuando un PR se abre o recibe commits nuevos, `ai-code-review.yml` corre **en paralelo** con el CI, no dentro de él. Los dos workflows comparten el mismo disparador; ninguno espera al otro.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/ai-review-sequence.webp" alt="Secuencia: push al PR, jobs de CI en Gradle y revisión con IA que comenta en el pull request" width="1200" height="675" loading="lazy" />
@@ -122,7 +122,7 @@ El workflow ignora PRs de bots (Dependabot, Renovate) y cancela revisiones en cu
 
 **Qué necesitas configurar:** un secret de repositorio `GEMINI_API_KEY` y permiso `pull-requests: write` para que el bot comente. El `GITHUB_TOKEN` integrado basta para acceder al repo.
 
-**Para qué sirve bien:** pillar bugs lógicos, errores típicos de Android y problemas de legibilidad antes de que un humano abra el archivo — sobre todo en equipos pequeños con poco ancho de revisión.
+**Para qué sirve bien:** pillar bugs lógicos, errores típicos de Android y problemas de legibilidad antes de que un humano abra el archivo, sobre todo en equipos pequeños con poco ancho de revisión.
 
 **Para qué no sirve:** no sustituye la revisión humana ni es un check obligatorio. El CI puede estar verde mientras la IA señala un bug real en un comentario; así está pensado.
 
@@ -141,15 +141,15 @@ Al abrir un PR, GitHub Actions lanza **cinco jobs de CI en paralelo** (con una c
   <figcaption>Cinco checks con nombres claros en la vista del PR.</figcaption>
 </figure>
 
-Los **PR en borrador** omiten los jobs más pesados — unit tests, Android Lint y la comprobación de build release — para que el trabajo en curso no queme minutos de CI.
+Los **PR en borrador** omiten los jobs más pesados, unit tests, Android Lint y la comprobación de build release, para que el trabajo en curso no queme minutos de CI.
 
 <h3 class="text-xl font-medium mt-8 mb-4">Qué hace cada job (y por qué)</h3>
 
-- **Build app** — compila un APK debug y lo sube como artefacto.
-- **Unit tests** — tests en JVM y tests de UI Compose con Robolectric.
-- **Kt lint check** — reglas de estilo Kotlin.
-- **Android lint check** — analizador estático de Android sobre la variante debug.
-- **Make sure release build work** — decodifica la keystore desde secrets cifrados y compila un **release bundle** sin publicar nada.
+- **Build app**, compila un APK debug y lo sube como artefacto.
+- **Unit tests**, tests en JVM y tests de UI Compose con Robolectric.
+- **Kt lint check**, reglas de estilo Kotlin.
+- **Android lint check**, analizador estático de Android sobre la variante debug.
+- **Make sure release build work**, decodifica la keystore desde secrets cifrados y compila un **release bundle** sin publicar nada.
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/pr-ci-sequence.webp" alt="Diagrama de secuencia del CI en pull request con Gradle y revisión con IA" width="1200" height="675" loading="lazy" />
@@ -184,7 +184,7 @@ El día del merge empieza la validación profunda. El workflow de release tiene 
 
 Los previews de Compose se renderizan y se comparan píxel a píxel con imágenes de referencia en el repo.
 
-Si aún no hay referencias, el pipeline las genera, las commitea y **salta** la validación esa vez — arranque único.
+Si aún no hay referencias, el pipeline las genera, las commitea y **salta** la validación esa vez, arranque único.
 
 En ejecuciones normales, cualquier cambio visual rompe el build y sube un informe de diff descargable en la pestaña de artefactos de Actions.
 
@@ -196,11 +196,11 @@ En ejecuciones normales, cualquier cambio visual rompe el build y sube un inform
 
 Aquí arrancamos un **emulador Android real** en el runner (API 30, imagen de test optimizada) y corremos tests instrumentados de punta a punta.
 
-**Beneficio:** ejercita el framework de verdad — ciclo de vida, SQLite, permisos, navegación — de formas que la JVM no replica del todo.
+**Beneficio:** ejercita el framework de verdad, ciclo de vida, SQLite, permisos, navegación, de formas que la JVM no replica del todo.
 
 Los informes se suben siempre, pasen o fallen, para depurar sin reproducir el emulador en local.
 
-### Job C: Build release AAB — el evento principal
+### Job C: Build release AAB, el evento principal
 
 Cuando pasan los tests visuales y de integración, el job **Build release AAB** toma el control. En una ejecución reciente tardó unos **seis minutos y medio** de punta a punta:
 
@@ -211,7 +211,7 @@ Cuando pasan los tests visuales y de integración, el job **Build release AAB** 
 
 **Por dentro, en orden:**
 
-**1. Calcular versión** — no editamos a mano el fichero de build el día del release. El pipeline lee tags `rc-*` en git e incrementa solo:
+**1. Calcular versión**, no editamos a mano el fichero de build el día del release. El pipeline lee tags `rc-*` en git e incrementa solo:
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/version-tags.webp" alt="Flujo de decisión para versionName y versionCode a partir de tags rc en main" width="1200" height="675" loading="lazy" />
@@ -222,19 +222,19 @@ Cuando pasan los tests visuales y de integración, el job **Build release AAB** 
 - Version name: `1.0.1`
 - Version code: `10005` (fórmula: major×10000 + minor×100 + patch)
 
-**2. Preparar y verificar firma** — la keystore de subida **nunca** está en git. Vive como secret cifrado, se decodifica en el runner y se verifica con herramientas estándar de Java antes de Gradle.
+**2. Preparar y verificar firma**, la keystore de subida **nunca** está en git. Vive como secret cifrado, se decodifica en el runner y se verifica con herramientas estándar de Java antes de Gradle.
 
-**3. Build y publicación — una sola invocación Gradle**
+**3. Build y publicación, una sola invocación Gradle**
 
 Un solo comando construye el Android App Bundle firmado y lo sube a Play:
 
 `bundleRelease` + `publishReleaseBundle`
 
-La publicación usa el plugin Gradle Play Publisher (Triple-T), apuntando a la **pista interna**. Nada de «descargar AAB, abrir Play Console, pulsar subir». Repetible, registrado y aburrido — el mejor tipo de release.
+La publicación usa el plugin Gradle Play Publisher (Triple-T), apuntando a la **pista interna**. Nada de «descargar AAB, abrir Play Console, pulsar subir». Repetible, registrado y aburrido, el mejor tipo de release.
 
 **4. Resumen del job, artefacto y tag git**
 
-El workflow escribe una tabla legible en el resumen de Actions, sube el `.aab` como artefacto y empuja un tag `rc-*` (salvo que el commit ya estuviera etiquetado — seguro ante re-ejecuciones).
+El workflow escribe una tabla legible en el resumen de Actions, sube el `.aab` como artefacto y empuja un tag `rc-*` (salvo que el commit ya estuviera etiquetado, seguro ante re-ejecuciones).
 
 **5. Aviso al equipo**
 
@@ -261,11 +261,11 @@ En este ejemplo usamos Discord; encaja igual con Slack, correo u otro canal. Éx
 </figure>
 
 <ol class="bf-steps">
-  <li><strong>Planificar</strong> — partir features en sub-issues; documentar objetivos y plan de pruebas en el PR.</li>
-  <li><strong>Abrir PR</strong> — CI (obligatorio) y revisión con IA (orientativa) en paralelo; ambos alimentan la revisión humana.</li>
-  <li><strong>Merge</strong> — el CI vuelve a correr en `main` y arranca el pipeline de release.</li>
-  <li><strong>Release OK</strong> — build firmada en la pista interna; el equipo avisado por Discord (u otro canal).</li>
-  <li><strong>Promover cuando toque</strong> — producción sigue siendo una decisión humana deliberada.</li>
+  <li><strong>Planificar</strong>, partir features en sub-issues; documentar objetivos y plan de pruebas en el PR.</li>
+  <li><strong>Abrir PR</strong>, CI (obligatorio) y revisión con IA (orientativa) en paralelo; ambos alimentan la revisión humana.</li>
+  <li><strong>Merge</strong>, el CI vuelve a correr en `main` y arranca el pipeline de release.</li>
+  <li><strong>Release OK</strong>, build firmada en la pista interna; el equipo avisado por Discord (u otro canal).</li>
+  <li><strong>Promover cuando toque</strong>, producción sigue siendo una decisión humana deliberada.</li>
 </ol>
 
 Ese último paso es intencionado. La automatización quita repetición; tú sigues controlando qué reciben los usuarios reales.
@@ -313,10 +313,10 @@ Si algo se filtra, **rótalo de inmediato**. Los secrets deben seguir siendo sec
 </div>
 
 <ul class="list-disc pl-6 my-6 space-y-2 text-foreground/85">
-  <li><strong>Versionado por tags</strong> — menos discusiones el lunes por la mañana; el historial queda en git.</li>
-  <li><strong>Bundle + publish en un solo paso Gradle</strong> — menos invocaciones, menos sorpresas de firma.</li>
-  <li><strong>Avisar en el canal que se lee</strong> — un check verde en Actions ayuda; el equipo necesita saber qué versión hay en la pista interna.</li>
-  <li><strong>Promoción a producción manual</strong> — controlas qué llega a usuarios reales.</li>
+  <li><strong>Versionado por tags</strong>, menos discusiones el lunes por la mañana; el historial queda en git.</li>
+  <li><strong>Bundle + publish en un solo paso Gradle</strong>, menos invocaciones, menos sorpresas de firma.</li>
+  <li><strong>Avisar en el canal que se lee</strong>, un check verde en Actions ayuda; el equipo necesita saber qué versión hay en la pista interna.</li>
+  <li><strong>Promoción a producción manual</strong>, controlas qué llega a usuarios reales.</li>
 </ul>
 
 <section class="bf-conclusion">
@@ -327,7 +327,7 @@ Si algo se filtra, **rótalo de inmediato**. Los secrets deben seguir siendo sec
     </div>
     <div class="bf-conclusion-body">
       <p>Un buen CI/CD no es un único YAML que lo hace todo. Es una secuencia: issues ordenados, PRs documentados, estilo y tests automáticos, revisión asistida por IA, aprobación humana, validación en emulador y visual, artefactos firmados y un aviso al equipo cuando algo sale a la pista interna.</p>
-      <p>Tres archivos de workflow. Cero subidas manuales. Cada PR recibe checks mecánicos y un primer pase de IA; cada merge lleva una build firmada a la pista interna — y el equipo siempre sabe qué versión es.</p>
+      <p>Tres archivos de workflow. Cero subidas manuales. Cada PR recibe checks mecánicos y un primer pase de IA; cada merge lleva una build firmada a la pista interna, y el equipo siempre sabe qué versión es.</p>
       <p>Las capturas proceden de una configuración real en GitHub Actions. Si quieres que revisemos o montemos tu pipeline, mira <a href="/consultoria-android/">desarrollo de apps Android</a> o <a href="https://cal.com/bitdesal/30min">reserva 30 minutos</a>. También está el <a href="https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd">artículo original en Medium</a>.</p>
     </div>
   </div>

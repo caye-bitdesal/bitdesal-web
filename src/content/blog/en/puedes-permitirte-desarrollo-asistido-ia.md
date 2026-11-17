@@ -1,5 +1,5 @@
 ---
-title: 'Can you afford your AI-assisted development?'
+title: 'Can you afford AI-assisted development? Yes, if you do it thoughtfully'
 description: 'Subscriptions, tokens, and agents: what AI-assisted development really costs and when it pays off. A real workflow, without invented client numbers.'
 pubDate: 2026-06-01
 audience: business
@@ -11,7 +11,7 @@ tags:
 keyword: 'AI-assisted development'
 heroImage: /images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg
 ogImage: /images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg
-titleHighlight: 'AI-assisted development'
+titleHighlight: 'Yes, if you do it thoughtfully'
 subtitle: 'AI speeds up the keyboard, but it does not erase the bill. Before rolling it out to the whole team, it helps to know what you pay and what you get back.'
 updatedDate: 2026-11-17
 faq:
@@ -23,7 +23,7 @@ faq:
     a: 'Yes: local models for routine tasks, expensive models only for the hard parts, written acceptance criteria, and automated review in CI so you do not pay for endless iterations.'
 ---
 
-Few conversations are as candid as this one: **yes, AI can shorten timelines**, but it can also become a variable expense nobody budgeted for. The question is not «does it work?», but whether you can **afford** the full flow — tools, tokens, reviews, and the time of whoever supervises.
+Few conversations are as candid as this one: **yes, AI can shorten timelines**, but it can also become a variable expense nobody budgeted for. The question is not «does it work?», but whether you can **afford** the full flow: tools, tokens, reviews, and the time of whoever supervises.
 
 <blockquote class="bf-pullquote">It is not a classic software licence: the more context you send and the more you leave to the agent, the more you pay.</blockquote>
 
@@ -32,7 +32,7 @@ Few conversations are as candid as this one: **yes, AI can shorten timelines**, 
   <span class="bf-section-title"><span class="bf-section-lead">From paper and IDE</span> <span class="bf-section-accent">to AI</span></span>
 </h2>
 
-We have spent decades switching tools: paper, IDE, plugins, copilots. Each leap **improves output** and adds **dependency and cost**. AI is no different: it replaces some of the typing, but introduces a new tax — tokens and subscriptions that scale with use.
+We have spent decades switching tools: paper, IDE, plugins, copilots. Each leap **improves output** and adds **dependency and cost**. AI is no different: it replaces some of the typing, but introduces a new tax: tokens and subscriptions that scale with use.
 
 If your team already bills fixed-price projects or by the hour, that tax hits the margin unless you watch it.
 
@@ -41,7 +41,7 @@ If your team already bills fixed-price projects or by the hour, that tax hits th
   <span class="bf-section-title"><span class="bf-section-lead">The workflow</span> <span class="bf-section-accent">and three levels of help</span></span>
 </h2>
 
-At Bitdesal we chain mockup, specification, implementation, and review. It is not magic: it is a pipeline where each step can use AI — or not — depending on whether it pays off.
+At Bitdesal we chain mockup, specification, implementation, and review. It is not magic: it is a pipeline where each step can use AI or not, depending on whether it pays off.
 
 <figure class="bf-figure bf-figure--natural">
   <img src="/images/blog/puedes-permitirte-desarrollo-asistido-ia/workflow.png" alt="Workflow diagram: mockup, specification, implementation, and AI code review; future path with local models" width="1024" height="848" loading="lazy" />
@@ -70,7 +70,7 @@ Three levels we see in almost every team:
 </div>
 
 <div class="bf-highlight">
-  <strong>Level 3 — agents:</strong> the model plans, edits multiple files, and retries. That is where spend spikes most and where you need a written <a href="/en/blog/insomnio-agentes-ia-funcion-sencilla/">definition of «done»</a>.
+  <strong>Level 3: agents.</strong> the model plans, edits multiple files, and retries. That is where spend spikes most and where you need a written <a href="/en/blog/insomnio-agentes-ia-funcion-sencilla/">definition of «done»</a>.
 </div>
 
 <h2 class="bf-section-heading">
@@ -78,7 +78,7 @@ Three levels we see in almost every team:
   <span class="bf-section-title"><span class="bf-section-lead">A practical example:</span> <span class="bf-section-accent">review has a cost too</span></span>
 </h2>
 
-Generating code is not the only expense. You also pay — in time or API calls — for **review**: a GitHub Actions workflow that comments on the diff with a large model.
+Generating code is not the only expense. You also pay, in time or API calls, for **review**: a GitHub Actions workflow that comments on the diff with a large model.
 
 <figure class="bf-figure">
   <img src="/images/blog/puedes-permitirte-desarrollo-asistido-ia/ai-code-review.png" alt="AI review on a pull request: suggestion to simplify a synchronous StateFlow in an Android ViewModel" width="1200" height="800" loading="lazy" />
@@ -118,7 +118,7 @@ An IDE had a predictable monthly price. API-assisted AI is **variable**: a quiet
 
 The answer is not to give up on AI, but to **rethink the mix**: local models (Ollama and friends) for routine specification and implementation; powerful cloud models only for complex work or critical review. In the workflow diagram we are already migrating in that direction.
 
-That does not remove cost — hardware, maintenance, time to configure — but it **does make spend more predictable** than an API that bills per million tokens.
+That does not remove cost, hardware, maintenance, time to configure, but it **does make spend more predictable** than an API that bills per million tokens.
 
 <section class="bf-conclusion">
   <div class="bf-conclusion-grid">
