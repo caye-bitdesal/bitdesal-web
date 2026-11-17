@@ -494,10 +494,10 @@ export const translations: Record<Language, any> = {
 					},
 					cicd: {
 						title: 'Guía para implementar CI/CD en Android con GitHub Actions',
-						imageAlt: 'Infografía de un pipeline CI/CD razonable para Android',
+						imageAlt: 'Infografía de un pipeline CI/CD razonable para Android con GitHub, Gradle y Google Play',
 						date: '10 jul 2026',
 						excerpt:
-							'Separar «¿podemos hacer merge?» de «¿pueden los testers instalarlo?» — tres workflows en GitHub Actions para PRs rápidos y release candidates automáticos.',
+							'Separar merge y release en GitHub Actions: CI en el PR, firma segura, tags rc-* y revisión con IA. Guía con diagramas en bitdesal.com.',
 					},
 					insomnia: {
 						title: 'Insomnio, agentes de IA y la función «sencilla» de 8 horas',

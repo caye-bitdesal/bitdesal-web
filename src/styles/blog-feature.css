@@ -223,6 +223,13 @@ html.dark .bf-section-accent {
   color: var(--bf-accent-deep);
 }
 
+/* CTA al final del artículo: no heredar color de enlace (verde sobre verde) */
+.bf-prose a.bf-cta,
+.bf-prose a.bf-cta:hover {
+  color: var(--primary-foreground);
+  text-decoration: none;
+}
+
 .bf-prose strong {
   font-weight: 600;
   color: var(--foreground);
@@ -240,6 +247,29 @@ html.dark .bf-section-accent {
 
 .bf-prose li::marker {
   color: var(--bf-accent);
+  font-weight: 600;
+}
+
+.bf-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.9375rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bf-prose th,
+.bf-prose td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.bf-prose th {
+  background: var(--muted);
   font-weight: 600;
 }
 

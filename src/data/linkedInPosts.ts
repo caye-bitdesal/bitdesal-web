@@ -31,7 +31,7 @@ export const linkedInPosts: LinkedInPost[] = [
 		dateKey: 'home.blog.posts.cicd.date',
 		dateIso: '2026-07-10',
 		siteHref: '/blog/guia-cicd-android-github-actions/',
-		image: '/blog/cicd-android-github-actions.png',
+		image: '/images/blog/guia-cicd-android-github-actions/hero.webp',
 		imageAltKey: 'home.blog.posts.cicd.imageAlt',
 		mediumUrl: 'https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd',
 		audience: 'technical',

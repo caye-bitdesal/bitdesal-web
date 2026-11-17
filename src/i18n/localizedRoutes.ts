@@ -24,7 +24,6 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 
 /** Spanish articles that have no EN/FI file. Hreflang must not point at missing URLs. */
 const ES_ONLY_BLOG_SLUGS = new Set([
-	'guia-cicd-android-github-actions',
 	'insomnio-agentes-ia-funcion-sencilla',
 	'puedes-permitirte-desarrollo-asistido-ia',
 	'mas-alla-del-vibe-coding',
