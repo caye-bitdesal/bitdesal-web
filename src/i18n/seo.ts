@@ -16,7 +16,9 @@ export type PageSeoId =
 	| 'contact'
 	| 'legalNotice'
 	| 'privacy'
-	| 'notFound';
+	| 'notFound'
+	| 'cayeProfile'
+	| 'ramiroProfile';
 
 type SeoEntry = { title: string; description: string };
 
@@ -45,12 +47,12 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 				'¿Presupuestos a mano, citas perdidas o partes en papel? Automatizamos los procesos de tu empresa con IA. Precio cerrado desde el estudio.',
 		},
 		en: {
-			title: 'AI consulting for business · Bitdesal',
+			title: 'AI consulting for business: automate paperwork · Bitdesal',
 			description:
 				'Automate quotes, appointments and paperwork with AI. Fixed pricing from a process study.',
 		},
 		fi: {
-			title: 'Tekoälykonsultointi yrityksille · Bitdesal',
+			title: 'Tekoälykonsultointi: automatisoi paperityöt · Bitdesal',
 			description: 'Prosessien automatisointi tekoälyllä. Kiinteä hinta prosessitutkimuksesta.',
 		},
 	},
@@ -95,11 +97,11 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 				'Desarrollo Android, arquitectura y calidad para equipos técnicos. Apps en producción con cientos de miles de usuarios.',
 		},
 		en: {
-			title: 'Software consulting and Android · Bitdesal',
+			title: 'Android development and software consulting · Bitdesal',
 			description: 'Senior Android development, architecture and quality for product teams.',
 		},
 		fi: {
-			title: 'Ohjelmistokonsultointi ja Android · Bitdesal',
+			title: 'Android-kehitys ja ohjelmistokonsultointi · Bitdesal',
 			description: 'Senior Android -kehitys ja arkkitehtuuri tuotetiimeille.',
 		},
 	},
@@ -137,16 +139,16 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	about: {
 		es: {
-			title: 'Nosotros · Bitdesal',
+			title: 'Nosotros: consultoría de IA y software en Elche · Bitdesal',
 			description:
 				'Bitdesal ayuda a empresas con automatización, software a medida y consultoría Android. Conoce al equipo y nuestra forma de trabajar.',
 		},
 		en: {
-			title: 'About Caye Ruiz · Bitdesal',
+			title: 'About us: AI and software consulting from Spain · Bitdesal',
 			description: 'Senior Android engineer and Bitdesal founder with 20 years of international experience.',
 		},
 		fi: {
-			title: 'Caye Ruiz · Bitdesal',
+			title: 'Meistä: tekoäly- ja ohjelmistokonsultointia · Bitdesal',
 			description: 'Senior Android -insinööri ja Bitdesalin perustaja.',
 		},
 	},
@@ -191,77 +193,107 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 				'App para salir de noche: bares, conciertos y eventos a tu alrededor, con ofertas de bebidas que se activan cuando estás lo bastante cerca para usarlas.',
 		},
 		en: {
-			title: 'Yössä: nightlife Android app · Bitdesal',
+			title: 'Yössä case: nightlife Android app for venues · Bitdesal',
 			description:
 				'Android nightlife app for bars, concerts and nearby events, with drink deals that unlock when you are close enough to use them.',
 		},
 		fi: {
-			title: 'Yössä: yöelämän Android-sovellus · Bitdesal',
+			title: 'Yössä-case: yöelämän Android-sovellus Suomessa · Bitdesal',
 			description:
 				'Yöelämän sovellus: baarit, konsertit ja tapahtumat ympärilläsi sekä juomatarjoukset, jotka aktivoituvat kun olet tarpeeksi lähellä käyttääksesi niitä.',
 		},
 	},
 	blog: {
 		es: {
-			title: 'Blog sobre IA, software y digitalización · Bitdesal',
+			title: 'Blog sobre IA, Android y automatización · Bitdesal',
 			description: 'Artículos sobre Android, IA e ingeniería de software para equipos y empresas.',
 		},
 		en: {
-			title: 'Blog · Bitdesal',
+			title: 'Blog on AI, Android and software engineering · Bitdesal',
 			description: 'Articles on Android, AI and engineering from Bitdesal.',
 		},
 		fi: {
-			title: 'Blogi · Bitdesal',
+			title: 'Blogi: tekoäly, Android ja ohjelmistokehitys · Bitdesal',
 			description: 'Artikkeleita Androidista, tekoälystä ja insinöörityöstä.',
 		},
 	},
 	contact: {
 		es: {
-			title: 'Contacto · Bitdesal',
+			title: 'Contacto: agenda 30 minutos gratis con nosotros · Bitdesal',
 			description:
 				'Cuéntanos qué necesitas. Te respondemos en menos de 24 horas laborables. Elche · principalmente en remoto; planificación en Alicante; desplazamientos puntuales en España o la UE.',
 		},
 		en: {
-			title: 'Contact · Bitdesal',
+			title: 'Contact us: book a free 30-minute call · Bitdesal',
 			description: 'Get in touch about your project. Remote across Europe.',
 		},
 		fi: {
-			title: 'Yhteystiedot · Bitdesal',
+			title: 'Ota yhteyttä: varaa ilmainen 30 minuutin puhelu · Bitdesal',
 			description: 'Ota yhteyttä projektistasi.',
 		},
 	},
 	legalNotice: {
 		es: {
-			title: 'Aviso legal · Bitdesal',
+			title: 'Aviso legal y condiciones de uso de bitdesal.com · Bitdesal',
 			description:
 				'Datos identificativos, condiciones de uso, propiedad intelectual y jurisdicción de bitdesal.com, conforme a la LSSI-CE.',
 		},
 		en: {
-			title: 'Legal notice · Bitdesal',
+			title: 'Legal notice and terms of use of bitdesal.com · Bitdesal',
 			description:
 				'Identification, terms of use, intellectual property and jurisdiction of bitdesal.com. Translation; the Spanish version prevails.',
 		},
 		fi: {
-			title: 'Oikeudellinen ilmoitus · Bitdesal',
+			title: 'Oikeudellinen ilmoitus ja käyttöehdot · Bitdesal',
 			description:
 				'Bitdesal.comin tunnistetiedot, käyttöehdot, immateriaalioikeudet ja tuomioistuin. Käännös; espanjankielinen versio on ensisijainen.',
 		},
 	},
 	privacy: {
 		es: {
-			title: 'Política de privacidad · Bitdesal',
+			title: 'Política de privacidad y protección de datos · Bitdesal',
 			description:
 				'Cómo tratamos tus datos en el formulario, las citas y como clientes: finalidades, plazos, destinatarios y tus derechos RGPD.',
 		},
 		en: {
-			title: 'Privacy policy · Bitdesal',
+			title: 'Privacy policy and data protection (GDPR) · Bitdesal',
 			description:
 				'How we process your data from the contact form, bookings and as clients: purposes, retention, recipients and your GDPR rights.',
 		},
 		fi: {
-			title: 'Tietosuojakäytäntö · Bitdesal',
+			title: 'Tietosuojakäytäntö ja henkilötietojen käsittely · Bitdesal',
 			description:
 				'Miten käsittelemme tietojasi lomakkeesta, ajanvarauksesta ja asiakkuudesta: tarkoitukset, säilytys, vastaanottajat ja GDPR-oikeutesi.',
+		},
+	},
+	cayeProfile: {
+		es: {
+			title: 'Caye Ruiz, fundador y consultor Android e IA · Bitdesal',
+			description:
+				'Perfil de Caye Ruiz: fundador de Bitdesal, consultor Android senior y consultoría de IA. Más de 20 años en software.',
+		},
+		en: {
+			title: 'Caye Ruiz, founder and Android & AI consultant · Bitdesal',
+			description:
+				'Caye Ruiz — Bitdesal founder, senior Android consultant and AI consulting. 20+ years in software.',
+		},
+		fi: {
+			title: 'Caye Ruiz, perustaja ja Android-konsultti · Bitdesal',
+			description: 'Caye Ruiz — Bitdesalin perustaja, senior Android -konsultti ja tekoälykonsultointi.',
+		},
+	},
+	ramiroProfile: {
+		es: {
+			title: 'Ramiro Santamaría: apps y agentes de IA · Bitdesal',
+			description: 'Perfil de Ramiro Santamaría: desarrollo de apps y agentes de IA en Bitdesal.',
+		},
+		en: {
+			title: 'Ramiro Santamaría, app development and AI agents · Bitdesal',
+			description: 'Ramiro Santamaría — app development and AI agents at Bitdesal.',
+		},
+		fi: {
+			title: 'Ramiro Santamaría: sovellukset ja tekoälyagentit · Bitdesal',
+			description: 'Ramiro Santamaría — sovelluskehitys ja tekoälyagentit Bitdesalilla.',
 		},
 	},
 	notFound: {
