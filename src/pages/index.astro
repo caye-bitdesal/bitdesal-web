@@ -58,26 +58,41 @@ const whyCards = [
 	<section id="servicios" class="py-16 md:py-20 bg-white scroll-mt-20">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				<a
-					href={sitePath('/consultoria-ia', lang)}
+				<article
 					class="group flex flex-col rounded-2xl border-2 border-border bg-secondary/40 p-8 md:p-10 hover:border-primary hover:shadow-lg transition-all"
 				>
-					<h2 class="text-2xl md:text-3xl mb-4 group-hover:text-primary transition-colors">
-						{t('home.serviceCards.ia.title')}
+					<h2 class="text-2xl md:text-3xl mb-4">
+						<a href={sitePath('/consultoria-ia', lang)} class="hover:text-primary transition-colors">
+							{t('home.serviceCards.ia.title')}
+						</a>
 					</h2>
 					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.ia.description')}</p>
 					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.ia.priceHint')}</p>
-					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+					<p class="text-sm mb-2">
+						<a href="/automatizacion-procesos-ia/" class="text-primary font-medium hover:underline">
+							{t('iaPage.related.processes')}
+						</a>
+					</p>
+					<p class="text-sm mb-4">
+						<a href="/agentes-ia-empresas/" class="text-primary font-medium hover:underline">
+							{t('iaPage.related.agents')}
+						</a>
+					</p>
+					<a
+						href={sitePath('/consultoria-ia', lang)}
+						class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all"
+					>
 						{t('home.serviceCards.ia.cta')}
 						<span aria-hidden="true">→</span>
-					</span>
-				</a>
-				<a
-					href={sitePath('/consultoria-software', lang)}
+					</a>
+				</article>
+				<article
 					class="group flex flex-col rounded-2xl border-2 border-border bg-secondary/40 p-8 md:p-10 hover:border-primary hover:shadow-lg transition-all"
 				>
-					<h2 class="text-2xl md:text-3xl mb-4 group-hover:text-primary transition-colors">
-						{t('home.serviceCards.software.title')}
+					<h2 class="text-2xl md:text-3xl mb-4">
+						<a href={sitePath('/consultoria-software', lang)} class="hover:text-primary transition-colors">
+							{t('home.serviceCards.software.title')}
+						</a>
 					</h2>
 					<p class="text-foreground/75 leading-relaxed flex-1 mb-6">{t('home.serviceCards.software.description')}</p>
 					<p class="text-primary font-semibold mb-4">{t('home.serviceCards.software.priceHint')}</p>
@@ -86,11 +101,14 @@ const whyCards = [
 							{t('consultoriaPageExpanded.androidPromo.linkConsulting')}
 						</a>
 					</p>
-					<span class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+					<a
+						href={sitePath('/consultoria-software', lang)}
+						class="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all"
+					>
 						{t('home.serviceCards.software.cta')}
 						<span aria-hidden="true">→</span>
-					</span>
-				</a>
+					</a>
+				</article>
 			</div>
 		</div>
 	</section>

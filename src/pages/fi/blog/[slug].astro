@@ -3,7 +3,7 @@ import BlogArticle from '../../../components/BlogArticle.astro';
 import { blogStaticPaths } from '../../../data/blogRoutes';
 
 export function getStaticPaths() {
-	return blogStaticPaths();
+	return blogStaticPaths('fi');
 }
 
 const { post } = Astro.props;

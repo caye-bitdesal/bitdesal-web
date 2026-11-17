@@ -1,25 +1,45 @@
 ---
+import type { BlogListCardData } from '../data/blogListCard';
 import type { LinkedInPost } from '../data/linkedInPosts';
+import { cardFromLinkedInPost } from '../data/blogListCard';
 import { useI18n } from '../i18n/useI18n';
 
 interface Props {
-	post: LinkedInPost;
+	post?: LinkedInPost;
+	card?: BlogListCardData;
+	/** When omitted, platform links follow `card` data (LinkedIn/Medium). */
+	showPlatformLinks?: boolean;
 	class?: string;
 }
 
-const { post, class: className } = Astro.props;
-const { t } = useI18n(Astro);
+const { post, card: cardProp, showPlatformLinks, class: className } = Astro.props;
+const { lang, t } = useI18n(Astro);
+
+const card = cardProp ?? (post ? cardFromLinkedInPost(post, t, { showPlatformLinks }) : undefined);
+if (!card) {
+	throw new Error('LinkedInPostCard requires `card` or `post`');
+}
+
+const showLinks = showPlatformLinks ?? Boolean(card.linkedInUrl || card.mediumUrl);
+const readArticle = { es: 'Leer artículo', en: 'Read article', fi: 'Lue artikkeli' }[lang];
+const readOnSite = { es: 'Leer en bitdesal.com', en: 'Read on bitdesal.com', fi: 'Lue bitdesal.comissa' }[lang];
+const onSite = !card.openInNewTab;
 ---
 
 <article class:list={['flex flex-col h-full', className]}>
 	<div class="group flex flex-col h-full bg-white border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all">
-		<a href={post.url} target="_blank" rel="noopener noreferrer" class="block">
+		<a
+			href={card.href}
+			target={card.openInNewTab ? '_blank' : undefined}
+			rel={card.openInNewTab ? 'noopener noreferrer' : undefined}
+			class="block"
+		>
 			{
-				post.image ? (
+				card.image ? (
 					<div class="aspect-[16/9] overflow-hidden bg-foreground/5">
 						<img
-							src={post.image}
-							alt={post.imageAltKey ? t(post.imageAltKey) : ''}
+							src={card.image}
+							alt={card.imageAlt ?? ''}
 							class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
 							loading="lazy"
 							decoding="async"
@@ -27,30 +47,78 @@ const { t } = useI18n(Astro);
 					</div>
 				) : (
 					<div class="aspect-[16/9] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center p-6">
-						<span class="text-white/90 text-sm font-medium tracking-wide uppercase">LinkedIn</span>
+						<span class="text-white/90 text-sm font-medium tracking-wide uppercase">Bitdesal</span>
 					</div>
 				)
 			}
 		</a>
 		<div class="p-6 flex flex-col flex-1">
-			<time class="text-sm text-foreground/60 mb-2 block" datetime={post.dateIso}>
-				{t(post.dateKey)}
+			<time class="text-sm text-foreground/60 mb-2 block" datetime={card.dateIso}>
+				{card.dateLabel}
 			</time>
 			<h3 class="text-xl mb-3 leading-snug">
-				<a href={post.url} target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
-					{t(post.titleKey)}
+				<a
+					href={card.href}
+					target={card.openInNewTab ? '_blank' : undefined}
+					rel={card.openInNewTab ? 'noopener noreferrer' : undefined}
+					class="hover:text-primary transition-colors"
+				>
+					{card.title}
 				</a>
 			</h3>
-			<p class="text-foreground/70 text-sm leading-relaxed flex-1 mb-4">{t(post.excerptKey)}</p>
+			<p class="text-foreground/70 text-sm leading-relaxed flex-1 mb-4">{card.excerpt}</p>
 			<div class="flex flex-col gap-2">
-				<a href={post.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit">
-					{t('home.blog.readOnLinkedIn')}
-					<span aria-hidden="true">↗</span>
-				</a>
 				{
-					post.mediumUrl && (
-						<a href={post.mediumUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit">
+					showLinks && onSite && card.linkedInUrl && (
+						<a href={card.href} class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit">
+							{readOnSite}
+							<span aria-hidden="true">→</span>
+						</a>
+					)
+				}
+				{
+					!showLinks && onSite && (
+						<a href={card.href} class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit">
+							{readArticle}
+							<span aria-hidden="true">→</span>
+						</a>
+					)
+				}
+				{
+					showLinks && card.linkedInUrl && (
+						<a
+							href={card.linkedInUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit"
+						>
+							{t('home.blog.readOnLinkedIn')}
+							<span aria-hidden="true">↗</span>
+						</a>
+					)
+				}
+				{
+					showLinks && card.mediumUrl && (
+						<a
+							href={card.mediumUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit"
+						>
 							{t('home.blog.readOnMedium')}
+							<span aria-hidden="true">↗</span>
+						</a>
+					)
+				}
+				{
+					showLinks && !onSite && !card.linkedInUrl && (
+						<a
+							href={card.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-2 text-primary text-sm hover:gap-3 transition-all w-fit"
+						>
+							{t('home.blog.readOnLinkedIn')}
 							<span aria-hidden="true">↗</span>
 						</a>
 					)

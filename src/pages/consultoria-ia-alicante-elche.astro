@@ -1,0 +1,116 @@
+---
+import CtaSection from '../components/CtaSection.astro';
+import FaqSection from '../components/FaqSection.astro';
+import Layout from '../layouts/Layout.astro';
+import { localPage as copy } from '../i18n/content/local-page.es';
+import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE_E164, SITE_ORIGIN } from '../data/siteConstants';
+import { ORG_ID } from '../data/siteJsonLd';
+
+const canonical = new URL('/consultoria-ia-alicante-elche/', SITE_ORIGIN).href;
+
+// TODO(caye): coordenadas aproximadas del municipio de Elche, no de un domicilio. No publicar geo hasta confirmarlas.
+// TODO(caye): URL del Perfil de Empresa de Google. No enlazar ni incrustar Maps (cookies; la privacidad dice que no hay).
+// TODO(caye): confirmar zona presencial (Elche, Alicante, Vega Baja y Valencia están planteadas, no cerradas).
+// TODO(caye): confirmar sectores de la provincia. No hay clientes nombrados a propósito.
+
+const localJsonLd = {
+	'@type': 'ProfessionalService',
+	'@id': `${canonical}#local`,
+	name: 'Bitdesal',
+	url: canonical,
+	parentOrganization: { '@id': ORG_ID },
+	email: CONTACT_EMAIL,
+	telephone: CONTACT_PHONE_E164,
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Elche',
+		addressRegion: 'Alicante',
+		addressCountry: 'ES',
+	},
+	areaServed: [
+		{ '@type': 'City', name: 'Elche' },
+		{ '@type': 'City', name: 'Alicante' },
+		{ '@type': 'AdministrativeArea', name: 'Provincia de Alicante' },
+		{ '@type': 'AdministrativeArea', name: 'Comunidad Valenciana' },
+	],
+};
+
+const faqItems = [
+	{ question: copy.faq.travel.q, answer: copy.faq.travel.a },
+	{ question: copy.faq.office.q, answer: copy.faq.office.a },
+	{ question: copy.faq.region.q, answer: copy.faq.region.a },
+	{ question: copy.faq.remote.q, answer: copy.faq.remote.a },
+];
+---
+
+<Layout seo="localElche" alternates={['es']} breadcrumbLabel="Elche y Alicante" jsonLd={[localJsonLd]}>
+	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-4xl md:text-5xl mb-6">{copy.hero.h1}</h1>
+			<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+				<p>{copy.hero.lead}</p>
+				<p>{copy.hero.p2}</p>
+			</div>
+			<a
+				href={BOOKING_URL}
+				class="inline-flex items-center gap-2 mt-8 bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors"
+			>
+				{copy.meeting.book}
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<h2 class="text-3xl md:text-4xl text-foreground">{copy.where.title}</h2>
+			<p>{copy.where.p1}</p>
+			<p>{copy.where.p2}</p>
+			<p>{copy.where.p3}</p>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-secondary">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<h2 class="text-3xl md:text-4xl text-foreground">{copy.work.title}</h2>
+			<p>{copy.work.p1}</p>
+			<p>
+				<a href="/consultoria-ia/" class="text-primary font-medium hover:underline">{copy.work.iaLink}</a>
+			</p>
+			<p>{copy.work.p2}</p>
+			<p>
+				<a href="/consultoria-android/" class="text-primary font-medium hover:underline">{copy.work.androidLink}</a>
+			</p>
+			<p>{copy.work.p3}</p>
+		</div>
+	</section>
+
+	<section class="py-16 md:py-24 bg-white">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-foreground/80 leading-relaxed">
+			<h2 class="text-3xl md:text-4xl text-foreground">{copy.sectors.title}</h2>
+			<p>{copy.sectors.p1}</p>
+			<p>{copy.sectors.p2}</p>
+			<h2 class="text-3xl md:text-4xl text-foreground pt-4">{copy.meeting.title}</h2>
+			<p>{copy.meeting.p1}</p>
+			<p>{copy.meeting.p2}</p>
+			<p>{copy.meeting.p3}</p>
+			<p>
+				<a href="/contacto/" class="text-primary font-medium hover:underline">{copy.meeting.contactLink}</a>
+			</p>
+			<h2 class="text-2xl text-foreground pt-4">{copy.related.title}</h2>
+			<ul class="space-y-3 text-base">
+				<li>
+					<a class="text-primary font-medium hover:underline" href="/automatizacion-procesos-ia/">{copy.related.auto}</a>
+				</li>
+				<li>
+					<a class="text-primary font-medium hover:underline" href="/agentes-ia-empresas/">{copy.related.agents}</a>
+				</li>
+				<li>
+					<a class="text-primary font-medium hover:underline" href="/casos-y-precios/">{copy.related.prices}</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<FaqSection title={copy.faq.title} items={faqItems} />
+	<CtaSection variant="ia" />
+</Layout>

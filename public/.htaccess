@@ -425,11 +425,15 @@ RewriteRule ^fi/consultoria-android/?$ /consultoria-android/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
-RewriteRule ^auditoria-app-android/?$ /en/auditoria-app-android/ [R=301,L,QSD]
+RewriteRule ^auditoria-app-android/?$ /en/consultoria-software/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^auditoria-app-android/?$ /fi/auditoria-app-android/ [R=301,L,QSD]
+RewriteRule ^auditoria-app-android/?$ /fi/consultoria-software/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^en/auditoria-app-android/?$ /en/consultoria-software/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
@@ -437,15 +441,115 @@ RewriteRule ^en/auditoria-app-android/?$ /auditoria-app-android/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^en/auditoria-app-android/?$ /fi/auditoria-app-android/ [R=301,L,QSD]
+RewriteRule ^en/auditoria-app-android/?$ /fi/consultoria-software/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
-RewriteRule ^fi/auditoria-app-android/?$ /en/auditoria-app-android/ [R=301,L,QSD]
+RewriteRule ^fi/auditoria-app-android/?$ /en/consultoria-software/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
 RewriteRule ^fi/auditoria-app-android/?$ /auditoria-app-android/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/auditoria-app-android/?$ /fi/consultoria-software/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^automatizacion-procesos-ia/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^automatizacion-procesos-ia/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^en/automatizacion-procesos-ia/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^en/automatizacion-procesos-ia/?$ /automatizacion-procesos-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^en/automatizacion-procesos-ia/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^fi/automatizacion-procesos-ia/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^fi/automatizacion-procesos-ia/?$ /automatizacion-procesos-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/automatizacion-procesos-ia/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^agentes-ia-empresas/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^agentes-ia-empresas/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^en/agentes-ia-empresas/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^en/agentes-ia-empresas/?$ /agentes-ia-empresas/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^en/agentes-ia-empresas/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^fi/agentes-ia-empresas/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^fi/agentes-ia-empresas/?$ /agentes-ia-empresas/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/agentes-ia-empresas/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^consultoria-ia-alicante-elche/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^consultoria-ia-alicante-elche/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^en/consultoria-ia-alicante-elche/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^en/consultoria-ia-alicante-elche/?$ /consultoria-ia-alicante-elche/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^en/consultoria-ia-alicante-elche/?$ /fi/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
+
+RewriteRule ^fi/consultoria-ia-alicante-elche/?$ /en/consultoria-ia/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
+
+RewriteRule ^fi/consultoria-ia-alicante-elche/?$ /consultoria-ia-alicante-elche/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/consultoria-ia-alicante-elche/?$ /fi/consultoria-ia/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -453,7 +557,7 @@ RewriteRule ^nosotros/?$ /en/about/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^nosotros/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^nosotros/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -465,7 +569,7 @@ RewriteRule ^en/nosotros/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^en/nosotros/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^en/nosotros/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -474,6 +578,10 @@ RewriteRule ^fi/nosotros/?$ /en/about/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
 RewriteRule ^fi/nosotros/?$ /nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/nosotros/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -485,7 +593,7 @@ RewriteRule ^about/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^about/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^about/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
@@ -493,7 +601,7 @@ RewriteRule ^en/about/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^en/about/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^en/about/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -505,7 +613,7 @@ RewriteRule ^fi/about/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^fi/about/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -602,5 +710,6 @@ RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
 RewriteRule ^en/nosotros/?$ /en/about/ [R=301,L]
 
 RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
-RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L]
+RewriteRule ^fi/about/?$ /fi/meista/ [R=301,L]
+RewriteRule ^fi/nosotros/?$ /fi/meista/ [R=301,L]
 </IfModule>

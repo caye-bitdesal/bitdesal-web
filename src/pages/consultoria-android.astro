@@ -24,7 +24,17 @@ const workSteps = [
 	'home.howIWork.steps.handoff',
 ] as const;
 
-const faqItems = [
+const faqItemsEs = [
+	{ qKey: 'androidConsultingPage.faq.items.appCost.q', aKey: 'androidConsultingPage.faq.items.appCost.a' },
+	{ qKey: 'androidConsultingPage.faq.items.freelanceRate.q', aKey: 'androidConsultingPage.faq.items.freelanceRate.a' },
+	{ qKey: 'androidConsultingPage.faq.items.remote.q', aKey: 'androidConsultingPage.faq.items.remote.a' },
+	{ qKey: 'androidConsultingPage.faq.items.java.q', aKey: 'androidConsultingPage.faq.items.java.a' },
+	{ qKey: 'androidConsultingPage.faq.items.outsource.q', aKey: 'androidConsultingPage.faq.items.outsource.a' },
+	{ qKey: 'androidConsultingPage.faq.items.ios.q', aKey: 'androidConsultingPage.faq.items.ios.a' },
+	{ qKey: 'androidConsultingPage.faq.items.nda.q', aKey: 'androidConsultingPage.faq.items.nda.a' },
+];
+
+const faqItemsIntl = [
 	{ qKey: 'androidConsultingPage.faq.items.cost.q', aKey: 'androidConsultingPage.faq.items.cost.a' },
 	{ qKey: 'androidConsultingPage.faq.items.remote.q', aKey: 'androidConsultingPage.faq.items.remote.a' },
 	{ qKey: 'androidConsultingPage.faq.items.java.q', aKey: 'androidConsultingPage.faq.items.java.a' },
@@ -34,8 +44,11 @@ const faqItems = [
 	{ qKey: 'androidConsultingPage.faq.items.english.q', aKey: 'androidConsultingPage.faq.items.english.a' },
 ];
 
+const faqItems = lang === 'es' ? faqItemsEs : faqItemsIntl;
+const qualityKeys = ['solid', 'spec', 'review', 'cicd', 'handoff'] as const;
+
 const serviceNames: Record<string, string> = {
-	es: 'Consultoría Android',
+	es: 'Desarrollo de aplicaciones Android',
 	en: 'Android consulting',
 	fi: 'Android-konsultointi',
 };
@@ -54,7 +67,12 @@ const serviceJsonLd = {
 };
 ---
 
-<Layout seo="androidConsulting" breadcrumbLabel={t('androidConsultingPage.hero.h1')} jsonLd={[serviceJsonLd]}>
+<Layout
+	seo="androidConsulting"
+	alternates={lang === 'es' ? ['es'] : undefined}
+	breadcrumbLabel={t('androidConsultingPage.hero.h1')}
+	jsonLd={[serviceJsonLd]}
+>
 	<section class="page-hero bg-gradient-to-br from-primary to-primary/80 text-white py-16 md:py-24">
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-4xl md:text-5xl mb-6">{t('androidConsultingPage.hero.h1')}</h1>
@@ -143,6 +161,36 @@ const serviceJsonLd = {
 			</div>
 		</div>
 	</section>
+
+	{
+		lang === 'es' && (
+			<section class="py-16 md:py-24 bg-secondary">
+				<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 class="text-3xl md:text-4xl mb-10">{t('androidConsultingPage.quality.title')}</h2>
+					<div class="space-y-8">
+						{qualityKeys.map((key) => (
+							<article>
+								<h3 class="text-xl font-semibold mb-2">{t(`androidConsultingPage.quality.items.${key}.title`)}</h3>
+								<p class="text-foreground/75 leading-relaxed">{t(`androidConsultingPage.quality.items.${key}.body`)}</p>
+							</article>
+						))}
+					</div>
+				</div>
+			</section>
+		)
+	}
+
+	{
+		lang === 'es' && (
+			<section class="py-16 md:py-24 bg-white">
+				<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+					<h2 class="text-3xl md:text-4xl">{t('androidConsultingPage.compare.title')}</h2>
+					<p class="text-foreground/80 leading-relaxed">{t('androidConsultingPage.compare.agency')}</p>
+					<p class="text-foreground/80 leading-relaxed">{t('androidConsultingPage.compare.freelance')}</p>
+				</div>
+			</section>
+		)
+	}
 
 	<section class="py-16 md:py-24 bg-secondary">
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

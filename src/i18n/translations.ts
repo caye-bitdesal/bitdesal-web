@@ -34,6 +34,9 @@ import {
 	androidConsultingPage as androidConsultingPageFi,
 	consultoriaPageExpanded as consultoriaPageExpandedFi,
 } from './content/android-pages.fi';
+import { iaPageExtra as iaPageExtraEs } from './content/ia-consulting.es';
+import { iaPageExtra as iaPageExtraEn } from './content/ia-consulting.en';
+import { iaPageExtra as iaPageExtraFi } from './content/ia-consulting.fi';
 
 export const translations: Record<Language, any> = {
 	es: {
@@ -84,7 +87,7 @@ export const translations: Record<Language, any> = {
 			consulting: 'Consultoría',
 			companyTitle: 'Empresa',
 			aboutUs: 'Nosotros',
-			androidConsulting: 'Consultoría Android',
+			androidConsulting: 'desarrollo de apps Android',
 			pricing: 'Precios',
 			workAndPricing: 'Casos y precios',
 			blog: 'Blog',
@@ -146,8 +149,13 @@ export const translations: Record<Language, any> = {
 				technical: 'Técnico',
 			},
 			onSite: 'En bitdesal.com',
-			external: 'LinkedIn y Medium',
+			external: 'También en LinkedIn',
 			back: '← Blog',
+			published: 'Publicado',
+			updated: 'Actualizado',
+			reading: 'min de lectura',
+			related: 'Artículos relacionados',
+			by: 'Por',
 		},
 		pricing: {
 			hero: {
@@ -486,32 +494,31 @@ export const translations: Record<Language, any> = {
 					},
 					cicd: {
 						title: 'Guía para implementar CI/CD en Android con GitHub Actions',
-						imageAlt: 'Infografía de un pipeline CI/CD razonable para Android',
+						imageAlt: 'Infografía de un pipeline CI/CD razonable para Android con GitHub, Gradle y Google Play',
 						date: '10 jul 2026',
 						excerpt:
-							'Separar «¿podemos hacer merge?» de «¿pueden los testers instalarlo?» — tres workflows en GitHub Actions para PRs rápidos y release candidates automáticos.',
+							'Separar merge y release en GitHub Actions: CI en el PR, firma segura, tags rc-* y revisión con IA. Guía con diagramas en bitdesal.com.',
 					},
 					insomnia: {
-						title: 'Insomnio, agentes de IA y la función «sencilla» de 8 horas',
+						title: 'Insomnio, agentes de IA y la función de 8 horas',
 						imageAlt: 'Desarrollador dormido sobre el teclado tras una larga sesión de código',
 						date: '11 jun 2026',
-						// TODO(caye): confirmar si la maratón fue de 8 o 12 horas y unificar título y entradilla
 						excerpt:
-							'Un selector de idioma de «dos horas» se convirtió en una maratón de 12 horas con IA. Lecciones sobre criterios de aceptación, confiar pero verificar y cuestionar tus propios prompts.',
+							'Un selector de idioma con IA que debía llevar dos horas acabó en una maratón nocturna. Tres lecciones sobre criterios de aceptación y revisión automática.',
 					},
 					afford: {
-						title: '¿Puedes permitirte tu desarrollo asistido por IA?',
+						title: '¿Puedes permitirte el desarrollo asistido por IA? Sí, si lo haces con cabeza',
 						imageAlt: 'Manos abriendo una cartera vacía',
 						date: '1 jun 2026',
 						excerpt:
-							'Menos gente habla con honestidad de lo que cuesta hacer que la IA funcione sin quemar presupuesto ni paciencia. Un repaso práctico del flujo de trabajo en Bitdesal.',
+							'Suscripciones, tokens y agentes: qué cuesta de verdad el desarrollo con IA y cuándo compensa. Flujo real y tres niveles de ayuda.',
 					},
 					manifesto: {
 						title: 'Más allá del "Vibe Coding": manifiesto para una ingeniería de IA sostenible',
 						imageAlt: 'Meme de Darth Vader: «encuentro perturbadora tu falta de fe»',
 						date: '21 may 2026',
 						excerpt:
-							'La IA es una herramienta increíble, pero sin metodología rigurosa lleva al caos. Los cinco principios con los que trabajamos en Bitdesal.',
+							'La IA acelera el código; sin método, amplifica el caos. Seis principios: confianza, especificación, rigor, ingeniero al mando, tokens y ROAI.',
 					},
 				},
 			},
@@ -575,6 +582,7 @@ export const translations: Record<Language, any> = {
 					a: 'No hace falta. Nos amoldamos a lo que ya usáis para que el cambio sea lo mínimo posible, y os enseñamos lo nuevo paso a paso.',
 				},
 			},
+			...iaPageExtraEs,
 		},
 		androidConsultingPage,
 		androidAuditPage,
@@ -1255,8 +1263,13 @@ export const translations: Record<Language, any> = {
 				technical: 'Technical',
 			},
 			onSite: 'On bitdesal.com',
-			external: 'LinkedIn and Medium',
+			external: 'Also on LinkedIn',
 			back: '← Blog',
+			published: 'Published',
+			updated: 'Updated',
+			reading: 'min read',
+			related: 'Related articles',
+			by: 'By',
 		},
 		pricing: {
 			hero: {
@@ -1634,15 +1647,14 @@ export const translations: Record<Language, any> = {
 							'Split "Can we merge this?" from "Can testers install it?" — three GitHub Actions workflows for fast PRs and automated release candidates to Play internal track.',
 					},
 					insomnia: {
-						title: '☕ Insomnia, AI Agents, and the 8-Hour "Simple Feature"',
+						title: 'Insomnia, AI agents, and the 8-hour simple feature',
 						imageAlt: 'Developer asleep on keyboard after a long coding session',
 						date: 'June 11, 2026',
-						// TODO(caye): confirmar si la maratón fue de 8 o 12 horas y unificar título y entradilla
 						excerpt:
-							'A "two-hour" language switcher turned into a 12-hour saga with AI. Lessons on acceptance criteria, trust-but-verify, and questioning your own prompts.',
+							'A language switcher that should take two hours turned into an overnight AI marathon. Three lessons on acceptance criteria and automated review.',
 					},
 					afford: {
-						title: 'Can you afford your AI assisted development?',
+						title: 'Can you afford AI-assisted development? Yes, if you do it thoughtfully',
 						imageAlt: 'Hands opening an empty wallet',
 						date: 'June 1, 2026',
 						excerpt:
@@ -1936,6 +1948,7 @@ export const translations: Record<Language, any> = {
 					a: 'No. We fit what you already use so the change stays small, and we teach you the new parts step by step.',
 				},
 			},
+			...iaPageExtraEn,
 		},
 		consultoriaPage: {
 			hero: {
@@ -2334,8 +2347,13 @@ export const translations: Record<Language, any> = {
 				technical: 'Tekninen',
 			},
 			onSite: 'Bitdesal.comissa',
-			external: 'LinkedIn ja Medium',
+			external: 'Myös LinkedInissä',
 			back: '← Blogi',
+			published: 'Julkaistu',
+			updated: 'Päivitetty',
+			reading: 'min lukuaika',
+			related: 'Aiheeseen liittyvät artikkelit',
+			by: 'Kirjoittaja',
 		},
 		pricing: {
 			hero: {
@@ -2726,15 +2744,14 @@ export const translations: Record<Language, any> = {
 							'Erotetaan «voimmeko mergata?» ja «voivatko testaajat asentaa?» — kolme GitHub Actions -workflowta nopeisiin PR:ään ja automaattisiin release candidate -buildiin.',
 					},
 					insomnia: {
-						title: 'Unettomuus, tekoälyagentit ja 8 tunnin «yksinkertainen» ominaisuus',
+						title: 'Unettomuus, tekoälyagentit ja 8 tunnin ominaisuus',
 						imageAlt: 'Kehittäjä nukkuu näppäimistöllä pitkän koodausmaratonin jälkeen',
 						date: '11.6.2026',
-						// TODO(caye): confirmar si la maratón fue de 8 o 12 horas y unificar título y entradilla
 						excerpt:
-							'«Kahden tunnin» kielivalitsin muuttui 12 tunnin maratoniksi tekoälyn kanssa. Oppia hyväksymiskriteereistä, luota mutta varmista -periaatteesta ja omien promptien kyseenalaistamisesta.',
+							'Kielivalitsin, jonka piti viedä kaksi tuntia, venyi yön yli tekoälyn kanssa. Kolme oppituntia hyväksymiskriteereistä ja automaattisesta tarkastuksesta.',
 					},
 					afford: {
-						title: 'Voitko sallia tekoälyavusteisen kehityksesi?',
+						title: 'Voitko maksaa tekoälyavusteisen kehityksen? Kyllä, jos teet sen järkevästi',
 						imageAlt: 'Kädet avaavat tyhjää lompakkoa',
 						date: '1.6.2026',
 						excerpt:
@@ -3028,6 +3045,7 @@ export const translations: Record<Language, any> = {
 					a: 'Ei. Sopeudumme siihen mitä jo käytätte, jotta muutos jää pieneksi, ja opetamme uuden askel askeleelta.',
 				},
 			},
+			...iaPageExtraFi,
 		},
 		consultoriaPage: {
 			hero: {

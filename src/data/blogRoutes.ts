@@ -1,8 +1,11 @@
 import { getCollection } from 'astro:content';
 
-export async function blogStaticPaths() {
+export async function blogStaticPaths(locale: 'es' | 'en' | 'fi' = 'es') {
 	const posts = await getCollection('blog');
-	return posts
-		.filter((post) => !/^(en|fi)\//.test(post.id))
-		.map((post) => ({ params: { slug: post.id }, props: { post } }));
+	const spanish = posts.filter((post) => !/^(en|fi)\//.test(post.id));
+	const visible =
+		locale === 'es'
+			? spanish
+			: spanish.filter((post) => posts.some((item) => item.id === `${locale}/${post.id}`));
+	return visible.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }

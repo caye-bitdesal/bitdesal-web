@@ -28,13 +28,20 @@ Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de K
 ## URLs clave
 
 - https://bitdesal.com/ — Inicio: consultoría de IA y software con precio cerrado.
-- https://bitdesal.com/consultoria-ia/ — Automatización de procesos con IA para empresas.
+- https://bitdesal.com/consultoria-ia/ — Consultoría de IA para empresas: automatizar presupuestos, citas y papeleo.
+- https://bitdesal.com/automatizacion-procesos-ia/ — Automatización de procesos con IA: flujos, programas y precio.
+- https://bitdesal.com/agentes-ia-empresas/ — Agentes de IA: leen, deciden y actúan, con supervisión humana.
+- https://bitdesal.com/consultoria-ia-alicante-elche/ — Consultoría de IA y software en Elche y Alicante.
 - https://bitdesal.com/consultoria-software/ — Desarrollo Android y consultoría técnica.
 - https://bitdesal.com/consultoria-android/ — Consultoría Android senior (Kotlin, Compose, rescate de apps).
 - https://bitdesal.com/auditoria-app-android/ — Auditoría de apps Android (informe priorizado).
 - https://bitdesal.com/casos-y-precios/ — Casos reales y tarifas transparentes.
 - https://bitdesal.com/nosotros/ — Equipo y trayectoria.
-- https://bitdesal.com/blog/ — Artículos en el sitio, LinkedIn y Medium.
+- https://bitdesal.com/blog/ — Artículos en el sitio. Feed: https://bitdesal.com/rss.xml
+- https://bitdesal.com/blog/guia-cicd-android-github-actions/ — Guía de CI/CD para Android con GitHub Actions (pipeline en PR, release firmado, IA en revisión).
+- https://bitdesal.com/blog/insomnio-agentes-ia-funcion-sencilla/ — Insomnio, agentes de IA y la maratón del selector de idioma (ES/EN/FI).
+- https://bitdesal.com/blog/puedes-permitirte-desarrollo-asistido-ia/ — ¿Puedes permitirte el desarrollo asistido por IA? Sí, si lo haces con cabeza (ES/EN/FI).
+- https://bitdesal.com/blog/mas-alla-del-vibe-coding/ — Manifiesto más allá del Vibe Coding (ES/EN/FI).
 - https://bitdesal.com/contacto/ — Formulario, email, WhatsApp y agenda.
 
 ---

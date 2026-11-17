@@ -6,6 +6,9 @@ export type PageSeoId =
 	| 'consultoria'
 	| 'androidConsulting'
 	| 'androidAudit'
+	| 'processAutomation'
+	| 'aiAgents'
+	| 'localElche'
 	| 'pricing'
 	| 'workAndPricing'
 	| 'about'
@@ -42,9 +45,9 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	iaConsulting: {
 		es: {
-			title: 'Consultoría de IA para empresas: automatiza presupuestos, citas y papeleo · Bitdesal',
+			title: 'Consultoría de IA para empresas: automatiza el papeleo · Bitdesal',
 			description:
-				'¿Presupuestos a mano, citas perdidas o partes en papel? Automatizamos los procesos de tu empresa con IA. Precio cerrado desde el estudio.',
+				'Automatizamos presupuestos, citas, partes y papeleo con consultoría de IA. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
 		},
 		en: {
 			title: 'AI consulting for business: automate paperwork · Bitdesal',
@@ -58,9 +61,9 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	androidConsulting: {
 		es: {
-			title: 'Consultor Android senior: Kotlin y Jetpack Compose · Bitdesal',
+			title: 'Desarrollo de apps Android con Kotlin para empresas · Bitdesal',
 			description:
-				'Consultoría Android senior para equipos y empresas: Kotlin, arquitectura, rescate de apps y calidad. Agenda 30 min gratis.',
+				'Desarrolladores de aplicaciones Android senior: apps en Kotlin y Jetpack Compose con calidad SOLID, entregas semanales y sin dependencia. Agenda 30 min gratis.',
 		},
 		en: {
 			title: 'Senior Android consultant: Kotlin and Jetpack Compose · Bitdesal',
@@ -88,6 +91,57 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 			title: 'Auditoría de apps Android: estabilidad, rendimiento y código · Bitdesal',
 			description:
 				'Auditoría app Android: arquitectura, crashes, rendimiento, seguridad y CI/CD. Informe priorizado y plan de mejora. Agenda 30 min.',
+		},
+	},
+	processAutomation: {
+		es: {
+			title: 'Automatización de procesos con IA para empresas · Bitdesal',
+			description:
+				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+		},
+		en: {
+			title: 'Automatización de procesos con IA para empresas · Bitdesal',
+			description:
+				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+		},
+		fi: {
+			title: 'Automatización de procesos con IA para empresas · Bitdesal',
+			description:
+				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+		},
+	},
+	aiAgents: {
+		es: {
+			title: 'Agentes de IA para empresas: qué son y casos reales · Bitdesal',
+			description:
+				'Un agente de IA lee, decide y actúa en WhatsApp, documentos y presupuestos. Una persona confirma lo que compromete. Agenda 30 minutos gratis.',
+		},
+		en: {
+			title: 'Agentes de IA para empresas: qué son y casos reales · Bitdesal',
+			description:
+				'Un agente de IA lee, decide y actúa en WhatsApp, documentos y presupuestos. Una persona confirma lo que compromete. Agenda 30 minutos gratis.',
+		},
+		fi: {
+			title: 'Agentes de IA para empresas: qué son y casos reales · Bitdesal',
+			description:
+				'Un agente de IA lee, decide y actúa en WhatsApp, documentos y presupuestos. Una persona confirma lo que compromete. Agenda 30 minutos gratis.',
+		},
+	},
+	localElche: {
+		es: {
+			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			description:
+				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
+		},
+		en: {
+			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			description:
+				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
+		},
+		fi: {
+			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			description:
+				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
 		},
 	},
 	consultoria: {

@@ -2,6 +2,7 @@
 import CtaSection from '../components/CtaSection.astro';
 import LinkedInPostCard from '../components/LinkedInPostCard.astro';
 import Layout from '../layouts/Layout.astro';
+import { cardFromBlogEntry, linkedInImageForSlug } from '../data/blogListCard';
 import { linkedInPosts } from '../data/linkedInPosts';
 import { sitePath } from '../data/siteNav';
 import { useI18n } from '../i18n/useI18n';
@@ -18,6 +19,13 @@ function localizedPost(post: (typeof localPosts)[number]) {
 	if (lang === 'es') return post;
 	return allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post;
 }
+
+function postHref(id: string) {
+	if (lang !== 'es' && !allPosts.some((item) => item.id === `${lang}/${id}`)) return `/blog/${id}/`;
+	return sitePath(`/blog/${id}`, lang);
+}
+
+const linkedInOnlyPosts = linkedInPosts.filter((post) => !post.siteHref);
 
 ---
 
@@ -42,36 +50,39 @@ function localizedPost(post: (typeof localPosts)[number]) {
 						<h2 class="text-2xl mb-6">{t('blog.onSite')}</h2>
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 							{localPosts.map((post) => {
-									const shown = localizedPost(post);
-									return (
-									<article data-blog-audience={post.data.audience} class="border border-border rounded-xl p-6 hover:border-primary transition-colors">
-										<p class="text-xs uppercase tracking-wide text-foreground/50 mb-2">
-											{post.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical')}
-										</p>
-										<h3 class="text-xl mb-2">
-											<a href={sitePath(`/blog/${post.id}`, lang)} class="hover:text-primary">
-												{shown.data.title}
-											</a>
-										</h3>
-										<p class="text-foreground/70 text-sm">{shown.data.description}</p>
-									</article>
-									);
-								})}
+								const shown = localizedPost(post);
+								const card = cardFromBlogEntry(
+									post,
+									shown,
+									postHref(post.id),
+									lang,
+									linkedInImageForSlug(post.id, linkedInPosts),
+								);
+								return (
+									<div data-blog-audience={post.data.audience}>
+										<LinkedInPostCard card={card} showPlatformLinks={false} />
+									</div>
+								);
+							})}
 						</div>
 					</div>
 				)
 			}
 
-			<div data-blog-section>
-				<h2 class="text-2xl mb-6">{t('blog.external')}</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					{linkedInPosts.map((post) => (
-						<div data-blog-audience={post.audience}>
-							<LinkedInPostCard post={post} />
+			{
+				linkedInOnlyPosts.length > 0 && (
+					<div data-blog-section>
+						<h2 class="text-2xl mb-6">{t('blog.external')}</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+							{linkedInOnlyPosts.map((post) => (
+								<div data-blog-audience={post.audience}>
+									<LinkedInPostCard post={post} />
+								</div>
+							))}
 						</div>
-					))}
-				</div>
-			</div>
+					</div>
+				)
+			}
 		</div>
 	</section>
 

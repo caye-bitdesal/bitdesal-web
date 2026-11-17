@@ -1,11 +1,23 @@
 ---
-import CtaSection from './CtaSection.astro';
 import Layout from '../layouts/Layout.astro';
+import BlogArticleFeature from './BlogArticleFeature.astro';
+import BlogEndMatter from './BlogEndMatter.astro';
 import { sitePath } from '../data/siteNav';
-import { SITE_ORIGIN } from '../data/siteConstants';
+import { DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
+import { getTeamMember } from '../data/teamMembers';
+import { buildFaqPageJsonLd } from '../data/siteJsonLd';
+import {
+	blogLocales,
+	buildBlogPosting,
+	extractH2,
+	readPostMarkdown,
+	readingMinutes,
+	relatedPosts,
+	wordCount,
+	type BlogAuthorId,
+} from '../data/blogPost';
 import { currencyLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
-import BlogArticleFeature from './BlogArticleFeature.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -20,25 +32,67 @@ const { lang, t } = useI18n(Astro);
 const localized = lang === 'es' ? post : (allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post);
 const { Content } = await render(localized);
 
-const dateLabel = post.data.pubDate.toLocaleDateString(currencyLocale(lang), {
+const raw = readPostMarkdown(localized.id);
+const minutes = readingMinutes(raw);
+const showToc = wordCount(raw) > 1000;
+const toc = showToc ? extractH2(raw) : [];
+
+const authorId = (localized.data.author ?? 'caye') as BlogAuthorId;
+const author = getTeamMember(authorId);
+const published = localized.data.pubDate;
+const modified = localized.data.updatedDate;
+const dateLabel = published.toLocaleDateString(currencyLocale(lang), {
 	year: 'numeric',
 	month: 'long',
 	day: 'numeric',
 });
+const updatedLabel = modified
+	? modified.toLocaleDateString(currencyLocale(lang), { year: 'numeric', month: 'long', day: 'numeric' })
+	: '';
 
 const articlePath = sitePath(`/blog/${post.id}`, lang);
 const articleUrl = new URL(articlePath, SITE_ORIGIN).href;
-const blogPosting = {
-	'@type': 'BlogPosting',
-	'@id': `${articleUrl}#article`,
-	headline: localized.data.title,
+const image = localized.data.ogImage ?? localized.data.heroImage ?? DEFAULT_OG_IMAGE;
+const blogPosting = buildBlogPosting({
+	url: articleUrl,
+	title: localized.data.title,
 	description: localized.data.description,
-	datePublished: localized.data.pubDate.toISOString(),
-	author: { '@id': `${SITE_ORIGIN}/#caye` },
-	publisher: { '@id': `${SITE_ORIGIN}/#org` },
-	mainEntityOfPage: articleUrl,
-	inLanguage: lang === 'es' ? 'es-ES' : lang === 'fi' ? 'fi-FI' : 'en-US',
-};
+	published,
+	modified,
+	author: authorId,
+	image,
+	lang,
+});
+const faq = localized.data.faq ?? [];
+const extraJsonLd = faq.length ? [blogPosting, buildFaqPageJsonLd(articleUrl, faq.map((item) => ({ question: item.q, answer: item.a })))] : [blogPosting];
+
+const ids = allPosts.map((item) => item.id);
+const related = relatedPosts(post, allPosts).map((item) => {
+	const translated = lang === 'es' ? item : (allPosts.find((entry) => entry.id === `${lang}/${item.id}`) ?? item);
+	const href =
+		lang !== 'es' && !ids.includes(`${lang}/${item.id}`) ? `/blog/${item.id}/` : sitePath(`/blog/${item.id}`, lang);
+	return {
+		id: item.id,
+		title: translated.data.title,
+		description: translated.data.description,
+		href,
+	};
+});
+
+const ctaLabels = {
+	es: {
+		business: 'Ver la consultoría de IA para empresas',
+		technical: 'Ver el desarrollo de apps Android',
+	},
+	en: {
+		business: 'See AI consulting for companies',
+		technical: 'See Android app development',
+	},
+	fi: {
+		business: 'Katso tekoälykonsultointi yrityksille',
+		technical: 'Katso Android-sovelluskehitys',
+	},
+} as const;
 ---
 
 {isFeatureLayout ? (
@@ -49,24 +103,66 @@ const blogPosting = {
 	title={`${localized.data.title} · Bitdesal`}
 	description={localized.data.description}
 	breadcrumbLabel={localized.data.title}
-	jsonLd={[blogPosting]}
+	ogImage={image}
+	alternates={blogLocales(post.id, ids)}
+	jsonLd={extraJsonLd}
 >
 	<article class="py-16 md:py-24 bg-white">
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 			<p class="mb-6">
 				<a href={sitePath('/blog', lang)} class="text-sm text-primary hover:underline">{t('blog.back')}</a>
 			</p>
-			<p class="text-sm text-foreground/60 mb-2">
-				{dateLabel}
-				<span aria-hidden="true"> · </span>
-				<span>{post.data.audience === 'business' ? t('blog.filters.business') : t('blog.filters.technical')}</span>
+			<h1 class="text-3xl md:text-4xl mb-4">{localized.data.title}</h1>
+			<p class="text-sm text-foreground/70 mb-8 flex flex-wrap items-center gap-x-2 gap-y-1">
+				{
+					author && (
+						<a href={sitePath(`/${authorId}`, lang)} class="inline-flex items-center gap-2 text-foreground hover:text-primary">
+							<img src={author.portrait} alt="" width="32" height="32" class="rounded-full object-cover" />
+							<span>{t('blog.by')} {author.portraitAlt}</span>
+						</a>
+					)
+				}
+				<span aria-hidden="true">·</span>
+				<span>
+					{t('blog.published')} <time datetime={published.toISOString().slice(0, 10)}>{dateLabel}</time>
+				</span>
+				{
+					modified && (
+						<>
+							<span aria-hidden="true">·</span>
+							<span>
+								{t('blog.updated')} <time datetime={modified.toISOString().slice(0, 10)}>{updatedLabel}</time>
+							</span>
+						</>
+					)
+				}
+				<span aria-hidden="true">·</span>
+				<span>{minutes} {t('blog.reading')}</span>
 			</p>
-			<h1 class="text-3xl md:text-4xl mb-8">{localized.data.title}</h1>
+			{
+				toc.length > 0 && (
+					<nav class="mb-10 rounded-xl border border-border bg-secondary/40 p-5" aria-label={t('blog.related')}>
+						<p class="font-medium mb-3">Índice</p>
+						<ol class="list-decimal pl-5 space-y-2">
+							{toc.map((item) => (
+								<li>
+									<a href={`#${item.id}`} class="text-primary hover:underline">{item.text}</a>
+								</li>
+							))}
+						</ol>
+					</nav>
+				)
+			}
 			<div class="prose prose-neutral max-w-none text-foreground/85">
 				<Content />
 			</div>
+			<BlogEndMatter
+				lang={lang}
+				audience={post.data.audience}
+				related={related}
+				labels={{ related: t('blog.related'), ...ctaLabels[lang] }}
+			/>
 		</div>
 	</article>
-	<CtaSection />
 </Layout>
 )}

@@ -17,15 +17,29 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	nosotros: { es: 'nosotros', en: 'about', fi: 'nosotros' },
-	about: { es: 'nosotros', en: 'about', fi: 'nosotros' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'meista' },
+	about: { es: 'nosotros', en: 'about', fi: 'meista' },
+	meista: { es: 'nosotros', en: 'about', fi: 'meista' },
 };
 
+/** Spanish articles that have no EN/FI file. Hreflang must not point at missing URLs. */
+const ES_ONLY_BLOG_SLUGS = new Set<string>([]);
+
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
-const ES_ONLY_SLUGS = new Set(['auditoria-app-android']);
+const ES_ONLY_SLUGS = new Set([
+	'auditoria-app-android',
+	'consultoria-android',
+	'automatizacion-procesos-ia',
+	'agentes-ia-empresas',
+	'consultoria-ia-alicante-elche',
+]);
 
 export function alternatesForPathname(pathname: string): Language[] {
 	const { slug } = stripLocalePrefix(pathname);
+	if (slug.startsWith('blog/')) {
+		const id = slug.slice('blog/'.length);
+		if (ES_ONLY_BLOG_SLUGS.has(id)) return ['es'];
+	}
 	if (ES_ONLY_SLUGS.has(slug)) return ['es'];
 	if (slug === 'caye' || slug === 'ramiro') return supportedLanguages;
 	return supportedLanguages;
@@ -90,6 +104,9 @@ export function absoluteAlternateHrefs(
 
 const ES_ONLY_FALLBACK_SLUG: Record<string, string> = {
 	'auditoria-app-android': 'consultoria-software',
+	'automatizacion-procesos-ia': 'consultoria-ia',
+	'agentes-ia-empresas': 'consultoria-ia',
+	'consultoria-ia-alicante-elche': 'consultoria-ia',
 };
 
 export function localePathForSwitch(pathname: string, targetLang: Language): string {
@@ -98,6 +115,9 @@ export function localePathForSwitch(pathname: string, targetLang: Language): str
 		return alternateHrefs(pathname, locales)[targetLang];
 	}
 	const { slug } = stripLocalePrefix(pathname);
+	if (slug.startsWith('blog/') && !locales.includes(targetLang)) {
+		return localeHref('blog', targetLang);
+	}
 	const fallbackSlug = ES_ONLY_FALLBACK_SLUG[slug];
 	if (fallbackSlug) {
 		return localeHref(resolveLocalizedSlug(fallbackSlug, targetLang), targetLang);

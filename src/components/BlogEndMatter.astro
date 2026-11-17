@@ -1,0 +1,55 @@
+---
+import { sitePath } from '../data/siteNav';
+import type { Language } from '../i18n/translations';
+
+interface Related {
+	id: string;
+	title: string;
+	description: string;
+	href: string;
+}
+
+interface Props {
+	lang: Language;
+	audience: 'business' | 'technical';
+	related: Related[];
+	labels: {
+		related: string;
+		business: string;
+		technical: string;
+	};
+}
+
+const { lang, audience, related, labels } = Astro.props;
+const ctaHref =
+	audience === 'business' ? sitePath('/consultoria-ia', lang) : sitePath('/consultoria-android', lang);
+const ctaLabel = audience === 'business' ? labels.business : labels.technical;
+---
+
+{
+	related.length > 0 && (
+		<section class="mt-12 pt-8 border-t border-border">
+			<h2 class="text-2xl mb-4">{labels.related}</h2>
+			<ul class="space-y-4">
+				{related.map((item) => (
+					<li>
+						<a href={item.href} class="text-primary font-medium hover:underline">
+							{item.title}
+						</a>
+						<p class="text-sm text-foreground/70 mt-1">{item.description}</p>
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}
+
+<p class:list={[related.length > 0 ? 'mt-10' : 'mt-12 pt-8 border-t border-border']}>
+	<a
+		href={ctaHref}
+		class="bf-cta inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+	>
+		{ctaLabel}
+		<span aria-hidden="true">→</span>
+	</a>
+</p>

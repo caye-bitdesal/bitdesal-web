@@ -14,15 +14,26 @@ const SLUG_ALIASES = {
 	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	nosotros: { es: 'nosotros', en: 'about', fi: 'nosotros' },
-	about: { es: 'nosotros', en: 'about', fi: 'nosotros' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'meista' },
+	about: { es: 'nosotros', en: 'about', fi: 'meista' },
+	meista: { es: 'nosotros', en: 'about', fi: 'meista' },
 };
 
 const LEGACY_SLUG_TARGETS = {
 	methodology: 'consultoria-software',
 };
 
+const ES_ONLY_FALLBACK = {
+	'auditoria-app-android': 'consultoria-software',
+	'automatizacion-procesos-ia': 'consultoria-ia',
+	'agentes-ia-empresas': 'consultoria-ia',
+	'consultoria-ia-alicante-elche': 'consultoria-ia',
+};
+
 export function resolveLocalizedSlug(slug, lang) {
+	if (lang !== 'es' && ES_ONLY_FALLBACK[slug]) {
+		return resolveLocalizedSlug(ES_ONLY_FALLBACK[slug], lang);
+	}
 	const canonical = LEGACY_SLUG_TARGETS[slug] ?? slug;
 	const aliases = SLUG_ALIASES[canonical] ?? SLUG_ALIASES[slug];
 	if (aliases) return aliases[lang];
