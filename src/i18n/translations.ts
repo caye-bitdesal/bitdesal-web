@@ -34,6 +34,9 @@ import {
 	androidConsultingPage as androidConsultingPageFi,
 	consultoriaPageExpanded as consultoriaPageExpandedFi,
 } from './content/android-pages.fi';
+import { iaPageExtra as iaPageExtraEs } from './content/ia-consulting.es';
+import { iaPageExtra as iaPageExtraEn } from './content/ia-consulting.en';
+import { iaPageExtra as iaPageExtraFi } from './content/ia-consulting.fi';
 
 export const translations: Record<Language, any> = {
 	es: {
@@ -575,6 +578,7 @@ export const translations: Record<Language, any> = {
 					a: 'No hace falta. Nos amoldamos a lo que ya usáis para que el cambio sea lo mínimo posible, y os enseñamos lo nuevo paso a paso.',
 				},
 			},
+			...iaPageExtraEs,
 		},
 		androidConsultingPage,
 		androidAuditPage,
@@ -1936,6 +1940,7 @@ export const translations: Record<Language, any> = {
 					a: 'No. We fit what you already use so the change stays small, and we teach you the new parts step by step.',
 				},
 			},
+			...iaPageExtraEn,
 		},
 		consultoriaPage: {
 			hero: {
@@ -3028,6 +3033,7 @@ export const translations: Record<Language, any> = {
 					a: 'Ei. Sopeudumme siihen mitä jo käytätte, jotta muutos jää pieneksi, ja opetamme uuden askel askeleelta.',
 				},
 			},
+			...iaPageExtraFi,
 		},
 		consultoriaPage: {
 			hero: {

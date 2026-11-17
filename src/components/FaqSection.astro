@@ -6,6 +6,8 @@ import { SITE_ORIGIN } from '../data/siteConstants';
 interface FaqItem {
 	qKey: string;
 	aKey: string;
+	linkHref?: string;
+	linkLabelKey?: string;
 }
 
 interface Props {
@@ -16,10 +18,12 @@ interface Props {
 const { titleKey, items } = Astro.props;
 const { t } = useI18n(Astro);
 
-const faqItems = items.map((item) => ({
-	question: t(item.qKey),
-	answer: t(item.aKey),
-}));
+const faqItems = items.map((item) => {
+	const answer = t(item.aKey);
+	if (!item.linkHref) return { question: t(item.qKey), answer };
+	const absolute = new URL(item.linkHref, SITE_ORIGIN).href;
+	return { question: t(item.qKey), answer: `${answer} ${absolute}` };
+});
 
 const canonicalPath =
 	Astro.url.pathname === '/' || Astro.url.pathname.endsWith('/')
@@ -45,7 +49,17 @@ const faqJsonLd = {
 								+
 							</span>
 						</summary>
-						<div class="px-5 pb-4 text-foreground/75 leading-relaxed">{t(item.aKey)}</div>
+						<div class="px-5 pb-4 text-foreground/75 leading-relaxed">
+							{t(item.aKey)}
+							{item.linkHref && item.linkLabelKey && (
+								<>
+									{' '}
+									<a href={item.linkHref} class="text-primary font-medium hover:underline">
+										{t(item.linkLabelKey)}
+									</a>
+								</>
+							)}
+						</div>
 					</details>
 				))
 			}

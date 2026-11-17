@@ -42,9 +42,9 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	iaConsulting: {
 		es: {
-			title: 'Consultoría de IA para empresas: automatiza presupuestos, citas y papeleo · Bitdesal',
+			title: 'Consultoría de IA para empresas: automatiza el papeleo · Bitdesal',
 			description:
-				'¿Presupuestos a mano, citas perdidas o partes en papel? Automatizamos los procesos de tu empresa con IA. Precio cerrado desde el estudio.',
+				'Automatizamos presupuestos, citas, partes y papeleo con consultoría de IA. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
 		},
 		en: {
 			title: 'AI consulting for business: automate paperwork · Bitdesal',
