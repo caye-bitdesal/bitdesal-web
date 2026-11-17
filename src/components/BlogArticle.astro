@@ -5,6 +5,7 @@ import { sitePath } from '../data/siteNav';
 import { SITE_ORIGIN } from '../data/siteConstants';
 import { currencyLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
+import BlogArticleFeature from './BlogArticleFeature.astro';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -12,8 +13,10 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { lang, t } = useI18n(Astro);
 const allPosts = await getCollection('blog');
+const baseMeta = allPosts.find((item) => item.id === post.id) ?? post;
+const isFeatureLayout = baseMeta.data.layout === 'feature';
+const { lang, t } = useI18n(Astro);
 const localized = lang === 'es' ? post : (allPosts.find((item) => item.id === `${lang}/${post.id}`) ?? post);
 const { Content } = await render(localized);
 
@@ -38,6 +41,9 @@ const blogPosting = {
 };
 ---
 
+{isFeatureLayout ? (
+	<BlogArticleFeature post={post} />
+) : (
 <Layout
 	seo="blog"
 	title={`${localized.data.title} · Bitdesal`}
@@ -63,3 +69,4 @@ const blogPosting = {
 	</article>
 	<CtaSection />
 </Layout>
+)}
