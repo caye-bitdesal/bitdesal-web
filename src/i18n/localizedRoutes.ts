@@ -23,11 +23,7 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 };
 
 /** Spanish articles that have no EN/FI file. Hreflang must not point at missing URLs. */
-const ES_ONLY_BLOG_SLUGS = new Set([
-	'insomnio-agentes-ia-funcion-sencilla',
-	'puedes-permitirte-desarrollo-asistido-ia',
-	'mas-alla-del-vibe-coding',
-]);
+const ES_ONLY_BLOG_SLUGS = new Set<string>([]);
 
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
 const ES_ONLY_SLUGS = new Set([
