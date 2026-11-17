@@ -453,7 +453,7 @@ RewriteRule ^nosotros/?$ /en/about/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^nosotros/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^nosotros/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -465,7 +465,7 @@ RewriteRule ^en/nosotros/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^en/nosotros/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^en/nosotros/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -474,6 +474,10 @@ RewriteRule ^fi/nosotros/?$ /en/about/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
 RewriteRule ^fi/nosotros/?$ /nosotros/ [R=301,L,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
+
+RewriteRule ^fi/nosotros/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -485,7 +489,7 @@ RewriteRule ^about/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^about/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^about/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=es(&|$) [NC]
 
@@ -493,7 +497,7 @@ RewriteRule ^en/about/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^en/about/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^en/about/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -505,7 +509,7 @@ RewriteRule ^fi/about/?$ /nosotros/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=fi(&|$) [NC]
 
-RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L,QSD]
+RewriteRule ^fi/about/?$ /fi/meista/ [R=301,L,QSD]
 
 RewriteCond %{QUERY_STRING} (^|&)lang=en(&|$) [NC]
 
@@ -602,5 +606,6 @@ RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
 RewriteRule ^en/nosotros/?$ /en/about/ [R=301,L]
 
 RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
-RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L]
+RewriteRule ^fi/about/?$ /fi/meista/ [R=301,L]
+RewriteRule ^fi/nosotros/?$ /fi/meista/ [R=301,L]
 </IfModule>

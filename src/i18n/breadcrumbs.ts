@@ -20,6 +20,7 @@ const SLUG_LABEL: Record<string, string> = {
 	'referenssit-ja-hinnat': 'nav.workAndPricing',
 	nosotros: 'nav.about',
 	about: 'nav.about',
+	meista: 'nav.about',
 	blog: 'nav.blog',
 	contacto: 'nav.contact',
 	'aviso-legal': 'footer.legalNotice',

@@ -26,7 +26,10 @@ const canonicalPath =
 		? Astro.url.pathname
 		: `${Astro.url.pathname}/`;
 const canonical = new URL(canonicalPath, SITE_ORIGIN).href;
-const faqJsonLd = buildFaqPageJsonLd(canonical, faqItems);
+const faqJsonLd = {
+	'@context': 'https://schema.org',
+	...buildFaqPageJsonLd(canonical, faqItems),
+};
 ---
 
 <section class="py-16 md:py-24 bg-white">

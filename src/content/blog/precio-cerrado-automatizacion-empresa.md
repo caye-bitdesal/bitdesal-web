@@ -1,5 +1,5 @@
 ---
-title: 'Precio cerrado antes de automatizar: por qué empiezo con un estudio de procesos'
+title: 'Precio cerrado antes de automatizar: por qué empezamos con un estudio de procesos'
 description: 'Cómo evitar sorpresas en proyectos de software e IA — estudio de 450 € + IVA, presupuesto fijo y alcance acordado por escrito.'
 pubDate: 2026-10-01
 audience: business

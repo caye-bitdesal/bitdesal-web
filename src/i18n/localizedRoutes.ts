@@ -17,8 +17,9 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
 	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	nosotros: { es: 'nosotros', en: 'about', fi: 'nosotros' },
-	about: { es: 'nosotros', en: 'about', fi: 'nosotros' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'meista' },
+	about: { es: 'nosotros', en: 'about', fi: 'meista' },
+	meista: { es: 'nosotros', en: 'about', fi: 'meista' },
 };
 
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */

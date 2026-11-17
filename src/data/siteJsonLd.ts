@@ -51,7 +51,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		address: {
 			'@type': 'PostalAddress',
 			addressLocality: 'Elche',
-			addressRegion: 'Comunidad Valenciana',
+			addressRegion: 'Alicante',
 			addressCountry: 'ES',
 		},
 		areaServed: AREA_SERVED,

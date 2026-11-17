@@ -100,7 +100,8 @@ RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
 RewriteRule ^en/nosotros/?$ /en/about/ [R=301,L]
 
 RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
-RewriteRule ^fi/about/?$ /fi/nosotros/ [R=301,L]
+RewriteRule ^fi/about/?$ /fi/meista/ [R=301,L]
+RewriteRule ^fi/nosotros/?$ /fi/meista/ [R=301,L]
 </IfModule>
 `;
 

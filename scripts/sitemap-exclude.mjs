@@ -3,6 +3,7 @@ export const SITEMAP_EXCLUDE_PATHS = new Set([
 	'/about',
 	'/en/nosotros',
 	'/fi/about',
+	'/fi/nosotros',
 	'/contact',
 	'/services',
 	'/methodology',
