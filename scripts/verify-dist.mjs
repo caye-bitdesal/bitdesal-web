@@ -1,6 +1,7 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SITEMAP_EXCLUDE_PATHS, shouldIncludeInSitemap } from './sitemap-exclude.mjs';
 
 const root = fileURLToPath(new URL('../dist', import.meta.url));
 
@@ -41,29 +42,18 @@ function extractInternalHrefs(html) {
 
 const errors = [];
 
-const REDIRECT_PATHS = new Set([
-	'/about/',
-	'/en/nosotros/',
-	'/fi/about/',
-	'/contact/',
-	'/services/',
-	'/methodology/',
-	'/prices/',
-	'/precios/',
-	'/pricing/',
-	'/projects/',
-	'/post-1/',
-	'/blog-2/',
-	'/blog/precio-cerrado-automatizacion-pyme/',
-	'/automatizacion-pymes/',
-	'/en/automatizacion-pymes/',
-	'/fi/automatizacion-pymes/',
-]);
+const REDIRECT_PATHS = new Set(
+	[...SITEMAP_EXCLUDE_PATHS].map((p) => (p.endsWith('/') ? p : `${p}/`)),
+);
 
 const sitemapIndex = join(root, 'sitemap-index.xml');
+const sitemapRoot = join(root, 'sitemap.xml');
 if (!existsSync(sitemapIndex)) {
 	console.error('Missing dist/sitemap-index.xml — run npm run build first.');
 	process.exit(1);
+}
+if (!existsSync(sitemapRoot)) {
+	errors.push('Missing dist/sitemap.xml — finish-sitemap step did not run.');
 }
 
 const indexXml = readFileSync(sitemapIndex, 'utf8');
@@ -78,11 +68,24 @@ for (const mapUrl of sitemapUrls) {
 	}
 	const pageUrls = extractLocs(readFileSync(mapFile, 'utf8'));
 	for (const pageUrl of pageUrls) {
+		if (!shouldIncludeInSitemap(pageUrl)) {
+			errors.push(`Sitemap lists redirect-only URL: ${pageUrl}`);
+			continue;
+		}
 		const pathname = new URL(pageUrl).pathname;
 		const file = pathToFile(pathname);
 		if (!existsSync(file)) {
 			errors.push(`Sitemap URL not built as HTML: ${pathname} (expected ${file})`);
+			continue;
 		}
+		const html = readFileSync(file, 'utf8');
+		if (html.includes('Redirecting to:') && html.includes('noindex')) {
+			errors.push(`Sitemap URL is a redirect stub: ${pathname}`);
+		}
+	}
+	const body = readFileSync(mapFile, 'utf8');
+	if (!body.includes('</urlset>') || body.includes('</urlset></urlset>')) {
+		errors.push(`Malformed sitemap XML: ${mapPath}`);
 	}
 }
 

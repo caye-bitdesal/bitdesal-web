@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { sitemapHreflangLinks } from './src/i18n/localizedRoutes.ts';
+import { shouldIncludeInSitemap } from './scripts/sitemap-exclude.mjs';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://bitdesal.com',
@@ -16,42 +17,11 @@ export default defineConfig({
 	},
 	integrations: [
 		sitemap({
-			i18n: {
-				defaultLocale: 'es',
-				locales: {
-					es: 'es-ES',
-					en: 'en-US',
-					fi: 'fi-FI',
-				},
-			},
-			filter(page) {
-				const path = new URL(page).pathname.replace(/\/$/, '') || '/';
-				if (/^(\/(en|fi))?\/(pricing|projects|prices|precios)$/.test(path)) return false;
-				const exclude = new Set([
-					'/about',
-					'/en/nosotros',
-					'/fi/about',
-					'/contact',
-					'/services',
-					'/methodology',
-					'/prices',
-					'/precios',
-					'/pricing',
-					'/projects',
-					'/post-1',
-					'/blog-2',
-					'/blog/precio-cerrado-automatizacion-pyme',
-					'/automatizacion-pymes',
-					'/en/automatizacion-pymes',
-					'/fi/automatizacion-pymes',
-				]);
-				return !exclude.has(path);
-			},
+			// Hreflang is set in serialize via sitemapHreflangLinks (slugs differ by locale).
+			filter: shouldIncludeInSitemap,
 			serialize(item) {
-				return {
-					...item,
-					links: sitemapHreflangLinks(item.url),
-				};
+				const links = sitemapHreflangLinks(item.url);
+				return links.length ? { ...item, links } : item;
 			},
 		}),
 	],

@@ -130,5 +130,9 @@ export function sitemapHreflangLinks(url: string): { url: string; lang: string }
 	const path = new URL(url).pathname;
 	const locales = alternatesForPathname(path);
 	const abs = absoluteAlternateHrefs(path, locales);
-	return locales.map((locale) => ({ url: abs[locale], lang: HREFLANG_BCP47[locale] }));
+	const links = locales.map((locale) => ({ url: abs[locale], lang: HREFLANG_BCP47[locale] }));
+	if (links.length > 1) {
+		links.push({ url: abs.es, lang: 'x-default' });
+	}
+	return links;
 }
