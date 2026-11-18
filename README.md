@@ -54,7 +54,7 @@ npm run preview
 This repo deploys automatically to Bitdesal’s Gandi hosting via **SFTP** using a GitHub Action workflow: `.github/workflows/deploy-gandi-sftp.yml`.
 
 - **When it runs**: on every push to the `main` branch
-- **What it does**: installs dependencies, runs `npm run build`, then uploads the contents of `dist/`
+- **What it does**: installs dependencies, runs `npm run build`, uploads the contents of `dist/`, then pings [IndexNow](https://www.indexnow.org/) with all sitemap URLs (`scripts/submit-indexnow.mjs`)
 
 ### Contact form spam protection (Cloudflare Turnstile + Formspree)
 

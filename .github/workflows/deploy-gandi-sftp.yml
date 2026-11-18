@@ -41,3 +41,6 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: "./dist/**"
           remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
+
+      - name: Notify search engines (IndexNow)
+        run: node scripts/submit-indexnow.mjs
