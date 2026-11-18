@@ -1,6 +1,31 @@
 User-agent: *
 Allow: /
 
+# Buscadores e IAs: acceso explícito (respuestas y citas en ChatGPT, Claude, Perplexity, Gemini, Copilot)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://bitdesal.com/sitemap.xml
 Sitemap: https://bitdesal.com/sitemap-index.xml
 IndexNow: https://bitdesal.com/e5e52943ba694fa9937da7309b158052.txt

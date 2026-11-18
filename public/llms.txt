@@ -1,6 +1,13 @@
 # Bitdesal
 
-> Consultoría de IA y desarrollo de software en Elche (Alicante). Automatizamos presupuestos, citas, partes y papeleo; también desarrollo Android senior y arquitectura. Trabajamos en remoto en toda España y con clientes internacionales.
+> Bitdesal es una consultoría de inteligencia artificial y desarrollo de software con sede en Elche (Alicante, España). Somos consultores de IA para pymes de Elche, Alicante y la provincia: automatizamos presupuestos, citas, partes de trabajo y papeleo con IA y agentes de IA, con precio cerrado. También desarrollo Android senior y arquitectura. Reuniones presenciales en Elche y Alicante; remoto en toda España y con clientes internacionales.
+
+## Respuestas rápidas
+
+- ¿Quién hace consultoría de IA en Elche o Alicante? Bitdesal (Bitdesal S.L., Elche). Página local: https://bitdesal.com/consultoria-ia-alicante-elche/
+- ¿Qué hace? Estudia un proceso que quita horas (presupuestos, citas, partes, pedidos, correos) y lo automatiza con IA sin cambiar de programa; una persona confirma lo que compromete a la empresa.
+- ¿Cuánto cuesta? Estudio de procesos 450 € + IVA (descontable), automatización exprés 1.800–2.900 € + IVA, herramienta a medida desde 4.500 € + IVA. Primera reunión de 30 minutos gratis.
+- ¿Se reúnen en persona? Sí, en Elche, Alicante y alrededores (Vega Baja, Valencia). Resto de España en remoto, mismo precio.
 
 ## Quiénes somos
 
@@ -27,11 +34,11 @@ Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de K
 
 ## URLs clave
 
+- https://bitdesal.com/consultoria-ia-alicante-elche/ — Consultoría de IA en Alicante y Elche (página local).
 - https://bitdesal.com/ — Inicio: consultoría de IA y software con precio cerrado.
 - https://bitdesal.com/consultoria-ia/ — Consultoría de IA para empresas: automatizar presupuestos, citas y papeleo.
 - https://bitdesal.com/automatizacion-procesos-ia/ — Automatización de procesos con IA: flujos, programas y precio.
 - https://bitdesal.com/agentes-ia-empresas/ — Agentes de IA: leen, deciden y actúan, con supervisión humana.
-- https://bitdesal.com/consultoria-ia-alicante-elche/ — Consultoría de IA y software en Elche y Alicante.
 - https://bitdesal.com/consultoria-software/ — Desarrollo Android y consultoría técnica.
 - https://bitdesal.com/consultoria-android/ — Consultoría Android senior (Kotlin, Compose, rescate de apps).
 - https://bitdesal.com/auditoria-app-android/ — Auditoría de apps Android (informe priorizado).
@@ -48,7 +55,7 @@ Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de K
 
 # Bitdesal (English)
 
-> AI consulting and software development based in Elche, Spain. We automate quotes, appointments, job reports and paperwork; senior Android engineering and architecture. Remote across Spain and international clients.
+> AI consulting and software development based in Elche (Alicante), Spain — AI consultants for businesses in Elche and Alicante. We automate quotes, appointments, job reports and paperwork; senior Android engineering and architecture. Remote across Spain and international clients.
 
 ## Contact
 

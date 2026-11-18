@@ -345,7 +345,7 @@ export const translations: Record<Language, any> = {
 			hero: {
 				title: 'Tú céntrate en tu negocio. La tecnología la ponemos nosotros.',
 				subtitle:
-					'Consultoría de IA y desarrollo de software. Con precio cerrado y sin sorpresas.',
+					'Consultoría de IA y desarrollo de software desde Elche (Alicante). Con precio cerrado y sin sorpresas.',
 				imageAlt:
 					'Imagen que refleja la serenidad que queremos transmitir en Bitdesal a nuestros clientes',
 				viewProjects: 'Ver proyectos',

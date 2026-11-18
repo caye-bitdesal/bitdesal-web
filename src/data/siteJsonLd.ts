@@ -1,4 +1,4 @@
-import { SITE_ORIGIN, CONTACT_EMAIL, CONTACT_PHONE_E164 } from './siteConstants';
+import { SITE_ORIGIN, CONTACT_EMAIL, CONTACT_PHONE_E164, LEGAL_HOLDER_NAME, LEGAL_TAX_ID } from './siteConstants';
 import { getTeamMember } from './teamMembers';
 import type { Language } from '../i18n/translations';
 
@@ -21,11 +21,22 @@ const KNOWS_ABOUT = [
 ];
 
 const AREA_SERVED = [
-	{ '@type': 'Country', name: 'España' },
+	{ '@type': 'City', name: 'Elche', sameAs: 'https://es.wikipedia.org/wiki/Elche' },
+	{ '@type': 'City', name: 'Alicante', sameAs: 'https://es.wikipedia.org/wiki/Alicante' },
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Provincia de Alicante',
+		sameAs: 'https://es.wikipedia.org/wiki/Provincia_de_Alicante',
+	},
 	{ '@type': 'AdministrativeArea', name: 'Comunidad Valenciana' },
-	{ '@type': 'AdministrativeArea', name: 'Alicante' },
-	{ '@type': 'City', name: 'Elche' },
+	{ '@type': 'Country', name: 'España' },
 ];
+
+const ORG_DESCRIPTION: Record<Language, string> = {
+	es: 'Consultoría de inteligencia artificial y desarrollo de software con sede en Elche (Alicante). Automatiza presupuestos, citas, partes y papeleo para pymes de Elche, Alicante y el resto de España, con precio cerrado.',
+	en: 'AI consulting and software development company based in Elche (Alicante, Spain). Automates quotes, appointments, job reports and paperwork for SMEs, with fixed pricing.',
+	fi: 'Tekoälykonsultointia ja ohjelmistokehitystä Elchestä (Alicante, Espanja). Automatisoimme tarjoukset, ajanvaraukset ja paperityöt kiinteällä hinnalla.',
+};
 
 function cayeJobTitle(lang: Language): string {
 	if (lang === 'en') return 'Founder and Android & AI consultant';
@@ -43,6 +54,9 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		'@type': ['Organization', 'ProfessionalService'],
 		'@id': ORG_ID,
 		name: 'Bitdesal',
+		legalName: LEGAL_HOLDER_NAME,
+		taxID: LEGAL_TAX_ID,
+		description: ORG_DESCRIPTION[lang],
 		url: SITE_ORIGIN,
 		logo: `${SITE_ORIGIN}/logo.png`,
 		image: `${SITE_ORIGIN}/logo.png`,
@@ -56,6 +70,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		},
 		areaServed: AREA_SERVED,
 		founder: { '@id': CAYE_ID },
+		employee: [{ '@id': CAYE_ID }, { '@id': RAMIRO_ID }],
 		knowsAbout: KNOWS_ABOUT,
 		priceRange: '€€',
 		sameAs: [
@@ -80,6 +95,31 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 					'@type': 'Offer',
 					itemOffered: {
 						'@type': 'Service',
+						name: 'Consultoría de IA en Alicante y Elche',
+						url: `${SITE_ORIGIN}/consultoria-ia-alicante-elche/`,
+						areaServed: AREA_SERVED.slice(0, 3),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Automatización de procesos con IA',
+						url: `${SITE_ORIGIN}/automatizacion-procesos-ia/`,
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Agentes de IA para empresas',
+						url: `${SITE_ORIGIN}/agentes-ia-empresas/`,
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
 						name: 'Desarrollo y consultoría de software',
 						url: `${SITE_ORIGIN}/consultoria-software/`,
 					},
@@ -93,6 +133,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		'@id': WEBSITE_ID,
 		name: 'Bitdesal',
 		url: SITE_ORIGIN,
+		inLanguage: ['es', 'en', 'fi'],
 		publisher: { '@id': ORG_ID },
 	};
 

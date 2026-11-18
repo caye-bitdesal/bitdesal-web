@@ -4,23 +4,28 @@ import FaqSection from '../components/FaqSection.astro';
 import Layout from '../layouts/Layout.astro';
 import { localPage as copy } from '../i18n/content/local-page.es';
 import { BOOKING_URL, CONTACT_EMAIL, CONTACT_PHONE_E164, SITE_ORIGIN } from '../data/siteConstants';
-import { ORG_ID } from '../data/siteJsonLd';
+import { CAYE_ID, ORG_ID } from '../data/siteJsonLd';
 
 const canonical = new URL('/consultoria-ia-alicante-elche/', SITE_ORIGIN).href;
 
 // TODO(caye): coordenadas aproximadas del municipio de Elche, no de un domicilio. No publicar geo hasta confirmarlas.
 // TODO(caye): URL del Perfil de Empresa de Google. No enlazar ni incrustar Maps (cookies; la privacidad dice que no hay).
 // TODO(caye): confirmar zona presencial (Elche, Alicante, Vega Baja y Valencia están planteadas, no cerradas).
+// Nota: se quitó el párrafo «la zona presencial la estamos dejando por escrito»; si la zona cambia, actualizar where.p2 y faq.travel.
 // TODO(caye): confirmar sectores de la provincia. No hay clientes nombrados a propósito.
 
 const localJsonLd = {
 	'@type': 'ProfessionalService',
 	'@id': `${canonical}#local`,
-	name: 'Bitdesal',
+	name: 'Bitdesal · Consultoría de IA en Alicante y Elche',
+	description: copy.hero.summary,
 	url: canonical,
+	image: `${SITE_ORIGIN}/logo.png`,
 	parentOrganization: { '@id': ORG_ID },
+	founder: { '@id': CAYE_ID },
 	email: CONTACT_EMAIL,
 	telephone: CONTACT_PHONE_E164,
+	priceRange: '€€',
 	address: {
 		'@type': 'PostalAddress',
 		addressLocality: 'Elche',
@@ -28,14 +33,42 @@ const localJsonLd = {
 		addressCountry: 'ES',
 	},
 	areaServed: [
-		{ '@type': 'City', name: 'Elche' },
-		{ '@type': 'City', name: 'Alicante' },
-		{ '@type': 'AdministrativeArea', name: 'Provincia de Alicante' },
+		{ '@type': 'City', name: 'Elche', sameAs: 'https://es.wikipedia.org/wiki/Elche' },
+		{ '@type': 'City', name: 'Alicante', sameAs: 'https://es.wikipedia.org/wiki/Alicante' },
+		{
+			'@type': 'AdministrativeArea',
+			name: 'Provincia de Alicante',
+			sameAs: 'https://es.wikipedia.org/wiki/Provincia_de_Alicante',
+		},
 		{ '@type': 'AdministrativeArea', name: 'Comunidad Valenciana' },
+	],
+	knowsAbout: ['consultoría de IA', 'automatización de procesos con IA', 'agentes de IA', 'desarrollo Android'],
+	makesOffer: [
+		{
+			'@type': 'Offer',
+			name: 'Estudio de procesos',
+			price: '450',
+			priceCurrency: 'EUR',
+			itemOffered: { '@type': 'Service', name: 'Consultoría de IA: estudio de procesos', areaServed: 'Alicante' },
+		},
+		{
+			'@type': 'Offer',
+			name: 'Automatización exprés con IA',
+			priceSpecification: {
+				'@type': 'PriceSpecification',
+				minPrice: '1800',
+				maxPrice: '2900',
+				priceCurrency: 'EUR',
+			},
+			itemOffered: { '@type': 'Service', name: 'Automatización de procesos con IA', areaServed: 'Alicante' },
+		},
 	],
 };
 
 const faqItems = [
+	{ question: copy.faq.who.q, answer: copy.faq.who.a },
+	{ question: copy.faq.what.q, answer: copy.faq.what.a },
+	{ question: copy.faq.price.q, answer: copy.faq.price.a },
 	{ question: copy.faq.travel.q, answer: copy.faq.travel.a },
 	{ question: copy.faq.office.q, answer: copy.faq.office.a },
 	{ question: copy.faq.region.q, answer: copy.faq.region.a },
@@ -48,6 +81,7 @@ const faqItems = [
 		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-4xl md:text-5xl mb-6">{copy.hero.h1}</h1>
 			<div class="space-y-4 text-lg text-white/90 leading-relaxed">
+				<p class="text-xl text-white font-medium">{copy.hero.summary}</p>
 				<p>{copy.hero.lead}</p>
 				<p>{copy.hero.p2}</p>
 			</div>

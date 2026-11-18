@@ -28,9 +28,9 @@ type SeoEntry = { title: string; description: string };
 const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	home: {
 		es: {
-			title: 'Bitdesal · Consultoría de IA y desarrollo de software',
+			title: 'Consultoría de IA y software en Elche y Alicante · Bitdesal',
 			description:
-				'Consultoría de IA para automatizar presupuestos, citas y papeleo, y desarrollo de software con precio cerrado. Agenda 30 minutos gratis.',
+				'Consultores de IA en Elche (Alicante): automatizamos presupuestos, citas y papeleo, y desarrollamos software con precio cerrado. Agenda 30 minutos gratis.',
 		},
 		en: {
 			title: 'Android, AI and software consulting · Bitdesal',
@@ -129,9 +129,9 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 	},
 	localElche: {
 		es: {
-			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
+			title: 'Consultor de IA en Alicante y Elche para empresas · Bitdesal',
 			description:
-				'Consultoría de IA y software en Elche y Alicante. Reunión de 30 minutos, presencial u online, para ver si automatizar te ahorra horas. Agenda la tuya.',
+				'Consultores de IA en Alicante y Elche: automatizamos presupuestos, citas y partes con precio cerrado. Primera reunión de 30 min gratis, presencial u online.',
 		},
 		en: {
 			title: 'Consultoría de IA en Elche y Alicante, España · Bitdesal',
