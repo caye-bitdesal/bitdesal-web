@@ -17,6 +17,18 @@ export type ProjectCard = {
 /** Public project listings (Yössä stays in Caye's trajectory only). */
 export const projectCards: ProjectCard[] = [
 	{
+		slug: 'amartevitalflow',
+		line: 'software',
+		platform: 'web',
+		iconSrc: '/projects/amartevitalflow/amartevitalflow-app-icon.png',
+		iconAlt: "Am'Arte Vital Flow",
+		nameKey: 'projects.amarteVitalFlow.name',
+		tagKey: 'projects.amarteVitalFlow.tag',
+		updatedKey: 'projects.amarteVitalFlow.updated',
+		descriptionKey: 'projects.amarteVitalFlow.description',
+		href: '/projects/amartevitalflow',
+	},
+	{
 		slug: 'muixeranga',
 		line: 'software',
 		platform: 'web',

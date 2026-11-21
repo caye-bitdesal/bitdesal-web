@@ -703,6 +703,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura.',
 			},
+			amarteVitalFlow: {
+				name: "Am'Arte Vital Flow",
+				tag: 'Web · Bienestar',
+				updated: '2026',
+				description:
+					'Web en amartevitalflow.com para acompañamiento integrativo en Elche: naturopatía, Movimiento Flow y talleres — Bitdesal la diseñó y desarrolló en Astro.',
+			},
 			muixeranga: {
 				name: "Muixeranga d'Elx",
 				tag: 'Web · Cultura',
@@ -1003,6 +1010,100 @@ export const translations: Record<Language, any> = {
 					titleAccent: '',
 					subtitle:
 						'Para Bitdesal, esta web es una muixeranga más: cada pieza sostiene a la siguiente. Si te encaja ese enfoque, cuéntanoslo en 30 minutos.',
+					button: 'Agenda 30 min gratis',
+				},
+				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
+			},
+			amarteVitalFlowDetail: {
+				back: 'Volver a casos y precios',
+				tag: 'WEB · BIENESTAR',
+				title: "Am'Arte Vital Flow",
+				titleAccent: 'Volver a habitarte',
+				heroDescription:
+					"Am'Arte Vital Flow es la consulta de Alize en Elche: naturopatía, movimiento consciente y talleres de bienestar. La web explica los tres caminos — comprender, experimentar y expresar — y facilita el primer contacto sin perder un tono cercano y calmado.",
+				website: 'Visitar amartevitalflow.com',
+				case: {
+					challenge: 'El reto',
+					role: 'El papel de Bitdesal',
+					result: 'El resultado',
+					challengeText:
+						'Hacía falta una presencia digital que transmitiera acompañamiento integrativo de verdad: no un listado clínico ni una plantilla genérica de «salud», sino un sitio que invite a pedir cita, entender naturopatía, Movimiento Flow y talleres, y generar confianza antes del primer encuentro.',
+					roleText:
+						'Bitdesal diseñó y desarrolló amartevitalflow.com en Astro: arquitectura multi-página (inicio, naturopatía, movimiento, talleres, tienda y contacto), paleta terracota–salvia–crema, tipografías serif y sans, carrusel de testimonios, bloques editoriales sobre hábitos y cuerpo, navegación móvil con tarjetas desplegables y páginas legales con metadatos para buscadores.',
+					resultText:
+						'Sitio en producción que presenta las tres líneas de servicio con copy alineado al enfoque de la consulta, testimonios de clientas, vías de contacto claras (correo, teléfono y ubicación en Elche) y maquetación usable en móvil y escritorio.',
+					contactPrompt: 'Contacto de la consulta:',
+					contactEmail: 'info.amartevitalflow@gmail.com',
+				},
+				metrics: {
+					services: '3',
+					servicesLabel: 'Líneas · comprender, experimentar, expresar',
+					pages: '6+',
+					pagesLabel: 'Páginas principales de servicio',
+					city: 'Elche',
+					cityLabel: 'Alicante · consulta presencial',
+					year: '2026',
+					yearLabel: 'En producción',
+				},
+				screensTitle: 'Recorrido por el sitio',
+				screens: {
+					home: 'Portada',
+					naturopathy: 'Naturopatía',
+					movement: 'Movimiento Flow',
+					workshops: 'Talleres y charlas',
+					shop: 'Tienda',
+					contact: 'Sobre mí y contacto',
+				},
+				featuresTitle: 'Qué incluye la web',
+				features: {
+					home: {
+						title: 'Portada integrativa',
+						description:
+							'Hero con las tres vías de acompañamiento, mensaje de bienestar corporal y llamada a contactar; fotografía de ambiente en desktop.',
+					},
+					naturopathy: {
+						title: 'Naturopatía',
+						description:
+							'Página dedicada al acompañamiento individual: hábitos, fitoterapia, aromaterapia y complementos desde una visión global de la persona.',
+					},
+					movement: {
+						title: 'Movimiento Flow',
+						description:
+							'Sesiones de movimiento consciente: movilidad, fuerza, respiración y confianza corporal explicadas con el mismo tono calmado.',
+					},
+					workshops: {
+						title: 'Talleres y charlas',
+						description:
+							'Encuentros formativos sobre alimentación, plantas, aromaterapia, movimiento y expresión creativa vinculada a la arteterapia.',
+					},
+					shop: {
+						title: 'Tienda',
+						description: 'Espacio para productos o recursos complementarios al acompañamiento, integrado en la misma identidad visual.',
+					},
+					testimonials: {
+						title: 'Testimonios',
+						description:
+							'Carrusel con experiencias reales de consulta, Flow y talleres — prueba social sin sobrecargar la portada.',
+					},
+				},
+				playSection: {
+					title: 'Stack y contacto',
+					description:
+						'Sitio estático con Astro, tipografías web y despliegue ligero; formulario y datos de contacto visibles en pie y página dedicada.',
+					categoryLabel: 'Tipo',
+					category: 'Web · bienestar integrativo',
+					updatedLabel: 'Publicado',
+					updated: '2026',
+					companyLabel: 'Desarrollo',
+					company: 'Bitdesal',
+					countryLabel: 'Cliente',
+					country: "Am'Arte Vital Flow · Elche",
+				},
+				cta: {
+					title: '¿Montamos la web de tu consulta o proyecto?',
+					titleAccent: '',
+					subtitle:
+						'Si necesitas un sitio serio que explique tu método y convierta visitas en conversaciones, cuéntanoslo en 30 minutos.',
 					button: 'Agenda 30 min gratis',
 				},
 				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
@@ -1900,6 +2001,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely.',
 			},
+			amarteVitalFlow: {
+				name: "Am'Arte Vital Flow",
+				tag: 'Web · Wellness',
+				updated: '2026',
+				description:
+					'Site at amartevitalflow.com for integrative wellness in Elche — naturopathy, Movement Flow and workshops; Bitdesal designed and built it in Astro.',
+			},
 			muixeranga: {
 				name: "Muixeranga d'Elx",
 				tag: 'Web · Culture',
@@ -2194,6 +2302,100 @@ export const translations: Record<Language, any> = {
 					titleAccent: '',
 					subtitle:
 						'For Bitdesal, this site is another muixeranga: each piece holds up the next. If that approach fits you, tell us in 30 minutes.',
+					button: 'Book 30 min free',
+				},
+				copyright: '© 2026 Bitdesal. All rights reserved.',
+			},
+			amarteVitalFlowDetail: {
+				back: 'Back to work & pricing',
+				tag: 'WEB · WELLNESS',
+				title: "Am'Arte Vital Flow",
+				titleAccent: 'Live in your body again',
+				heroDescription:
+					"Am'Arte Vital Flow is Alize's practice in Elche: naturopathy, conscious movement and wellbeing workshops. The site explains the three paths — understand, experience and express — and makes first contact easy while keeping a calm, human tone.",
+				website: 'Visit amartevitalflow.com',
+				case: {
+					challenge: 'The challenge',
+					role: 'Bitdesal’s role',
+					result: 'The outcome',
+					challengeText:
+						'The practice needed a digital presence that felt like integrative support — not a cold clinic listing or a generic “wellness” template — but a site that helps visitors book, understand naturopathy, Movement Flow and workshops, and trust the approach before the first session.',
+					roleText:
+						'Bitdesal designed and built amartevitalflow.com in Astro: multi-page architecture (home, naturopathy, movement, workshops, shop and contact), terracotta–sage–cream palette, serif and sans type, testimonial carousel, editorial blocks on habits and embodiment, mobile navigation with expandable service cards, legal pages and SEO metadata.',
+					resultText:
+						'A live site presenting three service lines with copy aligned to the practice, client testimonials, clear contact paths (email, phone and Elche location) and layouts that work on phone and desktop.',
+					contactPrompt: 'Practice contact:',
+					contactEmail: 'info.amartevitalflow@gmail.com',
+				},
+				metrics: {
+					services: '3',
+					servicesLabel: 'Paths · understand, experience, express',
+					pages: '6+',
+					pagesLabel: 'Main service pages',
+					city: 'Elche',
+					cityLabel: 'Alicante · in-person practice',
+					year: '2026',
+					yearLabel: 'In production',
+				},
+				screensTitle: 'Tour of the site',
+				screens: {
+					home: 'Home',
+					naturopathy: 'Naturopathy',
+					movement: 'Movement Flow',
+					workshops: 'Workshops & talks',
+					shop: 'Shop',
+					contact: 'About & contact',
+				},
+				featuresTitle: 'What the site includes',
+				features: {
+					home: {
+						title: 'Integrative home',
+						description:
+							'Hero with the three paths, embodied wellbeing messaging and a contact call-to-action; atmosphere photography on desktop.',
+					},
+					naturopathy: {
+						title: 'Naturopathy',
+						description:
+							'Dedicated page for individual support: habits, phytotherapy, aromatherapy and supplements from a whole-person view.',
+					},
+					movement: {
+						title: 'Movement Flow',
+						description:
+							'Conscious movement sessions — mobility, strength, breath and body confidence — explained in the same calm voice.',
+					},
+					workshops: {
+						title: 'Workshops & talks',
+						description:
+							'Learning events on food, plants, aromatherapy, movement and creative expression inspired by art therapy.',
+					},
+					shop: {
+						title: 'Shop',
+						description: 'Room for products or resources that complement the practice, within the same visual identity.',
+					},
+					testimonials: {
+						title: 'Testimonials',
+						description:
+							'Carousel with real stories from consultations, Flow and workshops — social proof without cluttering the home page.',
+					},
+				},
+				playSection: {
+					title: 'Stack & contact',
+					description:
+						'Static Astro site with web fonts and a light deploy; contact details on the footer and a dedicated contact page.',
+					categoryLabel: 'Type',
+					category: 'Website · integrative wellness',
+					updatedLabel: 'Launched',
+					updated: '2026',
+					companyLabel: 'Built by',
+					company: 'Bitdesal',
+					countryLabel: 'Client',
+					country: "Am'Arte Vital Flow · Elche",
+				},
+				cta: {
+					title: 'Need a site for your practice?',
+					titleAccent: '',
+					subtitle:
+						'If you need a credible site that explains your method and turns visits into conversations, tell us in 30 minutes.',
 					button: 'Book 30 min free',
 				},
 				copyright: '© 2026 Bitdesal. All rights reserved.',
@@ -3199,6 +3401,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen.',
 			},
+			amarteVitalFlow: {
+				name: "Am'Arte Vital Flow",
+				tag: 'Web · Hyvinvointi',
+				updated: '2026',
+				description:
+					'Sivusto amartevitalflow.com integratiiviseen hyvinvointiin Elchessä — naturopatia, Movement Flow ja työpajat; Bitdesal suunnitteli ja rakensi Astron.',
+			},
 			muixeranga: {
 				name: "Muixeranga d'Elx",
 				tag: 'Web · Kulttuuri',
@@ -3493,6 +3702,100 @@ export const translations: Record<Language, any> = {
 					titleAccent: '',
 					subtitle:
 						'Bitdesalille tämä on toinen muixeranga: jokainen osa kantaa seuraavaa. Jos lähestymistapa sopii, kerro 30 minuutissa.',
+					button: 'Varaa 30 min ilmaiseksi',
+				},
+				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',
+			},
+			amarteVitalFlowDetail: {
+				back: 'Takaisin referensseihin ja hintoihin',
+				tag: 'WEB · HYVINVOINTI',
+				title: "Am'Arte Vital Flow",
+				titleAccent: 'Asu kehossasi uudelleen',
+				heroDescription:
+					"Am'Arte Vital Flow on Alizen käytäntö Elchessä: naturopatia, tietoinen liike ja hyvinvointityöpajat. Sivusto esittelee kolme polkua — ymmärtää, kokea ja ilmaista — ja helpottaa ensiyhteyttä rauhallisella sävyllä.",
+				website: 'Vieraile amartevitalflow.com',
+				case: {
+					challenge: 'Haaste',
+					role: 'Bitdesalin rooli',
+					result: 'Tulos',
+					challengeText:
+						'Käytännölle tarvittiin verkko-olemus, joka tuntuu integratiiviselta tuelta — ei kliiniseltä listaukselta eikä geneeriseltä «wellness»-pohjalta — vaan sivusto, joka auttaa varaamaan, ymmärtämään naturopatian, Movement Flow’n ja työpajat sekä luottamaan ennen ensitapaamista.',
+					roleText:
+						'Bitdesal suunnitteli ja rakensi amartevitalflow.comin Astroilla: monisivuinen rakenne (etusivu, naturopatia, liike, työpajat, kauppa ja yhteystiedot), terrakotta–salvia–kerma-paletti, serif- ja sans-fontit, testimoniaalikaruselli, toimitukselliset tekstit tavoista ja kehosta, mobiilinavigaatio laajennettavilla palvelukorteilla, juridiset sivut ja SEO-metatiedot.',
+					resultText:
+						'Tuotannossa oleva sivusto, jossa kolme palvelulinjaa, asiakastarinoita, selkeät yhteystiedot (sähköposti, puhelin ja Elche) sekä layout mobiiliin ja työpöytään.',
+					contactPrompt: 'Käytännön yhteystiedot:',
+					contactEmail: 'info.amartevitalflow@gmail.com',
+				},
+				metrics: {
+					services: '3',
+					servicesLabel: 'Polkua · ymmärtää, kokea, ilmaista',
+					pages: '6+',
+					pagesLabel: 'Pääpalvelusivut',
+					city: 'Elche',
+					cityLabel: 'Alicante · lähipalvelu',
+					year: '2026',
+					yearLabel: 'Tuotannossa',
+				},
+				screensTitle: 'Kierros sivustolla',
+				screens: {
+					home: 'Etusivu',
+					naturopathy: 'Naturopatia',
+					movement: 'Movement Flow',
+					workshops: 'Työpajat ja luennot',
+					shop: 'Kauppa',
+					contact: 'Tietoa minusta ja yhteystiedot',
+				},
+				featuresTitle: 'Mitä sivusto sisältää',
+				features: {
+					home: {
+						title: 'Integratiivinen etusivu',
+						description:
+							'Hero kolmella polulla, kehollisen hyvinvoinnin viesti ja yhteydenotto; tunnelmakuva työpöytänäkymässä.',
+					},
+					naturopathy: {
+						title: 'Naturopatia',
+						description:
+							'Oma sivu yksilölliselle seuralle: tavat, fitoterapia, aromaterapia ja täydenteet kokonaisvaltaisesta näkökulmasta.',
+					},
+					movement: {
+						title: 'Movement Flow',
+						description:
+							'Tietoisen liikkeen sessiot — liikkuvuus, voima, hengitys ja kehon luottamus — samalla rauhallisella äänellä.',
+					},
+					workshops: {
+						title: 'Työpajat ja luennot',
+						description:
+							'Oppimistapahtumat ruuasta, kasveista, aromaterapiasta, liikkeestä ja luovasta ilmaisusta arteterapian hengessä.',
+					},
+					shop: {
+						title: 'Kauppa',
+						description: 'Tila tuotteille tai materiaaleille, jotka täydentävät seurantaa, sama visuaalinen ilme.',
+					},
+					testimonials: {
+						title: 'Suositukset',
+						description:
+							'Karuselli aidoista kokemuksista konsultaatioista, Flow’sta ja työpajoista — sosiaalista todistetta ilman täytettä etusivulla.',
+					},
+				},
+				playSection: {
+					title: 'Stack ja yhteystiedot',
+					description:
+						'Staattinen Astro-sivusto web-fonteilla ja kevyellä julkaisulla; yhteystiedot alatunnisteessa ja omalla sivulla.',
+					categoryLabel: 'Tyyppi',
+					category: 'Web · integratiivinen hyvinvointi',
+					updatedLabel: 'Julkaistu',
+					updated: '2026',
+					companyLabel: 'Kehitys',
+					company: 'Bitdesal',
+					countryLabel: 'Asiakas',
+					country: "Am'Arte Vital Flow · Elche",
+				},
+				cta: {
+					title: 'Tarvitsetko sivuston käytännöllesi?',
+					titleAccent: '',
+					subtitle:
+						'Jos tarvitset uskottavan sivun, joka selittää menetelmäsi ja muuttaa kävijät keskusteluiksi, kerro 30 minuutissa.',
 					button: 'Varaa 30 min ilmaiseksi',
 				},
 				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',

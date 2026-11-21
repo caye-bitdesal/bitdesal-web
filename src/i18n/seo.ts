@@ -15,6 +15,7 @@ export type PageSeoId =
 	| 'projects'
 	| 'projectKivra'
 	| 'projectMuixeranga'
+	| 'projectAmarteVitalFlow'
 	| 'projectRegalosKawaii'
 	| 'projectYossa'
 	| 'blog'
@@ -240,6 +241,23 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 			title: "Muixeranga d'Elx -tapaustutkimus: kulttuurisivusto · Bitdesal",
 			description:
 				'Kolmikielinen Astro-sivusto ja Firebase-agenda eteläisimmälle ryhmälle — auditointi, 32 parannusta ja Tabala-tiekartta.',
+		},
+	},
+	projectAmarteVitalFlow: {
+		es: {
+			title: "Caso Am'Arte Vital Flow: web de bienestar · Bitdesal",
+			description:
+				'Sitio en Astro para acompañamiento integrativo en Elche: naturopatía, Movimiento Flow, talleres y contacto — identidad cálida terracota y salvia.',
+		},
+		en: {
+			title: "Am'Arte Vital Flow case study: integrative wellness site · Bitdesal",
+			description:
+				'Astro site in Elche for naturopathy, conscious movement, workshops and contact — warm terracotta and sage branding, mobile-first layout.',
+		},
+		fi: {
+			title: "Am'Arte Vital Flow -tapaustutkimus: hyvinvointisivusto · Bitdesal",
+			description:
+				'Astro-sivusto Elchessä: naturopatia, tietoinen liike, työpajat ja yhteystiedot — lämmin terrakotta- ja salvia-brändi.',
 		},
 	},
 	projectRegalosKawaii: {
