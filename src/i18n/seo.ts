@@ -14,6 +14,7 @@ export type PageSeoId =
 	| 'about'
 	| 'projects'
 	| 'projectKivra'
+	| 'projectMuixeranga'
 	| 'projectRegalosKawaii'
 	| 'projectYossa'
 	| 'blog'
@@ -222,6 +223,23 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 			title: 'Projektit · Bitdesal',
 			description:
 				'Bitdesalin referenssit: Kivra Suomessa, Regalos Kawaii (affiliate-lahjakatalogi ja EmDash) ja Yössä-yöelämäsovellus. Tuotanto-ohjelmistoja.',
+		},
+	},
+	projectMuixeranga: {
+		es: {
+			title: "Caso Muixeranga d'Elx: web cultural · Bitdesal",
+			description:
+				'Web trilingüe con Astro y Firebase: la colla más meridional del País Valencià, auditoría de 32 mejoras y evolución hacia Tabala.',
+		},
+		en: {
+			title: "Muixeranga d'Elx case study: cultural association site · Bitdesal",
+			description:
+				'Trilingual Astro site with Firebase agenda for Elche’s southernmost colla — top-tier among muixeranga sites, 32-point audit, Tabala roadmap.',
+		},
+		fi: {
+			title: "Muixeranga d'Elx -tapaustutkimus: kulttuurisivusto · Bitdesal",
+			description:
+				'Kolmikielinen Astro-sivusto ja Firebase-agenda eteläisimmälle ryhmälle — auditointi, 32 parannusta ja Tabala-tiekartta.',
 		},
 	},
 	projectRegalosKawaii: {

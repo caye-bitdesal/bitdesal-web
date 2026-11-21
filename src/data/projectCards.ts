@@ -17,6 +17,18 @@ export type ProjectCard = {
 /** Public project listings (Yössä stays in Caye's trajectory only). */
 export const projectCards: ProjectCard[] = [
 	{
+		slug: 'muixeranga',
+		line: 'software',
+		platform: 'web',
+		iconSrc: '/projects/muixeranga/muixeranga-app-icon.png',
+		iconAlt: "Icono de Muixeranga d'Elx",
+		nameKey: 'projects.muixeranga.name',
+		tagKey: 'projects.muixeranga.tag',
+		updatedKey: 'projects.muixeranga.updated',
+		descriptionKey: 'projects.muixeranga.description',
+		href: '/projects/muixeranga',
+	},
+	{
 		slug: 'regaloskawaii',
 		line: 'software',
 		platform: 'web',

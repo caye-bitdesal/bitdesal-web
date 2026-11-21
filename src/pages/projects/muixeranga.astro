@@ -1,0 +1,466 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BOOKING_URL } from '../../data/siteConstants';
+import { sitePath } from '../../data/siteNav';
+import { useI18n } from '../../i18n/useI18n';
+
+const { lang, t } = useI18n(Astro);
+
+const websiteUrl = 'https://muixerangadelx.com/';
+const contactEmail = 'contacte@muixerangadelx.com';
+
+const heroBrandSrc = '/projects/muixeranga/screen-hero.jpg';
+
+const carouselScreens = [
+	{ src: '/projects/muixeranga/screen-home.jpg', key: 'projects.muixerangaDetail.screens.home', label: 'Home' },
+	{ src: '/projects/muixeranga/screen-historia.jpg', key: 'projects.muixerangaDetail.screens.history', label: 'History' },
+	{ src: '/projects/muixeranga/screen-agenda.jpg', key: 'projects.muixerangaDetail.screens.agenda', label: 'Agenda' },
+	{ src: '/projects/muixeranga/screen-blog.jpg', key: 'projects.muixerangaDetail.screens.blog', label: 'Blog' },
+	{ src: '/projects/muixeranga/screen-apuntat.jpg', key: 'projects.muixerangaDetail.screens.join', label: 'Join' },
+	{ src: '/projects/muixeranga/screen-contacte.jpg', key: 'projects.muixerangaDetail.screens.contact', label: 'Contact' },
+	{ src: '/projects/muixeranga/screen-documentacio.jpg', key: 'projects.muixerangaDetail.screens.docs', label: 'Docs' },
+];
+
+const features = [
+	{ icon: 'feed', titleKey: 'projects.muixerangaDetail.features.home.title', descKey: 'projects.muixerangaDetail.features.home.description' },
+	{ icon: 'document', titleKey: 'projects.muixerangaDetail.features.history.title', descKey: 'projects.muixerangaDetail.features.history.description' },
+	{ icon: 'bell', titleKey: 'projects.muixerangaDetail.features.agenda.title', descKey: 'projects.muixerangaDetail.features.agenda.description' },
+	{ icon: 'folder', titleKey: 'projects.muixerangaDetail.features.blog.title', descKey: 'projects.muixerangaDetail.features.blog.description' },
+	{ icon: 'users', titleKey: 'projects.muixerangaDetail.features.join.title', descKey: 'projects.muixerangaDetail.features.join.description' },
+	{ icon: 'star', titleKey: 'projects.muixerangaDetail.features.i18n.title', descKey: 'projects.muixerangaDetail.features.i18n.description' },
+];
+
+const playDetails = [
+	{ labelKey: 'projects.muixerangaDetail.playSection.categoryLabel', valueKey: 'projects.muixerangaDetail.playSection.category' },
+	{ labelKey: 'projects.muixerangaDetail.playSection.updatedLabel', valueKey: 'projects.muixerangaDetail.playSection.updated' },
+	{ labelKey: 'projects.muixerangaDetail.playSection.companyLabel', valueKey: 'projects.muixerangaDetail.playSection.company' },
+	{ labelKey: 'projects.muixerangaDetail.playSection.countryLabel', valueKey: 'projects.muixerangaDetail.playSection.country' },
+];
+---
+
+<Layout seo="projectMuixeranga">
+	<div class="muixeranga-case bg-[#0a0a0a] text-white">
+		<section class="relative overflow-hidden pt-8 pb-16 md:pb-24">
+			<div
+				class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(200,16,46,0.18),transparent)]"
+				aria-hidden="true"
+			>
+			</div>
+
+			<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<a
+					href={`${sitePath('/casos-y-precios', lang)}#casos`}
+					class="inline-flex items-center gap-2 text-white/70 hover:text-[#c8102e] transition-colors mb-10 text-sm"
+				>
+					<span aria-hidden="true">←</span>
+					<span>{t('projects.muixerangaDetail.back')}</span>
+				</a>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<div>
+						<p class="inline-block text-xs font-semibold tracking-widest text-[#c8102e] border border-[#c8102e]/40 rounded-full px-3 py-1 mb-6">
+							{t('projects.muixerangaDetail.tag')}
+						</p>
+						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+							<span>{t('projects.muixerangaDetail.title')}</span>
+							<span class="block text-[#c8102e]">{t('projects.muixerangaDetail.titleAccent')}</span>
+						</h1>
+						<p class="text-lg text-white/70 leading-relaxed max-w-xl mb-8">
+							{t('projects.muixerangaDetail.heroDescription')}
+						</p>
+						<div class="flex flex-wrap gap-4">
+							<a
+								href={websiteUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center gap-2 bg-white text-[#0a0a0a] px-6 py-3 rounded-full hover:bg-white/90 transition-colors font-medium"
+							>
+								<span>{t('projects.muixerangaDetail.website')}</span>
+								<span aria-hidden="true">↗</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="flex justify-center lg:justify-end items-center min-h-[200px] md:min-h-[280px]">
+						<img
+							src={heroBrandSrc}
+							alt="Muixeranga d'Elx"
+							width="640"
+							height="360"
+							class="w-full max-w-md lg:max-w-xl rounded-2xl shadow-2xl shadow-black/60 ring-1 ring-white/10"
+							loading="eager"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="border-y border-white/10 py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#c8102e] mb-1">{t('projects.muixerangaDetail.metrics.languages')}</p>
+						<p class="text-sm text-white/60">{t('projects.muixerangaDetail.metrics.languagesLabel')}</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#c8102e] mb-1">{t('projects.muixerangaDetail.metrics.members')}</p>
+						<p class="text-sm text-white/60">{t('projects.muixerangaDetail.metrics.membersLabel')}</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#c8102e] mb-1">{t('projects.muixerangaDetail.metrics.improvements')}</p>
+						<p class="text-sm text-white/60">{t('projects.muixerangaDetail.metrics.improvementsLabel')}</p>
+					</div>
+					<div>
+						<p class="text-3xl md:text-4xl font-bold text-[#c8102e] mb-1">{t('projects.muixerangaDetail.metrics.year')}</p>
+						<p class="text-sm text-white/60">{t('projects.muixerangaDetail.metrics.yearLabel')}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-20 border-b border-white/10">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+				<div>
+					<h2 class="text-xl font-semibold text-[#c8102e] mb-3">{t('projects.muixerangaDetail.case.challenge')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.muixerangaDetail.case.challengeText')}</p>
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-[#c8102e] mb-3">{t('projects.muixerangaDetail.case.role')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.muixerangaDetail.case.roleText')}</p>
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-[#c8102e] mb-3">{t('projects.muixerangaDetail.case.result')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.muixerangaDetail.case.resultText')}</p>
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-[#c8102e] mb-3">{t('projects.muixerangaDetail.case.build')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.muixerangaDetail.case.buildText')}</p>
+				</div>
+				<div>
+					<h2 class="text-xl font-semibold text-[#c8102e] mb-3">{t('projects.muixerangaDetail.case.roadmap')}</h2>
+					<p class="text-white/75 leading-relaxed">{t('projects.muixerangaDetail.case.roadmapText')}</p>
+					<p class="text-white/75 leading-relaxed mt-4">
+						{t('projects.muixerangaDetail.case.contactPrompt')}{' '}
+						<a
+							href={`mailto:${contactEmail}`}
+							class="text-[#c8102e] font-medium hover:underline"
+						>
+							{t('projects.muixerangaDetail.case.contactEmail')}
+						</a>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-10">{t('projects.muixerangaDetail.screensTitle')}</h2>
+
+				<div
+					class="flex gap-4 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth muixeranga-carousel"
+					id="muixeranga-carousel"
+				>
+					{
+						carouselScreens.map((screen, i) => (
+							<figure
+								class:list={[
+									'snap-center shrink-0 flex flex-col items-center',
+									i === 0 ? 'muixeranga-carousel-slide is-active' : 'muixeranga-carousel-slide',
+								]}
+								data-slide={i}
+							>
+								<div class="rounded-xl p-1 transition-colors muixeranga-slide-frame">
+									<img
+										src={screen.src}
+										alt=""
+										class="w-[min(85vw,360px)] rounded-lg shadow-xl aspect-video object-cover object-top"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<figcaption class="mt-4 text-sm text-white/60">{t(screen.key, screen.label)}</figcaption>
+							</figure>
+						))
+					}
+				</div>
+
+				<div class="flex justify-center gap-2 mt-4" id="muixeranga-carousel-dots" role="tablist" aria-label="Screens">
+					{
+						carouselScreens.map((_, i) => (
+							<button
+								type="button"
+								class:list={['w-2 h-2 rounded-full transition-colors', i === 0 ? 'bg-[#c8102e]' : 'bg-white/25']}
+								data-dot={i}
+								aria-label={`Screen ${i + 1}`}
+								aria-selected={i === 0 ? 'true' : 'false'}
+							/>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-2xl md:text-3xl font-bold mb-10">{t('projects.muixerangaDetail.featuresTitle')}</h2>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+					{
+						features.map((feature) => (
+							<div class="bg-[#141414] border border-white/10 rounded-xl p-6 hover:border-[#c8102e]/30 transition-colors">
+								<div class="w-10 h-10 rounded-lg bg-[#c8102e]/15 flex items-center justify-center mb-4 text-[#c8102e]">
+									{feature.icon === 'mailbox' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'payment' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'document' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'folder' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'users' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'bell' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+											/>
+										</svg>
+									)}
+									{feature.icon === 'star' && (
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+										</svg>
+									)}
+									{feature.icon === 'map' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+										</svg>
+									)}
+									{feature.icon === 'filter' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+										</svg>
+									)}
+									{feature.icon === 'feed' && (
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+										</svg>
+									)}
+								</div>
+								<h3 class="font-semibold mb-2">{t(feature.titleKey)}</h3>
+								<p class="text-sm text-white/60 leading-relaxed">{t(feature.descKey)}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 md:py-24 border-t border-white/10">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold mb-4">{t('projects.muixerangaDetail.playSection.title')}</h2>
+						<p class="text-white/70 leading-relaxed mb-8">{t('projects.muixerangaDetail.playSection.description')}</p>
+						<dl class="space-y-0">
+							{
+								playDetails.map((row, i) => (
+									<div
+										class:list={[
+											'flex justify-between items-center py-4 text-sm',
+											i < playDetails.length - 1 && 'border-b border-white/10',
+										]}
+									>
+										<dt class="text-white/60">{t(row.labelKey)}</dt>
+										<dd class="text-[#c8102e] font-medium">{t(row.valueKey)}</dd>
+									</div>
+								))
+							}
+						</dl>
+					</div>
+					<div class="flex flex-col gap-6">
+						<img
+							src="/projects/muixeranga/screen-apuntat.jpg"
+							alt=""
+							class="w-full rounded-xl shadow-2xl ring-1 ring-white/10"
+							loading="lazy"
+							decoding="async"
+						/>
+						<img
+							src="/projects/muixeranga/screen-contacte.jpg"
+							alt=""
+							class="w-full rounded-xl shadow-2xl ring-1 ring-white/10"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 md:py-28 border-t border-white/10">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<img
+					src="/projects/muixeranga/muixeranga-app-icon.png"
+					alt=""
+					width="48"
+					height="48"
+					class="w-12 h-12 rounded-xl mx-auto mb-6"
+					aria-hidden="true"
+				/>
+				<h2 class="text-2xl md:text-4xl font-bold mb-4">{t('projects.muixerangaDetail.cta.title')}</h2>
+				<p class="text-white/70 mb-8 leading-relaxed">{t('projects.muixerangaDetail.cta.subtitle')}</p>
+				<a
+					href={BOOKING_URL}
+					class="inline-flex items-center justify-center bg-[#c8102e] text-[#0a0a0a] font-semibold px-10 py-4 rounded-full hover:bg-[#a80d26] transition-colors"
+				>
+					{t('projects.muixerangaDetail.cta.button')}
+				</a>
+				<p class="text-xs text-white/40 mt-16">{t('projects.muixerangaDetail.copyright')}</p>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style is:global>
+	body:has(.muixeranga-case) header {
+		background-color: #0a0a0a;
+		border-color: rgba(255, 255, 255, 0.1);
+	}
+
+	body:has(.muixeranga-case) header a:not(.contact-btn),
+	body:has(.muixeranga-case) header button:not(.contact-btn):not([data-theme-toggle]),
+	body:has(.muixeranga-case) header .text-foreground\/70 {
+		color: rgba(255, 255, 255, 0.75);
+	}
+
+	body:has(.muixeranga-case) header [data-theme-toggle] {
+		border-color: rgba(255, 255, 255, 0.25);
+		color: rgba(255, 255, 255, 0.85);
+	}
+
+	body:has(.muixeranga-case) header .header-utilities {
+		border-color: rgba(255, 255, 255, 0.15);
+	}
+
+	body:has(.muixeranga-case) header .contact-btn {
+		background-color: #c8102e;
+		color: #0a0a0a;
+	}
+
+	body:has(.muixeranga-case) header a:not(.contact-btn):hover,
+	body:has(.muixeranga-case) header [data-lang].text-primary {
+		color: #c8102e;
+	}
+
+	body:has(.muixeranga-case) header .text-primary,
+	body:has(.muixeranga-case) header [data-lang].text-primary {
+		color: #c8102e;
+	}
+
+	body:has(.muixeranga-case) footer {
+		display: none;
+	}
+
+	body:has(.muixeranga-case) {
+		background-color: #0a0a0a;
+	}
+
+	.muixeranga-carousel-slide.is-active .muixeranga-slide-frame {
+		box-shadow: 0 0 0 2px #c8102e;
+		border-radius: 0.85rem;
+	}
+</style>
+
+<script>
+	const carousel = document.getElementById('muixeranga-carousel');
+	const dots = document.querySelectorAll('#muixeranga-carousel-dots [data-dot]');
+	const slides = document.querySelectorAll('.muixeranga-carousel-slide');
+
+	function setActive(index: number) {
+		slides.forEach((slide, i) => {
+			slide.classList.toggle('is-active', i === index);
+		});
+		dots.forEach((dot, i) => {
+			dot.classList.toggle('bg-[#c8102e]', i === index);
+			dot.classList.toggle('bg-white/25', i !== index);
+			dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+		});
+	}
+
+	dots.forEach((dot) => {
+		dot.addEventListener('click', () => {
+			const index = Number(dot.getAttribute('data-dot'));
+			const slide = slides[index];
+			if (carousel && slide) {
+				slide.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+				setActive(index);
+			}
+		});
+	});
+
+	if (carousel) {
+		carousel.addEventListener(
+			'scroll',
+			() => {
+				let closest = 0;
+				let minDist = Infinity;
+				slides.forEach((slide, i) => {
+					const rect = slide.getBoundingClientRect();
+					const carouselRect = carousel.getBoundingClientRect();
+					const dist = Math.abs(rect.left + rect.width / 2 - (carouselRect.left + carouselRect.width / 2));
+					if (dist < minDist) {
+						minDist = dist;
+						closest = i;
+					}
+				});
+				setActive(closest);
+			},
+			{ passive: true }
+		);
+	}
+</script>

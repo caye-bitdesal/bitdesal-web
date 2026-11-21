@@ -703,6 +703,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura.',
 			},
+			muixeranga: {
+				name: "Muixeranga d'Elx",
+				tag: 'Web · Cultura',
+				updated: '2026',
+				description:
+					'Web oficial de la colla más meridional del País Valencià: trilingüe (única con inglés), agenda en Firebase y mejora continua con Bitdesal.',
+			},
 			regalosKawaii: {
 				name: 'Regalos Kawaii',
 				tag: 'Web · Tiendas',
@@ -900,6 +907,102 @@ export const translations: Record<Language, any> = {
 					titleAccent: '',
 					subtitle:
 						'Si necesitas un sitio estático con CMS y taxonomías a medida, cuéntanoslo en 30 minutos y vemos si encaja.',
+					button: 'Agenda 30 min gratis',
+				},
+				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
+			},
+			muixerangaDetail: {
+				back: 'Volver a casos y precios',
+				tag: 'WEB · CULTURA',
+				title: "Muixeranga d'Elx",
+				titleAccent: 'Hacer piña también en internet',
+				heroDescription:
+					'La Muixeranga d\'Elx es la colla de muixeranga más al sur del territorio valenciano: unas cincuenta personas, de bebés a jubilados, que ensayan en el CEIP Clara Campoamor y llevan las torres humanas por las calles de Elche. La web no era solo presencia en internet: una herramienta para explicar la tradición, atraer gente a los ensayos y proyectar imagen seria ante ayuntamientos, organizadores y patrocinadores.',
+				website: 'Visitar muixerangadelx.com',
+				case: {
+					challenge: 'El reto',
+					role: 'Qué es la web',
+					result: 'El resultado',
+					build: 'Cómo se ha hecho',
+					roadmap: 'Lo que viene',
+					challengeText:
+						'Cuando la colla encargó la web a Bitdesal, el objetivo iba más allá de tener una URL. Hacía falta explicar qué es una muixeranga a quien nunca ha visto una, facilitar que la gente viniera a probar a los ensayos y dar una imagen cuidada ante instituciones y medios en una ciudad castellanohablante y turística como Elche.',
+					roleText:
+						'muixerangadelx.com es la web oficial en valenciano, castellano e inglés. Entre las colles con web propia es una rareza: de las trece del listado, solo otra ofrece castellano y ninguna tiene inglés. Incluye portada con el lema «Hacemos piña como una tabala», próximos eventos y vídeo; historia de la colla; agenda con calendario filtrable y ficha por evento; blog de crónicas en primera persona; página Únete con FAQ; contacto con formulario clasificado; y documentación (autorizaciones, prensa). La identidad visual sale del escudo de Elx — rojo, amarillo y azul marino — con fotos en filtro amarillo y maquetación usable en móvil y escritorio.',
+					resultText:
+						'En octubre de 2026, una auditoría comparó la web con las veinticinco colles de la Federació en escritorio y móvil. Conclusión: ya estaba entre las tres o cuatro mejores del mundo muixeranguer, pero orientada sobre todo a quien conocía la tradición. A partir de ahí el trabajo priorizó convertir visitas en personas: Únete enlazada desde «Conócenos» y «Ven a probar», formulario más simple, portada sin eventos pasados, jerarquía de títulos para buscadores y mejoras de historia — con decisiones compartidas con la colla (el lema se mantiene; las crónicas siguen siendo personales porque es lo que más se comparte).',
+					buildText:
+						'La web está hecha con Astro: páginas ligeras y rápidas, importantes cuando el tráfico llega desde el móvil tras una actuación o un enlace de WhatsApp. Los eventos de la agenda se cargan desde Firebase, así la colla añade ensayos y actuaciones sin tocar código. Bitdesal trata el proyecto como vivo: la auditoría generó un plan de treinta y dos mejoras ordenadas por impacto y esfuerzo, con tabla de seguimiento.',
+					roadmapText:
+						'Firebase cubre bien los eventos, pero la colla gestiona mucho más. Está planificada la migración a Tabala, backend propio en Kotlin con Ktor y SQLite, parte de un proyecto Kotlin Multiplatform donde web y herramientas comparten modelos, alojado en servidor propio por menos de 5 € al mes. El acceso seguirá en Firebase, solo por invitación. Tabala reunirá miembros, eventos, figuras, contrataciones, inventario y documentos; una app de gestión para editar y la web Astro solo lo público. Privacidad por diseño: nadie aparece sin consentimiento, los menores nunca, y no se publican importes ni notas internas. En marcha: páginas sobre la muixeranga y las figuras (Campana, Retaule, Senyeta…), contratación de actuaciones, patrocinio y traducción completa de eventos.',
+					contactPrompt: 'Contacto de la colla:',
+					contactEmail: 'contacte@muixerangadelx.com',
+				},
+				metrics: {
+					languages: '3',
+					languagesLabel: 'VA · ES · EN (única colla con inglés)',
+					members: '~50',
+					membersLabel: 'Personas en la pinya',
+					improvements: '32',
+					improvementsLabel: 'Mejoras tras auditoría 2026',
+					year: 'Top 4',
+					yearLabel: 'Entre las mejores webs muixerangeres',
+				},
+				screensTitle: 'Recorrido por el sitio',
+				screens: {
+					home: 'Portada',
+					history: 'Nuestra historia',
+					agenda: 'Agenda',
+					blog: 'Blog',
+					join: 'Únete',
+					contact: 'Contacto',
+					docs: 'Documentación',
+				},
+				featuresTitle: 'Qué incluye la web',
+				features: {
+					home: {
+						title: 'Portada',
+						description: 'Lema de la colla, próximos eventos y vídeo de actuaciones; punto de entrada tras WhatsApp o una diada.',
+					},
+					history: {
+						title: 'Nuestra historia',
+						description: 'Quiénes son, de dónde vienen y qué es la muixeranga para el visitante que llega sin contexto.',
+					},
+					agenda: {
+						title: 'Agenda',
+						description: 'Calendario filtrable por ensayos, actuaciones y otras actividades; cada evento con fecha, hora y ubicación (Firebase).',
+					},
+					blog: {
+						title: 'Blog',
+						description: 'Crónicas en primera persona, con humor y detalle real — el contenido que más se comparte.',
+					},
+					join: {
+						title: 'Únete',
+						description: 'Captación con FAQ y enlace desde los botones «Conócenos» y «Ven a probar».',
+					},
+					i18n: {
+						title: 'Tres idiomas',
+						description: 'Valenciano, castellano e inglés: imprescindible en Elche y excepcional frente al resto de colles.',
+					},
+				},
+				playSection: {
+					title: 'Stack y contacto',
+					description:
+						'Sitio estático con Astro; agenda viva en Firebase. Formularios de contacto y documentación con descargas para familias y prensa archivada sobre la colla.',
+					categoryLabel: 'Stack',
+					category: 'Astro · Firebase',
+					updatedLabel: 'Evolución',
+					updated: '2026 (auditoría + Tabala)',
+					companyLabel: 'Desarrollo',
+					company: 'Bitdesal',
+					countryLabel: 'Cliente',
+					country: "Muixeranga d'Elx · Elche",
+				},
+				cta: {
+					title: '¿Montamos la web de tu entidad o proyecto?',
+					titleAccent: '',
+					subtitle:
+						'Para Bitdesal, esta web es una muixeranga más: cada pieza sostiene a la siguiente. Si te encaja ese enfoque, cuéntanoslo en 30 minutos.',
 					button: 'Agenda 30 min gratis',
 				},
 				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
@@ -1797,6 +1900,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely.',
 			},
+			muixeranga: {
+				name: "Muixeranga d'Elx",
+				tag: 'Web · Culture',
+				updated: '2026',
+				description:
+					'Official site of the southernmost Valencian colla: trilingual (the only one with English), Firebase agenda and ongoing evolution with Bitdesal.',
+			},
 			regalosKawaii: {
 				name: 'Regalos Kawaii',
 				tag: 'Web · Stores',
@@ -1988,6 +2098,102 @@ export const translations: Record<Language, any> = {
 					title: 'Need an editorial catalog or static site?',
 					titleAccent: '',
 					subtitle: 'If you want a static site with a custom CMS and taxonomies, tell us in 30 minutes and we’ll see if it fits.',
+					button: 'Book 30 min free',
+				},
+				copyright: '© 2026 Bitdesal. All rights reserved.',
+			},
+			muixerangaDetail: {
+				back: 'Back to work & pricing',
+				tag: 'WEB · CULTURE',
+				title: "Muixeranga d'Elx",
+				titleAccent: 'Building the pinya online too',
+				heroDescription:
+					'Muixeranga d\'Elx is the southernmost human-tower colla in the Valencian Country — about fifty people from babies to retirees who rehearse at CEIP Clara Campoamor and perform in Elche\'s streets. The site was meant to do more than exist online: explain the tradition, bring people to rehearsals and look credible to councils, organisers and sponsors.',
+				website: 'Visit muixerangadelx.com',
+				case: {
+					challenge: 'The challenge',
+					role: 'What the site is',
+					result: 'The outcome',
+					build: 'How it was built',
+					roadmap: 'What’s next',
+					challengeText:
+						'When the colla asked Bitdesal for a website, the goal went beyond a URL. It had to explain muixeranga to complete newcomers, make it easy to come and try a rehearsal, and project a serious image to institutions and media in mostly Spanish-speaking, tourist-facing Elche.',
+					roleText:
+						'muixerangadelx.com is the official trilingual site (Valencian, Spanish, English). Among collas with their own site it is unusual: of thirteen in the list, only one other offers Spanish and none offers English. It includes a home page with the motto “Hacemos piña como una tabala”, upcoming events and video; our history; a filterable agenda with per-event details; first-person blog chronicles; a Join page with FAQ; contact with a classified form; and downloads (minor authorisations, press). Visual identity comes from Elche\'s crest — red, yellow and navy — with a yellow photo treatment and layout that works on phone and desktop.',
+					resultText:
+						'In October 2026 an audit compared the site with twenty-five collas from the Federació on desktop and mobile. Conclusion: it was already among the top three or four muixeranga sites worldwide, but aimed mainly at people who already knew the tradition. Work then focused on turning visits into people: Join linked from “Get to know us” and “Come and try”, a simpler form, no past events on the home page, heading hierarchy for SEO and history improvements — with shared decisions (the motto stays; chronicles stay personal because they are what gets shared most).',
+					buildText:
+						'Built with Astro for light, fast pages — important when traffic comes from phones after a performance or a WhatsApp link. Agenda events load from Firebase so the colla can add rehearsals and shows without touching code. Bitdesal treats it as a living project: the audit produced a roadmap of thirty-two improvements ranked by impact and effort, with a tracking table.',
+					roadmapText:
+						'Firebase works well for events, but the colla manages much more. A move to Tabala is planned — a custom Kotlin/Ktor/SQLite backend, part of a Kotlin Multiplatform project where web and tools share models, hosted on owned hardware for under €5/month. Sign-in stays on Firebase, invite-only. Tabala will unite members, events, figures, bookings, inventory and documents; a management app for editing and the Astro site for public content only. Privacy by design: no one appears without consent, never minors, and fees or internal notes stay private. In progress: pages on muixeranga and the colla\'s figures (Campana, Retaule, Senyeta…), booking performances, sponsorship and full event translations.',
+					contactPrompt: 'Colla contact:',
+					contactEmail: 'contacte@muixerangadelx.com',
+				},
+				metrics: {
+					languages: '3',
+					languagesLabel: 'VA · ES · EN (only colla with English)',
+					members: '~50',
+					membersLabel: 'People in the pinya',
+					improvements: '32',
+					improvementsLabel: 'Items after 2026 audit',
+					year: 'Top 4',
+					yearLabel: 'Among best muixeranga sites',
+				},
+				screensTitle: 'Site tour',
+				screens: {
+					home: 'Home',
+					history: 'Our history',
+					agenda: 'Agenda',
+					blog: 'Blog',
+					join: 'Join us',
+					contact: 'Contact',
+					docs: 'Downloads',
+				},
+				featuresTitle: 'What the site includes',
+				features: {
+					home: {
+						title: 'Home',
+						description: 'Colla motto, upcoming events and performance video — typical entry after WhatsApp or a show.',
+					},
+					history: {
+						title: 'Our history',
+						description: 'Who they are, where they come from and what muixeranga means for visitors with no context.',
+					},
+					agenda: {
+						title: 'Agenda',
+						description: 'Calendar filtered by rehearsals, performances and other activities; each event with time and place (Firebase).',
+					},
+					blog: {
+						title: 'Blog',
+						description: 'First-person chronicles with humour and real detail — the content that gets shared most.',
+					},
+					join: {
+						title: 'Join us',
+						description: 'Recruitment with FAQ, linked from “Get to know us” and “Come and try”.',
+					},
+					i18n: {
+						title: 'Three languages',
+						description: 'Valencian, Spanish and English — essential in Elche and exceptional among collas.',
+					},
+				},
+				playSection: {
+					title: 'Stack and contact',
+					description:
+						'Static Astro site; live agenda in Firebase. Contact forms and documentation with downloads for families and archived press about the colla.',
+					categoryLabel: 'Stack',
+					category: 'Astro · Firebase',
+					updatedLabel: 'Evolution',
+					updated: '2026 (audit + Tabala)',
+					companyLabel: 'Built by',
+					company: 'Bitdesal',
+					countryLabel: 'Client',
+					country: "Muixeranga d'Elx · Elche",
+				},
+				cta: {
+					title: 'Need a site for your organisation?',
+					titleAccent: '',
+					subtitle:
+						'For Bitdesal, this site is another muixeranga: each piece holds up the next. If that approach fits you, tell us in 30 minutes.',
 					button: 'Book 30 min free',
 				},
 				copyright: '© 2026 Bitdesal. All rights reserved.',
@@ -2993,6 +3199,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen.',
 			},
+			muixeranga: {
+				name: "Muixeranga d'Elx",
+				tag: 'Web · Kulttuuri',
+				updated: '2026',
+				description:
+					'Eteläisimmän valencianoryhmän virallinen sivusto: kolme kieltä (ainoa englannilla), Firebase-agenda ja jatkuva kehitys Bitdesalin kanssa.',
+			},
 			regalosKawaii: {
 				name: 'Regalos Kawaii',
 				tag: 'Web · Kaupat',
@@ -3184,6 +3397,102 @@ export const translations: Record<Language, any> = {
 					title: 'Tarvitsetko toimituksellisen katalogin?',
 					titleAccent: '',
 					subtitle: 'Jos haluat staattisen sivuston CMS:llä ja taksonomioilla, kerro 30 minuutissa ja katsotaan sopivuus.',
+					button: 'Varaa 30 min ilmaiseksi',
+				},
+				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',
+			},
+			muixerangaDetail: {
+				back: 'Takaisin referensseihin ja hintoihin',
+				tag: 'WEB · KULTTUURI',
+				title: "Muixeranga d'Elx",
+				titleAccent: 'Pinya myös verkossa',
+				heroDescription:
+					'Muixeranga d\'Elx on eteläisin ihmistorniryhmä Valencian maassa — noin viisikymmentä ihmistä vauvoista eläkeläisiin, harjoitukset CEIP Clara Campoamorilla ja esiintymiset Elchen kaduilla. Sivusto ei ollut vain netissä olemista: työkalu perinteen selittämiseen, uusien jäsenten houkuttelemiseen ja vakavan kuvan rakentamiseen viranomaisille ja sponsorille.',
+				website: 'Vieraile muixerangadelx.com',
+				case: {
+					challenge: 'Haaste',
+					role: 'Mitä sivusto on',
+					result: 'Tulos',
+					build: 'Miten se on tehty',
+					roadmap: 'Mitä seuraavaksi',
+					challengeText:
+						'Kun ryhmä tilasi sivuston Bitdesalilta, tavoite oli enemmän kuin URL. Pitää selittää muixeranga täysin uusille, helpottaa tuloa kokeilemaan harjoituksiin ja näyttää uskottavalta lähinnä espanjankielisessä, matkailukaupungissa.',
+					roleText:
+						'muixerangadelx.com on virallinen kolmikielinen sivusto (valencia, espanja, englanti). Omia sivustoja omaavien joukossa se on harvinainen: kolmestatoista listan ryhmästä vain yhdellä muulla on espanja eikä kenelläkään englanti. Mukana etusivu tunnuslauseella, tulevat tapahtumat ja video; historia; suodatettava agenda tapahtumakohtaisin tietoineen; ensimmäisen persoonan blogikronikat; liity-sivu UKK:lla; yhteystiedot luokitellulla lomakkeella; ladattavat tiedostot. Visuaalinen ilme Elchen vaakunasta — punainen, keltainen, laivastonsininen — keltainen kuvasuodatin ja layout mobiiliin ja työpöytään.',
+					resultText:
+						'Lokakuussa 2026 auditointi verrasi sivustoa Federació:n 25 ryhmään työpöydällä ja mobiilissa. Jo kuuden parhaan joukossa maailmassa, mutta ennen kaikkea perinteestä jo tietäville. Sen jälkeen painopiste kävijöiden muuttamiseen jäseniksi: liity-linkit, yksinkertaisempi lomake, ei menneitä tapahtumia etusivulla, SEO-otsikkorakenne ja historian parannukset — päätökset yhdessä ryhmän kanssa.',
+					buildText:
+						'Rakennettu Arolla kevyiksi ja nopeiksi sivuiksi — tärkeää kun liikenne tulee puhelimesta esiintymisen tai WhatsApp-linkin jälkeen. Agendatapahtumat Firebasestä, jotta ryhmä lisää harjoituksia ilman koodimuutoksia. Bitdesal pitää projektia elävänä: auditointi tuotti 32 parannusta vaikutuksen ja vaivan mukaan järjestettynä.',
+					roadmapText:
+						'Tulossa Tabala — oma Kotlin/Ktor/SQLite-backend, osa Kotlin Multiplatform -kokonaisuutta, hosting alle 5 €/kk. Kirjautuminen Firebaseen, vain kutsulla. Tabala yhdistää jäsenet, tapahtumat, hahmot, keikat, inventaarion ja dokumentit; hallintasovellus muokkaukseen, Astro vain julkiseen. Tietosuoja suunnittelussa: ei kuvia ilman lupaa, ei alaikäisiä, ei sisäisiä summia. Työn alla: muixerangan ja hahmojen sivut, keikkavaraukset, sponsorointi ja täydet käännökset tapahtumille.',
+					contactPrompt: 'Ryhmän yhteystiedot:',
+					contactEmail: 'contacte@muixerangadelx.com',
+				},
+				metrics: {
+					languages: '3',
+					languagesLabel: 'VA · ES · EN (ainoa englannilla)',
+					members: '~50',
+					membersLabel: 'Ihmistä pinyassa',
+					improvements: '32',
+					improvementsLabel: 'Parannusta auditoinnin jälkeen',
+					year: 'Top 4',
+					yearLabel: 'Parhaiden muixeranga-sivujen joukossa',
+				},
+				screensTitle: 'Kierros sivustolla',
+				screens: {
+					home: 'Etusivu',
+					history: 'Historiamme',
+					agenda: 'Agenda',
+					blog: 'Blogi',
+					join: 'Liity mukaan',
+					contact: 'Yhteystiedot',
+					docs: 'Ladattavat',
+				},
+				featuresTitle: 'Mitä sivusto sisältää',
+				features: {
+					home: {
+						title: 'Etusivu',
+						description: 'Tunnuslause, tulevat tapahtumat ja video — tyypillinen sisääntulo WhatsAppista tai esiintymisestä.',
+					},
+					history: {
+						title: 'Historiamme',
+						description: 'Kuka he ovat ja mitä muixeranga on vierailijalle ilman taustaa.',
+					},
+					agenda: {
+						title: 'Agenda',
+						description: 'Kalenteri harjoituksille, esiintymisille ja muulle; aika ja paikka (Firebase).',
+					},
+					blog: {
+						title: 'Blogi',
+						description: 'Ensimmäisen persoonan kronikat — sisältöä, jota jaetaan eniten.',
+					},
+					join: {
+						title: 'Liity mukaan',
+						description: 'Rekrytointi UKK:lla ja linkit «tutustu» / «tule kokeilemaan» -painikkeista.',
+					},
+					i18n: {
+						title: 'Kolme kieltä',
+						description: 'Valencia, espanja ja englanti — välttämätön Elchessä ja poikkeuksellinen muihin ryhmiin verrattuna.',
+					},
+				},
+				playSection: {
+					title: 'Stack ja yhteystiedot',
+					description:
+						'Staattinen Astro-sivusto; elävä agenda Firebasessa. Yhteydenotto ja dokumentaatio perheille ja arkistoitu lehdistö.',
+					categoryLabel: 'Stack',
+					category: 'Astro · Firebase',
+					updatedLabel: 'Kehitys',
+					updated: '2026 (auditointi + Tabala)',
+					companyLabel: 'Kehitys',
+					company: 'Bitdesal',
+					countryLabel: 'Asiakas',
+					country: "Muixeranga d'Elx · Elche",
+				},
+				cta: {
+					title: 'Tarvitsetko sivuston organisaatiollesi?',
+					titleAccent: '',
+					subtitle:
+						'Bitdesalille tämä on toinen muixeranga: jokainen osa kantaa seuraavaa. Jos lähestymistapa sopii, kerro 30 minuutissa.',
 					button: 'Varaa 30 min ilmaiseksi',
 				},
 				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',

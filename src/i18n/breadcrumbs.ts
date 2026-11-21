@@ -6,6 +6,7 @@ import type { Language } from './translations';
 type Translator = (key: string, fallback?: string) => string;
 
 const SECTION_PARENT: Record<string, { labelKey: string; slug: string }> = {
+	'projects/muixeranga': { labelKey: 'nav.workAndPricing', slug: 'casos-y-precios' },
 	'projects/regaloskawaii': { labelKey: 'nav.workAndPricing', slug: 'casos-y-precios' },
 	'projects/kivra': { labelKey: 'nav.workAndPricing', slug: 'casos-y-precios' },
 	'projects/yossa': { labelKey: 'nav.workAndPricing', slug: 'casos-y-precios' },
