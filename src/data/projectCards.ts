@@ -15,6 +15,17 @@ export type ProjectCard = {
 /** Public project listings (Yössä stays in Caye's trajectory only). */
 export const projectCards: ProjectCard[] = [
 	{
+		slug: 'regaloskawaii',
+		line: 'software',
+		iconSrc: '/projects/regaloskawaii/regaloskawaii-app-icon.png',
+		iconAlt: 'Icono de Regalos Kawaii',
+		nameKey: 'projects.regalosKawaii.name',
+		tagKey: 'projects.regalosKawaii.tag',
+		updatedKey: 'projects.regalosKawaii.updated',
+		descriptionKey: 'projects.regalosKawaii.description',
+		href: '/projects/regaloskawaii',
+	},
+	{
 		slug: 'kivra',
 		line: 'software',
 		iconSrc: '/kivra-app-icon.png',

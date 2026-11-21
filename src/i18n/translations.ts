@@ -701,6 +701,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'App de correo digital usada por cientos de miles de personas en Finlandia para recibir facturas, cartas, entradas y documentos oficiales de forma segura.',
 			},
+			regalosKawaii: {
+				name: 'Regalos Kawaii',
+				tag: 'Web · Tiendas',
+				updated: '2026',
+				description:
+					'Para quienes aman lo adorable: regalos kawaii de Amazon y AliExpress reunidos en un solo sitio, sin tener que buscar entre miles de productos.',
+			},
 			yossa: {
 				name: 'Yössä',
 				tag: 'Android · Ocio nocturno',
@@ -796,6 +803,100 @@ export const translations: Record<Language, any> = {
 					title: '¿Hablamos de tu proyecto?',
 					subtitle:
 						'Si tienes un proceso repetitivo o una idea de producto, cuéntanoslo en 30 minutos y vemos si encaja.',
+					button: 'Agenda 30 min gratis',
+				},
+				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
+			},
+			regalosKawaiiDetail: {
+				back: 'Volver a casos y precios',
+				tag: 'WEB · TIENDAS',
+				title: 'Regalos Kawaii',
+				titleAccent: 'Ideas bonitas para regalar',
+				heroDescription:
+					'Regalos Kawaii es una web pensada para quienes aman lo adorable. Recorremos tiendas como AliExpress y Amazon para encontrar los regalos kawaii más bonitos, originales y bien valorados, y los reunimos en un solo sitio para que no tengas que buscar entre miles de productos. Aquí hay squishies, peluches, papelería, moda, hogar, gaming, cajas sorpresa y más: explora por categoría, por tramos de precio (menos de 10 €, de 10 a 20 €, de 20 a 40 €) o por lo más viral del momento.',
+				website: 'Visitar regaloskawaii.es',
+				case: {
+					challenge: '¿Qué es Regalos Kawaii?',
+					role: 'Cómo elegimos los productos',
+					result: 'Cómo funciona',
+					challengeText:
+						'Un catálogo para descubrir regalos kawaii sin perderte en marketplaces: lo adorable, lo original y lo bien valorado en un solo lugar. Bitdesal diseñó la web, la sincronización de datos y el panel EmDash para sostener ese catálogo con precios e imágenes actualizados.',
+					roleText:
+						'Cada semana revisamos lo más vendido y nos quedamos con productos con buenas valoraciones y muchas ventas. Siempre indicamos si un producto es oficial, genérico o no oficial, para que sepas exactamente qué estás comprando. Los precios se actualizan a menudo; el precio final es el que muestra la tienda en el momento de la compra.',
+					resultText:
+						'Regalos Kawaii no vende directamente: al hacer clic, vas a la tienda para comprar allí. Algunos enlaces son de afiliado, así podemos recibir una pequeña comisión sin que a ti te cueste más y mantener la web. Como Afiliado de Amazon, se obtienen ingresos por las compras adscritas que cumplen los requisitos aplicables.',
+					contactPrompt: '¿Tienes alguna sugerencia? Escríbenos a',
+					contactEmail: 'hola@regaloskawaii.es',
+				},
+				metrics: {
+					products: '217+',
+					productsLabel: 'Productos indexados',
+					collections: '5',
+					collectionsLabel: 'Colecciones editoriales',
+					taxonomies: '4',
+					taxonomiesLabel: 'Ejes de exploración',
+					year: '2026',
+					yearLabel: 'En producción',
+				},
+				screensTitle: 'Recorrido por el sitio',
+				screens: {
+					home: 'Página de inicio',
+					collections: 'Colecciones',
+					categories: 'Categorías',
+					characters: 'Personajes',
+					stores: 'Tiendas',
+					brands: 'Marcas',
+					emdashProducts: 'EmDash · Productos',
+					emdashCollections: 'EmDash · Colecciones',
+				},
+				featuresTitle: 'Qué incluye',
+				features: {
+					catalog: {
+						title: 'Fichas de producto',
+						description:
+							'Precios e imágenes actualizados con frecuencia, etiqueta oficial / genérico / no oficial y enlace a la tienda externa.',
+					},
+					collections: {
+						title: 'Colecciones curadas',
+						description:
+							'Explora por precio (menos de 10 €, 10–20 €, 20–40 €), por lo más viral y por listas editoriales que se revisan cada semana.',
+					},
+					taxonomy: {
+						title: 'Taxonomías',
+						description:
+							'Squishies, peluches, papelería, moda, hogar, gaming, personajes, marcas y tiendas para acotar sin perderte.',
+					},
+					search: {
+						title: 'Búsqueda y filtros',
+						description: 'Cabecera con búsqueda y facetas para saltar rápido a lo que buscas.',
+					},
+					emdash: {
+						title: 'Panel EmDash',
+						description: 'Control editorial: qué publicar, colecciones, taxonomías y productos concretos que merecen destacarse.',
+					},
+					static: {
+						title: 'Sitio estático',
+						description: 'HTML generado con Astro, publicado en Cloudflare Pages y contenido versionado en CI.',
+					},
+				},
+				playSection: {
+					title: 'En producción con EmDash',
+					description:
+						'Por detrás, productos, colecciones y taxonomías se gestionan en EmDash; cada despliegue genera el sitio estático en Astro sin exponer credenciales al navegador.',
+					categoryLabel: 'Tipo',
+					category: 'Web · tiendas afiliadas',
+					updatedLabel: 'Actualizado',
+					updated: '2026',
+					companyLabel: 'Desarrollo',
+					company: 'Bitdesal',
+					countryLabel: 'Mercado',
+					country: 'España',
+				},
+				cta: {
+					title: '¿Montamos tu catálogo o web editorial?',
+					titleAccent: '',
+					subtitle:
+						'Si necesitas un sitio estático con CMS y taxonomías a medida, cuéntanoslo en 30 minutos y vemos si encaja.',
 					button: 'Agenda 30 min gratis',
 				},
 				copyright: '© 2026 Bitdesal. Todos los derechos reservados.',
@@ -1691,6 +1792,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'Digital mail app used by hundreds of thousands of people in Finland to receive invoices, letters, tickets and official documents securely.',
 			},
+			regalosKawaii: {
+				name: 'Regalos Kawaii',
+				tag: 'Web · Stores',
+				updated: '2026',
+				description:
+					'For people who love all things cute: kawaii gifts from Amazon and AliExpress in one place, without digging through thousands of listings.',
+			},
 			yossa: {
 				name: 'Yössä',
 				tag: 'Android · Nightlife',
@@ -1786,6 +1894,96 @@ export const translations: Record<Language, any> = {
 					subtitle:
 						'Bitdesal contributed with development from inception to maintenance for 7 years in a product used by hundreds of thousands in Finland.',
 					button: 'Work with us',
+				},
+				copyright: '© 2026 Bitdesal. All rights reserved.',
+			},
+			regalosKawaiiDetail: {
+				back: 'Back to work & pricing',
+				tag: 'WEB · STORES',
+				title: 'Regalos Kawaii',
+				titleAccent: 'Pretty gift ideas',
+				heroDescription:
+					'Regalos Kawaii is a site for people who love adorable things. We browse shops like AliExpress and Amazon for the cutest, most original, well‑rated kawaii gifts and bring them together so you don’t have to wade through thousands of products. You’ll find squishies, plushies, stationery, fashion, homeware, gaming, surprise boxes and more — browse by category, price band (under €10, €10–20, €20–40) or what’s trending now.',
+				website: 'Visit regaloskawaii.es',
+				case: {
+					challenge: 'What is Regalos Kawaii?',
+					role: 'How we pick products',
+					result: 'How it works',
+					challengeText:
+						'A catalog to discover kawaii gifts without getting lost in marketplaces — cute, original and well‑rated picks in one place. Bitdesal built the site, data sync and EmDash panel to keep prices and images fresh.',
+					roleText:
+						'Every week we look at bestsellers and keep items with strong ratings and sales. We always say whether a product is official, generic or unofficial so you know what you’re buying. Prices are refreshed often; the final price is always what the shop shows at checkout.',
+					resultText:
+						'Regalos Kawaii doesn’t sell directly: clicking takes you to the shop to buy there. Some links are affiliate links, so we may earn a small commission at no extra cost to you, which helps run the site. As an Amazon Associate, earnings come from qualifying purchases.',
+					contactPrompt: 'Have a suggestion? Email us at',
+					contactEmail: 'hola@regaloskawaii.es',
+				},
+				metrics: {
+					products: '217+',
+					productsLabel: 'Indexed products',
+					collections: '5',
+					collectionsLabel: 'Editorial collections',
+					taxonomies: '4',
+					taxonomiesLabel: 'Browse dimensions',
+					year: '2026',
+					yearLabel: 'In production',
+				},
+				screensTitle: 'Site tour',
+				screens: {
+					home: 'Home',
+					collections: 'Collections',
+					categories: 'Categories',
+					characters: 'Characters',
+					stores: 'Stores',
+					brands: 'Brands',
+					emdashProducts: 'EmDash · Products',
+					emdashCollections: 'EmDash · Collections',
+				},
+				featuresTitle: "What's included",
+				features: {
+					catalog: {
+						title: 'Product pages',
+						description: 'Frequently updated prices and images, official / generic / unofficial labels and a link to the external shop.',
+					},
+					collections: {
+						title: 'Curated collections',
+						description: 'Browse by price (under €10, €10–20, €20–40), trending picks and editorial lists refreshed weekly.',
+					},
+					taxonomy: {
+						title: 'Taxonomies',
+						description: 'Squishies, plushies, stationery, fashion, homeware, gaming, characters, brands and stores to narrow your search.',
+					},
+					search: {
+						title: 'Search and filters',
+						description: 'Header search and facets to jump quickly to what you need.',
+					},
+					emdash: {
+						title: 'EmDash admin',
+						description: 'Editorial control: what to publish, collections, taxonomies and specific products worth highlighting.',
+					},
+					static: {
+						title: 'Static site',
+						description: 'Astro-generated HTML on Cloudflare Pages with versioned content in CI.',
+					},
+				},
+				playSection: {
+					title: 'Live with EmDash',
+					description:
+						'Behind the scenes, products, collections and taxonomies are managed in EmDash; each deploy builds the static Astro site without exposing credentials in the browser.',
+					categoryLabel: 'Type',
+					category: 'Website · affiliate stores',
+					updatedLabel: 'Updated',
+					updated: '2026',
+					companyLabel: 'Built by',
+					company: 'Bitdesal',
+					countryLabel: 'Market',
+					country: 'Spain',
+				},
+				cta: {
+					title: 'Need an editorial catalog or static site?',
+					titleAccent: '',
+					subtitle: 'If you want a static site with a custom CMS and taxonomies, tell us in 30 minutes and we’ll see if it fits.',
+					button: 'Book 30 min free',
 				},
 				copyright: '© 2026 Bitdesal. All rights reserved.',
 			},
@@ -2788,6 +2986,13 @@ export const translations: Record<Language, any> = {
 				description:
 					'Digitaalinen postisovellus, jota satojatuhannet suomalaiset käyttävät laskujen, kirjeiden, lippujen ja virallisten asiakirjojen turvalliseen vastaanottamiseen.',
 			},
+			regalosKawaii: {
+				name: 'Regalos Kawaii',
+				tag: 'Web · Kaupat',
+				updated: '2026',
+				description:
+					'Niille, jotka rakastavat söpöjä juttuja: kawaii-lahjat Amazonista ja AliExpressistä yhdessä paikassa — ilman tuhansien tuotteiden selaamista.',
+			},
 			yossa: {
 				name: 'Yössä',
 				tag: 'Android · Yöelämä',
@@ -2883,6 +3088,96 @@ export const translations: Record<Language, any> = {
 					subtitle:
 						'Bitdesal osallistui kehitykseen alusta ylläpitoon seitsemän vuoden ajan tuotteessa, jota satoja tuhansia suomalaisia käyttää.',
 					button: 'Tee yhteistyötä kanssamme',
+				},
+				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',
+			},
+			regalosKawaiiDetail: {
+				back: 'Takaisin referensseihin ja hintoihin',
+				tag: 'WEB · KAUPAT',
+				title: 'Regalos Kawaii',
+				titleAccent: 'Ihania lahjaideoita',
+				heroDescription:
+					'Regalos Kawaii on sivusto söpöjen asioiden ystäville. Käymme läpi AliExpressiä ja Amazonia etsiäksemme kauneimmat, omaperäisimmät ja hyvin arvioidut kawaii-lahjat — yhdessä paikassa, jotta sinun ei tarvitse selata tuhansia tuotteita. Löydät squishyjä, pehmoleluja, paperitarvikkeita, muotia, kotitarvikkeita, gamingia, yllätysboxeja ja muuta: selaa kategorioittain, hintaluokittain (alle 10 €, 10–20 €, 20–40 €) tai trendaavien joukosta.',
+				website: 'Vieraile regaloskawaii.es',
+				case: {
+					challenge: 'Mikä on Regalos Kawaii?',
+					role: 'Miten valitsemme tuotteet',
+					result: 'Miten se toimii',
+					challengeText:
+						'Katalogi kawaii-lahjoihin ilman marketplace-sokkeloa — söpöä, omaperäistä ja hyvin arvioitua yhdessä paikassa. Bitdesal rakensi sivuston, datasynkronoinnin ja EmDash-paneelin pitämään hinnat ja kuvat ajan tasalla.',
+					roleText:
+						'Viikoittain katsomme myydyimmät ja pidämme tuotteet, joilla on hyvät arviot ja paljon myyntiä. Kerromme aina, onko tuote virallinen, geneerinen vai epävirallinen. Hinnat päivitetään usein; lopullinen hinta on aina se, jonka kauppa näyttää ostohetkellä.',
+					resultText:
+						'Regalos Kawaii ei myy suoraan: klikkaus vie sinut kauppaan ostamaan. Osa linkeistä on affiliate-linkkejä; pieni provisio auttaa ylläpitämään sivustoa ilman lisäkustannuksia sinulle. Amazon Associate -ohjelman mukaiset ostot voivat tuottaa tuloa.',
+					contactPrompt: 'Ehdotuksia? Kirjoita osoitteeseen',
+					contactEmail: 'hola@regaloskawaii.es',
+				},
+				metrics: {
+					products: '217+',
+					productsLabel: 'Indeksoituja tuotteita',
+					collections: '5',
+					collectionsLabel: 'Toimitukselliset kokoelmat',
+					taxonomies: '4',
+					taxonomiesLabel: 'Selausulottuvuudet',
+					year: '2026',
+					yearLabel: 'Tuotannossa',
+				},
+				screensTitle: 'Kierros sivustolla',
+				screens: {
+					home: 'Etusivu',
+					collections: 'Kokoelmat',
+					categories: 'Kategoriat',
+					characters: 'Hahmot',
+					stores: 'Kaupat',
+					brands: 'Brändit',
+					emdashProducts: 'EmDash · Tuotteet',
+					emdashCollections: 'EmDash · Kokoelmat',
+				},
+				featuresTitle: 'Mitä se sisältää',
+				features: {
+					catalog: {
+						title: 'Tuotesivut',
+						description: 'Päivitetyt hinnat ja kuvat, virallinen / geneerinen / epävirallinen -merkintä ja linkki ulkoiseen kauppaan.',
+					},
+					collections: {
+						title: 'Kuratoidut kokoelmat',
+						description: 'Hinta (alle 10 €, 10–20 €, 20–40 €), trendit ja viikoittain päivitetyt toimitukselliset listat.',
+					},
+					taxonomy: {
+						title: 'Taksonomiat',
+						description: 'Squishyt, pehmot, paperi, muoti, koti, gaming, hahmot, brändit ja kaupat — rajaa hakua helposti.',
+					},
+					search: {
+						title: 'Haku ja suodattimet',
+						description: 'Yläpalkin haku ja facetit nopeaan siirtymiseen.',
+					},
+					emdash: {
+						title: 'EmDash-hallinta',
+						description: 'Toimituksellinen hallinta: julkaisu, kokoelmat, taksonomiat ja nostettavat yksittäiset tuotteet.',
+					},
+					static: {
+						title: 'Staattinen sivusto',
+						description: 'Astrosta generoitu HTML Cloudflare Pagesissa, sisältö versionhallinnassa CI:ssä.',
+					},
+				},
+				playSection: {
+					title: 'Tuotannossa EmDashin kanssa',
+					description:
+						'Kulissien takana tuotteet, kokoelmat ja taksonomiat hallitaan EmDashissa; jokainen julkaisu buildaa staattisen Astro-sivun ilman tunnuksia selaimessa.',
+					categoryLabel: 'Tyyppi',
+					category: 'Web · affiliate-kaupat',
+					updatedLabel: 'Päivitetty',
+					updated: '2026',
+					companyLabel: 'Kehitys',
+					company: 'Bitdesal',
+					countryLabel: 'Markkina',
+					country: 'Espanja',
+				},
+				cta: {
+					title: 'Tarvitsetko toimituksellisen katalogin?',
+					titleAccent: '',
+					subtitle: 'Jos haluat staattisen sivuston CMS:llä ja taksonomioilla, kerro 30 minuutissa ja katsotaan sopivuus.',
+					button: 'Varaa 30 min ilmaiseksi',
 				},
 				copyright: '© 2026 Bitdesal. Kaikki oikeudet pidätetään.',
 			},

@@ -14,6 +14,7 @@ export type PageSeoId =
 	| 'about'
 	| 'projects'
 	| 'projectKivra'
+	| 'projectRegalosKawaii'
 	| 'projectYossa'
 	| 'blog'
 	| 'contact'
@@ -163,17 +164,17 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Casos y precios: proyectos y tarifas a precio cerrado · Bitdesal',
 			description:
-				'Proyectos reales y tarifas a precio cerrado: estudio de procesos, implementación y bolsas de soporte. Sin letra pequeña, con IVA desglosado.',
+				'Casos como Kivra, Regalos Kawaii o Yössä, más tarifas a precio cerrado: estudio, implementación y soporte. IVA desglosado.',
 		},
 		en: {
 			title: 'Work & pricing: case studies and fixed rates · Bitdesal',
 			description:
-				'Real projects and fixed-price rates: process study, implementation and support bundles. No small print, VAT shown separately.',
+				'Case studies such as Kivra, Regalos Kawaii or Yössä, plus fixed rates for process study, implementation and support. VAT shown separately.',
 		},
 		fi: {
 			title: 'Referenssit ja hinnat: hankkeet ja kiinteät hinnat · Bitdesal',
 			description:
-				'Oikeita hankkeita ja kiinteitä hintoja: prosessitutkimus, toteutus ja tukipaketit. Ei pientä pränttiä, ALV eriteltynä.',
+				'Referenssejä kuten Kivra, Regalos Kawaii ja Yössä sekä kiinteitä hintoja toteutukselle ja tuelle. ALV eriteltynä.',
 		},
 	},
 	pricing: {
@@ -210,17 +211,34 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Proyectos y casos · Bitdesal',
 			description:
-				'Casos reales de Bitdesal: la app Android de Kivra en Finlandia y Yössä, el buscador de ocio nocturno. Software en producción con resultados medibles.',
+				'Casos reales de Bitdesal: Kivra (correo digital en Finlandia), Regalos Kawaii (catálogo web con afiliados y EmDash) e Yössä (ocio nocturno). Software en producción.',
 		},
 		en: {
 			title: 'Projects · Bitdesal',
 			description:
-				'Real Bitdesal case studies: Kivra’s Android digital mail app in Finland and Yössä, the nightlife finder. Production software with measurable results.',
+				'Real Bitdesal case studies: Kivra digital mail in Finland, Regalos Kawaii (affiliate gift catalog with EmDash) and Yössä nightlife app. Production software.',
 		},
 		fi: {
 			title: 'Projektit · Bitdesal',
 			description:
-				'Bitdesalin oikeat tapaukset: Kivran Android-sovellus Suomessa ja Yössä, yöelämän hakusovellus. Tuotanto-ohjelmistoja mitattavin tuloksin joka päivä.',
+				'Bitdesalin referenssit: Kivra Suomessa, Regalos Kawaii (affiliate-lahjakatalogi ja EmDash) ja Yössä-yöelämäsovellus. Tuotanto-ohjelmistoja.',
+		},
+	},
+	projectRegalosKawaii: {
+		es: {
+			title: 'Caso Regalos Kawaii: catálogo web con EmDash · Bitdesal',
+			description:
+				'Sitio editorial regaloskawaii.es: más de 200 productos kawaii, taxonomías y panel EmDash. Astro estático y despliegue en Cloudflare Pages.',
+		},
+		en: {
+			title: 'Regalos Kawaii case study: curated gift catalog · Bitdesal',
+			description:
+				'Editorial site regaloskawaii.es with 200+ kawaii products, rich taxonomies and EmDash CMS. Static Astro build on Cloudflare Pages.',
+		},
+		fi: {
+			title: 'Regalos Kawaii -tapaustutkimus: lahjakatalogi · Bitdesal',
+			description:
+				'Toimituksellinen sivusto regaloskawaii.es: yli 200 kawaii-tuotetta, taksonomiat ja EmDash-CMS. Staattinen Astro-julkaisu Cloudflare Pagesissa.',
 		},
 	},
 	projectKivra: {
