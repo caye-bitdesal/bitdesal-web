@@ -689,6 +689,8 @@ export const translations: Record<Language, any> = {
 				all: 'Todos',
 				automation: 'IA y automatización',
 				software: 'Software',
+				web: 'Web',
+				android: 'Android',
 			},
 			lineLabel: {
 				automation: 'IA y automatización',
@@ -706,7 +708,7 @@ export const translations: Record<Language, any> = {
 				tag: 'Web · Tiendas',
 				updated: '2026',
 				description:
-					'Para quienes aman lo adorable: regalos kawaii de Amazon y AliExpress reunidos en un solo sitio, sin tener que buscar entre miles de productos.',
+					'Catálogo web en regaloskawaii.es con enlaces de afiliado a Amazon y AliExpress: Bitdesal desarrolló Astro, la sincronización de productos y el panel editorial EmDash.',
 			},
 			yossa: {
 				name: 'Yössä',
@@ -813,19 +815,19 @@ export const translations: Record<Language, any> = {
 				title: 'Regalos Kawaii',
 				titleAccent: 'Ideas bonitas para regalar',
 				heroDescription:
-					'Regalos Kawaii es una web pensada para quienes aman lo adorable. Recorremos tiendas como AliExpress y Amazon para encontrar los regalos kawaii más bonitos, originales y bien valorados, y los reunimos en un solo sitio para que no tengas que buscar entre miles de productos. Aquí hay squishies, peluches, papelería, moda, hogar, gaming, cajas sorpresa y más: explora por categoría, por tramos de precio (menos de 10 €, de 10 a 20 €, de 20 a 40 €) o por lo más viral del momento.',
+					'Regalos Kawaii (regaloskawaii.es) es un catálogo editorial en español que agrupa ideas de regalo kawaii de AliExpress y Amazon en un solo sitio. Ofrece squishies, peluches, papelería, moda, hogar, gaming y más, con navegación por categorías, tramos de precio (menos de 10 €, 10–20 €, 20–40 €), personajes y colecciones destacadas.',
 				website: 'Visitar regaloskawaii.es',
 				case: {
-					challenge: '¿Qué es Regalos Kawaii?',
-					role: 'Cómo elegimos los productos',
-					result: 'Cómo funciona',
+					challenge: 'El reto',
+					role: 'El papel de Bitdesal',
+					result: 'El resultado',
 					challengeText:
-						'Un catálogo para descubrir regalos kawaii sin perderte en marketplaces: lo adorable, lo original y lo bien valorado en un solo lugar. Bitdesal diseñó la web, la sincronización de datos y el panel EmDash para sostener ese catálogo con precios e imágenes actualizados.',
+						'Construir un catálogo agradable y mantenible sin ser tienda: importar y refrescar datos de producto (precios, imágenes), soportar curación editorial y enlaces de afiliado transparentes.',
 					roleText:
-						'Cada semana revisamos lo más vendido y nos quedamos con productos con buenas valoraciones y muchas ventas. Siempre indicamos si un producto es oficial, genérico o no oficial, para que sepas exactamente qué estás comprando. Los precios se actualizan a menudo; el precio final es el que muestra la tienda en el momento de la compra.',
+						'Diseño del sitio, front en Astro, integración EmDash en el build, automatización de importación y actualización, y publicación en Cloudflare Pages. EmDash permite gestionar qué productos salen a producción y cómo se organizan las taxonomías.',
 					resultText:
-						'Regalos Kawaii no vende directamente: al hacer clic, vas a la tienda para comprar allí. Algunos enlaces son de afiliado, así podemos recibir una pequeña comisión sin que a ti te cueste más y mantener la web. Como Afiliado de Amazon, se obtienen ingresos por las compras adscritas que cumplen los requisitos aplicables.',
-					contactPrompt: '¿Tienes alguna sugerencia? Escríbenos a',
+						'Más de 200 productos en vivo, fichas con etiqueta oficial / genérico / no oficial, y compra siempre en la tienda externa. Parte de los enlaces son de afiliado (incluido el programa de Afiliados de Amazon), sin coste extra para el visitante.',
+					contactPrompt: 'Contacto del sitio para sugerencias:',
 					contactEmail: 'hola@regaloskawaii.es',
 				},
 				metrics: {
@@ -849,40 +851,41 @@ export const translations: Record<Language, any> = {
 					emdashProducts: 'EmDash · Productos',
 					emdashCollections: 'EmDash · Colecciones',
 				},
-				featuresTitle: 'Qué incluye',
+				featuresTitle: 'Qué incluye el sitio',
 				features: {
 					catalog: {
 						title: 'Fichas de producto',
 						description:
-							'Precios e imágenes actualizados con frecuencia, etiqueta oficial / genérico / no oficial y enlace a la tienda externa.',
+							'Fichas con precios e imágenes sincronizados, distinción oficial / genérico / no oficial y enlace saliente a la tienda.',
 					},
 					collections: {
 						title: 'Colecciones curadas',
 						description:
-							'Explora por precio (menos de 10 €, 10–20 €, 20–40 €), por lo más viral y por listas editoriales que se revisan cada semana.',
+							'Listas por precio, tendencias y temática; el flujo editorial apoya la revisión periódica del catálogo.',
 					},
 					taxonomy: {
 						title: 'Taxonomías',
 						description:
-							'Squishies, peluches, papelería, moda, hogar, gaming, personajes, marcas y tiendas para acotar sin perderte.',
+							'Ejes de categoría, marca, personaje y tienda para acotar el catálogo sin depender solo de la búsqueda global.',
 					},
 					search: {
 						title: 'Búsqueda y filtros',
-						description: 'Cabecera con búsqueda y facetas para saltar rápido a lo que buscas.',
+						description: 'Búsqueda en cabecera y filtros por facetas en las vistas de catálogo.',
 					},
 					emdash: {
 						title: 'Panel EmDash',
-						description: 'Control editorial: qué publicar, colecciones, taxonomías y productos concretos que merecen destacarse.',
+						description:
+							'CMS con el que el equipo del proyecto gestiona productos, colecciones y taxonomías antes de cada build.',
 					},
 					static: {
 						title: 'Sitio estático',
-						description: 'HTML generado con Astro, publicado en Cloudflare Pages y contenido versionado en CI.',
+						description: 'Generación estática con Astro en Cloudflare Pages; el contenido se versiona en CI.',
 					},
 				},
 				playSection: {
 					title: 'En producción con EmDash',
 					description:
-						'Por detrás, productos, colecciones y taxonomías se gestionan en EmDash; cada despliegue genera el sitio estático en Astro sin exponer credenciales al navegador.',
+						'En cada despliegue, un snapshot de EmDash alimenta el build de Astro; las credenciales de API no llegan al navegador.',
 					categoryLabel: 'Tipo',
 					category: 'Web · tiendas afiliadas',
 					updatedLabel: 'Actualizado',
@@ -1780,6 +1783,8 @@ export const translations: Record<Language, any> = {
 				all: 'All',
 				automation: 'AI and automation',
 				software: 'Software',
+				web: 'Web',
+				android: 'Android',
 			},
 			lineLabel: {
 				automation: 'AI and automation',
@@ -1797,7 +1802,7 @@ export const translations: Record<Language, any> = {
 				tag: 'Web · Stores',
 				updated: '2026',
 				description:
-					'For people who love all things cute: kawaii gifts from Amazon and AliExpress in one place, without digging through thousands of listings.',
+					'Affiliate kawaii gift catalog at regaloskawaii.es: Bitdesal built the Astro front end, product sync pipelines and the EmDash editorial panel.',
 			},
 			yossa: {
 				name: 'Yössä',
@@ -1903,19 +1908,19 @@ export const translations: Record<Language, any> = {
 				title: 'Regalos Kawaii',
 				titleAccent: 'Pretty gift ideas',
 				heroDescription:
-					'Regalos Kawaii is a site for people who love adorable things. We browse shops like AliExpress and Amazon for the cutest, most original, well‑rated kawaii gifts and bring them together so you don’t have to wade through thousands of products. You’ll find squishies, plushies, stationery, fashion, homeware, gaming, surprise boxes and more — browse by category, price band (under €10, €10–20, €20–40) or what’s trending now.',
+					'Regalos Kawaii (regaloskawaii.es) is a Spanish editorial catalog that groups kawaii gift ideas from AliExpress and Amazon in one place. It covers squishies, plushies, stationery, fashion, homeware, gaming and more, with browsing by category, price bands (under €10, €10–20, €20–40), characters and featured collections.',
 				website: 'Visit regaloskawaii.es',
 				case: {
-					challenge: 'What is Regalos Kawaii?',
-					role: 'How we pick products',
-					result: 'How it works',
+					challenge: 'The challenge',
+					role: 'Bitdesal’s role',
+					result: 'The result',
 					challengeText:
-						'A catalog to discover kawaii gifts without getting lost in marketplaces — cute, original and well‑rated picks in one place. Bitdesal built the site, data sync and EmDash panel to keep prices and images fresh.',
+						'Ship a browsable, maintainable catalog without running a shop: ingest and refresh product data (prices, images), support editorial curation and clear affiliate links.',
 					roleText:
-						'Every week we look at bestsellers and keep items with strong ratings and sales. We always say whether a product is official, generic or unofficial so you know what you’re buying. Prices are refreshed often; the final price is always what the shop shows at checkout.',
+						'Site design, Astro front end, EmDash integration at build time, automated import and refresh pipelines, and Cloudflare Pages deployment. EmDash lets the project team decide what ships and how taxonomies are organized.',
 					resultText:
-						'Regalos Kawaii doesn’t sell directly: clicking takes you to the shop to buy there. Some links are affiliate links, so we may earn a small commission at no extra cost to you, which helps run the site. As an Amazon Associate, earnings come from qualifying purchases.',
-					contactPrompt: 'Have a suggestion? Email us at',
+						'200+ live products, pages labeled official / generic / unofficial, and checkout always on the external shop. Some links are affiliate links (including Amazon Associates), with no extra cost to visitors.',
+					contactPrompt: 'Site contact for suggestions:',
 					contactEmail: 'hola@regaloskawaii.es',
 				},
 				metrics: {
@@ -1939,37 +1944,37 @@ export const translations: Record<Language, any> = {
 					emdashProducts: 'EmDash · Products',
 					emdashCollections: 'EmDash · Collections',
 				},
-				featuresTitle: "What's included",
+				featuresTitle: 'What the site includes',
 				features: {
 					catalog: {
 						title: 'Product pages',
-						description: 'Frequently updated prices and images, official / generic / unofficial labels and a link to the external shop.',
+						description: 'Synced prices and images, official / generic / unofficial labels and outbound shop links.',
 					},
 					collections: {
 						title: 'Curated collections',
-						description: 'Browse by price (under €10, €10–20, €20–40), trending picks and editorial lists refreshed weekly.',
+						description: 'Price, trend and themed lists; the editorial workflow supports periodic catalog review.',
 					},
 					taxonomy: {
 						title: 'Taxonomies',
-						description: 'Squishies, plushies, stationery, fashion, homeware, gaming, characters, brands and stores to narrow your search.',
+						description: 'Category, brand, character and store axes to narrow the catalog beyond global search.',
 					},
 					search: {
 						title: 'Search and filters',
-						description: 'Header search and facets to jump quickly to what you need.',
+						description: 'Header search and facet filters on catalog views.',
 					},
 					emdash: {
 						title: 'EmDash admin',
-						description: 'Editorial control: what to publish, collections, taxonomies and specific products worth highlighting.',
+						description: 'CMS the project team uses to manage products, collections and taxonomies before each build.',
 					},
 					static: {
 						title: 'Static site',
-						description: 'Astro-generated HTML on Cloudflare Pages with versioned content in CI.',
+						description: 'Static generation with Astro on Cloudflare Pages; content is versioned in CI.',
 					},
 				},
 				playSection: {
 					title: 'Live with EmDash',
 					description:
-						'Behind the scenes, products, collections and taxonomies are managed in EmDash; each deploy builds the static Astro site without exposing credentials in the browser.',
+						'Each deploy pulls a snapshot from EmDash into the Astro build; API credentials never reach the browser.',
 					categoryLabel: 'Type',
 					category: 'Website · affiliate stores',
 					updatedLabel: 'Updated',
@@ -2974,6 +2979,8 @@ export const translations: Record<Language, any> = {
 				all: 'Kaikki',
 				automation: 'Tekoäly ja automaatio',
 				software: 'Ohjelmisto',
+				web: 'Web',
+				android: 'Android',
 			},
 			lineLabel: {
 				automation: 'Tekoäly ja automaatio',
@@ -2991,7 +2998,7 @@ export const translations: Record<Language, any> = {
 				tag: 'Web · Kaupat',
 				updated: '2026',
 				description:
-					'Niille, jotka rakastavat söpöjä juttuja: kawaii-lahjat Amazonista ja AliExpressistä yhdessä paikassa — ilman tuhansien tuotteiden selaamista.',
+					'Affiliate-kawaii-katalogi regaloskawaii.es:ssä: Bitdesal rakensi Astron, tuotesynkronoinnin ja EmDash-toimituspaneelin.',
 			},
 			yossa: {
 				name: 'Yössä',
@@ -3097,19 +3104,19 @@ export const translations: Record<Language, any> = {
 				title: 'Regalos Kawaii',
 				titleAccent: 'Ihania lahjaideoita',
 				heroDescription:
-					'Regalos Kawaii on sivusto söpöjen asioiden ystäville. Käymme läpi AliExpressiä ja Amazonia etsiäksemme kauneimmat, omaperäisimmät ja hyvin arvioidut kawaii-lahjat — yhdessä paikassa, jotta sinun ei tarvitse selata tuhansia tuotteita. Löydät squishyjä, pehmoleluja, paperitarvikkeita, muotia, kotitarvikkeita, gamingia, yllätysboxeja ja muuta: selaa kategorioittain, hintaluokittain (alle 10 €, 10–20 €, 20–40 €) tai trendaavien joukosta.',
+					'Regalos Kawaii (regaloskawaii.es) on espanjankielinen toimituksellinen katalogi, joka kokoaa kawaii-lahjaideoita AliExpressistä ja Amazonista yhteen paikkaan. Mukana squishyt, pehmot, paperitarvikkeet, muoti, koti, gaming ja muuta; selaus kategorioittain, hintaluokittain (alle 10 €, 10–20 €, 20–40 €), hahmoittain ja kokoelmittain.',
 				website: 'Vieraile regaloskawaii.es',
 				case: {
-					challenge: 'Mikä on Regalos Kawaii?',
-					role: 'Miten valitsemme tuotteet',
-					result: 'Miten se toimii',
+					challenge: 'Haaste',
+					role: 'Bitdesalin rooli',
+					result: 'Tulos',
 					challengeText:
-						'Katalogi kawaii-lahjoihin ilman marketplace-sokkeloa — söpöä, omaperäistä ja hyvin arvioitua yhdessä paikassa. Bitdesal rakensi sivuston, datasynkronoinnin ja EmDash-paneelin pitämään hinnat ja kuvat ajan tasalla.',
+						'Rakentaa miellyttävästi selattava ja ylläpidettävä katalogi ilman omaa kauppaa: tuonti ja päivitys (hinnat, kuvat), toimituksellinen kurointi ja selkeät affiliate-linkit.',
 					roleText:
-						'Viikoittain katsomme myydyimmät ja pidämme tuotteet, joilla on hyvät arviot ja paljon myyntiä. Kerromme aina, onko tuote virallinen, geneerinen vai epävirallinen. Hinnat päivitetään usein; lopullinen hinta on aina se, jonka kauppa näyttää ostohetkellä.',
+						'Sivuston suunnittelu, Astro-frontend, EmDash-integraatio buildissa, automatisoidut tuonti- ja päivitysputket ja julkaisu Cloudflare Pagesiin. EmDashin kautta projektitiimi päättää julkaisuista ja taksonomioista.',
 					resultText:
-						'Regalos Kawaii ei myy suoraan: klikkaus vie sinut kauppaan ostamaan. Osa linkeistä on affiliate-linkkejä; pieni provisio auttaa ylläpitämään sivustoa ilman lisäkustannuksia sinulle. Amazon Associate -ohjelman mukaiset ostot voivat tuottaa tuloa.',
-					contactPrompt: 'Ehdotuksia? Kirjoita osoitteeseen',
+						'Yli 200 julkaistua tuotetta, virallinen / geneerinen / epävirallinen -merkinnät ja osto aina ulkoisessa kaupassa. Osa linkeistä on affiliate-linkkejä (ml. Amazon Associates) ilman lisäkustannuksia kävijälle.',
+					contactPrompt: 'Sivuston yhteys ehdotuksia varten:',
 					contactEmail: 'hola@regaloskawaii.es',
 				},
 				metrics: {
@@ -3133,37 +3140,37 @@ export const translations: Record<Language, any> = {
 					emdashProducts: 'EmDash · Tuotteet',
 					emdashCollections: 'EmDash · Kokoelmat',
 				},
-				featuresTitle: 'Mitä se sisältää',
+				featuresTitle: 'Mitä sivusto sisältää',
 				features: {
 					catalog: {
 						title: 'Tuotesivut',
-						description: 'Päivitetyt hinnat ja kuvat, virallinen / geneerinen / epävirallinen -merkintä ja linkki ulkoiseen kauppaan.',
+						description: 'Synkronoidut hinnat ja kuvat, virallinen / geneerinen / epävirallinen -merkintä ja linkki ulkoiseen kauppaan.',
 					},
 					collections: {
 						title: 'Kuratoidut kokoelmat',
-						description: 'Hinta (alle 10 €, 10–20 €, 20–40 €), trendit ja viikoittain päivitetyt toimitukselliset listat.',
+						description: 'Hinta-, trendi- ja teemalistat; toimitusprosessi tukee säännöllistä katalogin tarkistusta.',
 					},
 					taxonomy: {
 						title: 'Taksonomiat',
-						description: 'Squishyt, pehmot, paperi, muoti, koti, gaming, hahmot, brändit ja kaupat — rajaa hakua helposti.',
+						description: 'Kategoria-, brändi-, hahmo- ja kauppa-akselit katalogin rajaukseen ilman pelkkää globaalihakua.',
 					},
 					search: {
 						title: 'Haku ja suodattimet',
-						description: 'Yläpalkin haku ja facetit nopeaan siirtymiseen.',
+						description: 'Yläpalkin haku ja facet-suodattimet kataloginäkymissä.',
 					},
 					emdash: {
 						title: 'EmDash-hallinta',
-						description: 'Toimituksellinen hallinta: julkaisu, kokoelmat, taksonomiat ja nostettavat yksittäiset tuotteet.',
+						description: 'CMS, jolla projektitiimi hallitsee tuotteita, kokoelmia ja taksonomioita ennen kutakin buildia.',
 					},
 					static: {
 						title: 'Staattinen sivusto',
-						description: 'Astrosta generoitu HTML Cloudflare Pagesissa, sisältö versionhallinnassa CI:ssä.',
+						description: 'Staattinen generointi Astrolla Cloudflare Pagesissa; sisältö versionhallinnassa CI:ssä.',
 					},
 				},
 				playSection: {
 					title: 'Tuotannossa EmDashin kanssa',
 					description:
-						'Kulissien takana tuotteet, kokoelmat ja taksonomiat hallitaan EmDashissa; jokainen julkaisu buildaa staattisen Astro-sivun ilman tunnuksia selaimessa.',
+						'Jokainen julkaisu hakee EmDash-snapshotin Astro-buildiin; API-tunnuksia ei välitetä selaimeen.',
 					categoryLabel: 'Tyyppi',
 					category: 'Web · affiliate-kaupat',
 					updatedLabel: 'Päivitetty',

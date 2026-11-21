@@ -1,8 +1,10 @@
 export type ProjectLine = 'automation' | 'software';
+export type ProjectPlatform = 'web' | 'android';
 
 export type ProjectCard = {
 	slug: string;
 	line: ProjectLine;
+	platform: ProjectPlatform;
 	iconSrc: string;
 	iconAlt: string;
 	nameKey: string;
@@ -17,6 +19,7 @@ export const projectCards: ProjectCard[] = [
 	{
 		slug: 'regaloskawaii',
 		line: 'software',
+		platform: 'web',
 		iconSrc: '/projects/regaloskawaii/regaloskawaii-app-icon.png',
 		iconAlt: 'Icono de Regalos Kawaii',
 		nameKey: 'projects.regalosKawaii.name',
@@ -28,6 +31,7 @@ export const projectCards: ProjectCard[] = [
 	{
 		slug: 'kivra',
 		line: 'software',
+		platform: 'android',
 		iconSrc: '/kivra-app-icon.png',
 		iconAlt: 'Icono de Kivra Finland',
 		nameKey: 'projects.kivra.name',
@@ -39,6 +43,7 @@ export const projectCards: ProjectCard[] = [
 	{
 		slug: 'yossa',
 		line: 'software',
+		platform: 'android',
 		iconSrc: '/projects/yossa/yossa-app-icon.png',
 		iconAlt: 'Icono de la app Yössä',
 		nameKey: 'projects.yossa.name',
