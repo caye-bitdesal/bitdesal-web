@@ -144,10 +144,22 @@ export function legalPath(page: 'notice' | 'privacy', lang: Language): string {
 	return localeHref(slugs[lang], lang);
 }
 
-const HREFLANG_BCP47: Record<Language, string> = {
+/**
+ * hreflang values (Google accepts only ISO 639-1 language + optional ISO 3166-1 region; no variants).
+ * Valencian has no ISO 639-1 code of its own: it is Catalan, so it goes out as ca-ES.
+ */
+export const HREFLANG_BCP47: Record<Language, string> = {
 	es: 'es-ES',
 	en: 'en-US',
 	fi: 'fi-FI',
+	va: 'ca-ES',
+};
+
+/** <html lang> values (full BCP 47, variants allowed). */
+export const HTML_LANG: Record<Language, string> = {
+	es: 'es',
+	en: 'en',
+	fi: 'fi',
 	va: 'ca-ES-valencia',
 };
 

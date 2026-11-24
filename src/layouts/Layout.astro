@@ -6,7 +6,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { DEFAULT_OG_IMAGE, SITE_ORIGIN } from '../data/siteConstants';
 import { getPageSeo, type PageSeoId } from '../i18n/seo';
 import { useI18n } from '../i18n/useI18n';
-import { absoluteAlternateHrefs } from '../i18n/localizedRoutes';
+import { absoluteAlternateHrefs, HREFLANG_BCP47, HTML_LANG } from '../i18n/localizedRoutes';
 import { defaultBreadcrumbs } from '../i18n/breadcrumbs';
 import { supportedLanguages, type Language } from '../i18n/translations';
 import {
@@ -74,7 +74,7 @@ const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={HTML_LANG[lang]}>
 	<head>
 		<script is:inline>
 			(function () {
@@ -138,7 +138,7 @@ const ogImageUrl = new URL(ogImage, SITE_ORIGIN).href;
 		<link rel="alternate" type="application/rss+xml" title="Bitdesal" href={new URL('/rss.xml', SITE_ORIGIN).href} />
 		{
 			alternates.map((locale) => (
-				<link rel="alternate" hreflang={locale} href={hreflangs[locale]} />
+				<link rel="alternate" hreflang={HREFLANG_BCP47[locale]} href={hreflangs[locale]} />
 			))
 		}
 		{
