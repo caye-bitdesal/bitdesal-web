@@ -1,5 +1,5 @@
 ---
-title: "Més enllà del \"Vibe Coding\": manifest per a una enginyeria de IA sostenible"
+title: "Més enllà del \"Vibe Coding\": manifest per a una enginyeria d'IA sostenible"
 description: "Cinc principis per a usar IA en enginyeria sense caos: confiança, especificació, rigor, humà al comandament i cost sostenible. Manifest en espanyol."
 pubDate: 2026-05-21
 audience: technical
@@ -11,7 +11,7 @@ tags:
 keyword: 'vibe coding ingeniería con IA'
 heroImage: /images/blog/mas-alla-del-vibe-coding/hero.jpg
 ogImage: /images/blog/mas-alla-del-vibe-coding/hero.jpg
-titleHighlight: 'manifiesto para una ingeniería de IA sostenible'
+titleHighlight: 'manifiesto para una ingeniería d'IA sostenible'
 subtitle: 'La industria corre detrás de la velocidad de la IA. Sin método, esa velocidad solo amplifica el caos del código.'
 updatedDate: 2026-11-17
 faq:
@@ -104,7 +104,7 @@ La IA assisteix al desenvolupador; no reemplaça a l'enginyer.
       <h2 class="bf-conclusion-heading">Velocitat amb mètode</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Més enllà del vibe coding hi ha enginyeria sostenible: especificar, revisar, mesurar cost i mantindre el criteri humà en el merge. Si vols aqueix enfocament en Android o en producte amb IA, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="/consultoria-ia/">consultoria de IA</a>.</p>
+      <p>Més enllà del vibe coding hi ha enginyeria sostenible: especificar, revisar, mesurar cost i mantindre el criteri humà en el merge. Si vols aqueix enfocament en Android o en producte amb IA, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="/consultoria-ia/">consultoria d'IA</a>.</p>
       <p>També està l'article <a href="https://www.linkedin.com/pulse/beyond-vibe-coding-manifesto-sustainable-ai-engineering-bitdesal-x5bxe/"> original en LinkedIn</a>.</p>
     </div>
   </div>

@@ -32,6 +32,18 @@ const AREA_SERVED = [
 	{ '@type': 'Country', name: 'España' },
 ];
 
+const AREA_SERVED_VA = [
+	{ '@type': 'City', name: 'Elx', sameAs: 'https://ca.wikipedia.org/wiki/Elx' },
+	{ '@type': 'City', name: 'Alacant', sameAs: 'https://ca.wikipedia.org/wiki/Alacant' },
+	{
+		'@type': 'AdministrativeArea',
+		name: "Província d'Alacant",
+		sameAs: 'https://ca.wikipedia.org/wiki/Prov%C3%ADncia_d%27Alacant',
+	},
+	{ '@type': 'AdministrativeArea', name: 'Comunitat Valenciana' },
+	{ '@type': 'Country', name: 'Espanya' },
+];
+
 const ORG_DESCRIPTION: Record<Language, string> = {
 	es: 'Consultoría de inteligencia artificial y desarrollo de software con sede en Elche (Alicante). Automatiza presupuestos, citas, partes y papeleo para pymes de Elche, Alicante y el resto de España, con precio cerrado.',
 	en: 'AI consulting and software development company based in Elche (Alicante, Spain). Automates quotes, appointments, job reports and paperwork for SMEs, with fixed pricing.',
@@ -51,6 +63,11 @@ export type JsonLdNode = Record<string, unknown>;
 export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): JsonLdNode {
 	const caye = getTeamMember('caye');
 	const ramiro = getTeamMember('ramiro');
+	const areaServed = lang === 'va' ? AREA_SERVED_VA : AREA_SERVED;
+	const postalAddress =
+		lang === 'va'
+			? { '@type': 'PostalAddress', addressLocality: 'Elx', addressRegion: 'Alacant', addressCountry: 'ES' }
+			: { '@type': 'PostalAddress', addressLocality: 'Elche', addressRegion: 'Alicante', addressCountry: 'ES' };
 
 	const org: JsonLdNode = {
 		'@type': ['Organization', 'ProfessionalService'],
@@ -64,13 +81,8 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		image: `${SITE_ORIGIN}/logo.png`,
 		email: CONTACT_EMAIL,
 		telephone: CONTACT_PHONE_E164,
-		address: {
-			'@type': 'PostalAddress',
-			addressLocality: 'Elche',
-			addressRegion: 'Alicante',
-			addressCountry: 'ES',
-		},
-		areaServed: AREA_SERVED,
+		address: postalAddress,
+		areaServed,
 		founder: { '@id': CAYE_ID },
 		employee: [{ '@id': CAYE_ID }, { '@id': RAMIRO_ID }],
 		knowsAbout: KNOWS_ABOUT,
@@ -97,9 +109,12 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 					'@type': 'Offer',
 					itemOffered: {
 						'@type': 'Service',
-						name: 'Consultoría de IA en Alicante y Elche',
+						name:
+							lang === 'va'
+								? "Consultoria d'IA en Alacant i Elx"
+								: 'Consultoría de IA en Alicante y Elche',
 						url: `${SITE_ORIGIN}/consultoria-ia-alicante-elche/`,
-						areaServed: AREA_SERVED.slice(0, 3),
+						areaServed: areaServed.slice(0, 3),
 					},
 				},
 				{

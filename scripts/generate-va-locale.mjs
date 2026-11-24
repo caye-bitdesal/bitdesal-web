@@ -100,6 +100,51 @@ function cleanApertium(text) {
 		.replace(/\*([A-Za-zÀ-ÿ])/gu, '$1');
 }
 
+/** Castilian → valencian toponyms and labels (longest matches first). */
+const TOPONYM_REPLACEMENTS = [
+	['Provincia de Alicante', "Província d'Alacant"],
+	['Registro Mercantil de Alicante', "Registre Mercantil d'Alacant"],
+	['Registre Mercantil de Alicante', "Registre Mercantil d'Alacant"],
+	['Comunidad Valenciana', 'Comunitat Valenciana'],
+	['País Valenciano', 'País Valencià'],
+	['Estados Unidos', 'Estats Units'],
+	['Alicante', 'Alacant'],
+	['Elche', 'Elx'],
+	['Finlandia', 'Finlàndia'],
+	['Suiza', 'Suïssa'],
+	['Suecia', 'Suècia'],
+	['Australia', 'Austràlia'],
+	['España', 'Espanya'],
+];
+
+/** Manual fixes after machine translation (normes valencianes). */
+export function polishValencian(text) {
+	if (typeof text !== 'string') return text;
+	let out = text
+		.replace(/Pàgina no oposada/g, 'Pàgina no trobada')
+		.replace(/Case Regals/g, 'Cas Regals')
+		.replace(/\bde IA\b/g, "d'IA");
+	for (const [from, to] of TOPONYM_REPLACEMENTS) {
+		out = out.split(from).join(to);
+	}
+	return out
+		.replace(/\bdes de Elx\b/g, "des d'Elx")
+		.replace(/\bdes de Alacant\b/g, "des d'Alacant")
+		.replace(/\bde Elx\b/g, "d'Elx")
+		.replace(/\bde Alacant\b/g, "d'Alacant")
+		.replace(/\bentorn de Alacant\b/g, "entorn d'Alacant")
+		.replace(/\bregistre d'Alacant\b/gi, "Registre Mercantil d'Alacant");
+}
+
+function polishDeep(value) {
+	if (typeof value === 'string') return polishValencian(value);
+	if (Array.isArray(value)) return value.map(polishDeep);
+	if (value && typeof value === 'object') {
+		return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, polishDeep(v)]));
+	}
+	return value;
+}
+
 function escapeRe(s) {
 	return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -119,7 +164,7 @@ async function translateOne(text) {
 			const res = await fetch(url);
 			if (!res.ok) throw new Error(`HTTP ${res.status}`);
 			const data = await res.json();
-			const translated = cleanApertium(unprotect(data.responseData?.translatedText ?? text, tokens));
+			const translated = polishValencian(cleanApertium(unprotect(data.responseData?.translatedText ?? text, tokens)));
 			cache[text] = translated;
 			if (Object.keys(cache).length % 40 === 0) saveCache();
 			return translated;
@@ -180,7 +225,7 @@ async function main() {
 
 	if (only === 'all' || only === 'locale') {
 		console.log('Translating main locale (es → va)...');
-		const va = await deepTranslate(translations.es);
+		const va = polishDeep(await deepTranslate(translations.es));
 		writeFileSync(join(ROOT, 'src/i18n/generated/locale-va.ts'), serializeTs(va, 'localeVa'));
 		console.log('Wrote src/i18n/generated/locale-va.ts');
 	}
@@ -216,7 +261,7 @@ async function main() {
 		const seoVa = {};
 		for (const id of pageIds) {
 			const es = getPageSeo(id, 'es');
-			seoVa[id] = await deepTranslate(es);
+			seoVa[id] = polishDeep(await deepTranslate(es));
 			console.log('  seo', id);
 		}
 		writeFileSync(join(ROOT, 'src/i18n/generated/seo-va.ts'), serializeTs(seoVa, 'seoVaByPage'));
@@ -226,12 +271,12 @@ async function main() {
 		console.log('Translating legal documents...');
 		const noticeEs = getLegalNotice('es', '/va/privacitat/');
 		const privacyEs = getPrivacyPolicy('es');
-		const legalVa = {
+		const legalVa = polishDeep({
 			notice: await deepTranslate(noticeEs),
 			privacy: await deepTranslate(privacyEs),
 			registry: await translateOne('Inscrita en el Registro Mercantil de Alicante'),
 			updated: await translateOne('19 de octubre de 2026'),
-		};
+		});
 		writeFileSync(join(ROOT, 'src/data/generated/legal-va.ts'), serializeTs(legalVa, 'legalVa'));
 	}
 

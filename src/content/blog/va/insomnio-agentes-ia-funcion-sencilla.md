@@ -1,5 +1,5 @@
 ---
-title: "Insomni, agents de IA i la funció de 8 hores"
+title: "Insomni, agents d'IA i la funció de 8 hores"
 description: "Un selector d'idioma amb IA que havia de portar dues hores va acabar en una marató nocturna. Criteris d'acceptació, revisió automàtica i tres lliçons."
 pubDate: 2026-06-11
 audience: technical
@@ -9,7 +9,7 @@ tags:
   - agentes-ia
   - android
   - desarrollo-asistido
-keyword: 'agentes de IA desarrollo'
+keyword: 'agentes d'IA desarrollo'
 heroImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
 ogImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
 subtitle: '¿Te ha pasado que una tarea de «cinco minutos» se convierte en el día entero? Empezó a una hora indecente, sin poder dormir, con un selector de idioma que «seguro» iba rápido con IA.'
@@ -23,7 +23,7 @@ faq:
     a: 'Sirve como segunda opinión en el PR, no como veto ni sustituto. Los comentarios orientan; alguien del equipo decide el merge.'
 ---
 
-A les tantes del matí, sense somni, vaig decidir muntar un *selector d'idioma** en Weel, una app personal en la qual porte temps. A mà m'hauria portat un parell d'hores. Vaig voler provar quant tardava amb agents de IA.
+A les tantes del matí, sense somni, vaig decidir muntar un *selector d'idioma** en Weel, una app personal en la qual porte temps. A mà m'hauria portat un parell d'hores. Vaig voler provar quant tardava amb agents d'IA.
 
 <blockquote class="bf-pullquote">Error gran: sense criteris d'acceptació, la IA no per a de «arreglar» coses que no vas demanar.</blockquote>
 
@@ -90,8 +90,8 @@ Al cap d'unes *dotze hores** i molts camins equivocats, la feature estava en pro
       <h2 class="bf-conclusion-heading">La funció senzilla no ho va ser</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Els agents de IA serveixen per a avançar ràpid quan ja saps què vols i com comprovar-ho. Sense això, una matinada sense dormir es converteix en marató.</p>
-      <p>També està l'article <a href="https://www.linkedin.com/pulse/insomnia-ai-agents-8-hour-simple-feature-bitdesal-ytkke/"> original en LinkedIn</a>. Si vols desenvolupament Android amb qualitat i sense dependre de l'agent per sempre, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="/agentes-ia-empresas/">agents de IA per a empreses</a>.</p>
+      <p>Els agents d'IA serveixen per a avançar ràpid quan ja saps què vols i com comprovar-ho. Sense això, una matinada sense dormir es converteix en marató.</p>
+      <p>També està l'article <a href="https://www.linkedin.com/pulse/insomnia-ai-agents-8-hour-simple-feature-bitdesal-ytkke/"> original en LinkedIn</a>. Si vols desenvolupament Android amb qualitat i sense dependre de l'agent per sempre, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="/agentes-ia-empresas/">agents d'IA per a empreses</a>.</p>
     </div>
   </div>
 </section>

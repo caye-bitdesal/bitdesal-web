@@ -107,7 +107,7 @@ Quan un PR s'obri o rep commits nous, `ai-code-review.yml` corre *en paral·lel*
   <figcaption>Checks mecànics i revisió amb IA alhora; la persona continua decidint el merge.</figcaption>
 </figure>
 
-*Com funciona el workflow de IA:**
+*Com funciona el workflow d'IA:**
 
 1. GitHub Actions fa checkout del diff del PR (commit base enfront de head).
 2. Un script en Python (`ai_review.py`) envia el diff i el títol del PR a un LLM via la API de Gemini.
@@ -327,7 +327,7 @@ Si alguna cosa es filtra, **rótalo immediatament**. Els secrets han de continua
     </div>
     <div class="bf-conclusion-body">
       <p>Un bon CI/CD no és un únic YAML que ho fa tot. És una seqüència: issues ordenats, PRs documentats, estil i tests automàtics, revisió assistida per IA, aprovació humana, validació en emulador i visual, artefactes signats i un avís a l'equip quan alguna cosa ix a la pista interna.</p>
-      <p>Tres arxius de workflow. Zero pujades manuals. Cada PR rep checks mecànics i una primera passada de IA; cada merge porta una build signada a la pista interna, i l'equip sempre sap quina versió és.</p>
+      <p>Tres arxius de workflow. Zero pujades manuals. Cada PR rep checks mecànics i una primera passada d'IA; cada merge porta una build signada a la pista interna, i l'equip sempre sap quina versió és.</p>
       <p>Les captures procedeixen d'una configuració real en GitHub Actions. Si vols que revisem o muntem el teu pipeline, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="https://cal.com/bitdesal/30min">reserva 30 minuts</a>. També està l'article <a href="https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd"> original en Medium</a>.</p>
     </div>
   </div>

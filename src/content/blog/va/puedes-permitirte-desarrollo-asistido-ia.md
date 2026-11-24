@@ -102,7 +102,7 @@ Com més lliges del repositori en cada prompt, més tokens manes. «Pega tot el 
 Un IDE tenia preu mensual predictible. La IA assistida per API és *variable**: un dia tranquil i un altre amb un agent que itera dotze hores. Això no encaixa bé amb un pressupost de programari clàssic si ningú ho mesura.
 
 <figure class="bf-figure">
-  <img src="/images/blog/puedes-permitirte-desarrollo-asistido-ia/token-tax.gif" alt="Meme: billetes volando, metáfora del gasto descontrolado en tokens de IA" width="480" height="270" loading="lazy" />
+  <img src="/images/blog/puedes-permitirte-desarrollo-asistido-ia/token-tax.gif" alt="Meme: billetes volando, metáfora del gasto descontrolado en tokens d'IA" width="480" height="270" loading="lazy" />
   <figcaption>Humor a part: sense límits i sense criteris d'acceptació, l'agent pot «fer ploure» tokens.</figcaption>
 </figure>
 
@@ -127,7 +127,7 @@ Això no elimina el cost, maquinari, manteniment, temps de qui el configura, per
       <h2 class="bf-conclusion-heading">Sí, però amb regles</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Pots permetre't el desenvolupament assistit per IA si tries el nivell adequat per tasca, mesures la despesa i no confons velocitat de tecleig amb projecte acabat. Si necessites ajuda per a dissenyar aqueix equilibri en el teu equip, parlem en <a href="/consultoria-ia/">consultoria de IA</a> o <a href="/casos-y-precios/">casos i preus</a>.</p>
+      <p>Pots permetre't el desenvolupament assistit per IA si tries el nivell adequat per tasca, mesures la despesa i no confons velocitat de tecleig amb projecte acabat. Si necessites ajuda per a dissenyar aqueix equilibri en el teu equip, parlem en <a href="/consultoria-ia/">consultoria d'IA</a> o <a href="/casos-y-precios/">casos i preus</a>.</p>
       <p>També està l'article <a href="https://www.linkedin.com/pulse/can-you-afford-your-ai-assisted-development-bitdesal-ubtpe/"> original en LinkedIn</a>.</p>
     </div>
   </div>

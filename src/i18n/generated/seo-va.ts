@@ -1,12 +1,12 @@
 /** Auto-generated Valencian locale (Apertium spa|cat_valencia). Do not edit by hand; run scripts/generate-va-locale.mjs */
 export const seoVaByPage = {
   "home": {
-    "title": "Consultoria de IA i programari en Elche i Alicante · Bitdesal",
-    "description": "Consultors de IA en Elche (Alicante): automatitzem pressupostos, cites i paperassa, i desenvolupem programari amb preu tancat. Agenda 30 minuts gratis."
+    "title": "Consultoria d'IA i programari en Elx i Alacant · Bitdesal",
+    "description": "Consultors d'IA en Elx (Alacant): automatitzem pressupostos, cites i paperassa, i desenvolupem programari amb preu tancat. Agenda 30 minuts gratis."
   },
   "iaConsulting": {
-    "title": "Consultoria de IA per a empreses: automatitza la paperassa · Bitdesal",
-    "description": "Automatitzem pressupostos, cites, parts i paperassa amb consultoria de IA. Preu tancat des de l'estudi de 450 €. Agenda 30 minuts gratis."
+    "title": "Consultoria d'IA per a empreses: automatitza la paperassa · Bitdesal",
+    "description": "Automatitzem pressupostos, cites, parts i paperassa amb consultoria d'IA. Preu tancat des de l'estudi de 450 €. Agenda 30 minuts gratis."
   },
   "consultoria": {
     "title": "Consultoria de programari i desenvolupament Android · Bitdesal",
@@ -25,12 +25,12 @@ export const seoVaByPage = {
     "description": "Automatitza pressupostos, cites, parts i comandes amb IA sense canviar de programa. Preu tancat des de l'estudi de 450 €. Agenda 30 minuts gratis."
   },
   "aiAgents": {
-    "title": "Agents de IA per a empreses: què són i casos reals · Bitdesal",
-    "description": "Un agent de IA llig, decideix i actua en WhatsApp, documents i pressupostos. Una persona confirma el que compromet. Agenda 30 minuts gratis."
+    "title": "Agents d'IA per a empreses: què són i casos reals · Bitdesal",
+    "description": "Un agent d'IA llig, decideix i actua en WhatsApp, documents i pressupostos. Una persona confirma el que compromet. Agenda 30 minuts gratis."
   },
-  "localElche": {
-    "title": "Consultor de IA en Alicante i Elche per a empreses · Bitdesal",
-    "description": "Consultors de IA en Alicante i Elche: automatitzem pressupostos, cites i parts amb preu tancat. Primera reunió de 30 min gratis, presencial o online."
+  "localElx": {
+    "title": "Consultor d'IA en Alacant i Elx per a empreses · Bitdesal",
+    "description": "Consultors d'IA en Alacant i Elx: automatitzem pressupostos, cites i parts amb preu tancat. Primera reunió de 30 min gratis, presencial o online."
   },
   "pricing": {
     "title": "Preus: estudi de processos i projectes a preu tancat · Bitdesal",
@@ -41,7 +41,7 @@ export const seoVaByPage = {
     "description": "Casos com Kivra, Regals Kawaii o Yössä, més tarifes a preu tancat: estudi, implementació i suport. IVA desglossat."
   },
   "about": {
-    "title": "Nosaltres: consultoria de IA i programari en Elche · Bitdesal",
+    "title": "Nosaltres: consultoria d'IA i programari en Elx · Bitdesal",
     "description": "Bitdesal ajuda a empreses amb automatització, programari a mesura i consultoria Android. Coneix a l'equip i la nostra manera de treballar."
   },
   "projects": {
@@ -58,10 +58,10 @@ export const seoVaByPage = {
   },
   "projectAmarteVitalFlow": {
     "title": "Cas Am'Art Vital Flow: web de benestar · Bitdesal",
-    "description": "Lloc en Astro per a acompanyament integratiu en Elche: naturopatía, Moviment Flow, tallers i contacte — identitat càlida terracota i sàlvia."
+    "description": "Lloc en Astro per a acompanyament integratiu en Elx: naturopatía, Moviment Flow, tallers i contacte — identitat càlida terracota i sàlvia."
   },
   "projectRegalosKawaii": {
-    "title": "Case Regals Kawaii: catàleg web amb EmDash · Bitdesal",
+    "title": "Cas Regals Kawaii: catàleg web amb EmDash · Bitdesal",
     "description": "Lloc editorial regaloskawaii.es: més de 200 productes kawaii, taxonomies i panell EmDash. Astro estàtic i desplegament en Cloudflare Pages."
   },
   "projectYossa": {
@@ -74,7 +74,7 @@ export const seoVaByPage = {
   },
   "contact": {
     "title": "Contacte: agenda 30 minuts gratis amb nosaltres · Bitdesal",
-    "description": "Explica'ns què necessites. Et responem en menys de 24 hores laborables. Elche · principalment en remot; planificació en Alicante; desplaçaments puntuals a Espanya o la UE."
+    "description": "Explica'ns què necessites. Et responem en menys de 24 hores laborables. Elx · principalment en remot; planificació en Alacant; desplaçaments puntuals a Espanya o la UE."
   },
   "legalNotice": {
     "title": "Avís legal i condicions d'ús de bitdesal.com · Bitdesal",
@@ -85,15 +85,15 @@ export const seoVaByPage = {
     "description": "Com tractem les teues dades en el formulari, les cites i com a clients: finalitats, terminis, destinataris i els teus drets RGPD."
   },
   "notFound": {
-    "title": "Pàgina no oposada · Bitdesal",
+    "title": "Pàgina no trobada · Bitdesal",
     "description": "La pàgina que busques no existeix."
   },
   "cayeProfile": {
     "title": "Caye Ruiz, fundador i consultor Android i IA · Bitdesal",
-    "description": "Perfil de Caye Ruiz: fundador de Bitdesal, consultor Android sènior i consultoria de IA. Més de 20 anys en programari."
+    "description": "Perfil de Caye Ruiz: fundador de Bitdesal, consultor Android sènior i consultoria d'IA. Més de 20 anys en programari."
   },
   "ramiroProfile": {
-    "title": "Ramiro Santamaría: apps i agents de IA · Bitdesal",
-    "description": "Perfil de Ramiro Santamaría: desenvolupament d'apps i agents de IA en Bitdesal."
+    "title": "Ramiro Santamaría: apps i agents d'IA · Bitdesal",
+    "description": "Perfil de Ramiro Santamaría: desenvolupament d'apps i agents d'IA en Bitdesal."
   }
 } as const;

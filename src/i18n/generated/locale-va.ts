@@ -3,7 +3,7 @@ export const localeVa = {
   "home": {
     "hero": {
       "title": "Tu centra't en el teu negoci. La tecnologia la posem moatros.",
-      "subtitle": "Consultoria de IA i desenvolupament de programari des de Elche (Alicante). Amb preu tancat i sense sorpreses.",
+      "subtitle": "Consultoria d'IA i desenvolupament de programari des d'Elx (Alacant). Amb preu tancat i sense sorpreses.",
       "imageAlt": "Imatge que reflecteix la serenitat que volem transmetre en Bitdesal als nostres clients",
       "viewProjects": "Veure projectes",
       "contact": "Agenda 30 min gratis"
@@ -49,10 +49,10 @@ export const localeVa = {
     },
     "serviceCards": {
       "ia": {
-        "title": "Consultoria de IA per a empreses",
+        "title": "Consultoria d'IA per a empreses",
         "description": "Pressupostos a mà, notes en paper o en WhatsApp, cites que es perden? Estudiem com treballeu i automatitzem el que us lleva hores.",
         "priceHint": "Des de 1.800 € + IVA",
-        "cta": "Veure consultoria de IA"
+        "cta": "Veure consultoria d'IA"
       },
       "software": {
         "title": "Desenvolupament i consultoria de programari",
@@ -109,7 +109,7 @@ export const localeVa = {
     },
     "behind": {
       "title": "Qui està darrere",
-      "text": "Som un equip d'enginyers amb experiència en cinc països: Espanya, Suïssa, Finlàndia, els Estats Units i Austràlia. Caye Ruiz, fundador, va liderar durant 7 anys l'app Android de Kivra, usada per centenars de milers de persones. Ramiro Santamaría combina desenvolupament d'apps, operacions de IT i orquestració d'agents de IA. Hui treballem amb empreses que volen tecnologia que funcione, sense complicacions."
+      "text": "Som un equip d'enginyers amb experiència en cinc països: Espanya, Suïssa, Finlàndia, els Estats Units i Austràlia. Caye Ruiz, fundador, va liderar durant 7 anys l'app Android de Kivra, usada per centenars de milers de persones. Ramiro Santamaría combina desenvolupament d'apps, operacions de IT i orquestració d'agents d'IA. Hui treballem amb empreses que volen tecnologia que funcione, sense complicacions."
     },
     "logos": {
       "title": "Experiència en empreses com"
@@ -135,7 +135,7 @@ export const localeVa = {
         },
         "remote": {
           "q": "Treballeu només en remot?",
-          "a": "Treballem principalment en remot amb clients en tota Espanya i internacionalment. Si estàs a l'entorn de Alicante, podem acostar-nos per a la reunió de planificació. Per a moments importants del projecte, també ens desplacem puntualment a la resta d'Espanya o a la UE."
+          "a": "Treballem principalment en remot amb clients en tota Espanya i internacionalment. Si estàs a l'entorn d'Alacant, podem acostar-nos per a la reunió de planificació. Per a moments importants del projecte, també ens desplacem puntualment a la resta d'Espanya o a la UE."
         }
       }
     },
@@ -164,7 +164,7 @@ export const localeVa = {
           "excerpt": "Separar merge i release en GitHub Actions: CI en el PR, signatura segura, tags rc-* i revisió amb IA. Guia amb diagrames en bitdesal.com."
         },
         "insomnia": {
-          "title": "Insomni, agents de IA i la funció de 8 hores",
+          "title": "Insomni, agents d'IA i la funció de 8 hores",
           "imageAlt": "Desenvolupador adormit sobre el teclat després d'una llarga sessió de codi",
           "date": "11 jun 2026",
           "excerpt": "Un selector d'idioma amb IA que havia de portar dues hores va acabar en una marató nocturna. Tres lliçons sobre criteris d'acceptació i revisió automàtica."
@@ -176,7 +176,7 @@ export const localeVa = {
           "excerpt": "Subscripcions, tokens i agents: quina costa de debò el desenvolupament amb IA i quan compensa. Flux real i tres nivells d'ajuda."
         },
         "manifesto": {
-          "title": "Més enllà del \"Vibe Coding\": manifest per a una enginyeria de IA sostenible",
+          "title": "Més enllà del \"Vibe Coding\": manifest per a una enginyeria d'IA sostenible",
           "imageAlt": "Meme de Darth Vader: «trobada pertorbadora la teua falta de fe»",
           "date": "21 may 2026",
           "excerpt": "La IA accelera el codi; sense mètode, amplifica el caos. Sis principis: confiança, especificació, rigor, enginyer al comandament, tokens i ROAI."
@@ -241,7 +241,7 @@ export const localeVa = {
       "expertiseTitle": "Àrees de expertise",
       "expertise1": "Mobile-first strategy",
       "expertise2": "Migració a cloud-native",
-      "expertise3": "Adopció de IA en l'empresa",
+      "expertise3": "Adopció d'IA en l'empresa",
       "expertise4": "Processos àgils i DevOps"
     },
     "cta": {
@@ -267,7 +267,7 @@ export const localeVa = {
       "ramiro": {
         "name": "Ramiro Santamaría",
         "title": "Automatització amb IA i IT",
-        "bio": "Informàtic amb experiència a Espanya, els Estats Units i Austràlia, en desenvolupament d'apps mòbils, web i en operacions de IT i seguretat de xarxes. S'ha especialitzat en l'orquestració d'agents de IA."
+        "bio": "Informàtic amb experiència a Espanya, els Estats Units i Austràlia, en desenvolupament d'apps mòbils, web i en operacions de IT i seguretat de xarxes. S'ha especialitzat en l'orquestració d'agents d'IA."
       }
     },
     "hero": {
@@ -294,7 +294,7 @@ export const localeVa = {
       "journey": {
         "title": "Trajectòria de Ramiro",
         "aiAgents": {
-          "role": "Orquestador d'agents de IA",
+          "role": "Orquestador d'agents d'IA",
           "company": "Freelance",
           "location": "",
           "dates": "2026 – actualitat",
@@ -418,7 +418,7 @@ export const localeVa = {
       "bitdesal": {
         "role": "Consultor Android independent",
         "company": "Bitdesal",
-        "location": "Elche, Espanya",
+        "location": "Elx, Espanya",
         "dates": "oct 2025 – actualitat",
         "item1": "Consultoria sènior d'arquitectura Android i qualitat de codi; continuïtat del producte Kivra Finlàndia en la seua fase de creixement.",
         "item2": "Fluxos de treball amb IA (code review, scaffolding i documentació) per a accelerar el lliurament i el onboarding."
@@ -544,7 +544,7 @@ export const localeVa = {
     },
     "remoteFirst": {
       "title": "Principalment en remot",
-      "description": "Treballem principalment en remot, amb documentació clara, revisions amb tu cada setmana i les eines que ja usa el teu equip. Atenem clients en tota Espanya i internacionalment. Si estàs a l'entorn de Alicante, podem acostar-nos per a la reunió de planificació. Per a moments importants del projecte, també ens desplacem puntualment a la resta d'Espanya o a la UE.",
+      "description": "Treballem principalment en remot, amb documentació clara, revisions amb tu cada setmana i les eines que ja usa el teu equip. Atenem clients en tota Espanya i internacionalment. Si estàs a l'entorn d'Alacant, podem acostar-nos per a la reunió de planificació. Per a moments importants del projecte, també ens desplacem puntualment a la resta d'Espanya o a la UE.",
       "async": {
         "title": "Comunicació Asíncrona",
         "description": "Documentació exhaustiva i updates regulars per a mantindre a tots alineats sense dependre de reunions constants."
@@ -667,7 +667,7 @@ export const localeVa = {
   },
   "nav": {
     "home": "Inici",
-    "iaService": "Consultoria de IA",
+    "iaService": "Consultoria d'IA",
     "softwareService": "Desenvolupament de programari",
     "about": "Moatros",
     "pricing": "Preus",
@@ -686,7 +686,7 @@ export const localeVa = {
   "footer": {
     "tagline": "Desenvolupament Android, IA i consultoria d'alt nivell",
     "servicesTitle": "Serveis",
-    "iaService": "Consultoria de IA per a empreses",
+    "iaService": "Consultoria d'IA per a empreses",
     "softwareService": "Desenvolupament i consultoria de programari",
     "androidDev": "Desenvolupament Android",
     "ai": "Intel·ligència Artificial",
@@ -700,7 +700,7 @@ export const localeVa = {
     "blog": "Blog",
     "projects": "Projectes",
     "contactTitle": "Contacte",
-    "location": "Elche · Comunitat Valenciana",
+    "location": "Elx · Comunitat Valenciana",
     "linkedin": "LinkedIn",
     "rights": "Tots els drets reservats.",
     "legalNotice": "Avís legal",
@@ -712,7 +712,7 @@ export const localeVa = {
     "name": "Nom",
     "company": "Empresa",
     "topicLabel": "En què podem ajudar-te?",
-    "topicIa": "Consultoria de IA — automatitzar processos",
+    "topicIa": "Consultoria d'IA — automatitzar processos",
     "topicSoftware": "Desenvolupament o consultoria de programari",
     "topicOther": "Un altre",
     "message": "Missatge",
@@ -725,7 +725,7 @@ export const localeVa = {
     "alternatives": "O si prefereixes:",
     "book": "Agenda 30 min gratis",
     "whatsapp": "WhatsApp",
-    "location": "Elche · Comunitat Valenciana · Principalment en remot; planificació presencial en Alicante i voltants; desplaçaments puntuals a la resta d'Espanya o la UE",
+    "location": "Elx · Comunitat Valenciana · Principalment en remot; planificació presencial en Alacant i voltants; desplaçaments puntuals a la resta d'Espanya o la UE",
     "consentBefore": "He llegit la",
     "privacyPolicy": "política de privacitat",
     "consentAfter": "i accepte que tracteu les meues dades per a respondre a la meua sol·licitud.",
@@ -746,7 +746,7 @@ export const localeVa = {
     "hero": {
       "badge": "Preu transparent",
       "title": "Saps el que pagaràs abans de començar",
-      "lead": "Consultoria de IA i desenvolupament de programari amb preu clar des del principi.",
+      "lead": "Consultoria d'IA i desenvolupament de programari amb preu clar des del principi.",
       "subtitle": "Treballem per fases perquè sàpies què resolem, quant tarda i què costarà abans que comence el desenvolupament.",
       "cta": "Agenda 30 min gratis",
       "details": "Veure l'enfocament"
@@ -771,7 +771,7 @@ export const localeVa = {
       }
     },
     "sections": {
-      "ia": "Consultoria de IA per a empreses",
+      "ia": "Consultoria d'IA per a empreses",
       "software": "Desenvolupament i consultoria de programari"
     },
     "softwareBlock": {
@@ -912,7 +912,7 @@ export const localeVa = {
   },
   "iaPage": {
     "hero": {
-      "badge": "Consultoria de IA per a empreses",
+      "badge": "Consultoria d'IA per a empreses",
       "title": "Deixa de perdre hores en paperassa",
       "subtitle": "Automatitzem els processos de la teua empresa amb IA: pressupostos, cites, parts de treball, comandes o factures. Sabràs el preu exacte abans de començar."
     },
@@ -970,8 +970,8 @@ export const localeVa = {
     },
     "intro": {
       "p1": "Som una consultoria d'intel·ligència artificial per a empreses. Si el dia se't va en pressupostos, cites, parts i papers que salten del WhatsApp a l'Excel, t'ajudem a automatitzar aqueix treball amb IA i a deixar l'abast per escrit, amb un preu tancat abans de construir res.",
-      "p2": "Una consultoria de IA no és un curs ni un programa que compres i t'apanyes. Estudiem com treballeu de debò, decidim què val la pena automatitzar i què no, i ho deixem funcionant amb les eines que ja useu. L'objectiu és que recuperes hores cada setmana, no que tingues un pilot que ningú obri.",
-      "p3": "Treballem sobretot amb oficis i instal·ladors —qui mesura, pressuposada, cita i tanca el comunicat en la furgoneta—, i amb qualsevol empresa en la qual la mateixa dada es copia a mà diverses vegades. La seu està en Elche i el treball del dia a dia és en remot en tota Espanya."
+      "p2": "Una consultoria d'IA no és un curs ni un programa que compres i t'apanyes. Estudiem com treballeu de debò, decidim què val la pena automatitzar i què no, i ho deixem funcionant amb les eines que ja useu. L'objectiu és que recuperes hores cada setmana, no que tingues un pilot que ningú obri.",
+      "p3": "Treballem sobretot amb oficis i instal·ladors —qui mesura, pressuposada, cita i tanca el comunicat en la furgoneta—, i amb qualsevol empresa en la qual la mateixa dada es copia a mà diverses vegades. La seu està en Elx i el treball del dia a dia és en remot en tota Espanya."
     },
     "automate": {
       "title": "Què automatitzem amb IA",
@@ -1009,8 +1009,8 @@ export const localeVa = {
         },
         "whatsapp": {
           "title": "Atenció per WhatsApp",
-          "body": "El WhatsApp de l'empresa mescla clients nous, «m'ho mires?» i encàrrecs a mig fer. Un agent de IA pot respondre el repetit, demanar les dades que falten (mesures, direcció, fotos) i deixar-te la conversa llista per a pressupostar. El que no sap, o el que implica un compromís, te'l passa a tu.",
-          "link": "Agents de IA per a WhatsApp"
+          "body": "El WhatsApp de l'empresa mescla clients nous, «m'ho mires?» i encàrrecs a mig fer. Un agent d'IA pot respondre el repetit, demanar les dades que falten (mesures, direcció, fotos) i deixar-te la conversa llista per a pressupostar. El que no sap, o el que implica un compromís, te'l passa a tu.",
+          "link": "Agents d'IA per a WhatsApp"
         }
       }
     },
@@ -1028,30 +1028,30 @@ export const localeVa = {
       "todo": "TOT(caye): confirmar sectors i slugs abans de publicar les landings (fusteria d'alumini i PVC, reformes i instal·ladors, i els següents)."
     },
     "pricing": {
-      "title": "Quant costa la consultoria de IA",
+      "title": "Quant costa la consultoria d'IA",
       "lead": "El preu no depén de «posar IA». Depén de quants passos cal llevar i de si fa falta una eina nova o n'hi ha prou amb connectar el que ja tens. Aquestes xifres són les de Bitdesal, amb IVA a part."
     },
     "related": {
       "title": "On seguir",
       "processes": "Automatització de processos amb IA",
-      "agents": "Agents de IA per a empreses",
-      "local": "Consultoria de IA en Elche i Alicante",
-      "pricing": "Casos i preus de la consultoria de IA",
+      "agents": "Agents d'IA per a empreses",
+      "local": "Consultoria d'IA en Elx i Alacant",
+      "pricing": "Casos i preus de la consultoria d'IA",
       "contact": "Contactar amb Bitdesal"
     },
     "faqExtra": {
       "cost": {
-        "q": "Quant costa una consultoria de IA?",
+        "q": "Quant costa una consultoria d'IA?",
         "a": "L'estudi de processos són 450 € + IVA (675 € + IVA si hi ha diversos departaments o sistemes) i es descompta al 100% si contractes la implementació en els 30 dies següents. Una automatització expressa sol quedar entre 1.800 i 2.900 € + IVA. Una eina a mesura parteix de 4.500 € + IVA. El suport, si el vols, des de 225 € al mes + IVA i sense permanència."
       },
       "software": {
-        "q": "Quina diferència hi ha entre una consultoria de IA i comprar un programa?",
-        "a": "Un programa et demana que treballes com ell treballa. Una consultoria de IA part del teu flux: mirem on es perden les hores i automatitzem això, quasi sempre donant-nos suport en el correu, el WhatsApp o la fulla que ja uses. Si un programa tancat et resol el problema sense desenvolupament, te'l diem en l'estudi."
+        "q": "Quina diferència hi ha entre una consultoria d'IA i comprar un programa?",
+        "a": "Un programa et demana que treballes com ell treballa. Una consultoria d'IA part del teu flux: mirem on es perden les hores i automatitzem això, quasi sempre donant-nos suport en el correu, el WhatsApp o la fulla que ja uses. Si un programa tancat et resol el problema sense desenvolupament, te'l diem en l'estudi."
       },
       "agent": {
-        "q": "Què és un agent de IA?",
-        "a": "Un agent de IA no es limita a contestar: llig un missatge o un document, decideix el següent pas dins d'unes regles i actua (demana una dada, emplena un pressupost, avisa a una persona). Un chatbot només conversa. La persona continua confirmant el que compromet a l'empresa.",
-        "link": "Agents de IA per a empreses"
+        "q": "Què és un agent d'IA?",
+        "a": "Un agent d'IA no es limita a contestar: llig un missatge o un document, decideix el següent pas dins d'unes regles i actua (demana una dada, emplena un pressupost, avisa a una persona). Un chatbot només conversa. La persona continua confirmant el que compromet a l'empresa.",
+        "link": "Agents d'IA per a empreses"
       }
     }
   },
@@ -1063,7 +1063,7 @@ export const localeVa = {
       "p3": "El nostre treball està acabat quan ja no ens necessites. Et deixem codi net, documentació clara i un equip que entén el que hi ha construït i pot seguir sense nosaltres. Si més endavant vols que seguim al teu costat, serà perquè tu el decideixes, no perquè depens de nosaltres.",
       "navSoftware": "Consultoria de programari",
       "navContact": "Contacte",
-      "navIa": "Consultoria de IA"
+      "navIa": "Consultoria d'IA"
     },
     "pain": {
       "title": "Et sona?",
@@ -1296,7 +1296,7 @@ export const localeVa = {
     },
     "intro": {
       "p1": "En Bitdesal combinem desenvolupament Android en producció i consultoria de programari per a equips que necessiten qualitat mesurable, no prototips bonics. Treballem en Kotlin, Jetpack Compose, arquitectura modular, proves automàtiques i CI/CD amb estàndards d'apps que no poden fallar en producció.",
-      "p2": "Som un equip xicotet amb més de 20 anys en programari entre fundadors i col·laboradors. Ramiro Santamaría reforça operacions, seguretat i integració d'agents de IA on escurça el cicle sense substituir enginyeria."
+      "p2": "Som un equip xicotet amb més de 20 anys en programari entre fundadors i col·laboradors. Ramiro Santamaría reforça operacions, seguretat i integració d'agents d'IA on escurça el cicle sense substituir enginyeria."
     },
     "androidPromo": {
       "title": "Consultoria Android sènior",
@@ -1377,7 +1377,7 @@ export const localeVa = {
       "name": "Am'Art Vital Flow",
       "tag": "Web · Benestar",
       "updated": "2026",
-      "description": "Web en amartevitalflow.com per a acompanyament integratiu en Elche: naturopatía, Moviment Flow i tallers — Bitdesal la va dissenyar i va desenvolupar en Astro."
+      "description": "Web en amartevitalflow.com per a acompanyament integratiu en Elx: naturopatía, Moviment Flow i tallers — Bitdesal la va dissenyar i va desenvolupar en Astro."
     },
     "muixeranga": {
       "name": "Muixeranga d'Elx",
@@ -1573,7 +1573,7 @@ export const localeVa = {
       "tag": "WEB · CULTURA",
       "title": "Muixeranga d'Elx",
       "titleAccent": "Fer pinya també en internet",
-      "heroDescription": "La Muixeranga d'Elx és la colla de muixeranga més al sud del territori valencià: unes cinquanta persones, de bebés a jubilats, que assagen en el CEIP Clara Campoamor i porten les torres humanes pels carrers de Elche. La web no era només presència en internet: una eina per a explicar la tradició, atraure gent als assajos i projectar imatge seriosa davant ajuntaments, organitzadors i patrocinadors.",
+      "heroDescription": "La Muixeranga d'Elx és la colla de muixeranga més al sud del territori valencià: unes cinquanta persones, de bebés a jubilats, que assagen en el CEIP Clara Campoamor i porten les torres humanes pels carrers d'Elx. La web no era només presència en internet: una eina per a explicar la tradició, atraure gent als assajos i projectar imatge seriosa davant ajuntaments, organitzadors i patrocinadors.",
       "website": "Visitar muixerangadelx.com",
       "case": {
         "challenge": "El repte",
@@ -1581,8 +1581,8 @@ export const localeVa = {
         "result": "El resultat",
         "build": "Com s'ha fet",
         "roadmap": "El que ve",
-        "challengeText": "Quan la colla va encarregar la web a Bitdesal, l'objectiu anava més enllà de tindre una URL. Feia falta explicar què és una muixeranga a qui mai ha vist una, facilitar que la gent vinguera a provar als assajos i donar una imatge cuidada davant institucions i mitjans en una ciutat castellanoparlant i turística com Elche.",
-        "roleText": "muixerangadelx.com és la web oficial en valencià, castellà i anglés. Entre les colles amb web pròpia és una raresa: de les tretze del llistat, només una altra ofereix castellà i cap té anglés. Inclou portada amb el lema «Fem pinya com una tabala», pròxims esdeveniments i vídeo; història de la colla; agenda amb calendari filtrable i fitxa per esdeveniment; blog de cròniques en primera persona; pàgina Uneix-te amb FAQ; contacte amb formulari classificat; i documentació (autoritzacions, premsa). La identitat visual ix de l'escut de Elx — roig, groc i blau marí — amb fotos en filtre groc i maquetació usable en mòbil i escriptori.",
+        "challengeText": "Quan la colla va encarregar la web a Bitdesal, l'objectiu anava més enllà de tindre una URL. Feia falta explicar què és una muixeranga a qui mai ha vist una, facilitar que la gent vinguera a provar als assajos i donar una imatge cuidada davant institucions i mitjans en una ciutat castellanoparlant i turística com Elx.",
+        "roleText": "muixerangadelx.com és la web oficial en valencià, castellà i anglés. Entre les colles amb web pròpia és una raresa: de les tretze del llistat, només una altra ofereix castellà i cap té anglés. Inclou portada amb el lema «Fem pinya com una tabala», pròxims esdeveniments i vídeo; història de la colla; agenda amb calendari filtrable i fitxa per esdeveniment; blog de cròniques en primera persona; pàgina Uneix-te amb FAQ; contacte amb formulari classificat; i documentació (autoritzacions, premsa). La identitat visual ix de l'escut d'Elx — roig, groc i blau marí — amb fotos en filtre groc i maquetació usable en mòbil i escriptori.",
         "resultText": "A l'octubre de 2026, una auditoria va comparar la web amb les vint-i-cinc colles de la Federació en escriptori i mòbil. Conclusió: ja estava entre les tres o quatre millors del món muixeranguer, però orientada sobretot a qui coneixia la tradició. A partir d'ací el treball va prioritzar convertir visites en persones: Uneix-te enllaçada des de «Coneix-nos» i «Veuen a provar», formulari més simple, portada sense esdeveniments passats, jerarquia de títols per a cercadors i millores d'història — amb decisions compartides amb la colla (el lema es manté; les cròniques continuen sent personals perquè és el que més es comparteix).",
         "buildText": "La web està feta amb Astro: pàgines lleugeres i ràpides, importants quan el trànsit arriba des del mòbil després d'una actuació o un enllaç de WhatsApp. Els esdeveniments de l'agenda es carreguen des de Firebase, així la colla afig assajos i actuacions sense tocar codi. Bitdesal tracta el projecte com a viu: l'auditoria va generar un pla de trenta-dues millores ordenades per impacte i esforç, amb taula de seguiment.",
         "roadmapText": "Firebase cobreix bé els esdeveniments, però la colla gestiona molt més. Està planificada la migració a Tabala, backend propi en Kotlin amb Ktor i SQLite, part d'un projecte Kotlin Multiplatform on web i eines comparteixen models, allotjat en servidor propi per menys de 5 € al mes. L'accés seguirà en Firebase, només per invitació. Tabala reunirà membres, esdeveniments, figures, contractacions, inventari i documents; una app de gestió per a editar i la web Astro sol el públic. Privacitat per disseny: ningú apareix sense consentiment, els menors mai, i no es publiquen imports ni notes internes. En marxa: pàgines sobre la muixeranga i les figures (Campana, Retaule, Senyeta…), contractació d'actuacions, patrocini i traducció completa d'esdeveniments.",
@@ -1633,7 +1633,7 @@ export const localeVa = {
         },
         "i18n": {
           "title": "Tres idiomes",
-          "description": "Valencià, castellà i anglés: imprescindible en Elche i excepcional enfront de la resta de colles."
+          "description": "Valencià, castellà i anglés: imprescindible en Elx i excepcional enfront de la resta de colles."
         }
       },
       "playSection": {
@@ -1646,7 +1646,7 @@ export const localeVa = {
         "companyLabel": "Desenvolupament",
         "company": "Bitdesal",
         "countryLabel": "Client",
-        "country": "Muixeranga d'Elx · Elche"
+        "country": "Muixeranga d'Elx · Elx"
       },
       "cta": {
         "title": "Muntem la web de la teua entitat o projecte?",
@@ -1661,7 +1661,7 @@ export const localeVa = {
       "tag": "WEB · BENESTAR",
       "title": "Am'Art Vital Flow",
       "titleAccent": "Tornar a habitar-te",
-      "heroDescription": "Am'Art Vital Flow és la consulta de Alize en Elche: naturopatía, moviment conscient i tallers de benestar. La web explica els tres camins — comprendre, experimentar i expressar — i facilita el primer contacte sense perdre un to pròxim i calmat.",
+      "heroDescription": "Am'Art Vital Flow és la consulta de Alize en Elx: naturopatía, moviment conscient i tallers de benestar. La web explica els tres camins — comprendre, experimentar i expressar — i facilita el primer contacte sense perdre un to pròxim i calmat.",
       "website": "Visitar amartevitalflow.com",
       "case": {
         "challenge": "El repte",
@@ -1669,7 +1669,7 @@ export const localeVa = {
         "result": "El resultat",
         "challengeText": "Feia falta una presència digital que transmetera acompanyament integratiu de debò: no un llistat clínic ni una plantilla genèrica de «salut», sinó un lloc que convide a demanar cita, entendre naturopatía, Moviment Flow i tallers, i generar confiança abans de la primera trobada.",
         "roleText": "Bitdesal va dissenyar i va desenvolupar amartevitalflow.com en Astro: arquitectura multi-pàgina (inici, naturopatía, moviment, tallers, botiga i contacte), taujana terracota–sàlvia–crema, tipografies serif i sans, carrusel de testimoniatges, blocs editorials sobre hàbits i cos, navegació mòbil amb targetes desplegables i pàgines legals amb metadades per a cercadors.",
-        "resultText": "Lloc en producció que presenta les tres línies de servei amb copy alineat a l'enfocament de la consulta, testimoniatges de clientes, vies de contacte clares (correu, telèfon i ubicació en Elche) i maquetació usable en mòbil i escriptori.",
+        "resultText": "Lloc en producció que presenta les tres línies de servei amb copy alineat a l'enfocament de la consulta, testimoniatges de clientes, vies de contacte clares (correu, telèfon i ubicació en Elx) i maquetació usable en mòbil i escriptori.",
         "contactPrompt": "Contacte de la consulta:",
         "contactEmail": "info.amartevitalflow@gmail.com"
       },
@@ -1678,8 +1678,8 @@ export const localeVa = {
         "servicesLabel": "Línies · comprendre, experimentar, expressar",
         "pages": "6+",
         "pagesLabel": "Pàgines principals de servei",
-        "city": "Elche",
-        "cityLabel": "Alicante · consulta presencial",
+        "city": "Elx",
+        "cityLabel": "Alacant · consulta presencial",
         "year": "2026",
         "yearLabel": "En producció"
       },
@@ -1729,7 +1729,7 @@ export const localeVa = {
         "companyLabel": "Desenvolupament",
         "company": "Bitdesal",
         "countryLabel": "Client",
-        "country": "Am'Art Vital Flow · Elche"
+        "country": "Am'Art Vital Flow · Elx"
       },
       "cta": {
         "title": "Muntem la web de la teua consulta o projecte?",
@@ -1814,7 +1814,7 @@ export const localeVa = {
   },
   "notFound": {
     "code": "404",
-    "title": "Pàgina no oposada",
+    "title": "Pàgina no trobada",
     "description": "Ho sentim, la pàgina que busques no existeix o ha sigut moguda.",
     "home": "Anar a l'inici",
     "back": "Tornar arrere"

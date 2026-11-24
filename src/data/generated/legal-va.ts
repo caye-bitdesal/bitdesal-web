@@ -18,10 +18,10 @@ export const legalVa = {
               "Titular: Bitdesal S.L.",
               "Nom comercial: Bitdesal",
               "NIF: B23953029",
-              "Domicili: Partida Daimes 2146, Elche (Alicante), Espanya",
+              "Domicili: Partida Daimes 2146, Elx (Alacant), Espanya",
               "Correu electrònic: caye@bitdesal.com",
               "Lloc web: https://bitdesal.com",
-              "Inscrita en el Registre Mercantil de Alicante"
+              "Inscrita en el Registre Mercantil d'Alacant"
             ]
           }
         ]
@@ -113,7 +113,7 @@ export const legalVa = {
             "items": [
               "Responsable: Bitdesal S.L. (Bitdesal)",
               "NIF: B23953029",
-              "Domicili: Partida Daimes 2146, Elche (Alicante), Espanya",
+              "Domicili: Partida Daimes 2146, Elx (Alacant), Espanya",
               "Correu electrònic: caye@bitdesal.com"
             ]
           }
@@ -275,6 +275,6 @@ export const legalVa = {
       }
     ]
   },
-  "registry": "Inscrita en el Registre Mercantil de Alicante",
+  "registry": "Inscrita en el Registre Mercantil d'Alacant",
   "updated": "19 d'octubre de 2026"
 } as const;
