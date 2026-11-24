@@ -1,4 +1,6 @@
 ---
+import { useI18n } from '../i18n/useI18n';
+
 interface Props {
 	href: string;
 	label: string;
@@ -7,6 +9,15 @@ interface Props {
 }
 
 const { href, label, icon, external = false } = Astro.props;
+
+const { lang } = useI18n(Astro);
+
+const iconAlt: Record<string, Record<Props['icon'], string>> = {
+	es: { calendar: 'Icono de calendario', phone: 'Icono de teléfono', whatsapp: 'Icono de WhatsApp', email: 'Icono de correo electrónico' },
+	en: { calendar: 'Calendar icon', phone: 'Phone icon', whatsapp: 'WhatsApp icon', email: 'Email icon' },
+	fi: { calendar: 'Kalenterikuvake', phone: 'Puhelinkuvake', whatsapp: 'WhatsApp-kuvake', email: 'Sähköpostikuvake' },
+	va: { calendar: 'Icona de calendari', phone: 'Icona de telèfon', whatsapp: 'Icona de WhatsApp', email: 'Icona de correu electrònic' },
+};
 
 const iconImages: Record<Props['icon'], string> = {
 	calendar: '/contact-icons/contact-calendar.png',
@@ -29,7 +40,7 @@ const linkClass =
 		src={iconImages[icon]}
 		width={44}
 		height={44}
-		alt=""
+		alt={(iconAlt[lang] ?? iconAlt.es)[icon]}
 		class="h-11 w-11 shrink-0"
 		loading="lazy"
 		decoding="async"

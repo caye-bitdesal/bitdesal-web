@@ -120,7 +120,7 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 					src="/contact-icons/contact-sent.png"
 					width="100"
 					height="100"
-					alt=""
+					alt={({ es: 'Icono de mensaje enviado', en: 'Message sent icon', fi: 'Viesti lähetetty -kuvake', va: 'Icona de missatge enviat' } as Record<string, string>)[lang] ?? 'Icono de mensaje enviado'}
 					class="mx-auto mb-6 h-[100px] w-[100px]"
 					loading="lazy"
 					decoding="async"

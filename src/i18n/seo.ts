@@ -330,15 +330,17 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Contacto: agenda 30 minutos gratis con nosotros · Bitdesal',
 			description:
-				'Cuéntanos qué necesitas. Te respondemos en menos de 24 horas laborables. Elche · principalmente en remoto; planificación en Alicante; desplazamientos puntuales en España o la UE.',
+				'Contacta con Bitdesal: agenda 30 minutos gratis o escríbenos por WhatsApp o correo. Respondemos en 24 h laborables. Elche, Alicante, Valencia y Murcia.',
 		},
 		en: {
 			title: 'Contact us: book a free 30-minute call · Bitdesal',
-			description: 'Get in touch about your project. Remote across Europe.',
+			description:
+				'Contact Bitdesal: book a free 30-minute call or reach us by WhatsApp or email. We reply within one working day. Elche, Alicante, Valencia and Murcia.',
 		},
 		fi: {
 			title: 'Ota yhteyttä: varaa ilmainen 30 minuutin puhelu · Bitdesal',
-			description: 'Ota yhteyttä projektistasi.',
+			description:
+				'Ota yhteyttä Bitdesaliin: varaa ilmainen 30 minuutin puhelu, WhatsApp tai sähköposti. Vastaamme työpäivän kuluessa. Elche, Alicante, Valencia ja Murcia.',
 		},
 	},
 	legalNotice: {

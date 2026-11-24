@@ -74,7 +74,7 @@ export const seoVaByPage = {
   },
   "contact": {
     "title": "Contacte: agenda 30 minuts gratis amb nosaltres · Bitdesal",
-    "description": "Explica'ns què necessites. Et responem en menys de 24 hores laborables. Elx · principalment en remot; planificació en Alacant; desplaçaments puntuals a Espanya o la UE."
+    "description": "Contacta amb Bitdesal: agenda 30 minuts gratis o escriu-nos per WhatsApp o correu. Responem en 24 h laborables. Elx, Alacant, València i Múrcia."
   },
   "legalNotice": {
     "title": "Avís legal i condicions d'ús de bitdesal.com · Bitdesal",
