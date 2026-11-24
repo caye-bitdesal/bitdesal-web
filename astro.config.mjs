@@ -10,7 +10,7 @@ export default defineConfig({
 	trailingSlash: 'always',
 	i18n: {
 		defaultLocale: 'es',
-		locales: ['es', 'en', 'fi'],
+		locales: ['es', 'en', 'fi', 'va'],
 		routing: {
 			prefixDefaultLocale: false,
 		},
@@ -36,6 +36,7 @@ export default defineConfig({
 		'/automatizacion-pymes': '/consultoria-ia',
 		'/en/automatizacion-pymes': '/en/consultoria-ia',
 		'/fi/automatizacion-pymes': '/fi/consultoria-ia',
+		'/va/automatizacion-pymes': '/va/consultoria-ia',
 		'/blog/precio-cerrado-automatizacion-pyme': '/blog/precio-cerrado-automatizacion-empresa',
 		'/post-1': '/blog/',
 		'/blog-2': '/blog/',

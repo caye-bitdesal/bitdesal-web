@@ -20,6 +20,11 @@ export const authorBlurb: Record<Language, Record<BlogAuthorId, string>> = {
 		caye: 'Caye Ruiz on Bitdesalin perustaja sekä Android- ja tekoälykonsultti. Vuosina 2019–2025 hän oli Kivra Finlandin Lead Android.',
 		ramiro: 'Ramiro Santamaría on Bitdesalin osakas. Hän vastaa tekoälyautomaatiosta ja IT:stä.',
 	},
+	va: {
+		caye: 'Caye Ruiz és el fundador de Bitdesal i consultor Android i IA. Del 2019 al 2025 va ser Lead Android a Kivra Finlàndia.',
+		ramiro:
+			'Ramiro Santamaría és soci de Bitdesal. S\'ocupa de l\'automatització amb IA i de la part d\'IT.',
+	},
 };
 
 type Taggable = {
@@ -87,7 +92,7 @@ export function extractH2(markdown: string): { id: string; text: string }[] {
 export function relatedPosts<T extends Taggable>(current: T, all: T[], limit = 3): T[] {
 	const tags = new Set(current.data.tags ?? []);
 	return all
-		.filter((post) => post.id !== current.id && !/^(en|fi)\//.test(post.id))
+		.filter((post) => post.id !== current.id && !/^(en|fi|va)\//.test(post.id))
 		.map((post) => {
 			const shared = (post.data.tags ?? []).filter((tag) => tags.has(tag)).length;
 			const audience = post.data.audience === current.data.audience ? 2 : 0;
@@ -102,6 +107,7 @@ export function blogLocales(postId: string, ids: string[]): Language[] {
 	const locales: Language[] = ['es'];
 	if (ids.includes(`en/${postId}`)) locales.push('en');
 	if (ids.includes(`fi/${postId}`)) locales.push('fi');
+	if (ids.includes(`va/${postId}`)) locales.push('va');
 	return locales;
 }
 
@@ -115,7 +121,14 @@ export function buildBlogPosting(options: {
 	image: string;
 	lang: Language;
 }): JsonLdNode {
-	const inLanguage = options.lang === 'es' ? 'es-ES' : options.lang === 'fi' ? 'fi-FI' : 'en-US';
+	const inLanguage =
+		options.lang === 'es'
+			? 'es-ES'
+			: options.lang === 'fi'
+				? 'fi-FI'
+				: options.lang === 'va'
+					? 'ca-ES-valencia'
+					: 'en-US';
 	return {
 		'@type': 'BlogPosting',
 		'@id': `${options.url}#article`,

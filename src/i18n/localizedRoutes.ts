@@ -6,20 +6,24 @@ import { supportedLanguages, type Language } from './translations';
  * trailing slash (e.g. "aviso-legal", "legal-notice").
  */
 const SLUG_ALIASES: Record<string, Record<Language, string>> = {
-	'aviso-legal': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' },
-	'legal-notice': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' },
-	'oikeudellinen-ilmoitus': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' },
-	privacidad: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
-	privacy: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
-	tietosuoja: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
-	'casos-y-precios': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	'work-and-pricing': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	nosotros: { es: 'nosotros', en: 'about', fi: 'meista' },
-	about: { es: 'nosotros', en: 'about', fi: 'meista' },
-	meista: { es: 'nosotros', en: 'about', fi: 'meista' },
+	'aviso-legal': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	'legal-notice': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	'oikeudellinen-ilmoitus': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	'avis-legal': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	privacidad: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	privacy: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	tietosuoja: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	privacitat: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	'casos-y-precios': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	'work-and-pricing': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	'casos-i-preus': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
+	about: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
+	meista: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
+	nosaltres: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
 };
 
 /** Spanish articles that have no EN/FI file. Hreflang must not point at missing URLs. */
@@ -59,7 +63,7 @@ export function resolveLocalizedSlug(slug: string, lang: Language): string {
 
 export function stripLocalePrefix(pathname: string): { lang: Language; slug: string } {
 	const clean = pathname.replace(/\/$/, '') || '/';
-	const match = clean.match(/^\/(en|fi)(?=\/|$)/);
+	const match = clean.match(/^\/(en|fi|va)(?=\/|$)/);
 	if (match) {
 		return {
 			lang: match[1] as Language,
@@ -135,8 +139,8 @@ export function localizedPath(path: string, lang: Language): string {
 export function legalPath(page: 'notice' | 'privacy', lang: Language): string {
 	const slugs =
 		page === 'notice'
-			? { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' }
-			: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' };
+			? { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' }
+			: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' };
 	return localeHref(slugs[lang], lang);
 }
 
@@ -144,6 +148,7 @@ const HREFLANG_BCP47: Record<Language, string> = {
 	es: 'es-ES',
 	en: 'en-US',
 	fi: 'fi-FI',
+	va: 'ca-ES-valencia',
 };
 
 export function sitemapHreflangLinks(url: string): { url: string; lang: string }[] {

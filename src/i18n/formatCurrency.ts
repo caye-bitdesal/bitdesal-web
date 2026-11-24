@@ -4,12 +4,14 @@ const localeByLang: Record<Language, string> = {
 	es: 'es-ES',
 	en: 'en-GB',
 	fi: 'fi-FI',
+	va: 'ca-ES-valencia',
 };
 
 const vatSuffixByLang: Record<Language, string> = {
 	es: ' + IVA',
 	en: ' + VAT',
 	fi: ' + ALV',
+	va: ' + IVA',
 };
 
 export function currencyLocale(lang: Language): string {
@@ -22,7 +24,7 @@ export function vatSuffix(lang: Language): string {
 
 function formatEurAmount(amount: number, lang: Language): string {
 	// es-ES CLDR skips grouping below 10.000; the site requires "1.080 €".
-	if (lang === 'es') {
+	if (lang === 'es' || lang === 'va') {
 		const grouped = Math.round(amount)
 			.toString()
 			.replace(/\B(?=(\d{3})+(?!\d))/g, '.');

@@ -1,8 +1,8 @@
 import { getCollection } from 'astro:content';
 
-export async function blogStaticPaths(locale: 'es' | 'en' | 'fi' = 'es') {
+export async function blogStaticPaths(locale: 'es' | 'en' | 'fi' | 'va' = 'es') {
 	const posts = await getCollection('blog');
-	const spanish = posts.filter((post) => !/^(en|fi)\//.test(post.id));
+	const spanish = posts.filter((post) => !/^(en|fi|va)\//.test(post.id));
 	const visible =
 		locale === 'es'
 			? spanish

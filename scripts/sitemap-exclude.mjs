@@ -21,6 +21,6 @@ export const SITEMAP_EXCLUDE_PATHS = new Set([
 
 export function shouldIncludeInSitemap(pageUrl) {
 	const path = new URL(pageUrl).pathname.replace(/\/$/, '') || '/';
-	if (/^(\/(en|fi))?\/(pricing|projects|prices|precios)$/.test(path)) return false;
+	if (/^(\/(en|fi|va))?\/(pricing|projects|prices|precios)$/.test(path)) return false;
 	return !SITEMAP_EXCLUDE_PATHS.has(path);
 }

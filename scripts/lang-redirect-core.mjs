@@ -1,22 +1,26 @@
 /** Mirrors src/i18n/localizedRoutes.ts + langQueryRedirect.ts for Apache rule generation. */
 
-export const supportedLanguages = ['en', 'es', 'fi'];
+export const supportedLanguages = ['en', 'es', 'fi', 'va'];
 
 const SLUG_ALIASES = {
-	'aviso-legal': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' },
-	'legal-notice': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' },
-	'oikeudellinen-ilmoitus': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus' },
-	privacidad: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
-	privacy: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
-	tietosuoja: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja' },
-	'casos-y-precios': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	'work-and-pricing': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat' },
-	nosotros: { es: 'nosotros', en: 'about', fi: 'meista' },
-	about: { es: 'nosotros', en: 'about', fi: 'meista' },
-	meista: { es: 'nosotros', en: 'about', fi: 'meista' },
+	'aviso-legal': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	'legal-notice': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	'oikeudellinen-ilmoitus': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	'avis-legal': { es: 'aviso-legal', en: 'legal-notice', fi: 'oikeudellinen-ilmoitus', va: 'avis-legal' },
+	privacidad: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	privacy: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	tietosuoja: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	privacitat: { es: 'privacidad', en: 'privacy', fi: 'tietosuoja', va: 'privacitat' },
+	'casos-y-precios': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	'work-and-pricing': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	'referenssit-ja-hinnat': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	'casos-i-preus': { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	pricing: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	projects: { es: 'casos-y-precios', en: 'work-and-pricing', fi: 'referenssit-ja-hinnat', va: 'casos-i-preus' },
+	nosotros: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
+	about: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
+	meista: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
+	nosaltres: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
 };
 
 const LEGACY_SLUG_TARGETS = {
@@ -42,7 +46,7 @@ export function resolveLocalizedSlug(slug, lang) {
 
 export function stripLocalePrefix(pathname) {
 	const clean = pathname.replace(/\/$/, '') || '/';
-	const match = clean.match(/^\/(en|fi)(?=\/|$)/);
+	const match = clean.match(/^\/(en|fi|va)(?=\/|$)/);
 	if (match) {
 		return {
 			lang: match[1],

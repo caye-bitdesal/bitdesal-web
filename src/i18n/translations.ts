@@ -1,6 +1,6 @@
-export type Language = 'en' | 'es' | 'fi';
+export type Language = 'en' | 'es' | 'fi' | 'va';
 
-export const supportedLanguages: readonly Language[] = ['en', 'es', 'fi'] as const;
+export const supportedLanguages: readonly Language[] = ['en', 'es', 'fi', 'va'] as const;
 export const defaultLanguage: Language = 'es';
 
 /** Resolve a dot-separated key in a locale dictionary. */
@@ -37,6 +37,7 @@ import {
 import { iaPageExtra as iaPageExtraEs } from './content/ia-consulting.es';
 import { iaPageExtra as iaPageExtraEn } from './content/ia-consulting.en';
 import { iaPageExtra as iaPageExtraFi } from './content/ia-consulting.fi';
+import { localeVa } from './generated/locale-va';
 
 export const translations: Record<Language, any> = {
 	es: {
@@ -4283,5 +4284,6 @@ export const translations: Record<Language, any> = {
 			},
 		},
 	},
+	va: localeVa,
 };
 

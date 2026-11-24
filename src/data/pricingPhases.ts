@@ -12,6 +12,7 @@ const closedSuffix: Record<Language, string> = {
 	es: ' (precio cerrado)',
 	en: ' (fixed price)',
 	fi: ' (kiinteä hinta)',
+	va: ' (preu tancat)',
 };
 
 const phaseCopy = {

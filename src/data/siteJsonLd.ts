@@ -36,11 +36,13 @@ const ORG_DESCRIPTION: Record<Language, string> = {
 	es: 'Consultoría de inteligencia artificial y desarrollo de software con sede en Elche (Alicante). Automatiza presupuestos, citas, partes y papeleo para pymes de Elche, Alicante y el resto de España, con precio cerrado.',
 	en: 'AI consulting and software development company based in Elche (Alicante, Spain). Automates quotes, appointments, job reports and paperwork for SMEs, with fixed pricing.',
 	fi: 'Tekoälykonsultointia ja ohjelmistokehitystä Elchestä (Alicante, Espanja). Automatisoimme tarjoukset, ajanvaraukset ja paperityöt kiinteällä hinnalla.',
+	va: 'Consultoria d\'intel·ligència artificial i desenvolupament de programari des d\'Elx (Alacant). Automatitzem pressupostos, cites i paperam per a pimes amb preu tancat.',
 };
 
 function cayeJobTitle(lang: Language): string {
 	if (lang === 'en') return 'Founder and Android & AI consultant';
 	if (lang === 'fi') return 'Perustaja sekä Android- ja tekoälykonsultti';
+	if (lang === 'va') return 'Fundador i consultor Android i IA';
 	return 'Fundador y consultor Android e IA';
 }
 
@@ -133,7 +135,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		'@id': WEBSITE_ID,
 		name: 'Bitdesal',
 		url: SITE_ORIGIN,
-		inLanguage: ['es', 'en', 'fi'],
+		inLanguage: ['es', 'en', 'fi', 'va'],
 		publisher: { '@id': ORG_ID },
 	};
 
@@ -156,6 +158,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		es: 'Automatización con IA e IT',
 		en: 'AI automation and IT',
 		fi: 'Tekoälyautomaatio ja IT',
+		va: 'Automatització amb IA i IT',
 	};
 
 	const personRamiro: JsonLdNode = {

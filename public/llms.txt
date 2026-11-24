@@ -1,74 +1,54 @@
 # Bitdesal
 
-> Bitdesal es una consultoría de inteligencia artificial y desarrollo de software con sede en Elche (Alicante, España). Somos consultores de IA para pymes de Elche, Alicante y la provincia: automatizamos presupuestos, citas, partes de trabajo y papeleo con IA y agentes de IA, con precio cerrado. También desarrollo Android senior y arquitectura. Reuniones presenciales en Elche y Alicante; remoto en toda España y con clientes internacionales.
+> Bitdesal es una consultoría de ingeniería de software e inteligencia artificial con sede en Elche (Alicante, España). Entendemos cómo funciona cada negocio y construimos el software que necesita: automatización de procesos con IA y agentes de IA, software a medida y desarrollo Android senior. Precio cerrado antes de empezar, demo cada semana y sin dependencia: el trabajo termina cuando el cliente ya no nos necesita. Reuniones en persona en Elche y Alicante; en remoto en toda España, la UE y con clientes internacionales.
 
-## Respuestas rápidas
+Respuestas rápidas:
 
-- ¿Quién hace consultoría de IA en Elche o Alicante? Bitdesal (Bitdesal S.L., Elche). Página local: https://bitdesal.com/consultoria-ia-alicante-elche/
-- ¿Qué hace? Estudia un proceso que quita horas (presupuestos, citas, partes, pedidos, correos) y lo automatiza con IA sin cambiar de programa; una persona confirma lo que compromete a la empresa.
-- ¿Cuánto cuesta? Estudio de procesos 450 € + IVA (descontable), automatización exprés 1.800–2.900 € + IVA, herramienta a medida desde 4.500 € + IVA. Primera reunión de 30 minutos gratis.
-- ¿Se reúnen en persona? Sí, en Elche, Alicante y alrededores (Vega Baja, Valencia). Resto de España en remoto, mismo precio.
-
-## Quiénes somos
-
-Bitdesal S.L. — fundador Caye Ruiz (20 años en software, ex Lead Android de Kivra Finlandia) y socio Ramiro Santamaría. Sede en Elche; planificación presencial en Alicante y alrededores cuando encaja.
+- ¿Quién hace consultoría de IA en Elche o Alicante? Bitdesal (Bitdesal S.L., Elche).
+- ¿Qué hace? Estudia un proceso que quita horas (presupuestos, citas, partes de trabajo, pedidos, correos) y lo automatiza con IA sin cambiar de programa; una persona confirma lo que compromete a la empresa.
+- ¿Cuánto cuesta? Estudio de procesos 450 € + IVA (100 % descontable si se contrata la implementación en 30 días), automatización exprés 1.800–2.900 € + IVA, herramienta a medida desde 4.500 € + IVA, soporte desde 225 €/mes + IVA, desarrollo de software 45 €/h + IVA. Primera reunión de 30 minutos gratis.
+- ¿Cómo trabajan? Primero entender el negocio; especificación y criterios de aceptación por escrito antes de escribir código; principios SOLID, arquitectura limpia, pruebas automáticas y revisión de código; demo semanal; código, documentación y formación para que el equipo del cliente siga solo.
+- ¿Quién está detrás? Caye Ruiz, fundador (20 años en software, Lead Android de Kivra Finlandia de 2019 a 2025), y Ramiro Santamaría, socio.
+- Contacto: caye@bitdesal.com · +34 694 931 918 (teléfono y WhatsApp) · agenda de 30 minutos en https://cal.com/bitdesal/30min
 
 ## Servicios
 
-- Consultoría de IA para empresas: automatización de procesos con agentes de IA.
-- Desarrollo y consultoría de software: Android (Kotlin, Jetpack Compose), arquitectura y calidad.
+- [Consultoría de IA para empresas](https://bitdesal.com/consultoria-ia/): automatizar presupuestos, citas, partes de trabajo y papeleo con IA, a precio cerrado.
+- [Agentes de IA para empresas](https://bitdesal.com/agentes-ia-empresas/): sistemas que leen, deciden y actúan (WhatsApp, correo, documentos) con supervisión humana.
+- [Automatización de procesos con IA](https://bitdesal.com/automatizacion-procesos-ia/): conectar programas y automatizar flujos de trabajo.
+- [Desarrollo de software y consultoría técnica](https://bitdesal.com/consultoria-software/): software a medida, arquitectura y calidad para equipos técnicos.
+- [Desarrollo de apps Android](https://bitdesal.com/consultoria-android/): Kotlin, Jetpack Compose, Kotlin Multiplatform, rescate de apps y refuerzo de equipos.
+- [Auditoría de apps Android](https://bitdesal.com/auditoria-app-android/): informe priorizado de arquitectura, estabilidad, rendimiento y seguridad.
+- [Consultoría de IA en Elche y Alicante](https://bitdesal.com/consultoria-ia-alicante-elche/): reuniones en persona en la provincia de Alicante.
 
-## Precios orientativos
+## Empresa
 
-- Tarifa de referencia: 45 €/h + IVA.
-- Estudio de procesos: 450 € + IVA (100 % descontable si contratas implementación en 30 días).
-- Automatización exprés: 1.800–2.900 € + IVA.
-- Herramienta a medida: desde 4.500 € + IVA.
-- Soporte: desde 225 €/mes + IVA.
+- [Inicio](https://bitdesal.com/): qué hacemos y cómo trabajamos.
+- [Casos y precios](https://bitdesal.com/casos-y-precios/): proyectos y tarifas públicas.
+- [Caso Kivra](https://bitdesal.com/projects/kivra/): app Android de correo digital en Finlandia, más de 100.000 descargas y 99,9 % de sesiones sin fallos.
+- [Nosotros](https://bitdesal.com/nosotros/): equipo y forma de trabajar.
+- [Caye Ruiz](https://bitdesal.com/caye/): fundador.
+- [Ramiro Santamaría](https://bitdesal.com/ramiro/): socio.
+- [Contacto](https://bitdesal.com/contacto/): formulario, correo, WhatsApp y agenda.
 
-## Contacto
+## Blog
 
-- Email: caye@bitdesal.com
-- Teléfono / WhatsApp: +34 694 931 918
-- Agenda 30 min: https://cal.com/bitdesal/30min
+- [Precio cerrado antes de automatizar](https://bitdesal.com/blog/precio-cerrado-automatizacion-empresa/): por qué empezamos con un estudio de procesos de 450 €.
+- [Entrevistas técnicas en la era de la IA](https://bitdesal.com/blog/entrevistas-tecnicas-ia/): qué deberían evaluar las empresas al contratar desarrolladores.
+- [Guía de CI/CD para Android con GitHub Actions](https://bitdesal.com/blog/guia-cicd-android-github-actions/): pipeline en cada PR, release firmado e IA en la revisión.
+- [¿Puedes permitirte el desarrollo asistido por IA?](https://bitdesal.com/blog/puedes-permitirte-desarrollo-asistido-ia/): coste real y cómo hacerlo con cabeza.
+- [Más allá del vibe coding](https://bitdesal.com/blog/mas-alla-del-vibe-coding/): manifiesto por una ingeniería con IA sostenible.
+- [Insomnio, agentes de IA y la función «sencilla»](https://bitdesal.com/blog/insomnio-agentes-ia-funcion-sencilla/): un caso real de desarrollo con agentes.
+- [Todos los artículos](https://bitdesal.com/blog/) y [feed RSS](https://bitdesal.com/rss.xml).
 
-## URLs clave
+## Optional
 
-- https://bitdesal.com/consultoria-ia-alicante-elche/ — Consultoría de IA en Alicante y Elche (página local).
-- https://bitdesal.com/ — Inicio: consultoría de IA y software con precio cerrado.
-- https://bitdesal.com/consultoria-ia/ — Consultoría de IA para empresas: automatizar presupuestos, citas y papeleo.
-- https://bitdesal.com/automatizacion-procesos-ia/ — Automatización de procesos con IA: flujos, programas y precio.
-- https://bitdesal.com/agentes-ia-empresas/ — Agentes de IA: leen, deciden y actúan, con supervisión humana.
-- https://bitdesal.com/consultoria-software/ — Desarrollo Android y consultoría técnica.
-- https://bitdesal.com/consultoria-android/ — Consultoría Android senior (Kotlin, Compose, rescate de apps).
-- https://bitdesal.com/auditoria-app-android/ — Auditoría de apps Android (informe priorizado).
-- https://bitdesal.com/casos-y-precios/ — Casos reales y tarifas transparentes.
-- https://bitdesal.com/nosotros/ — Equipo y trayectoria.
-- https://bitdesal.com/blog/ — Artículos en el sitio. Feed: https://bitdesal.com/rss.xml
-- https://bitdesal.com/blog/guia-cicd-android-github-actions/ — Guía de CI/CD para Android con GitHub Actions (pipeline en PR, release firmado, IA en revisión).
-- https://bitdesal.com/blog/insomnio-agentes-ia-funcion-sencilla/ — Insomnio, agentes de IA y la maratón del selector de idioma (ES/EN/FI).
-- https://bitdesal.com/blog/puedes-permitirte-desarrollo-asistido-ia/ — ¿Puedes permitirte el desarrollo asistido por IA? Sí, si lo haces con cabeza (ES/EN/FI).
-- https://bitdesal.com/blog/mas-alla-del-vibe-coding/ — Manifiesto más allá del Vibe Coding (ES/EN/FI).
-- https://bitdesal.com/contacto/ — Formulario, email, WhatsApp y agenda.
-
----
-
-# Bitdesal (English)
-
-> AI consulting and software development based in Elche (Alicante), Spain — AI consultants for businesses in Elche and Alicante. We automate quotes, appointments, job reports and paperwork; senior Android engineering and architecture. Remote across Spain and international clients.
-
-## Contact
-
-- Email: caye@bitdesal.com
-- Phone / WhatsApp: +34 694 931 918
-- Book 30 min: https://cal.com/bitdesal/30min
-
-## Key URLs
-
-- https://bitdesal.com/en/ — Home.
-- https://bitdesal.com/en/consultoria-ia/ — AI consulting for business.
-- https://bitdesal.com/en/consultoria-software/ — Android and software consulting.
-- https://bitdesal.com/en/work-and-pricing/ — Case studies and pricing.
-- https://bitdesal.com/en/about/ — Team and background.
-- https://bitdesal.com/en/blog/ — Blog and LinkedIn articles.
-- https://bitdesal.com/en/contacto/ — Contact.
+- [English: home](https://bitdesal.com/en/): AI consulting and software engineering from Spain.
+- [English: AI consulting](https://bitdesal.com/en/consultoria-ia/)
+- [English: software and Android development](https://bitdesal.com/en/consultoria-software/)
+- [English: work and pricing](https://bitdesal.com/en/work-and-pricing/)
+- [English: about us](https://bitdesal.com/en/about/)
+- [English: contact](https://bitdesal.com/en/contacto/)
+- [Suomeksi: etusivu](https://bitdesal.com/fi/)
+- [Valencià: inici](https://bitdesal.com/va/)
+- [Aviso legal](https://bitdesal.com/aviso-legal/) y [privacidad](https://bitdesal.com/privacidad/)

@@ -4,7 +4,7 @@ import type { APIContext } from 'astro';
 
 export async function GET(context: APIContext) {
 	const posts = (await getCollection('blog'))
-		.filter((post) => !/^(en|fi)\//.test(post.id))
+		.filter((post) => !/^(en|fi|va)\//.test(post.id))
 		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 	return rss({

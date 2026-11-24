@@ -1,4 +1,5 @@
 import type { Language } from '../i18n/translations';
+import { legalVa } from './generated/legal-va';
 import {
 	CONTACT_EMAIL,
 	LEGAL_ADDRESS,
@@ -38,12 +39,14 @@ const REGISTRY: Record<Language, string> = {
 	es: LEGAL_REGISTRY_ES,
 	en: 'Registered with the Commercial Registry of Alicante',
 	fi: 'Merkitty Alicanten kaupparekisteriin',
+	va: 'Inscrita en el Registre Mercantil d\'Alacant',
 };
 
 const updated: Record<Language, string> = {
 	es: '19 de octubre de 2026',
 	en: '19 October 2026',
 	fi: '19. lokakuuta 2026',
+	va: '19 d\'octubre de 2026',
 };
 
 function dpaTodo(): LegalBlock {
@@ -54,6 +57,18 @@ function dpaTodo(): LegalBlock {
 }
 
 export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
+	if (lang === 'va') {
+		const doc = structuredClone(legalVa.notice) as LegalDoc;
+		for (const section of doc.sections) {
+			for (const block of section.blocks) {
+				if (block.type === 'p' && /<a href=/.test(block.html)) {
+					block.html = block.html.replace(/href="[^"]*"/, `href="${privacyHref}"`);
+				}
+			}
+		}
+		return doc;
+	}
+
 	if (lang === 'en') {
 		return {
 			title: 'Legal notice',
@@ -362,6 +377,10 @@ export function getLegalNotice(lang: Language, privacyHref: string): LegalDoc {
 }
 
 export function getPrivacyPolicy(lang: Language): LegalDoc {
+	if (lang === 'va') {
+		return legalVa.privacy as LegalDoc;
+	}
+
 	if (lang === 'en') {
 		return {
 			title: 'Privacy policy',

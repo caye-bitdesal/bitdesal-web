@@ -1,4 +1,5 @@
 import type { Language } from './translations';
+import { seoVaByPage } from './generated/seo-va';
 
 export type PageSeoId =
 	| 'home'
@@ -421,5 +422,6 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 };
 
 export function getPageSeo(page: PageSeoId, lang: Language): SeoEntry {
+	if (lang === 'va') return seoVaByPage[page] ?? seoVaByPage.home;
 	return seoByPage[page][lang] ?? seoByPage[page].es;
 }

@@ -28,4 +28,3 @@ Allow: /
 
 Sitemap: https://bitdesal.com/sitemap.xml
 Sitemap: https://bitdesal.com/sitemap-index.xml
-IndexNow: https://bitdesal.com/e5e52943ba694fa9937da7309b158052.txt

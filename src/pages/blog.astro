@@ -12,7 +12,7 @@ const { lang, t } = useI18n(Astro);
 
 const allPosts = await getCollection('blog');
 const localPosts = allPosts
-	.filter((post) => !/^(en|fi)\//.test(post.id))
+	.filter((post) => !/^(en|fi|va)\//.test(post.id))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 function localizedPost(post: (typeof localPosts)[number]) {
