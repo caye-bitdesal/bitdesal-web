@@ -2,25 +2,25 @@
 title: "Pots permetre't el desenvolupament assistit per IA? Sí, si ho fas amb cap"
 description: "Subscripcions, tokens i agents: quina costa de debò el desenvolupament assistit per IA i quan compensa. Flux real, sense números inventats del client."
 pubDate: 2026-06-01
-audience: business
-author: caye
-layout: feature
+audience: "business"
+author: "caye"
+layout: "feature"
 tags:
   - ia
   - desarrollo
-keyword: 'desarrollo asistido por IA'
-heroImage: /images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg
-ogImage: /images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg
-titleHighlight: 'Sí, si lo haces con cabeza'
-subtitle: 'La IA acelera el teclado, pero no elimina la factura. Antes de meterla en todo el equipo, conviene saber qué pagas y qué recuperas.'
+keyword: "desarrollo asistido por IA"
+heroImage: "/images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg"
+ogImage: "/images/blog/puedes-permitirte-desarrollo-asistido-ia/hero.jpg"
+titleHighlight: "Sí, si ho fas amb cap"
+subtitle: "La IA accelera el teclat, però no elimina la factura. Abans de ficar-la en tot l'equip, convé saber quines pagues i què recuperes."
 updatedDate: 2026-11-17
 faq:
-  - q: '¿Cuánto cuesta el desarrollo asistido por IA al mes?'
-    a: 'No hay una cifra fija: depende del nivel (autocompletado, chat o agentes), del contexto que envías y de cuántas iteraciones haces. Lo honesto es medir tokens y tiempo por encargo, no asumir una licencia plana.'
-  - q: '¿Compensa para una empresa que no es de software?'
-    a: 'Sí cuando el cuello de botella es especificar, repetir tareas o revisar; no cuando solo necesitas una herramienta que ya existe. Si dudas, un estudio de procesos cerrado aclara si automatizar ahorra horas de verdad.'
-  - q: '¿Se puede bajar el coste sin perder calidad?'
-    a: 'Sí: modelos locales para tareas rutinarias, modelos caros solo para lo complejo, criterios de aceptación por escrito y revisión automática en CI para no pagar iteraciones infinitas.'
+  - q: "Quant costa el desenvolupament assistit per IA al mes?"
+    a: "No hi ha una xifra fixa: depén del nivell (autocompletado, xat o agents), del context que envies i de quantes iteracions fas. L'honest és mesurar tokens i temps per encàrrec, no assumir una llicència plana."
+  - q: "Compensa per a una empresa que no és de programari?"
+    a: "Sí quan el coll de botella és especificar, repetir tasques o revisar; no quan només necessites una eina que ja existeix. Si dubtes, un estudi de processos tancat aclareix si automatitzar estalvia hores de debò."
+  - q: "Es pot baixar el cost sense perdre qualitat?"
+    a: "Sí: models locals per a tasques rutinàries, models cars solo per al complex, criteris d'acceptació per escrit i revisió automàtica en CI per a no pagar iteracions infinites."
 ---
 
 Poques converses són tan sinceres com aquesta: *sí, la IA pot escurçar terminis**, però també pot convertir en una despesa variable que ningú va pressupostar. La pregunta no és «funciona?», sinó *si pots permetre't** el flux complet: eines, tokens, revisions i el temps de qui supervisa.
@@ -70,7 +70,7 @@ Tres nivells que veiem en quasi tots els equips:
 </div>
 
 <div class="bf-highlight">
-  <strong>Nivell 3: agents.</strong> el model planifica, edita diversos arxius i torna a intentar. És on més es dispara la despesa i on més fa falta <a href="/blog/insomnio-agentes-ia-funcion-sencilla/">criteri de «fet»</a> per escrit.
+  <strong>Nivell 3: agents.</strong> el model planifica, edita diversos arxius i torna a intentar. És on més es dispara la despesa i on més fa falta <a href="/va/blog/insomnio-agentes-ia-funcion-sencilla/">criteri de «fet»</a> per escrit.
 </div>
 
 <h2 class="bf-section-heading">
@@ -127,7 +127,7 @@ Això no elimina el cost, maquinari, manteniment, temps de qui el configura, per
       <h2 class="bf-conclusion-heading">Sí, però amb regles</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Pots permetre't el desenvolupament assistit per IA si tries el nivell adequat per tasca, mesures la despesa i no confons velocitat de tecleig amb projecte acabat. Si necessites ajuda per a dissenyar aqueix equilibri en el teu equip, parlem en <a href="/consultoria-ia/">consultoria d'IA</a> o <a href="/casos-y-precios/">casos i preus</a>.</p>
+      <p>Pots permetre't el desenvolupament assistit per IA si tries el nivell adequat per tasca, mesures la despesa i no confons velocitat de tecleig amb projecte acabat. Si necessites ajuda per a dissenyar aqueix equilibri en el teu equip, parlem en <a href="/va/consultoria-ia/">consultoria d'IA</a> o <a href="/va/casos-i-preus/">casos i preus</a>.</p>
       <p>També està l'article <a href="https://www.linkedin.com/pulse/can-you-afford-your-ai-assisted-development-bitdesal-ubtpe/"> original en LinkedIn</a>.</p>
     </div>
   </div>

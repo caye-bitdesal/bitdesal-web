@@ -1,5 +1,6 @@
 ---
 import { educationTranslationPrefix, teamEducationByMember } from '../data/teamEducation';
+import { formatLocalizedMonthTokens } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const { memberId } = Astro.props;
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 
 const entries = teamEducationByMember[memberId] ?? [];
 const prefix = educationTranslationPrefix(memberId);
@@ -29,7 +30,9 @@ const titleKey = memberId === 'caye' ? `${prefix}.title` : `${prefix}.title`;
 						<div>
 							<h3 class="text-xl mb-1">{t(`${base}.degree`)}</h3>
 							{institution && !institution.startsWith('about.') && <p class="text-foreground/70 mb-1">{institution}</p>}
-							<p class="text-sm text-primary font-medium">{t(`${base}.dates`)}</p>
+							<p class="text-sm text-primary font-medium">
+								{formatLocalizedMonthTokens(t(`${base}.dates`), lang)}
+							</p>
 						</div>
 					);
 				})

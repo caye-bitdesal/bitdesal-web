@@ -4,9 +4,19 @@
  *
  * Usage: npx tsx scripts/generate-va-locale.mjs [--only=locale|seo|legal|blog]
  */
-import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+/** Post-Apertium fixes: `polishValencian` / `applyPhraseFixes` in `./va-polish.mjs`. */
+import { polishDeep, polishTranslationCache, polishValencian } from './va-polish.mjs';
+import {
+	escapeRiskySingleQuotedLines,
+	frontmatterKeyOrder,
+	parseFrontmatter,
+	resolveTitleHighlight,
+	serializeBlogFrontmatter,
+	splitMarkdownFile,
+} from './blog-frontmatter.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -65,12 +75,14 @@ let cache = {};
 if (existsSync(CACHE_PATH)) {
 	try {
 		cache = JSON.parse(readFileSync(CACHE_PATH, 'utf8'));
+		polishTranslationCache(cache);
 	} catch {
 		cache = {};
 	}
 }
 
 function saveCache() {
+	polishTranslationCache(cache);
 	writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 0));
 }
 
@@ -98,51 +110,6 @@ function cleanApertium(text) {
 	return text
 		.replace(/#([+\wÀ-ÿ])/gu, '$1')
 		.replace(/\*([A-Za-zÀ-ÿ])/gu, '$1');
-}
-
-/** Castilian → valencian toponyms and labels (longest matches first). */
-const TOPONYM_REPLACEMENTS = [
-	['Provincia de Alicante', "Província d'Alacant"],
-	['Registro Mercantil de Alicante', "Registre Mercantil d'Alacant"],
-	['Registre Mercantil de Alicante', "Registre Mercantil d'Alacant"],
-	['Comunidad Valenciana', 'Comunitat Valenciana'],
-	['País Valenciano', 'País Valencià'],
-	['Estados Unidos', 'Estats Units'],
-	['Alicante', 'Alacant'],
-	['Elche', 'Elx'],
-	['Finlandia', 'Finlàndia'],
-	['Suiza', 'Suïssa'],
-	['Suecia', 'Suècia'],
-	['Australia', 'Austràlia'],
-	['España', 'Espanya'],
-];
-
-/** Manual fixes after machine translation (normes valencianes). */
-export function polishValencian(text) {
-	if (typeof text !== 'string') return text;
-	let out = text
-		.replace(/Pàgina no oposada/g, 'Pàgina no trobada')
-		.replace(/Case Regals/g, 'Cas Regals')
-		.replace(/\bde IA\b/g, "d'IA");
-	for (const [from, to] of TOPONYM_REPLACEMENTS) {
-		out = out.split(from).join(to);
-	}
-	return out
-		.replace(/\bdes de Elx\b/g, "des d'Elx")
-		.replace(/\bdes de Alacant\b/g, "des d'Alacant")
-		.replace(/\bde Elx\b/g, "d'Elx")
-		.replace(/\bde Alacant\b/g, "d'Alacant")
-		.replace(/\bentorn de Alacant\b/g, "entorn d'Alacant")
-		.replace(/\bregistre d'Alacant\b/gi, "Registre Mercantil d'Alacant");
-}
-
-function polishDeep(value) {
-	if (typeof value === 'string') return polishValencian(value);
-	if (Array.isArray(value)) return value.map(polishDeep);
-	if (value && typeof value === 'object') {
-		return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, polishDeep(v)]));
-	}
-	return value;
 }
 
 function escapeRe(s) {
@@ -281,44 +248,99 @@ async function main() {
 	}
 
 	if (only === 'all' || only === 'blog') {
-		console.log('Translating blog posts (markdown body only)...');
-		const { readdirSync } = await import('node:fs');
+		console.log('Translating blog posts (frontmatter + body)...');
 		const blogDir = join(ROOT, 'src/content/blog');
 		const posts = readdirSync(blogDir).filter((f) => f.endsWith('.md'));
 		mkdirSync(join(ROOT, 'src/content/blog/va'), { recursive: true });
+		const blogReport = [];
+		const warnings = [];
+
+		async function translateVaField(text) {
+			return polishValencian(await translateOne(text));
+		}
+
 		for (const file of posts) {
 			const raw = readFileSync(join(blogDir, file), 'utf8');
-			const fmMatch = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-			if (!fmMatch) continue;
-			const front = fmMatch[1];
-			const body = fmMatch[2];
-			let newFront = front;
-			const titleM = front.match(/^title:\s*["']?(.+?)["']?\s*$/m);
-			const descM = front.match(/^description:\s*["']?(.+?)["']?\s*$/m);
-			if (titleM) {
-				const t = await translateOne(titleM[1]);
-				newFront = newFront.replace(titleM[0], `title: ${JSON.stringify(t)}`);
+			const parts = splitMarkdownFile(raw);
+			if (!parts) {
+				warnings.push(`${file}: skipped (no frontmatter)`);
+				continue;
 			}
-			if (descM) {
-				const d = await translateOne(descM[1]);
-				newFront = newFront.replace(descM[0], `description: ${JSON.stringify(d)}`);
+			const esFm = parseFrontmatter(parts.frontText);
+			const keyOrder = frontmatterKeyOrder(parts.frontText);
+			const vaFm = structuredClone(esFm);
+			const translated = { title: false, description: false, subtitle: false, titleHighlight: false, faq: 0 };
+
+			if (esFm.title) {
+				vaFm.title = await translateVaField(esFm.title);
+				translated.title = true;
 			}
-			const paras = body.split(/\n\n+/);
+			if (esFm.description) {
+				vaFm.description = await translateVaField(esFm.description);
+				translated.description = true;
+			}
+			if (esFm.subtitle) {
+				vaFm.subtitle = await translateVaField(esFm.subtitle);
+				translated.subtitle = true;
+			}
+			if (esFm.titleHighlight) {
+				const candidate = await translateVaField(esFm.titleHighlight);
+				const { highlight, warning } = resolveTitleHighlight(
+					vaFm.title,
+					candidate,
+					esFm.title,
+					esFm.titleHighlight,
+					file,
+				);
+				if (warning) warnings.push(warning);
+				vaFm.titleHighlight = highlight;
+				translated.titleHighlight = true;
+			}
+			if (Array.isArray(esFm.faq) && esFm.faq.length) {
+				vaFm.faq = await mapPool(esFm.faq, async (item) => ({
+					q: await translateVaField(item.q),
+					a: await translateVaField(item.a),
+				}));
+				translated.faq = esFm.faq.length;
+			}
+
+			let frontBlock = serializeBlogFrontmatter(vaFm, keyOrder);
+			const frontText = frontBlock.slice(4, -4);
+			frontBlock = `---\n${escapeRiskySingleQuotedLines(frontText)}\n---`;
+
+			const paras = parts.body.split(/\n\n+/);
 			const translatedParas = await mapPool(paras, async (p) => {
 				if (!p.trim()) return p;
 				if (p.startsWith('#') || p.startsWith('![') || p.startsWith('```') || p.startsWith('|')) return p;
 				const hrefs = [...p.matchAll(/\]\(\/[^)]+\)/g)].map((m) => m[0]);
-				let translated = await translateOne(p);
+				let para = await translateVaField(p);
 				for (const href of hrefs) {
 					const originalPath = href.match(/\(\/[^)]+\)/)?.[0];
 					if (!originalPath) continue;
-					translated = translated.replace(/\(\/[^)]+\)/, originalPath);
+					para = para.replace(/\(\/[^)]+\)/, originalPath);
 				}
-				return translated;
+				return para;
 			});
-			const out = `---\n${newFront}\n---\n\n${translatedParas.join('\n\n')}`;
-			writeFileSync(join(blogDir, 'va', file), out);
+
+			writeFileSync(join(blogDir, 'va', file), `${frontBlock}\n\n${translatedParas.join('\n\n')}`);
+			blogReport.push({ file, translated });
 			console.log('  blog', file);
+		}
+
+		console.log('\nBlog VA translation report:');
+		for (const { file, translated } of blogReport) {
+			const fields = [
+				translated.title && 'title',
+				translated.description && 'description',
+				translated.subtitle && 'subtitle',
+				translated.titleHighlight && 'titleHighlight',
+				translated.faq && `faq(${translated.faq})`,
+			].filter(Boolean);
+			console.log(`  ${file}: ${fields.join(', ') || '(none)'}`);
+		}
+		if (warnings.length) {
+			console.log('\nBlog titleHighlight warnings:');
+			for (const w of warnings) console.log(`  - ${w}`);
 		}
 	}
 

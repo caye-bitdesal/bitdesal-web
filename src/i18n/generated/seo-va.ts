@@ -58,7 +58,7 @@ export const seoVaByPage = {
   },
   "projectAmarteVitalFlow": {
     "title": "Cas Am'Art Vital Flow: web de benestar · Bitdesal",
-    "description": "Lloc en Astro per a acompanyament integratiu en Elx: naturopatía, Moviment Flow, tallers i contacte — identitat càlida terracota i sàlvia."
+    "description": "Lloc en Astro per a acompanyament integratiu en Elx: naturopatia, Moviment Flow, tallers i contacte — identitat càlida terracota i sàlvia."
   },
   "projectRegalosKawaii": {
     "title": "Cas Regals Kawaii: catàleg web amb EmDash · Bitdesal",

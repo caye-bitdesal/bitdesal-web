@@ -9,6 +9,7 @@ import {
 	CONTACT_WHATSAPP_DISPLAY,
 	WHATSAPP_URL,
 } from '../data/siteConstants';
+import { sitePath } from '../data/siteNav';
 import { legalPath } from '../i18n/localizedRoutes';
 import { useI18n } from '../i18n/useI18n';
 
@@ -30,8 +31,11 @@ const defaultTopic = tipo === 'software' || tipo === 'consultoria' ? 'software' 
 			<h1 class="text-3xl md:text-4xl mb-4">{t('contact.title')}</h1>
 			<p class="text-lg text-foreground/80 mb-4">{t('contact.lead')}</p>
 			<p class="text-base text-foreground/80 mb-10">
-				<a href="/consultoria-ia-alicante-elche/" class="text-primary font-medium hover:underline">
-					Consultoría de IA en Elche y Alicante
+				<a
+					href={sitePath('/consultoria-ia-alicante-elche', lang)}
+					class="text-primary font-medium hover:underline"
+				>
+					{t('footer.localIaLink')}
 				</a>
 			</p>
 

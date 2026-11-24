@@ -18,6 +18,57 @@ export function currencyLocale(lang: Language): string {
 	return localeByLang[lang] ?? 'es-ES';
 }
 
+/** Blog dates: Valencian pages use Catalan month names (set., gen., …). */
+export function blogDateLocale(lang: Language): string {
+	if (lang === 'va') return 'ca-ES';
+	return currencyLocale(lang);
+}
+
+/** Short display label from ISO date (e.g. «7 de set. 2026» for VA). */
+export function formatBlogDateShort(isoDate: string, lang: Language): string {
+	const d = new Date(`${isoDate}T12:00:00`);
+	return d.toLocaleDateString(blogDateLocale(lang), {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	});
+}
+
+const ES_STYLE_MONTH: Record<string, number> = {
+	ene: 0,
+	ena: 0,
+	feb: 1,
+	mar: 2,
+	abr: 3,
+	may: 4,
+	jun: 5,
+	jul: 6,
+	ago: 7,
+	sep: 8,
+	set: 8,
+	oct: 9,
+	nov: 10,
+	dic: 11,
+	des: 11,
+};
+
+/**
+ * Reformat career / education date strings that still use Spanish month abbreviations
+ * (e.g. «may 2019 – sep 2025») into `ca-ES` month labels for Valencian.
+ */
+export function formatLocalizedMonthTokens(text: string, lang: Language): string {
+	if (lang !== 'va' || !text) return text;
+	return text.replace(/\b([a-z]{3})\.?\s+(\d{4})\b/gi, (match, mon, year) => {
+		const idx = ES_STYLE_MONTH[mon.toLowerCase()];
+		if (idx === undefined) return match;
+		const d = new Date(Number(year), idx, 15);
+		return d
+			.toLocaleDateString('ca-ES', { month: 'short', year: 'numeric' })
+			.replace(/\s+de\s+/g, ' ')
+			.trim();
+	});
+}
+
 export function vatSuffix(lang: Language): string {
 	return vatSuffixByLang[lang] ?? vatSuffixByLang.es;
 }

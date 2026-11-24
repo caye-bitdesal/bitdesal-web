@@ -16,7 +16,7 @@ import {
 	wordCount,
 	type BlogAuthorId,
 } from '../data/blogPost';
-import { currencyLocale } from '../i18n/formatCurrency';
+import { blogDateLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
@@ -41,13 +41,13 @@ const authorId = (localized.data.author ?? 'caye') as BlogAuthorId;
 const author = getTeamMember(authorId);
 const published = localized.data.pubDate;
 const modified = localized.data.updatedDate;
-const dateLabel = published.toLocaleDateString(currencyLocale(lang), {
+const dateLabel = published.toLocaleDateString(blogDateLocale(lang), {
 	year: 'numeric',
 	month: 'long',
 	day: 'numeric',
 });
 const updatedLabel = modified
-	? modified.toLocaleDateString(currencyLocale(lang), { year: 'numeric', month: 'long', day: 'numeric' })
+	? modified.toLocaleDateString(blogDateLocale(lang), { year: 'numeric', month: 'long', day: 'numeric' })
 	: '';
 
 const articlePath = sitePath(`/blog/${post.id}`, lang);

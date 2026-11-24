@@ -21,7 +21,7 @@ export const localeVa = {
       },
       "independence": {
         "title": "Sense dependència",
-        "description": "Et deixem el codi, la documentació i al teu equip format."
+        "description": "Et deixem el codi, la documentació i el teu equip formatat."
       },
       "ai": {
         "title": "IA on estalvia, no on llueix",
@@ -103,13 +103,13 @@ export const localeVa = {
         },
         "handoff": {
           "title": "Formació i suport",
-          "description": "Formem al teu equip i, si vols, seguim amb bosses d'hores mensuals."
+          "description": "Formem el teu equip i, si vols, seguim amb bosses d'hores mensuals."
         }
       }
     },
     "behind": {
       "title": "Qui està darrere",
-      "text": "Som un equip d'enginyers amb experiència en cinc països: Espanya, Suïssa, Finlàndia, els Estats Units i Austràlia. Caye Ruiz, fundador, va liderar durant 7 anys l'app Android de Kivra, usada per centenars de milers de persones. Ramiro Santamaría combina desenvolupament d'apps, operacions de IT i orquestració d'agents d'IA. Hui treballem amb empreses que volen tecnologia que funcione, sense complicacions."
+      "text": "Som un equip d'enginyers amb experiència en cinc països: Espanya, Suïssa, Finlàndia, els Estats Units i Austràlia. Caye Ruiz, fundador, va liderar durant 7 anys l'app Android de Kivra, usada per centenars de milers de persones. Ramiro Santamaría combina desenvolupament d'apps, operacions d'IT i orquestració d'agents d'IA. Hui treballem amb empreses que volen tecnologia que funcione, sense complicacions."
     },
     "logos": {
       "title": "Experiència en empreses com"
@@ -122,7 +122,7 @@ export const localeVa = {
           "a": "Una automatització concreta, 2–3 setmanes. Una eina a mesura, d'1 a 3 mesos."
         },
         "tools": {
-          "q": "He de canviar els programes que ja ús?",
+          "q": "He de canviar els programes que ja use?",
           "a": "No necessàriament. Sempre que es pot, connectem el nou amb el que ja tens."
         },
         "worth": {
@@ -216,10 +216,10 @@ export const localeVa = {
       "agent4": "Refactors guiats, documentació i QA assistits"
     },
     "mentorship": {
-      "title": "Mentoría Tècnica",
+      "title": "Mentoria Tècnica",
       "description": "Formació personalitzada per a desenvolupadors i equips que volen portar les seues habilitats al següent nivell.",
       "programsTitle": "Programes disponibles",
-      "program1": "Mentoría 1:1 personalitzada",
+      "program1": "Mentoria 1:1 personalitzada",
       "program2": "Formació d'equips Android",
       "program3": "Code reviews i pair programming",
       "program4": "Workshops tècnics especialitzats",
@@ -267,7 +267,7 @@ export const localeVa = {
       "ramiro": {
         "name": "Ramiro Santamaría",
         "title": "Automatització amb IA i IT",
-        "bio": "Informàtic amb experiència a Espanya, els Estats Units i Austràlia, en desenvolupament d'apps mòbils, web i en operacions de IT i seguretat de xarxes. S'ha especialitzat en l'orquestració d'agents d'IA."
+        "bio": "Informàtic amb experiència a Espanya, els Estats Units i Austràlia, en desenvolupament d'apps mòbils, web i en operacions d'IT i seguretat de xarxes. S'ha especialitzat en l'orquestració d'agents d'IA."
       }
     },
     "hero": {
@@ -517,7 +517,7 @@ export const localeVa = {
         "description": "Fluxos de prototipado, specs, scaffolding, review i documentació."
       },
       "mentoring": {
-        "title": "Mentoría i lideratge",
+        "title": "Mentoria i lideratge",
         "description": "Escalat d'equips i coaching de més de 30 desenvolupadors."
       }
     },
@@ -544,7 +544,7 @@ export const localeVa = {
     },
     "remoteFirst": {
       "title": "Principalment en remot",
-      "description": "Treballem principalment en remot, amb documentació clara, revisions amb tu cada setmana i les eines que ja usa el teu equip. Atenem clients en tota Espanya i internacionalment. Si estàs a l'entorn d'Alacant, podem acostar-nos per a la reunió de planificació. Per a moments importants del projecte, també ens desplacem puntualment a la resta d'Espanya o a la UE.",
+      "description": "Treballem principalment en remot, amb documentació clara, revisions amb tu cada setmana i les eines que ja utilitza el teu equip. Atenem clients en tota Espanya i internacionalment. Si estàs a l'entorn d'Alacant, podem acostar-nos per a la reunió de planificació. Per a moments importants del projecte, també ens desplacem puntualment a la resta d'Espanya o a la UE.",
       "async": {
         "title": "Comunicació Asíncrona",
         "description": "Documentació exhaustiva i updates regulars per a mantindre a tots alineats sense dependre de reunions constants."
@@ -690,7 +690,7 @@ export const localeVa = {
     "softwareService": "Desenvolupament i consultoria de programari",
     "androidDev": "Desenvolupament Android",
     "ai": "Intel·ligència Artificial",
-    "mentorship": "Mentoría",
+    "mentorship": "Mentoria",
     "consulting": "Consultoria",
     "companyTitle": "Empresa",
     "aboutUs": "Moatros",
@@ -700,7 +700,9 @@ export const localeVa = {
     "blog": "Blog",
     "projects": "Projectes",
     "contactTitle": "Contacte",
-    "location": "Elx · Comunitat Valenciana",
+    "location": "Elx · País Valencià",
+    "officeLine": "Bitdesal · Elx (Alacant)",
+    "localIaLink": "Consultoria d'IA a Elx i Alacant",
     "linkedin": "LinkedIn",
     "rights": "Tots els drets reservats.",
     "legalNotice": "Avís legal",
@@ -725,7 +727,7 @@ export const localeVa = {
     "alternatives": "O si prefereixes:",
     "book": "Agenda 30 min gratis",
     "whatsapp": "WhatsApp",
-    "location": "Elx · Comunitat Valenciana · Principalment en remot; planificació presencial en Alacant i voltants; desplaçaments puntuals a la resta d'Espanya o la UE",
+    "location": "Elx · País Valencià · Principalment en remot; planificació presencial en Alacant i voltants; desplaçaments puntuals a la resta d'Espanya o la UE",
     "consentBefore": "He llegit la",
     "privacyPolicy": "política de privacitat",
     "consentAfter": "i accepte que tracteu les meues dades per a respondre a la meua sol·licitud.",
@@ -840,7 +842,7 @@ export const localeVa = {
       },
       "connect": {
         "title": "Digitalitzar i connectar la IA",
-        "description": "Convertim aqueix procés en programari i col·loquem la IA on lleva repetició, dins de les eines que l'equip ja usa."
+        "description": "Convertim aqueix procés en programari i col·loquem la IA on lleva repetició, dins de les eines que l'equip ja utilitza."
       },
       "operate": {
         "title": "Deixar-ho en el dia a dia",
@@ -929,16 +931,16 @@ export const localeVa = {
           "solution": "Tot queda registrat en un sol lloc, i el trobes quan el necessites."
         },
         "appointments": {
-          "problem": "Se m'obliden cites o no retorne anomenades",
+          "problem": "Se m'obliden cites o no torne les telefonades",
           "solution": "Agenda amb recordatoris automàtics i avís de cada trucada perduda."
         },
         "quotes": {
-          "problem": "Mane pressupostos i no sé qui ha contestat",
+          "problem": "Envie pressupostos i no sé qui ha contestat",
           "solution": "Seguiment automàtic: el sistema els recorda i t'avisa."
         },
         "forms": {
-          "problem": "Els comunicats de treball arriben en paper, o no arriben",
-          "solution": "El comunicat s'emplena en el mòbil, amb fotos i signatura, i arriba directe a l'oficina."
+          "problem": "Els parts de treball arriben en paper, o no arriben",
+          "solution": "El part s'emplena en el mòbil, amb fotos i signatura, i arriba directe a l'oficina."
         },
         "copy": {
           "problem": "Copie les mateixes dades d'un programa a un altre",
@@ -956,7 +958,7 @@ export const localeVa = {
       "express": "Automatització expressa — 1.800–2.900 € + IVA · 2–3 setmanes.",
       "custom": "Eina a mesura — des de 4.500 € + IVA.",
       "support": "Suport — des de 225 €/mes + IVA, sense permanència.",
-      "details": "Veure preus detalladament"
+      "details": "Veure preus en detall"
     },
     "faq": {
       "security": {
@@ -971,35 +973,35 @@ export const localeVa = {
     "intro": {
       "p1": "Som una consultoria d'intel·ligència artificial per a empreses. Si el dia se't va en pressupostos, cites, parts i papers que salten del WhatsApp a l'Excel, t'ajudem a automatitzar aqueix treball amb IA i a deixar l'abast per escrit, amb un preu tancat abans de construir res.",
       "p2": "Una consultoria d'IA no és un curs ni un programa que compres i t'apanyes. Estudiem com treballeu de debò, decidim què val la pena automatitzar i què no, i ho deixem funcionant amb les eines que ja useu. L'objectiu és que recuperes hores cada setmana, no que tingues un pilot que ningú obri.",
-      "p3": "Treballem sobretot amb oficis i instal·ladors —qui mesura, pressuposada, cita i tanca el comunicat en la furgoneta—, i amb qualsevol empresa en la qual la mateixa dada es copia a mà diverses vegades. La seu està en Elx i el treball del dia a dia és en remot en tota Espanya."
+      "p3": "Treballem sobretot amb oficis i instal·ladors —qui mesura, fa el pressupost, cita i tanca el part en la furgoneta—, i amb qualsevol empresa en la qual la mateixa dada es copia a mà diverses vegades. La seu està en Elx i el treball del dia a dia és en remot en tota Espanya."
     },
     "automate": {
       "title": "Què automatitzem amb IA",
-      "lead": "No automatitzem «l'empresa» en abstracte. Triem un flux que ja dol, el mesurem i el deixem caminant. Aquests són els processos amb els quals comencem quasi sempre.",
+      "lead": "No automatitzem «l'empresa» en abstracte. Triem un flux que ja fa mal, el mesurem i el deixem funcionant. Aquests són els processos amb els quals comencem quasi sempre.",
       "items": {
         "quotes": {
           "title": "Pressupostos",
-          "body": "El pressupost ix d'una nota de veu, de les mesures del comunicat o d'una plantilla amb els teus preus, no d'una nit davant de l'Excel. La IA emplena el format que ja envies al client i et deixa revisar l'import abans de manar-lo. Si el marge o una partida no quadren, el parisques tu: no ix res sense el teu vistiplau.",
+          "body": "El pressupost ix d'una nota de veu, de les mesures del part o d'una plantilla amb els teus preus, no d'una nit davant de l'Excel. La IA emplena el format que ja envies al client i et deixa revisar l'import abans d'enviar-lo. Si el marge o una partida no quadren, l'atures tu: no ix res sense el teu vistiplau.",
           "link": "Automatització de pressupostos amb IA"
         },
         "followup": {
           "title": "Seguiment de pressupostos",
-          "body": "Manar el pressupost i oblidar-te és la forma més cara de perdre una obra. El seguiment avisa al cap dels dies que tu marques, registra qui ha contestat i et deixa la safata només amb els quals continuen oberts. No és un CRM que hages d'alimentar: enganxa el correu o el WhatsApp que ja uses.",
+          "body": "Enviar el pressupost i oblidar-te és la forma més cara de perdre una obra. El seguiment avisa al cap dels dies que tu marques, registra qui ha contestat i et deixa la safata només amb els quals continuen oberts. No és un CRM que hages d'alimentar: es connecta al correu o al WhatsApp que ja uses.",
           "link": "Seguiment automàtic de pressupostos"
         },
         "appointments": {
           "title": "Cites i recordatoris",
-          "body": "Una cita que no està en un sol lloc s'oblida, i una visita en buit es menja el matí. Centralitzem l'agenda, el recordatori al client i l'avís si no contesta o si flama fora d'hora. Tu continues decidint quan et desplaces; el sistema només evita que es perda el buit.",
+          "body": "Una cita que no està en un sol lloc s'oblida, i una visita en buit es menja el matí. Centralitzem l'agenda, el recordatori al client i l'avís si no contesta o si telefona fora d'hota. Tu continues decidint quan et desplaces; el sistema només evita que es perda el buit.",
           "link": "Automatitzar cites i recordatoris"
         },
         "jobs": {
           "title": "Parts de treball",
-          "body": "El comunicat en paper arriba tard, il·legible o no arriba. Ho passem al mòbil: fotos, signatura i les dades que l'oficina necessita per a facturar o per a demanar material. Qui està en l'obra no farcida un informe; tanca el treball en dos minuts i l'oficina el veu al moment.",
+          "body": "El part en paper arriba tard, il·legible o no arriba. Ho passem al mòbil: fotos, signatura i les dades que l'oficina necessita per a facturar o per a demanar material. Qui està en l'obra no emplena un informe; tanca el treball en dos minuts i l'oficina el veu al moment.",
           "link": "Parts de treball sense paper"
         },
         "orders": {
           "title": "Comandes a proveïdor",
-          "body": "La comanda s'arma amb el que ja està en el pressupost o en el comunicat, no copiant referències a mà. La IA proposa la comanda amb els teus proveïdors habituals i una persona el confirma abans d'enviar-lo. Així es redueix el material que falta el dia del muntatge i el que sobra en la furgoneta.",
+          "body": "La comanda s'arma amb el que ja està en el pressupost o en el part, no copiant referències a mà. La IA proposa la comanda amb els teus proveïdors habituals i una persona el confirma abans d'enviar-lo. Així es redueix el material que falta el dia del muntatge i el que sobra en la furgoneta.",
           "link": "Comandes a proveïdor des del pressupost"
         },
         "invoices": {
@@ -1009,7 +1011,7 @@ export const localeVa = {
         },
         "whatsapp": {
           "title": "Atenció per WhatsApp",
-          "body": "El WhatsApp de l'empresa mescla clients nous, «m'ho mires?» i encàrrecs a mig fer. Un agent d'IA pot respondre el repetit, demanar les dades que falten (mesures, direcció, fotos) i deixar-te la conversa llista per a pressupostar. El que no sap, o el que implica un compromís, te'l passa a tu.",
+          "body": "El WhatsApp de l'empresa mescla clients nous, «m'ho mires?» i encàrrecs a mig fer. Un agent d'IA pot respondre el repetit, demanar les dades que falten (mesures, direcció, fotos) i deixar-te la conversa a punt per a pressupostar. El que no sap, o el que implica un compromís, te'l passa a tu.",
           "link": "Agents d'IA per a WhatsApp"
         }
       }
@@ -1018,7 +1020,7 @@ export const localeVa = {
       "title": "Què no fem",
       "p1": "No venem intel·ligència artificial on no estalvia temps. Si el volum és baix, si el procés canvia cada setmana o si el coll de botella és un altre (falta de gent en l'obra, un proveïdor que no contesta), t'ho diem en l'estudi i no seguim. Preferim un no a un projecte que no recuperes.",
       "p2": "No fem un programa de facturació propi. Facturar té normativa i qui ja la compleix és el programa que uses hui. Ens integrem amb ell: llegim documents, emplenem dades i evitem el còpia i pega. El document fiscal continua eixint de la teua eina.",
-      "p3": "Tampoc substituïm el criteri de qui coneix l'ofici. La IA proposa el pressupost, la comanda o la resposta; una persona de la teua empresa confirma el que sale cap al client. Si més endavant vols menys revisió en el repetit, ho fitem per escrit. No a l'inrevés.",
+      "p3": "Tampoc substituïm el criteri de qui coneix l'ofici. La IA proposa el pressupost, la comanda o la resposta; una persona de la teua empresa confirma el que ix cap al client. Si més endavant vols menys revisió en el repetit, ho pactem per escrit. No a l'inrevés.",
       "todo": "TOT(caye): llista real de programes de facturació i de gestió amb els quals ens integrem."
     },
     "sectors": {
@@ -1058,9 +1060,9 @@ export const localeVa = {
   "androidConsultingPage": {
     "hero": {
       "h1": "Desenvolupament d'apps Android per a empreses",
-      "lead": "Som consultors Android especialitzats en Kotlin i Jetpack Compose. Desenvolupem apps noves, millorem les que ja estan en producció i reforcem a equips que necessiten un perfil sènior. Fem el que fem, ho fem amb la màxima qualitat.",
-      "p2": "Apliquem els principis SOLID i una arquitectura neta, amb proves automàtiques i revisió de tot el codi. El resultat és programari fàcil d'entendre, de mantindre i d'ampliar. I ens assegurem d'entregar el que vas demanar des del principi: abans d'escriure codi deixem per escrit què construirem i com comprovarem que funciona. Després t'ensenyem l'avanç cada setmana, perquè no hi haja sorpreses al final.",
-      "p3": "El nostre treball està acabat quan ja no ens necessites. Et deixem codi net, documentació clara i un equip que entén el que hi ha construït i pot seguir sense nosaltres. Si més endavant vols que seguim al teu costat, serà perquè tu el decideixes, no perquè depens de nosaltres.",
+      "lead": "Som consultors Android especialitzats en Kotlin i Jetpack Compose. Desenvolupem apps noves, millorem les que ja estan en producció i reforcem equips que necessiten un perfil sènior. Fem el que fem, ho fem amb la màxima qualitat.",
+      "p2": "Apliquem els principis SOLID i una arquitectura neta, amb proves automàtiques i revisió de tot el codi. El resultat és programari fàcil d'entendre, de mantindre i d'ampliar. I ens assegurem d'entregar el que vas demanar des del principi: abans d'escriure codi pactem per escrit què construirem i com comprovarem que funciona. Després t'ensenyem l'avanç cada setmana, perquè no hi haja sorpreses al final.",
+      "p3": "El nostre treball està acabat quan ja no ens necessites. Et deixem codi net, documentació clara i un equip que entén el que hi ha construït i pot seguir sense nosaltres. Si més endavant vols que seguim al teu costat, serà perquè tu ho decideixes, no perquè depengues de nosaltres.",
       "navSoftware": "Consultoria de programari",
       "navContact": "Contacte",
       "navIa": "Consultoria d'IA"
@@ -1074,7 +1076,7 @@ export const localeVa = {
         },
         "legacy": {
           "title": "El codi és Java o XML antic i ningú vol tocar-lo",
-          "body": "Cada canvi xicotet es converteix en aventura. Migrem per fases a Kotlin, modularizamos i documentem perquè l'equip torne a enviar canvis amb confiança."
+          "body": "Cada canvi xicotet es converteix en aventura. Migrem per fases a Kotlin, modularitzem i documentem perquè l'equip torne a enviar canvis amb confiança."
         },
         "releases": {
           "title": "Cada versió fa por",
@@ -1082,10 +1084,10 @@ export const localeVa = {
         },
         "noSenior": {
           "title": "L'equip no té un perfil sènior Android",
-          "body": "Et reforcem com a consultor Android sènior freelance integrat en el teu flux: pair programming, revisions i lliuraments setmanals sense substituir al teu equip, sinó elevant-lo."
+          "body": "Et reforcem com a consultor Android sènior freelance integrat en el teu flux: pair programming, revisions i lliuraments setmanals sense substituir el teu equip, sinó elevant-lo."
         },
         "apiLevel": {
-          "title": "Google Play obliga a actualitzar el nivell de API",
+          "title": "Google Play obliga a actualitzar el nivell d'API",
           "body": "Analitzem dependències, compileSdk i breaking changes, planifiquem l'actualització amb branques curtes i lliuraments que no paralitzen el negoci."
         },
         "slow": {
@@ -1098,11 +1100,11 @@ export const localeVa = {
       "title": "Què fem",
       "kotlin": {
         "title": "Desenvolupament d'aplicacions Android en Kotlin",
-        "body": "Features noves, manteniment i publicació mensual amb MVVM/MVI, modularización i bones pràctiques de Google."
+        "body": "Features noves, manteniment i publicació mensual amb MVVM/MVI, modularització i bones pràctiques de Google."
       },
       "staff": {
         "title": "Desenvolupador Android freelance per al teu equip",
-        "body": "Externalitzar Android amb un perfil sènior integrat en el teu flux: sprint a sprint, amb el teu backlog i les teues eines (Jira, Linear, Slack, la qual cosa ja useu)."
+        "body": "Externalitzar Android amb un perfil sènior integrat en el teu flux: sprint a sprint, amb el teu backlog i les teues eines (Jira, Linear, Slack, el que ja useu)."
       },
       "audit": {
         "title": "Auditoria de la teua app",
@@ -1115,7 +1117,7 @@ export const localeVa = {
       },
       "kmp": {
         "title": "Kotlin Multiplatform",
-        "body": "Quan comparteix lògica entre Android i iOS té sentit, definim l'abast i evitem sobreingeniería."
+        "body": "Quan compartir lògica entre Android i iOS té sentit, definim l'abast i evitem sobreenginyeria."
       },
       "cicd": {
         "title": "CI/CD i proves automàtiques",
@@ -1206,7 +1208,7 @@ export const localeVa = {
     },
     "closing": "Si busques consultoria Android, un desenvolupador Android sènior freelance amb experiència en producció o algú que audite abans d'invertir en un rescat, agenda 30 minuts i veiem encaix i següent pas.",
     "mid": {
-      "p1": "Moltes empreses arriben quan l'app porta anys sense un referent sènior: el coneixement viu en una sola persona, el bus factor és alt i cada release és un ritual de nervis. El nostre treball com a consultors Android és reduir aqueix risc amb processos que ja usem en producció, no amb slides genèriques.",
+      "p1": "Moltes empreses arriben quan l'app porta anys sense un referent sènior: el coneixement viu en una sola persona, el bus factor és alt i cada release és un ritual de nervis. El nostre treball com a consultors Android és reduir aqueix risc amb processos que ja usem en producció, no amb diapositives genèriques.",
       "p2": "No prometem reescriure l'app en un mes. Sí que prometem claredat: què està trencat, què és deute tolerable i què convé atacar primer perquè usuaris i negoci noten la millora. Quan l'abast encaixa, el tanquem per escrit abans de codificar."
     }
   },
@@ -1220,7 +1222,7 @@ export const localeVa = {
       "items": {
         "architecture": {
           "title": "Arquitectura i principis SOLID",
-          "body": "Capes, acoblaments, deute tècnic, modularización i alineació amb la grandària del teu equip."
+          "body": "Capes, acoblaments, deute tècnic, modularització i alineació amb la grandària del teu equip."
         },
         "stability": {
           "title": "Estabilitat i tancaments inesperats",
@@ -1235,7 +1237,7 @@ export const localeVa = {
           "body": "Emmagatzematge de credencials, ofuscació, permisos i superfície d'exportació de components."
         },
         "deps": {
-          "title": "Dependències i nivell de API",
+          "title": "Dependències i nivell d'API",
           "body": "Actualitzacions pendents, SDK mínim i obligacions de Play."
         },
         "build": {
@@ -1332,7 +1334,7 @@ export const localeVa = {
         "description": "Fluxos d'especificació, scaffolding, revisió i documentació amb IA, sense perdre qualitat."
       },
       "mentoring": {
-        "title": "Mentoría i equips",
+        "title": "Mentoria i equips",
         "description": "Acompanyament tècnic que deixa a l'equip més fort, no dependent."
       }
     },
@@ -1377,7 +1379,7 @@ export const localeVa = {
       "name": "Am'Art Vital Flow",
       "tag": "Web · Benestar",
       "updated": "2026",
-      "description": "Web en amartevitalflow.com per a acompanyament integratiu en Elx: naturopatía, Moviment Flow i tallers — Bitdesal la va dissenyar i va desenvolupar en Astro."
+      "description": "Web en amartevitalflow.com per a acompanyament integratiu en Elx: naturopatia, Moviment Flow i tallers — Bitdesal la va dissenyar i va desenvolupar en Astro."
     },
     "muixeranga": {
       "name": "Muixeranga d'Elx",
@@ -1661,14 +1663,14 @@ export const localeVa = {
       "tag": "WEB · BENESTAR",
       "title": "Am'Art Vital Flow",
       "titleAccent": "Tornar a habitar-te",
-      "heroDescription": "Am'Art Vital Flow és la consulta de Alize en Elx: naturopatía, moviment conscient i tallers de benestar. La web explica els tres camins — comprendre, experimentar i expressar — i facilita el primer contacte sense perdre un to pròxim i calmat.",
+      "heroDescription": "Am'Art Vital Flow és la consulta de Alize en Elx: naturopatia, moviment conscient i tallers de benestar. La web explica els tres camins — comprendre, experimentar i expressar — i facilita el primer contacte sense perdre un to pròxim i calmat.",
       "website": "Visitar amartevitalflow.com",
       "case": {
         "challenge": "El repte",
         "role": "El paper de Bitdesal",
         "result": "El resultat",
-        "challengeText": "Feia falta una presència digital que transmetera acompanyament integratiu de debò: no un llistat clínic ni una plantilla genèrica de «salut», sinó un lloc que convide a demanar cita, entendre naturopatía, Moviment Flow i tallers, i generar confiança abans de la primera trobada.",
-        "roleText": "Bitdesal va dissenyar i va desenvolupar amartevitalflow.com en Astro: arquitectura multi-pàgina (inici, naturopatía, moviment, tallers, botiga i contacte), taujana terracota–sàlvia–crema, tipografies serif i sans, carrusel de testimoniatges, blocs editorials sobre hàbits i cos, navegació mòbil amb targetes desplegables i pàgines legals amb metadades per a cercadors.",
+        "challengeText": "Feia falta una presència digital que transmetria acompanyament integratiu de debò: no un llistat clínic ni una plantilla genèrica de «salut», sinó un lloc que convide a demanar cita, entendre naturopatia, Moviment Flow i tallers, i generar confiança abans de la primera trobada.",
+        "roleText": "Bitdesal va dissenyar i va desenvolupar amartevitalflow.com en Astro: arquitectura multi-pàgina (inici, naturopatia, moviment, tallers, botiga i contacte), taujana terracota–sàlvia–crema, tipografies serif i sans, carrusel de testimoniatges, blocs editorials sobre hàbits i cos, navegació mòbil amb targetes desplegables i pàgines legals amb metadades per a cercadors.",
         "resultText": "Lloc en producció que presenta les tres línies de servei amb copy alineat a l'enfocament de la consulta, testimoniatges de clientes, vies de contacte clares (correu, telèfon i ubicació en Elx) i maquetació usable en mòbil i escriptori.",
         "contactPrompt": "Contacte de la consulta:",
         "contactEmail": "info.amartevitalflow@gmail.com"
@@ -1686,7 +1688,7 @@ export const localeVa = {
       "screensTitle": "Recorregut pel lloc",
       "screens": {
         "home": "Portada",
-        "naturopathy": "Naturopatía",
+        "naturopathy": "Naturopatia",
         "movement": "Moviment Flow",
         "workshops": "Tallers i xarrades",
         "shop": "Botiga",
@@ -1699,7 +1701,7 @@ export const localeVa = {
           "description": "Hero amb les tres vies d'acompanyament, missatge de benestar corporal i cridada a contactar; fotografia d'ambient en desktop."
         },
         "naturopathy": {
-          "title": "Naturopatía",
+          "title": "Naturopatia",
           "description": "Pàgina dedicada a l'acompanyament individual: hàbits, fitoteràpia, aromaterapia i complements des d'una visió global de la persona."
         },
         "movement": {

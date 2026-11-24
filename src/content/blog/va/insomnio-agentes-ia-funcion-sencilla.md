@@ -2,25 +2,25 @@
 title: "Insomni, agents d'IA i la funció de 8 hores"
 description: "Un selector d'idioma amb IA que havia de portar dues hores va acabar en una marató nocturna. Criteris d'acceptació, revisió automàtica i tres lliçons."
 pubDate: 2026-06-11
-audience: technical
-author: caye
-layout: feature
+audience: "technical"
+author: "caye"
+layout: "feature"
 tags:
   - agentes-ia
   - android
   - desarrollo-asistido
-keyword: 'agentes d'IA desarrollo'
-heroImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
-ogImage: /images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg
-subtitle: '¿Te ha pasado que una tarea de «cinco minutos» se convierte en el día entero? Empezó a una hora indecente, sin poder dormir, con un selector de idioma que «seguro» iba rápido con IA.'
+keyword: "agentes d'IA desarrollo"
+heroImage: "/images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg"
+ogImage: "/images/blog/insomnio-agentes-ia-funcion-sencilla/hero.jpg"
+subtitle: "T'ha passat que una tasca de «cinc minuts» es converteix en el dia sencer? Va començar a una hora indecent, sense poder dormir, amb un selector d'idioma que «segur» anava ràpid amb IA."
 updatedDate: 2026-11-17
 faq:
-  - q: '¿Por qué el título habla de 8 horas si la maratón fueron más?'
-    a: 'En LinkedIn el relato juega con la «función de 8 horas» como gancho. En la práctica, entre especificación, iteraciones y correcciones, fueron unas doce horas hasta dejar la feature estable y el código limpio.'
-  - q: '¿Conviene dejar que un agente ejecute sin criterios de aceptación?'
-    a: 'No. Sin criterios por escrito, el agente sigue «mejorando» o inventando hasta el infinito. Hay que saber cuándo basta.'
-  - q: '¿La revisión con IA sustituye a la humana?'
-    a: 'Sirve como segunda opinión en el PR, no como veto ni sustituto. Los comentarios orientan; alguien del equipo decide el merge.'
+  - q: "Per què el títol parla de 8 hores si la marató van ser més?"
+    a: "En LinkedIn el relat juga amb la «funció de 8 hores» com a ganxo. En la pràctica, entre especificació, iteracions i correccions, van ser unes dotze hores fins a deixar la feature estable i el codi net."
+  - q: "Convé deixar que un agent execute sense criteris d'acceptació?"
+    a: "No. Sense criteris per escrit, l'agent continua «millorant» o inventant fins a l'infinit. Cal saber quan basta."
+  - q: "La revisió amb IA substitueix a la humana?"
+    a: "Serveix com a segona opinió en el PR, no com a veto ni substitut. Els comentaris orienten; algú de l'equip decideix el merge."
 ---
 
 A les tantes del matí, sense somni, vaig decidir muntar un *selector d'idioma** en Weel, una app personal en la qual porte temps. A mà m'hauria portat un parell d'hores. Vaig voler provar quant tardava amb agents d'IA.
@@ -68,7 +68,7 @@ El bot va trobar coses reals, per exemple un `AppLanguage.valueOf` insegur llegi
   <figcaption>Revisió automàtica en el PR: útil com a segona opinió, no com a substitut del merge humà.</figcaption>
 </figure>
 
-<p>Si vols veure com encaixa això en un pipeline complet, en bitdesal.com tenim la <a href="/blog/guia-cicd-android-github-actions/">guia de CI/CD amb revisió amb IA</a>.</p>
+<p>Si vols veure com encaixa això en un pipeline complet, en bitdesal.com tenim la <a href="/va/blog/guia-cicd-android-github-actions/">guia de CI/CD amb revisió amb IA</a>.</p>
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">04</span>
@@ -91,7 +91,7 @@ Al cap d'unes *dotze hores** i molts camins equivocats, la feature estava en pro
     </div>
     <div class="bf-conclusion-body">
       <p>Els agents d'IA serveixen per a avançar ràpid quan ja saps què vols i com comprovar-ho. Sense això, una matinada sense dormir es converteix en marató.</p>
-      <p>També està l'article <a href="https://www.linkedin.com/pulse/insomnia-ai-agents-8-hour-simple-feature-bitdesal-ytkke/"> original en LinkedIn</a>. Si vols desenvolupament Android amb qualitat i sense dependre de l'agent per sempre, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="/agentes-ia-empresas/">agents d'IA per a empreses</a>.</p>
+      <p>També està l'article <a href="https://www.linkedin.com/pulse/insomnia-ai-agents-8-hour-simple-feature-bitdesal-ytkke/"> original en LinkedIn</a>. Si vols desenvolupament Android amb qualitat i sense dependre de l'agent per sempre, mira <a href="/va/consultoria-android/">desenvolupament d'apps Android</a> o <a href="/va/consultoria-ia/">agents d'IA per a empreses</a>.</p>
     </div>
   </div>
 </section>

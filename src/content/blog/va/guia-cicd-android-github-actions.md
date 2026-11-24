@@ -2,26 +2,26 @@
 title: "Guia de CI/CD per a Android amb GitHub Actions: un pipeline raonable"
 description: "Tres workflows en GitHub Actions per a Android: CI ràpid en el PR, revisió amb IA i release signat a Play. Patrons reals, sense dependre d'una app concreta."
 pubDate: 2026-07-10
-audience: technical
-author: caye
-layout: feature
+audience: "technical"
+author: "caye"
+layout: "feature"
 tags:
   - android
   - cicd
   - github-actions
-keyword: 'CI/CD Android GitHub Actions'
-heroImage: /images/blog/guia-cicd-android-github-actions/hero.webp
-ogImage: /images/blog/guia-cicd-android-github-actions/hero.webp
-titleHighlight: 'un pipeline razonable'
-subtitle: 'La mayoría de equipos Android sabe que deberían automatizar releases. Lo que a menudo falta es trazar la línea entre «¿este código es bueno?» y «que los testers lo puedan instalar».'
+keyword: "CI/CD Android GitHub Actions"
+heroImage: "/images/blog/guia-cicd-android-github-actions/hero.webp"
+ogImage: "/images/blog/guia-cicd-android-github-actions/hero.webp"
+titleHighlight: "un pipeline raonable"
+subtitle: "La majoria d'equips Android sap que haurien d'automatitzar releases. El que sovint mancada és traçar la línia entre «aquest codi és bo?» i «que els testers el puguen instal·lar»."
 updatedDate: 2026-11-17
 faq:
-  - q: '¿La revisión con IA bloquea el merge?'
-    a: 'No. Corre en paralelo con el CI y publica un comentario en el PR. Los checks obligatorios siguen siendo los jobs mecánicos de main.yml; un humano aprueba al final.'
-  - q: '¿Por qué no meter el emulador en cada PR?'
-    a: 'El emulador y los screenshot tests son lentos. Los reservamos para el pipeline de release, cuando el código ya ha pasado revisión humana en main.'
-  - q: '¿Cuántos workflows necesitamos?'
-    a: 'Tres archivos: main.yml (calidad en PR y push a main), ai-code-review.yml (opinión automática) y release.yml (validación profunda, firma y pista interna de Play).'
+  - q: "La revisió amb IA bloqueja el merge?"
+    a: "No. Corre en paral·lel amb el CI i publica un comentari en el PR. Els checks obligatoris continuen sent els jobs mecànics de main.yml; un humà aprova al final."
+  - q: "Per què no ficar l'emulador en cada PR?"
+    a: "L'emulador i els screenshot tests són lents. Els reservem per al pipeline de release, quan el codi ja ha passat revisió humana en main."
+  - q: "Quants workflows necessitem?"
+    a: "Tres arxius: main.yml (qualitat en PR i push a main), ai-code-review.yml (opinió automàtica) i release.yml (validació profunda, signatura i pista interna de Play)."
 ---
 
 Aquesta guia repassa una configuració real amb GitHub Actions en una app Android: *tres workflows** que treballen junts, comprovacions ràpides en pull request, revisió de codi assistida per IA i automatització de release més lenta (tests visuals, emulador, signatura, pujada a Google Play i avís a l'equip).
@@ -86,7 +86,7 @@ Les features grans se segueixen com sub-issues per a veure l'avanç en trossos r
   <figcaption>Un pare dividit en sub-issues tancades, cadascuna amb el seu PR.</figcaption>
 </figure>
 
-Els propis PR porten context: objectius, no-objectius i una **checklist de proves** que l'autor farcida abans de demanar revisió:
+Els propis PR porten context: objectius, no-objectius i una **checklist de proves** que l'autor emplena abans de demanar revisió:
 
 <figure class="bf-figure">
   <img src="/images/blog/guia-cicd-android-github-actions/issue-spec.webp" alt="Descripción de pull request con objetivos, no-objetivos y checklist de pruebas completada" width="1200" height="675" loading="lazy" />
@@ -114,7 +114,7 @@ Quan un PR s'obri o rep commits nous, `ai-code-review.yml` corre *en paral·lel*
 3. El workflow publica la resposta del model com a *comentari en el PR**: problemes detectats, coses ben fetes i si es va atendre feedback anterior.
 
 <figure class="bf-figure">
-  <img src="/images/blog/guia-cicd-android-github-actions/ai-review-comment.webp" alt="Comentario de revisión con IA en un pull request: bug en deserialización de enum y buen uso de APIs de locale" width="1200" height="675" loading="lazy" />
+  <img src="/images/blog/guia-cicd-android-github-actions/ai-review-comment.webp" alt="Comentario de revisión con IA en un pull request: bug en deserialització de enum y buen uso de APIs de locale" width="1200" height="675" loading="lazy" />
   <figcaption>Exemple real: la IA marca un `valueOf` insegur en DataStore i recorda que l'aprovació humana continua sent obligatòria.</figcaption>
 </figure>
 
@@ -328,7 +328,7 @@ Si alguna cosa es filtra, **rótalo immediatament**. Els secrets han de continua
     <div class="bf-conclusion-body">
       <p>Un bon CI/CD no és un únic YAML que ho fa tot. És una seqüència: issues ordenats, PRs documentats, estil i tests automàtics, revisió assistida per IA, aprovació humana, validació en emulador i visual, artefactes signats i un avís a l'equip quan alguna cosa ix a la pista interna.</p>
       <p>Tres arxius de workflow. Zero pujades manuals. Cada PR rep checks mecànics i una primera passada d'IA; cada merge porta una build signada a la pista interna, i l'equip sempre sap quina versió és.</p>
-      <p>Les captures procedeixen d'una configuració real en GitHub Actions. Si vols que revisem o muntem el teu pipeline, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="https://cal.com/bitdesal/30min">reserva 30 minuts</a>. També està l'article <a href="https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd"> original en Medium</a>.</p>
+      <p>Les captures procedeixen d'una configuració real en GitHub Actions. Si vols que revisem o muntem el teu pipeline, mira <a href="/va/consultoria-android/">desenvolupament d'apps Android</a> o <a href="https://cal.com/bitdesal/30min">reserva 30 minuts</a>. També està l'article <a href="https://medium.com/@caye.suomi/a-guide-on-how-to-implement-ci-cd-for-android-using-github-actions-839256696fdd"> original en Medium</a>.</p>
     </div>
   </div>
 </section>

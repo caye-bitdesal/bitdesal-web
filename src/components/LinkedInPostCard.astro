@@ -15,7 +15,8 @@ interface Props {
 const { post, card: cardProp, showPlatformLinks, class: className } = Astro.props;
 const { lang, t } = useI18n(Astro);
 
-const card = cardProp ?? (post ? cardFromLinkedInPost(post, t, { showPlatformLinks }) : undefined);
+const card =
+	cardProp ?? (post ? cardFromLinkedInPost(post, t, { showPlatformLinks, lang }) : undefined);
 if (!card) {
 	throw new Error('LinkedInPostCard requires `card` or `post`');
 }

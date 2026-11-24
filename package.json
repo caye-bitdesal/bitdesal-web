@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/write-htaccess.mjs && astro build && node scripts/finish-sitemap.mjs && node scripts/verify-dist.mjs && node scripts/verify-titles.mjs",
+    "build": "node scripts/write-htaccess.mjs && node scripts/verify-blog-frontmatter.mjs && node scripts/verify-va-blog-translations.mjs && astro build && node scripts/verify-va-dist.mjs && node scripts/finish-sitemap.mjs && node scripts/verify-dist.mjs && node scripts/verify-titles.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.2.4",
+    "js-yaml": "^4.1.1",
     "tailwindcss": "^4.2.4"
   }
 }

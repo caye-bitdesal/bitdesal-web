@@ -1,6 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 import type { LinkedInPost } from './linkedInPosts';
-import { currencyLocale } from '../i18n/formatCurrency';
+import { blogDateLocale, formatBlogDateShort } from '../i18n/formatCurrency';
 import type { Language } from '../i18n/translations';
 
 export type BlogListCardData = {
@@ -23,16 +23,17 @@ type TranslateFn = (key: string) => string;
 export function cardFromLinkedInPost(
 	post: LinkedInPost,
 	t: TranslateFn,
-	options?: { showPlatformLinks?: boolean },
+	options?: { showPlatformLinks?: boolean; lang?: Language },
 ): BlogListCardData {
 	const showPlatformLinks = options?.showPlatformLinks ?? true;
+	const lang = options?.lang ?? 'es';
 	const onSite = Boolean(post.siteHref);
 	return {
 		href: post.siteHref ?? post.url,
 		title: t(post.titleKey),
 		excerpt: t(post.excerptKey),
 		dateIso: post.dateIso,
-		dateLabel: t(post.dateKey),
+		dateLabel: lang === 'va' ? formatBlogDateShort(post.dateIso, lang) : t(post.dateKey),
 		image: post.image,
 		imageAlt: post.imageAltKey ? t(post.imageAltKey) : '',
 		openInNewTab: !onSite,
@@ -57,9 +58,9 @@ export function cardFromBlogEntry(
 	lang: Language,
 	fallbackImage?: string,
 ): BlogListCardData {
-	const dateLabel = shown.data.pubDate.toLocaleDateString(currencyLocale(lang), {
+	const dateLabel = shown.data.pubDate.toLocaleDateString(blogDateLocale(lang), {
 		year: 'numeric',
-		month: 'long',
+		month: lang === 'va' ? 'short' : 'long',
 		day: 'numeric',
 	});
 

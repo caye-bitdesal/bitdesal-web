@@ -15,7 +15,7 @@ import {
 	wordCount,
 	type BlogAuthorId,
 } from '../data/blogPost';
-import { currencyLocale } from '../i18n/formatCurrency';
+import { blogDateLocale } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import '../styles/blog-feature.css';
@@ -46,13 +46,13 @@ function escapeRegExp(value: string) {
 const heroImage = localized.data.heroImage ?? localized.data.ogImage;
 const ogImage = localized.data.ogImage ?? heroImage ?? undefined;
 
-const dateLabel = localized.data.pubDate.toLocaleDateString(currencyLocale(lang), {
+const dateLabel = localized.data.pubDate.toLocaleDateString(blogDateLocale(lang), {
 	year: 'numeric',
 	month: 'long',
 	day: 'numeric',
 });
 const updatedLabel = localized.data.updatedDate
-	? localized.data.updatedDate.toLocaleDateString(currencyLocale(lang), {
+	? localized.data.updatedDate.toLocaleDateString(blogDateLocale(lang), {
 			year: 'numeric',
 			month: 'long',
 			day: 'numeric',

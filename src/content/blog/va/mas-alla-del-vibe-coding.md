@@ -1,26 +1,26 @@
 ---
 title: "Més enllà del \"Vibe Coding\": manifest per a una enginyeria d'IA sostenible"
-description: "Cinc principis per a usar IA en enginyeria sense caos: confiança, especificació, rigor, humà al comandament i cost sostenible. Manifest en espanyol."
+description: "Cinc principis per a usar IA en enginyeria sense caos: confiança, especificació, rigor, humà al comandament i cost sostenible. Manifest en valencià."
 pubDate: 2026-05-21
-audience: technical
-author: caye
-layout: feature
+audience: "technical"
+author: "caye"
+layout: "feature"
 tags:
   - ia
   - ingenieria
-keyword: 'vibe coding ingeniería con IA'
-heroImage: /images/blog/mas-alla-del-vibe-coding/hero.jpg
-ogImage: /images/blog/mas-alla-del-vibe-coding/hero.jpg
-titleHighlight: 'manifiesto para una ingeniería d'IA sostenible'
-subtitle: 'La industria corre detrás de la velocidad de la IA. Sin método, esa velocidad solo amplifica el caos del código.'
+keyword: "vibe coding ingenieria con IA"
+heroImage: "/images/blog/mas-alla-del-vibe-coding/hero.jpg"
+ogImage: "/images/blog/mas-alla-del-vibe-coding/hero.jpg"
+titleHighlight: "manifest per a una enginyeria d'IA sostenible"
+subtitle: "La indústria corre darrere de la velocitat de la IA. Sense mètode, aqueixa velocitat només amplifica el caos del codi."
 updatedDate: 2026-11-17
 faq:
-  - q: '¿Qué es el vibe coding?'
-    a: 'Es usar IA a ciegas: prompts vagos, merges sin entender el diff y refactors que duplican código porque «algo compila». Funciona en un demo; no en un sistema que mantienes años.'
-  - q: '¿Qué es el desarrollo guiado por especificación (SDD)?'
-    a: 'Tratar la especificación escrita como el producto principal: historia de usuario, criterios de aceptación y plan antes de que el agente toque el repositorio.'
-  - q: '¿Cómo medís el retorno de la IA?'
-    a: 'No por líneas generadas, sino por si ahorráis tiempo revisable en un encargo concreto, ROAI: return on AI investment, con límites de tokens y calidad igual que sin IA.'
+  - q: "Què és el vibe coding?"
+    a: "És usar IA a cegues: prompts vagues, merges sense entendre el diff i refactors que dupliquen codi perquè «alguna cosa compila». Funciona en un demo; no en un sistema que mantens anys."
+  - q: "Què és el desenvolupament guiat per especificació (SDD)?"
+    a: "Tractar l'especificació escrita com el producte principal: història d'usuari, criteris d'acceptació i pla abans que l'agent toque el repositori."
+  - q: "Com mesureu el retorn de la IA?"
+    a: "No per línies generades, sinó per si estalvieu temps revisable en un encàrrec concret, ROAI: return on AI investment, amb límits de tokens i qualitat igual que sense IA."
 ---
 
 El hype espenta a *generar més codi en menys temps**. Nosaltres treballem amb una regla diferent: *enginyeria primer**. La IA és eina, no substitut del criteri. Aquest manifest resumeix com la usem en Bitdesal sense caure en el «vibe coding».
@@ -50,7 +50,7 @@ En l'era de la IA, l'actiu principal no és l'últim commit: és la *especificac
   <li>Només llavors: implementar, a mà, amb assistent o amb agent.</li>
 </ol>
 
-Això és desenvolupament guiat per especificació (SDD). Sense spec, l'agent improvisa i tu pagues iteracions. Ho vam veure en carn viva en el relat del selector <a href="/blog/insomnio-agentes-ia-funcion-sencilla/"> d'idioma de «dues hores»</a>.
+Això és desenvolupament guiat per especificació (SDD). Sense spec, l'agent improvisa i tu pagues iteracions. Ho vam veure en carn viva en el relat del selector <a href="/va/blog/insomnio-agentes-ia-funcion-sencilla/"> d'idioma de «dues hores»</a>.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">03</span>
@@ -86,7 +86,7 @@ Els agents executen. *Tu** defineixes el model mental, els límits i què entra 
 
 Hui molts costos de API estan *subvencionats** o són més baixos que demà. Les especificacions vagues provoquen al·lucinacions i iteracions fallides, és a dir, tokens tirats. Amb SDD construeixes una biblioteca de *plans executables** que continuen sent barats encara que el preu per token puge.
 
-Si t'interessa el costat econòmic, encaixa amb <a href="/blog/puedes-permitirte-desarrollo-asistido-ia/">quina costa de debò el desenvolupament assistit per IA</a>.
+Si t'interessa el costat econòmic, encaixa amb <a href="/va/blog/puedes-permitirte-desarrollo-asistido-ia/">quina costa de debò el desenvolupament assistit per IA</a>.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">06</span>
@@ -104,7 +104,7 @@ La IA assisteix al desenvolupador; no reemplaça a l'enginyer.
       <h2 class="bf-conclusion-heading">Velocitat amb mètode</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Més enllà del vibe coding hi ha enginyeria sostenible: especificar, revisar, mesurar cost i mantindre el criteri humà en el merge. Si vols aqueix enfocament en Android o en producte amb IA, mira <a href="/consultoria-android/">desenvolupe d'apps Android</a> o <a href="/consultoria-ia/">consultoria d'IA</a>.</p>
+      <p>Més enllà del vibe coding hi ha enginyeria sostenible: especificar, revisar, mesurar cost i mantindre el criteri humà en el merge. Si vols aqueix enfocament en Android o en producte amb IA, mira <a href="/va/consultoria-android/">desenvolupament d'apps Android</a> o <a href="/va/consultoria-ia/">consultoria d'IA</a>.</p>
       <p>També està l'article <a href="https://www.linkedin.com/pulse/beyond-vibe-coding-manifesto-sustainable-ai-engineering-bitdesal-x5bxe/"> original en LinkedIn</a>.</p>
     </div>
   </div>

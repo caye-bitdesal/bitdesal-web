@@ -4,6 +4,7 @@ import TeamMemberCard from '../components/TeamMemberCard.astro';
 import TeamMemberExtended from '../components/TeamMemberExtended.astro';
 import Layout from '../layouts/Layout.astro';
 import { teamMembers } from '../data/teamMembers';
+import { sitePath } from '../data/siteNav';
 import { useI18n } from '../i18n/useI18n';
 
 const { lang, t } = useI18n(Astro);
@@ -40,8 +41,11 @@ const extendedMemberIds = teamMembers.filter((m) => m.showExtendedProfile).map((
 					)
 				}
 				<p>
-					<a href="/consultoria-ia-alicante-elche/" class="text-primary font-medium hover:underline">
-						Consultoría de IA en Elche y Alicante
+					<a
+						href={sitePath('/consultoria-ia-alicante-elche', lang)}
+						class="text-primary font-medium hover:underline"
+					>
+						{t('footer.localIaLink')}
 					</a>
 				</p>
 			</article>

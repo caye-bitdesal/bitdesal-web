@@ -60,22 +60,20 @@ const faqItems = [
 	{ qKey: 'iaPage.faq.tech.q', aKey: 'iaPage.faq.tech.a' },
 ];
 
-const serviceNames: Record<string, string> = {
-	es: 'Consultoría de IA para empresas',
-	en: 'AI consulting for companies',
-	fi: 'Tekoälykonsultointi yrityksille',
-};
+const countryServed =
+	lang === 'en' ? 'Spain' : lang === 'fi' ? 'Espanja' : lang === 'va' ? 'Espanya' : 'España';
+const serviceLabel = t('footer.iaService');
 
 const serviceJsonLd = {
 	'@type': 'Service',
 	'@id': `${canonical}#service`,
-	name: serviceNames[lang] ?? serviceNames.es,
-	serviceType: serviceNames[lang] ?? serviceNames.es,
+	name: serviceLabel,
+	serviceType: serviceLabel,
 	description: t('iaPage.intro.p1'),
 	provider: { '@id': ORG_ID },
 	areaServed: {
 		'@type': 'Country',
-		name: lang === 'en' ? 'Spain' : lang === 'fi' ? 'Espanja' : 'España',
+		name: countryServed,
 	},
 	url: canonical,
 };

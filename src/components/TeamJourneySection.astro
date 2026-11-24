@@ -1,5 +1,6 @@
 ---
 import { journeyTranslationPrefix, teamJourneyByMember, type JourneyIcon } from '../data/teamJourneyTimelines';
+import { formatLocalizedMonthTokens } from '../i18n/formatCurrency';
 import { useI18n } from '../i18n/useI18n';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const { memberId } = Astro.props;
-const { t } = useI18n(Astro);
+const { lang, t } = useI18n(Astro);
 
 const entries = teamJourneyByMember[memberId] ?? [];
 const prefix = journeyTranslationPrefix(memberId);
@@ -44,9 +45,12 @@ const titleKey = `${prefix}.title`;
 								})()
 							}
 							{
-								t(`${prefix}.${entry.id}.dates`, '') && (
-									<p class="text-sm text-primary font-medium mb-3">{t(`${prefix}.${entry.id}.dates`)}</p>
-								)
+								(() => {
+									const raw = t(`${prefix}.${entry.id}.dates`, '');
+									if (!raw) return null;
+									const label = formatLocalizedMonthTokens(raw, lang);
+									return <p class="text-sm text-primary font-medium mb-3">{label}</p>;
+								})()
 							}
 							{
 								entry.itemCount === 0 ? (

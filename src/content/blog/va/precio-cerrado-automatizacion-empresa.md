@@ -2,25 +2,25 @@
 title: "Preu tancat abans d'automatitzar: per què comencem amb un estudi de processos"
 description: "Estalvia diners, redueix riscos i garanteix que l'automatització soluciona el problema real. Estudi de 450 € + IVA, pressupost fix i abast per escrit."
 pubDate: 2026-10-01
-audience: business
-author: caye
-layout: feature
+audience: "business"
+author: "caye"
+layout: "feature"
 tags:
   - automatizacion
   - consultoria
-keyword: 'estudio de procesos precio cerrado'
-heroImage: /images/blog/precio-cerrado-automatizacion-empresa/hero.jpg
-ogImage: /images/blog/precio-cerrado-automatizacion-empresa/hero.jpg
-titleHighlight: 'por qué empezamos con un estudio de procesos'
-subtitle: 'Ahorra dinero, reduce riesgos y garantiza que la automatización soluciona el problema real, no solo hace el error más rápido.'
+keyword: "estudio de procesos precio cerrado"
+heroImage: "/images/blog/precio-cerrado-automatizacion-empresa/hero.jpg"
+ogImage: "/images/blog/precio-cerrado-automatizacion-empresa/hero.jpg"
+titleHighlight: "per què comencem amb un estudi de processos"
+subtitle: "Estalvia diners, redueix riscos i garanteix que l'automatització soluciona el problema real, no sols fa l'error més ràpid."
 updatedDate: 2026-11-17
 faq:
-  - q: '¿Cuánto cuesta el estudio de procesos?'
-    a: '450 € + IVA por unas diez horas de trabajo (más si hay varios departamentos o sistemas). El entregable incluye diagnóstico, propuesta, plan por fases y presupuesto cerrado de implementación.'
-  - q: '¿Se descuenta el estudio si contrato la implementación?'
-    a: 'Sí: si contratas la implementación en los 30 días siguientes al estudio, descontamos el importe íntegro del estudio.'
-  - q: '¿Y si al estudiar el proceso vemos que no compensa automatizar?'
-    a: 'Te lo decimos con claridad. Prefiero un «no» honesto a un proyecto que no ahorra horas de verdad.'
+  - q: "Quant costa l'estudi de processos?"
+    a: "450 € + IVA per unes deu hores de treball (més si hi ha diversos departaments o sistemes). El lliurable inclou diagnòstic, proposta, pla per fases i pressupost tancat d'implementació."
+  - q: "Es descompta l'estudi si contracte la implementació?"
+    a: "Sí: si contractes la implementació en els 30 dies següents a l'estudi, descomptem l'import íntegre de l'estudi."
+  - q: "I si en estudiar el procés veiem que no compensa automatitzar?"
+    a: "T'ho diem amb claredat. Preferisc un «no» honest a un projecte que no estalvia hores de debò."
 ---
 
 Si dirigeixes una empresa, l'últim que necessites és un projecte de programari que s'allarga i es converteix en un pou sense fons. O un desenvolupament amb IA que promet molt i no resol el problema real del negoci. En Bitdesal no comencem directament a programar: *abans d'escriure codi fa falta entendre el perquè i el com**.
@@ -158,7 +158,7 @@ Un pressupost fix obliga a definir l'abast abans d'escriure codi. Quan sí que c
     </div>
     <div class="bf-conclusion-body">
       <p>Si una tasca et lleva 30 minuts a la setmana, a l'any són més de 26 hores de treball manual. Imagina si aqueixa mateixa lògica es repeteix en tres departaments. L'estudi serveix just per a quantificar-lo i decidir.</p>
-      <p>Primer entenem el procés. Després posem preu. Si vols veure si encaixa amb tu, <a href="https://cal.com/bitdesal/30min">reserva 30 minuts</a> o mira <a href="/consultoria-software/">consultoria de programari</a> i <a href="/casos-y-precios/">casos i preus</a>. Sense compromís de projecte.</p>
+      <p>Primer entenem el procés. Després posem preu. Si vols veure si encaixa amb tu, <a href="https://cal.com/bitdesal/30min">reserva 30 minuts</a> o mira <a href="/va/consultoria-software/">consultoria de programari</a> i <a href="/va/casos-i-preus/">casos i preus</a>. Sense compromís de projecte.</p>
     </div>
   </div>
 </section>

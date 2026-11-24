@@ -1,5 +1,6 @@
 import { SITE_ORIGIN, CONTACT_EMAIL, CONTACT_PHONE_E164, LEGAL_HOLDER_NAME, LEGAL_TAX_ID } from './siteConstants';
 import { getTeamMember } from './teamMembers';
+import { localizedPath } from '../i18n/localizedRoutes';
 import type { Language } from '../i18n/translations';
 
 export const ORG_ID = `${SITE_ORIGIN}/#org`;
@@ -9,16 +10,195 @@ export const RAMIRO_ID = `${SITE_ORIGIN}/#ramiro`;
 
 const LINKEDIN_COMPANY = 'https://www.linkedin.com/company/112619745';
 
-const KNOWS_ABOUT = [
-	'consultoría de IA',
-	'automatización de procesos',
-	'agentes de IA',
-	'desarrollo Android',
-	'Kotlin',
-	'Jetpack Compose',
-	'Kotlin Multiplatform',
-	'arquitectura de software',
-];
+const KNOWS_ABOUT_BY_LANG: Record<Language, string[]> = {
+	es: [
+		'consultoría de IA',
+		'automatización de procesos',
+		'agentes de IA',
+		'desarrollo Android',
+		'Kotlin',
+		'Jetpack Compose',
+		'Kotlin Multiplatform',
+		'arquitectura de software',
+	],
+	en: [
+		'AI consulting',
+		'process automation',
+		'AI agents',
+		'Android development',
+		'Kotlin',
+		'Jetpack Compose',
+		'Kotlin Multiplatform',
+		'software architecture',
+	],
+	fi: [
+		'tekoälykonsultointi',
+		'prosessiautomaatio',
+		'tekoälyagentit',
+		'Android-kehitys',
+		'Kotlin',
+		'Jetpack Compose',
+		'Kotlin Multiplatform',
+		'ohjelmistoarkkitehtuuri',
+	],
+	va: [
+		"consultoria d'IA",
+		'automatització de processos',
+		"agents d'IA",
+		'desenvolupament Android',
+		'Kotlin',
+		'Jetpack Compose',
+		'Kotlin Multiplatform',
+		'arquitectura de programari',
+	],
+};
+
+function offerCatalog(lang: Language) {
+	const path = (segment: string) => `${SITE_ORIGIN}${localizedPath(segment, lang)}`;
+	if (lang === 'va') {
+		return {
+			'@type': 'OfferCatalog',
+			name: 'Serveis Bitdesal',
+			itemListElement: [
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: "Consultoria d'IA per a empreses",
+						url: path('/consultoria-ia'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: "Consultoria d'IA en Alacant i Elx",
+						url: path('/consultoria-ia-alicante-elche'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Automatització de processos amb IA',
+						url: path('/automatizacion-procesos-ia'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: "Agents d'IA per a empreses",
+						url: path('/agentes-ia-empresas'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Desenvolupament i consultoria de programari',
+						url: path('/consultoria-software'),
+					},
+				},
+			],
+		};
+	}
+	if (lang === 'en') {
+		return {
+			'@type': 'OfferCatalog',
+			name: 'Bitdesal services',
+			itemListElement: [
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'AI consulting for business',
+						url: path('/consultoria-ia'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'AI consulting in Alicante and Elche',
+						url: path('/consultoria-ia-alicante-elche'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'AI process automation',
+						url: path('/automatizacion-procesos-ia'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'AI agents for business',
+						url: path('/agentes-ia-empresas'),
+					},
+				},
+				{
+					'@type': 'Offer',
+					itemOffered: {
+						'@type': 'Service',
+						name: 'Software development and consulting',
+						url: path('/consultoria-software'),
+					},
+				},
+			],
+		};
+	}
+	return {
+		'@type': 'OfferCatalog',
+		name: 'Servicios Bitdesal',
+		itemListElement: [
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Consultoría de IA para empresas',
+					url: path('/consultoria-ia'),
+				},
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Consultoría de IA en Alicante y Elche',
+					url: path('/consultoria-ia-alicante-elche'),
+					areaServed: AREA_SERVED.slice(0, 3),
+				},
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Automatización de procesos con IA',
+					url: path('/automatizacion-procesos-ia'),
+				},
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Agentes de IA para empresas',
+					url: path('/agentes-ia-empresas'),
+				},
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Desarrollo y consultoría de software',
+					url: path('/consultoria-software'),
+				},
+			},
+		],
+	};
+}
 
 const AREA_SERVED = [
 	{ '@type': 'City', name: 'Elche', sameAs: 'https://es.wikipedia.org/wiki/Elche' },
@@ -40,7 +220,7 @@ const AREA_SERVED_VA = [
 		name: "Província d'Alacant",
 		sameAs: 'https://ca.wikipedia.org/wiki/Prov%C3%ADncia_d%27Alacant',
 	},
-	{ '@type': 'AdministrativeArea', name: 'Comunitat Valenciana' },
+	{ '@type': 'AdministrativeArea', name: 'País Valencià' },
 	{ '@type': 'Country', name: 'Espanya' },
 ];
 
@@ -85,7 +265,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		areaServed,
 		founder: { '@id': CAYE_ID },
 		employee: [{ '@id': CAYE_ID }, { '@id': RAMIRO_ID }],
-		knowsAbout: KNOWS_ABOUT,
+		knowsAbout: KNOWS_ABOUT_BY_LANG[lang],
 		priceRange: '€€',
 		sameAs: [
 			LINKEDIN_COMPANY,
@@ -93,56 +273,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 			// TODO(caye): perfil GitHub de la empresa
 			// TODO(caye): Perfil de Empresa de Google
 		],
-		hasOfferCatalog: {
-			'@type': 'OfferCatalog',
-			name: 'Servicios Bitdesal',
-			itemListElement: [
-				{
-					'@type': 'Offer',
-					itemOffered: {
-						'@type': 'Service',
-						name: 'Consultoría de IA para empresas',
-						url: `${SITE_ORIGIN}/consultoria-ia/`,
-					},
-				},
-				{
-					'@type': 'Offer',
-					itemOffered: {
-						'@type': 'Service',
-						name:
-							lang === 'va'
-								? "Consultoria d'IA en Alacant i Elx"
-								: 'Consultoría de IA en Alicante y Elche',
-						url: `${SITE_ORIGIN}/consultoria-ia-alicante-elche/`,
-						areaServed: areaServed.slice(0, 3),
-					},
-				},
-				{
-					'@type': 'Offer',
-					itemOffered: {
-						'@type': 'Service',
-						name: 'Automatización de procesos con IA',
-						url: `${SITE_ORIGIN}/automatizacion-procesos-ia/`,
-					},
-				},
-				{
-					'@type': 'Offer',
-					itemOffered: {
-						'@type': 'Service',
-						name: 'Agentes de IA para empresas',
-						url: `${SITE_ORIGIN}/agentes-ia-empresas/`,
-					},
-				},
-				{
-					'@type': 'Offer',
-					itemOffered: {
-						'@type': 'Service',
-						name: 'Desarrollo y consultoría de software',
-						url: `${SITE_ORIGIN}/consultoria-software/`,
-					},
-				},
-			],
-		},
+		hasOfferCatalog: offerCatalog(lang),
 	};
 
 	const website: JsonLdNode = {
@@ -161,7 +292,7 @@ export function buildSiteGraph(lang: Language, extraNodes: JsonLdNode[] = []): J
 		jobTitle: cayeJobTitle(lang),
 		url: `${SITE_ORIGIN}/caye/`,
 		worksFor: { '@id': ORG_ID },
-		knowsAbout: KNOWS_ABOUT,
+		knowsAbout: KNOWS_ABOUT_BY_LANG[lang],
 		sameAs: [
 			caye?.linkedin,
 			caye?.github,

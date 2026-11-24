@@ -2,12 +2,12 @@
 title: "Entrevistes tècniques en l'era de la IA: potser avaluem l'equivocat"
 description: "Les entrevistes tècniques mesuren el que ja fa la IA. Què haurien d'avaluar les empreses en contractar desenvolupadors i com seria un procés útil hui."
 pubDate: 2026-11-17
-audience: technical
-layout: feature
-heroImage: /images/blog/entrevistas-tecnicas-ia/hero.jpg
-ogImage: /images/blog/entrevistas-tecnicas-ia/hero.jpg
-titleHighlight: 'quizás evaluamos lo equivocado'
-subtitle: 'Llevamos años midiendo cuánto código puede escribir una persona bajo presión. La IA ha cambiado las reglas: ahora importa más el criterio que la memoria.'
+audience: "technical"
+layout: "feature"
+heroImage: "/images/blog/entrevistas-tecnicas-ia/hero.jpg"
+ogImage: "/images/blog/entrevistas-tecnicas-ia/hero.jpg"
+titleHighlight: "potser avaluem l'equivocat"
+subtitle: "Portem anys mesurant quant codi pot escriure una persona sota pressió. La IA ha canviat les regles: ara importa més el criteri que la memòria."
 ---
 
 Fa un temps em van entrevistar per a un lloc de Android sènior en una empresa que estava migrant la seua app de XML a Jetpack Compose. Per a liderar la migració ja havien fitxat a un dels majors experts; entre les meues tasques estaria assegurar-me que les migracions es feien bé.
@@ -89,7 +89,7 @@ Durant una dècada es va donar a entendre que la carrera no aportava res que no 
   <p class="bf-idea-text">Amb la IA escrivint codi, ser ràpid ja no és un avantatge. L'avantatge és saber què demanar, detectar quan està mal i dissenyar un sistema que puga mantenir.</p>
 </div>
 
-Aqueixa visió és el que separa a qui entén el que la IA produeix de qui simplement ho accepta. No es tracta de tornar a usar el títol com a filtre, sinó de valorar aqueixa base en lloc de la velocitat en teclejar. Aqueixa base és la que apliquem en [consultoria de programari](/consultoria-software/) per a dissenyar processos que aguanten producció.
+Aqueixa visió és el que separa a qui entén el que la IA produeix de qui simplement ho accepta. No es tracta de tornar a usar el títol com a filtre, sinó de valorar aqueixa base en lloc de la velocitat en teclejar. Aqueixa base és la que apliquem en [consultoria de programari](/va/consultoria-software/) per a dissenyar processos que aguanten producció.
 
 <h2 class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">04</span>
