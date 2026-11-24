@@ -11,7 +11,7 @@ export const localPage = {
 	where: {
 		title: 'Quiénes somos y dónde estamos',
 		p1: 'Somos dos. Caye Ruiz fundó Bitdesal después de veinte años en software. Ramiro Santamaría es socio y se ocupa de automatización e IT. No somos una red de oficinas: la sede está en Elche (Alicante) y el trabajo del día a día es directo con quien lo encarga.',
-		p2: 'Las reuniones presenciales las planteamos en Elche, Alicante, la Vega Baja y Valencia. El resto de España, en remoto, con la misma agenda y el mismo precio. No hace falta estar en la provincia para trabajar con nosotros; sí ayuda cuando el proceso hay que verlo en el taller, en la obra o en la oficina.',
+		p2: 'Las reuniones presenciales las planteamos en Elche, Alicante provincia, Valencia y Murcia. Para el resto de España, podemos ver, aunque en principio en remoto. No hace falta estar en la provincia para trabajar con nosotros; sí ayuda cuando el proceso hay que verlo en el taller, en la obra o en la oficina.',
 		p3: 'Trabajar con un consultor de IA cercano tiene una ventaja práctica: el proceso se entiende mejor viéndolo. Una mañana en tu taller, tu obra o tu oficina de Elche o Alicante suele ahorrar semanas de correos.',
 	},
 	work: {
