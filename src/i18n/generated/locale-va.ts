@@ -2,7 +2,7 @@
 export const localeVa = {
   "home": {
     "hero": {
-      "title": "Tu centra't en el teu negoci. La tecnologia la posem nosaltres.",
+      "title": "Tu centra't en el teu negoci. La tecnologia la posem moatros.",
       "subtitle": "Consultoria de IA i desenvolupament de programari des de Elche (Alicante). Amb preu tancat i sense sorpreses.",
       "imageAlt": "Imatge que reflecteix la serenitat que volem transmetre en Bitdesal als nostres clients",
       "viewProjects": "Veure projectes",
@@ -669,7 +669,7 @@ export const localeVa = {
     "home": "Inici",
     "iaService": "Consultoria de IA",
     "softwareService": "Desenvolupament de programari",
-    "about": "Nosaltres",
+    "about": "Moatros",
     "pricing": "Preus",
     "workAndPricing": "Casos i preus",
     "blog": "Blog",
@@ -693,7 +693,7 @@ export const localeVa = {
     "mentorship": "Mentoría",
     "consulting": "Consultoria",
     "companyTitle": "Empresa",
-    "aboutUs": "Nosaltres",
+    "aboutUs": "Moatros",
     "androidConsulting": "desenvolupament d'apps Android",
     "pricing": "Preus",
     "workAndPricing": "Casos i preus",
