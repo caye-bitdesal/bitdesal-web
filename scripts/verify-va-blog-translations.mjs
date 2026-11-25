@@ -6,6 +6,14 @@ import { parseFrontmatter, splitMarkdownFile } from './blog-frontmatter.mjs';
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const BLOG_ES = join(ROOT, 'src/content/blog');
 const BLOG_VA = join(ROOT, 'src/content/blog/va');
+const LOCALIZED_ROUTES_PATH = join(ROOT, 'src/i18n/localizedRoutes.ts');
+
+function loadEsOnlyBlogSlugs() {
+	const src = readFileSync(LOCALIZED_ROUTES_PATH, 'utf8');
+	const match = src.match(/const ES_ONLY_BLOG_SLUGS = new Set(?:<string>)?\(\[([\s\S]*?)\]\)/);
+	if (!match) return new Set();
+	return new Set([...match[1].matchAll(/['"]([^'"]+)['"]/g)].map((m) => m[1]));
+}
 
 function loadFm(path) {
 	const parts = splitMarkdownFile(readFileSync(path, 'utf8'));
@@ -13,7 +21,8 @@ function loadFm(path) {
 	return parseFrontmatter(parts.frontText);
 }
 
-const esPosts = readdirSync(BLOG_ES).filter((f) => f.endsWith('.md'));
+const esOnlySlugs = loadEsOnlyBlogSlugs();
+const esPosts = readdirSync(BLOG_ES).filter((f) => f.endsWith('.md') && !esOnlySlugs.has(f.replace(/\.md$/, '')));
 const errors = [];
 
 for (const file of esPosts) {

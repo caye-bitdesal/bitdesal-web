@@ -26,8 +26,8 @@ const SLUG_ALIASES: Record<string, Record<Language, string>> = {
 	nosaltres: { es: 'nosotros', en: 'about', fi: 'meista', va: 'nosaltres' },
 };
 
-/** Spanish articles that have no EN/FI file. Hreflang must not point at missing URLs. */
-const ES_ONLY_BLOG_SLUGS = new Set<string>([]);
+/** Spanish articles that have no EN/FI/VA file. Hreflang must not point at missing URLs. */
+const ES_ONLY_BLOG_SLUGS = new Set<string>(['cuanto-cuesta-implementar-ia-empresa']);
 
 /** Pages without a localized version only list themselves in hreflang / sitemap alternates. */
 const ES_ONLY_SLUGS = new Set([

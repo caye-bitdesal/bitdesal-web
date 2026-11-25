@@ -81,7 +81,8 @@ export function extractH2(markdown: string): { id: string; text: string }[] {
 	if (found.length > 0) return found;
 	for (const match of body.matchAll(/<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi)) {
 		const attrs = match[1] ?? '';
-		const text = match[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+		const withoutNum = match[2].replace(/<span[^>]*class="bf-section-num"[^>]*>[\s\S]*?<\/span>/gi, '');
+		const text = withoutNum.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 		const idMatch = attrs.match(/\sid="([^"]+)"/i);
 		if (!text) continue;
 		found.push({ id: idMatch?.[1] ?? headingSlug(text), text });
