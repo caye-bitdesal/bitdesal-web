@@ -112,7 +112,7 @@ Kaksi yritystä pyytää samaa — «automatisoikaa tarjoukset» — ja hinta er
   </div>
 </div>
 
-Hinta riippuu myös siitä, onko data valmiiksi järjestyksessä vai pitääkö tulkita. Kiinteät kentät sopivat usein [prosessiautomaatioon tekoälyllä](/automatizacion-procesos-ia/). Lähtökohta on pakettiauton ääniviesti, kesken jäänyt WhatsApp tai kuittikuva; tarvitaan [tekoälyagentti](/agentes-ia-empresas/), joka lukee ja pysähtyy epävarmuudessa: korkea hinta, valitus, tuntematon kenttä. Pysäytys kirjataan tutkimuksessa teidän luvuillanne.
+Hinta riippuu myös siitä, onko data valmiiksi järjestyksessä vai pitääkö tulkita. Kiinteät kentät sopivat usein [prosessiautomaatioon tekoälyllä](/automatizacion-procesos-ia/). Lähtökohta on pakettiauton ääniviesti, kesken jäänyt WhatsApp tai kuittikuva; tarvitaan [tekoälyagentti](/agentes-ia-empresas/), joka lukee ja pysähtyy epävarmuudessa: korkea hinta, valitus, tuntematon kenttä. Pysäytys kirjataan tutkimuksessa teidän luvuillanne. Artikkeli [Tekoälyagentit yrityksille: 6 käyttötapausta](/fi/blog/agentes-ia-empresas-casos-oficios/) käy läpi kuusi tämän tyyppistä esimerkkiä.
 
 Kun virta koskee asiakastietoja, vaatimukset eivät ole valinnaisia. [EU:n tekoälyasetus](https://eur-lex.europa.eu/legal-content/FI/TXT/?uri=CELEX:32024R1689) (2024) ja GDPR nimet, puhelinnumerot ja osoitteet mukaan lukien. Selkeä käyttöoikeus, ihmisen vahvistus ennen asiakkaalle lähtevää ja kielto käyttää asiakirjoja julkisen mallin opetukseen kuuluvat hintaan.
 

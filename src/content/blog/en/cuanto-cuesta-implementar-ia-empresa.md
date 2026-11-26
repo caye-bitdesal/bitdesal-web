@@ -112,7 +112,7 @@ Two companies ask for the same thing — “automate quotes” — and the price
   </div>
 </div>
 
-Price also shifts when data is already structured versus when it must be interpreted. Fixed fields often fit [AI process automation](/automatizacion-procesos-ia/). When the starting point is a voice note from the van, a half-finished WhatsApp, or a photo of a delivery note, you need an [AI agent](/agentes-ia-empresas/) that reads it and stops when unsure: a high price, a complaint, an unknown field. That stop condition is written in the study, with your numbers.
+Price also shifts when data is already structured versus when it must be interpreted. Fixed fields often fit [AI process automation](/automatizacion-procesos-ia/). When the starting point is a voice note from the van, a half-finished WhatsApp, or a photo of a delivery note, you need an [AI agent](/agentes-ia-empresas/) that reads it and stops when unsure: a high price, a complaint, an unknown field. That stop condition is written in the study, with your numbers. The article [AI agents for companies: 6 trade use cases](/en/blog/agentes-ia-empresas-casos-oficios/) walks through six examples of that kind of input.
 
 When the flow touches client data, compliance is not optional. The [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689), adopted in 2024, sets obligations by use case, and GDPR still applies to names, phones, and addresses. Clear access, human confirmation before anything goes to the client, and not training a public model on their documents belong in the price. Not a surprise line item at the end.
 

@@ -112,7 +112,7 @@ Dues empreses demanen el mateix, «automatitzar els pressupostos», i el preu no
   </div>
 </div>
 
-També canvia el preu si les dades venen ordenades o cal interpretar-les. Amb caselles fixes sol bastar una [automatització de processos amb IA](/automatizacion-procesos-ia/). Si el punt de partida és una nota de veu des de la furgoneta, un WhatsApp a mitges o la foto d'un albarà, cal un [agent d'IA](/agentes-ia-empresas/) que ho llegisca i pare quan no estiga segur: un preu alt, una queixa, una dada que no reconeix. Aquesta parada s'escriu a l'estudi, amb els teus números.
+També canvia el preu si les dades venen ordenades o cal interpretar-les. Amb caselles fixes sol bastar una [automatització de processos amb IA](/automatizacion-procesos-ia/). Si el punt de partida és una nota de veu des de la furgoneta, un WhatsApp a mitges o la foto d'un albarà, cal un [agent d'IA](/agentes-ia-empresas/) que ho llegisca i pare quan no estiga segur: un preu alt, una queixa, una dada que no reconeix. Aquesta parada s'escriu a l'estudi, amb els teus números. A l'article [Agents d'IA per a empreses: 6 casos en oficis](/va/blog/agentes-ia-empresas-casos-oficios/) baixem al detall amb sis exemples d'aquest tipus d'entrada.
 
 Quan el flux toca dades de clients, el compliment no és opcional. El [Reglament europeu d'intel·ligència artificial](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689), publicat el 2024, demana més o menys segons l'ús, i el RGPD continua aplicant a noms, telèfons i adreces. Deixar clar qui accedeix, que una persona confirmi el que ix cap al client i no usar els seus documents per entrenar un model públic va dins del preu. No és un extra que apareix al final.
 
