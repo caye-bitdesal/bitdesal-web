@@ -79,6 +79,8 @@ export const agentsPage = {
 		ia: 'Consultoría de IA para empresas',
 		auto: 'Automatización de procesos con IA',
 		local: 'Consultoría de IA en Elche y Alicante',
+		costGuide: 'Cuánto cuesta implementar IA en una empresa',
+		casesGuide: 'Agentes de IA para empresas: 6 casos en oficios',
 		contact: 'Agendar 30 minutos',
 	},
 	faq: {

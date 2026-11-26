@@ -50,10 +50,7 @@
 
 .bf-hero img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 200px;
-  object-fit: cover;
-  object-position: center 45%;
+  height: auto;
   display: block;
 }
 
@@ -355,7 +352,7 @@ html.dark .bf-figure figcaption {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--foreground) 55%, transparent);
+  color: color-mix(in srgb, var(--foreground) 72%, transparent);
 }
 
 .bf-bento-card--dark .bf-bento-label {
@@ -782,4 +779,46 @@ html.dark .bf-highlight {
 
 html.dark .bf-author-footer {
   background: var(--secondary);
+}
+
+/* Dark mode contrast fixes for feature article tokens and blocks */
+html.dark .bf-article {
+  --bf-accent: var(--color-primary);
+  --bf-accent-deep: #7bc0b6;
+  --bf-cream: var(--secondary);
+  --bf-mint: color-mix(in srgb, var(--primary) 12%, var(--card));
+}
+
+html.dark .bf-bento-card--cream {
+  border: 1px solid var(--border);
+}
+
+html.dark .bf-steps li::before {
+  color: var(--primary-foreground);
+}
+
+/* Visible FAQ block inside feature articles */
+.bf-faq {
+  margin: 3rem 0 2rem;
+}
+
+.bf-faq-heading {
+  font-family: var(--bf-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  margin: 0 0 1.25rem;
+}
+
+@media (max-width: 639px) {
+  .bf-main {
+    padding: 48px 20px 0;
+  }
+
+  .bf-title {
+    font-size: clamp(32px, 8.5vw, 44px);
+    line-height: 1.08;
+  }
 }
