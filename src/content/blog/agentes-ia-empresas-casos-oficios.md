@@ -70,7 +70,7 @@ No publicamos nombres de clientes. Lo de abajo son **trabajos que sí hacemos**,
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">1. Presupuesto desde una nota de voz</h3>
 
-Vuelves de la obra y grabas medidas y lo que has visto. El agente pasa el audio a texto, mete las partidas en tu plantilla y deja el **borrador para que le pongas el precio**. No se lo manda al cliente: tú envías cuando el importe te cuadra. Suele parar si un material tiene varias opciones en catálogo o si el total pasa del límite que habéis fijado.
+Vuelves de la obra y grabas medidas y lo que has visto. El agente pasa el audio a texto, mete las partidas en tu plantilla y deja el **borrador para que le pongas el precio**. El flujo completo (PDF, seguimiento y errores a evitar) está en la guía de [automatizar presupuestos con IA](/blog/automatizar-presupuestos-ia/). No se lo manda al cliente: tú envías cuando el importe te cuadra. Suele parar si un material tiene varias opciones en catálogo o si el total pasa del límite que habéis fijado.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">2. WhatsApp: responder lo repetido y recoger datos</h3>
 
