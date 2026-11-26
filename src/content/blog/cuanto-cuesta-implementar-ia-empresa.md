@@ -43,14 +43,14 @@ No hay un precio único, y quien te lo dé en la primera llamada se lo está inv
 
 | Modalidad                 | Precio (+ IVA)                                       | Plazo habitual               | Para qué es                                                                                                                         |
 | ------------------------- | ---------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Estudio de procesos**   | 450 € (675 € si hay varios departamentos o sistemas) | Unas 10 horas, en pocos días | Analizar tus necesidades y diseñar la solución potencial, y estimar su coste. Se descuenta entero si contratas en menos de  30 días |
-| **Automatización exprés** | 1.800–2.900 €                                        | 2–3 semanas                  | Un solo proceso: proceso de venta, facturación, inventariado...                                                                     |
+| **Estudio de procesos**   | 450 € (675 € si hay varios departamentos o sistemas) | Unas 10 horas, en pocos días | Analizar tus necesidades y diseñar la solución potencial, y estimar su coste. Se descuenta entero si contratas en menos de 30 días |
+| **Automatización exprés** | 1.800–2.900 €                                        | 2–3 semanas                  | Un solo proceso: venta, facturación, inventario…                                                                                  |
 | **Herramienta a medida**  | Desde 4.500 €                                        | El que salga del estudio     | Una solución integral que aúne todas las áreas de tu negocio                                                                        |
 | **Soporte**               | Desde 225 €/mes (5/10/20 h: 225 € / 450 € / 900 €)   | Mes a mes, sin permanencia   | Ajustes e incidencias. Solo se cobran las horas usadas                                                                              |
 
-Si  sólo necesitas digitalizar y automatizar un proceso (captación y venta, planificación y ejecución, compras e inventario, facturación y cobro, postventa y fidelización o administración), es una automatización exprés, ya que se apoya en lo que ya usáis probablemente no haga falta una herramienta nueva sino integrar las que ya hay. 
+Si solo necesitas digitalizar y automatizar un proceso (captación y venta, planificación y ejecución, compras e inventario, facturación y cobro, postventa y fidelización o administración), es una automatización exprés: se apoya en lo que ya usáis y, probablemente, no hará falta una herramienta nueva, sino integrar las que ya hay.
 
-Sin embargo, si la solución implica solventar varios procesos, probablemente se necesite un herramienta a medida. El desglose por fases está en las [tarifas de la consultoría de IA](/casos-y-precios/#ia).
+Sin embargo, si la solución implica solventar varios procesos, probablemente se necesite una herramienta a medida. El desglose por fases está en las [tarifas de la consultoría de IA](/casos-y-precios/#ia).
 
 <figure class="bf-figure bf-figure--natural">
   <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-1-captacion-y-venta.jpg" alt="Diagrama del proceso de captación y venta: desde la consulta del cliente hasta el presupuesto aceptado, con los sistemas que intervienen" width="1024" height="453" loading="lazy" decoding="async" />
@@ -87,7 +87,7 @@ Sin embargo, si la solución implica solventar varios procesos, probablemente se
   <span class="bf-section-title"><span class="bf-section-lead">¿Qué factores suben o bajan el presupuesto</span> <span class="bf-section-accent">de un proyecto de IA?</span></span>
 </h2>
 
-Dos empresas piden lo mismo, «automatizar los presupuestos», y el precio no sale igual. El modelo es la parte pequeña. Lo que pesa es lo de alrededor: de dónde sale los datos, cuántas excepciones hay y quién tiene que decir que sí antes de que eso llegue al cliente.
+Dos empresas piden lo mismo, «automatizar los presupuestos», y el precio no sale igual. El modelo es la parte pequeña. Lo que pesa es lo de alrededor: de dónde salen los datos, cuántas excepciones hay y quién tiene que decir que sí antes de que eso llegue al cliente.
 
 <div class="bf-bento">
   <div class="bf-bento-card bf-bento-card--cream">
@@ -136,12 +136,12 @@ El número de entrada no es el único. Si solo miras lo que cuesta montarlo, el 
   </div>
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">03</span>
-    <h3>Que se use</h3>
+    <h3>Adopción</h3>
     <p>Si el equipo no lo entiende, a la semana vuelve al WhatsApp. La formación va dentro del encargo, con el trabajo de verdad, no con una demo.</p>
   </div>
 </div>
 
-Las cuentas gratuitas no son adecuadas, porque aunque parecen no costar nada los datos que insertes, nombres, presupuestos, contratos... acaban financiando la herramienta gratuita ([Laboratorio de la AEPD lo contó el 25 de agosto de 2026](https://laboratorio.aepd.es/blog/prompts-datos-personales-y-confidencialidad-el-nuevo-perimetro-de-riesgo-de-la-ia-generativa)).   Además si tratáis datos de clientes, hace falta un contrato con el proveedor (el artículo 28 del RGPD) y una cuenta de empresa en la que esos documentos no sirvan para entrenar un modelo. Eso se mira en el estudio, antes de cerrar el precio.
+Las cuentas gratuitas no son adecuadas: aunque parezcan no costar nada, los datos que insertes —nombres, presupuestos, contratos— acaban financiando la herramienta gratuita ([Laboratorio de la AEPD, 25 de agosto de 2026](https://laboratorio.aepd.es/blog/prompts-datos-personales-y-confidencialidad-el-nuevo-perimetro-de-riesgo-de-la-ia-generativa)). Además, si tratáis datos de clientes, hace falta un contrato con el proveedor (artículo 28 del RGPD) y una cuenta de empresa en la que esos documentos no sirvan para entrenar un modelo. Eso se mira en el estudio, antes de cerrar el precio.
 
 <div class="bf-idea">
   <p class="bf-idea-label">La idea clave</p>
