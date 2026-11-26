@@ -15,43 +15,43 @@ keyword: 'AI agents for companies'
 heroImage: /images/blog/agentes-ia-empresas-casos-oficios/hero.jpg
 ogImage: /images/blog/agentes-ia-empresas-casos-oficios/hero.jpg
 titleHighlight: '6 trade use cases'
-subtitle: 'What an agent actually does in installations and refurb — no invented clients or magic: tasks, stop rules, and pricing we use at Bitdesal.'
+subtitle: 'What we see in field service and installations when an agent is actually worth it — the task, the stop rules, and the price, without miracle promises.'
 faq:
   - q: 'What is an AI agent for companies and how is it different from a chatbot?'
-    a: 'An agent reads messy input — audio, WhatsApp, PDF — picks the next step within rules, and runs an action: fill a draft, ask for a field, or alert a person. A chatbot only replies with text; it does not finish the task.'
+    a: 'You get an audio clip, a half-finished WhatsApp, or a PDF. The agent reads it, picks the next step under your rules, and does something — draft a quote, ask for a field, or ping you. A chatbot only types back; it does not finish the job.'
   - q: 'Do AI agents work for trade and installation companies?'
-    a: 'Yes when the bottleneck is quotes, visits, job reports, or delivery notes arriving by message and ending in copy-paste. If the task changes every week or volume is low, we usually say it is not worth it before writing code.'
+    a: 'They do when quotes, visits, job reports, or delivery notes land in messages and end in copy-paste. If the task changes every week or only happens four times a month, we usually tell you before any code: sometimes it simply does not pay back.'
   - q: 'How much does it cost to deploy an AI agent in a company?'
-    a: 'There is no separate “agent” fee. An express build with an agent typically lands at €1,800–2,900 + VAT; the process study is €450 + VAT (credited if you hire within 30 days). More detail in the guide on AI implementation pricing.'
+    a: 'We do not charge extra “because it is an agent.” An express build with an agent is typically €1,800–2,900 + VAT; the process study is €450 + VAT first and is credited if you hire within 30 days. The longer breakdown lives in the AI pricing guide.'
   - q: 'Can the agent reply to customers on WhatsApp on its own?'
-    a: 'Only within what we wrote down and until it hits a stop rule: high price, complaint, unknown field, or request to speak to someone. Anything that commits price or date is confirmed by a person on your team.'
+    a: 'Only within what we agreed in writing, and it stops on odd prices, complaints, data it does not recognise, or someone asking for a human. Price and date still get confirmed by your team.'
   - q: 'Do I need to hire an AI specialist to maintain the agent?'
-    a: 'Not for day-to-day use: the flow is documented and tool accounts sit in your name. Our support, if you want it, starts at €225/month + VAT with no lock-in; otherwise you can adjust with us ad hoc.'
+    a: 'Not for everyday use: the flow is documented and the accounts are yours. If you want us, support bundles start at €225/month + VAT with no lock-in; otherwise you call when something needs tweaking.'
 ---
 
-**AI agents for companies** are systems with a bounded job: they read a message or document, choose the next step within rules, execute it — or stop and hand it to you. In trades and installations they do not replace the craft; they cut hours spent copying measurements, chasing photos, and retyping the same quote. What we build for that sector is summarised on [AI agents for business](/agentes-ia-empresas/); here we go deeper with **six typical use cases**, with no client names and no made-up figures.
+**AI agents for companies** are not a chatbot on steroids. They have one job: take what comes in —a message, email, voice note, photo of a delivery note— pick the next step under rules you set, act, or stop and hand it to you. In trades and installations they do not do the skilled work on site; they take the part nobody wants —copying measurements, chasing photos, retyping the same quote. We summarise the offer on [AI agents for business](/agentes-ia-empresas/); here are **six situations** we see all the time, with no client names and no made-up numbers.
 
-Spain’s [INE press release of 22 October 2026](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm) notes that in Q1 2026, 33.6% of companies with ten or more employees already used some AI technology. Interest is there; what often fails is fit with a real process. An agent pays off when input is messy and output is a concrete task — a draft, a record, an alert — not when a FAQ paragraph is enough.
+Spain’s [INE press release of 22 October 2026](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm) says 33.6% of companies with ten or more staff already used some form of AI in Q1 2026. Curiosity is not the problem; fit with a real process is. An agent makes sense when input is messy and output must be an action —a draft, a record, an alert— not when “we are open 8 to 6” is enough.
 
-<blockquote class="bf-pullquote">If the agent does not save real hours, we do not propose it. The task comes first, then the word “intelligence”.</blockquote>
+<blockquote class="bf-pullquote">If it does not give you hours back, we will not sell it. We look at the task first; the word “intelligence” comes later.</blockquote>
 
 <h2 id="what-is" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">01</span>
   <span class="bf-section-title"><span class="bf-section-lead">What is an AI agent for companies</span> <span class="bf-section-accent">and what is it not?</span></span>
 </h2>
 
-An **AI agent for companies** takes input (WhatsApp, email, voice note, photo of a delivery note), understands what is being asked, checks what we allowed it to check —rates, calendar, quote status— and performs **one action**. It may send a short reply, create a draft in your template, or escalate to someone on the team.
+An **AI agent for companies** reads what lands in your inbox, figures out what is being asked, checks only what we allowed —rates, calendar, quote status— and does **one thing**: a short reply, a draft in your template, or a nudge to someone on the team.
 
-It is not a digital employee or general intelligence. It does not “run the company”. It does the narrow job we wrote and stops when the rule says stop: amount above a threshold, complaint, unknown data, or a customer asking for a person.
+It is not a digital boss or general-purpose AI. It does not run the company. It does the narrow job we wrote in the study and brakes when it should: amount over what you agreed, complaint, weird data, or a customer who wants a human.
 
-The European Commission summarises the regulatory frame on its [AI regulatory framework page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) (updated 2024–2026). Before connecting a channel with customer data, we clarify what leaves your systems, to which service, and under which contract; the full legal text of [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) is on EUR-Lex.
+Before we hook up WhatsApp or a folder with customer data, we tell you what leaves your systems, where it goes, and under which contract. The Commission’s [AI regulatory framework page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) is the high-level map; [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) on EUR-Lex is the full text.
 
 <h2 id="agent-chatbot-auto" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">02</span>
   <span class="bf-section-title"><span class="bf-section-lead">Agent, chatbot, or automation:</span> <span class="bf-section-accent">what fits trades?</span></span>
 </h2>
 
-In sales calls the three get mixed up. In a project they are not the same, and picking wrong means paying too much.
+On the first call people often mix the three. They are not interchangeable, and picking the wrong one costs money.
 
 | What | What it does | When it fits trades |
 | --- | --- | --- |
@@ -59,56 +59,56 @@ In sales calls the three get mixed up. In a project they are not the same, and p
 | **Chatbot** | Replies with text. Does not create the quote or place the supplier order. | Hours, documents to send, questions that repeat every week. |
 | **AI agent** | Reads, decides the next step, acts, or stops and passes it on. | Voice note, half-finished WhatsApp, or delivery-note photo where you must **do something** with it. |
 
-Many projects combine all three: the agent understands the message, [AI process automation](/automatizacion-procesos-ia/) moves data to the right place, and if needed a short reply goes to the customer. We decide that in the study, not in a slogan.
+Often you need a mix: the agent understands the message, [AI process automation](/automatizacion-procesos-ia/) moves data where it belongs, and if needed a short reply goes to the customer. We decide that in the study, not in a slide deck of buzzwords.
 
 <h2 id="six-cases" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">03</span>
   <span class="bf-section-title"><span class="bf-section-lead">What real AI agent cases</span> <span class="bf-section-accent">do we see in trade companies?</span></span>
 </h2>
 
-We do not publish client names. What follows are **jobs we actually take on**, described as work, not testimonials. If yours looks similar, the €450 + VAT process study says whether it pays; if not, we say that too.
+No client names here. What follows is **work we actually do**, described as work, not as a testimonial. If yours looks similar, the €450 + VAT process study says whether it pays; if not, we say that plainly too.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">1. Quote from a voice note</h3>
 
-Whoever was on site records measurements and what they saw. The agent transcribes, maps lines into your template, and leaves a **draft for you to price**. It does not send the quote to the customer; you send it when the total is right. A common stop is a catalog item with several options or an amount above the threshold you set.
+Someone comes back from site with dusty hands and records measurements and what they saw. The agent transcribes, drops lines into your template, and leaves a **draft for you to price**. It does not send the quote to the customer; you do when the total feels right. It usually stops on catalog items with several options or totals above the limit you set.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">2. WhatsApp: answer the repeat and collect data</h3>
 
-The agent answers what you have answered a thousand times and asks for what is missing to quote: address, photos, measurements, when someone can visit. The thread stops being twenty messages and becomes one record. If someone asks for a discount or a fixed date, the agent does not improvise: **it alerts you**.
+Tired of answering “do you cover area X?” again. The agent replies with what you already know and asks for what is missing to quote: address, photos, measurements, when you can visit. The thread becomes one record instead of twenty scattered messages. Discounts or fixed dates? It does not wing it: **it pings you**.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">3. Read delivery notes and match the order</h3>
 
-A photo or PDF of the delivery note arrives. The agent extracts supplier, references, and amounts and compares them to the order. What matches is prepared for your back office; what does not is flagged for a person instead of surfacing at month end.
+A photo of the delivery note or a supplier PDF arrives. We pull references and amounts and compare them to the order. Matches get queued for your back office; mismatches get flagged this week, not on the 30th.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">4. Quote follow-up without chasing threads</h3>
 
-The agent knows which quotes are still open and drafts the reminder in your tone on the channel you already use. It logs the reply. It does not push someone who said no. You see the open list, not forty separate chats.
+You know quotes are hanging, but opening WhatsApp feels like a chore. The agent drafts the reminder in your tone on the channel you already use and logs replies. It does not nag people who said no. You see an open list, not forty lost chats.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">5. Job report from the phone</h3>
 
-**Example:** an installer sends three photos and an audio with work done and material used. The agent structures the report in the fields you use for invoicing or warranty, and flags issues (missing serial number, hours that do not add up). Office staff review before close of day. If your report is a fixed PDF that never changes, plain automation without an agent may be enough; the study shows that.
+**Example:** three photos and an audio from the van with work done and material used. The agent slots that into the fields you use for invoicing or warranty and flags odd bits: missing serial, hours that do not add up. Office staff review before end of day. If your report is always the same PDF, plain automation without an agent may be enough —the study shows which.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">6. Appointments and visit slots from messages</h3>
 
-**Example:** the customer writes “can you come Thursday afternoon?”. The agent checks the calendar we connected, suggests slots within your rules (area, minimum duration, who goes), and leaves the visit as **draft** or asks the end customer to confirm. It does not block the diary with a commitment you later move by hand.
+**Example:** “Can you come Thursday afternoon?” It checks the calendar we connected, suggests slots by area, duration, and who can go, and leaves the visit as **draft** or asks the customer to confirm. It does not fill your diary with commitments you later move by hand.
 
 <h2 id="limits" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">04</span>
   <span class="bf-section-title"><span class="bf-section-lead">How do we supervise an agent</span> <span class="bf-section-accent">without rereading everything?</span></span>
 </h2>
 
-The working rule is: **AI proposes, people confirm**. A quote draft, order, or customer-facing reply that commits the company does not go out alone on day one until we have measured that the error rate is acceptable for you.
+Our rule is simple: **AI proposes, people confirm**. No quote draft, order, or customer reply that commits price or date goes out alone in the first days until we know the error rate is acceptable for you.
 
-Supervising is not rereading every message as if there were no agent. It is reviewing what the system flagged and sampling what it let through. If that review takes as long as doing the work by hand, the agent is not ready and we do not call it done.
+Supervising is not rereading every message. It is checking what the system flagged and spot-checking a sample of the rest. If that review takes as long as doing the work by hand, the agent is not ready and we do not sign it off.
 
-In software development, Caye Ruiz has seen the cost of poorly scoped agents: a “simple” language switcher can turn into hours of iteration without a written definition of done. That story is in [Insomnia, AI agents, and the “simple” feature](/en/blog/insomnio-agentes-ia-funcion-sencilla/). In trades the risk is not code but **a wrong price or date**; stop rules are written with your numbers, not a generic threshold.
+Caye Ruiz has seen it in software: a “simple” language switcher can eat hours without a written definition of done. We tell that story in [Insomnia, AI agents, and the “simple” feature](/en/blog/insomnio-agentes-ia-funcion-sencilla/). On site the scare is not code but **a wrong price or date**; stop rules use your numbers, not a generic threshold from the internet.
 
 <h2 id="pricing" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">05</span>
   <span class="bf-section-title"><span class="bf-section-lead">How much does an AI agent cost</span> <span class="bf-section-accent">for a trade company?</span></span>
 </h2>
 
-An agent does not have a separate “because it is an agent” price. It is quoted like any other automation, because cost sits in the flow, testing, and supervision.
+There is no magic “agent” surcharge. We quote it like any other automation because the cost is designing the flow, testing it, and making supervision clear.
 
 | Step | What it includes | Guide price (+ VAT) |
 | --- | --- | --- |
@@ -117,21 +117,21 @@ An agent does not have a separate “because it is an agent” price. It is quot
 | **Custom tool** | Several processes or its own UI | From €4,500 |
 | **Optional support** | Tweaks and incidents, no lock-in | From €225/month (5, 10, or 20 hour bundles) |
 
-Longer breakdown, licences, and what pushes price up, is in [how much it costs to implement AI in a company](/en/blog/cuanto-cuesta-implementar-ia-empresa/). Why we always start with a fixed-price study, in [fixed price before you automate](/en/blog/precio-cerrado-automatizacion-empresa/). Published rates for [AI consulting](/en/consultoria-ia/) link to [case studies and pricing](/en/work-and-pricing/#ia).
+Licences and what pushes price up are in [how much it costs to implement AI in a company](/en/blog/cuanto-cuesta-implementar-ia-empresa/). Why we never skip a fixed-price study first: [fixed price before you automate](/en/blog/precio-cerrado-automatizacion-empresa/). Published rates: [AI consulting](/en/consultoria-ia/) and [case studies and pricing](/en/work-and-pricing/#ia).
 
 <h2 id="when-not" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">06</span>
   <span class="bf-section-title"><span class="bf-section-lead">When is an AI agent</span> <span class="bf-section-accent">not worth it?</span></span>
 </h2>
 
-We say this in the first call if it applies:
+We say this on the first call when it applies:
 
-- **Low volume:** if the task happens once a month and takes twenty minutes, payback does not cover the build.
-- **Rules that change every week:** agents need stability; if every quote is different with no template, we order the process first.
-- **Software you already have solves it:** we prefer saying that before building another silo.
-- **You want it to negotiate margin alone:** we do not automate that; stop rules exist for exactly that reason.
+- **Low volume:** the task happens once a month and takes twenty minutes; payback will not cover the build.
+- **Rules that change every week:** without a stable template we order the process first; the agent comes after.
+- **You already solved it:** if software you use does the job, we say so instead of building another silo.
+- **You want it to negotiate margin alone:** we do not automate that; stop rules exist for a reason.
 
-When it does fit, the next step is not a long project: it is **one task** and the hours it eats. We look at that in 30 minutes.
+When it does fit, you do not need a megaproject —you need **one task** and an honest count of the hours it burns. We can look at that in thirty minutes.
 
 <section class="bf-conclusion">
   <div class="bf-conclusion-grid">
@@ -140,8 +140,8 @@ When it does fit, the next step is not a long project: it is **one task** and th
       <h2 id="conclusion" class="bf-conclusion-heading">See if your case is on the list</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>If you recognise one of the six —voice, WhatsApp, delivery notes, follow-up, job reports, or visits—, start with the study or a short call. We tell you which price band you are in and whether it pays before any code.</p>
-      <p>Read more on <a href="/en/consultoria-ia/">AI consulting for companies</a> or <a href="https://cal.com/bitdesal/30min">book 30 minutes</a> with us. The call is free and does not commit you to a project.</p>
+      <p>If voice notes, WhatsApp, delivery notes, follow-ups, job reports, or visit requests sound familiar, a study or a short call is the sensible move. We tell you the price band and whether it pays before anyone writes code.</p>
+      <p>More on <a href="/en/consultoria-ia/">AI consulting for companies</a> or <a href="https://cal.com/bitdesal/30min">book 30 minutes</a>. No obligation.</p>
     </div>
   </div>
 </section>
