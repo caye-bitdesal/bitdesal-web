@@ -72,6 +72,8 @@ Sin embargo, si la solución implica solventar varios procesos, probablemente se
   <figcaption>Proceso 4 · Facturación y cobro</figcaption>
 </figure>
 
+Si este tramo depende de copiar datos del presupuesto o del parte, merece la pena leer [Verifactu para instaladores: fechas y qué hacer ya](/blog/verifactu-instaladores/) antes de cambiar de programa de facturación.
+
 <figure class="bf-figure bf-figure--natural">
   <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-5-postventa-y-fidelizacion.jpg" alt="Diagrama del proceso de postventa y fidelización: garantías, mantenimiento, reseñas y nuevos presupuestos" width="1024" height="632" loading="lazy" decoding="async" />
   <figcaption>Proceso 5 · Postventa y fidelización</figcaption>

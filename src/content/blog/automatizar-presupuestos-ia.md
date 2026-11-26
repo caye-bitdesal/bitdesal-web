@@ -121,6 +121,8 @@ No hay una respuesta única para todos.
 
 No vendemos app por vender app. Si con vuestro PDF actual y una automatización exprés está resuelto, os lo decimos. El [estudio a precio cerrado](/blog/precio-cerrado-automatizacion-empresa/) existe para no gastar en lo que no hace falta.
 
+Si el presupuesto alimenta la factura, conviene alinearlo con los plazos de Verifactu y factura electrónica B2B antes de que el margen se acorte: lo resumimos en [Verifactu para instaladores: fechas y qué hacer ya](/blog/verifactu-instaladores/).
+
 <h2 id="precio" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">06</span>
   <span class="bf-section-title"><span class="bf-section-lead">¿Cuánto cuesta automatizar presupuestos</span> <span class="bf-section-accent">con IA?</span></span>
