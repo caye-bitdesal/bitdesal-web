@@ -53,33 +53,8 @@ If you only need to digitise and automate one process (lead gen and sales, plann
 If the answer spans several processes, you likely need a custom tool. Phase breakdown is on [AI consulting pricing](/en/work-and-pricing/#ia).
 
 <figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-1-captacion-y-venta.jpg" alt="Flowchart of lead generation and sales, from enquiry to accepted quote, with the systems involved" width="1024" height="453" loading="lazy" decoding="async" />
-  <figcaption>Process 1 · Lead generation and sales</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-2-planificacion-y-ejecucion.jpg" alt="Flowchart of planning and field execution: materials, appointments, job sheets and hand-off to invoicing" width="1024" height="527" loading="lazy" decoding="async" />
-  <figcaption>Process 2 · Planning and execution</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-3-compras-e-inventario.jpg" alt="Flowchart of purchasing and inventory: stock, supplier orders and goods receipt" width="1024" height="414" loading="lazy" decoding="async" />
-  <figcaption>Process 3 · Purchasing and inventory</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-4-facturacion-y-cobro.jpg" alt="Flowchart of invoicing and collections: issue invoice, reminders, bank reconciliation and after-sales" width="1024" height="904" loading="lazy" decoding="async" />
-  <figcaption>Process 4 · Invoicing and collections</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-5-postventa-y-fidelizacion.jpg" alt="Flowchart of after-sales and loyalty: warranties, maintenance, reviews and new quotes" width="1024" height="632" loading="lazy" decoding="async" />
-  <figcaption>Process 5 · After-sales and loyalty</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-6-administracion.jpg" alt="Flowchart of back-office processes: HR and payroll, month-end closing and compliance paperwork" width="1024" height="968" loading="lazy" decoding="async" />
-  <figcaption>Process 6 · Administration</figcaption>
+  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/diagrama-flujo-negocio.jpg" alt="Job journey from enquiry to payment, and support areas" width="1024" height="677" loading="lazy" decoding="async" />
+  <figcaption>Every arrow is information hand-offs between teams; that is where data and time get lost</figcaption>
 </figure>
 
 <h2 id="price-factors" class="bf-section-heading">
