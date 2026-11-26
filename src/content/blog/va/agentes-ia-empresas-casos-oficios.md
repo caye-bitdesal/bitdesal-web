@@ -42,7 +42,7 @@ L'[INE, en la nota de premsa del 22 d'octubre de 2026](https://www.ine.es/dyngs/
 
 Un **agent d'IA per a empreses** mira el que t'arriba, entén què demanen i només pot mirar el que li hem permés (preus, agenda, si un pressupost segueix obert). Després fa **una cosa**: un text curt, un esborrany en la teua plantilla o un avís a algú de l'equip.
 
-No és un cap per ordinador ni una màquina que ho sap tot. No porta l'empresa. Fa el treball que acordem a l'estudi i para quan toca: import més alt del acordat, queixa, dada que no reconeix o client que vol parlar amb una persona.
+No és un cap per ordinador ni una màquina que ho sap tot. No porta l'empresa. Fa el treball que acordem a l'estudi i para quan toca: import més alt de l'acordat, queixa, dada que no reconeix o client que vol parlar amb una persona.
 
 Abans d'enllaçar el WhatsApp o carpetes amb dades de clients, et diem quina informació ix, a quina empresa d'internet va i amb quin contracte. La Comissió Europea resumeix les normes a la pàgina del [marc reglamentari de la IA](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai). El text legal del [Reglament (UE) 2024/1689](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689) està a EUR-Lex.
 
