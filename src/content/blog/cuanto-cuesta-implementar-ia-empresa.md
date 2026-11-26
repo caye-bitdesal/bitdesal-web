@@ -112,7 +112,7 @@ Dos empresas piden lo mismo, «automatizar los presupuestos», y el precio no sa
   </div>
 </div>
 
-También cambia el precio si los datos vienen ya ordenados o hay que entenderlos. Con casillas fijas suele bastar una [automatización de procesos con IA](/automatizacion-procesos-ia/). Si el punto de partida es una nota de voz desde la furgoneta, un WhatsApp a medias o la foto de un albarán, hace falta un [agente de IA](/agentes-ia-empresas/) que lea eso y pare cuando no esté seguro: un precio alto, una queja, un dato que no reconoce. Esa parada se escribe en el estudio, con tus números.
+También cambia el precio si los datos vienen ya ordenados o hay que entenderlos. Con casillas fijas suele bastar una [automatización de procesos con IA](/automatizacion-procesos-ia/). Si el punto de partida es una nota de voz desde la furgoneta, un WhatsApp a medias o la foto de un albarán, hace falta un [agente de IA](/agentes-ia-empresas/) que lea eso y pare cuando no esté seguro: un precio alto, una queja, un dato que no reconoce. Esa parada se escribe en el estudio, con tus números. En el artículo de [agentes de IA para empresas: 6 casos en oficios](/blog/agentes-ia-empresas-casos-oficios/) bajamos al detalle con ejemplos de ese tipo de entrada.
 
 Y hay una parte que no es opcional cuando el flujo toca datos de clientes. El [Reglamento europeo de inteligencia artificial](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689), publicado en 2024, pide más o menos según el uso, y el RGPD sigue aplicando a nombres, teléfonos y direcciones. Dejar claro quién accede, que una persona confirme lo que sale hacia el cliente y no usar sus documentos para entrenar un modelo público va dentro del precio. No es un extra que aparece al final.
 
