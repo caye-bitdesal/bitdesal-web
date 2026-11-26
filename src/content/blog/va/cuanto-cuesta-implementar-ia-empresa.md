@@ -53,33 +53,8 @@ Si només necessites digitalitzar i automatitzar un procés (captació i venda, 
 Si la solució implica diversos processos, probablement cal una eina a mida. El desglossament per fases està a les [tarifes de consultoria IA](/va/casos-i-preus/#ia).
 
 <figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-1-captacion-y-venta.jpg" alt="Diagrama del procés de captació i venda: des de la consulta del client fins al pressupost acceptat" width="1024" height="453" loading="lazy" decoding="async" />
-  <figcaption>Procés 1 · Captació i venda</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-2-planificacion-y-ejecucion.jpg" alt="Diagrama de planificació i execució en camp: material, cites, parts i pas a facturació" width="1024" height="527" loading="lazy" decoding="async" />
-  <figcaption>Procés 2 · Planificació i execució</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-3-compras-e-inventario.jpg" alt="Diagrama de compres i inventari: estoc, comandes a proveïdors i recepció" width="1024" height="414" loading="lazy" decoding="async" />
-  <figcaption>Procés 3 · Compres i inventari</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-4-facturacion-y-cobro.jpg" alt="Diagrama de facturació i cobrament: emissió, recordatoris, banc i postvenda" width="1024" height="904" loading="lazy" decoding="async" />
-  <figcaption>Procés 4 · Facturació i cobrament</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-5-postventa-y-fidelizacion.jpg" alt="Diagrama de postvenda i fidelització: garanties, manteniment, ressenyes i nous pressupostos" width="1024" height="632" loading="lazy" decoding="async" />
-  <figcaption>Procés 5 · Postvenda i fidelització</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-6-administracion.jpg" alt="Diagrama d'administració: personal i nòmines, tancament comptable i compliment normatiu" width="1024" height="968" loading="lazy" decoding="async" />
-  <figcaption>Procés 6 · Administració</figcaption>
+  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/diagrama-flujo-negocio.jpg" alt="Recorregut d'un treball, de la petició al cobrament, i les àrees de suport" width="1024" height="677" loading="lazy" decoding="async" />
+  <figcaption>Cada fletxa és una informació que passa d'una àrea a una altra; allà és on es perd més temps i, de vegades, la dada</figcaption>
 </figure>
 
 <h2 id="factores-que-suben-el-precio" class="bf-section-heading">

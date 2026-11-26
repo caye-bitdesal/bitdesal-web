@@ -53,33 +53,8 @@ Jos tarvitsette vain yhden prosessin digitoinnin ja automaation (asiakashankinta
 Jos ratkaisu kattaa useita prosesseja, tarvitsette todennäköisesti räätälöidyn työkalun. Vaiheittaiset hinnat: [tekoälykonsultoinnin hinnasto](/fi/referenssit-ja-hinnat/#ia).
 
 <figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-1-captacion-y-venta.jpg" alt="Kaavio: asiakashankinta ja myynti tiedustelusta hyväksyttyyn tarjoukseen" width="1024" height="453" loading="lazy" decoding="async" />
-  <figcaption>Prosessi 1 · Asiakashankinta ja myynti</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-2-planificacion-y-ejecucion.jpg" alt="Kaavio: suunnittelu ja toteutus kentällä — materiaali, ajat, työmaaraportit, siirtyminen laskutukseen" width="1024" height="527" loading="lazy" decoding="async" />
-  <figcaption>Prosessi 2 · Suunnittelu ja toteutus</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-3-compras-e-inventario.jpg" alt="Kaavio: osto ja varasto — saldo, toimittajatilaukset ja vastaanotto" width="1024" height="414" loading="lazy" decoding="async" />
-  <figcaption>Prosessi 3 · Osto ja varasto</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-4-facturacion-y-cobro.jpg" alt="Kaavio: laskutus ja perintä — lasku, muistutukset, maksun täsmäytys pankin kanssa ja jälkimyynti" width="1024" height="904" loading="lazy" decoding="async" />
-  <figcaption>Prosessi 4 · Laskutus ja perintä</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-5-postventa-y-fidelizacion.jpg" alt="Kaavio: jälkimyynti ja asiakkuus — takuu, huolto, arvostelut ja uudet tarjoukset" width="1024" height="632" loading="lazy" decoding="async" />
-  <figcaption>Prosessi 5 · Jälkimyynti ja asiakkuus</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-6-administracion.jpg" alt="Kaavio: hallinto — henkilöstö ja palkat, kuukausisulku ja asiakirjat" width="1024" height="968" loading="lazy" decoding="async" />
-  <figcaption>Prosessi 6 · Hallinto</figcaption>
+  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/diagrama-flujo-negocio.jpg" alt="Työn kulku pyynnöstä maksuun ja tukialueet" width="1024" height="677" loading="lazy" decoding="async" />
+  <figcaption>Jokainen nuoli on tiedon siirto osastolta toiselle; siinä katoaa dataa ja hukkuu aikaa</figcaption>
 </figure>
 
 <h2 id="hintatekijat" class="bf-section-heading">

@@ -73,6 +73,7 @@ export const automationPage = {
 		costGuide: 'Cuánto cuesta implementar IA en una empresa: rangos y retorno',
 		casesGuide: 'Agentes de IA para empresas: 6 casos en oficios',
 		quotesGuide: 'Automatizar presupuestos con IA: voz, PDF y errores',
+		verifactuGuide: 'Verifactu para instaladores: fechas y qué hacer ya',
 		contact: 'Pedir una reunión de 30 minutos',
 	},
 	faq: {

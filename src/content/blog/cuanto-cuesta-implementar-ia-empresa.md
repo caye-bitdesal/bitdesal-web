@@ -14,7 +14,7 @@ keyword: 'cuánto cuesta implementar IA en una empresa'
 heroImage: /images/blog/cuanto-cuesta-implementar-ia-empresa/hero.jpg
 ogImage: /images/blog/cuanto-cuesta-implementar-ia-empresa/hero.jpg
 titleHighlight: 'precios'
-subtitle: 'Lo que cobramos de verdad, qué hace que un encargo salga más caro y cómo mirar si te compensa antes de decidir.'
+subtitle: 'Lo que cobramos de verdad, qué encarece un encargo y cómo ver si te compensa antes de decidir.'
 faq:
   - q: '¿Cuánto cuesta empezar a implementar IA en una empresa?'
     a: 'El primer paso es un estudio de procesos: 450 € + IVA, o 675 € + IVA si entran varios departamentos o sistemas. Te llevas el diagnóstico, qué haríamos y un presupuesto cerrado. Si contratas el trabajo en los 30 días siguientes, ese importe se descuenta entero.'
@@ -28,9 +28,9 @@ faq:
     a: 'Te lo decimos y no seguimos. Pasa cuando hay poco volumen, cuando la tarea cambia cada semana o cuando un programa que ya existe os lo resuelve. Preferimos ese no a un desarrollo que no recuperáis.'
 ---
 
-**Cuánto cuesta implementar IA en una empresa** depende de la tarea, no de «poner inteligencia artificial». Con nosotros, una automatización exprés sale entre **1.800 € y 2.900 € + IVA** y se hace en dos o tres semanas; una herramienta a medida parte de **4.500 € + IVA**. Antes de programar nada hay un estudio de procesos a **450 € + IVA**, que descontamos entero si contratas el trabajo en los 30 días siguientes. El soporte, solo si lo quieres después, parte de **225 €/mes + IVA** y no tiene permanencia.
+**Cuánto cuesta implementar IA en una empresa** no se responde con un número mágico. Depende de la tarea: automatizar presupuestos no es lo mismo que montar algo que una presupuesto, agenda y WhatsApp. En Bitdesal, una automatización exprés suele estar entre **1.800 € y 2.900 € + IVA** y la entregamos en dos o tres semanas; una herramienta a medida empieza en **4.500 € + IVA**. Antes de tocar código hacemos un estudio de procesos (**450 € + IVA**; te lo descontamos entero si contratas en 30 días). El soporte, si lo quieres después, va desde **225 €/mes + IVA**, sin permanencia.
 
-El [INE, en la nota de prensa del 22 de octubre de 2026](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm), dice que en el primer trimestre de 2026 ya usaba alguna tecnología de IA el 33,6 % de las empresas de 10 o más empleados, y el 21,4 % de las de menos de 10. En el mismo corte, solo el 15,4 % de las primeras tenía especialistas TIC. Hay bastante uso y poca gente dentro para montarlo. El precio que importa, entonces, es el de hacerlo contigo y ver si se recupera.
+Mucha gente ya usa algo de IA, pero pocos tienen a alguien dentro que lo monte bien. El [INE (octubre de 2026)](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm) lo dice en cifras: el 33,6 % de las empresas de 10 o más empleados y el 21,4 % de las pequeñas; solo el 15,4 % de las grandes tenían especialistas TIC. Lo que a ti te importa es cuánto cuesta quitarte ese trabajo repetido y en cuánto lo recuperas.
 
 <blockquote class="bf-pullquote">No cobramos por «poner IA». Cobramos por liberarte de horas y de burocracia para centrarte en tu negocio.</blockquote>
 
@@ -39,7 +39,7 @@ El [INE, en la nota de prensa del 22 de octubre de 2026](https://www.ine.es/dyng
   <span class="bf-section-title"><span class="bf-section-lead">¿Cuánto cuesta implementar IA en una empresa</span> <span class="bf-section-accent">según el alcance?</span></span>
 </h2>
 
-No hay un precio único, y quien te lo dé en la primera llamada se lo está inventando. No cuesta lo mismo automatizar presupuestos, que montar una herramienta que permita unir el presupuesto, la agenda y la comunicación con el cliente. La tarifa de referencia, cuando el trabajo va por horas, es **45 €/h + IVA**. Los encargos cerrados caben en cuatro filas:
+Si en la primera llamada te sueltan una cifra redonda, desconfía: aún no saben qué harían. Cuando trabajamos por horas, la referencia es **45 €/h + IVA**; lo habitual son encargos a precio cerrado. En la práctica casi todo cae en una de estas cuatro filas:
 
 | Modalidad                 | Precio (+ IVA)                                       | Plazo habitual               | Para qué es                                                                                                                         |
 | ------------------------- | ---------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,80 +48,57 @@ No hay un precio único, y quien te lo dé en la primera llamada se lo está inv
 | **Herramienta a medida**  | Desde 4.500 €                                        | El que salga del estudio     | Una solución integral que aúne todas las áreas de tu negocio                                                                        |
 | **Soporte**               | Desde 225 €/mes (5/10/20 h: 225 € / 450 € / 900 €)   | Mes a mes, sin permanencia   | Ajustes e incidencias. Solo se cobran las horas usadas                                                                              |
 
-Si solo necesitas digitalizar y automatizar un proceso (captación y venta, planificación y ejecución, compras e inventario, facturación y cobro, postventa y fidelización o administración), es una automatización exprés: se apoya en lo que ya usáis y, probablemente, no hará falta una herramienta nueva, sino integrar las que ya hay.
+Si el problema es un solo tramo del negocio —venta, obra en campo, facturación, stock, postventa o administración—, suele bastar una automatización exprés: enganchar el correo, el WhatsApp o la hoja que ya tenéis, no inventar otra app.
 
-Sin embargo, si la solución implica solventar varios procesos, probablemente se necesite una herramienta a medida. El desglose por fases está en las [tarifas de la consultoría de IA](/casos-y-precios/#ia).
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-1-captacion-y-venta.jpg" alt="Diagrama del proceso de captación y venta: desde la consulta del cliente hasta el presupuesto aceptado, con los sistemas que intervienen" width="1024" height="453" loading="lazy" decoding="async" />
-  <figcaption>Proceso 1 · Captación y venta</figcaption>
-</figure>
+Cuando el atasco cruza varias áreas del diagrama de abajo, ya hablamos de herramienta a medida. El detalle por fases lo tienes en las [tarifas de consultoría de IA](/casos-y-precios/#ia).
 
 <figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-2-planificacion-y-ejecucion.jpg" alt="Diagrama del proceso de planificación y ejecución en campo: material, citas, partes de trabajo y paso a facturación" width="1024" height="527" loading="lazy" decoding="async" />
-  <figcaption>Proceso 2 · Planificación y ejecución</figcaption>
+  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/diagrama-flujo-negocio.jpg" alt="Recorrido de un trabajo, de la petición al cobro, y las áreas de apoyo" width="1024" height="677" loading="lazy" decoding="async" />
+  <figcaption>Cada flecha es una información que pasa de un área a otra; ahí es fácil perder datos y tiempo</figcaption>
 </figure>
 
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-3-compras-e-inventario.jpg" alt="Diagrama del proceso de compras e inventario: stock, pedidos a proveedores y recepción de material" width="1024" height="414" loading="lazy" decoding="async" />
-  <figcaption>Proceso 3 · Compras e inventario</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-4-facturacion-y-cobro.jpg" alt="Diagrama del proceso de facturación y cobro: emisión de factura, recordatorios, conciliación bancaria y postventa" width="1024" height="904" loading="lazy" decoding="async" />
-  <figcaption>Proceso 4 · Facturación y cobro</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-5-postventa-y-fidelizacion.jpg" alt="Diagrama del proceso de postventa y fidelización: garantías, mantenimiento, reseñas y nuevos presupuestos" width="1024" height="632" loading="lazy" decoding="async" />
-  <figcaption>Proceso 5 · Postventa y fidelización</figcaption>
-</figure>
-
-<figure class="bf-figure bf-figure--natural">
-  <img src="/images/blog/cuanto-cuesta-implementar-ia-empresa/proceso-6-administracion.jpg" alt="Diagrama de procesos de administración: personal y nóminas, cierre contable y cumplimiento documental" width="1024" height="968" loading="lazy" decoding="async" />
-  <figcaption>Proceso 6 · Administración</figcaption>
-</figure>
+Si en facturación vivís copiando del presupuesto o del parte, antes de plantearos otro programa conviene mirar [Verifactu para instaladores: fechas y qué hacer ya](/blog/verifactu-instaladores/).
 
 <h2 id="factores-que-suben-el-precio" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">02</span>
   <span class="bf-section-title"><span class="bf-section-lead">¿Qué factores suben o bajan el presupuesto</span> <span class="bf-section-accent">de un proyecto de IA?</span></span>
 </h2>
 
-Dos empresas piden lo mismo, «automatizar los presupuestos», y el precio no sale igual. El modelo es la parte pequeña. Lo que pesa es lo de alrededor: de dónde salen los datos, cuántas excepciones hay y quién tiene que decir que sí antes de que eso llegue al cliente.
+Dos empresas nos piden «automatizar los presupuestos» y el presupuesto nuestro no sale igual. El modelo de IA es casi lo de menos. Lo que mueve el precio es el día a día: de dónde sale el dato, cuántas excepciones hay y quién tiene que revisar antes de que salga al cliente.
 
 <div class="bf-bento">
   <div class="bf-bento-card bf-bento-card--cream">
     <p class="bf-bento-label">Sale más ajustado</p>
-    <h3>Un solo proceso y los datos los tenemos a mano</h3>
+    <h3>Un solo proceso y los datos a mano</h3>
     <ul class="bf-bento-list">
-      <li>Se repite y se puede explicar sencillamente.</li>
-      <li>El correo, la hoja o el programa dejan sacar la información.</li>
-      <li>Precios y plantillas ya están escritos.</li>
-      <li>Alguien del equipo revisa el borrador antes de enviarlo.</li>
+      <li>La tarea se repite igual casi todos los días.</li>
+      <li>El dato está en el correo, en la hoja o en el programa que ya usáis.</li>
+      <li>Los precios y las plantillas están escritos, no «en la cabeza de alguien».</li>
+      <li>Antes de enviar, alguien del equipo mira el borrador.</li>
     </ul>
   </div>
   <div class="bf-bento-card bf-bento-card--dark">
     <p class="bf-bento-label">Se encarece</p>
     <h3>Excepciones y programas cerrados</h3>
     <ul class="bf-bento-list">
-      <li>El programa que utilizas es viejo y no deja exportar, o cada vez exporta distinto.</li>
-      <li>El precio «se sabe», pero no está en ningún sitio.</li>
-      <li>Llegan audios con ruido, fotos torcidas y PDFs de cada proveedor.</li>
-      <li>Hace falta una herramienta propia, no basta con conectar lo que hay.</li>
+      <li>El programa no exporta, o cada exportación viene distinta.</li>
+      <li>«Todo el mundo sabe el precio», pero no está en ningún sitio.</li>
+      <li>Entran audios con ruido, fotos torcidas y PDFs de cada proveedor.</li>
+      <li>Hace falta pantalla propia; conectar dos cosas no llega.</li>
     </ul>
   </div>
 </div>
 
-También cambia el precio si los datos vienen ya ordenados o hay que entenderlos. Con casillas fijas suele bastar una [automatización de procesos con IA](/automatizacion-procesos-ia/). Si el punto de partida es una nota de voz desde la furgoneta, un WhatsApp a medias o la foto de un albarán, hace falta un [agente de IA](/agentes-ia-empresas/) que lea eso y pare cuando no esté seguro: un precio alto, una queja, un dato que no reconoce. Esa parada se escribe en el estudio, con tus números. En el artículo de [agentes de IA para empresas: 6 casos en oficios](/blog/agentes-ia-empresas-casos-oficios/) bajamos al detalle con ejemplos de ese tipo de entrada.
+Si el dato entra en casillas fijas, suele bastar una [automatización de procesos con IA](/automatizacion-procesos-ia/). Si entra como nota de voz en la furgoneta, WhatsApp a medias o foto de un albarán, ahí entra un [agente de IA](/agentes-ia-empresas/) que lee, interpreta y **para** cuando no está seguro —un precio raro, una queja, un dato que no reconoce—. Eso lo fijamos en el estudio, con vuestros números. En [agentes de IA para empresas: 6 casos en oficios](/blog/agentes-ia-empresas-casos-oficios/) lo contamos con ejemplos.
 
-Y hay una parte que no es opcional cuando el flujo toca datos de clientes. El [Reglamento europeo de inteligencia artificial](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689), publicado en 2024, pide más o menos según el uso, y el RGPD sigue aplicando a nombres, teléfonos y direcciones. Dejar claro quién accede, que una persona confirme lo que sale hacia el cliente y no usar sus documentos para entrenar un modelo público va dentro del precio. No es un extra que aparece al final.
+Si toca datos de clientes, el cumplimiento no va aparte. El [reglamento europeo de IA](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689) y el RGPD siguen ahí. En el precio van cuentas de empresa, quién accede a qué, confirmación humana antes de enviar y no usar vuestros documentos para entrenar un modelo público. No es un «módulo legal» que aparece al final.
 
 <h2 id="costes-ocultos" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">03</span>
   <span class="bf-section-title"><span class="bf-section-lead">¿Qué costes ocultos conviene vigilar</span> <span class="bf-section-accent">después del lanzamiento?</span></span>
 </h2>
 
-El número de entrada no es el único. Si solo miras lo que cuesta montarlo, el susto llega al mes siguiente. Antes de firmar separamos tres cosas.
+El precio de montaje no es la factura entera. Si solo miras eso, el susto llega al mes siguiente. Antes de firmar os separamos tres cosas para que no haya sorpresas:
 
 <div class="bf-triptych">
   <div class="bf-triptych-col">
@@ -132,12 +109,12 @@ El número de entrada no es el único. Si solo miras lo que cuesta montarlo, el 
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">02</span>
     <h3>Mantenimiento</h3>
-    <p>Un proveedor cambia el PDF, WhatsApp cambia un formato, una conexión deja de responder igual. Alguien lo ajusta. Si quieres que seamos nosotros, hay bolsas desde 225 €/mes + IVA, sin permanencia.</p>
+    <p>Cambia el PDF del proveedor, WhatsApp cambia un formato, una API deja de responder igual. Alguien lo retoca. Si queréis que seamos nosotros, hay bolsas desde 225 €/mes + IVA, sin permanencia.</p>
   </div>
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">03</span>
     <h3>Adopción</h3>
-    <p>Si el equipo no lo entiende, a la semana vuelve al WhatsApp. La formación va dentro del encargo, con el trabajo de verdad, no con una demo.</p>
+    <p>Si nadie lo entiende, a la semana vuelven al WhatsApp. La formación va en el encargo, con vuestros presupuestos y partes de verdad, no con una demo bonita.</p>
   </div>
 </div>
 
@@ -145,7 +122,7 @@ Las cuentas gratuitas no son adecuadas: aunque parezcan no costar nada, los dato
 
 <div class="bf-idea">
   <p class="bf-idea-label">La idea clave</p>
-  <p class="bf-idea-text">Pide tres números por separado: lo que cuesta montarlo, lo que costarán las licencias a tu nombre y, si lo quieres, el soporte. Si te lo meten todo en una cuota, no ves qué estás pagando.</p>
+  <p class="bf-idea-text">Pedid tres números por separado: montaje, licencias en cuenta vuestra y soporte si lo queréis. Si os lo meten en una sola cuota mensual, no sabéis qué parte es qué.</p>
 </div>
 
 <h2 id="como-calcular-si-compensa" class="bf-section-heading">
@@ -153,24 +130,24 @@ Las cuentas gratuitas no son adecuadas: aunque parezcan no costar nada, los dato
   <span class="bf-section-title"><span class="bf-section-lead">¿Cómo calcular si compensa implementar IA</span> <span class="bf-section-accent">en tu empresa?</span></span>
 </h2>
 
-No hace falta una hoja de dirección financiera. La cuenta, antes de escribir una línea, es esta:
+No hace falta Excel de finanzas. Antes de programar nada, hacemos esta cuenta contigo:
 
 <div class="bf-highlight">
   Horas a la semana de esa tarea × coste por hora × semanas al año. Si lo que ahorraríais en un año no cubre de sobra el presupuesto, no lo hacemos.
 </div>
 
-**Ejemplo, no es un cliente.** Alguien dedica 6 horas a la semana a pasar presupuestos, responder y copiar de WhatsApp a la hoja y perseguir a quien no contesta. A 48 semanas son 288 horas. A 18 € la hora, entre sueldo y cotizaciones, el proceso sale a 5.184 € al año. Si una automatización de 2.400 € + IVA os quita la mayor parte de esas horas, el ahorro anual pasa de largo el precio y se paga dentro del mismo año. Si solo os ahorra un rato, la cuenta no sale.
+**Ejemplo inventado, no es un cliente.** Imagina que alguien se va 6 horas a la semana entre pasar presupuestos, contestar, copiar WhatsApp a la hoja y perseguir al que no abre el mensaje. Son 288 horas al año. A 18 €/h de coste real (sueldo y cotizaciones), el proceso cuesta 5.184 € anuales. Si una automatización de 2.400 € + IVA os quita buena parte de esas horas, se paga sola en menos de un año. Si solo ahorra un rato, no lo hacemos.
 
-**Ejemplo al revés.** Cuatro presupuestos al mes, 20 minutos cada uno: 16 horas al año. A 30 € la hora son 480 €. Gastarse cerca de 2.000 € en automatizar eso tarda años en volver. En ese caso no lo proponemos.
+**Al revés.** Cuatro presupuestos al mes de 20 minutos: 16 horas al año, unos 480 € a 30 €/h. Meter 2.000 € en automatizar eso no tiene sentido; os lo diríamos en el estudio.
 
-Hay pérdidas que no salen en la nómina: el presupuesto que se enfría porque tarda cuatro días, la visita que se olvida, el albarán que no cuadra y aparece al cerrar el trimestre. Las tenemos en cuenta. No las usamos para justificar un encargo cuya cuenta en horas no sale. Y si el atasco de verdad es que falta gente en la obra, la IA no lo arregla: te lo decimos y paramos.
+También cuentan cosas que no salen en la nómina: el presupuesto que se enfría porque tarda cuatro días, la visita que se olvida, el albarán que explota al cerrar el trimestre. Las miramos, pero no las usamos para salvar un proyecto cuyas horas no cuadran. Y si lo que falta es gente en la obra, la IA no lo arregla: os lo decimos y paramos.
 
 <h2 id="evitar-sobrecostes" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">05</span>
   <span class="bf-section-title"><span class="bf-section-lead">¿Cómo evitar que un proyecto de IA</span> <span class="bf-section-accent">se dispare de precio?</span></span>
 </h2>
 
-El precio se dispara cuando se empieza a programar con una idea a medias y las excepciones aparecen a las tres semanas, ya facturadas. Por eso no empezamos por el código.
+El precio se dispara cuando se programa con la idea a medias y, a las tres semanas, salen excepciones que nadie había contado —ya facturadas—. Por eso no empezamos por el código.
 
 <ol class="bf-steps">
   <li><strong>Una sola tarea.</strong> La que más horas os quita cada semana: presupuestos, citas, partes o albaranes. No «toda la empresa».</li>
@@ -187,8 +164,8 @@ El precio se dispara cuando se empieza a programar con una idea a medias y las e
       <h2 id="conclusion" class="bf-conclusion-heading">Mide la tarea antes de pedir el presupuesto</h2>
     </div>
     <div class="bf-conclusion-body">
-      <p>Saber cuánto cuesta implementar IA en tu empresa no pide un proyecto largo. Pide una tarea concreta, las horas que os come y en qué fila de la tabla cae.</p>
-      <p>Si quieres que lo miremos con tus números, empieza por la <a href="/consultoria-ia/">consultoría de IA para empresas</a> o <a href="https://cal.com/bitdesal/30min">agenda 30 minutos</a>. La reunión es gratis y no obliga a seguir.</p>
+      <p>No hace falta un proyecto de seis meses para saber cuánto costaría. Basta con una tarea concreta, cuántas horas os quita y en qué fila de la tabla encaja.</p>
+      <p>Si quieres que lo miremos con tus números, pasa por la <a href="/consultoria-ia/">consultoría de IA</a> o <a href="https://cal.com/bitdesal/30min">reserva 30 minutos</a>. La llamada es gratis y no te ata a nada.</p>
     </div>
   </div>
 </section>
