@@ -1,11 +1,24 @@
 /** Hourly rate for Spain / domestic (EUR, + IVA). */
-export const HOURLY_RATE_EUR = 45;
+export const HOURLY_RATE_EUR = 35;
 
 /** Software consulting — international EU clients (VAT reverse charge / client-side). */
-export const HOURLY_RATE_INTERNATIONAL_EU_EUR = 60;
+export const HOURLY_RATE_INTERNATIONAL_EU_EUR = 50;
 
 /** Software consulting — clients outside the EU. */
 export const HOURLY_RATE_INTERNATIONAL_NON_EU_EUR = 75;
+
+/** Closed-price process study (~10 h). */
+export const PROCESS_STUDY_EUR = 350;
+
+/** Process study when several departments or systems are involved (~15 h). */
+export const PROCESS_STUDY_EXTENDED_EUR = 525;
+
+/** Express automation (indicative range at domestic hourly rate). */
+export const EXPRESS_AUTOMATION_MIN_EUR = 1400;
+export const EXPRESS_AUTOMATION_MAX_EUR = 2250;
+
+/** Custom tool / app (indicative starting point). */
+export const CUSTOM_TOOL_FROM_EUR = 3500;
 
 export type PhaseEstimateRaw = {
 	id: string;
@@ -25,7 +38,7 @@ export type PhaseEstimateRaw = {
  * TODO(caye): confirmar estas horas e importes antes de publicar.
  */
 export const phaseEstimatesRaw: PhaseEstimateRaw[] = [
-	{ id: 'processStudy', hoursApprox: 10, hoursLabel: '≈10 h', amountEur: 450, indexLabel: '1–2', closedPrice: true },
+	{ id: 'processStudy', hoursApprox: 10, hoursLabel: '≈10 h', amountEur: PROCESS_STUDY_EUR, indexLabel: '1–2', closedPrice: true },
 	{ id: 'redesign', hoursApprox: 10, indexLabel: '3' },
 	{ id: 'technology', hoursApprox: 9, indexLabel: '4' },
 	{ id: 'plan', hoursApprox: 6, indexLabel: '5' },
@@ -44,10 +57,7 @@ export function getProjectTotalAmountEur(): number {
 }
 
 export const supportBundles = [
-	{ id: 'h5', hours: 5, amountEur: 225 },
-	{ id: 'h10', hours: 10, amountEur: 450 },
-	{ id: 'h20', hours: 20, amountEur: 900 },
+	{ id: 'h5', hours: 5, amountEur: 5 * HOURLY_RATE_EUR },
+	{ id: 'h10', hours: 10, amountEur: 10 * HOURLY_RATE_EUR },
+	{ id: 'h20', hours: 20, amountEur: 20 * HOURLY_RATE_EUR },
 ] as const;
-
-export const PROCESS_STUDY_EUR = 450;
-export const PROCESS_STUDY_EXTENDED_EUR = 675;

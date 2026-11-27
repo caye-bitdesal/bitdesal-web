@@ -70,7 +70,7 @@ export const agentsPage = {
 	price: {
 		title: 'Cuánto cuesta un agente de IA',
 		p1: 'Un agente no tiene un precio distinto «por ser agente». Se presupuesta como el resto de la automatización, porque el coste está en el flujo, las pruebas y la supervisión, no en la palabra.',
-		p2: 'Estudio de procesos: 450 € + IVA (100 % descontable si contratas la implementación en 30 días). Un agente acotado, del tipo exprés, suele quedar entre 1.800 y 2.900 € + IVA. Si hay que conectar varios sistemas o cubrir más de un proceso, la herramienta a medida parte de 4.500 € + IVA. El soporte, para ajustes y vigilancia, desde 225 € al mes + IVA, sin permanencia.',
+		p2: 'Estudio de procesos: 350 € + IVA (100 % descontable si contratas la implementación en 30 días). Un agente acotado, del tipo exprés, suele quedar entre 1.400 y 2.250 € + IVA. Si hay que conectar varios sistemas o cubrir más de un proceso, la herramienta a medida parte de 3.500 € + IVA. El soporte, para ajustes y vigilancia, desde 175 € al mes + IVA, sin permanencia.',
 		p3: 'En la reunión de 30 minutos te decimos en qué banda cae tu caso. Si cae fuera porque no compensa, también te lo decimos.',
 		link: 'Ver precios de la consultoría de IA',
 	},

@@ -6,7 +6,7 @@ export const seoVaByPage = {
   },
   "iaConsulting": {
     "title": "Consultoria d'IA per a empreses: automatitza la paperassa · Bitdesal",
-    "description": "Automatitzem pressupostos, cites, parts i paperassa amb consultoria d'IA. Preu tancat des de l'estudi de 450 €. Agenda 30 minuts gratis."
+    "description": "Automatitzem pressupostos, cites, parts i paperassa amb consultoria d'IA. Preu tancat des de l'estudi de 350 €. Agenda 30 minuts gratis."
   },
   "consultoria": {
     "title": "Consultoria de programari i desenvolupament Android · Bitdesal",
@@ -22,7 +22,7 @@ export const seoVaByPage = {
   },
   "processAutomation": {
     "title": "Automatització de processos amb IA per a empreses · Bitdesal",
-    "description": "Automatitza pressupostos, cites, parts i comandes amb IA sense canviar de programa. Preu tancat des de l'estudi de 450 €. Agenda 30 minuts gratis."
+    "description": "Automatitza pressupostos, cites, parts i comandes amb IA sense canviar de programa. Preu tancat des de l'estudi de 350 €. Agenda 30 minuts gratis."
   },
   "aiAgents": {
     "title": "Agents d'IA per a empreses: què són i casos reals · Bitdesal",
@@ -34,7 +34,7 @@ export const seoVaByPage = {
   },
   "pricing": {
     "title": "Preus: estudi de processos i projectes a preu tancat · Bitdesal",
-    "description": "Estudi de processos des de 450 € + IVA, projectes a preu tancat i bosses de suport sense permanència. Saps el que pagues abans de començar."
+    "description": "Estudi de processos des de 350 € + IVA, projectes a preu tancat i bosses de suport sense permanència. Saps el que pagues abans de començar."
   },
   "workAndPricing": {
     "title": "Casos i preus: projectes i tarifes a preu tancat · Bitdesal",

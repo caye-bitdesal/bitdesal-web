@@ -24,7 +24,7 @@ faq:
   - q: 'La IA pot enviar el pressupost al client sense que jo el revise?'
     a: "No ho muntem així al principi. Primer treballeu en mode esborrany: reviseu preu i text, i envieu vosaltres. Només ampliem l'automàtic quan porteu temps i els errors us valen."
   - q: 'Quant costa automatitzar pressupostos amb IA?'
-    a: "Sol encaixar en una automatització exprés (1.800–2.900 € + IVA, 2–3 setmanes) o en un agent acotat si l'entrada és molt desordenada. Abans va l'estudi de processos (450 € + IVA, descomptable si contracteu en 30 dies)."
+    a: "Sol encaixar en una automatització exprés (1.400–2.250 € + IVA, 2–3 setmanes) o en un agent acotat si l'entrada és molt desordenada. Abans va l'estudi de processos (350 € + IVA, descomptable si contracteu en 30 dies)."
   - q: 'Cal canviar el programa amb el qual ja pressupostem?'
     a: "No sol ser l'objectiu. Connectem el que ja feu servir (PDF, full de càlcul, programa de facturació o una app web nova si l'estudi diu que compensa). La factura continua eixint d'on eix ara."
 ---
@@ -128,10 +128,10 @@ No venem app per vendre app. Si amb el vostre PDF actual i una automatització e
 
 | Pas | Què inclou | Preu orientatiu (+ IVA) |
 | --- | --- | --- |
-| **Estudi de processos** | Com feu el pressupost avui, proposta i preu tancat; descomptable si contracteu en 30 dies | 450 € (675 € si hi ha diversos departaments o programes) |
-| **Automatització exprés** | De l'entrada mòbil a l'esborrany (i a vegades seguiment), 2–3 setmanes | 1.800–2.900 € |
-| **Eina a mida** | Diversos passos junts o pantalla pròpia | Des de 4.500 € |
-| **Suport** | Canvis, sense permanència | Des de 225 €/mes |
+| **Estudi de processos** | Com feu el pressupost avui, proposta i preu tancat; descomptable si contracteu en 30 dies | 350 € (525 € si hi ha diversos departaments o programes) |
+| **Automatització exprés** | De l'entrada mòbil a l'esborrany (i a vegades seguiment), 2–3 setmanes | 1.400–2.250 € |
+| **Eina a mida** | Diversos passos junts o pantalla pròpia | Des de 3.500 € |
+| **Suport** | Canvis, sense permanència | Des de 175 €/mes |
 
 Les llicències d'eines d'IA van en comptes al vostre nom; pagàeu el que consumiu. Desglossament llarg a [quant costa implementar IA a l'empresa](/va/blog/cuanto-cuesta-implementar-ia-empresa/) i tarifes a [consultoria d'IA](/va/consultoria-ia/) i [casos i preus](/casos-y-precios/#ia).
 

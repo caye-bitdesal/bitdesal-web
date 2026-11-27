@@ -51,13 +51,13 @@ export const localeVa = {
       "ia": {
         "title": "Consultoria d'IA per a empreses",
         "description": "Pressupostos a mà, notes en paper o en WhatsApp, cites que es perden? Estudiem com treballeu i automatitzem el que us lleva hores.",
-        "priceHint": "Des de 1.800 € + IVA",
+        "priceHint": "Des de 1.400 € + IVA",
         "cta": "Veure consultoria d'IA"
       },
       "software": {
         "title": "Desenvolupament i consultoria de programari",
         "description": "Desenvolupament Android, arquitectura i qualitat per a equips tècnics. Apps en producció amb centenars de milers d'usuaris.",
-        "priceHint": "45 €/h + IVA",
+        "priceHint": "35 €/h + IVA",
         "cta": "Veure desenvolupament de programari"
       }
     },
@@ -81,8 +81,8 @@ export const localeVa = {
     },
     "entryOffer": {
       "badge": "Preu tancat, sense sorpreses",
-      "text": "Comencem amb un Estudi de processos de 450 € + IVA que et descomptem íntegrament si fem el projecte junts. T'emportes un diagnòstic, la solució proposada i un pressupost tancat.",
-      "line": "Projectes des de 1.800 € + IVA · Tarifa de referència: 45 €/h + IVA"
+      "text": "Comencem amb un Estudi de processos de 350 € + IVA que et descomptem íntegrament si fem el projecte junts. T'emportes un diagnòstic, la solució proposada i un pressupost tancat.",
+      "line": "Projectes des de 1.400 € + IVA · Tarifa de referència: 35 €/h + IVA"
     },
     "howIWork": {
       "title": "Com treballem",
@@ -756,8 +756,8 @@ export const localeVa = {
     "blocks": {
       "study": {
         "title": "Estudi de processos",
-        "price": "450 € + IVA (preu tancat)",
-        "note": "≈10 h; 675 € + IVA si hi ha diversos departaments o sistemes.",
+        "price": "350 € + IVA (preu tancat)",
+        "note": "≈10 h; 525 € + IVA si hi ha diversos departaments o sistemes.",
         "description": "Inclou avaluació de requisits i estudi de processos i sistemes. Lliurable: diagnòstic, solució proposada, pla per fases i pressupost tancat.",
         "discount": "100% descontable si contractes la implementació en els 30 dies següents."
       },
@@ -769,7 +769,7 @@ export const localeVa = {
       "support": {
         "title": "Suport",
         "price": "Borses mensuals",
-        "description": "225 € / 450 € / 900 € + IVA (5/10/20 h). Només es factura el consumit. Sense permanència."
+        "description": "175 € / 350 € / 700 € + IVA (5/10/20 h). Només es factura el consumit. Sense permanència."
       }
     },
     "sections": {
@@ -778,28 +778,28 @@ export const localeVa = {
     },
     "softwareBlock": {
       "title": "Desenvolupament i consultoria de programari",
-      "hourly": "45 €/h + IVA. Tarifa de referència per a desenvolupament, arquitectura i mentoría.",
-      "bundles": "Borses mensuals: 225 € / 450 € / 900 € + IVA (5/10/20 h), sense permanència.",
+      "hourly": "35 €/h + IVA. Tarifa de referència per a desenvolupament, arquitectura i mentoría.",
+      "bundles": "Borses mensuals: 175 € / 350 € / 700 € + IVA (5/10/20 h), sense permanència.",
       "fixed": "Projecte a preu tancat després d'especificació i pla per fases.",
-      "international": "Desenvolupament i consultoria de programari per a empreses internacionals: 60 €/h per a empreses de la UE (el IVA el gestiona el client). 75 €/h per a empreses fora de la UE."
+      "international": "Desenvolupament i consultoria de programari per a empreses internacionals: 50 €/h per a empreses de la UE (el IVA el gestiona el client). 75 €/h per a empreses fora de la UE."
     },
     "breakdownToggle": "Veure el desglossament per fases",
     "packages": {
       "title": "Paquets orientatius",
       "express": {
         "title": "Automatització expressa",
-        "price": "1.800–2.900 € + IVA",
+        "price": "1.400–2.250 € + IVA",
         "time": "2–3 setmanes",
         "description": "Un procés concret: pressupostos, factures, cites, parts de treball o documents amb IA."
       },
       "custom": {
         "title": "Eina a mesura / app",
-        "price": "Des de 4.500 € + IVA",
+        "price": "Des de 3.500 € + IVA",
         "description": "Programari adaptat a la teua manera de treballar, amb integracions i formació."
       },
       "maintenance": {
         "title": "Manteniment",
-        "price": "Des de 225 €/mes + IVA",
+        "price": "Des de 175 €/mes + IVA",
         "description": "Borses d'hores per a incidències, ajustos i millores."
       }
     },
@@ -896,7 +896,7 @@ export const localeVa = {
     "investment": {
       "eyebrow": "Inversió",
       "title": "Tarifes clares, sense sorpreses",
-      "subtitle": "Tot es calcula a 45 €/hora + IVA. Aquesta taula mostra un projecte orientatiu per a una empresa xicoteta o mitjana.",
+      "subtitle": "Tot es calcula a 35 €/hora + IVA. Aquesta taula mostra un projecte orientatiu per a una empresa xicoteta o mitjana.",
       "phase": "Fase",
       "hours": "Hores (aproximat)",
       "amount": "Import",
@@ -954,10 +954,10 @@ export const localeVa = {
     },
     "pricingSummary": {
       "title": "Preus orientatius",
-      "study": "Estudi de processos — 450 € + IVA (675 € + IVA si hi ha diversos departaments o sistemes). 100% descontable si contractes la implementació en els 30 dies següents.",
-      "express": "Automatització expressa — 1.800–2.900 € + IVA · 2–3 setmanes.",
-      "custom": "Eina a mesura — des de 4.500 € + IVA.",
-      "support": "Suport — des de 225 €/mes + IVA, sense permanència.",
+      "study": "Estudi de processos — 350 € + IVA (525 € + IVA si hi ha diversos departaments o sistemes). 100% descontable si contractes la implementació en els 30 dies següents.",
+      "express": "Automatització expressa — 1.400–2.250 € + IVA · 2–3 setmanes.",
+      "custom": "Eina a mesura — des de 3.500 € + IVA.",
+      "support": "Suport — des de 175 €/mes + IVA, sense permanència.",
       "details": "Veure preus en detall"
     },
     "faq": {
@@ -1044,7 +1044,7 @@ export const localeVa = {
     "faqExtra": {
       "cost": {
         "q": "Quant costa una consultoria d'IA?",
-        "a": "L'estudi de processos són 450 € + IVA (675 € + IVA si hi ha diversos departaments o sistemes) i es descompta al 100% si contractes la implementació en els 30 dies següents. Una automatització expressa sol quedar entre 1.800 i 2.900 € + IVA. Una eina a mesura parteix de 4.500 € + IVA. El suport, si el vols, des de 225 € al mes + IVA i sense permanència."
+        "a": "L'estudi de processos són 350 € + IVA (525 € + IVA si hi ha diversos departaments o sistemes) i es descompta al 100% si contractes la implementació en els 30 dies següents. Una automatització expressa sol quedar entre 1.400 i 2.250 € + IVA. Una eina a mesura parteix de 3.500 € + IVA. El suport, si el vols, des de 175 € al mes + IVA i sense permanència."
       },
       "software": {
         "q": "Quina diferència hi ha entre una consultoria d'IA i comprar un programa?",
@@ -1168,8 +1168,8 @@ export const localeVa = {
     },
     "pricing": {
       "title": "Preu",
-      "p1": "Tarifa de referència: 45 €/h + IVA per a consultoria i desenvolupament Android sènior.",
-      "p2": "Borses mensuals de 225 €, 450 € i 900 € + IVA (5, 10 i 20 h), només facturem el consumit, sense permanència.",
+      "p1": "Tarifa de referència: 35 €/h + IVA per a consultoria i desenvolupament Android sènior.",
+      "p2": "Borses mensuals de 175 €, 350 € i 700 € + IVA (5, 10 i 20 h), només facturem el consumit, sense permanència.",
       "p3": "Projectes o rescats a preu tancat després d'especificació i pla per fases: saps l'abast abans de començar.",
       "link": "Veure tarifes de programari i desenvolupament Android"
     },
@@ -1178,11 +1178,11 @@ export const localeVa = {
       "items": {
         "appCost": {
           "q": "Quant costa desenvolupar una app Android?",
-          "a": "Depén de l'abast: bossa d'hores des de 450 € + IVA (10 h), projectes tancats després d'especificació (solen partir d'uns milers d'euros segons complexitat) o reforç mensual. En la crida de 30 minuts et donem un rang honest abans de comprometre't."
+          "a": "Depén de l'abast: bossa d'hores des de 350 € + IVA (10 h), projectes tancats després d'especificació (solen partir d'uns milers d'euros segons complexitat) o reforç mensual. En la crida de 30 minuts et donem un rang honest abans de comprometre't."
         },
         "freelanceRate": {
           "q": "Quant cobra un desenvolupador Android freelance?",
-          "a": "La nostra tarifa de referència és 45 €/h + IVA per a perfil sènior a Espanya. Borses de 225 €, 450 € i 900 € + IVA al mes (5, 10 i 20 h). A la UE 60 €/h i fora de la UE 75 €/h quan la facturació ho requereix."
+          "a": "La nostra tarifa de referència és 35 €/h + IVA per a perfil sènior a Espanya. Borses de 175 €, 350 € i 700 € + IVA al mes (5, 10 i 20 h). A la UE 50 €/h i fora de la UE 75 €/h quan la facturació ho requereix."
         },
         "remote": {
           "q": "Treballeu en remot amb equips de fora d'Espanya?",
@@ -1346,10 +1346,10 @@ export const localeVa = {
     },
     "pricing": {
       "title": "Modalitats i preu",
-      "hourly": "Per hores: 45 €/h + IVA",
-      "bundles": "Borses mensuals: 225 € / 450 € / 900 € + IVA (5/10/20 h).",
+      "hourly": "Per hores: 35 €/h + IVA",
+      "bundles": "Borses mensuals: 175 € / 350 € / 700 € + IVA (5/10/20 h).",
       "fixed": "Projecte tancat després d'especificació.",
-      "international": "Empreses internacionals: 60 €/h (UE; el IVA el gestiona el client) · 75 €/h (fora de la UE).",
+      "international": "Empreses internacionals: 50 €/h (UE; el IVA el gestiona el client) · 75 €/h (fora de la UE).",
       "details": "Veure preus"
     }
   },

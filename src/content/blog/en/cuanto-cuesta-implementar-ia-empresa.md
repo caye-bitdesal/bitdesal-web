@@ -1,6 +1,6 @@
 ---
 title: 'How much does it cost to implement AI in a company: pricing'
-description: 'How much does AI implementation cost: €450 process study, express €1,800–2,900, custom from €4,500. See if it pays off and book a free 30-minute call.'
+description: 'How much does AI implementation cost: €350 process study, express €1,400–2,250, custom from €3,500. See if it pays off and book a free 30-minute call.'
 pubDate: 2026-11-25
 audience: business
 author: caye
@@ -17,18 +17,18 @@ titleHighlight: 'pricing'
 subtitle: 'What we actually charge, what pushes a project up in price, and how to check whether it pays off before you decide.'
 faq:
   - q: 'How much does it cost to start implementing AI in a company?'
-    a: 'The first step is a process study: €450 + VAT, or €675 + VAT if several departments or systems are involved. You get the diagnosis, what we would build, and a fixed quote. If you hire the work within 30 days, that fee is credited in full.'
+    a: 'The first step is a process study: €350 + VAT, or €525 + VAT if several departments or systems are involved. You get the diagnosis, what we would build, and a fixed quote. If you hire the work within 30 days, that fee is credited in full.'
   - q: 'What is the price difference between express automation and a custom tool?'
-    a: 'Express automation is one task — quotes, appointments, job reports or delivery notes — delivered in two or three weeks for €1,800–2,900 + VAT. A custom tool joins several steps or needs its own UI, and starts at €4,500 + VAT.'
+    a: 'Express automation is one task — quotes, appointments, job reports or delivery notes — delivered in two or three weeks for €1,400–2,250 + VAT. A custom tool joins several steps or needs its own UI, and starts at €3,500 + VAT.'
   - q: 'Are there fixed monthly costs after delivery?'
-    a: 'Two separate things. Model and API usage sit in accounts in your name; you pay what you consume. Our support, if you want it, is hourly bundles from €225/month + VAT (5, 10 or 20 hours), no lock-in, billed only for hours used.'
+    a: 'Two separate things. Model and API usage sit in accounts in your name; you pay what you consume. Our support, if you want it, is hourly bundles from €175/month + VAT (5, 10 or 20 hours), no lock-in, billed only for hours used.'
   - q: 'Do I have to change my invoicing software to automate with AI?'
     a: 'No. We connect what you already use: email, WhatsApp, spreadsheets, and whatever you invoice with. Invoices still come from there.'
   - q: 'What if the study shows AI is not worth it?'
     a: 'We tell you and stop. That happens with low volume, tasks that change every week, or when existing software already solves it. We prefer an honest no to a build you will not recover.'
 ---
 
-**How much does it cost to implement AI in a company** depends on the task, not on “adding artificial intelligence”. With us, express automation runs **€1,800–2,900 + VAT** and ships in two or three weeks; a custom tool starts at **€4,500 + VAT**. Before any code there is a process study at **€450 + VAT**, credited in full if you hire the work within 30 days. Support afterwards, only if you want it, starts at **€225/month + VAT** with no lock-in.
+**How much does it cost to implement AI in a company** depends on the task, not on “adding artificial intelligence”. With us, express automation runs **€1,400–2,250 + VAT** and ships in two or three weeks; a custom tool starts at **€3,500 + VAT**. Before any code there is a process study at **€350 + VAT**, credited in full if you hire the work within 30 days. Support afterwards, only if you want it, starts at **€175/month + VAT** with no lock-in.
 
 Spain’s [INE press release of 22 October 2026](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm) reports that in Q1 2026, 33.6% of companies with 10+ employees already used some AI technology, and 21.4% of those with fewer than 10. In the same period, only 15.4% of the larger firms had in-house IT specialists. Plenty of adoption, not much internal capacity to set it up. The price that matters is doing it with someone and seeing whether it pays back.
 
@@ -39,14 +39,14 @@ Spain’s [INE press release of 22 October 2026](https://www.ine.es/dyngs/Prensa
   <span class="bf-section-title"><span class="bf-section-lead">How much does AI implementation cost for a company</span> <span class="bf-section-accent">by scope?</span></span>
 </h2>
 
-There is no single price, and anyone who gives you one on the first call is guessing. Automating quotes is not the same as building a tool that links quotes, scheduling, and client communication. The reference rate when work is hourly is **€45/h + VAT**. Fixed-price work usually fits four lines:
+There is no single price, and anyone who gives you one on the first call is guessing. Automating quotes is not the same as building a tool that links quotes, scheduling, and client communication. The reference rate when work is hourly is **€35/h + VAT**. Fixed-price work usually fits four lines:
 
 | Option | Price (+ VAT) | Typical timeline | What it is for |
 | --- | --- | --- | --- |
-| **Process study** | €450 (€675 if several departments or systems) | ~10 hours, within days | Understand needs, sketch the solution, estimate cost. Credited in full if you hire within 30 days |
-| **Express automation** | €1,800–2,900 | 2–3 weeks | One process: sales, invoicing, inventory… |
-| **Custom tool** | From €4,500 | Per study | An integrated solution across business areas |
-| **Support** | From €225/month (5/10/20 h: €225 / €450 / €900) | Month to month, no lock-in | Tweaks and incidents. Only hours used are billed |
+| **Process study** | €350 (€525 if several departments or systems) | ~10 hours, within days | Understand needs, sketch the solution, estimate cost. Credited in full if you hire within 30 days |
+| **Express automation** | €1,400–2,250 | 2–3 weeks | One process: sales, invoicing, inventory… |
+| **Custom tool** | From €3,500 | Per study | An integrated solution across business areas |
+| **Support** | From €175/month (5/10/20 h: €175 / €350 / €700) | Month to month, no lock-in | Tweaks and incidents. Only hours used are billed |
 
 If you only need to digitise and automate one process (lead gen and sales, planning and field execution, purchasing and inventory, invoicing and collections, after-sales and loyalty, or back-office admin), that is express automation: it usually plugs into tools you already have instead of requiring a brand-new app.
 
@@ -107,7 +107,7 @@ The headline number is not the whole story. If you only look at build cost, the 
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">02</span>
     <h3>Maintenance</h3>
-    <p>A supplier changes a PDF, WhatsApp shifts a format, an API starts behaving differently. Someone adjusts it. If you want us on support, bundles start at €225/month + VAT, no lock-in.</p>
+    <p>A supplier changes a PDF, WhatsApp shifts a format, an API starts behaving differently. Someone adjusts it. If you want us on support, bundles start at €175/month + VAT, no lock-in.</p>
   </div>
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">03</span>
@@ -134,9 +134,9 @@ You do not need a finance deck. Before a single line of code, the math is:
   Hours per week on that task × cost per hour × weeks per year. If what you would save in a year does not clearly beat the quote, we do not do it.
 </div>
 
-**Example, not a client.** Someone spends 6 hours a week on quotes, replies, copying WhatsApp into a sheet, and chasing people who do not reply. At 48 weeks that is 288 hours. At €18/h loaded, the process costs €5,184 per year. If a €2,400 + VAT automation removes most of those hours, annual savings beat the price and pay back within the year. If it only saves a little time, the math fails.
+**Example, not a client.** Someone spends 6 hours a week on quotes, replies, copying WhatsApp into a sheet, and chasing people who do not reply. At 48 weeks that is 288 hours. At €18/h loaded, the process costs €5,184 per year. If a €1,870 + VAT automation removes most of those hours, annual savings beat the price and pay back within the year. If it only saves a little time, the math fails.
 
-**Counter-example.** Four quotes a month, 20 minutes each: 16 hours a year. At €30/h that is €480. Spending ~€2,000 to automate that takes years to return. We would not propose it.
+**Counter-example.** Four quotes a month, 20 minutes each: 16 hours a year. At €30/h that is €480. Spending ~€1,560 to automate that takes years to return. We would not propose it.
 
 Losses that do not show on payroll matter too: the quote that goes cold after four days, the visit that was never booked, the delivery note that only surfaces at quarter close. We factor them in. We do not use them to justify a project whose hour math already fails. And if the real bottleneck is not enough people on site, AI does not fix that: we say so and stop.
 
@@ -149,7 +149,7 @@ Price runs away when coding starts on half an idea and exceptions show up three 
 
 <ol class="bf-steps">
   <li><strong>One task.</strong> The one that eats the most hours each week: quotes, appointments, job reports, or delivery notes. Not “the whole company”.</li>
-  <li><strong>Study first.</strong> €450 + VAT, or €675 + VAT with several departments or systems. The build price is fixed in writing; hire within 30 days and the study is credited in full. Details in the article on a <a href="/en/blog/precio-cerrado-automatizacion-empresa/">fixed-price process study</a>.</li>
+  <li><strong>Study first.</strong> €350 + VAT, or €525 + VAT with several departments or systems. The build price is fixed in writing; hire within 30 days and the study is credited in full. Details in the article on a <a href="/en/blog/precio-cerrado-automatizacion-empresa/">fixed-price process study</a>.</li>
   <li><strong>We check whether existing software already works.</strong> If it solves the problem, we say so and do not build another.</li>
   <li><strong>AI prepares, a person confirms.</strong> Drafts, document reads, and reminders run alone. Price, margin, and what goes to the client are confirmed by someone on your team.</li>
   <li><strong>When we finish, you keep the how.</strong> Documented flow, trained team, tool accounts in your name. Support, if you want it, does not lock you in.</li>

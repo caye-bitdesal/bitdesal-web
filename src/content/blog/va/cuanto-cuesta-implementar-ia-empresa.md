@@ -1,6 +1,6 @@
 ---
 title: "Quant costa implementar IA a l'empresa: preus"
-description: 'Quant costa implementar IA: estudi 450 €, exprés 1.800–2.900 €, a mida des de 4.500 €. Mira si compensa i reserva 30 min gratis.'
+description: 'Quant costa implementar IA: estudi 350 €, exprés 1.400–2.250 €, a mida des de 3.500 €. Mira si compensa i reserva 30 min gratis.'
 pubDate: 2026-11-25
 audience: business
 author: caye
@@ -17,18 +17,18 @@ titleHighlight: 'preus'
 subtitle: 'El que cobrem de veritat, què fa que un encàrrec surti més car i com mirar si et compensa abans de decidir.'
 faq:
   - q: 'Quant costa començar a implementar IA en una empresa?'
-    a: 'El primer pas és un estudi de processos: 450 € + IVA, o 675 € + IVA si entren diversos departaments o sistemes. Et portes el diagnòstic, què faríem i un pressupost tancat. Si contractes el treball en els 30 dies següents, aquest import es descompta sencer.'
+    a: 'El primer pas és un estudi de processos: 350 € + IVA, o 525 € + IVA si entren diversos departaments o sistemes. Et portes el diagnòstic, què faríem i un pressupost tancat. Si contractes el treball en els 30 dies següents, aquest import es descompta sencer.'
   - q: 'Quina diferència de preu hi ha entre una automatització exprés i una eina a mida?'
-    a: "L'exprés és una sola tasca —pressupostos, cites, parts o albarans—, es fa en dues o tres setmanes i costa entre 1.800 € i 2.900 € + IVA. L'eina a mida uneix diversos passos o necessita una pantalla pròpia, i comença des de 4.500 € + IVA."
+    a: "L'exprés és una sola tasca —pressupostos, cites, parts o albarans—, es fa en dues o tres setmanes i costa entre 1.400 € i 2.250 € + IVA. L'eina a mida uneix diversos passos o necessita una pantalla pròpia, i comença des de 3.500 € + IVA."
   - q: "Hi ha costos mensuals fixos després de lliurar l'automatització?"
-    a: "Dos coses distintes. Les llicències o l'ús del model van en comptes al teu nom, i pagues el que consumeixis. El suport nostre, només si el vols, són bosses des de 225 €/mes + IVA (5, 10 o 20 hores), sense permanència i cobrant només les hores usades."
+    a: "Dos coses distintes. Les llicències o l'ús del model van en comptes al teu nom, i pagues el que consumeixis. El suport nostre, només si el vols, són bosses des de 175 €/mes + IVA (5, 10 o 20 hores), sense permanència i cobrant només les hores usades."
   - q: 'He de canviar el programa de facturació per automatitzar amb IA?'
     a: "No. Connectem el que ja feu servir: el correu, el WhatsApp, el full de càlcul i el programa amb el qual factureu. La factura continua eixint d'allà."
   - q: "Què passa si després de l'estudi veiem que no compensa invertir en IA?"
     a: "T'ho diem i no continuem. Passa quan hi ha poc volum, quan la tasca canvia cada setmana o quan un programa que ja existeix us ho resol. Preferim aquest no a un desenvolupament que no recupereu."
 ---
 
-**Quant costa implementar IA a l'empresa** depén de la tasca, no de «posar intel·ligència artificial». Amb nosaltres, una automatització exprés costa entre **1.800 € i 2.900 € + IVA** i es fa en dues o tres setmanes; una eina a mida comença des de **4.500 € + IVA**. Abans de programar res hi ha un estudi de processos a **450 € + IVA**, que descomptem sencer si contractes el treball en els 30 dies següents. El suport, només si el vols després, comença des de **225 €/mes + IVA** sense permanència.
+**Quant costa implementar IA a l'empresa** depén de la tasca, no de «posar intel·ligència artificial». Amb nosaltres, una automatització exprés costa entre **1.400 € i 2.250 € + IVA** i es fa en dues o tres setmanes; una eina a mida comença des de **3.500 € + IVA**. Abans de programar res hi ha un estudi de processos a **350 € + IVA**, que descomptem sencer si contractes el treball en els 30 dies següents. El suport, només si el vols després, comença des de **175 €/mes + IVA** sense permanència.
 
 L'[INE, en la nota de premsa del 22 d'octubre de 2026](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm), diu que en el primer trimestre de 2026 ja usava alguna tecnologia d'IA el 33,6 % de les empreses de 10 o més empleats, i el 21,4 % de les de menys de 10. En el mateix tall, només el 15,4 % de les primeres tenia especialistes TIC. Hi ha força ús i poca gent dins per muntar-ho. El preu que importa és el de fer-ho amb tu i veure si es recupera.
 
@@ -39,14 +39,14 @@ L'[INE, en la nota de premsa del 22 d'octubre de 2026](https://www.ine.es/dyngs/
   <span class="bf-section-title"><span class="bf-section-lead">Quant costa implementar IA a l'empresa</span> <span class="bf-section-accent">segons l'abast?</span></span>
 </h2>
 
-No hi ha un preu únic, i qui te'l done en la primera trucada s'ho inventa. No costa el mateix automatitzar pressupostos que muntar una eina que unisca pressupost, agenda i comunicació amb el client. La tarifa de referència, quan el treball va per hores, és **45 €/h + IVA**. Els encàrrecs tancats caben en quatre files:
+No hi ha un preu únic, i qui te'l done en la primera trucada s'ho inventa. No costa el mateix automatitzar pressupostos que muntar una eina que unisca pressupost, agenda i comunicació amb el client. La tarifa de referència, quan el treball va per hores, és **35 €/h + IVA**. Els encàrrecs tancats caben en quatre files:
 
 | Modalitat | Preu (+ IVA) | Termini habitual | Per a què és |
 | --- | --- | --- | --- |
-| **Estudi de processos** | 450 € (675 € si hi ha diversos departaments o sistemes) | Unes 10 hores, en pocs dies | Analitzar necessitats, dissenyar la solució i estimar el cost. Es descompta sencer si contractes en menys de 30 dies |
-| **Automatització exprés** | 1.800–2.900 € | 2–3 setmanes | Un sol procés: venda, facturació, inventari… |
-| **Eina a mida** | Des de 4.500 € | El que surt de l'estudi | Una solució integral que uneix les àrees del negoci |
-| **Suport** | Des de 225 €/mes (5/10/20 h: 225 € / 450 € / 900 €) | Mes a mes, sense permanència | Ajustos i incidències. Només es cobren les hores usades |
+| **Estudi de processos** | 350 € (525 € si hi ha diversos departaments o sistemes) | Unes 10 hores, en pocs dies | Analitzar necessitats, dissenyar la solució i estimar el cost. Es descompta sencer si contractes en menys de 30 dies |
+| **Automatització exprés** | 1.400–2.250 € | 2–3 setmanes | Un sol procés: venda, facturació, inventari… |
+| **Eina a mida** | Des de 3.500 € | El que surt de l'estudi | Una solució integral que uneix les àrees del negoci |
+| **Suport** | Des de 175 €/mes (5/10/20 h: 175 € / 350 € / 700 €) | Mes a mes, sense permanència | Ajustos i incidències. Només es cobren les hores usades |
 
 Si només necessites digitalitzar i automatitzar un procés (captació i venda, planificació i execució, compres i inventari, facturació i cobrament, postvenda i fidelització o administració), és una automatització exprés: s'apunta al que ja feu servir i probablement no cal una eina nova sinó integrar les que ja teniu.
 
@@ -107,7 +107,7 @@ El número d'entrada no és l'únic. Si només mires el que costa muntar-ho, la 
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">02</span>
     <h3>Manteniment</h3>
-    <p>Un proveïdor canvia el PDF, WhatsApp canvia un format, una connexió deixa de respondre igual. Algú ho ajusta. Si vols que siguem nosaltres, hi ha bosses des de 225 €/mes + IVA, sense permanència.</p>
+    <p>Un proveïdor canvia el PDF, WhatsApp canvia un format, una connexió deixa de respondre igual. Algú ho ajusta. Si vols que siguem nosaltres, hi ha bosses des de 175 €/mes + IVA, sense permanència.</p>
   </div>
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">03</span>
@@ -134,7 +134,7 @@ No cal un full de direcció financera. El compte, abans d'escriure una línia, �
   Hores a la setmana d'aquesta tasca × cost per hora × setmanes a l'any. Si el que estalviaríeu en un any no cobreix amb folga el pressupost, no ho fem.
 </div>
 
-**Exemple, no és un client.** Algú dedica 6 hores a la setmana a passar pressupostos, respondre i copiar del WhatsApp al full i perseguir qui no contesta. A 48 setmanes són 288 hores. A 18 € l'hora, entre sou i cotitzacions, el procés surt a 5.184 € l'any. Si una automatització de 2.400 € + IVA us lleva la major part d'aquestes hores, l'estalvi anual passa de llarg el preu i es paga dins del mateix any. Si només us estalvia una estona, el compte no surt.
+**Exemple, no és un client.** Algú dedica 6 hores a la setmana a passar pressupostos, respondre i copiar del WhatsApp al full i perseguir qui no contesta. A 48 setmanes són 288 hores. A 18 € l'hora, entre sou i cotitzacions, el procés surt a 5.184 € l'any. Si una automatització de 1.870 € + IVA us lleva la major part d'aquestes hores, l'estalvi anual passa de llarg el preu i es paga dins del mateix any. Si només us estalvia una estona, el compte no surt.
 
 **Exemple al revés.** Quatre pressupostos al mes, 20 minuts cadascun: 16 hores l'any. A 30 € l'hora són 480 €. Gastar-se prop de 2.000 € a automatitzar això tarda anys a tornar. En aquest cas no ho proposem.
 
@@ -149,7 +149,7 @@ El preu es dispara quan es comença a programar amb una idea a mitges i les exce
 
 <ol class="bf-steps">
   <li><strong>Una sola tasca.</strong> La que més hores us lleva cada setmana: pressupostos, cites, parts o albarans. No «tota l'empresa».</li>
-  <li><strong>Primer l'estudi.</strong> 450 € + IVA, o 675 € + IVA si hi ha diversos departaments o sistemes. El preu del treball queda per escrit, i si el contractes en 30 dies l'estudi es descompta sencer. El detall està a l'article de l'<a href="/va/blog/precio-cerrado-automatizacion-empresa/">estudi de processos a preu tancat</a>.</li>
+  <li><strong>Primer l'estudi.</strong> 350 € + IVA, o 525 € + IVA si hi ha diversos departaments o sistemes. El preu del treball queda per escrit, i si el contractes en 30 dies l'estudi es descompta sencer. El detall està a l'article de l'<a href="/va/blog/precio-cerrado-automatizacion-empresa/">estudi de processos a preu tancat</a>.</li>
   <li><strong>Mirem si ja existeix un programa que us valga.</strong> Si us resol el problema, t'ho diem i no en fabriquem un altre.</li>
   <li><strong>La IA prepara, una persona confirma.</strong> L'esborrany, la lectura del document o el recordatori ixen sols. El preu, el marge i el que se li diu al client els confirma algú del teu equip.</li>
   <li><strong>Al acabar, us queda el com fer-ho.</strong> El flux explicat, l'equip sap usar-lo i els comptes de les eines estan al vostre nom. El suport, si el voleu, no lliga.</li>

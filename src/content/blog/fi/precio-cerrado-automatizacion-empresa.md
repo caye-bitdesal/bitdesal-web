@@ -1,6 +1,6 @@
 ---
 title: 'Kiinteä hinta ennen automatisointia: miksi aloitamme prosessitutkimuksella'
-description: 'Säästä rahaa, vähennä riskiä ja varmista, että automatisointi ratkaisee oikean ongelman. 450 € + ALV tutkimus, kiinteä tarjous ja laajuus kirjallisesti.'
+description: 'Säästä rahaa, vähennä riskiä ja varmista, että automatisointi ratkaisee oikean ongelman. 350 € + ALV tutkimus, kiinteä tarjous ja laajuus kirjallisesti.'
 pubDate: 2026-10-01
 audience: business
 author: caye
@@ -16,7 +16,7 @@ subtitle: 'Säästä rahaa, vähennä riskejä ja varmista, että automatisointi
 updatedDate: 2026-11-17
 faq:
   - q: 'Paljonko prosessitutkimus maksaa?'
-    a: '450 € + ALV noin kymmenestä työtunnista (enemmän, jos osastoja tai järjestelmiä on useita). Toimitus sisältää diagnoosin, ehdotuksen, vaiheittaisen suunnitelman ja kiinteän toteutustarjouksen.'
+    a: '350 € + ALV noin kymmenestä työtunnista (enemmän, jos osastoja tai järjestelmiä on useita). Toimitus sisältää diagnoosin, ehdotuksen, vaiheittaisen suunnitelman ja kiinteän toteutustarjouksen.'
   - q: 'Hyvitetäänkö tutkimus, jos tilaan toteutuksen?'
     a: 'Kyllä, jos tilaat toteutuksen 30 päivän kuluessa tutkimuksesta, hyvitämme tutkimusmaksun kokonaan.'
   - q: 'Entä jos tutkimuksessa nähdään, ettei automatisointi kannata?'
@@ -108,7 +108,7 @@ Tutkimus ei ole este myydäksemme jotain muuta: se on tapa välttää väärink�
 <div class="bf-bento">
   <div class="bf-bento-card bf-bento-card--dark">
     <p class="bf-bento-label">Tutkimuksen hinta</p>
-    <h3>450 € + ALV</h3>
+    <h3>350 € + ALV</h3>
     <p>Tutkimuksen hinta, jonka <strong>hyvitämme kokonaan</strong>, jos tilaat toteutuksen 30 päivän sisällä.</p>
   </div>
   <div class="bf-bento-card bf-bento-card--cream">

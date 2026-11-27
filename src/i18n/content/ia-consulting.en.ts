@@ -72,7 +72,7 @@ export const iaPageExtra = {
 	faqExtra: {
 		cost: {
 			q: 'How much does AI consulting cost?',
-			a: 'The process study is €450 + VAT (€675 + VAT if several departments or systems are involved) and is fully deducted if you commission the build within 30 days. An express automation is usually €1,800–2,900 + VAT. A custom tool starts at €4,500 + VAT. Support, if you want it, starts at €225 a month + VAT with no lock-in.',
+			a: 'The process study is €350 + VAT (€525 + VAT if several departments or systems are involved) and is fully deducted if you commission the build within 30 days. An express automation is usually €1,400–2,250 + VAT. A custom tool starts at €3,500 + VAT. Support, if you want it, starts at €175 a month + VAT with no lock-in.',
 		},
 		software: {
 			q: 'How is AI consulting different from buying software?',

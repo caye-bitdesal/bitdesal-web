@@ -51,7 +51,7 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Consultoría de IA para empresas: automatiza el papeleo · Bitdesal',
 			description:
-				'Automatizamos presupuestos, citas, partes y papeleo con consultoría de IA. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+				'Automatizamos presupuestos, citas, partes y papeleo con consultoría de IA. Precio cerrado desde el estudio de 350 €. Agenda 30 minutos gratis.',
 		},
 		en: {
 			title: 'AI consulting for business: automate paperwork · Bitdesal',
@@ -101,17 +101,17 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Automatización de procesos con IA para empresas · Bitdesal',
 			description:
-				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 350 €. Agenda 30 minutos gratis.',
 		},
 		en: {
 			title: 'Automatización de procesos con IA para empresas · Bitdesal',
 			description:
-				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 350 €. Agenda 30 minutos gratis.',
 		},
 		fi: {
 			title: 'Automatización de procesos con IA para empresas · Bitdesal',
 			description:
-				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 450 €. Agenda 30 minutos gratis.',
+				'Automatiza presupuestos, citas, partes y pedidos con IA sin cambiar de programa. Precio cerrado desde el estudio de 350 €. Agenda 30 minutos gratis.',
 		},
 	},
 	aiAgents: {
@@ -184,7 +184,7 @@ const seoByPage: Record<PageSeoId, Record<Language, SeoEntry>> = {
 		es: {
 			title: 'Precios: estudio de procesos y proyectos a precio cerrado · Bitdesal',
 			description:
-				'Estudio de procesos desde 450 € + IVA, proyectos a precio cerrado y bolsas de soporte sin permanencia. Sabes lo que pagas antes de empezar.',
+				'Estudio de procesos desde 350 € + IVA, proyectos a precio cerrado y bolsas de soporte sin permanencia. Sabes lo que pagas antes de empezar.',
 		},
 		en: {
 			title: 'Pricing · Bitdesal',

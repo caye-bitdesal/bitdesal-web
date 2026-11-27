@@ -1,6 +1,6 @@
 ---
 title: 'Paljonko tekoälyn käyttöönotto yrityksessä maksaa: hinnat'
-description: 'Tekoälyn käyttöönoton hinta: prosessitutkimus 450 €, pika-automaatio 1 800–2 900 €, räätälöity 4 500 € alkaen. Katso kannattaako ja varaa ilmainen 30 min.'
+description: 'Tekoälyn käyttöönoton hinta: prosessitutkimus 350 €, pika-automaatio 1 400–2 250 €, räätälöity 3 500 € alkaen. Katso kannattaako ja varaa ilmainen 30 min.'
 pubDate: 2026-11-25
 audience: business
 author: caye
@@ -17,18 +17,18 @@ titleHighlight: 'hinnat'
 subtitle: 'Mitä todella veloitamme, mikä nostaa hinnan ja miten tarkistat kannattaako ennen päätöstä.'
 faq:
   - q: 'Paljonko tekoälyn käyttöönotto yrityksessä maksaa aluksi?'
-    a: 'Ensimmäinen askel on prosessitutkimus: 450 € + ALV tai 675 € + ALV, jos mukana useita osastoja tai järjestelmiä. Saat diagnoosin, suunnitelman ja kiinteän tarjouksen. Jos tilaat työn 30 päivän sisällä, tutkimus hyvitetään kokonaan.'
+    a: 'Ensimmäinen askel on prosessitutkimus: 350 € + ALV tai 525 € + ALV, jos mukana useita osastoja tai järjestelmiä. Saat diagnoosin, suunnitelman ja kiinteän tarjouksen. Jos tilaat työn 30 päivän sisällä, tutkimus hyvitetään kokonaan.'
   - q: 'Mitä eroa on pika-automaatiolla ja räätälöidyllä työkalulla?'
-    a: 'Pika-automaatio on yksi tehtävä — tarjoukset, ajat, työmaaraportit tai kuormakirjat — kahdessa tai kolmessa viikossa, hinta 1 800–2 900 € + ALV. Räätälöity työkalu yhdistää useita vaiheita tai tarvitsee oman näkymän, alkaen 4 500 € + ALV.'
+    a: 'Pika-automaatio on yksi tehtävä — tarjoukset, ajat, työmaaraportit tai kuormakirjat — kahdessa tai kolmessa viikossa, hinta 1 400–2 250 € + ALV. Räätälöity työkalu yhdistää useita vaiheita tai tarvitsee oman näkymän, alkaen 3 500 € + ALV.'
   - q: 'Onko kuukausikustannuksia toimituksen jälkeen?'
-    a: 'Kaksi eri asiaa. Mallin ja API:n käyttö on omissa tileissänne; maksatte kulutuksen. Tukemme, jos haluatte, on tuntipaketteja 225 €/kk + ALV alkaen (5, 10 tai 20 h), ei sitoutumista, laskutus vain käytetyistä tunneista.'
+    a: 'Kaksi eri asiaa. Mallin ja API:n käyttö on omissa tileissänne; maksatte kulutuksen. Tukemme, jos haluatte, on tuntipaketteja 175 €/kk + ALV alkaen (5, 10 tai 20 h), ei sitoutumista, laskutus vain käytetyistä tunneista.'
   - q: 'Pitääkö vaihtaa laskutusohjelmaa automatisoidessa?'
     a: 'Ei. Kytkemme sen mitä jo käytätte: sähköposti, WhatsApp, taulukot ja laskutusjärjestelmän. Lasku tulee edelleen sieltä.'
   - q: 'Entä jos tutkimuksessa nähdään, ettei tekoäly kannata?'
     a: 'Kerromme ja lopetamme. Niin käy vähäisellä volyymilla, viikoittain vaihtuvilla tehtävillä tai kun olemassa oleva ohjelmisto jo ratkaisee ongelman. Rehellinen «ei» on parempi kuin toteutus, jota ette saa takaisin.'
 ---
 
-**Paljonko tekoälyn käyttöönotto yrityksessä maksaa** riippuu tehtävästä, ei «tekoälyn laittamisesta». Meillä pika-automaatio on **1 800–2 900 € + ALV** ja valmis kahdessa tai kolmessa viikossa; räätälöity työkalu alkaen **4 500 € + ALV**. Ennen koodia on prosessitutkimus **450 € + ALV**, hyvitetään kokonaan jos tilaatte työn 30 päivän sisällä. Tuki myöhemmin, vain jos haluatte, alkaen **225 €/kk + ALV** ilman sitoutumista.
+**Paljonko tekoälyn käyttöönotto yrityksessä maksaa** riippuu tehtävästä, ei «tekoälyn laittamisesta». Meillä pika-automaatio on **1 400–2 250 € + ALV** ja valmis kahdessa tai kolmessa viikossa; räätälöity työkalu alkaen **3 500 € + ALV**. Ennen koodia on prosessitutkimus **350 € + ALV**, hyvitetään kokonaan jos tilaatte työn 30 päivän sisällä. Tuki myöhemmin, vain jos haluatte, alkaen **175 €/kk + ALV** ilman sitoutumista.
 
 [Espanjan INEn tiedote 22.10.2026](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm) kertoo, että Q1/2026 jo 33,6 % yrityksistä, joissa vähintään 10 työntekijää, käytti jotain tekoälyteknologiaa, ja 21,4 % pienemmistä. Samassa mittauksessa vain 15,4 % suuremmista yrityksistä oli IT-asiantuntijoita. Käyttöä on paljon, resursseja vähän. Tärkeä hinta on toteutus kumppanin kanssa ja palautuuko se.
 
@@ -39,14 +39,14 @@ faq:
   <span class="bf-section-title"><span class="bf-section-lead">Paljonko tekoälyn käyttöönotto maksaa</span> <span class="bf-section-accent">laajuuden mukaan?</span></span>
 </h2>
 
-Yhtä hintaa ei ole, ja se joka antaa sen ensimmäisellä puhelulla arvaa. Tarjousten automatisointi ei maksa samaa kuin työkalu, joka yhdistää tarjoukset, kalenterin ja asiakasviestinnän. Tuntityön referenssihinta on **45 €/h + ALV**. Kiinteät toimitukset mahtuvat neljään riviin:
+Yhtä hintaa ei ole, ja se joka antaa sen ensimmäisellä puhelulla arvaa. Tarjousten automatisointi ei maksa samaa kuin työkalu, joka yhdistää tarjoukset, kalenterin ja asiakasviestinnän. Tuntityön referenssihinta on **35 €/h + ALV**. Kiinteät toimitukset mahtuvat neljään riviin:
 
 | Vaihtoehto | Hinta (+ ALV) | Tyypillinen aikataulu | Mihin sopii |
 | --- | --- | --- | --- |
-| **Prosessitutkimus** | 450 € (675 € useilla osastoilla tai järjestelmillä) | Noin 10 h, päivissä | Tarpeet, ratkaisuluonnos ja kustannusarvio. Hyvitetään kokonaan jos tilaat 30 päivän sisällä |
-| **Pika-automaatio** | 1 800–2 900 € | 2–3 viikkoa | Yksi prosessi: myynti, laskutus, varasto… |
-| **Räätälöity työkalu** | 4 500 € alkaen | Tutkimuksen mukaan | Kokonaisratkaisu useille osa-alueille |
-| **Tuki** | 225 €/kk alkaen (5/10/20 h: 225 € / 450 € / 900 €) | Kuukausittain, ei sitoumusta | Säätö ja häiriöt. Vain käytetyt tunnit |
+| **Prosessitutkimus** | 350 € (525 € useilla osastoilla tai järjestelmillä) | Noin 10 h, päivissä | Tarpeet, ratkaisuluonnos ja kustannusarvio. Hyvitetään kokonaan jos tilaat 30 päivän sisällä |
+| **Pika-automaatio** | 1 400–2 250 € | 2–3 viikkoa | Yksi prosessi: myynti, laskutus, varasto… |
+| **Räätälöity työkalu** | 3 500 € alkaen | Tutkimuksen mukaan | Kokonaisratkaisu useille osa-alueille |
+| **Tuki** | 175 €/kk alkaen (5/10/20 h: 175 € / 350 € / 700 €) | Kuukausittain, ei sitoumusta | Säätö ja häiriöt. Vain käytetyt tunnit |
 
 Jos tarvitsette vain yhden prosessin digitoinnin ja automaation (asiakashankinta ja myynti, suunnittelu ja toteutus, osto ja varasto, laskutus ja perintä, jälkimyynti ja asiakkuus tai hallinto), kyse on pika-automaatiosta: se nojaa usein olemassa oleviin työkaluihin eikä vaadi uutta ohjelmaa.
 
@@ -107,7 +107,7 @@ Aloitushinta ei kerro kaikkea. Jos katsotte vain rakentamista, yllätys tulee se
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">02</span>
     <h3>Ylläpito</h3>
-    <p>Toimittaja muuttaa PDF:ää, WhatsApp formaattia, API käyttäytymistä. Joku säätää. Tukipaketit meiltä 225 €/kk + ALV alkaen, ei sitoutumista.</p>
+    <p>Toimittaja muuttaa PDF:ää, WhatsApp formaattia, API käyttäytymistä. Joku säätää. Tukipaketit meiltä 175 €/kk + ALV alkaen, ei sitoutumista.</p>
   </div>
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">03</span>
@@ -149,7 +149,7 @@ Hinta karkaa kun koodaus alkaa puolivalmiilla idealla ja poikkeukset ilmestyvät
 
 <ol class="bf-steps">
   <li><strong>Yksi tehtävä.</strong> Se joka syö eniten tunteja: tarjoukset, ajat, työmaaraportit tai kuormakirjat. Ei «koko yritys».</li>
-  <li><strong>Ensin tutkimus.</strong> 450 € + ALV tai 675 € + ALV useilla osastoilla. Kiinteä hinta kirjallisesti; tilaus 30 päivän sisällä hyvittää tutkimuksen. Lisää artikkelissa <a href="/fi/blog/precio-cerrado-automatizacion-empresa/">kiinteähintaisesta prosessitutkimuksesta</a>.</li>
+  <li><strong>Ensin tutkimus.</strong> 350 € + ALV tai 525 € + ALV useilla osastoilla. Kiinteä hinta kirjallisesti; tilaus 30 päivän sisällä hyvittää tutkimuksen. Lisää artikkelissa <a href="/fi/blog/precio-cerrado-automatizacion-empresa/">kiinteähintaisesta prosessitutkimuksesta</a>.</li>
   <li><strong>Tarkistamme onko valmis ohjelmisto jo riittävä.</strong> Jos se ratkaisee ongelman, kerromme emmekä rakenna uutta.</li>
   <li><strong>Tekoäly valmistelee, ihminen vahvistaa.</strong> Luonnokset, dokumenttiluku ja muistutukset automaattisesti. Hinta, kate ja asiakasviesti vahvistetaan tiimissänne.</li>
   <li><strong>Lopuksi teillä on ohjeet.</strong> Dokumentoitu virta, koulutettu tiimi, tilit teidän nimissänne. Tuki halutessanne ilman sitoumusta.</li>

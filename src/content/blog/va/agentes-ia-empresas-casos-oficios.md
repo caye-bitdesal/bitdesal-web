@@ -22,11 +22,11 @@ faq:
   - q: "Els agents d'IA servixen per a empreses d'oficis i instal·lacions?"
     a: "Sí, quan el que us menja temps són pressupostos, cites, parts o albarans que entren per missatge i acabeu copiant a mà. Si la tasca canvia cada setmana o gairebé no es repeteix, t'ho diem abans de programar: a vegades no compensa."
   - q: "Quant costa muntar un agent d'IA en una empresa?"
-    a: "No cobrem més només per dir-li agent. El normal és entre 1.800 i 2.900 € + IVA en un treball exprés. Abans sol anar un estudi de 450 € + IVA; si contractes en 30 dies, es descompta. Més xifres a la guia de preus d'IA."
+    a: "No cobrem més només per dir-li agent. El normal és entre 1.400 i 2.250 € + IVA en un treball exprés. Abans sol anar un estudi de 350 € + IVA; si contractes en 30 dies, es descompta. Més xifres a la guia de preus d'IA."
   - q: "L'agent pot contestar sol als clients per WhatsApp?"
     a: "Només en el que hàgem acordat per escrit. Para si el preu és estrany, hi ha una queixa, no entén una dada o el client demana parlar amb una persona. El preu i la data els confirma algú del teu equip."
   - q: "Necessite contractar un especialista en IA per mantindre l'agent?"
-    a: "Per al dia a dia, no. Us expliquem els passos i els comptes de les eines són vostres. Si voleu ajuda nostra, hi ha suport des de 225 €/mes + IVA, sense permanència. Si no, ens truqueu quan calga."
+    a: "Per al dia a dia, no. Us expliquem els passos i els comptes de les eines són vostres. Si voleu ajuda nostra, hi ha suport des de 175 €/mes + IVA, sense permanència. Si no, ens truqueu quan calga."
 ---
 
 **Els agents d'IA per a empreses** són un programa amb un treball concret. Llig el que entra (missatge, correu, àudio, foto d'un albarà), decideix el següent pas segons regles escrites, i actua o te'l passa. En fontaneria, electricitat, reformes o instal·lacions no van a l'obra per tu. Us lleven el paperam: copiar mesures, tornar a demanar fotos i repetir el mateix pressupost. A [agents d'IA per a empreses](/agentes-ia-empresas/) ho expliquem en resum; ací van **sis exemples** que veiem sovint, sense noms de clients ni xifres inventades.
@@ -66,7 +66,7 @@ De vegades cal barrejar: l'agent entén el missatge, l'[automatització de proce
   <span class="bf-section-title"><span class="bf-section-lead">Quins casos reals d'agents d'IA</span> <span class="bf-section-accent">veiem en empreses d'oficis?</span></span>
 </h2>
 
-No publiquem noms de clients. El que ve a continuació són **treballs que sí fem**, contats com són. Si el teu s'assembla, l'estudi de 450 € + IVA et diu si compensa; si no, també t'ho diem clar.
+No publiquem noms de clients. El que ve a continuació són **treballs que sí fem**, contats com són. Si el teu s'assembla, l'estudi de 350 € + IVA et diu si compensa; si no, també t'ho diem clar.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">1. Pressupost des d'una nota de veu</h3>
 
@@ -112,10 +112,10 @@ No hi ha preu especial només per dir-li agent. Es pressuposta com la resta d'au
 
 | Pas | Què inclou | Preu orientatiu (+ IVA) |
 | --- | --- | --- |
-| **Estudi de processos** | Mirem com treballeu, proposem solució i preu tancat; si contractes en 30 dies, es descompta sencer | 450 € (675 € si hi ha diversos departaments o programes) |
-| **Encàrrec exprés amb agent** | Una sola tasca (un dels sis casos de dalt o paregut), en 2–3 setmanes | 1.800–2.900 € |
-| **Eina a mida** | Diversos passos junts o pantalla pròpia | Des de 4.500 € |
-| **Suport opcional** | Canvis i incidències, sense permanència | Des de 225 €/mes (bosses de 5, 10 o 20 h) |
+| **Estudi de processos** | Mirem com treballeu, proposem solució i preu tancat; si contractes en 30 dies, es descompta sencer | 350 € (525 € si hi ha diversos departaments o programes) |
+| **Encàrrec exprés amb agent** | Una sola tasca (un dels sis casos de dalt o paregut), en 2–3 setmanes | 1.400–2.250 € |
+| **Eina a mida** | Diversos passos junts o pantalla pròpia | Des de 3.500 € |
+| **Suport opcional** | Canvis i incidències, sense permanència | Des de 175 €/mes (bosses de 5, 10 o 20 h) |
 
 Més detall de llicències i què puja el preu a [quant costa implementar IA a l'empresa](/va/blog/cuanto-cuesta-implementar-ia-empresa/). Per què comencem amb un estudi a preu tancat a [preu tancat abans d'automatitzar](/va/blog/precio-cerrado-automatizacion-empresa/). Tarifes a [consultoria d'IA](/va/consultoria-ia/) i [casos i preus](/casos-y-precios/#ia).
 

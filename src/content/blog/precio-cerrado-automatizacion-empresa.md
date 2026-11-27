@@ -1,6 +1,6 @@
 ---
 title: 'Precio cerrado antes de automatizar: por qué empezamos con un estudio de procesos'
-description: 'Ahorra dinero, reduce riesgos y garantiza que la automatización soluciona el problema real. Estudio de 450 € + IVA, presupuesto fijo y alcance por escrito.'
+description: 'Ahorra dinero, reduce riesgos y garantiza que la automatización soluciona el problema real. Estudio de 350 € + IVA, presupuesto fijo y alcance por escrito.'
 pubDate: 2026-10-01
 audience: business
 author: caye
@@ -16,7 +16,7 @@ subtitle: 'Ahorra dinero, reduce riesgos y garantiza que la automatización solu
 updatedDate: 2026-11-17
 faq:
   - q: '¿Cuánto cuesta el estudio de procesos?'
-    a: '450 € + IVA por unas diez horas de trabajo (más si hay varios departamentos o sistemas). El entregable incluye diagnóstico, propuesta, plan por fases y presupuesto cerrado de implementación.'
+    a: '350 € + IVA por unas diez horas de trabajo (más si hay varios departamentos o sistemas). El entregable incluye diagnóstico, propuesta, plan por fases y presupuesto cerrado de implementación.'
   - q: '¿Se descuenta el estudio si contrato la implementación?'
     a: 'Sí: si contratas la implementación en los 30 días siguientes al estudio, descontamos el importe íntegro del estudio.'
   - q: '¿Y si al estudiar el proceso vemos que no compensa automatizar?'
@@ -108,7 +108,7 @@ El estudio no es una barrera para venderte otro servicio: es la forma en que amb
 <div class="bf-bento">
   <div class="bf-bento-card bf-bento-card--dark">
     <p class="bf-bento-label">Inversión del estudio</p>
-    <h3>450 € + IVA</h3>
+    <h3>350 € + IVA</h3>
     <p>Coste del estudio que <strong>descontamos íntegramente</strong> si contratas la implementación en los 30 días siguientes.</p>
   </div>
   <div class="bf-bento-card bf-bento-card--cream">

@@ -80,8 +80,8 @@ export const androidConsultingPage = {
 	},
 	pricing: {
 		title: 'Pricing',
-		p1: 'Reference rate: €45/h + VAT for senior Android consulting and development.',
-		p2: 'Monthly bundles at €225, €450 and €900 + VAT (5, 10 and 20 h); we only bill time used, no lock-in.',
+		p1: 'Reference rate: €35/h + VAT for senior Android consulting and development.',
+		p2: 'Monthly bundles at €175, €350 and €700 + VAT (5, 10 and 20 h); we only bill time used, no lock-in.',
 		p3: 'Projects or rescues at fixed price after specification and a phased plan — you know the scope before we start.',
 		link: 'See software and Android development rates',
 	},
@@ -90,11 +90,11 @@ export const androidConsultingPage = {
 		items: {
 			cost: {
 				q: 'How much does an Android consultant cost?',
-				a: 'The reference is €45/h + VAT. A 10 h bundle (€450 + VAT) is usually enough for a deep diagnosis; fixed-price projects are quoted after specification.',
+				a: 'The reference is €35/h + VAT. A 10 h bundle (€350 + VAT) is usually enough for a deep diagnosis; fixed-price projects are quoted after specification.',
 			},
 			remote: {
 				q: 'Do you work remotely with teams outside Spain?',
-				a: 'Yes. Mostly remote across Spain and the EU; for international companies we use €60/h (EU) or €75/h (outside the EU) depending on billing.',
+				a: 'Yes. Mostly remote across Spain and the EU; for international companies we use €50/h (EU) or €75/h (outside the EU) depending on billing.',
 			},
 			java: {
 				q: 'Can you handle legacy Java code?',

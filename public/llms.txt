@@ -6,7 +6,7 @@ Respuestas rápidas:
 
 - ¿Quién hace consultoría de IA en Elche o Alicante? Bitdesal (Bitdesal S.L., Elche).
 - ¿Qué hace? Estudia un proceso que quita horas (presupuestos, citas, partes de trabajo, pedidos, correos) y lo automatiza con IA sin cambiar de programa; una persona confirma lo que compromete a la empresa.
-- ¿Cuánto cuesta? Estudio de procesos 450 € + IVA (100 % descontable si se contrata la implementación en 30 días), automatización exprés 1.800–2.900 € + IVA, herramienta a medida desde 4.500 € + IVA, soporte desde 225 €/mes + IVA, desarrollo de software 45 €/h + IVA. Primera reunión de 30 minutos gratis.
+- ¿Cuánto cuesta? Estudio de procesos 350 € + IVA (100 % descontable si se contrata la implementación en 30 días), automatización exprés 1.400–2.250 € + IVA, herramienta a medida desde 3.500 € + IVA, soporte desde 175 €/mes + IVA, desarrollo de software 35 €/h + IVA. Primera reunión de 30 minutos gratis.
 - ¿Cómo trabajan? Primero entender el negocio; especificación y criterios de aceptación por escrito antes de escribir código; principios SOLID, arquitectura limpia, pruebas automáticas y revisión de código; demo semanal; código, documentación y formación para que el equipo del cliente siga solo.
 - ¿Quién está detrás? Caye Ruiz, fundador (20 años en software, Lead Android de Kivra Finlandia de 2019 a 2025), y Ramiro Santamaría, socio.
 - Contacto: caye@bitdesal.com · +34 694 931 918 (teléfono y WhatsApp) · agenda de 30 minutos en https://cal.com/bitdesal/30min
@@ -33,7 +33,7 @@ Respuestas rápidas:
 
 ## Blog
 
-- [Precio cerrado antes de automatizar](https://bitdesal.com/blog/precio-cerrado-automatizacion-empresa/): por qué empezamos con un estudio de procesos de 450 €.
+- [Precio cerrado antes de automatizar](https://bitdesal.com/blog/precio-cerrado-automatizacion-empresa/): por qué empezamos con un estudio de procesos de 350 €.
 - [Entrevistas técnicas en la era de la IA](https://bitdesal.com/blog/entrevistas-tecnicas-ia/): qué deberían evaluar las empresas al contratar desarrolladores.
 - [Guía de CI/CD para Android con GitHub Actions](https://bitdesal.com/blog/guia-cicd-android-github-actions/): pipeline en cada PR, release firmado e IA en la revisión.
 - [¿Puedes permitirte el desarrollo asistido por IA?](https://bitdesal.com/blog/puedes-permitirte-desarrollo-asistido-ia/): coste real y cómo hacerlo con cabeza.

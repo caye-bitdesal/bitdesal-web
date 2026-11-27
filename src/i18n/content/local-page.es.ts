@@ -30,7 +30,7 @@ export const localPage = {
 	meeting: {
 		title: 'Cómo es la primera reunión',
 		p1: 'Son 30 minutos y no se cobran. Puede ser presencial, si estás en la zona que cubrimos, o por videollamada. Ven con un proceso concreto: el presupuesto, las citas, los partes o la app que os está frenando. No hace falta un dossier.',
-		p2: 'En esa media hora vemos si el problema es de automatización, de software o de las dos cosas, y te decimos el siguiente paso con un rango de precio. El estudio de procesos, si hace falta, son 450 € + IVA y se descuenta entero si contratas la implementación en los 30 días siguientes. No sales de la reunión con un proyecto encadenado.',
+		p2: 'En esa media hora vemos si el problema es de automatización, de software o de las dos cosas, y te decimos el siguiente paso con un rango de precio. El estudio de procesos, si hace falta, son 350 € + IVA y se descuenta entero si contratas la implementación en los 30 días siguientes. No sales de la reunión con un proyecto encadenado.',
 		p3: 'Si preferís escribir antes de hablar, el formulario de contacto y el WhatsApp están en la página de contacto. El correo es caye@bitdesal.com y el teléfono +34 694 931 918.',
 		contactLink: 'Ir a contacto',
 		book: 'Agendar 30 minutos',
@@ -53,7 +53,7 @@ export const localPage = {
 		},
 		price: {
 			q: '¿Cuánto cuesta una consultoría de IA en Elche o Alicante?',
-			a: 'En Bitdesal, el estudio de procesos cuesta 450 € + IVA y se descuenta entero si contratas la implementación en 30 días. Una automatización exprés va de 1.800 a 2.900 € + IVA, una herramienta a medida desde 4.500 € + IVA y el soporte desde 225 €/mes + IVA. La primera reunión de 30 minutos es gratis.',
+			a: 'En Bitdesal, el estudio de procesos cuesta 350 € + IVA y se descuenta entero si contratas la implementación en 30 días. Una automatización exprés va de 1.400 a 2.250 € + IVA, una herramienta a medida desde 3.500 € + IVA y el soporte desde 175 €/mes + IVA. La primera reunión de 30 minutos es gratis.',
 		},
 		travel: {
 			q: '¿Os desplazáis?',
@@ -69,7 +69,7 @@ export const localPage = {
 		},
 		remote: {
 			q: '¿El precio cambia por estar en Alicante?',
-			a: 'No. La tarifa es la misma en Elche, en la provincia y en remoto en el resto de España: estudio 450 € + IVA, automatización exprés 1.800–2.900 € + IVA, herramienta a medida desde 4.500 € + IVA, desarrollo Android a 45 €/h + IVA. Estar cerca no es un recargo ni un descuento.',
+			a: 'No. La tarifa es la misma en Elche, en la provincia y en remoto en el resto de España: estudio 350 € + IVA, automatización exprés 1.400–2.250 € + IVA, herramienta a medida desde 3.500 € + IVA, desarrollo Android a 35 €/h + IVA. Estar cerca no es un recargo ni un descuento.',
 		},
 	},
 };

@@ -173,8 +173,8 @@ export const translations: Record<Language, any> = {
 			blocks: {
 				study: {
 					title: 'Estudio de procesos',
-					price: '450 € + IVA (precio cerrado)',
-					note: '≈10 h; 675 € + IVA si hay varios departamentos o sistemas.',
+					price: '350 € + IVA (precio cerrado)',
+					note: '≈10 h; 525 € + IVA si hay varios departamentos o sistemas.',
 					description:
 						'Incluye evaluación de requisitos y estudio de procesos y sistemas. Entregable: diagnóstico, solución propuesta, plan por fases y presupuesto cerrado.',
 					discount: '100 % descontable si contratas la implementación en los 30 días siguientes.',
@@ -188,7 +188,7 @@ export const translations: Record<Language, any> = {
 				support: {
 					title: 'Soporte',
 					price: 'Bolsas mensuales',
-					description: '225 € / 450 € / 900 € + IVA (5/10/20 h). Solo se factura lo consumido. Sin permanencia.',
+					description: '175 € / 350 € / 700 € + IVA (5/10/20 h). Solo se factura lo consumido. Sin permanencia.',
 				},
 			},
 			sections: {
@@ -197,30 +197,30 @@ export const translations: Record<Language, any> = {
 			},
 			softwareBlock: {
 				title: 'Desarrollo y consultoría de software',
-				hourly: '45 €/h + IVA. Tarifa de referencia para desarrollo, arquitectura y mentoría.',
-				bundles: 'Bolsas mensuales: 225 € / 450 € / 900 € + IVA (5/10/20 h), sin permanencia.',
+				hourly: '35 €/h + IVA. Tarifa de referencia para desarrollo, arquitectura y mentoría.',
+				bundles: 'Bolsas mensuales: 175 € / 350 € / 700 € + IVA (5/10/20 h), sin permanencia.',
 				fixed: 'Proyecto a precio cerrado tras especificación y plan por fases.',
 				international:
-					'Desarrollo y consultoría de software para empresas internacionales: 60 €/h para empresas de la UE (el IVA lo gestiona el cliente). 75 €/h para empresas fuera de la UE.',
+					'Desarrollo y consultoría de software para empresas internacionales: 50 €/h para empresas de la UE (el IVA lo gestiona el cliente). 75 €/h para empresas fuera de la UE.',
 			},
 			breakdownToggle: 'Ver el desglose por fases',
 			packages: {
 				title: 'Paquetes orientativos',
 				express: {
 					title: 'Automatización exprés',
-					price: '1.800–2.900 € + IVA',
+					price: '1.400–2.250 € + IVA',
 					time: '2–3 semanas',
 					description:
 						'Un proceso concreto: presupuestos, facturas, citas, partes de trabajo o documentos con IA.',
 				},
 				custom: {
 					title: 'Herramienta a medida / app',
-					price: 'Desde 4.500 € + IVA',
+					price: 'Desde 3.500 € + IVA',
 					description: 'Software adaptado a tu forma de trabajar, con integraciones y formación.',
 				},
 				maintenance: {
 					title: 'Mantenimiento',
-					price: 'Desde 225 €/mes + IVA',
+					price: 'Desde 175 €/mes + IVA',
 					description: 'Bolsas de horas para incidencias, ajustes y mejoras.',
 				},
 			},
@@ -325,7 +325,7 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Inversión',
 				title: 'Tarifas claras, sin sorpresas',
 				subtitle:
-					'Todo se calcula a 45 €/hora + IVA. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
+					'Todo se calcula a 35 €/hora + IVA. Esta tabla muestra un proyecto orientativo para una empresa pequeña o mediana.',
 				phase: 'Fase',
 				hours: 'Horas (aproximado)',
 				amount: 'Importe',
@@ -359,14 +359,14 @@ export const translations: Record<Language, any> = {
 					title: 'Consultoría de IA para empresas',
 					description:
 						'¿Presupuestos a mano, notas en papel o en WhatsApp, citas que se pierden? Estudiamos cómo trabajáis y automatizamos lo que os quita horas.',
-					priceHint: 'Desde 1.800 € + IVA',
+					priceHint: 'Desde 1.400 € + IVA',
 					cta: 'Ver consultoría de IA',
 				},
 				software: {
 					title: 'Desarrollo y consultoría de software',
 					description:
 						'Desarrollo Android, arquitectura y calidad para equipos técnicos. Apps en producción con cientos de miles de usuarios.',
-					priceHint: '45 €/h + IVA',
+					priceHint: '35 €/h + IVA',
 					cta: 'Ver desarrollo de software',
 				},
 			},
@@ -381,8 +381,8 @@ export const translations: Record<Language, any> = {
 			},
 			entryOffer: {
 				badge: 'Precio cerrado, sin sorpresas',
-				text: 'Empezamos con un Estudio de procesos de 450 € + IVA que te descontamos íntegramente si hacemos el proyecto juntos. Te llevas un diagnóstico, la solución propuesta y un presupuesto cerrado.',
-				line: 'Proyectos desde 1.800 € + IVA · Tarifa de referencia: 45 €/h + IVA',
+				text: 'Empezamos con un Estudio de procesos de 350 € + IVA que te descontamos íntegramente si hacemos el proyecto juntos. Te llevas un diagnóstico, la solución propuesta y un presupuesto cerrado.',
+				line: 'Proyectos desde 1.400 € + IVA · Tarifa de referencia: 35 €/h + IVA',
 			},
 			whyBitdesal: {
 				title: '¿Por qué Bitdesal?',
@@ -569,10 +569,10 @@ export const translations: Record<Language, any> = {
 			},
 			pricingSummary: {
 				title: 'Precios orientativos',
-				study: 'Estudio de procesos — 450 € + IVA (675 € + IVA si hay varios departamentos o sistemas). 100 % descontable si contratas la implementación en los 30 días siguientes.',
-				express: 'Automatización exprés — 1.800–2.900 € + IVA · 2–3 semanas.',
-				custom: 'Herramienta a medida — desde 4.500 € + IVA.',
-				support: 'Soporte — desde 225 €/mes + IVA, sin permanencia.',
+				study: 'Estudio de procesos — 350 € + IVA (525 € + IVA si hay varios departamentos o sistemas). 100 % descontable si contratas la implementación en los 30 días siguientes.',
+				express: 'Automatización exprés — 1.400–2.250 € + IVA · 2–3 semanas.',
+				custom: 'Herramienta a medida — desde 3.500 € + IVA.',
+				support: 'Soporte — desde 175 €/mes + IVA, sin permanencia.',
 				details: 'Ver precios en detalle',
 			},
 			faq: {
@@ -626,11 +626,11 @@ export const translations: Record<Language, any> = {
 			},
 			pricing: {
 				title: 'Modalidades y precio',
-				hourly: 'Por horas: 45 €/h + IVA',
-				bundles: 'Bolsas mensuales: 225 € / 450 € / 900 € + IVA (5/10/20 h).',
+				hourly: 'Por horas: 35 €/h + IVA',
+				bundles: 'Bolsas mensuales: 175 € / 350 € / 700 € + IVA (5/10/20 h).',
 				fixed: 'Proyecto cerrado tras especificación.',
 				international:
-					'Empresas internacionales: 60 €/h (UE; el IVA lo gestiona el cliente) · 75 €/h (fuera de la UE).',
+					'Empresas internacionales: 50 €/h (UE; el IVA lo gestiona el cliente) · 75 €/h (fuera de la UE).',
 				details: 'Ver precios',
 			},
 		},
@@ -1597,8 +1597,8 @@ export const translations: Record<Language, any> = {
 			blocks: {
 				study: {
 					title: 'Process study',
-					price: 'Fixed price from €450 + VAT',
-					note: '≈10 h; €675 + VAT if multiple departments or systems.',
+					price: 'Fixed price from €350 + VAT',
+					note: '≈10 h; €525 + VAT if multiple departments or systems.',
 					description: 'Requirements review, process mapping, proposed solution, phased plan and fixed estimate.',
 					discount: 'Fully credited if you hire implementation within 30 days.',
 				},
@@ -1610,7 +1610,7 @@ export const translations: Record<Language, any> = {
 				support: {
 					title: 'Support',
 					price: 'Monthly bundles',
-					description: '€225 / €450 / €900 + VAT (5/10/20 h). Billed for time used. No lock-in.',
+					description: '€175 / €350 / €700 + VAT (5/10/20 h). Billed for time used. No lock-in.',
 				},
 			},
 			sections: {
@@ -1619,29 +1619,29 @@ export const translations: Record<Language, any> = {
 			},
 			softwareBlock: {
 				title: 'Software development and consulting',
-				hourly: '€45/h + VAT. Reference rate for development, architecture and mentoring.',
-				bundles: 'Monthly bundles: €225 / €450 / €900 + VAT (5/10/20 h). No lock-in.',
+				hourly: '€35/h + VAT. Reference rate for development, architecture and mentoring.',
+				bundles: 'Monthly bundles: €175 / €350 / €700 + VAT (5/10/20 h). No lock-in.',
 				fixed: 'Fixed-price project after specification and phased plan.',
 				international:
-					'International clients (software development and consulting): €60/h for EU companies (VAT handled by the client). €75/h for companies outside the EU.',
+					'International clients (software development and consulting): €50/h for EU companies (VAT handled by the client). €75/h for companies outside the EU.',
 			},
 			breakdownToggle: 'See phase breakdown',
 			packages: {
 				title: 'Indicative packages',
 				express: {
 					title: 'Focused automation',
-					price: '€1,800–2,900 + VAT',
+					price: '€1,400–2,250 + VAT',
 					time: '2–3 weeks',
 					description: 'One concrete workflow: documents, approvals, reporting or similar.',
 				},
 				custom: {
 					title: 'Custom tool / app',
-					price: 'From €4,500 + VAT',
+					price: 'From €3,500 + VAT',
 					description: 'Software tailored to your workflow with integrations and training.',
 				},
 				maintenance: {
 					title: 'Maintenance',
-					price: 'From €225/month + VAT',
+					price: 'From €175/month + VAT',
 					description: 'Support bundles for fixes and improvements.',
 				},
 			},
@@ -1745,7 +1745,7 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Investment',
 				title: 'Clear rates, no surprises',
 				subtitle:
-					'Everything is calculated at €45/hour + VAT. This table shows an indicative project for a small or medium-sized company.',
+					'Everything is calculated at €35/hour + VAT. This table shows an indicative project for a small or medium-sized company.',
 				phase: 'Phase',
 				hours: 'Hours (approx.)',
 				amount: 'Amount',
@@ -1816,14 +1816,14 @@ export const translations: Record<Language, any> = {
 					title: 'AI consulting for business',
 					description:
 						'Quotes by hand, notes on paper or WhatsApp, appointments that slip? We study how you work and automate what eats your hours.',
-					priceHint: 'From €1,800 + VAT',
+					priceHint: 'From €1,400 + VAT',
 					cta: 'See AI consulting',
 				},
 				software: {
 					title: 'Software development and consulting',
 					description:
 						'Android development, architecture and quality for technical teams. Production apps with hundreds of thousands of users.',
-					priceHint: '€45/h + VAT',
+					priceHint: '€35/h + VAT',
 					cta: 'See software development',
 				},
 			},
@@ -1838,8 +1838,8 @@ export const translations: Record<Language, any> = {
 			},
 			entryOffer: {
 				badge: 'Fixed price, no surprises',
-				text: 'We start with a €450 + VAT process study, fully credited if we do the project together. You get a diagnosis, the proposed solution and a fixed quote.',
-				line: 'Projects from €1,800 + VAT · Reference rate: €45/h + VAT',
+				text: 'We start with a €350 + VAT process study, fully credited if we do the project together. You get a diagnosis, the proposed solution and a fixed quote.',
+				line: 'Projects from €1,400 + VAT · Reference rate: €35/h + VAT',
 			},
 			whyBitdesal: {
 				title: 'Why Bitdesal?',
@@ -2548,10 +2548,10 @@ export const translations: Record<Language, any> = {
 			},
 			pricingSummary: {
 				title: 'Indicative prices',
-				study: 'Process study — €450 + VAT (€675 + VAT if several departments or systems are involved). 100% credited if you hire the implementation within the next 30 days.',
-				express: 'Express automation — €1,800–2,900 + VAT · 2–3 weeks.',
-				custom: 'Custom tool — from €4,500 + VAT.',
-				support: 'Support — from €225/month + VAT, no lock-in.',
+				study: 'Process study — €350 + VAT (€525 + VAT if several departments or systems are involved). 100% credited if you hire the implementation within the next 30 days.',
+				express: 'Express automation — €1,400–2,250 + VAT · 2–3 weeks.',
+				custom: 'Custom tool — from €3,500 + VAT.',
+				support: 'Support — from €175/month + VAT, no lock-in.',
 				details: 'See pricing in detail',
 			},
 			faq: {
@@ -2600,11 +2600,11 @@ export const translations: Record<Language, any> = {
 			},
 			pricing: {
 				title: 'Ways of working and price',
-				hourly: 'Hourly: €45/h + VAT',
-				bundles: 'Monthly bundles: €225 / €450 / €900 + VAT (5/10/20 h).',
+				hourly: 'Hourly: €35/h + VAT',
+				bundles: 'Monthly bundles: €175 / €350 / €700 + VAT (5/10/20 h).',
 				fixed: 'Fixed-price project after specification.',
 				international:
-					'International companies: €60/h (EU; the client handles VAT) · €75/h (outside the EU).',
+					'International companies: €50/h (EU; the client handles VAT) · €75/h (outside the EU).',
 				details: 'See pricing',
 			},
 		},
@@ -3067,7 +3067,7 @@ export const translations: Record<Language, any> = {
 				eyebrow: 'Investointi',
 				title: 'Selkeät hinnat, ei yllätyksiä',
 				subtitle:
-					'Kaikki lasketaan hintaan 45 €/tunti. Taulukko näyttää suuntaa antavan projektin pienelle tai keskisuurelle yritykselle.',
+					'Kaikki lasketaan hintaan 35 €/tunti. Taulukko näyttää suuntaa antavan projektin pienelle tai keskisuurelle yritykselle.',
 				phase: 'Vaihe',
 				hours: 'Tunnit (noin)',
 				amount: 'Summa',
@@ -3086,8 +3086,8 @@ export const translations: Record<Language, any> = {
 			blocks: {
 				study: {
 					title: 'Prosessitutkimus',
-					price: '450 € + ALV (kiinteä hinta)',
-					note: '≈10 h; 675 € + ALV, jos osastoja tai järjestelmiä on useita.',
+					price: '350 € + ALV (kiinteä hinta)',
+					note: '≈10 h; 525 € + ALV, jos osastoja tai järjestelmiä on useita.',
 					description:
 						'Sisältää vaatimusten arvioinnin sekä prosessien ja järjestelmien tutkimuksen. Toimitus: diagnoosi, ehdotettu ratkaisu, vaiheittainen suunnitelma ja kiinteä tarjous.',
 					discount: '100 % hyvitetään, jos tilaat toteutuksen seuraavien 30 päivän aikana.',
@@ -3100,7 +3100,7 @@ export const translations: Record<Language, any> = {
 				support: {
 					title: 'Tuki',
 					price: 'Kuukausipaketit',
-					description: '225 € / 450 € / 900 € + ALV (5/10/20 h). Laskutetaan vain käytetty aika. Ei sitoutumista.',
+					description: '175 € / 350 € / 700 € + ALV (5/10/20 h). Laskutetaan vain käytetty aika. Ei sitoutumista.',
 				},
 			},
 			sections: {
@@ -3109,29 +3109,29 @@ export const translations: Record<Language, any> = {
 			},
 			softwareBlock: {
 				title: 'Ohjelmistokehitys ja konsultointi',
-				hourly: '45 €/h + ALV. Vertailuhinta kehitykselle, arkkitehtuurille ja mentoroinnille.',
-				bundles: 'Kuukausipaketit: 225 € / 450 € / 900 € + ALV (5/10/20 h), ilman sitoutumista.',
+				hourly: '35 €/h + ALV. Vertailuhinta kehitykselle, arkkitehtuurille ja mentoroinnille.',
+				bundles: 'Kuukausipaketit: 175 € / 350 € / 700 € + ALV (5/10/20 h), ilman sitoutumista.',
 				fixed: 'Kiinteähintainen projekti spesifikaation ja vaiheittaisen suunnitelman jälkeen.',
 				international:
-					'Ohjelmistokehitys ja konsultointi kansainvälisille yrityksille: 60 €/h EU-yrityksille (asiakas hoitaa ALV:n). 75 €/h EU:n ulkopuolisille yrityksille.',
+					'Ohjelmistokehitys ja konsultointi kansainvälisille yrityksille: 50 €/h EU-yrityksille (asiakas hoitaa ALV:n). 75 €/h EU:n ulkopuolisille yrityksille.',
 			},
 			breakdownToggle: 'Näytä vaiheittainen erittely',
 			packages: {
 				title: 'Suuntaa antavat paketit',
 				express: {
 					title: 'Pika-automaatio',
-					price: '1 800–2 900 € + ALV',
+					price: '1 400–2 250 € + ALV',
 					time: '2–3 viikkoa',
 					description: 'Yksi konkreettinen prosessi: tarjoukset, laskut, tapaamiset, työselosteet tai asiakirjat tekoälyllä.',
 				},
 				custom: {
 					title: 'Räätälöity työkalu / sovellus',
-					price: 'Alkaen 4 500 € + ALV',
+					price: 'Alkaen 3 500 € + ALV',
 					description: 'Ohjelmisto, joka sopii tapaasi työskennellä, integraatioineen ja koulutuksineen.',
 				},
 				maintenance: {
 					title: 'Ylläpito',
-					price: 'Alkaen 225 €/kk + ALV',
+					price: 'Alkaen 175 €/kk + ALV',
 					description: 'Tuntipaketteja häiriöihin, säätöihin ja parannuksiin.',
 				},
 			},
@@ -3201,14 +3201,14 @@ export const translations: Record<Language, any> = {
 					title: 'Tekoälykonsultointi yrityksille',
 					description:
 						'Tarjouksia käsin, muistiinpanoja paperilla tai WhatsAppissa, tapaamisia jotka unohtuvat? Tutkimme miten työskentelette ja automatisoimme sen, mikä vie tunteja.',
-					priceHint: 'Alkaen 1 800 € + ALV',
+					priceHint: 'Alkaen 1 400 € + ALV',
 					cta: 'Katso tekoälykonsultointi',
 				},
 				software: {
 					title: 'Ohjelmistokehitys ja konsultointi',
 					description:
 						'Android-kehitystä, arkkitehtuuria ja laatua teknisille tiimeille. Tuotantosovelluksia sadoilletuhansille käyttäjille.',
-					priceHint: '45 €/h + ALV',
+					priceHint: '35 €/h + ALV',
 					cta: 'Katso ohjelmistokehitys',
 				},
 			},
@@ -3223,8 +3223,8 @@ export const translations: Record<Language, any> = {
 			},
 			entryOffer: {
 				badge: 'Kiinteä hinta, ei yllätyksiä',
-				text: 'Aloitamme 450 € + ALV prosessitutkimuksella, joka vähennetään kokonaisuudessaan, jos teemme projektin yhdessä. Saat diagnoosin, ehdotetun ratkaisun ja kiinteän tarjouksen.',
-				line: 'Projektit alkaen 1 800 € + ALV · Vertailuhinta: 45 €/h + ALV',
+				text: 'Aloitamme 350 € + ALV prosessitutkimuksella, joka vähennetään kokonaisuudessaan, jos teemme projektin yhdessä. Saat diagnoosin, ehdotetun ratkaisun ja kiinteän tarjouksen.',
+				line: 'Projektit alkaen 1 400 € + ALV · Vertailuhinta: 35 €/h + ALV',
 			},
 			behind: {
 				title: 'Kuka on taustalla',
@@ -3950,10 +3950,10 @@ export const translations: Record<Language, any> = {
 			},
 			pricingSummary: {
 				title: 'Suuntaa antavat hinnat',
-				study: 'Prosessitutkimus — 450 € + ALV (675 € + ALV, jos osastoja tai järjestelmiä on useita). 100 % hyvitetään, jos tilaat toteutuksen seuraavien 30 päivän aikana.',
-				express: 'Pika-automaatio — 1 800–2 900 € + ALV · 2–3 viikkoa.',
-				custom: 'Räätälöity työkalu — alkaen 4 500 € + ALV.',
-				support: 'Tuki — alkaen 225 €/kk + ALV, ilman sitoutumista.',
+				study: 'Prosessitutkimus — 350 € + ALV (525 € + ALV, jos osastoja tai järjestelmiä on useita). 100 % hyvitetään, jos tilaat toteutuksen seuraavien 30 päivän aikana.',
+				express: 'Pika-automaatio — 1 400–2 250 € + ALV · 2–3 viikkoa.',
+				custom: 'Räätälöity työkalu — alkaen 3 500 € + ALV.',
+				support: 'Tuki — alkaen 175 €/kk + ALV, ilman sitoutumista.',
 				details: 'Katso hinnat tarkemmin',
 			},
 			faq: {
@@ -4002,11 +4002,11 @@ export const translations: Record<Language, any> = {
 			},
 			pricing: {
 				title: 'Toimintatavat ja hinta',
-				hourly: 'Tuntihinta: 45 €/h + ALV',
-				bundles: 'Kuukausipaketit: 225 € / 450 € / 900 € + ALV (5/10/20 h).',
+				hourly: 'Tuntihinta: 35 €/h + ALV',
+				bundles: 'Kuukausipaketit: 175 € / 350 € / 700 € + ALV (5/10/20 h).',
 				fixed: 'Kiinteähintainen projekti spesifikaation jälkeen.',
 				international:
-					'Kansainväliset yritykset: 60 €/h (EU; asiakas hoitaa ALV:n) · 75 €/h (EU:n ulkopuolella).',
+					'Kansainväliset yritykset: 50 €/h (EU; asiakas hoitaa ALV:n) · 75 €/h (EU:n ulkopuolella).',
 				details: 'Katso hinnat',
 			},
 		},

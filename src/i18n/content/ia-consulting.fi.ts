@@ -72,7 +72,7 @@ export const iaPageExtra = {
 	faqExtra: {
 		cost: {
 			q: 'Paljonko tekoälykonsultointi maksaa?',
-			a: 'Prosessitutkimus on 450 € + ALV (675 € + ALV, jos osastoja tai järjestelmiä on useita) ja hyvitetään kokonaan, jos tilaatte toteutuksen 30 päivän kuluessa. Pika-automaatio on yleensä 1 800–2 900 € + ALV. Räätälöity työkalu alkaa 4 500 eurosta + ALV. Tuki, jos haluatte, alkaen 225 €/kk + ALV ilman sitoutumista.',
+			a: 'Prosessitutkimus on 350 € + ALV (525 € + ALV, jos osastoja tai järjestelmiä on useita) ja hyvitetään kokonaan, jos tilaatte toteutuksen 30 päivän kuluessa. Pika-automaatio on yleensä 1 400–2 250 € + ALV. Räätälöity työkalu alkaa 3 500 eurosta + ALV. Tuki, jos haluatte, alkaen 175 €/kk + ALV ilman sitoutumista.',
 		},
 		software: {
 			q: 'Miten tekoälykonsultointi eroaa ohjelman ostamisesta?',

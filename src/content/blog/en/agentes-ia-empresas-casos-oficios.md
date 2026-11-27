@@ -22,11 +22,11 @@ faq:
   - q: 'Do AI agents work for trade and installation companies?'
     a: 'Yes, when quotes, visits, job reports, or delivery notes come in by message and you end up copying by hand. If the job changes every week or hardly happens, we tell you before any coding: sometimes it is not worth it.'
   - q: 'How much does it cost to deploy an AI agent in a company?'
-    a: 'We do not charge extra just because it is called an agent. A quick build is usually €1,800–2,900 + VAT. First there is often a €450 + VAT process study; if you hire us within 30 days, that fee is credited. More numbers are in the AI pricing guide.'
+    a: 'We do not charge extra just because it is called an agent. A quick build is usually €1,400–2,250 + VAT. First there is often a €350 + VAT process study; if you hire us within 30 days, that fee is credited. More numbers are in the AI pricing guide.'
   - q: 'Can the agent reply to customers on WhatsApp on its own?'
     a: 'Only for what we agreed in writing. It stops on odd prices, complaints, data it does not understand, or when someone asks for a person. Price and date are still confirmed by your team.'
   - q: 'Do I need to hire an AI specialist to maintain the agent?'
-    a: 'Not for day-to-day use. We explain the steps and the tool accounts are yours. If you want our help, support starts at €225/month + VAT with no lock-in. Otherwise you call when something needs fixing.'
+    a: 'Not for day-to-day use. We explain the steps and the tool accounts are yours. If you want our help, support starts at €175/month + VAT with no lock-in. Otherwise you call when something needs fixing.'
 ---
 
 **AI agents for companies** are software with one clear job. They read what comes in (message, email, voice note, photo of a delivery note), pick the next step using written rules, and act or pass it to you. In plumbing, electrical work, renovations, or installs they do not go to site for you. They cut the paperwork: copying measurements, asking again for photos, retyping the same quote. We explain the basics on [AI agents for business](/agentes-ia-empresas/); here are **six examples** we see often, with no client names and no made-up figures.
@@ -66,7 +66,7 @@ Sometimes you need a mix: the agent understands the message, [AI process automat
   <span class="bf-section-title"><span class="bf-section-lead">What real AI agent cases</span> <span class="bf-section-accent">do we see in trade companies?</span></span>
 </h2>
 
-We do not publish client names. What follows is **work we actually do**, told straight. If yours looks similar, the €450 + VAT process study says whether it pays; if not, we say that clearly too.
+We do not publish client names. What follows is **work we actually do**, told straight. If yours looks similar, the €350 + VAT process study says whether it pays; if not, we say that clearly too.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">1. Quote from a voice note</h3>
 
@@ -112,10 +112,10 @@ There is no special price just for calling it an agent. We quote it like any oth
 
 | Step | What it includes | Guide price (+ VAT) |
 | --- | --- | --- |
-| **Process study** | We see how you work, propose a fix and a fixed price; hire within 30 days and the study is credited in full | €450 (€675 with several departments or programs) |
-| **Express build with agent** | One task only (one of the six cases above or similar), in 2–3 weeks | €1,800–2,900 |
-| **Custom tool** | Several steps together or its own screen | From €4,500 |
-| **Optional support** | Changes and issues, no lock-in | From €225/month (5, 10, or 20 hour bundles) |
+| **Process study** | We see how you work, propose a fix and a fixed price; hire within 30 days and the study is credited in full | €350 (€525 with several departments or programs) |
+| **Express build with agent** | One task only (one of the six cases above or similar), in 2–3 weeks | €1,400–2,250 |
+| **Custom tool** | Several steps together or its own screen | From €3,500 |
+| **Optional support** | Changes and issues, no lock-in | From €175/month (5, 10, or 20 hour bundles) |
 
 More on licences and what raises the price in [how much it costs to implement AI in a company](/en/blog/cuanto-cuesta-implementar-ia-empresa/). Why we start with a fixed-price study in [fixed price before you automate](/en/blog/precio-cerrado-automatizacion-empresa/). Rates on [AI consulting](/en/consultoria-ia/) and [case studies and pricing](/en/work-and-pricing/#ia).
 

@@ -22,11 +22,11 @@ faq:
   - q: '¿Los agentes de IA sirven para empresas de oficios e instalaciones?'
     a: 'Sí, cuando lo que os quita tiempo son presupuestos, citas, partes o albaranes que entran por mensaje y acabáis copiando a mano. Si la tarea cambia cada semana o casi no se repite, te lo decimos antes de programar: a veces no merece la pena.'
   - q: '¿Cuánto cuesta montar un agente de IA en una empresa?'
-    a: 'No cobramos más solo por llamarlo agente. Lo normal es entre 1.800 y 2.900 € + IVA en un trabajo exprés. Antes suele ir un estudio de 450 € + IVA; si contratas en 30 días, ese importe se descuenta. Más cifras en la guía de precios de IA.'
+    a: 'No cobramos más solo por llamarlo agente. Lo normal es entre 1.400 y 2.250 € + IVA en un trabajo exprés. Antes suele ir un estudio de 350 € + IVA; si contratas en 30 días, ese importe se descuenta. Más cifras en la guía de precios de IA.'
   - q: '¿El agente puede contestar solo a clientes por WhatsApp?'
     a: 'Solo en lo que hayamos acordado por escrito. Se para si el precio es raro, hay una queja, no entiende un dato o el cliente pide hablar con una persona. El precio y la fecha los confirma alguien de tu equipo.'
   - q: '¿Necesito contratar un especialista en IA para mantener el agente?'
-    a: 'Para el día a día, no. Os explicamos los pasos y las cuentas de las herramientas son vuestras. Si queréis ayuda nuestra, hay soporte desde 225 €/mes + IVA, sin permanencia. Si no, nos llamáis cuando haga falta.'
+    a: 'Para el día a día, no. Os explicamos los pasos y las cuentas de las herramientas son vuestras. Si queréis ayuda nuestra, hay soporte desde 175 €/mes + IVA, sin permanencia. Si no, nos llamáis cuando haga falta.'
 ---
 
 **Los agentes de IA para empresas** son un programa con un trabajo concreto. Lee lo que entra (mensaje, correo, audio, foto de un albarán), decide el siguiente paso según reglas que dejamos escritas, y actúa o te lo pasa a ti. En fontanería, electricidad, reformas o instalaciones no van a la obra por ti. Os quitan el papeleo: copiar medidas, pedir otra vez las fotos y repetir el mismo presupuesto. En [agentes de IA para empresas](/agentes-ia-empresas/) lo explicamos en resumen; aquí van **seis ejemplos** que vemos a menudo, sin nombres de clientes ni cifras inventadas.
@@ -66,7 +66,7 @@ A veces hace falta mezclar: el agente entiende el mensaje, la [automatización d
   <span class="bf-section-title"><span class="bf-section-lead">¿Qué casos reales de agentes de IA</span> <span class="bf-section-accent">vemos en empresas de oficios?</span></span>
 </h2>
 
-No publicamos nombres de clientes. Lo de abajo son **trabajos que sí hacemos**, contados como son. Si el tuyo se parece, el estudio de 450 € + IVA te dice si compensa; si no, también te lo decimos claro.
+No publicamos nombres de clientes. Lo de abajo son **trabajos que sí hacemos**, contados como son. Si el tuyo se parece, el estudio de 350 € + IVA te dice si compensa; si no, también te lo decimos claro.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">1. Presupuesto desde una nota de voz</h3>
 
@@ -112,10 +112,10 @@ No hay precio especial solo por llamarlo agente. Se presupuesta como el resto de
 
 | Paso | Qué incluye | Precio orientativo (+ IVA) |
 | --- | --- | --- |
-| **Estudio de procesos** | Miramos cómo trabajáis, proponemos solución y precio cerrado; si contratas en 30 días, se descuenta entero | 450 € (675 € si hay varios departamentos o programas) |
-| **Encargo exprés con agente** | Una sola tarea (uno de los seis casos de arriba o parecido), en 2–3 semanas | 1.800–2.900 € |
-| **Herramienta a medida** | Varios pasos juntos o pantalla propia | Desde 4.500 € |
-| **Soporte opcional** | Cambios e incidencias, sin permanencia | Desde 225 €/mes (bolsas de 5, 10 o 20 h) |
+| **Estudio de procesos** | Miramos cómo trabajáis, proponemos solución y precio cerrado; si contratas en 30 días, se descuenta entero | 350 € (525 € si hay varios departamentos o programas) |
+| **Encargo exprés con agente** | Una sola tarea (uno de los seis casos de arriba o parecido), en 2–3 semanas | 1.400–2.250 € |
+| **Herramienta a medida** | Varios pasos juntos o pantalla propia | Desde 3.500 € |
+| **Soporte opcional** | Cambios e incidencias, sin permanencia | Desde 175 €/mes (bolsas de 5, 10 o 20 h) |
 
 Más detalle de licencias y qué sube el precio en [cuánto cuesta implementar IA en una empresa](/blog/cuanto-cuesta-implementar-ia-empresa/). Por qué empezamos con un estudio a precio cerrado en [precio cerrado antes de automatizar](/blog/precio-cerrado-automatizacion-empresa/). Tarifas en [consultoría de IA](/consultoria-ia/) y [casos y precios](/casos-y-precios/#ia).
 

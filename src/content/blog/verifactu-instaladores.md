@@ -26,7 +26,7 @@ faq:
   - q: '¿Qué puedo hacer ya sin cambiar todo el negocio?'
     a: 'Ordenar el dato desde el presupuesto: mismo cliente, mismas partidas, referencia al presupuesto aceptado y al parte antes de facturar. Preguntad a vuestro software si tiene hoja de ruta SIF/Verifactu y si exporta factura electrónica cuando toque el B2B.'
   - q: '¿Bitdesal vende software de facturación con Verifactu?'
-    a: 'No. Conectamos presupuesto, agenda, partes y el programa que ya usáis, o montamos herramienta a medida si el estudio lo justifica. El estudio de procesos son 450 € + IVA; se descuenta entero si contratáis en 30 días.'
+    a: 'No. Conectamos presupuesto, agenda, partes y el programa que ya usáis, o montamos herramienta a medida si el estudio lo justifica. El estudio de procesos son 350 € + IVA; se descuenta entero si contratáis en 30 días.'
 ---
 
 **Verifactu para instaladores** viene a decir que el programa con el que facturáis tendrá que cumplir el Reglamento de sistemas informáticos de facturación (SIF) y, si vais al modo verificable, mandar registros a la Agencia Tributaria de forma que la factura no se pueda retocar sin dejar huella. **A 26 de noviembre de 2026** el plazo legal para tener el SIF adaptado es el **6 de octubre de 2028**, fijado por el [Real Decreto-ley 43/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-24701) (BOE del 25 de noviembre) y la [nota de la AEAT del 25 de noviembre de 2026](https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/nota-informativa-ampliacion-plazo-adaptacion-facturacion.html). Merece la pena usar el tiempo que queda para **ordenar presupuesto → trabajo → factura** y dejar de copiar el mismo dato en tres sitios.
@@ -127,7 +127,7 @@ Sin ver cómo facturáis hoy no os decimos cuál encaja. Sí qué preguntar:
 - ¿Podéis seguir con particulares igual mientras montáis el B2B?
 - ¿Hay API o export para enlazar presupuestos y partes de fuera?
 
-Si en el estudio de procesos (450 € + IVA, descontable entero si contratáis en 30 días) el atasco es el dato que llega del campo, el dinero suele ir a una [automatización exprés (1.800–2.900 € + IVA)](/casos-y-precios/#ia) o a herramienta a medida desde 4.500 € + IVA, no a comprar «Verifactu» como si fuera una caja mágica.
+Si en el estudio de procesos (350 € + IVA, descontable entero si contratáis en 30 días) el atasco es el dato que llega del campo, el dinero suele ir a una [automatización exprés (1.400–2.250 € + IVA)](/casos-y-precios/#ia) o a herramienta a medida desde 3.500 € + IVA, no a comprar «Verifactu» como si fuera una caja mágica.
 
 <h2 id="equipo" class="bf-section-heading">
   <span class="bf-section-num" aria-hidden="true">07</span>

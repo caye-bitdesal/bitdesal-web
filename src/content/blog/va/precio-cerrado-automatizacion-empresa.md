@@ -1,6 +1,6 @@
 ---
 title: "Preu tancat abans d'automatitzar: per què comencem amb un estudi de processos"
-description: "Estalvia diners, redueix riscos i garanteix que l'automatització soluciona el problema real. Estudi de 450 € + IVA, pressupost fix i abast per escrit."
+description: "Estalvia diners, redueix riscos i garanteix que l'automatització soluciona el problema real. Estudi de 350 € + IVA, pressupost fix i abast per escrit."
 pubDate: 2026-10-01
 audience: "business"
 author: "caye"
@@ -16,7 +16,7 @@ subtitle: "Estalvia diners, redueix riscos i garanteix que l'automatització sol
 updatedDate: 2026-11-17
 faq:
   - q: "Quant costa l'estudi de processos?"
-    a: "450 € + IVA per unes deu hores de treball (més si hi ha diversos departaments o sistemes). El lliurable inclou diagnòstic, proposta, pla per fases i pressupost tancat d'implementació."
+    a: "350 € + IVA per unes deu hores de treball (més si hi ha diversos departaments o sistemes). El lliurable inclou diagnòstic, proposta, pla per fases i pressupost tancat d'implementació."
   - q: "Es descompta l'estudi si contracte la implementació?"
     a: "Sí: si contractes la implementació en els 30 dies següents a l'estudi, descomptem l'import íntegre de l'estudi."
   - q: "I si en estudiar el procés veiem que no compensa automatitzar?"
@@ -108,7 +108,7 @@ L'estudi no és una barrera per a vendre't un altre servei: és la forma en què
 <div class="bf-bento">
   <div class="bf-bento-card bf-bento-card--dark">
     <p class="bf-bento-label">Inversió de l'estudi</p>
-    <h3>450 € + IVA</h3>
+    <h3>350 € + IVA</h3>
     <p>Cost de l'estudi que <strong>descomptem íntegrament</strong> si contractes la implementació en els 30 dies següents.</p>
   </div>
   <div class="bf-bento-card bf-bento-card--cream">

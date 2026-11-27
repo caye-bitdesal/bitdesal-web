@@ -113,8 +113,8 @@ export const androidConsultingPage = {
 	},
 	pricing: {
 		title: 'Precio',
-		p1: 'Tarifa de referencia: 45 €/h + IVA para consultoría y desarrollo Android senior.',
-		p2: 'Bolsas mensuales de 225 €, 450 € y 900 € + IVA (5, 10 y 20 h), solo facturamos lo consumido, sin permanencia.',
+		p1: 'Tarifa de referencia: 35 €/h + IVA para consultoría y desarrollo Android senior.',
+		p2: 'Bolsas mensuales de 175 €, 350 € y 700 € + IVA (5, 10 y 20 h), solo facturamos lo consumido, sin permanencia.',
 		p3: 'Proyectos o rescates a precio cerrado después de especificación y plan por fases: sabes el alcance antes de empezar.',
 		link: 'Ver tarifas de software y desarrollo Android',
 	},
@@ -123,11 +123,11 @@ export const androidConsultingPage = {
 		items: {
 			appCost: {
 				q: '¿Cuánto cuesta desarrollar una app Android?',
-				a: 'Depende del alcance: bolsa de horas desde 450 € + IVA (10 h), proyectos cerrados tras especificación (suelen partir de unos miles de euros según complejidad) o refuerzo mensual. En la llamada de 30 minutos te damos un rango honesto antes de comprometerte.',
+				a: 'Depende del alcance: bolsa de horas desde 350 € + IVA (10 h), proyectos cerrados tras especificación (suelen partir de unos miles de euros según complejidad) o refuerzo mensual. En la llamada de 30 minutos te damos un rango honesto antes de comprometerte.',
 			},
 			freelanceRate: {
 				q: '¿Cuánto cobra un desarrollador Android freelance?',
-				a: 'Nuestra tarifa de referencia es 45 €/h + IVA para perfil senior en España. Bolsas de 225 €, 450 € y 900 € + IVA al mes (5, 10 y 20 h). En la UE 60 €/h y fuera de la UE 75 €/h cuando la facturación lo requiere.',
+				a: 'Nuestra tarifa de referencia es 35 €/h + IVA para perfil senior en España. Bolsas de 175 €, 350 € y 700 € + IVA al mes (5, 10 y 20 h). En la UE 50 €/h y fuera de la UE 75 €/h cuando la facturación lo requiere.',
 			},
 			remote: {
 				q: '¿Trabajáis en remoto con equipos de fuera de España?',

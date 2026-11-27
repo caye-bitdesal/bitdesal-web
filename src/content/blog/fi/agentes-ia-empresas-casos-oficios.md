@@ -22,11 +22,11 @@ faq:
   - q: 'Sopiivatko tekoälyagentit asennus- ja urakkayrityksille?'
     a: 'Kyllä, kun tarjoukset, käynnit, työmaaraportit tai kuormakirjat tulevat viesteinä ja lopputulos on käsin kopioimista. Jos tehtävä vaihtuu viikoittain tai tapahtuu harvoin, kerromme ennen koodia: joskus se ei kannata.'
   - q: 'Paljonko tekoälyagentin käyttöönotto yrityksessä maksaa?'
-    a: 'Emme veloita erikseen pelkästä nimestä agentti. Nopea toteutus on yleensä 1 800–2 900 € + ALV. Ennen sitä on usein 450 € + ALV prosessitutkimus; jos tilaatte 30 päivän sisällä, se hyvitetään. Lisää lukuja tekoälyn hintaoppaassa.'
+    a: 'Emme veloita erikseen pelkästä nimestä agentti. Nopea toteutus on yleensä 1 400–2 250 € + ALV. Ennen sitä on usein 350 € + ALV prosessitutkimus; jos tilaatte 30 päivän sisällä, se hyvitetään. Lisää lukuja tekoälyn hintaoppaassa.'
   - q: 'Voiko agentti vastata asiakkaille WhatsAppissa yksin?'
     a: 'Vain siihen mitä olemme sopineet kirjallisesti. Se pysähtyy oudosta hinnasta, valituksesta, tuntemattomasta tiedosta tai pyynnöstä puhua ihmisen kanssa. Hinnan ja päivän vahvistaa tiiminne.'
   - q: 'Tarvitsenko tekoälyasiantuntijan ylläpitoon?'
-    a: 'Arkeen et. Selitämme vaiheet ja tilit ovat teidän. Jos haluatte apua, tuki alkaen 225 €/kk + ALV ilman sitoutumista. Muuten soitte kun jotain pitää korjata.'
+    a: 'Arkeen et. Selitämme vaiheet ja tilit ovat teidän. Jos haluatte apua, tuki alkaen 175 €/kk + ALV ilman sitoutumista. Muuten soitte kun jotain pitää korjata.'
 ---
 
 **Tekoälyagentit yrityksille** ovat ohjelma yhdellä selvällä tehtävällä. Ne lukevat mitä tulee sisään (viesti, sähköposti, äänimuistio, kuormakirjan kuva), valitsevat seuraavan askeleen kirjoitettujen sääntöjen mukaan ja toimivat tai välittävät teille. Putki-, sähkö-, remontti- tai asennustyössä ne eivät mene työmaalle puolestanne. Ne vähentävät paperityötä: mittojen kopiointi, kuvien uudelleenpyyntö, saman tarjouksen uudelleenkirjoitus. Perusteet ovat sivulla [tekoälyagentit yrityksille](/agentes-ia-empresas/); tässä **kuusi esimerkkiä** joita näemme usein, ilman asiakasnimiä tai keksittyjä lukuja.
@@ -66,7 +66,7 @@ Joskus tarvitaan yhdistelmä: agentti ymmärtää viestin, [prosessiautomaatio t
   <span class="bf-section-title"><span class="bf-section-lead">Mitä oikeita agenttitapauksia</span> <span class="bf-section-accent">näemme urakkayrityksillä?</span></span>
 </h2>
 
-Emme julkaise asiakasnimiä. Alla on **työtä jota oikeasti teemme**, kerrottuna suoraan. Jos teidän tapaus muistuttaa, 450 € + ALV tutkimus kertoo kannattaako; muutenkin sanomme selvästi.
+Emme julkaise asiakasnimiä. Alla on **työtä jota oikeasti teemme**, kerrottuna suoraan. Jos teidän tapaus muistuttaa, 350 € + ALV tutkimus kertoo kannattaako; muutenkin sanomme selvästi.
 
 <h3 class="text-xl font-medium text-foreground mt-8 mb-3">1. Tarjous äänimuistiosta</h3>
 
@@ -112,10 +112,10 @@ Ei ole erillistä hintaa pelkästä nimestä agentti. Hinnoittelemme kuten muun 
 
 | Vaihe | Mitä sisältää | Ohjehinta (+ ALV) |
 | --- | --- | --- |
-| **Prosessitutkimus** | Katsomme miten työskentelette, ehdotamme ratkaisun ja kiinteän hinnan; tilaus 30 pv sisällä hyvittää tutkimuksen | 450 € (675 € useilla osastoilla tai ohjelmilla) |
-| **Pika-automaatio agentilla** | Yksi tehtävä (yksi kuudesta tapauksesta tai vastaava), 2–3 viikkoa | 1 800–2 900 € |
-| **Räätälöity työkalu** | Useita vaiheita tai oma näkymä | 4 500 € alkaen |
-| **Valinnainen tuki** | Muutokset ja häiriöt, ei sitoutumista | 225 €/kk alkaen (5, 10 tai 20 h) |
+| **Prosessitutkimus** | Katsomme miten työskentelette, ehdotamme ratkaisun ja kiinteän hinnan; tilaus 30 pv sisällä hyvittää tutkimuksen | 350 € (525 € useilla osastoilla tai ohjelmilla) |
+| **Pika-automaatio agentilla** | Yksi tehtävä (yksi kuudesta tapauksesta tai vastaava), 2–3 viikkoa | 1 400–2 250 € |
+| **Räätälöity työkalu** | Useita vaiheita tai oma näkymä | 3 500 € alkaen |
+| **Valinnainen tuki** | Muutokset ja häiriöt, ei sitoutumista | 175 €/kk alkaen (5, 10 tai 20 h) |
 
 Lisää lisensseistä ja hinnannoususta: [paljonko tekoälyn käyttöönotto yrityksessä maksaa](/fi/blog/cuanto-cuesta-implementar-ia-empresa/). Miksi aloitamme kiinteällä tutkimuksella: [kiinteä hinta ennen automaatiota](/fi/blog/precio-cerrado-automatizacion-empresa/). Hinnat: [tekoälykonsultointi](/fi/consultoria-ia/) ja [referenssit ja hinnat](/fi/referenssit-ja-hinnat/#ia).
 

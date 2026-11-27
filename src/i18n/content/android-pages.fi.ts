@@ -80,8 +80,8 @@ export const androidConsultingPage = {
 	},
 	pricing: {
 		title: 'Hinnoittelu',
-		p1: 'Viitehinta: 45 €/h + ALV senior Android -konsultoinnille ja -kehitykselle.',
-		p2: 'Kuukausipaketit 225 €, 450 € ja 900 € + ALV (5, 10 ja 20 h); laskutamme vain käytetyn ajan, ei sitoutumista.',
+		p1: 'Viitehinta: 35 €/h + ALV senior Android -konsultoinnille ja -kehitykselle.',
+		p2: 'Kuukausipaketit 175 €, 350 € ja 700 € + ALV (5, 10 ja 20 h); laskutamme vain käytetyn ajan, ei sitoutumista.',
 		p3: 'Projektit tai pelastukset kiinteään hintaan määrittelyn ja vaiheittaisen suunnitelman jälkeen — laajuus selvä ennen aloitusta.',
 		link: 'Katso ohjelmisto- ja Android-hinnat',
 	},
@@ -90,11 +90,11 @@ export const androidConsultingPage = {
 		items: {
 			cost: {
 				q: 'Mitä Android-konsultti maksaa?',
-				a: 'Viite on 45 €/h + ALV. 10 h paketti (450 € + ALV) riittää usein syvään diagnoosiin; kiinteähintaiset projektit tarjotaan määrittelyn jälkeen.',
+				a: 'Viite on 35 €/h + ALV. 10 h paketti (350 € + ALV) riittää usein syvään diagnoosiin; kiinteähintaiset projektit tarjotaan määrittelyn jälkeen.',
 			},
 			remote: {
 				q: 'Työskentelettekö etänä Espanjan ulkopuolisille tiimeille?',
-				a: 'Kyllä. Pääasiassa etänä Espanjassa ja EU:ssa; kansainvälisille yrityksille 60 €/h (EU) tai 75 €/h (EU:n ulkopuolella) laskutustavan mukaan.',
+				a: 'Kyllä. Pääasiassa etänä Espanjassa ja EU:ssa; kansainvälisille yrityksille 50 €/h (EU) tai 75 €/h (EU:n ulkopuolella) laskutustavan mukaan.',
 			},
 			java: {
 				q: 'Otatteko vastuun vanhasta Java-koodista?',

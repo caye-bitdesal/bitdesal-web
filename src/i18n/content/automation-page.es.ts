@@ -27,26 +27,26 @@ export const automationPage = {
 	},
 	worth: {
 		title: 'Cómo saber si compensa',
-		p1: 'La cuenta es sencilla y se hace antes de escribir código: horas a la semana que se va el proceso, por el coste de esa hora, por las semanas del año. Si el ahorro de un año no cubre con holgura lo que cuesta automatizar, no seguimos. El estudio de procesos (450 € + IVA) sirve precisamente para hacer esta cuenta con vuestros números, no con los de un folleto.',
+		p1: 'La cuenta es sencilla y se hace antes de escribir código: horas a la semana que se va el proceso, por el coste de esa hora, por las semanas del año. Si el ahorro de un año no cubre con holgura lo que cuesta automatizar, no seguimos. El estudio de procesos (350 € + IVA) sirve precisamente para hacer esta cuenta con vuestros números, no con los de un folleto.',
 		p2: 'No hace falta un departamento de datos. Hace falta alguien que sepa cómo se hace el trabajo hoy y una hora para recorrerlo con nosotros. Si el proceso cambia cada semana o el volumen es de dos presupuestos al mes, la automatización suele no salir. Te lo diremos.',
 		exampleTitle: 'Ejemplo de cálculo (no es un cliente)',
 		example:
-			'Ejemplo orientativo, no un resultado real. Imagina que una persona dedica 6 horas a la semana a pasar presupuestos y a perseguir respuestas. A 50 semanas son unas 300 horas al año. Si esa hora os cuesta 25 € dentro de la empresa, el proceso sale a unos 7.500 € al año. Una automatización exprés de 2.400 € + IVA se cubriría, en este ejemplo, en menos de medio año. Si tus horas o tu volumen son la mitad, la cuenta puede no salir: por eso el estudio usa tus cifras y no estas.',
+			'Ejemplo orientativo, no un resultado real. Imagina que una persona dedica 6 horas a la semana a pasar presupuestos y a perseguir respuestas. A 50 semanas son unas 300 horas al año. Si esa hora os cuesta 25 € dentro de la empresa, el proceso sale a unos 7.500 € al año. Una automatización exprés de 1.870 € + IVA se cubriría, en este ejemplo, en menos de medio año. Si tus horas o tu volumen son la mitad, la cuenta puede no salir: por eso el estudio usa tus cifras y no estas.',
 	},
 	how: {
 		title: 'Cómo lo hacemos',
 		lead: 'Tres pasos, en este orden. No empezamos por la herramienta.',
 		study: {
 			title: 'Estudio',
-			body: 'Recorremos el proceso con quien lo hace: qué entra, qué sale, dónde se copia y qué no se puede tocar. El entregable es un diagnóstico, la propuesta (con IA o sin ella) y un presupuesto cerrado. Son 450 € + IVA, 675 € + IVA si hay varios departamentos o sistemas, y se descuentan al 100 % si contratas la implementación en los 30 días siguientes.',
+			body: 'Recorremos el proceso con quien lo hace: qué entra, qué sale, dónde se copia y qué no se puede tocar. El entregable es un diagnóstico, la propuesta (con IA o sin ella) y un presupuesto cerrado. Son 350 € + IVA, 525 € + IVA si hay varios departamentos o sistemas, y se descuentan al 100 % si contratas la implementación en los 30 días siguientes.',
 		},
 		build: {
 			title: 'Construcción',
-			body: 'Construimos solo lo que el estudio dejó por escrito. Una automatización exprés suele ir de 1.800 a 2.900 € + IVA y de dos a tres semanas. Si hace falta una herramienta a medida, partimos de 4.500 € + IVA. Cada semana ves el avance con datos de verdad, no con una demo vacía.',
+			body: 'Construimos solo lo que el estudio dejó por escrito. Una automatización exprés suele ir de 1.400 a 2.250 € + IVA y de dos a tres semanas. Si hace falta una herramienta a medida, partimos de 3.500 € + IVA. Cada semana ves el avance con datos de verdad, no con una demo vacía.',
 		},
 		train: {
 			title: 'Formación',
-			body: 'Te enseñamos a usarlo con tu equipo, en el idioma del oficio y no en el de la herramienta. Dejamos por escrito qué hace, qué no hace y a quién avisar si algo falla. El trabajo está terminado cuando podéis seguir sin nosotros. El soporte, si lo quieres después, parte de 225 € al mes + IVA y no tiene permanencia.',
+			body: 'Te enseñamos a usarlo con tu equipo, en el idioma del oficio y no en el de la herramienta. Dejamos por escrito qué hace, qué no hace y a quién avisar si algo falla. El trabajo está terminado cuando podéis seguir sin nosotros. El soporte, si lo quieres después, parte de 175 € al mes + IVA y no tiene permanencia.',
 		},
 	},
 	fit: {
@@ -61,7 +61,7 @@ export const automationPage = {
 	},
 	price: {
 		title: 'Precio',
-		p1: 'Estudio de procesos: 450 € + IVA. Automatización exprés: 1.800–2.900 € + IVA. Herramienta a medida: desde 4.500 € + IVA. Soporte: desde 225 € al mes + IVA. Todo con IVA aparte y con el alcance escrito antes de empezar.',
+		p1: 'Estudio de procesos: 350 € + IVA. Automatización exprés: 1.400–2.250 € + IVA. Herramienta a medida: desde 3.500 € + IVA. Soporte: desde 175 € al mes + IVA. Todo con IVA aparte y con el alcance escrito antes de empezar.',
 		p2: 'No hay una tarifa por «poner inteligencia artificial». Hay una tarifa por el proceso que quitamos. Si durante el estudio vemos que un programa que ya existe te resuelve el problema, te lo decimos y no fabricamos uno nuevo.',
 		link: 'Ver los precios de consultoría de IA',
 	},

@@ -74,7 +74,7 @@ export const iaPageExtra = {
 	faqExtra: {
 		cost: {
 			q: '¿Cuánto cuesta una consultoría de IA?',
-			a: 'El estudio de procesos son 450 € + IVA (675 € + IVA si hay varios departamentos o sistemas) y se descuenta al 100 % si contratas la implementación en los 30 días siguientes. Una automatización exprés suele quedar entre 1.800 y 2.900 € + IVA. Una herramienta a medida parte de 4.500 € + IVA. El soporte, si lo quieres, desde 225 € al mes + IVA y sin permanencia.',
+			a: 'El estudio de procesos son 350 € + IVA (525 € + IVA si hay varios departamentos o sistemas) y se descuenta al 100 % si contratas la implementación en los 30 días siguientes. Una automatización exprés suele quedar entre 1.400 y 2.250 € + IVA. Una herramienta a medida parte de 3.500 € + IVA. El soporte, si lo quieres, desde 175 € al mes + IVA y sin permanencia.',
 		},
 		software: {
 			q: '¿Qué diferencia hay entre una consultoría de IA y comprar un programa?',

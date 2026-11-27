@@ -1,6 +1,6 @@
 ---
 title: 'Cuánto cuesta implementar IA en una empresa: precios'
-description: 'Cuánto cuesta implementar IA en una empresa: estudio 450 €, exprés 1.800–2.900 €, a medida desde 4.500 €. Mira si te compensa y agenda 30 min gratis.'
+description: 'Cuánto cuesta implementar IA en una empresa: estudio 350 €, exprés 1.400–2.250 €, a medida desde 3.500 €. Mira si te compensa y agenda 30 min gratis.'
 pubDate: 2026-11-25
 audience: business
 author: caye
@@ -17,18 +17,18 @@ titleHighlight: 'precios'
 subtitle: 'Lo que cobramos de verdad, qué encarece un encargo y cómo ver si te compensa antes de decidir.'
 faq:
   - q: '¿Cuánto cuesta empezar a implementar IA en una empresa?'
-    a: 'El primer paso es un estudio de procesos: 450 € + IVA, o 675 € + IVA si entran varios departamentos o sistemas. Te llevas el diagnóstico, qué haríamos y un presupuesto cerrado. Si contratas el trabajo en los 30 días siguientes, ese importe se descuenta entero.'
+    a: 'El primer paso es un estudio de procesos: 350 € + IVA, o 525 € + IVA si entran varios departamentos o sistemas. Te llevas el diagnóstico, qué haríamos y un presupuesto cerrado. Si contratas el trabajo en los 30 días siguientes, ese importe se descuenta entero.'
   - q: '¿Qué diferencia de precio hay entre una automatización exprés y una herramienta a medida?'
-    a: 'La exprés es una sola tarea —presupuestos, citas, partes o albaranes—, se hace en dos o tres semanas y cuesta entre 1.800 € y 2.900 € + IVA. La herramienta a medida une varios pasos o necesita una pantalla propia, y parte de 4.500 € + IVA.'
+    a: 'La exprés es una sola tarea —presupuestos, citas, partes o albaranes—, se hace en dos o tres semanas y cuesta entre 1.400 € y 2.250 € + IVA. La herramienta a medida une varios pasos o necesita una pantalla propia, y parte de 3.500 € + IVA.'
   - q: '¿Hay costes mensuales fijos después de entregar la automatización?'
-    a: 'Dos cosas distintas. Las licencias o el uso del modelo van en cuentas a tu nombre, y pagas lo que consumas. El soporte nuestro, solo si lo quieres, son bolsas desde 225 €/mes + IVA (5, 10 o 20 horas), sin permanencia y cobrando solo las horas usadas.'
+    a: 'Dos cosas distintas. Las licencias o el uso del modelo van en cuentas a tu nombre, y pagas lo que consumas. El soporte nuestro, solo si lo quieres, son bolsas desde 175 €/mes + IVA (5, 10 o 20 horas), sin permanencia y cobrando solo las horas usadas.'
   - q: '¿Tengo que cambiar mi programa de facturación para automatizar con IA?'
     a: 'No. Conectamos lo que ya usáis: el correo, el WhatsApp, la hoja de cálculo y el programa con el que facturáis. La factura sigue saliendo de ahí.'
   - q: '¿Qué ocurre si tras el estudio vemos que no compensa invertir en IA?'
     a: 'Te lo decimos y no seguimos. Pasa cuando hay poco volumen, cuando la tarea cambia cada semana o cuando un programa que ya existe os lo resuelve. Preferimos ese no a un desarrollo que no recuperáis.'
 ---
 
-**Cuánto cuesta implementar IA en una empresa** no se responde con un número mágico. Depende de la tarea: automatizar presupuestos no es lo mismo que montar algo que una presupuesto, agenda y WhatsApp. En Bitdesal, una automatización exprés suele estar entre **1.800 € y 2.900 € + IVA** y la entregamos en dos o tres semanas; una herramienta a medida empieza en **4.500 € + IVA**. Antes de tocar código hacemos un estudio de procesos (**450 € + IVA**; te lo descontamos entero si contratas en 30 días). El soporte, si lo quieres después, va desde **225 €/mes + IVA**, sin permanencia.
+**Cuánto cuesta implementar IA en una empresa** no se responde con un número mágico. Depende de la tarea: automatizar presupuestos no es lo mismo que montar algo que una presupuesto, agenda y WhatsApp. En Bitdesal, una automatización exprés suele estar entre **1.400 € y 2.250 € + IVA** y la entregamos en dos o tres semanas; una herramienta a medida empieza en **3.500 € + IVA**. Antes de tocar código hacemos un estudio de procesos (**350 € + IVA**; te lo descontamos entero si contratas en 30 días). El soporte, si lo quieres después, va desde **175 €/mes + IVA**, sin permanencia.
 
 Mucha gente ya usa algo de IA, pero pocos tienen a alguien dentro que lo monte bien. El [INE (octubre de 2026)](https://www.ine.es/dyngs/Prensa/es/ETICCE20251T2026.htm) lo dice en cifras: el 33,6 % de las empresas de 10 o más empleados y el 21,4 % de las pequeñas; solo el 15,4 % de las grandes tenían especialistas TIC. Lo que a ti te importa es cuánto cuesta quitarte ese trabajo repetido y en cuánto lo recuperas.
 
@@ -39,14 +39,14 @@ Mucha gente ya usa algo de IA, pero pocos tienen a alguien dentro que lo monte b
   <span class="bf-section-title"><span class="bf-section-lead">¿Cuánto cuesta implementar IA en una empresa</span> <span class="bf-section-accent">según el alcance?</span></span>
 </h2>
 
-Si en la primera llamada te sueltan una cifra redonda, desconfía: aún no saben qué harían. Cuando trabajamos por horas, la referencia es **45 €/h + IVA**; lo habitual son encargos a precio cerrado. En la práctica casi todo cae en una de estas cuatro filas:
+Si en la primera llamada te sueltan una cifra redonda, desconfía: aún no saben qué harían. Cuando trabajamos por horas, la referencia es **35 €/h + IVA**; lo habitual son encargos a precio cerrado. En la práctica casi todo cae en una de estas cuatro filas:
 
 | Modalidad                 | Precio (+ IVA)                                       | Plazo habitual               | Para qué es                                                                                                                         |
 | ------------------------- | ---------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Estudio de procesos**   | 450 € (675 € si hay varios departamentos o sistemas) | Unas 10 horas, en pocos días | Analizar tus necesidades y diseñar la solución potencial, y estimar su coste. Se descuenta entero si contratas en menos de 30 días |
-| **Automatización exprés** | 1.800–2.900 €                                        | 2–3 semanas                  | Un solo proceso: venta, facturación, inventario…                                                                                  |
-| **Herramienta a medida**  | Desde 4.500 €                                        | El que salga del estudio     | Una solución integral que aúne todas las áreas de tu negocio                                                                        |
-| **Soporte**               | Desde 225 €/mes (5/10/20 h: 225 € / 450 € / 900 €)   | Mes a mes, sin permanencia   | Ajustes e incidencias. Solo se cobran las horas usadas                                                                              |
+| **Estudio de procesos**   | 350 € (525 € si hay varios departamentos o sistemas) | Unas 10 horas, en pocos días | Analizar tus necesidades y diseñar la solución potencial, y estimar su coste. Se descuenta entero si contratas en menos de 30 días |
+| **Automatización exprés** | 1.400–2.250 €                                        | 2–3 semanas                  | Un solo proceso: venta, facturación, inventario…                                                                                  |
+| **Herramienta a medida**  | Desde 3.500 €                                        | El que salga del estudio     | Una solución integral que aúne todas las áreas de tu negocio                                                                        |
+| **Soporte**               | Desde 175 €/mes (5/10/20 h: 175 € / 350 € / 700 €)   | Mes a mes, sin permanencia   | Ajustes e incidencias. Solo se cobran las horas usadas                                                                              |
 
 Si el problema es un solo tramo del negocio —venta, obra en campo, facturación, stock, postventa o administración—, suele bastar una automatización exprés: enganchar el correo, el WhatsApp o la hoja que ya tenéis, no inventar otra app.
 
@@ -109,7 +109,7 @@ El precio de montaje no es la factura entera. Si solo miras eso, el susto llega 
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">02</span>
     <h3>Mantenimiento</h3>
-    <p>Cambia el PDF del proveedor, WhatsApp cambia un formato, una API deja de responder igual. Alguien lo retoca. Si queréis que seamos nosotros, hay bolsas desde 225 €/mes + IVA, sin permanencia.</p>
+    <p>Cambia el PDF del proveedor, WhatsApp cambia un formato, una API deja de responder igual. Alguien lo retoca. Si queréis que seamos nosotros, hay bolsas desde 175 €/mes + IVA, sin permanencia.</p>
   </div>
   <div class="bf-triptych-col">
     <span class="bf-triptych-num">03</span>
@@ -136,7 +136,7 @@ No hace falta Excel de finanzas. Antes de programar nada, hacemos esta cuenta co
   Horas a la semana de esa tarea × coste por hora × semanas al año. Si lo que ahorraríais en un año no cubre de sobra el presupuesto, no lo hacemos.
 </div>
 
-**Ejemplo inventado, no es un cliente.** Imagina que alguien se va 6 horas a la semana entre pasar presupuestos, contestar, copiar WhatsApp a la hoja y perseguir al que no abre el mensaje. Son 288 horas al año. A 18 €/h de coste real (sueldo y cotizaciones), el proceso cuesta 5.184 € anuales. Si una automatización de 2.400 € + IVA os quita buena parte de esas horas, se paga sola en menos de un año. Si solo ahorra un rato, no lo hacemos.
+**Ejemplo inventado, no es un cliente.** Imagina que alguien se va 6 horas a la semana entre pasar presupuestos, contestar, copiar WhatsApp a la hoja y perseguir al que no abre el mensaje. Son 288 horas al año. A 18 €/h de coste real (sueldo y cotizaciones), el proceso cuesta 5.184 € anuales. Si una automatización de 1.870 € + IVA os quita buena parte de esas horas, se paga sola en menos de un año. Si solo ahorra un rato, no lo hacemos.
 
 **Al revés.** Cuatro presupuestos al mes de 20 minutos: 16 horas al año, unos 480 € a 30 €/h. Meter 2.000 € en automatizar eso no tiene sentido; os lo diríamos en el estudio.
 
@@ -151,7 +151,7 @@ El precio se dispara cuando se programa con la idea a medias y, a las tres seman
 
 <ol class="bf-steps">
   <li><strong>Una sola tarea.</strong> La que más horas os quita cada semana: presupuestos, citas, partes o albaranes. No «toda la empresa».</li>
-  <li><strong>Primero el estudio.</strong> 450 € + IVA, o 675 € + IVA si hay varios departamentos o sistemas. El precio del trabajo queda por escrito, y si lo contratas en 30 días el estudio se descuenta entero. El detalle está en el artículo del <a href="/blog/precio-cerrado-automatizacion-empresa/">estudio de procesos a precio cerrado</a>.</li>
+  <li><strong>Primero el estudio.</strong> 350 € + IVA, o 525 € + IVA si hay varios departamentos o sistemas. El precio del trabajo queda por escrito, y si lo contratas en 30 días el estudio se descuenta entero. El detalle está en el artículo del <a href="/blog/precio-cerrado-automatizacion-empresa/">estudio de procesos a precio cerrado</a>.</li>
   <li><strong>Miramos si ya existe un programa que os valga.</strong> Si os resuelve el problema, te lo decimos y no fabricamos otro.</li>
   <li><strong>La IA prepara, una persona confirma.</strong> El borrador, la lectura del documento o el recordatorio salen solos. El precio, el margen y lo que se le dice al cliente los confirma alguien de tu equipo.</li>
   <li><strong>Al terminar os queda el cómo.</strong> El flujo explicado, el equipo sabe usarlo y las cuentas de las herramientas están a vuestro nombre. El soporte, si lo queréis, no ata.</li>

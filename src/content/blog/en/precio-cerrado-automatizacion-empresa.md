@@ -1,6 +1,6 @@
 ---
 title: 'Fixed price before you automate: why we start with a process study'
-description: 'Save money, cut risk and make sure automation fixes the real problem. A €450 + VAT study, fixed quote and scope in writing.'
+description: 'Save money, cut risk and make sure automation fixes the real problem. A €350 + VAT study, fixed quote and scope in writing.'
 pubDate: 2026-10-01
 audience: business
 author: caye
@@ -16,7 +16,7 @@ subtitle: 'Save money, reduce risk and make sure automation solves the real prob
 updatedDate: 2026-11-17
 faq:
   - q: 'How much does the process study cost?'
-    a: '€450 + VAT for about ten hours of work (more if several departments or systems are involved). Deliverables include diagnosis, proposal, phased plan and a fixed implementation quote.'
+    a: '€350 + VAT for about ten hours of work (more if several departments or systems are involved). Deliverables include diagnosis, proposal, phased plan and a fixed implementation quote.'
   - q: 'Is the study credited if we hire the implementation?'
     a: 'Yes, if you hire implementation within 30 days of the study, we credit the full study fee.'
   - q: 'What if the study shows automation is not worth it?'
@@ -108,7 +108,7 @@ The study is not a hurdle to sell you something else: it is how we both avoid mi
 <div class="bf-bento">
   <div class="bf-bento-card bf-bento-card--dark">
     <p class="bf-bento-label">Study investment</p>
-    <h3>€450 + VAT</h3>
+    <h3>€350 + VAT</h3>
     <p>Study cost we <strong>credit in full</strong> if you hire implementation within 30 days.</p>
   </div>
   <div class="bf-bento-card bf-bento-card--cream">

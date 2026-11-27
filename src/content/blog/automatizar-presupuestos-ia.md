@@ -24,7 +24,7 @@ faq:
   - q: '¿La IA puede enviar el presupuesto al cliente sin que yo lo revise?'
     a: 'No lo montamos así al principio. Primero trabajáis en modo borrador: revisáis precio y texto, y enviáis vosotros. Solo ampliamos lo automático cuando lleváis tiempo y los errores son aceptables para vosotros.'
   - q: '¿Cuánto cuesta automatizar presupuestos con IA?'
-    a: 'Suele encajar en una automatización exprés (1.800–2.900 € + IVA, 2–3 semanas) o en un agente acotado si la entrada es muy desordenada. Antes va el estudio de procesos (450 € + IVA, descontable si contratáis en 30 días).'
+    a: 'Suele encajar en una automatización exprés (1.400–2.250 € + IVA, 2–3 semanas) o en un agente acotado si la entrada es muy desordenada. Antes va el estudio de procesos (350 € + IVA, descontable si contratáis en 30 días).'
   - q: '¿Hace falta cambiar el programa con el que ya presupuesto?'
     a: 'No suele ser el objetivo. Conectamos lo que ya usáis (PDF, hoja de cálculo, programa de facturación o una app web nueva si el estudio dice que compensa). La factura sigue saliendo de donde sale ahora.'
 ---
@@ -130,10 +130,10 @@ Si el presupuesto alimenta la factura, conviene alinearlo con los plazos de Veri
 
 | Paso | Qué incluye | Precio orientativo (+ IVA) |
 | --- | --- | --- |
-| **Estudio de procesos** | Cómo hacéis el presupuesto hoy, propuesta y precio cerrado; descontable si contratáis en 30 días | 450 € (675 € si hay varios departamentos o programas) |
-| **Automatización exprés** | De la entrada móvil al borrador (y a veces seguimiento), 2–3 semanas | 1.800–2.900 € |
-| **Herramienta a medida** | Varios pasos juntos o pantalla propia | Desde 4.500 € |
-| **Soporte** | Ajustes, sin permanencia | Desde 225 €/mes |
+| **Estudio de procesos** | Cómo hacéis el presupuesto hoy, propuesta y precio cerrado; descontable si contratáis en 30 días | 350 € (525 € si hay varios departamentos o programas) |
+| **Automatización exprés** | De la entrada móvil al borrador (y a veces seguimiento), 2–3 semanas | 1.400–2.250 € |
+| **Herramienta a medida** | Varios pasos juntos o pantalla propia | Desde 3.500 € |
+| **Soporte** | Ajustes, sin permanencia | Desde 175 €/mes |
 
 Licencias de herramientas de IA van en cuentas a vuestro nombre; pagáis lo que consumáis. Desglose largo en [cuánto cuesta implementar IA en una empresa](/blog/cuanto-cuesta-implementar-ia-empresa/) y tarifas en [consultoría de IA](/consultoria-ia/) y [casos y precios](/casos-y-precios/#ia).
 
